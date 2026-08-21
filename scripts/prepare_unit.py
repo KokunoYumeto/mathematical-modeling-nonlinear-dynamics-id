@@ -138,6 +138,13 @@ UNIT_SPECS = {
             },
         ],
     },
+    "O005-LEGA-V101-PT03": {
+        "record_id": 40,
+        "modified_gmt": "2024-06-29T02:57:20",
+        "record_bytes": 5758,
+        "record_sha256": "e0c7435af2c60d11f80eef9924934c335c93100cd86de57170820560797f9576",
+        "assets": [],
+    },
 }
 
 

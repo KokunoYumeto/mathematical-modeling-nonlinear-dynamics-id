@@ -7,7 +7,7 @@ Pressbooks v1.01 (Maret 2026). Sumber dan terjemahan berada di bawah lisensi
 Edisi ini tidak disokong atau disahkan oleh penulis maupun University of
 Arizona.
 
-Status saat ini: **Bab 1–4 dari 14 serta pengantar Bagian 2 telah diterjemahkan,
+Status saat ini: **Bab 1–4 dari 14 serta pengantar Bagian 2–3 telah diterjemahkan,
 dibangun, dan lolos QA.**
 Pekerjaan berlanjut secara berurutan; repositori ini belum merupakan edisi
 lengkap atau terbitan final.
@@ -19,11 +19,12 @@ lengkap atau terbitan final.
 - Pengantar Bagian 2 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT02/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT02/index.html).
 - Bab 3 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH03/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH03/index.html); [notebook bidang fase](source/id-ID/O005-LEGA-V101-CH03/notebooks/chapter-03-open-phase-plane.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH03.mastery.json).
 - Bab 4 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH04/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH04/index.html); [notebook pemantulan batu](source/id-ID/O005-LEGA-V101-CH04/notebooks/chapter-04-open-stone-skipping.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH04.mastery.json).
+- Pengantar Bagian 3 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT03/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT03/index.html).
 
 ## Backend modular
 
 Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Empat bab dan
-satu pengantar bagian yang selesai memiliki 894 segmen Inggris–Indonesia yang
+dua pengantar bagian yang selesai memiliki 898 segmen Inggris–Indonesia yang
 berpasangan, 41 ID soal tetap, empat notebook terbuka, catatan unit berhash,
 serta jalur eksplisit menuju aset, notebook, dan
 dukungan belajar. Lapisan ini dimaksudkan untuk memungkinkan pemindahan unit
@@ -46,6 +47,8 @@ python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH03
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH03 --execute-notebook --deterministic-build
 python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH04
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH04 --execute-notebook --deterministic-build
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-PT03
+python scripts/qa_unit.py --unit O005-LEGA-V101-PT03 --deterministic-build
 ```
 
 QA memeriksa kesetaraan struktur sumber–target, rumus dan tautan yang

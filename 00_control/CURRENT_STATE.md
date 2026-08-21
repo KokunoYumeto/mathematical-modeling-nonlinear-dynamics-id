@@ -7,9 +7,9 @@ Updated: 2026-08-21 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–4 and the visible Part 2 introduction are
-translated, built, and verified. Production now moves to the visible Part 3
-introduction, Pressbooks record 40, *Population Dynamics and Epidemiology*. The earlier
+into this lane. Chapters 1–4 and the visible Part 2 and Part 3 introductions
+are translated, built, and verified. Production now moves to Chapter 5,
+Pressbooks record 48, *Single-Species Models*. The earlier
 cursor's record 29 / “Dimensional Analysis” pair was invalid and has been
 corrected from the frozen TOC.
 
@@ -215,10 +215,36 @@ corrected from the frozen TOC.
   equality passed. GitHub raw-byte readback matched the local hashes for the
   target content, reader index, package manifest, notebook, and Figure 4.1 SVG.
 
+## Admitted Part 3 introduction boundary
+
+- Source record: visible Pressbooks part 40, *Population Dynamics and
+  Epidemiology*; target title *Dinamika Populasi dan Epidemiologi*; modified
+  `2024-06-29T02:57:20Z`.
+- Canonical record: 5,758 bytes, SHA-256
+  `e0c7435af2c60d11f80eef9924934c335c93100cd86de57170820560797f9576`;
+  raw source: 2,478 bytes, SHA-256
+  `7ef1dfd5305cebe47e0108b408648a9df618000ba0b3bbe467683e2dc4f4ebd1`.
+- Complete natural id-ID fragment: four paragraphs / 2,532 bytes, SHA-256
+  `8d40cff6e34bcae42c9ad743d743877ab95c0266fab235b9bfcdfdf9adc87933`;
+  the source's single emphasis element and paragraph order are exact.
+- Modular segment layer: four records / 6,687 bytes, SHA-256
+  `9698e525582f2e412e0e87185cb597ef722d7bb59ed2381e66d5d5b61d31c21b`.
+- Reader package: four payload files / 16,945 bytes excluding the manifest;
+  manifest SHA-256
+  `c91ad40bb3914221338e29e4302a018297466cdb72cc021a81af18fe4d74ecc9`.
+  Repeated clean builds were byte-identical across five files, canonical tree
+  SHA-256
+  `778bad58be64f29210f7e7b507f539fdad5365689c609a94f57d3680acb68204`.
+- Browser QA: the desktop article was 768 px and centered in a 1,152 px main
+  shell at 1280×900; the mobile article was 357.5 px and centered at 390×844.
+  Document scroll width equaled client width, all four paragraphs rendered,
+  and no console error occurred. This part contains no formula, problem,
+  asset, mastery, notebook, audio, or live-widget surface.
+
 ## Next action
 
-Prepare and translate visible Part 3 record 40, *Population Dynamics and
-Epidemiology*, as `O005-LEGA-V101-PT03`, then continue immediately to Chapter
-5 record 48, *Single-Species Models*. Preserve all four Part 3 paragraphs as
-reader content; do not manufacture mastery or notebook artifacts for the part
-introduction, and do not return to source selection.
+Prepare and translate Chapter 5 record 48, *Single-Species Models*, as
+`O005-LEGA-V101-CH05`, preserving the complete 326-line source, 364-element
+topology, 50 links, 389 TeX occurrences, seven figures and descriptions,
+seven footnotes, and 16 problems. Provide complete mastery and an open
+single-species dynamics notebook; do not return to source selection.

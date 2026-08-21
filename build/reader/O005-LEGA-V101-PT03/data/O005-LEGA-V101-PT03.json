@@ -1,0 +1,33 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "problems": [],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 4,
+    "path": "backend/segments/O005-LEGA-V101-PT03.segments.jsonl",
+    "sha256": "9698e525582f2e412e0e87185cb597ef722d7bb59ed2381e66d5d5b61d31c21b"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "content_sha256": "7ef1dfd5305cebe47e0108b408648a9df618000ba0b3bbe467683e2dc4f4ebd1",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "part": "Population Dynamics and Epidemiology",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/part/part-3-population-dynamics-and-epidemiology/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-PT03/content.html",
+    "content_sha256": "8d40cff6e34bcae42c9ad743d743877ab95c0266fab235b9bfcdfdf9adc87933",
+    "title": "Dinamika Populasi dan Epidemiologi"
+  },
+  "unit_id": "O005-LEGA-V101-PT03",
+  "unit_type": "part"
+}

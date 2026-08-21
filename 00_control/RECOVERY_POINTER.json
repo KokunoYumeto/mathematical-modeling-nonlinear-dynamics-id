@@ -24,14 +24,14 @@
   "last_verified_public_commit": "184f3df2ece1d6b44b2f0fd852ca86c3511ae642",
   "public_repository": "https://github.com/KokunoYumeto/mathematical-modeling-nonlinear-dynamics-id",
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-CH04",
-    "source_record_type": "chapters",
-    "source_record_id": 39,
-    "source_slug": "stone-skipping",
-    "target_content_sha256": "4d19140e14d182466a049ce376ce3168b6d6230adcec80fd136d24c0cc05010b",
-    "reader_manifest_sha256": "0e9dff17d5f5d9625c16f5e7d62e5d0c84af75757a717e31ce53840e88eaab85",
-    "qa_tree_sha256": "15f5b87b32ff5afdeaf2dd29cdd80c2f3f8c90b04a2d2ffc079c1ca671d6f1ef"
+    "unit_id": "O005-LEGA-V101-PT03",
+    "source_record_type": "parts",
+    "source_record_id": 40,
+    "source_slug": "part-3-population-dynamics-and-epidemiology",
+    "target_content_sha256": "8d40cff6e34bcae42c9ad743d743877ab95c0266fab235b9bfcdfdf9adc87933",
+    "reader_manifest_sha256": "c91ad40bb3914221338e29e4302a018297466cdb72cc021a81af18fe4d74ecc9",
+    "qa_tree_sha256": "778bad58be64f29210f7e7b507f539fdad5365689c609a94f57d3680acb68204"
   },
-  "current_unit": "O005-LEGA-V101-PT03",
-  "next_action": "Prepare and translate visible Pressbooks part record 40, Population Dynamics and Epidemiology, as four complete Indonesian paragraphs with no manufactured mastery/notebook surface; then advance directly to Chapter 5 record 48, Single-Species Models."
+  "current_unit": "O005-LEGA-V101-CH05",
+  "next_action": "Freeze and translate Pressbooks chapter record 48, Single-Species Models, preserving 326 source lines, 364 elements, 50 links, 389 TeX occurrences, seven figures, seven footnotes, 16 problems, complete mastery, and an open deterministic notebook."
 }

@@ -65,3 +65,9 @@ O005-TERM-0063,submerged area,luas permukaan yang terendam,admitted,Shorten to l
 O005-TERM-0064,gyroscopic effect,efek giroskopik,admitted,
 O005-TERM-0065,angular velocity,kecepatan sudut,admitted,Do not translate as frekuensi sudut unless the quantity is explicitly an oscillation frequency.
 O005-TERM-0066,torque,momen gaya,admitted,Use torsi only inside direct discussion of terminology or when needed to avoid ambiguity.
+O005-TERM-0067,population dynamics,dinamika populasi,admitted,
+O005-TERM-0068,epidemiology,epidemiologi,admitted,Use epidemi for an outbreak and epidemiologi for the field.
+O005-TERM-0069,difference equation,persamaan beda,admitted,Distinguish from persamaan diferensial.
+O005-TERM-0070,chaos,kekacauan,admitted,Use perilaku kacau or dinamika kacau adjectivally.
+O005-TERM-0071,oscillatory dynamics,dinamika osilatori,admitted,
+O005-TERM-0072,confounding variable,variabel perancu,admitted,

@@ -203,3 +203,29 @@ Required gates for each translated chapter unit:
   long-description links were visible, and no console error occurred. Wide
   MathML is contained in keyboard-scrollable formula spans. External-link
   reachability was not tested; no audio or live widget exists.
+
+## Admitted build — O005-LEGA-V101-PT03 — 2026-08-21
+
+- Builder: `scripts/build_unit_reader.py --unit O005-LEGA-V101-PT03`, Pandoc
+  3.9.0.2; no mathematics conversion was applicable.
+- QA: `scripts/qa_unit.py --unit O005-LEGA-V101-PT03
+  --deterministic-build`, exit 0.
+- Structural replay: four / four ordered paragraph units and one / one
+  emphasis element; zero href, TeX, footnote, caption, or problem surface.
+- Backend: four paired segments / 6,687 bytes, SHA-256
+  `9698e525582f2e412e0e87185cb597ef722d7bb59ed2381e66d5d5b61d31c21b`;
+  unit type `part`; mastery, notebook, and asset fields correctly absent.
+- Reader: four payload files / 16,945 bytes excluding the 397-byte manifest;
+  one local CSS dependency; zero missing dependency, duplicate ID, broken
+  internal fragment, token shape, local path, or U+FFFD.
+- Reader manifest SHA-256
+  `c91ad40bb3914221338e29e4302a018297466cdb72cc021a81af18fe4d74ecc9`.
+  Deterministic double build: five files including manifest, byte-identical;
+  canonical tree SHA-256
+  `778bad58be64f29210f7e7b507f539fdad5365689c609a94f57d3680acb68204`.
+- Browser visual QA: desktop 1,152 px centered main shell and 768 px centered
+  article at 1280×900; mobile 357.5 px centered shell/article at 390×844;
+  document scroll width equaled client width at both sizes, all four
+  paragraphs rendered, and no console error occurred. External source-link
+  reachability was not tested. No audio, live widget, formula, mastery,
+  notebook, or figure exists in this unit.
