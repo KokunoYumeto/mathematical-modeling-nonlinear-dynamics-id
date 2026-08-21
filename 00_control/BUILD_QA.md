@@ -305,3 +305,26 @@ its intrinsic width, and the fresh sweep reported no script, warning, or
 error. Notebook execution was not repeated because notebook bytes and
 computation code were unchanged; Chapter 5's notebook was executed in the
 immediately preceding full QA run.
+
+## Public readback — Chapter 5 and reader reflow — 2026-08-21
+
+- Production commit: `400908debd1bc013b0fef5d6d7e20996523fc099`.
+- `git push origin main` advanced the public branch from `4d3267f` to
+  `400908d`; `git ls-remote origin refs/heads/main` returned the exact local
+  40-character commit.
+- Eleven files were fetched as anonymous public raw bytes from the immutable
+  commit URL and compared in memory with their committed local counterparts.
+  Every byte count and SHA-256 matched: Chapter 5 source HTML; final reader
+  HTML; package manifest; notebook; official Census packet; localized Figure
+  5.1 SVG; mastery JSON; unit JSON; shared reader CSS; Chapter 3's copied CSS;
+  and the Part 3 package manifest.
+- Key public hashes: source HTML
+  `8a8a205b1dfac9778c3e8549c036559dae88aff1e5262e9513cc5646d72bff7e`;
+  reader HTML
+  `3b5014740c73daf8db9f0a6eef66a9c8f9146c2eb0f8e970b1e010befbb67b30`;
+  package manifest
+  `de862361118699c3c398145bf2424d43a6f39610ad3c409c484aad19c506c30d`;
+  notebook
+  `b7a19523b1fedc344a1cda20cca0a8cfb8a46588f05ff7f59417fa59cfd9c7cd`;
+  and Census packet
+  `f59dbd91b2bf975df7b7fb4af6de52dc3c68a705632e83d60410d98781206f09`.

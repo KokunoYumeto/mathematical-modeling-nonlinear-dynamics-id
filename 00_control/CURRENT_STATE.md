@@ -282,6 +282,12 @@ corrected from the frozen TOC.
   document overflow is zero, seven figures load at native dimensions, all 67
   IDs are unique, all fragment links resolve, and a fresh load has no browser
   warning or error. Wide MathML remains locally scrollable by design.
+- Published production commit:
+  `400908debd1bc013b0fef5d6d7e20996523fc099` on `origin/main`. Remote-head
+  equality passed. Eleven public GitHub raw-byte comparisons matched the local
+  byte counts and SHA-256 hashes, covering chapter source, reader, manifest,
+  notebook, Census data, localized SVG, mastery, unit metadata, shared CSS,
+  and representative earlier-reader reflow outputs.
 
 ## Next action
 
