@@ -1,7 +1,7 @@
 {
   "build": {
     "pandoc": "pandoc 3.9.0.2",
-    "script": "scripts/build_ch01_reader.py"
+    "script": "scripts/build_unit_reader.py"
   },
   "course_id": "C120",
   "language": "id-ID",

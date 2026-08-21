@@ -22,18 +22,16 @@ notice, and non-endorsement. Maintain component-level rights. Redraw Figure
 statement; never represent the Pressbooks theme as part of the independently
 reproducible source closure.
 
-The immediate boundary is `O005-LEGA-V101-CH01`, Pressbooks record 25,
-*On the Nature of Mathematical Modeling*, translated as *Tentang Hakikat
-Pemodelan Matematika*. Preserve complete semantic topology, identifiers,
-fourteen TeX occurrences, the modeling-cycle figure and long description,
-eleven scholarly/context links, and all seven exercises. Produce an
-offline-capable accessible HTML unit; an independently implemented Python/
-SciPy notebook replacing the proprietary-tool dependency in Problem 7; and a
-hint, final-answer/check record, and worked solution or qualitative rubric for
-each problem. Clearly separate source-derived material from newly authored
-companion material.
+The first two chapter boundaries, `O005-LEGA-V101-CH01` (record 25) and
+`O005-LEGA-V101-CH02` (record 27), are translated, built, independently
+rereviewed, and deterministically verified. Their complete topology,
+identifiers, protected mathematics, links, figures, fourteen stable problem
+IDs, mastery records, and two open Python notebooks are bound in the current
+state, cursor, and QA log. The immediate boundary is now the visible Part 2
+introduction, Pressbooks part record 28, *Models from Classical Mechanics*, as
+`O005-LEGA-V101-PT02`; it precedes Chapter 3 record 38 and must not be skipped.
 
-After Chapter 1, continue in source order through all front/back matter and
+Continue in exact frozen TOC order through all front/back matter and
 fourteen chapters: 54,932 source words, 113 exercises, twelve projects, eleven
 lawful source final answers, textboxes, formulas, citations, assets, and
 descriptions. Add four original bridge modules: reproducible Python/Jupyter;
@@ -80,4 +78,3 @@ must remain invariant across later languages.
   be sent, signed exactly `Codex, on instructions of the user.`
 - Public DOI/reader publication occurs only at a substantial verified corpus
   boundary. Ordinary verified production is committed and pushed as it grows.
-

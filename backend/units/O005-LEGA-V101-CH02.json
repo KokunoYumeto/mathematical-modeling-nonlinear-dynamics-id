@@ -1,0 +1,46 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "mastery_path": "backend/mastery/O005-LEGA-V101-CH02.mastery.json",
+  "mastery_sha256": "46c7f337c6fe93a0adfce03d65df4f35c9f0341b5c4c0f486bc14145f85b6296",
+  "notebook_path": "source/id-ID/O005-LEGA-V101-CH02/notebooks/chapter-02-open-wave-simulation.ipynb",
+  "notebook_sha256": "8e31dc2dfaa61b3e0f76dd04b29867fcadd303490622a8ea0e1f5ad77f2ce517",
+  "problems": [
+    "O005-LEGA-V101-CH02-P01",
+    "O005-LEGA-V101-CH02-P02",
+    "O005-LEGA-V101-CH02-P03",
+    "O005-LEGA-V101-CH02-P04",
+    "O005-LEGA-V101-CH02-P05",
+    "O005-LEGA-V101-CH02-P06",
+    "O005-LEGA-V101-CH02-P07"
+  ],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 121,
+    "path": "backend/segments/O005-LEGA-V101-CH02.segments.jsonl",
+    "sha256": "0e1dd86ab9c5dc0d2e6338a2ae8909e5d5825f4d8b5866ca7eab88dfb0246b6a"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "chapter": "First Steps: Modeling the Wave",
+    "content_sha256": "9d32a66ab481f4059399a66404dc87b7664e9d525473871a99947e18ed910f00",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/first-steps-modeling-the-wave/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-CH02/content.html",
+    "content_sha256": "e044dbfde28c561f43922fabf24af41cc47b2fb4e3307fb6146646b700cf8c4c",
+    "figure_path": "source/id-ID/O005-LEGA-V101-CH02/assets/the-wave-source.png",
+    "figure_sha256": "9abe8e17abd593811c14a1d6ea72b3ff727682ba58d000a87ece4056332769b6",
+    "title": "Langkah Awal: Memodelkan Gelombang"
+  },
+  "unit_id": "O005-LEGA-V101-CH02"
+}

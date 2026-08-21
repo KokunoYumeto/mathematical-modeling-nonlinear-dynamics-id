@@ -1,0 +1,123 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Learning Objectives</h2>
+</header>
+<div class="textbox__content">
+
+At the end of this chapter, you will be able to do the following.
+<ul>
+ 	<li>Apply the modeling process by developing a model from the ground up.</li>
+ 	<li>Translate word statements into mathematical formulations.</li>
+ 	<li>Test the behavior of a model with a numerical simulation.</li>
+ 	<li>Assess whether a mathematical model is behaving as expected<span style="font-size: 12pt;letter-spacing: 0.01rem">.</span></li>
+</ul>
+</div>
+</div>
+We will start our exploration of mathematical modeling with a simple problem, which does not require any particular<em> a priori</em> knowledge, but which allows us to illustrate the modeling process discussed in the previous chapter.
+<h2>Formulation of the problem</h2>
+We will consider the problem of the <em>human wave</em>, which occurs in a stadium when spectators stand up, raise their hands and sit down, in order to form a wave which propagates around the bleachers. According to Farkas <em>et al.</em>, such a phenomenon is often called the Mexican Wave (La Ola), a term that was first used during the broadcasting of the 1986 Soccer World Cup held in Mexico. The discussion below is based on two articles by Farkas <em>et al. </em>entitled <a href="http://dx.doi.org/10.1038/419131a"><em>Mexican waves in an excitable medium</em></a> and <a href="http://dx.doi.org/10.1016/j.physa.2003.08.014"><em>Human waves in stadiums</em></a>.
+
+Our goal is to develop a model that reproduces and explains the propagation of the wave. The model will have to depend on parameters that can be described in everyday terms, and the behavior of the model when these parameters are changed should correspond to what is actually observed in a stadium.
+<h2>Obtain data and choose the level of complexity of the model</h2>
+The two articles by Farkas<em> et al.</em> referenced above provide some information, based on 14 video recordings of waves in stadiums containing more than 50,000 seats. Their observations indicate that waves propagate on average at a speed of 12 m s<sup>-1</sup> (or equivalently 22 seats per second), and have a width between 6 and 12 meters (or equivalently 11 to 22 seats), with an average of about 15 seats. Moreover, approximately 3 out of 4 waves propagate clockwise, when one looks at the stadium from above.
+
+Our model will be as simple as possible. In particular, it will be  one-dimensional, and discrete. We will however carefully define our hypotheses so that we will know what to modify if other effects need to be included.
+<h2>Make assumptions</h2>
+We will use periodic boundary conditions, since each row in a stadium forms a closed loop. We will not take into account the presence of stairs, and thus assume that all of the seats are equally spaced. We will also consider that all seats are occupied. Each spectator will be either seated or <em>doing the wave</em>. This latter state corresponds to consecutively standing up, waving one's hands, and sitting down. Once a person has started doing the wave, they will not stop until they are seated again. At that time, the person may decide to stand up and do the wave again.
+<h2>Set up the model</h2>
+First, the wave needs to be initiated: some people must be standing up for the wave to start. Then, for the wave to propagate, spectators must be influenced by what their neighbors do. Since most waves propagate in a clockwise direction, people must be more sensitive to what is happening on their right than on their left.
+
+It is clear that the mood of the spectators is important: if the game is too boring, no one will feel like cheering. On the other hand, if the game is too exciting, there may be people standing up all the time, and many waves could be initiated at once. Based on this, we can describe the wave as <em>a wave of enthusiasm</em>. People standing up are <em>excited</em> and their behavior influences the level of enthusiasm of their neighbors. If this level is above a person's <em>threshold of enthusiasm</em>, then the person will become <em>excited</em> and start doing the wave as well.
+
+We will therefore need a parameter, $latex s_{th}$, that describes the mood, or the threshold of enthusiasm, of each spectator. This parameter is likely to vary from one spectator to the next, and we will simply assume that it is uniformly distributed over an interval $latex [c - \delta, c + \delta]$. More complicated distributions could be used. The parameter $latex c$ describes the average responsiveness of the crowd watching the game, and $latex \delta / \sqrt 3$ measures the spread or the standard deviation of this responsiveness about its mean.
+
+We will assume that a person's level of enthusiasm varies as they do the wave. This is reasonable since it seems legitimate to consider that a person who is standing and waving is more excited than a person who is just getting up or sitting down. We will thus introduce a function $latex f(t)$ that describes the level of enthusiasm of a person doing the wave, as a function of time.
+
+Finally, we will define an asymmetric function, $latex w$ which describes how a spectator is influenced by the behavior - in our case the level of enthusiasm - of their neighbors. We now discuss how to convert the above statements into equations.
+
+Let $latex N$ be the number of seats in one row of the stadium (recall that this is a one-dimensional model. It can however easily be extended to two dimensions, as is the case for the models discussed in the articles by Farkas <em>et al</em>.). Since we assumed that all seats are occupied, we can define a function $latex x(i)$ describing the level of enthusiasm of spectator $latex i$, for $latex i = 1 \cdots N$. The variable $latex x$ will be either 0, if the person is seated, or larger than some activity threshold $latex \mathcal A$. If $latex x(i)=0$, then spectator $latex i$ will start doing the wave only if the combined enthusiasm of their neighbors, denoted by $latex w(i)$, exceeds $latex s_{th}(i)$, i.e. exceeds their threshold of enthusiasm. Once $latex x(i)$ becomes non-zero, this variable will evolve as a function of time as follows:
+<p style="text-align: center"><a id="LaOla_Rule"></a>$latex x(i,t) = \left\{ \begin{array}{ll} f(t) &amp; \qquad \hbox{if } f(t) &gt; {\mathcal A} \\ 0 &amp; \qquad \hbox{if } f(t) \le {\mathcal A} \end{array} \right. . \qquad (2.1)$</p>
+The function $latex f(t)$ should be bell-shaped, its maximum corresponding to the moment when the person is standing up with their hands up. Many functional forms can be chosen; here, we will simply take $latex f(t) = 1 / \cosh(b (t - t_0)),$ where $latex t_0$ is the maximizer of $latex f$ and $latex b$ is a parameter which selects the duration $latex \tau$ of the wave, that is how long it takes for one person to stand up, raise their hands, and sit down. More precisely, since the function $latex 1/\cosh(t)$ is of order one on an interval centered at the origin and of width $latex 10$, $latex \tau$ can be approximated by
+<p style="text-align: center">$latex \tau \simeq \frac{10}{b}.$</p>
+<p class="no-indent">We will choose $latex t_0$ such that $latex t_0 = t_{\mathcal I} + \Delta \tau,$ where $latex t_{\mathcal I}$ is the time at which a person becomes excited, i.e. at which $latex w(i)$ exceeds $latex s_{th}(i)$, and $latex \Delta \tau$ is a parameter that we can adjust. One can think of $latex \Delta \tau$ as a reaction time, which measures the time elapsed between the moment a person notices their neighbors' activity and the moment they stand up and do the wave.</p>
+Since observation of human waves indicate that most waves propagate clockwise, we will use an asymmetric function to describe the combined level of enthusiasm of a person's neighbors. Again, many choices are possible. Here, we use
+<p style="text-align: center">$latex w(i) = \sum_{\begin{array}{c}j,\ |i-j| \le R_m \\ x(j) &gt; {\mathcal A} \end{array}} e^{-|i-j|/R}\ \left(1 - \tanh(a (j-i))\right),$</p>
+<p class="no-indent">where $latex a$, $latex R$ and $latex R_m$ are parameters. This function is such that spectator $latex i$ is affected by excited neighbors seating less than $latex R_m+1$ seats away. The exponential term indicates that the most important influence comes from nearest neighbors, and the hyperbolic tangent term is such that neighbors on the right of person $latex i$ are more influential than neighbors on the left (for positive values of $latex a$). When looking at the one-dimensional row from the center of the stadium, the more influential neighbors are thus seated left of person $latex i$, leading to a wave propagating clockwise.</p>
+
+<h2>Test the model</h2>
+The best way to test this model is by numerical simulation. Once we have chosen the number of seats, the number of people initially standing and the enthusiasm threshold of each of the spectators, and we have defined the functions $latex f$ and $latex w$, we can iteratively apply the rule given by Equation (<a href="#LaOla_Rule">2.1</a>) to each spectator. Whether the wave propagates or dies will depend on the parameters of the model, and we can explore different situations by changing these parameters.<a id="Fig_2.1"></a>
+
+[caption id="attachment_101" align="alignnone" width="1920"]<img class="size-full wp-image-101" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/The_Wave.png" alt="MATLAB GUI for the wave. Long description available." width="1920" height="1016" /> Figure 2.1. MATLAB Graphic User Interface (GUI) for the Mexican Wave model. [<a href="#Fig_2.1_Desc"><em>Image Description</em></a>][/caption]
+The MATLAB code <span style="text-decoration: underline">
+The_Wave.m</span> simulates the above model. Figure 2.1 shows the corresponding MATLAB interface. The various parameters may be modified by adjusting sliders. When the simulation runs, a plot of $latex x(i)$ is shown in the top left window, and is updated every time step, $latex t_r$. The bottom left window displays a spectator's threshold of enthusiasm, $latex s_{th}(i),$ as a function of their seat number $latex i$. The top right panel shows the graph, as a function of $latex t$, of the level of enthusiasm $latex x(i,t)$ (see Equation (<a href="#LaOla_Rule">2.1</a>)) of a person doing the wave. The bottom right panel illustrates how neighbors affect the behavior of a person. More precisely, it shows the graph of
+<p style="text-align: center">$latex e^{-|i-j|/R}\ \left(1 - \tanh(a (j-i))\right)$</p>
+<p class="no-indent">as a function of $latex j-i$; the red circles indicate the contribution of spectator $latex j$ sitting within a distance $latex R_m$ of spectator $latex i$. All of these windows are updated when the parameters are changed by the user. Default parameter values are such that a wave about 15 seats wide propagates clockwise. Below are a few suggestions for exploring the model.</p>
+
+<ul>
+ 	<li>Change the number of seats and check that the size of the wave is not affected, provided $latex N$ is larger than the width $latex \mathcal W$ of the wave. What happens if $latex N$ is less than $latex \mathcal W$?</li>
+ 	<li>Change the threshold of enthusiasm of the spectators, by modifying the mean $latex c$ and the range $latex [c - \delta, c + \delta]$ of $latex s_{th}$.</li>
+ 	<li>Change the values of $latex R$ and $latex R_m$. What do you observe?</li>
+ 	<li>Is there a relation between the minimum value of $latex c$ and the minimum value of $latex R$ for a wave to form? Why or why not? What is the significance of such a relation?</li>
+ 	<li>What is the speed of the wave?</li>
+ 	<li>Change the time step $latex t_r$. How does it affect the size of the wave? Can you modify the value of $latex b$ to compensate? Why or why not? (Hint: what other time scale is there in the model?) What does $latex t_r$ actually select? Why?</li>
+ 	<li>Change the activity threshold $latex \mathcal A$. Do you understand why the wave dies when $latex \mathcal A$ is too large? What other parameter can you modify to prevent this from happening?</li>
+ 	<li>Change the number of people initially standing. What do you observe?</li>
+ 	<li>What can you change to make the wave propagate to the left (i.e. anti-clockwise)?</li>
+</ul>
+The above numerical exploration shows that the model gives a reasonable representation of the formation and propagation of a wave in a stadium. But the simulation can also help identify some of the limitations of the model. For instance, stairs or aisles could block the propagation of the wave. Another limitation is that if there is more than one person initially standing up, all of these spectators sit down in exactly the same fashion. This is because we use the same function $latex f(t)$ for each spectator. In practice, different people do the wave differently, and one could think of letting the function $latex f$ depend on $latex i$.
+
+Even the simple version of the model presented here has a large number of parameters. A numerical exploration of the model indicates that it is not the parameters themselves, but combinations thereof, which are in fact relevant. For instance, we could decide to measure time in units of the time step, $latex t_r$. Then, we would be left with only two dimensionless parameters, $latex \tau/t_r$ and $latex \Delta \tau/t_r$. Identifying relevant combinations of parameters is essential for a thorough exploration of the properties of any model. We will discuss this at length in the next chapter, when we introduce dimensional analysis and scalings.
+<h2>Summary</h2>
+This chapter illustrates the various steps involved in the modeling process, using the example of a human wave in a stadium. These steps consist in formulating the problem, obtaining data, identifying the level of complexity of the desired model, making simplifying assumptions, setting up the model and finally testing it. The tools we used were elements of calculus, to choose the functional forms of $latex f$ and $latex w$, and numerical simulation. The latter helped us test the model, but simulations are also useful to build an intuitive understanding of the properties of any model. This knowledge can then be used to identify the ingredients responsible for each particular property of a model, and possibly simplify or modify the model accordingly. The phenomenon discussed in this chapter is an example of wave propagation in an <a id="Excitable System"></a><em>excitable medium</em>.
+
+A system is said to be excitable if perturbations of large enough amplitude can trigger a fast and large response, followed by a slower relaxation of the system back to its resting state. Other examples of excitable media include neurons (nerve impulses are excitable waves - called action potentials - propagating along axons) and cardiac tissue (a heartbeat corresponds to an electric wave propagating through the heart, leading to contraction and relaxation of the heart muscle).
+<h2>Figure Descriptions</h2>
+<strong><a id="Fig_2.1_Desc"></a>Figure 2.1</strong>: MATLAB Graphical User Interface for "The Wave" containing four data plots and a parameters control panel. The main bar chart shows a distribution of "enthusiasm" across 50 seats. Control sliders allow adjustment of variables like "Number of seats," "Activity threshold," and "Effect of neighbors." Other panels display the wave form, the function describing the effect of neighbors, and the threshold of enthusiasm. An "Elapsed time" indicator shows the simulation is currently at 9.5 units of time. [<em><a href="#Fig_2.1">Return to Figure 2.1</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Food for Thought</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center">Problem 1</h3>
+Find three different <em>bell-shaped</em> or <em>pulse-like</em> functions. How do you adjust their height? How do you adjust their width?
+
+<hr />
+
+<h3 style="text-align: center">Problem 2</h3>
+Find a monotone, differentiable function $latex f(x)$ defined on the real line, and such that  $latex \lim_{x \to -\infty} f(x) = -6,$ $latex \lim_{x \to \infty} f(x) = 3.$
+<p class="no-indent">Plot the function you found and check that it is monotonically increasing from -6 (as $latex x \to -\infty$) to 3 (as $latex x \to +\infty$).</p>
+
+
+<hr />
+
+<h3 style="text-align: center">Problem 3</h3>
+Plot the function $latex f(t)=1/\cosh(b t)$ for various values of $latex b$. Describe in words the role of this parameter.
+
+<hr />
+
+<h3 style="text-align: center">Problem 4</h3>
+Plot the function $latex w(y) = e^{-|y|/R} \left(1 - \tanh (a y)\right)$ for different values of the parameters $latex R$ and $latex a$. Describe in words the role of each parameter.
+
+<hr />
+
+<h3 style="text-align: center">Problem 5</h3>
+How would you modify the model described in this chapter in order to take into account the presence of aisles or stairs in a stadium?
+
+<hr />
+
+<h3 style="text-align: center"><span style="text-indent: 0em">Problem 6 </span></h3>
+<span style="text-indent: 0em">Read the articles by Farkas <em>et al. </em>entitled <a href="http://dx.doi.org/10.1038/419131a"><em>Mexican waves in an excitable medium</em></a> and <a href="http://dx.doi.org/10.1016/j.physa.2003.08.014"><em>Human waves in stadiums</em></a>.</span>
+<ol>
+ 	<li>Do you find their model convincing?</li>
+ 	<li>Is all of the needed information actually included in the articles? Why or why not?</li>
+ 	<li>Are the hypotheses made by the authors essential? Explain.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center"><span style="text-indent: 0em">Problem 7</span></h3>
+<span style="text-indent: 0em">What are the similarities and differences between the </span>model discussed in this chapter and a one-dimensional version of the detailed $latex n$-state model of Farkas <em>et al. </em>entitled <a href="http://dx.doi.org/10.1038/419131a"><em>Mexican waves in an excitable medium</em></a> and <a href="http://dx.doi.org/10.1016/j.physa.2003.08.014"><em>Human waves in stadiums</em></a>? <span style="text-indent: 0em">Justify your answer.</span>
+
+</div>
+</div>
+&nbsp;

@@ -1,0 +1,436 @@
+{
+  "schema": "o005-mastery-v1",
+  "schema_version": "1.0.0",
+  "unit_id": "O005-LEGA-V101-CH02",
+  "language": "id-ID",
+  "source": {
+    "resource": "Joceline Lega, Introduction to Mathematical Modeling",
+    "edition": "University of Arizona Pressbooks v1.01 (Maret 2026)",
+    "record": "Pressbooks chapter 27",
+    "record_id": 27,
+    "source_title": "First Steps: Modeling the Wave",
+    "target_title": "Langkah Awal: Memodelkan Gelombang",
+    "modified_utc": "2026-03-27T02:10:41Z",
+    "source_file": "authority/units/O005-LEGA-V101-CH02/content.raw.en.html",
+    "source_locator": "exact frozen Pressbooks record 27 content.raw",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "provenance_policy": {
+    "source_derived": "Ringkasan masalah merupakan adaptasi/terjemahan dari soal sumber dan tetap berada di bawah CC BY-NC-SA 4.0.",
+    "new_original": "Petunjuk, rekaman pemeriksaan/jawaban, serta solusi atau rubrik ditulis baru untuk edisi Bahasa Indonesia dan ditandai terpisah dari materi sumber."
+  },
+  "article_link_catalog": [
+    {
+      "link_id": "O005-LEGA-V101-CH02-LINK01",
+      "title": "Mexican waves in an excitable medium",
+      "authors": "Farkas et al.",
+      "url": "http://dx.doi.org/10.1038/419131a"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH02-LINK02",
+      "title": "Human waves in stadiums",
+      "authors": "Farkas et al.",
+      "url": "http://dx.doi.org/10.1016/j.physa.2003.08.014"
+    }
+  ],
+  "problems": [
+    {
+      "problem_id": "O005-LEGA-V101-CH02-P01",
+      "ordinal": 1,
+      "problem_summary": "Temukan tiga fungsi berbeda yang berbentuk lonceng atau pulsa. Jelaskan cara mengatur tinggi puncak dan lebarnya.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Mulailah dari fungsi dasar yang berpuncak 1 di nol. Kalikan dengan konstanta positif untuk mengatur tinggi, geser argumennya untuk mengatur pusat, dan bagi argumen dengan parameter skala positif untuk mengatur lebar."
+      },
+      "check": {
+        "type": "exact_family_examples",
+        "final_answer": "Salah satu pilihan yang sah ialah pulsa Gauss \\(G(x)=H\\exp[-((x-\\mu)/\\sigma)^2]\\), pulsa Lorentz \\(L(x)=H/[1+((x-\\mu)/\\gamma)^2]\\), dan pulsa sekan hiperbolik \\(S(x)=H/\\cosh((x-\\mu)/\\lambda)\\), dengan \\(H,\\sigma,\\gamma,\\lambda>0\\). Tinggi ketiganya adalah \\(H\\); lebarnya bertambah sebanding dengan \\(\\sigma\\), \\(\\gamma\\), atau \\(\\lambda\\).",
+        "quick_check": "Lebar penuh pada setengah maksimum berturut-turut adalah \\(2\\sigma\\sqrt{\\ln 2}\\), \\(2\\gamma\\), dan \\(2\\lambda\\operatorname{arcosh}(2)\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Ambil parameter tinggi \\(H>0\\), pusat \\(\\mu\\), dan parameter lebar yang positif. Contoh pertama adalah fungsi Gauss.",
+            "formula": "G(x)=H\\exp\\!\\left[-\\left(\\frac{x-\\mu}{\\sigma}\\right)^2\\right],\\qquad \\sigma>0"
+          },
+          {
+            "explanation": "Nilai maksimum Gauss adalah \\(H\\) pada \\(x=\\mu\\). Persamaan \\(G=H/2\\) memberi dua titik setengah maksimum.",
+            "formula": "x=\\mu\\pm\\sigma\\sqrt{\\ln 2},\\qquad \\operatorname{FWHM}(G)=2\\sigma\\sqrt{\\ln 2}"
+          },
+          {
+            "explanation": "Contoh kedua adalah pulsa Lorentz. Puncaknya juga \\(H\\), sedangkan parameter \\(\\gamma\\) langsung menentukan setengah lebar pada setengah maksimum.",
+            "formula": "L(x)=\\frac{H}{1+\\left((x-\\mu)/\\gamma\\right)^2},\\qquad \\operatorname{FWHM}(L)=2\\gamma"
+          },
+          {
+            "explanation": "Contoh ketiga adalah pulsa sekan hiperbolik, bentuk yang sekeluarga dengan pulsa dalam model gelombang manusia.",
+            "formula": "S(x)=\\frac{H}{\\cosh((x-\\mu)/\\lambda)},\\qquad \\operatorname{FWHM}(S)=2\\lambda\\operatorname{arcosh}(2)"
+          },
+          {
+            "explanation": "Pada ketiga contoh, mengubah \\(H\\) hanya mengubah skala vertikal, mengubah \\(\\mu\\) hanya menggeser pusat, dan memperbesar parameter skala horizontal memperlebar pulsa tanpa mengubah tinggi puncak.",
+            "formula": "H\\uparrow\\Rightarrow\\text{puncak lebih tinggi},\\qquad \\sigma,\\gamma,\\lambda\\uparrow\\Rightarrow\\text{pulsa lebih lebar}"
+          }
+        ],
+        "conclusion": "Banyak jawaban lain juga benar. Struktur umum \\(H\\,q((x-\\mu)/s)\\), dengan \\(q(0)=1\\) dan \\(s>0\\), memisahkan pengaturan tinggi \\(H\\), pusat \\(\\mu\\), dan lebar \\(s\\)."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH02-P02",
+      "ordinal": 2,
+      "problem_summary": "Temukan fungsi \\(f(x)\\) yang terdefinisi dan dapat diturunkan pada seluruh garis bilangan, monoton naik, serta memenuhi \\(\\lim_{x\\to-\\infty}f(x)=-6\\) dan \\(\\lim_{x\\to\\infty}f(x)=3\\). Gambarkan dan periksa sifat-sifat tersebut.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "f(x)",
+        "\\lim_{x\\to-\\infty}f(x)=-6",
+        "\\lim_{x\\to\\infty}f(x)=3"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Gunakan fungsi dasar yang monoton naik dengan limit \\(-1\\) dan \\(1\\), misalnya \\(\\tanh x\\). Transformasi linear vertikal dapat memindahkan kedua limit itu ke \\(-6\\) dan \\(3\\)."
+      },
+      "check": {
+        "type": "exact_example",
+        "final_answer": "Salah satu jawaban ialah \\(f(x)=-\\tfrac32+\\tfrac92\\tanh x\\). Fungsi ini dapat diturunkan di seluruh \\(\\mathbb R\\), memiliki turunan positif \\(f'(x)=\\tfrac92\\operatorname{sech}^2x\\), dan limitnya masing-masing \\(-6\\) serta \\(3\\).",
+        "quick_check": "Grafik berbentuk sigmoid, melalui \\((0,-3/2)\\), selalu naik, dan mempunyai asimtot horizontal \\(y=-6\\) serta \\(y=3\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Karena \\(\\tanh x\\) bergerak dari \\(-1\\) ke \\(1\\), cari konstanta \\(A\\) dan \\(B\\) agar \\(A-B=-6\\) dan \\(A+B=3\\).",
+            "formula": "A=-\\frac32,\\qquad B=\\frac92"
+          },
+          {
+            "explanation": "Definisikan fungsi berikut pada seluruh garis bilangan.",
+            "formula": "f(x)=-\\frac32+\\frac92\\tanh x"
+          },
+          {
+            "explanation": "Gunakan limit \\(\\tanh x\\) di kedua ujung garis bilangan.",
+            "formula": "\\lim_{x\\to-\\infty}f(x)=-\\frac32-\\frac92=-6,\\qquad \\lim_{x\\to\\infty}f(x)=-\\frac32+\\frac92=3"
+          },
+          {
+            "explanation": "Turunannya positif untuk setiap \\(x\\) berhingga, sehingga fungsi monoton naik secara ketat.",
+            "formula": "f'(x)=\\frac92\\operatorname{sech}^2x>0"
+          }
+        ],
+        "plot_check": "Plot harus mendekati \\(-6\\) dari atas ketika \\(x\\) sangat negatif, melewati nilai \\(-3/2\\) pada \\(x=0\\), dan mendekati \\(3\\) dari bawah ketika \\(x\\) sangat positif.",
+        "conclusion": "Fungsi memenuhi semua syarat. Fungsi logistik \\(-6+9/(1+e^{-x})\\) merupakan contoh benar lainnya."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH02-P03",
+      "ordinal": 3,
+      "problem_summary": "Gambarkan \\(f(t)=1/\\cosh(bt)\\) untuk beberapa nilai \\(b\\), lalu jelaskan peran parameter tersebut.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "f(t)=1/\\cosh(bt)",
+        "b"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Tulis fungsi sebagai \\(\\operatorname{sech}(bt)\\). Bandingkan lokasi tempat kurva mencapai setengah puncaknya dan ingat bahwa \\(\\cosh\\) adalah fungsi genap."
+      },
+      "check": {
+        "type": "analytic_plot",
+        "final_answer": "Untuk \\(b\\ne0\\), tinggi puncak tetap 1 pada \\(t=0\\), sedangkan lebar pulsa berbanding terbalik dengan \\(|b|\\): \\(\\operatorname{FWHM}=2\\operatorname{arcosh}(2)/|b|\\). Memperbesar \\(|b|\\) mempersempit dan memperpendek pulsa. Tanda \\(b\\) tidak berpengaruh, dan \\(b=0\\) menghasilkan fungsi konstan 1.",
+        "quick_check": "Kurva untuk \\(b\\) dan \\(-b\\) harus tepat berimpit; kurva dengan \\(|b|\\) lebih besar harus berada di bawah kurva dengan \\(|b|\\) lebih kecil untuk setiap \\(t\\ne0\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Fungsi selalu positif dan genap terhadap \\(t\\). Karena \\(\\cosh z\\ge1\\), nilai maksimumnya terjadi di pusat.",
+            "formula": "f(0)=1,\\qquad 0<f(t)\\le1"
+          },
+          {
+            "explanation": "Untuk mendapatkan titik setengah maksimum, selesaikan \\(f(t)=1/2\\).",
+            "formula": "\\cosh(bt)=2\\quad\\Longrightarrow\\quad |t|=\\frac{\\operatorname{arcosh}(2)}{|b|}"
+          },
+          {
+            "explanation": "Jarak antara kedua titik itu adalah lebar penuh pada setengah maksimum.",
+            "formula": "\\operatorname{FWHM}=\\frac{2\\operatorname{arcosh}(2)}{|b|}"
+          },
+          {
+            "explanation": "Karena \\(\\cosh(-bt)=\\cosh(bt)\\), tanda \\(b\\) tidak mengubah grafik. Dalam pemodelan durasi, lazimnya diambil \\(b>0\\).",
+            "formula": "f(t;b)=f(t;-b)"
+          },
+          {
+            "explanation": "Kasus batas perlu dipisahkan: pada \\(b=0\\), tidak ada pulsa yang mereda.",
+            "formula": "f(t;0)=1"
+          }
+        ],
+        "plot_check": "Sebagai contoh, grafik untuk \\(b=0.5,1,2\\) semuanya berpuncak 1 di nol; urutan lebarnya dari terbesar ke terkecil adalah 0.5, 1, 2.",
+        "conclusion": "Parameter \\(|b|\\) adalah skala waktu terbalik: semakin besar nilainya, semakin singkat orang berada dalam bagian aktif gelombang."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH02-P04",
+      "ordinal": 4,
+      "problem_summary": "Gambarkan \\(w(y)=e^{-|y|/R}[1-\\tanh(ay)]\\) untuk berbagai nilai \\(R\\) dan \\(a\\), lalu jelaskan peran masing-masing parameter.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "w(y)=e^{-|y|/R}\\left(1-\\tanh(ay)\\right)",
+        "R",
+        "a"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Pisahkan fungsi menjadi faktor peluruhan simetris \\(e^{-|y|/R}\\) dan faktor arah \\(1-\\tanh(ay)\\). Uji \\(a=0\\), bandingkan \\(w(y)\\) dengan \\(w(-y)\\), dan anggap \\(R>0\\)."
+      },
+      "check": {
+        "type": "analytic_plot",
+        "final_answer": "Untuk \\(R>0\\), \\(R\\) adalah panjang jangkauan: makin besar \\(R\\), makin lambat pengaruh meluruh terhadap \\(|y|\\). Parameter \\(a\\) mengatur arah dan kuatnya asimetri: \\(a=0\\) memberi kernel simetris, \\(a>0\\) mengutamakan sisi \\(y<0\\), \\(a<0\\) mengutamakan sisi \\(y>0\\), dan memperbesar \\(|a|\\) menajamkan perbedaan kedua sisi.",
+        "quick_check": "Harus berlaku \\(w(0)=1\\), \\(w(y;0)=e^{-|y|/R}\\), serta untuk \\(y>0\\), \\(w(-y)/w(y)=e^{2ay}\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "assumption": "R>0",
+        "steps": [
+          {
+            "explanation": "Faktor pertama simetris dan menentukan seberapa cepat pengaruh tetangga menghilang terhadap jarak.",
+            "formula": "e^{-|y|/R};\\qquad R\\uparrow\\Rightarrow\\text{ekor lebih panjang}"
+          },
+          {
+            "explanation": "Jika \\(a=0\\), faktor hiperbolik sama dengan 1 dan tidak ada preferensi arah.",
+            "formula": "w(y)=e^{-|y|/R}\\quad(a=0)"
+          },
+          {
+            "explanation": "Untuk \\(y>0\\), perbandingan kedua sisi dapat dihitung tepat. Identitas hiperbolik menunjukkan besar asimetrinya.",
+            "formula": "\\frac{w(-y)}{w(y)}=\\frac{1+\\tanh(ay)}{1-\\tanh(ay)}=e^{2ay}"
+          },
+          {
+            "explanation": "Akibatnya, \\(a>0\\) memberi bobot lebih besar pada sisi negatif \\(y\\); mengubah tanda \\(a\\) mencerminkan grafik.",
+            "formula": "w(y;-a)=w(-y;a)"
+          },
+          {
+            "explanation": "Nilai di pusat tidak bergantung pada kedua parameter, sehingga seluruh grafik yang benar bertemu di titik yang sama.",
+            "formula": "w(0)=1"
+          }
+        ],
+        "plot_check": "Dengan \\(a\\) tetap, kurva untuk \\(R\\) yang lebih besar meluruh lebih lambat. Dengan \\(R\\) tetap, kurva \\(a=0\\) simetris; pasangan \\(a\\) dan \\(-a\\) merupakan pencerminan terhadap sumbu vertikal.",
+        "conclusion": "\\(R\\) mengatur jangkauan interaksi spasial, sedangkan tanda dan besar \\(a\\) mengatur arah serta kekuatan bias interaksi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH02-P05",
+      "ordinal": 5,
+      "problem_summary": "Usulkan perubahan pada model gelombang manusia agar keberadaan lorong atau tangga di stadion diperhitungkan.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Representasikan lorong sebagai perubahan pada geometri atau hubungan antarkursi, bukan sebagai perubahan suasana seluruh penonton. Tambahkan faktor yang melemahkan atau memutus pengaruh apabila jalur dari kursi \\(j\\) ke kursi \\(i\\) melintasi penghalang."
+      },
+      "check": {
+        "type": "qualitative_model_design",
+        "final_answer": "Salah satu modifikasi yang konsisten ialah mengganti kisi kursi seragam dengan posisi kursi sebenarnya dan faktor transmisi \\(B_{ij}\\in[0,1]\\). Ambil \\(B_{ij}=0\\) jika lorong sepenuhnya memutus pengaruh dan \\(0<B_{ij}<1\\) jika pengaruh hanya melemah; hilangkan pula lokasi tanpa penonton. Model harus kembali ke model asli ketika semua kursi terisi, berjarak sama, dan \\(B_{ij}=1\\).",
+        "required_evidence": [
+          "Variabel atau struktur baru untuk kursi kosong, jarak fisik, atau penghalang didefinisikan.",
+          "Aturan pengaruh tetangga diubah secara eksplisit.",
+          "Kasus batas tanpa lorong mereduksi ke model sumber.",
+          "Prediksi yang dapat diuji tentang gelombang yang berhenti, melemah, atau menyeberangi lorong diberikan."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "dimensions": [
+          {
+            "criterion": "Representasi geometri",
+            "full_credit": "Mendefinisikan posisi fisik kursi \\(p_i\\), status hunian \\(o_i\\), dan lokasi lorong/tangga; lokasi tanpa kursi tidak diperlakukan sebagai penonton.",
+            "partial_credit": "Hanya menyatakan bahwa lorong harus ditambahkan tanpa mendefinisikan pengaruhnya."
+          },
+          {
+            "criterion": "Aturan interaksi",
+            "full_credit": "Memasukkan jarak fisik dan faktor transmisi penghalang ke jumlah pengaruh, misalnya \\(w_i=\\sum_j o_jB_{ij}e^{-|p_j-p_i|/R}[1-\\tanh(a(p_j-p_i))]\\) untuk tetangga aktif.",
+            "partial_credit": "Mengubah satu parameter global sehingga semua pasangan kursi terpengaruh sama."
+          },
+          {
+            "criterion": "Makna parameter",
+            "full_credit": "Menjelaskan bahwa \\(B_{ij}=0\\) berarti tidak ada penularan antusiasme melintasi penghalang, sedangkan nilai di antara 0 dan 1 berarti penularan parsial; jarak ekstra juga mengurangi pengaruh.",
+            "partial_credit": "Menambahkan simbol baru tanpa interpretasi atau rentang nilai."
+          },
+          {
+            "criterion": "Konsistensi",
+            "full_credit": "Menunjukkan bahwa \\(o_i=1\\), jarak seragam, dan \\(B_{ij}=1\\) menghasilkan kembali model semula; kondisi batas periodik stadion tetap ditangani dengan jelas.",
+            "partial_credit": "Modifikasi tidak mempunyai hubungan yang dapat diperiksa dengan model semula."
+          },
+          {
+            "criterion": "Pengujian",
+            "full_credit": "Mengusulkan perbandingan peluang gelombang menyeberang, amplitudo/lebar sebelum dan sesudah lorong, serta lokasi gelombang mati terhadap pengamatan stadion.",
+            "partial_credit": "Tidak menyebut prediksi atau data pengujian."
+          }
+        ],
+        "model_response_outline": [
+          "Gunakan graf kursi atau koordinat fisik agar lorong muncul sebagai celah, bukan kursi biasa.",
+          "Kalikan bobot pengaruh antarkursi dengan faktor transmisi yang bergantung pada apakah jalurnya melintasi lorong atau tangga.",
+          "Uji beberapa kekuatan penghalang; model memprediksi ambang tempat gelombang masih dapat melompat atau justru berhenti."
+        ]
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH02-P06",
+      "ordinal": 6,
+      "problem_summary": "Bacalah dua artikel Farkas dkk., “Mexican waves in an excitable medium” dan “Human waves in stadiums”. Nilai apakah model mereka meyakinkan, apakah artikel memuat seluruh informasi yang diperlukan, dan apakah hipotesis penulis bersifat esensial. Jelaskan dengan bukti.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH02-LINK01",
+        "O005-LEGA-V101-CH02-LINK02"
+      ],
+      "source_formula_occurrences": [],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Pisahkan tiga pertanyaan. Untuk daya yakinkan, bandingkan keluaran dengan data kecepatan, lebar, dan arah. Untuk kelengkapan, coba tulis resep replikasi dari awal sampai akhir. Untuk keesensialan hipotesis, ubah satu asumsi pada satu waktu dan prediksi apa yang seharusnya berubah."
+      },
+      "check": {
+        "type": "qualitative_article_analysis",
+        "final_answer": "Tidak ada satu keputusan ya/tidak yang diwajibkan. Jawaban tuntas harus menilai model berdasarkan bukti empiris dan ketahanannya, mengaudit apakah persamaan, parameter, data, kondisi awal/batas, aturan pembaruan, dan prosedur pengujian cukup untuk reproduksi, serta membedakan hipotesis yang diperlukan oleh mekanisme dari pilihan penyederhanaan yang dapat diganti.",
+        "required_evidence": [
+          "Kedua artikel dirujuk secara dapat ditelusuri dan kontribusinya tidak dicampuradukkan.",
+          "Ketiga subpertanyaan dijawab secara eksplisit.",
+          "Tolok ukur empiris yang relevan—kecepatan, lebar, arah, atau pemicuan gelombang—dipakai untuk menilai model.",
+          "Setiap klaim tentang informasi yang hilang menunjuk unsur reproduksi yang spesifik, bukan sekadar mengatakan uraian kurang lengkap.",
+          "Sedikitnya dua hipotesis dianalisis melalui akibat jika hipotesis itu dilonggarkan."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "dimensions": [
+          {
+            "criterion": "Evaluasi daya yakinkan",
+            "full_credit": "Menilai apakah mekanisme ambang dan pengaruh tetangga mereproduksi kecepatan, lebar, dominasi arah, serta syarat pemicuan yang diamati tanpa penyetelan rapuh; membedakan kecocokan deskriptif dari penjelasan kausal.",
+            "partial_credit": "Menyebut gambar simulasi tampak realistis tanpa tolok ukur atau pembanding."
+          },
+          {
+            "criterion": "Audit kelengkapan dan reproduksibilitas",
+            "full_credit": "Memeriksa definisi keadaan, persamaan transisi, satuan, semua nilai/distribusi parameter, kondisi awal dan batas, urutan pembaruan, langkah waktu, data, kode atau pseudokode, serta ukuran validasi; kekurangan dinyatakan hanya bila dibuktikan dari artikel.",
+            "partial_credit": "Menyimpulkan lengkap atau tidak lengkap tanpa inventaris unsur yang diperlukan."
+          },
+          {
+            "criterion": "Analisis hipotesis",
+            "full_credit": "Menguji peran asumsi seperti geometri satu/dua dimensi, batas periodik, seluruh kursi terisi, ambang individual, pengaruh lokal asimetris, atau lintasan respons yang ditentukan; menjelaskan prediksi mana yang berubah bila asumsi diganti.",
+            "partial_credit": "Mendaftar asumsi tanpa menghubungkannya dengan perilaku model."
+          },
+          {
+            "criterion": "Makna esensial",
+            "full_credit": "Membedakan hipotesis yang esensial bagi mekanisme eksitabilitas atau arah rambat dari bentuk matematis tertentu yang hanya salah satu pilihan implementasi.",
+            "partial_credit": "Menganggap semua hipotesis sama penting atau menyebut semua tidak penting."
+          },
+          {
+            "criterion": "Argumen dan batas klaim",
+            "full_credit": "Memberi putusan bernuansa, menautkan setiap klaim pada artikel, menyebut ketidakpastian, dan mengusulkan satu pengujian pembeda atau analisis sensitivitas.",
+            "partial_credit": "Memberi opini final tanpa bukti atau tanpa mengakui batas."
+          }
+        ],
+        "model_response_outline": [
+          "Model dapat dianggap meyakinkan secara bersyarat bila satu perangkat parameter yang masuk akal secara serentak menghasilkan kecepatan, lebar, arah, dan ambang pemicuan yang mendekati pengamatan.",
+          "Kelengkapan dinilai dengan uji reproduksi; jangan menyatakan unsur hilang sebelum memeriksa kedua artikel dan bahan pendukung yang benar-benar mereka rujuk.",
+          "Mekanisme ambang, keadaan istirahat–aktif–pemulihan, dan pengaruh tetangga mungkin esensial bagi kelas perilaku, sedangkan fungsi bobot, distribusi ambang, atau jumlah keadaan tertentu perlu diuji sebagai pilihan model yang dapat diganti."
+        ]
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH02-P07",
+      "ordinal": 7,
+      "problem_summary": "Bandingkan model pada bab ini dengan versi satu dimensi dari model rinci \\(n\\)-keadaan dalam dua artikel Farkas dkk. Uraikan persamaan dan perbedaannya serta pertahankan kesimpulan dengan rujukan pada persamaan, aturan, atau hasil.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH02-LINK01",
+        "O005-LEGA-V101-CH02-LINK02"
+      ],
+      "source_formula_occurrences": [
+        "n"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Buat tabel dengan baris: geometri dan kondisi batas, keadaan seorang penonton, aturan eksitasi, perjalanan waktu setelah terpicu, bobot tetangga dan arah, heterogenitas ambang, parameter, serta keluaran yang dibandingkan dengan data. Bandingkan fungsi setiap unsur, bukan hanya nama simbolnya."
+      },
+      "check": {
+        "type": "qualitative_model_comparison",
+        "final_answer": "Persamaan minimum yang harus dikenali ialah bahwa kedua model memperlakukan gelombang sebagai rambatan eksitasi antarpelaku lokal, sedangkan perbedaan eksplisit utamanya terletak pada representasi keadaan: model bab memakai tingkat aktivitas kontinu yang mengikuti pulsa waktu setelah terpicu, sementara model rinci memakai \\(n\\) keadaan diskret. Jawaban penuh harus memeriksa, dari artikel, apakah geometri, kondisi batas, ambang, kernel tetangga, waktu reaksi/pemulihan, dan kalibrasinya benar-benar sama atau berbeda.",
+        "required_evidence": [
+          "Sedikitnya tiga persamaan dan tiga perbedaan substantif dibandingkan pada tingkat aturan atau parameter.",
+          "Perbedaan representasi waktu/keadaan kontinu-pulsa versus \\(n\\)-keadaan dijelaskan beserta akibat numeriknya.",
+          "Klaim tentang model Farkas dirujukkan pada bagian, persamaan, gambar, atau tabel artikel.",
+          "Jawaban menjelaskan kapan kedua model dapat menghasilkan perilaku makroskopis yang serupa dan data apa yang dapat membedakannya."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "dimensions": [
+          {
+            "criterion": "Mekanisme bersama",
+            "full_credit": "Mengidentifikasi pelaku yang tersusun spasial, keadaan istirahat dan eksitasi, pemicuan oleh pengaruh tetangga yang melewati ambang, rangkaian respons setelah pemicuan, dan gelombang makroskopis yang muncul dari aturan lokal.",
+            "partial_credit": "Hanya menyatakan bahwa keduanya memodelkan gelombang stadion."
+          },
+          {
+            "criterion": "Representasi keadaan dan waktu",
+            "full_credit": "Membandingkan \\(x(i,t)=f(t)\\) di atas ambang aktivitas lalu nol dalam model bab dengan perkembangan melalui \\(n\\) keadaan diskret pada model rinci, termasuk konsekuensi bagi resolusi waktu, durasi aktif, dan pemulihan.",
+            "partial_credit": "Menyebut kontinu dan diskret tanpa menjelaskan dampaknya."
+          },
+          {
+            "criterion": "Interaksi dan arah",
+            "full_credit": "Membandingkan radius pengaruh, peluruhan terhadap jarak, asimetri kiri–kanan, aturan penjumlahan stimulus, dan cara arah rambat dipilih; setiap klaim tentang model rinci ditopang artikel.",
+            "partial_credit": "Menganggap kernel kedua model identik tanpa memeriksa rumus atau parameter."
+          },
+          {
+            "criterion": "Heterogenitas, geometri, dan batas",
+            "full_credit": "Membandingkan distribusi ambang, kondisi hunian, kondisi batas periodik, susunan satu dimensi, kondisi awal, dan penyederhanaan lain; menjelaskan mana yang benar-benar sama setelah model rinci direduksi ke satu dimensi.",
+            "partial_credit": "Mencampurkan perbedaan akibat reduksi dimensi dengan perbedaan aturan model."
+          },
+          {
+            "criterion": "Kesetaraan perilaku dan daya pembeda data",
+            "full_credit": "Menjelaskan bahwa representasi mikroskopis yang berbeda dapat menghasilkan kecepatan, lebar, dan arah gelombang yang serupa; mengusulkan data temporal individual, pola pemulihan, sensitivitas terhadap langkah waktu, atau respons terhadap dua pemicu sebagai pembeda.",
+            "partial_credit": "Menganggap keluaran visual serupa membuktikan kedua model setara."
+          },
+          {
+            "criterion": "Justifikasi sumber",
+            "full_credit": "Menggunakan rujukan spesifik dari kedua artikel dan persamaan bab; ketidakpastian atau informasi yang tidak tersedia ditandai, bukan ditebak.",
+            "partial_credit": "Memberi tabel perbandingan tanpa bukti yang dapat dilacak."
+          }
+        ],
+        "comparison_baseline": [
+          "Model bab: penonton diam memiliki \\(x(i)=0\\); setelah stimulus tetangga melampaui \\(s_{th}(i)\\), aktivitas mengikuti pulsa \\(f(t)\\) selama berada di atas \\(\\mathcal A\\).",
+          "Model bab: pengaruh tetangga dibatasi oleh \\(R_m\\), meluruh dengan skala \\(R\\), dan dibuat tidak simetris oleh \\(a\\).",
+          "Model rinci: petunjuk soal sendiri menetapkan representasi \\(n\\)-keadaan; urutan, makna, dan aturan transisinya harus diambil dari artikel, bukan direkonstruksi dari nama model.",
+          "Kesamaan perilaku makroskopis tidak menjamin kesamaan mekanisme mikroskopis atau ketepatan yang sama pada data baru."
+        ],
+        "conclusion": "Jawaban terbaik bukan daftar permukaan, melainkan pemetaan komponen-ke-komponen yang menunjukkan unsur mana menjalankan fungsi yang sama, unsur mana sungguh berbeda, dan konsekuensi empiris apa yang mengikuti perbedaan tersebut."
+      }
+    }
+  ]
+}

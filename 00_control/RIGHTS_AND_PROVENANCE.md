@@ -31,3 +31,18 @@ from the public repository.
   redraws explicitly; do not silently copy proprietary software or data.
 - Figure 4.1 must be redrawn; Figure 10.1 must be replaced. Chapter 1 Figure
   1.1 remains source-derived and keeps its full accessible description.
+
+## Chapter 2 component record
+
+The Chapter 2 stadium-wave screenshot is source-derived and is copied
+byte-for-byte from the frozen Pressbooks asset (80,026 bytes, SHA-256
+`9abe8e17abd593811c14a1d6ea72b3ff727682ba58d000a87ece4056332769b6`).
+Its Indonesian alternative text and surrounding explanation are adaptation
+content under CC BY-NC-SA 4.0.
+
+The source refers to `The_Wave.m` and a MATLAB GUI, but neither program is in
+the admitted editable closure. No MATLAB or other proprietary source was
+copied. The Chapter 2 NumPy/Matplotlib notebook is a new, independently written
+implementation of the mathematical behavior described in the chapter. It
+records every convention needed where the prose is underdetermined and remains
+distributed compatibly with the reader's ShareAlike boundary.

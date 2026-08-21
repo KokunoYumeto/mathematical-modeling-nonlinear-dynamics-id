@@ -1,0 +1,29 @@
+{
+  "assets": [
+    {
+      "bytes": 80026,
+      "epub_member": "EPUB/assets/The_Wave.png",
+      "path": "assets/the-wave-source.png",
+      "sha256": "9abe8e17abd593811c14a1d6ea72b3ff727682ba58d000a87ece4056332769b6"
+    }
+  ],
+  "content_raw": {
+    "bytes": 18329,
+    "path": "content.raw.en.html",
+    "sha256": "9d32a66ab481f4059399a66404dc87b7664e9d525473871a99947e18ed910f00"
+  },
+  "content_rendered": {
+    "bytes": 19303,
+    "path": "content.rendered.en.html",
+    "sha256": "d1ac06131a83986da12f5227632bd3d9d4d0dac6bd6872f84505ca53494b97a9"
+  },
+  "record": {
+    "bytes": 39193,
+    "path": "source-record.canonical.json",
+    "sha256": "428a143edeec7843d3f4a2e2f02e5aa50fcde2cff366ca976988ecfa4191e69b"
+  },
+  "schema": "o005-unit-authority-v1",
+  "source_modified_gmt": "2026-03-27T02:10:41Z",
+  "source_record_id": 27,
+  "unit_id": "O005-LEGA-V101-CH02"
+}

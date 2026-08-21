@@ -97,7 +97,14 @@ h2, h3 { line-height: 1.25; scroll-margin-top: 5rem; }
 .reader-figure img { display: block; width: 100%; height: auto; }
 .reader-figure figcaption { margin-top: 0.75rem; color: var(--muted); font: 0.9rem/1.5 system-ui, sans-serif; }
 
-.math { white-space: nowrap; }
+.math {
+  display: inline-block;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  vertical-align: middle;
+  white-space: nowrap;
+}
 math { font-size: 1.08em; }
 
 .mastery-record {

@@ -22,11 +22,14 @@
     "sha256": "6bdfc501e3134de338fc9862feb4abbbd503037295ab8c701a627cb33550c740"
   },
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-CH01",
-    "target_content_sha256": "4525a8ff80cc1d05c4d86cc11b00b53ec2d0430b9e404715625f248a7758fee3",
-    "reader_manifest_sha256": "124a67a728f9d6b1d6425c1199b9545c6804d5b06f6d0dff6acb425458fe39d4",
-    "qa_tree_sha256": "175ae18c0e8b2a0d41a75887ebb271127691ca8324f655129d49fe0528d6edad"
+    "unit_id": "O005-LEGA-V101-CH02",
+    "source_record_type": "chapters",
+    "source_record_id": 27,
+    "source_slug": "first-steps-modeling-the-wave",
+    "target_content_sha256": "e044dbfde28c561f43922fabf24af41cc47b2fb4e3307fb6146646b700cf8c4c",
+    "reader_manifest_sha256": "5296b09661d64f4c33aaaa4736404f0d87eb5ea4bc51e5e8660719607da2dace",
+    "qa_tree_sha256": "b0f14a66e0a4e3ed39c79e39daa3ee3b46a6b5af75bb1856247caf4aca0c05b2"
   },
-  "current_unit": "O005-LEGA-V101-CH02",
-  "next_action": "Prepare the exact Chapter 2 record (Pressbooks record 27), translate it contiguously in source order, and extend the same modular backend."
+  "current_unit": "O005-LEGA-V101-PT02",
+  "next_action": "Prepare and translate visible Pressbooks part record 28, Models from Classical Mechanics, before Chapter 3 record 38; extend the same modular backend without skipping part content."
 }

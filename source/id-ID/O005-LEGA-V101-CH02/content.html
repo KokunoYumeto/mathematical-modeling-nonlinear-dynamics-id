@@ -1,0 +1,123 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Tujuan Pembelajaran</h2>
+</header>
+<div class="textbox__content">
+
+Pada akhir bab ini, Anda akan mampu melakukan hal-hal berikut.
+<ul>
+ 	<li>Menerapkan proses pemodelan dengan mengembangkan sebuah model dari awal.</li>
+ 	<li>Menerjemahkan pernyataan verbal menjadi formulasi matematika.</li>
+ 	<li>Menguji perilaku model dengan simulasi numerik.</li>
+ 	<li>Menilai apakah suatu model matematika berperilaku sesuai dengan yang diharapkan<span style="font-size: 12pt;letter-spacing: 0.01rem">.</span></li>
+</ul>
+</div>
+</div>
+Kita akan memulai penjelajahan pemodelan matematika dengan sebuah masalah sederhana yang tidak memerlukan pengetahuan khusus <em>a priori</em>, tetapi memungkinkan kita menggambarkan proses pemodelan yang dibahas pada bab sebelumnya.
+<h2>Perumusan masalah</h2>
+Kita akan membahas masalah <em>gelombang manusia</em>, yang terjadi di stadion ketika para penonton berdiri, mengangkat tangan, lalu duduk kembali sehingga membentuk gelombang yang merambat mengelilingi tribun. Menurut Farkas <em>dkk.</em>, fenomena ini kerap disebut Gelombang Meksiko (La Ola), istilah yang pertama kali digunakan dalam siaran Piala Dunia Sepak Bola 1986 di Meksiko. Pembahasan berikut didasarkan pada dua artikel karya Farkas <em>dkk. </em>yang berjudul <a href="http://dx.doi.org/10.1038/419131a"><em>Mexican waves in an excitable medium</em></a> dan <a href="http://dx.doi.org/10.1016/j.physa.2003.08.014"><em>Human waves in stadiums</em></a>.
+
+Tujuan kita adalah mengembangkan model yang mereproduksi dan menjelaskan perambatan gelombang tersebut. Model ini harus bergantung pada parameter yang dapat dijelaskan dengan bahasa sehari-hari, dan perubahan perilakunya ketika parameter itu diubah harus sesuai dengan apa yang benar-benar diamati di stadion.
+<h2>Memperoleh data dan memilih tingkat kerumitan model</h2>
+Dua artikel Farkas <em>dkk.</em> yang disebutkan di atas memberikan informasi berdasarkan 14 rekaman video gelombang di stadion yang masing-masing memiliki lebih dari 50.000 kursi. Pengamatan mereka menunjukkan bahwa gelombang merambat dengan kecepatan rata-rata 12 m s<sup>-1</sup> (atau setara dengan 22 kursi per detik), dan mempunyai lebar antara 6 dan 12 meter (atau setara dengan 11 hingga 22 kursi), dengan rata-rata sekitar 15 kursi. Selain itu, sekitar tiga dari setiap empat gelombang merambat searah jarum jam jika stadion dilihat dari atas.
+
+Model kita akan dibuat sesederhana mungkin. Secara khusus, model ini akan berdimensi satu dan bersifat diskret. Namun, kita akan mendefinisikan asumsi secara cermat agar mengetahui bagian mana yang perlu diubah jika hendak menyertakan efek lain.
+<h2>Membuat asumsi</h2>
+Kita akan menggunakan syarat batas periodik karena setiap baris kursi di stadion membentuk sebuah lintasan tertutup. Kita tidak akan memperhitungkan keberadaan tangga, sehingga mengasumsikan semua kursi berjarak sama. Kita juga menganggap semua kursi terisi. Setiap penonton berada dalam salah satu dari dua keadaan: duduk atau <em>ikut membentuk gelombang</em>. Keadaan kedua terdiri atas rangkaian gerak berdiri, melambaikan tangan, lalu duduk kembali. Setelah seseorang mulai ikut membentuk gelombang, ia tidak akan berhenti sebelum kembali duduk. Pada saat itu, orang tersebut dapat memutuskan untuk berdiri dan ikut membentuk gelombang lagi.
+<h2>Menyusun model</h2>
+Pertama, gelombang perlu dipicu: harus ada beberapa orang yang berdiri agar gelombang dapat dimulai. Kemudian, agar gelombang merambat, para penonton harus dipengaruhi oleh perilaku tetangganya. Karena sebagian besar gelombang merambat searah jarum jam, orang harus lebih peka terhadap apa yang terjadi di sebelah kanan daripada di sebelah kirinya.
+
+Suasana hati para penonton jelas berperan penting: jika pertandingan terlalu membosankan, tidak seorang pun ingin bersorak. Sebaliknya, jika pertandingan terlalu seru, mungkin ada orang yang terus-menerus berdiri dan banyak gelombang dapat dipicu sekaligus. Berdasarkan gagasan ini, kita dapat menggambarkan gelombang tersebut sebagai <em>gelombang antusiasme</em>. Orang yang berdiri berada dalam keadaan <em>antusias</em>, dan perilakunya memengaruhi tingkat antusiasme para tetangga. Jika tingkat ini melampaui <em>ambang antusiasme</em> seseorang, orang tersebut akan menjadi <em>antusias</em> dan ikut membentuk gelombang.
+
+Karena itu, kita memerlukan sebuah parameter, $latex s_{th}$, yang menggambarkan suasana hati atau ambang antusiasme setiap penonton. Nilai parameter ini kemungkinan berbeda dari satu penonton ke penonton lain; kita cukup mengasumsikannya tersebar seragam pada interval $latex [c - \delta, c + \delta]$. Distribusi yang lebih rumit juga dapat digunakan. Parameter $latex c$ menggambarkan daya tanggap rata-rata penonton yang menyaksikan pertandingan, sedangkan $latex \delta / \sqrt 3$ mengukur sebaran atau simpangan baku daya tanggap itu terhadap nilai rata-ratanya.
+
+Kita akan mengasumsikan bahwa tingkat antusiasme seseorang berubah ketika ia ikut membentuk gelombang. Asumsi ini masuk akal karena orang yang sudah berdiri dan melambaikan tangan selayaknya dianggap lebih antusias daripada orang yang baru mulai berdiri atau sedang duduk kembali. Oleh karena itu, kita memperkenalkan fungsi $latex f(t)$ yang menggambarkan tingkat antusiasme seseorang yang sedang ikut membentuk gelombang sebagai fungsi waktu.
+
+Terakhir, kita mendefinisikan fungsi asimetris $latex w$ yang menggambarkan bagaimana seorang penonton dipengaruhi oleh perilaku—dalam hal ini, tingkat antusiasme—para tetangganya. Sekarang kita akan membahas cara mengubah pernyataan-pernyataan di atas menjadi persamaan.
+
+Misalkan $latex N$ menyatakan banyaknya kursi dalam satu baris stadion (ingat bahwa model ini berdimensi satu. Namun, model ini dapat dengan mudah diperluas ke dua dimensi, seperti model yang dibahas dalam artikel Farkas <em>dkk</em>.). Karena kita mengasumsikan semua kursi terisi, kita dapat mendefinisikan fungsi $latex x(i)$ yang menggambarkan tingkat antusiasme penonton $latex i$, untuk $latex i = 1 \cdots N$. Variabel $latex x$ bernilai 0 jika orang tersebut duduk, atau lebih besar daripada suatu ambang aktivitas $latex \mathcal A$. Jika $latex x(i)=0$, penonton $latex i$ hanya akan mulai ikut membentuk gelombang apabila gabungan antusiasme para tetangganya, yang dinyatakan dengan $latex w(i)$, melampaui $latex s_{th}(i)$, yaitu ambang antusiasmenya. Setelah $latex x(i)$ menjadi tak nol, variabel ini akan berubah terhadap waktu menurut aturan berikut:
+<p style="text-align: center"><a id="LaOla_Rule"></a>$latex x(i,t) = \left\{ \begin{array}{ll} f(t) &amp; \qquad \hbox{if } f(t) &gt; {\mathcal A} \\ 0 &amp; \qquad \hbox{if } f(t) \le {\mathcal A} \end{array} \right. . \qquad (2.1)$</p>
+Fungsi $latex f(t)$ harus berbentuk lonceng, dengan nilai maksimum yang bersesuaian dengan saat orang tersebut telah berdiri sambil mengangkat tangannya. Banyak bentuk fungsi dapat dipilih; di sini kita cukup mengambil $latex f(t) = 1 / \cosh(b (t - t_0)),$ dengan $latex t_0$ sebagai titik pemaksimum $latex f$ dan $latex b$ sebagai parameter yang menentukan durasi $latex \tau$ gelombang, yaitu waktu yang diperlukan satu orang untuk berdiri, mengangkat tangan, lalu duduk kembali. Lebih tepatnya, karena fungsi $latex 1/\cosh(t)$ berorde satu pada interval berpusat di titik asal dengan lebar $latex 10$, $latex \tau$ dapat dihampiri oleh
+<p style="text-align: center">$latex \tau \simeq \frac{10}{b}.$</p>
+<p class="no-indent">Kita akan memilih $latex t_0$ sedemikian sehingga $latex t_0 = t_{\mathcal I} + \Delta \tau,$ dengan $latex t_{\mathcal I}$ sebagai saat seseorang menjadi antusias, yaitu saat $latex w(i)$ melampaui $latex s_{th}(i)$, dan $latex \Delta \tau$ sebagai parameter yang dapat kita atur. Kita dapat memandang $latex \Delta \tau$ sebagai waktu reaksi, yang mengukur selang antara saat seseorang menyadari aktivitas para tetangganya dan saat ia berdiri untuk ikut membentuk gelombang.</p>
+Karena pengamatan terhadap gelombang manusia menunjukkan bahwa kebanyakan gelombang merambat searah jarum jam, kita akan menggunakan fungsi asimetris untuk menggambarkan gabungan tingkat antusiasme para tetangga seseorang. Sekali lagi, ada banyak pilihan. Di sini kita menggunakan
+<p style="text-align: center">$latex w(i) = \sum_{\begin{array}{c}j,\ |i-j| \le R_m \\ x(j) &gt; {\mathcal A} \end{array}} e^{-|i-j|/R}\ \left(1 - \tanh(a (j-i))\right),$</p>
+<p class="no-indent">dengan $latex a$, $latex R$, dan $latex R_m$ sebagai parameter. Fungsi ini membuat penonton $latex i$ dipengaruhi oleh tetangga yang sedang antusias dan duduk pada jarak kurang dari $latex R_m+1$ kursi. Suku eksponensial menunjukkan bahwa pengaruh terbesar berasal dari tetangga terdekat, sedangkan suku tangen hiperbolik membuat tetangga di sebelah kanan penonton $latex i$ lebih berpengaruh daripada tetangga di sebelah kiri (untuk nilai $latex a$ yang positif). Jika baris satu dimensi itu dilihat dari pusat stadion, tetangga yang lebih berpengaruh justru duduk di sebelah kiri penonton $latex i$, sehingga gelombang merambat searah jarum jam.</p>
+
+<h2>Menguji model</h2>
+Cara terbaik untuk menguji model ini adalah melalui simulasi numerik. Setelah memilih jumlah kursi, banyaknya orang yang mula-mula berdiri, dan ambang antusiasme setiap penonton, serta mendefinisikan fungsi $latex f$ dan $latex w$, kita dapat menerapkan aturan pada Persamaan (<a href="#LaOla_Rule">2.1</a>) secara berulang kepada setiap penonton. Apakah gelombang merambat atau padam akan bergantung pada parameter model, dan kita dapat menjelajahi berbagai keadaan dengan mengubah parameter-parameter tersebut.<a id="Fig_2.1"></a>
+
+[caption id="attachment_101" align="alignnone" width="1920"]<img class="size-full wp-image-101" src="assets/the-wave-source.png" alt="Antarmuka grafis MATLAB untuk model gelombang manusia. Tersedia deskripsi panjang." width="1920" height="1016" /> Gambar 2.1. Antarmuka Pengguna Grafis (GUI) MATLAB untuk model Gelombang Meksiko. [<a href="#Fig_2.1_Desc"><em>Deskripsi Gambar</em></a>][/caption]
+Bab sumber merujuk pada kode MATLAB <span style="text-decoration: underline">
+The_Wave.m</span> untuk menyimulasikan model di atas, tetapi berkas kode itu tidak termasuk dalam sumber buku yang diterbitkan. Gambar 2.1 mempertahankan antarmuka MATLAB sumber sebagai konteks historis. Penggeser pada antarmuka sumber digunakan untuk mengubah berbagai parameter. Saat simulasi berjalan, grafik $latex x(i)$ ditampilkan di jendela kiri atas dan diperbarui pada setiap langkah waktu, $latex t_r$. Jendela kiri bawah menampilkan ambang antusiasme penonton, $latex s_{th}(i),$ sebagai fungsi nomor kursinya $latex i$. Panel kanan atas menampilkan, sebagai fungsi $latex t$, grafik tingkat antusiasme $latex x(i,t)$ (lihat Persamaan (<a href="#LaOla_Rule">2.1</a>)) dari seseorang yang sedang ikut membentuk gelombang. Panel kanan bawah menggambarkan bagaimana para tetangga memengaruhi perilaku seseorang. Lebih tepatnya, panel tersebut menampilkan grafik
+<p style="text-align: center">$latex e^{-|i-j|/R}\ \left(1 - \tanh(a (j-i))\right)$</p>
+<p class="no-indent">sebagai fungsi $latex j-i$; lingkaran merah menunjukkan kontribusi penonton $latex j$ yang duduk dalam jarak $latex R_m$ dari penonton $latex i$. Semua jendela sumber ini diperbarui ketika pengguna mengubah parameter. Nilai parameter bawaannya menghasilkan gelombang selebar sekitar 15 kursi yang merambat searah jarum jam. Catatan edisi: notebook Python terbuka yang disertakan dalam pembaca ini mengimplementasikan ulang model secara independen, menyatakan pilihan algoritmenya secara eksplisit, dan menyediakan visualisasi statis serta eksperimen parameter yang bersesuaian. Berikut beberapa saran untuk menjelajahi model tersebut.</p>
+
+<ul>
+ 	<li>Ubah jumlah kursi dan periksa bahwa ukuran gelombang tidak terpengaruh selama $latex N$ lebih besar daripada lebar gelombang $latex \mathcal W$. Apa yang terjadi jika $latex N$ lebih kecil daripada $latex \mathcal W$?</li>
+ 	<li>Ubah ambang antusiasme para penonton dengan memodifikasi nilai rata-rata $latex c$ dan rentang $latex [c - \delta, c + \delta]$ dari $latex s_{th}$.</li>
+ 	<li>Ubah nilai $latex R$ dan $latex R_m$. Apa yang Anda amati?</li>
+ 	<li>Adakah hubungan antara nilai minimum $latex c$ dan nilai minimum $latex R$ agar gelombang dapat terbentuk? Mengapa demikian atau tidak? Apa makna hubungan tersebut?</li>
+ 	<li>Berapakah kecepatan gelombang?</li>
+ 	<li>Ubah langkah waktu $latex t_r$. Bagaimana perubahan ini memengaruhi ukuran gelombang? Dapatkah Anda mengubah nilai $latex b$ untuk mengimbanginya? Mengapa dapat atau mengapa tidak? (Petunjuk: skala waktu apa lagi yang terdapat dalam model?) Apa yang sebenarnya ditentukan oleh $latex t_r$? Mengapa?</li>
+ 	<li>Ubah ambang aktivitas $latex \mathcal A$. Apakah Anda memahami mengapa gelombang padam ketika $latex \mathcal A$ terlalu besar? Parameter apa lagi yang dapat Anda ubah agar hal ini tidak terjadi?</li>
+ 	<li>Ubah banyaknya orang yang mula-mula berdiri. Apa yang Anda amati?</li>
+ 	<li>Apa yang dapat Anda ubah agar gelombang merambat ke kiri (yaitu, berlawanan arah jarum jam)?</li>
+</ul>
+Penjelajahan numerik di atas menunjukkan bahwa model ini memberikan representasi yang masuk akal mengenai pembentukan dan perambatan gelombang di stadion. Namun, simulasi juga dapat membantu mengenali beberapa keterbatasan model. Misalnya, tangga atau lorong dapat menghalangi perambatan gelombang. Keterbatasan lain muncul jika mula-mula ada lebih dari satu orang yang berdiri: semua penonton tersebut akan duduk kembali dengan cara yang persis sama. Hal ini terjadi karena kita menggunakan fungsi $latex f(t)$ yang sama bagi setiap penonton. Dalam kenyataan, orang yang berbeda ikut membentuk gelombang dengan cara yang berbeda, sehingga kita dapat mempertimbangkan fungsi $latex f$ yang bergantung pada $latex i$.
+
+Bahkan versi sederhana model yang disajikan di sini memiliki banyak parameter. Penjelajahan numerik terhadap model menunjukkan bahwa yang relevan sebenarnya bukan setiap parameter secara tersendiri, melainkan kombinasi di antara parameter-parameter itu. Sebagai contoh, kita dapat memilih untuk mengukur waktu dalam satuan langkah waktu, $latex t_r$. Dengan demikian, hanya tersisa dua parameter tak berdimensi, $latex \tau/t_r$ dan $latex \Delta \tau/t_r$. Mengidentifikasi kombinasi parameter yang relevan sangat penting untuk menjelajahi sifat model apa pun secara menyeluruh. Kita akan membahas hal ini secara mendalam pada bab berikutnya ketika memperkenalkan analisis dimensi dan penskalaan.
+<h2>Ringkasan</h2>
+Bab ini menggambarkan berbagai tahap dalam proses pemodelan melalui contoh gelombang manusia di stadion. Tahap-tahap tersebut meliputi merumuskan masalah, memperoleh data, menentukan tingkat kerumitan model yang diinginkan, membuat asumsi penyederhanaan, menyusun model, dan akhirnya mengujinya. Perangkat yang kita gunakan adalah unsur-unsur kalkulus untuk memilih bentuk fungsi $latex f$ dan $latex w$, serta simulasi numerik. Simulasi membantu kita menguji model, tetapi juga berguna untuk membangun pemahaman intuitif tentang sifat-sifat model apa pun. Pengetahuan ini kemudian dapat digunakan untuk mengenali unsur yang menyebabkan setiap sifat tertentu pada model, dan bila perlu menyederhanakan atau memodifikasi model tersebut. Fenomena yang dibahas pada bab ini merupakan contoh perambatan gelombang dalam <a id="Excitable System"></a><em>medium eksitabel</em>.
+
+Sebuah sistem disebut eksitabel jika gangguan dengan amplitudo yang cukup besar dapat memicu respons yang cepat dan besar, diikuti relaksasi yang lebih lambat hingga sistem kembali ke keadaan istirahat. Contoh medium eksitabel lainnya mencakup neuron (impuls saraf adalah gelombang eksitabel—disebut potensial aksi—yang merambat sepanjang akson) dan jaringan jantung (detak jantung berkaitan dengan gelombang listrik yang merambat melalui jantung sehingga menyebabkan kontraksi dan relaksasi otot jantung).
+<h2>Deskripsi Gambar</h2>
+<strong><a id="Fig_2.1_Desc"></a>Gambar 2.1</strong>: Antarmuka Pengguna Grafis MATLAB untuk “The Wave” yang memuat empat grafik data dan sebuah panel pengaturan parameter. Diagram batang utama menampilkan distribusi “antusiasme” pada 50 kursi. Penggeser memungkinkan pengguna mengubah variabel seperti “Jumlah kursi”, “Ambang aktivitas”, dan “Pengaruh tetangga”. Panel lain menampilkan bentuk gelombang, fungsi yang menggambarkan pengaruh tetangga, dan ambang antusiasme. Indikator “Waktu berlalu” menunjukkan bahwa simulasi sedang berada pada waktu 9,5 satuan. [<em><a href="#Fig_2.1">Kembali ke Gambar 2.1</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Bahan Renungan</h2>
+</header>
+<div class="textbox__content">
+<h3 id="O005-LEGA-V101-CH02-P01" style="text-align: center">Soal 1</h3>
+Temukan tiga fungsi berbeda yang <em>berbentuk lonceng</em> atau <em>menyerupai pulsa</em>. Bagaimana Anda mengatur tingginya? Bagaimana Anda mengatur lebarnya?
+
+<hr />
+
+<h3 id="O005-LEGA-V101-CH02-P02" style="text-align: center">Soal 2</h3>
+Temukan fungsi $latex f(x)$ yang monoton dan terdiferensialkan, terdefinisi pada seluruh garis bilangan real, serta memenuhi $latex \lim_{x \to -\infty} f(x) = -6,$ $latex \lim_{x \to \infty} f(x) = 3.$
+<p class="no-indent">Gambarkan grafik fungsi yang Anda temukan dan periksa bahwa fungsi tersebut naik secara monoton dari −6 (ketika $latex x \to -\infty$) menuju 3 (ketika $latex x \to +\infty$).</p>
+
+
+<hr />
+
+<h3 id="O005-LEGA-V101-CH02-P03" style="text-align: center">Soal 3</h3>
+Gambarkan grafik fungsi $latex f(t)=1/\cosh(b t)$ untuk berbagai nilai $latex b$. Jelaskan dengan kata-kata peran parameter ini.
+
+<hr />
+
+<h3 id="O005-LEGA-V101-CH02-P04" style="text-align: center">Soal 4</h3>
+Gambarkan grafik fungsi $latex w(y) = e^{-|y|/R} \left(1 - \tanh (a y)\right)$ untuk berbagai nilai parameter $latex R$ dan $latex a$. Jelaskan dengan kata-kata peran masing-masing parameter.
+
+<hr />
+
+<h3 id="O005-LEGA-V101-CH02-P05" style="text-align: center">Soal 5</h3>
+Bagaimana Anda akan memodifikasi model yang dibahas dalam bab ini agar memperhitungkan keberadaan lorong atau tangga di stadion?
+
+<hr />
+
+<h3 id="O005-LEGA-V101-CH02-P06" style="text-align: center"><span style="text-indent: 0em">Soal 6 </span></h3>
+<span style="text-indent: 0em">Bacalah artikel Farkas <em>dkk. </em>yang berjudul <a href="http://dx.doi.org/10.1038/419131a"><em>Mexican waves in an excitable medium</em></a> dan <a href="http://dx.doi.org/10.1016/j.physa.2003.08.014"><em>Human waves in stadiums</em></a>.</span>
+<ol>
+ 	<li>Apakah menurut Anda model mereka meyakinkan?</li>
+ 	<li>Apakah semua informasi yang diperlukan benar-benar tercantum dalam artikel-artikel tersebut? Mengapa demikian atau mengapa tidak?</li>
+ 	<li>Apakah asumsi yang dibuat para penulis benar-benar diperlukan? Jelaskan.</li>
+</ol>
+
+<hr />
+
+<h3 id="O005-LEGA-V101-CH02-P07" style="text-align: center"><span style="text-indent: 0em">Soal 7</span></h3>
+<span style="text-indent: 0em">Apa persamaan dan perbedaan antara </span>model yang dibahas pada bab ini dan versi satu dimensi dari model $latex n$-keadaan terperinci karya Farkas <em>dkk. </em>dalam artikel <a href="http://dx.doi.org/10.1038/419131a"><em>Mexican waves in an excitable medium</em></a> dan <a href="http://dx.doi.org/10.1016/j.physa.2003.08.014"><em>Human waves in stadiums</em></a>? <span style="text-indent: 0em">Berikan alasan untuk jawaban Anda.</span>
+
+</div>
+</div>
+&nbsp;
