@@ -240,6 +240,9 @@ corrected from the frozen TOC.
   Document scroll width equaled client width, all four paragraphs rendered,
   and no console error occurred. This part contains no formula, problem,
   asset, mastery, notebook, audio, or live-widget surface.
+- Published production commit:
+  `493a70632d4d71d3cb7a0729ba7a169a1b3900e9` on `origin/main`. Remote-head
+  equality and GitHub raw-byte readback of content, reader, and manifest passed.
 
 ## Next action
 
