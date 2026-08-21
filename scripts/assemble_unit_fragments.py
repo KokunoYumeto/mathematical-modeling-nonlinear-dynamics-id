@@ -184,6 +184,119 @@ SPECS = {
             ("$x$", "$latex x$", 2),
         ],
     },
+    "O005-LEGA-V101-CH04": {
+        "source_lines": 185,
+        "problem_count": 4,
+        "fragments": [
+            "01-model-and-equations.html",
+            "02-analysis-summary-descriptions.html",
+            "03-problems.html",
+        ],
+        "replacements": [
+            (
+                "Memberikan alasan bagi pendekatan-pendekatan yang digunakan untuk menyederhanakan persamaan gerak.",
+                "Menjelaskan alasan penggunaan aproksimasi untuk menyederhanakan persamaan gerak.",
+                1,
+            ),
+            (
+                "batu tipis, pipih (planar), homogen, dan simetris",
+                "batu tipis, pipih, homogen, dan simetris",
+                1,
+            ),
+            (
+                r"\frac{d \vec V}{d t}",
+                r"\frac{\partial \vec V}{\partial t}",
+                1,
+            ),
+            (
+                r"\frac{d \omega_y}{d t}",
+                r"\frac{d \omega_{-y}}{d t}",
+                1,
+            ),
+            (
+                r"\displaystyle I_t \frac{d \omega_p}{d t}",
+                r"\displaystyle I_p \frac{d \omega_p}{d t}",
+                1,
+            ),
+            (
+                "Rotasi benda tegar batu terhadap pusat massanya diberikan oleh persamaan Euler,",
+                "Gerak rotasi batu sebagai benda tegar terhadap pusat massanya diberikan oleh persamaan Euler,",
+                1,
+            ),
+            (
+                "Kerangka ortonormal $latex (-\\vec y, \\vec n, \\vec p)$ melekat pada pusat massa batu dan berotasi bersamanya.",
+                "Kerangka ortonormal $latex (-\\vec y, \\vec n, \\vec p)$ melekat pada pusat massa batu dan berotasi bersamanya. Dalam penampang pada Gambar 4.1, arah $latex \\vec p$ berimpit dengan arah tangensial $latex \\vec t$.",
+                1,
+            ),
+            (
+                r"\begin{array} \displaystyle J_1",
+                r"\begin{array}{ll} \displaystyle J_1",
+                1,
+            ),
+            (
+                r"$latex \theta(t) = \omega_{-y}(0)\, t.$",
+                r"$latex \theta(t) = \theta(0) + \omega_{-y}(0)\, t.$",
+                1,
+            ),
+            (
+                r"$latex \theta(t) = \theta(0) + \frac{1}{\delta} \omega_{-y}(0) \sin(\delta t) - \frac{1}{\delta} \omega_p(0) \cos(\delta t)$",
+                r"$latex \theta(t) = \theta(0) + \frac{\omega_{-y}(0)}{\delta} \sin(\delta t) + \frac{\omega_p(0)}{\delta} \left[1-\cos(\delta t)\right]$",
+                1,
+            ),
+            (
+                "rotasi terhadap sumbu $latex \\vec y$",
+                "rotasi terhadap sumbu $latex -\\vec y$",
+                1,
+            ),
+            (
+                r"$latex \tau_f = \frac{2 v_z(0)}{g},$",
+                r"$latex \tau_f = \frac{2 v_z(0)}{g}, \qquad v_z(0) \gt 0,$",
+                1,
+            ),
+            (
+                r"$latex {\mathcal U}(z) = \int_0^z F(s)\, ds,$",
+                r"$latex {\mathcal U}(z) = \int_0^z {\mathcal F}(s)\, ds,$",
+                1,
+            ),
+            (
+                "Kehilangan energi bertanda $latex \\mathcal W$ sama dengan usaha yang dilakukan oleh gaya gesek air pada batu.",
+                "Perubahan energi selama tumbukan, yang dinyatakan dengan $latex \\mathcal W$, sama dengan usaha yang dilakukan oleh gaya gesek air pada batu dan bernilai negatif untuk disipasi.",
+                1,
+            ),
+            (r"$latex \theta = 20^o$", r"$latex \theta = 20^\circ$", 1),
+            (r"$latex C_n$", r"$latex C_f$", 1),
+            (
+                "parameter sudut untuk kemiringan batu ($latex \\theta$), vektor kecepatan ($latex \\vec{v}$), dan sudut tumbukan ($latex \\beta$)",
+                "sudut kemiringan batu ($latex \\theta$), vektor kecepatan batu ($latex \\vec{v}$), dan sudut datang ($latex \\beta$)",
+                1,
+            ),
+            (
+                "$latex \\alpha$ masing-masing bernilai $latex y,\\,n$, dan $latex p$.",
+                "$latex \\alpha$ masing-masing bernilai $latex -y,\\,n$, dan $latex p$.",
+                1,
+            ),
+            (
+                "Perhatikan Persamaan (<a href=\"#Stone_New5\">4.11</a>) dan anggap bahwa batu berbentuk persegi.",
+                "Perhatikan Persamaan (<a href=\"#Stone_New5\">4.11</a>) dan anggap bahwa batu berbentuk persegi. Ambil $latex t=0$ pada awal tumbukan, dengan kondisi awal $latex z(0)=0$ dan $latex \\dot z(0)=v_z(0)\\lt 0$. Rumus luas terendam pada soal ini berlaku selama perendaman parsial, yaitu $latex -a\\sin(\\theta)\\leq z\\leq 0$.",
+                1,
+            ),
+            (
+                "Dinamika sisi batu persegi yang terendam selama fase tumbukan dideskripsikan oleh (lihat Soal 2)",
+                "Dinamika sisi batu persegi yang terendam selama fase tumbukan dideskripsikan oleh (lihat Soal 2). Untuk bagian-bagian berikut, abaikan ketebalan $latex h$, tetapkan $latex C \\equiv C_l\\cos(\\theta)-C_f\\sin(\\theta)\\gt 0$, gunakan $latex v_z(0)=-v_x(0)\\tan(\\beta)$, dan asumsikan ruas dalam tanda kurung siku pada hasil akhir positif. Dengan konvensi $latex z\\lt 0$ di bawah permukaan, batu mulai terendam seluruhnya ketika $latex |z|\\geq a\\sin(\\theta)$.",
+                1,
+            ),
+            (
+                r"$latex \displaystyle \frac{d^2 \theta}{d t^2} + \frac{J_0 - J_1}{J_1} (\theta - \theta(0)) = \frac{{\mathcal M}_\theta}{J_1},$",
+                r"$latex \displaystyle \frac{d^2 \theta}{d t^2} + \nu^2 \left(\theta - \theta(0)\right) = \frac{{\mathcal M}_\theta}{J_1},$",
+                1,
+            ),
+            (
+                "dengan $latex {\\mathcal M}_\\theta$ sebagai proyeksi torsi yang dikerahkan air pada batu ke sumbu $latex \\vec y$.",
+                "dengan $latex \\nu = ((J_0-J_1)/J_1)\\,\\Omega_0$, sedangkan $latex {\\mathcal M}_\\theta \\equiv N_{-y}$ adalah komponen torsi yang diberikan air pada batu dalam arah peningkatan sudut kemiringan (sumbu $latex -\\vec y$). Bentuk ini mempertahankan kuadrat frekuensi $latex \\nu^2$ pada Persamaan (20) artikel sumber.",
+                1,
+            ),
+        ],
+    },
 }
 
 

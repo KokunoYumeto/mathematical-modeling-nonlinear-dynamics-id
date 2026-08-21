@@ -1,0 +1,35 @@
+{
+  "assets": [
+    {
+      "bytes": 20409,
+      "epub_member": "EPUB/assets/Stone_coll-300x248.png",
+      "path": "assets/stone-collision-source.png",
+      "sha256": "89bd0040e8b3667dab192d6209c1933d25e85d8950ea14e014d3909244551c80"
+    },
+    {
+      "bytes": 9016,
+      "epub_member": "EPUB/assets/Stone_Pot-300x300.png",
+      "path": "assets/stone-potential-source.png",
+      "sha256": "e38c1e539565bfab8a128d8269d36b4983d9710b8affe5cc94a29060bed04dc6"
+    }
+  ],
+  "content_raw": {
+    "bytes": 31497,
+    "path": "content.raw.en.html",
+    "sha256": "21b06c068a09c580d89f6a7bf71b770535f2fd9446fc1d42921e5aaaa9babbbf"
+  },
+  "content_rendered": {
+    "bytes": 36955,
+    "path": "content.rendered.en.html",
+    "sha256": "953b611184c91c7abee00a36c2361e16f83f04e26dc5035a56be2857a7486885"
+  },
+  "record": {
+    "bytes": 71697,
+    "path": "source-record.canonical.json",
+    "sha256": "a1a31a51f76e7b4f74b8ed302b112acaad6bd87b0b9b5cb134676c5205b03e55"
+  },
+  "schema": "o005-unit-authority-v1",
+  "source_modified_gmt": "2026-03-19T21:51:57Z",
+  "source_record_id": 39,
+  "unit_id": "O005-LEGA-V101-CH04"
+}

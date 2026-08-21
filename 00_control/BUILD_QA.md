@@ -157,3 +157,49 @@ Required gates for each translated chapter unit:
   certified. Final-byte structural/locality checks pass; mobile layout,
   keyboard focus, computed contrast, and external-link reachability remain
   explicitly unestablished. No audio or live widget exists.
+
+## Admitted build — O005-LEGA-V101-CH04 — 2026-08-21
+
+- Builder: `scripts/build_unit_reader.py --unit O005-LEGA-V101-CH04`, Pandoc
+  3.9.0.2, native MathML for chapter and mastery mathematics.
+- QA: `scripts/qa_unit.py --unit O005-LEGA-V101-CH04 --execute-notebook
+  --deterministic-build`, exit 0.
+- Structural replay: 143 source / 143 target elements, 22 / 22 links, 245
+  ordered source TeX occurrences mapped to 258 declared target occurrences,
+  and four / four source problems with stable IDs. The 13 additional target
+  formulas and every changed source formula are declared in the QA mapping and
+  correction ledger.
+- Backend: 196 paired segments / 140,847 bytes, SHA-256
+  `c89f5eed3bcca294e546447010551abcc2087e1c31b7d3d98ae7f55498c4a295`;
+  four complete mastery records / 18,558 bytes, SHA-256
+  `799c9ad13c683b2575c7192c95e81dc3144d88061aef57ea173c918a687e9395`.
+- Notebook: 20 cells / seven code cells, unique deterministic cell IDs, clean
+  stored outputs, NumPy 2.4.4 and Matplotlib 3.10.9. Every assertion passed.
+  The notebook checks free-flight range, the corrected gyroscopic integration
+  constant, square-stone collision and turning depth, critical-speed domains,
+  and jump-length decay. It explicitly distinguishes equation/implementation
+  validation from unavailable experimental validation.
+- Figure 4.1 is an accessible code-native Indonesian SVG redraw, 3,664 bytes,
+  SHA-256
+  `bbeb5d0ec62ce85cb1ea336ada8cde15fc55d545373601c2cde963a9af0ddce0`;
+  its frozen source and transformation receipt remain bound. Figure 4.2 is a
+  byte-identical 9,016-byte source asset, SHA-256
+  `e38c1e539565bfab8a128d8269d36b4983d9710b8affe5cc94a29060bed04dc6`.
+- Reader: nine payload files / 447,163 bytes excluding the 929-byte manifest;
+  258 chapter and 119 mastery MathML nodes; five local dependencies; two
+  loaded figures; four localized notes; zero missing dependency, duplicate ID,
+  broken internal fragment, token shape, local path, or U+FFFD.
+- Reader manifest SHA-256
+  `0e9dff17d5f5d9625c16f5e7d62e5d0c84af75757a717e31ce53840e88eaab85`.
+  Deterministic double build: ten files including manifest, byte-identical;
+  canonical tree SHA-256
+  `15f5b87b32ff5afdeaf2dd29cdd80c2f3f8c90b04a2d2ffc079c1ca671d6f1ef`.
+- Regression: Chapters 1–3 and Part 2 retained their previously admitted
+  deterministic trees after the generic multi-column-array rendering repair.
+- Browser visual QA: at 1280×900 the 1,152 px main shell was centered with no
+  document overflow; at 390×844 the main shell and chapter were 357.5 px wide
+  and centered, with document scroll width equal to client width. Both figures
+  loaded with nonzero natural dimensions, their Indonesian captions and
+  long-description links were visible, and no console error occurred. Wide
+  MathML is contained in keyboard-scrollable formula spans. External-link
+  reachability was not tested; no audio or live widget exists.

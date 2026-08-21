@@ -57,3 +57,11 @@ O005-TERM-0055,stable node,simpul stabil,admitted,
 O005-TERM-0056,stable spiral,spiral stabil,admitted,
 O005-TERM-0057,dimensionless,tak berdimensi,admitted,
 O005-TERM-0058,restoring force,gaya pemulih,admitted,
+O005-TERM-0059,free-flight phase,fase terbang bebas,admitted,Use for the ballistic interval between water contacts.
+O005-TERM-0060,collision phase,fase tumbukan,admitted,Use for the water-contact interval; do not alternate with fase benturan.
+O005-TERM-0061,lift force,gaya angkat,admitted,
+O005-TERM-0062,friction force,gaya gesek,admitted,
+O005-TERM-0063,submerged area,luas permukaan yang terendam,admitted,Shorten to luas terendam when the referent is already explicit.
+O005-TERM-0064,gyroscopic effect,efek giroskopik,admitted,
+O005-TERM-0065,angular velocity,kecepatan sudut,admitted,Do not translate as frekuensi sudut unless the quantity is explicitly an oscillation frequency.
+O005-TERM-0066,torque,momen gaya,admitted,Use torsi only inside direct discussion of terminology or when needed to avoid ambiguity.

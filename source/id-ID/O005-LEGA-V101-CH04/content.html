@@ -1,0 +1,185 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Tujuan Pembelajaran</h2>
+</header>
+<div class="textbox__content">
+
+Pada akhir bab ini, Anda akan mampu melakukan hal-hal berikut.
+<ul>
+ 	<li>Memahami pemantulan batu di permukaan air sebagai pergantian antara fase terbang bebas dan fase tumbukan.</li>
+ 	<li>Menerapkan konsep-konsep mekanika klasik untuk mendeskripsikan dinamika batu selama setiap fase.</li>
+ 	<li>Menjelaskan alasan penggunaan aproksimasi untuk menyederhanakan persamaan gerak.</li>
+ 	<li>Merumuskan kondisi awal untuk setiap fase berdasarkan hasil fase sebelumnya.</li>
+ 	<li>Menganalisis dinamika setiap fase.</li>
+ 	<li>Mengevaluasi prediksi teoretis dengan membandingkannya terhadap pengamatan eksperimen.</li>
+</ul>
+</div>
+</div>
+Sekarang kita akan membahas masalah pemodelan pemantulan batu di permukaan air. Tujuannya ialah memahami bagaimana batu meluncur sambil memantul di permukaan air dan seberapa jauh batu itu bergerak. Dengan informasi ini, kita diharapkan dapat menyarankan cara melempar batu yang optimal untuk meningkatkan jumlah pantulan. Salah satu perbedaan utama dari masalah bandul yang telah dibahas sebelumnya ialah bahwa batu tidak dapat dianggap sebagai massa titik. Oleh karena itu, kita akan menggunakan dua perangkat persamaan model: hukum kekekalan momentum untuk mendeskripsikan gerak pusat massa (sebuah titik), dan persamaan gerak benda tegar untuk mendeskripsikan rotasi batu terhadap pusat massanya.
+<h2>Data eksperimen</h2>
+Kita mungkin pernah mencoba memantulkan batu di permukaan air, dan secara intuitif mengetahui bahwa agar batu dapat memantul berkali-kali, batu sebaiknya cukup pipih serta dilempar dengan sudut datang yang kecil dan dengan putaran. Kita juga tahu bahwa jika batu tidak dilempar dengan benar, batu mungkin memantul sekali, tetapi kemudian mulai terguling-guling di udara lalu tenggelam. Menariknya, tersedia data eksperimen terkendali untuk masalah ini. Sebuah artikel tahun 2004[footnote]C. Clanet, F. Hersen, and L. Bocquet, <a href="https://doi.org/10.1038/427029a"><em>Secrets of successful stone-skipping</em></a>, Nature <strong>427</strong>, 29 (2004).[/footnote] karya C. Clanet, F. Hersen, dan L. Bocquet melaporkan pengukuran laboratorium yang memberikan kecepatan awal minimum batu, sudut antara vektor kecepatan batu dan permukaan air, serta waktu tumbukan, sebagai fungsi sudut antara batu dan permukaan air.
+<h2>Asumsi dan persamaan model</h2>
+Pembahasan berikut didasarkan pada artikel tahun 2003[footnote]L. Bocquet, <em><a href="https://doi.org/10.1119/1.1519232">The physics of stone skipping</a></em>, Am. J. Phys. <strong>71</strong>, 150-155 (2003).[/footnote] karya L. Bocquet yang berjudul <em>The physics of stone skipping</em>. Kita menggunakan notasi yang sama agar pembahasan lebih mudah diikuti.
+
+Kita akan mengasumsikan bahwa gerak batu berganti-ganti antara terbang bebas, ketika batu berada di udara, dan bertumbukan dengan permukaan air. Setiap tahap ini dapat dideskripsikan secara terpisah dengan menggunakan persamaan mekanika klasik. Sebagai contoh, kondisi awal suatu fase terbang bebas adalah posisi dan kecepatan batu ketika batu lepas dari air pada akhir fase tumbukan sebelumnya, dan demikian pula sebaliknya. Kita akan mulai dengan mendeskripsikan proses tumbukan, kemudian membahas bagian gerak yang berupa terbang bebas.
+<h3>Fase tumbukan<a id="Fig_4.1"></a></h3>
+[caption id="attachment_123" align="alignleft" width="300"]<img class="wp-image-123 size-medium" src="assets/stone-collision-id.svg" alt="Sketsa proses tumbukan. Deskripsi panjang tersedia." width="300" height="248" /> Gambar 4.1. Penampang batu pipih selama proses tumbukan (diadaptasi dari artikel L. Bocquet tahun 2003). [<a href="#Fig_4.1_Desc"><em>Deskripsi Gambar</em></a>][/caption]Perhatikan sebuah batu tipis, pipih, homogen, dan simetris (misalnya berbentuk persegi atau lingkaran) dengan massa total $latex M$, dan asumsikan bahwa selama proses tumbukan batu tidak berputar pada sumbu normalnya ataupun terguling-guling, sehingga orientasinya tetap sejajar dengan orientasi semula.[footnote]Apakah asumsi ini masuk akal? Mengapa atau mengapa tidak?[/footnote] Oleh karena itu, masalah ini dapat disederhanakan dengan meninjau penampang batu yang melalui pusat massanya dan sejajar dengan bidang yang ditentukan oleh arah vertikal dan vektor kecepatan batu (lihat Gambar 4.1). Dengan demikian, semua titik pada penampang ini (dan sebenarnya pada seluruh batu) bergerak dengan vektor kecepatan yang sama.
+
+Parameter masalah ini adalah ukuran batu $latex a$ ($latex a$ adalah panjang sisi batu persegi atau diameter batu berbentuk lingkaran), ketebalannya $latex h \ll a$, vektor kecepatannya $latex \vec v(t)$, dan sudut $latex \theta$ (yang dianggap konstan selama setiap fase tumbukan) antara batu dan permukaan air. Kita akan menyebut $latex \beta(t)$ sebagai sudut antara $latex \vec v(t)$ dan arah horizontal, serta mendefinisikan dua basis ortonormal: $latex (\vec x, \vec y, \vec z)$ dan $latex (\vec n, \vec y, \vec t)$, sedemikian sehingga $latex \vec y$ tegak lurus terhadap bidang penampang, $latex \vec z$ mengarah ke atas, $latex \vec n$ normal terhadap permukaan batu, dan $latex \vec t$ menyinggung permukaan batu. Lihat Gambar 4.1 untuk ilustrasinya.
+
+Karena kita telah membuat asumsi bahwa batu tidak berotasi selama proses tumbukan, geraknya dapat direduksi menjadi gerak pusat massanya dan sepenuhnya dideskripsikan oleh hukum Newton. Gaya-gaya yang bekerja pada batu ialah gaya gravitasi, $latex - M g\, \vec z$, dan gaya $latex \vec F = F_x\, \vec x + F_z\, \vec z$ yang dikerahkan air pada batu. Jika kita tuliskan $latex \vec v = v_x\, \vec x + v_z\, \vec z$, kita memperoleh
+<p style="text-align: center"><a id="Stone_New1" style="font-size: 1em;text-align: initial"></a>$latex M\ \frac{d v_x}{d t} = F_x, \qquad M\ \frac{d v_z}{d t} = - M g + F_z. \qquad (4.1)$</p>
+Tentu saja, sekarang kita memerlukan model untuk gaya $latex \vec F$. Pertama, gaya ini dapat dianggap sebagai jumlah gaya angkat yang sejajar dengan $latex \vec n$ dan gaya gesek yang sejajar dengan $latex \vec t$. Kedua, mari kita tinjau dinamika air selama proses tumbukan. Fluida bergerak menurut persamaan Navier-Stokes,
+<p style="text-align: center">$latex \displaystyle \rho_w \left( \frac{\partial \vec V}{\partial t} + \left(\vec V \cdot \vec \nabla \right) \vec V \right)= - \nabla p + \mu \nabla^2 \vec V + \vec f,$</p>
+di mana $latex \rho_w$ adalah massa jenis air, $latex \vec V$ adalah vektor kecepatan sebuah partikel fluida, $latex p$ adalah tekanan, $latex \mu$ adalah viskositas dinamis air, dan $latex \vec f$ menyatakan gaya-gaya volume (seperti gravitasi) yang bekerja pada air. Pada antarmuka antara air dan batu, tekanan $latex p$ diberikan oleh
+<p style="text-align: center">$latex \displaystyle p \simeq \frac{||\vec F||}{S_{im}},$</p>
+di mana $latex S_{im}$ adalah luas permukaan bagian batu yang terendam (lihat Gambar 4.1). Sekarang kita akan melakukan analisis dimensi untuk membandingkan suku inersia dan suku difusi dalam persamaan ini. Kita mempunyai
+<p style="text-align: center">$latex \displaystyle \frac{\left[ \rho_w \left( \vec V \cdot \vec \nabla\right) \vec V \right]}{\left[\mu \vec \nabla^2 \vec V\right]} = \left[ \frac{\rho_w ||\vec V|| L}{\mu} \right] = \left[ \frac{||\vec V|| L}{\nu_w} \right] \equiv Re,$</p>
+di mana $latex L$ adalah panjang karakteristik, $latex \nu_w = \mu / \rho_w$ adalah viskositas kinematik air, dan $latex Re$ disebut bilangan Reynolds. Jika kita mengasumsikan bahwa $latex ||\vec V||$ berorde beberapa meter per detik, bahwa $latex L$ berorde ukuran batu—misalnya beberapa sentimeter—dan karena untuk air $latex \nu_w = 10^{-6}$ m<sup>2 </sup>s$latex ^{-1}$, kita memperoleh
+<p style="text-align: center">$latex Re = \frac{10 \cdot 10^{-2}}{10^{-6}} = 10^5 \gg 1.$</p>
+Akibatnya, suku-suku viskos dapat diabaikan, dan kita dapat menyeimbangkan suku-suku inersia dengan suku-suku tekanan. Hal ini memberikan
+<p style="text-align: center">$latex \left[ \frac{p}{L} \right] \simeq \left[ \rho_w \left( \vec V \cdot \vec \nabla\right) \vec V \right] = \left[ \frac{\rho_w ||\vec V||^2}{L} \right],$</p>
+yang bersama dengan $latex p \simeq ||\vec F||/S_{im}$ menghasilkan
+<p style="text-align: center">$latex ||\vec F|| \propto \rho_w\, S_{im}\, ||\vec V||^2.$</p>
+Karena $latex ||\vec V||$ dan $latex ||\vec v||$ sebanding, kita akan menganggap bahwa besar gaya $latex \vec F$ sebanding dengan massa jenis air $latex \rho_w$, luas permukaan yang terendam $latex S_{im}$, dan kuadrat besar vektor kecepatan batu, $latex ||\vec v||^2$. Dengan demikian, kita dapat menuliskan
+<p style="text-align: center">$latex \vec F = \left(\frac{1}{2} C_l\, \vec n + \frac{1}{2} C_f \, \vec t \right) \rho_w \, S_{im} \left(v_x^2 + v_z^2\right),$</p>
+di mana koefisien tak berdimensi $latex C_l$ dan $latex C_f$ mendeskripsikan bagaimana komponen normal (angkat) dan tangensial (gesek) dari $latex \vec F$ berubah terhadap $latex \rho_w \, S_{im}\, ||\vec v||^2$. Kita akan mengasumsikan bahwa koefisien-koefisien ini konstan. Sekarang kita dapat menyubstitusikan ekspresi ini ke dalam Persamaan (<a href="#Stone_New1">4.1</a>). Karena $latex \vec n = - \sin(\theta) \, \vec x + \cos(\theta)\, \vec z$ dan $latex \vec t = - \cos(\theta)\, \vec x - \sin(\theta) \vec z$, kita memperoleh
+<p style="text-align: center"><a id="Stone_New2"></a>$latex \begin{array}{ll} \displaystyle M\ \frac{d v_x}{d t} = - \frac{1}{2} \rho_w \, S_{im}(z) \left(v_x^2 + v_z^2\right) \left(C_l \sin(\theta) + C_f \cos(\theta)\right),\\ \displaystyle M \ \frac{d v_z}{d t} = - M g + \frac{1}{2} \rho_w \, S_{im}(z) \left(v_x^2 + v_z^2\right) \left(C_l \cos(\theta) - C_f \sin(\theta)\right). \end{array}\qquad(4.2)$</p>
+Persamaan-persamaan ini nonlinear terhadap $latex v_x$ dan $latex v_z$. Selain itu, kita telah menyatakan secara eksplisit kebergantungan $latex S_{im}$ pada koordinat vertikal $latex z$ dari bagian batu yang berada paling dalam di bawah air (lihat Gambar 4.1). Persamaan (<a href="#Stone_New2">4.2</a>) berlaku selama batu belum terendam seluruhnya. Jika batu terendam seluruhnya, gaya angkat yang dikerahkan air pada batu akan diberikan oleh hukum Archimedes, dan batu akan tenggelam. Pada awal fase tumbukan, $latex v_z &lt; 0$. Agar batu memantul di permukaan air, kita harus mempunyai $latex d v_z / d t &gt; 0$, sehingga $latex v_z$ bernilai positif pada akhir fase tumbukan. Kita melihat bahwa sudut $latex \theta$ harus kecil agar hal ini terjadi, sebab $latex C_l \cos(\theta) - C_f \sin(\theta)$ harus bernilai positif jika kita ingin
+<p style="text-align: center">$latex \frac{1}{2} \rho_w \, S_{im}(z) \left(v_x^2 + v_z^2\right) \left(C_l \cos(\theta) - C_f \sin(\theta)\right)$</p>
+mengimbangi $latex - M g$.
+<h3>Fase terbang bebas</h3>
+Selama fase terbang bebas, gerak pusat massa batu dideskripsikan oleh persamaan Newton dengan gravitasi sebagai satu-satunya gaya:
+<p style="text-align: center"><a id="Stone_New3"></a>$latex \displaystyle M\ \frac{d v_x}{d t} = 0, \qquad M\ \frac{d v_z}{d t}= - M g. \qquad (4.3)$</p>
+Jika kita menyatakan koordinat batu dengan $latex X$ dan $latex Z$, kita mempunyai
+<p style="text-align: center"><a id="Stone_Pos1"></a>$latex X(t)=X(0) + v_x(0) t \qquad Z(t) = v_z(0) t -\frac{1}{2} g t^2, \qquad (4.4)$</p>
+di mana $latex t=0$ ditetapkan pada awal fase terbang bebas. Posisi awal $latex (X(0), Z(0)=0)$ dan kecepatan awal $latex (v_x(0),v_z(0))$ batu diberikan oleh posisi dan kecepatan akhir pada fase tumbukan sebelumnya, kecuali, tentu saja, jika ini merupakan fase terbang bebas yang pertama.
+
+Gerak rotasi batu sebagai benda tegar terhadap pusat massanya diberikan oleh persamaan Euler,
+<p style="text-align: center"><a id="Stone_Euler1"></a>$latex \begin{array}{ll}&amp;I_{-y} \displaystyle \frac{d \omega_{-y}}{d t} - \omega_n \omega_p (I_n - I_p) = N_{-y}\\&amp; \displaystyle I_n \frac{d \omega_n}{d t} - \omega_p \omega_{-y} (I_p - I_{-y}) = N_n \\ &amp; \displaystyle I_p \frac{d \omega_p}{d t} - \omega_{-y} \omega_n (I_{-y} - I_n) = N_p,\end{array} \qquad (4.5)$</p>
+di mana $latex I_\alpha$, $latex \omega_\alpha$, dan $latex N_\alpha$ masing-masing adalah momen inersia, kecepatan sudut, dan momen gaya terhadap sumbu utama benda yang sejajar dengan $latex \vec \alpha$. Di sini, $latex -\vec y$ dan $latex \vec p$ adalah vektor satuan yang menyinggung permukaan batu dan sejajar dengan dua sumbu utamanya. Kerangka ortonormal $latex (-\vec y, \vec n, \vec p)$ melekat pada pusat massa batu dan berotasi bersamanya. Dalam penampang pada Gambar 4.1, arah $latex \vec p$ berimpit dengan arah tangensial $latex \vec t$. Perangkat persamaan serupa dapat dituliskan untuk fase tumbukan jika kita ingin memperhitungkan kemungkinan batu berputar pada sumbu normalnya dan terguling-guling saat bertumbukan dengan air.
+
+Karena batu berbentuk persegi atau lingkaran, berlaku $latex I_{-y} = I_p \equiv J_1$, dan kita akan menggunakan notasi $latex I_n \equiv J_0$. Selain itu, satu-satunya gaya yang bekerja pada batu, $latex -M g\, \vec z$, bekerja di pusat massanya, sehingga semua momen gaya bernilai nol. Persamaan (<a href="#Stone_Euler1">4.5</a>) kemudian dapat disederhanakan menjadi
+<p style="text-align: center"><a id="Stone_Euler2"></a>$latex \begin{array}{ll}&amp; J_1 \displaystyle \frac{d \omega_{-y}}{d t} - \omega_n \omega_p (J_0 - J_1) = 0 \\ &amp; J_0\, \displaystyle \frac{d \omega_n}{d t} = 0 \\&amp; J_1 \displaystyle \frac{d \omega_p}{d t} - \omega_{-y} \omega_n (J_1 - J_0) =0. \end{array} \qquad (4.6)$</p>
+
+<h2>Analisis</h2>
+Kita akan mulai dengan menganalisis persamaan untuk fase terbang bebas, lalu kembali membahas proses tumbukan.
+<h3>Fase terbang bebas</h3>
+Dari Persamaan (<a href="#Stone_Euler2">4.6</a>), kita melihat bahwa $latex \omega_n$ bersifat kekal sehingga nilainya sama dengan kecepatan sudut putar awal batu, $latex \Omega_0$, terhadap sumbu yang melalui pusat massanya dan tegak lurus terhadap permukaannya. Dengan demikian, tersisa dua persamaan linear,
+<p style="text-align: center"><a id="Stone_Euler3"></a> $latex \begin{array}{ll} \displaystyle J_1 \frac{d \omega_{-y}}{d t} - \Omega_0\, \omega_p (J_0 - J_1) &amp;= 0 \\ \displaystyle J_1 \frac{d \omega_p}{d t} - \omega_{-y}\, \Omega_0 (J_1 - J_0) &amp;= 0, \end{array} \qquad (4.7)$</p>
+yang dalam bentuk matriks dapat ditulis sebagai $latex \displaystyle \frac{d}{dt} \left(\begin{array}{c}\omega_{-y} \\ \omega_p \end{array}\right) = \left(\begin{array}{cc} 0 &amp; \delta \\ -\delta &amp; 0 \end{array}\right) \left(\begin{array}{c}\omega_{-y} \\ \omega_p \end{array}\right)$ dengan $latex \delta = \frac{\Omega_0 (J_0 -J_1)}{J_1}.$ Jika tidak ada putaran awal, yaitu jika $latex \Omega_0 = 0$, kita memperoleh
+<p style="text-align: center">$latex \omega_{-y} = \omega_{-y}(0) \qquad \omega_p = \omega_p(0),$</p>
+yang, karena $latex \omega_{-y}=d \theta/dt$, menyiratkan
+<p style="text-align: center">$latex \theta(t) = \theta(0) + \omega_{-y}(0)\, t.$</p>
+Dengan kata lain, jika selama fase tumbukan batu memperoleh sedikit saja rotasi terhadap sumbu $latex -\vec y$, yaitu jika $latex \omega_{-y}(0)$ tidak nol, batu akan mulai berjungkir selama fase terbang bebas. Pada tumbukan berikutnya, batu kemungkinan besar menghantam air dengan sudut datang $latex \theta$ yang besar, lalu tenggelam.
+
+Karena itu, $latex \Omega_0$ harus tidak nol. Dalam keadaan ini, $latex \omega_{-y}$ dan $latex \omega_p$ sama-sama berosilasi terhadap waktu dengan frekuensi $latex |\delta|$ dan diberikan oleh
+<p style="text-align: center">$latex \begin{array}{c}\omega_{-y}(t) = \omega_{-y}(0) \cos(\delta t) + \omega_p(0) \sin(\delta t) \\ \omega_p(t) = \omega_p(0) \cos(\delta t) - \omega_{-y}(0) \sin(\delta t). \end{array}$</p>
+Akibatnya,
+<p style="text-align: center">$latex \theta(t) = \theta(0) + \frac{\omega_{-y}(0)}{\delta} \sin(\delta t) + \frac{\omega_p(0)}{\delta} \left[1-\cos(\delta t)\right]$</p>
+dan nilainya akan tetap dekat dengan $latex \theta(0)$ jika koefisien-koefisien dalam persamaan di atas kecil. Jadi, putaran terhadap arah $latex \vec n$ menstabilkan batu dan mencegahnya berjungkir. Gejala ini disebut <em>efek giroskopik</em>.
+
+Sekarang kita beralih ke gerak pusat massa batu selama fase terbang bebas. Persamaan (<a href="#Stone_Pos1">4.4</a>) menunjukkan bahwa durasi $latex \tau_f$ setiap fase terbang bebas memenuhi $latex Z(\tau_f)=0$, yaitu
+<p style="text-align: center">$latex \tau_f = \frac{2 v_z(0)}{g}, \qquad v_z(0) \gt 0,$</p>
+dan panjang setiap lompatan, yakni jarak yang ditempuh batu sepanjang arah $latex \vec x$, adalah
+<p style="text-align: center">$latex \lambda = v_x(0) \tau_f = v_x(0) \frac{2 v_z(0)}{g}.$</p>
+Dari Persamaan (<a href="#Stone_New2">4.2</a>), jelas bahwa ketika $latex \theta$ kecil, $latex v_x$ berkurang selama setiap fase tumbukan. Karena itu, nilai $latex v_x(0)$—yakni nilai $latex v_x$ pada awal setiap fase terbang bebas—akan berkurang dari satu fase terbang bebas ke fase berikutnya. Karena kita tidak mengharapkan $latex v_z$ meningkat di antara dua fase terbang bebas, panjang setiap lompatan akan berkurang dari satu lompatan ke lompatan berikutnya, sebagaimana yang kita harapkan.
+<h3>Fase tumbukan</h3>
+Analisis kita terhadap Persamaan (<a href="#Stone_New2">4.2</a>) pertama-tama harus menunjukkan dalam kondisi apa batu akan muncul kembali dan lepas dari air pada akhir fase tumbukan. Perhatikan persamaan untuk $latex v_z$,
+<p style="text-align: center"><a id="Stone_New4" style="font-size: 1em"></a>$latex M \displaystyle \frac{d v_z}{d t} = - M g + \frac{1}{2} \rho_w \, S_{im}(z) \left(v_x^2 + v_z^2\right) \left(C_l \cos(\theta) - C_f \sin(\theta)\right) . \quad (4.10)$</p>
+Kita dapat memahami informasi yang terkandung dalam persamaan ini dengan menggunakan pendekatan $latex v_x \gg v_z$, yang cukup masuk akal, dan juga mengasumsikan bahwa $latex v_x^2 + v_z^2 = v^2 \equiv v_0^2$ konstan selama fase tumbukan. Pernyataan terakhir ini tidak sepenuhnya benar karena gesekan dengan air memperlambat batu. Namun, jika batu memantul sekitar 20 kali, kehilangan relatif $latex (v^2(0) - v^2(\tau_c))/v^2(0)$ selama setiap tumbukan kecil, setidaknya untuk sebagian besar tumbukan. Di sini, $latex \tau_c$ menyatakan durasi tumbukan. Dengan syarat-syarat ini, Persamaan (<a href="#Stone_New4">4.10</a>) menjadi
+<p style="text-align: center"><a id="Stone_New5"></a>$latex M \displaystyle \frac{d v_z}{d t} = - M g + \frac{1}{2} \rho_w S_{im}(z) v_0^2 \left(C_l \cos(\theta) - C_f \sin(\theta) \right) \equiv - {\mathcal F}(z). \quad (4.11)$</p>
+Ruas kanan, $latex - {\mathcal F}(z)$, hanya merupakan fungsi dari $latex z$ (ingat bahwa sejak awal kita mengasumsikan $latex \theta$ konstan selama setiap fase tumbukan). Karena $latex v_z = d z / d t$, kita dapat mengalikan kedua ruas persamaan ini dengan $latex v_z$ dan mengintegralkannya terhadap $latex t$ untuk memperoleh
+<p style="text-align: center"><a id="Stone_potential" style="font-size: 1em"></a>$latex \displaystyle \frac{M}{2} \left(\frac{d z}{d t}\right)^2 = \int - {\mathcal F}(z) \frac{d z}{d t} \, dt = \int - {\mathcal F}(z) \, dz \equiv -\, {\mathcal U}(z) + E, \quad (4.12)$</p>
+di mana $latex {\mathcal U}(z) = \int_0^z {\mathcal F}(s)\, ds,$ dan konstanta $latex E$ bersifat sembarang. Ketika $latex z=0$, $latex S_{im}(z)=0$; selain itu, $latex S_{im}(z)$ bertambah ketika $latex z$ menjadi semakin negatif. Oleh karena itu, potensial $latex {\mathcal U}(z)$ berbentuk seperti yang digambarkan pada Gambar 4.2 untuk nilai $latex z$ negatif, asalkan $latex \theta$ cukup kecil.<a id="Fig_4.2"></a>
+
+[caption id="attachment_126" align="alignleft" width="300"]<img class="wp-image-126 size-medium" src="assets/stone-potential-source.png" alt="Bentuk potensial U; tersedia deskripsi panjang." width="300" height="300" /> Gambar 4.2. Bentuk potensial <em>U</em>(<em>z</em>) sebagai fungsi <em>z</em> untuk <em>z </em>&lt; 0. [<a href="#Fig_4.2_Desc"><em>Deskripsi Gambar</em></a>][/caption]Dari bentuk $latex {\mathcal U}$, kita dapat melihat bahwa lintasan batu sedemikian rupa sehingga $latex z$ memiliki titik balik pada $latex z=z_m$. Pada akhir fase tumbukan, batu akan muncul kembali dengan kecepatan vertikal $latex v_z(\tau_c) = - v_z(0)$, berlawanan dengan kecepatan vertikalnya pada awal fase tumbukan. Hal ini hanya terjadi jika energi $latex E$ memungkinkan batu belum terbenam seluruhnya ketika $latex z=z_m$. Jika $latex E$ dipertahankan tetap, keadaan ini memberlakukan syarat pada $latex v_0^2$ karena semakin besar $latex v_0^2$, semakin kecil $latex |z_m|$. Jadi, batu tidak akan tenggelam selama fase tumbukan apabila $latex v_0^2 &gt; v_c^2$, dengan kecepatan kritis $latex v_c$ yang bergantung pada parameter-parameter masalah. Karena $latex v_x \gg v_z$, syarat pada $latex v_0$ juga dapat ditulis kembali sebagai syarat pada kecepatan awal batu dalam arah $latex \vec x$, yaitu $latex v_x(0) &gt; v_c$. Sebagaimana ditunjukkan dalam artikel L. Bocquet tahun 2003 dan dalam latihan pada akhir bab ini, kita dapat menghitung $latex S_{im}(z)$ untuk batu dengan bentuk tertentu, menyelesaikan Persamaan (<a href="#Stone_New5">4.11</a>) secara eksplisit, dan memperoleh ekspresi untuk $latex v_c$.
+
+Seperti disebutkan di atas, kita mengasumsikan bahwa dinamika sistem bersifat konservatif (yaitu $latex v^2 = v_0^2$ dianggap konstan). Hal ini jelas tidak sepenuhnya benar karena batu tidak terus memantul tanpa henti. Energi hilang selama proses tumbukan akibat gesekan batu dengan permukaan air. Semua yang telah kita nyatakan sebelumnya tetap benar secara kualitatif—khususnya, batu akan muncul kembali dengan kecepatan vertikal yang hanya sedikit lebih kecil daripada $latex |v_z(0)|$—selama kehilangan energi relatif dalam satu fase tumbukan kecil. Kondisi ini tentu terpenuhi pada pantulan-pantulan awal, tetapi tidak lagi berlaku pada pantulan-pantulan terakhir. Karena kehilangan energi inilah penyebab utama batu melambat, sekarang kita akan mencoba memperkirakan besarannya. Perubahan energi selama tumbukan, yang dinyatakan dengan $latex \mathcal W$, sama dengan usaha yang dilakukan oleh gaya gesek air pada batu dan bernilai negatif untuk disipasi. Secara kasar, nilainya dapat diperkirakan sebagai
+<p style="text-align: center">$latex \begin{align} {\mathcal W} &amp; \simeq \left[ \text{gaya sepanjang } \vec x \right] \cdot \left[ \text{jarak yang ditempuh batu sepanjang } \vec x \right] \\ &amp; \simeq \vec F \cdot \vec x l, \end{align}$</p>
+di mana $latex l = v_x(0)\ \tau_c$. Dari Persamaan (<a href="#Stone_New5">4.11</a>), kita melihat bahwa
+<p style="text-align: center">$latex \left[\frac{\rho_w}{M} v_0^2 \right] = L^{-1} T^{-2},$</p>
+sehingga kita dapat memperkirakan
+<p style="text-align: center">$latex \tau_c \propto \displaystyle \sqrt{\frac{M}{a \rho_w v_0^2}} \simeq \sqrt{\frac{M}{a \rho_w}} \frac{1}{v_x(0)},$</p>
+di mana $latex a$ adalah ukuran batu (panjang sisi atau diameter). Oleh karena itu, pada orde terendah, $latex l = v_x(0) \tau_c$ tidak bergantung pada $latex v_x(0)$. Selama tumbukan, ruas kanan Persamaan (<a href="#Stone_New4">4.10</a>) bernilai kecil, sehingga kita dapat menulis
+<p style="text-align: center">$latex M g \simeq \vec F \cdot \vec z.$</p>
+Selain itu, karena
+<p style="text-align: center">$latex \displaystyle \frac{\vec F \cdot \vec x}{\vec F \cdot \vec z} = - \frac{C_l \sin(\theta) + C_f \cos(\theta)}{C_l \cos(\theta) - C_f \sin(\theta)} \equiv - \mu,$</p>
+(rasio $latex \mu$ tidak boleh tertukar dengan viskositas dinamis air), kita memperoleh
+<p style="text-align: center">$latex \vec F \cdot \vec x \simeq - M g\, \mu,$</p>
+dan
+<p style="text-align: center">$latex {\mathcal W} \simeq - M g\, \mu \, l.$</p>
+Jadi, karena selisih energi kinetik antara awal dan akhir fase tumbukan sama dengan $latex \mathcal W$, kita memperoleh
+<p style="text-align: center">$latex \frac{1}{2} M v_x^2(\tau_c) - \frac{1}{2} M v_x^2(0) = {\mathcal W} = - M g\, \mu\, l,$</p>
+dan kecepatan awal $latex v_x(0)$ harus memenuhi
+<p style="text-align: center">$latex v_x(0) &gt; \sqrt{2\, g\, \mu\, l} \equiv V_c.$</p>
+Dengan menggabungkan seluruh hasil tersebut, kecepatan dalam arah $latex \vec x$ pada awal fase tumbukan harus memenuhi
+<p style="text-align: center">$latex v_x(0) &gt; \max(v_c,V_c),$</p>
+di mana $latex v_c$ diperoleh dengan menetapkan bahwa batu tidak boleh terbenam seluruhnya selama tumbukan, sedangkan $latex V_c$ memastikan batu bergerak cukup cepat untuk mengimbangi kehilangan energi akibat gaya gesek. Pembahasan kita tentang fase terbang bebas menunjukkan bahwa panjang setiap lompatan sebanding dengan kecepatan horizontal $latex v_x$. Kita tahu bahwa $latex v_x$ bersifat kekal selama fase terbang bebas (lihat Persamaan (<a href="#Stone_New3">4.3</a>)) dan bahwa $latex v_x^2$ berkurang sebesar $latex 2\, g\, \mu\, l$ selama setiap fase tumbukan. Karena $latex |v_z|$ sama pada awal dan akhir setiap fase terbang bebas, dan karena $latex v_z$ hanya berubah sedikit selama fase tumbukan, panjang lompatan setelah $latex N$ fase tumbukan diberikan oleh
+<p style="text-align: center">$latex \begin{align}\lambda_N &amp;= \frac{2 |v_z(0)|}{g} \sqrt{v_{x,0}^2 - 2 \, N \, g\, \mu\, l} = \frac{2 |v_z(0)| v_{x,0}}{g} \sqrt{1 - \frac{2 \, N \, g\, \mu\, l}{v_{x,0}^2}}\\ &amp;= \lambda_0 \sqrt{1 - \frac{N}{N_c}}, \qquad \lambda_0 = \frac{2 |v_z(0)| v_{x,0}}{g}, \ N_c = \frac{v_{x,0}^2}{2 \, g\, \mu\, l}, \end{align}$</p>
+di mana $latex v_{x,0}$ adalah kecepatan batu dalam arah $latex \vec x$ ketika mula-mula dilempar. Jadi, panjang setiap lompatan berkurang ketika $latex N$ membesar dan berskala seperti $latex \sqrt{1-N/N_c}$.
+<h2>Ringkasan</h2>
+Model ini menjelaskan adanya kecepatan minimum untuk melempar batu; menjelaskan mengapa batu perlu diberi putaran; dan menggambarkan bagaimana panjang setiap lompatan berkurang ketika jumlah pantulan bertambah. Model ini juga menunjukkan bahwa sudut $latex \theta$ antara batu dan permukaan air harus kecil. Eksperimen yang diuraikan dalam artikel C. Clanet <em>et al.</em>[footnote]Gambar 1.b dan 1.c dalam artikel C. Clanet <em>et al.</em> tahun 2004 menunjukkan daerah keberhasilan pemantulan batu pada bidang ($latex \theta$,$latex ||v||$) dan ($latex \theta$,$latex \beta$); Gambar 1.d menunjukkan waktu tumbukan sebagai fungsi $latex \theta$ untuk berbagai nilai $latex \beta$ (lihat Gambar 4.1 untuk definisi parameter-parameter tersebut).[/footnote] menunjukkan bahwa $latex \theta = 20^\circ$ merupakan nilai optimal. Nilai $latex \theta$ ini meminimumkan waktu tumbukan; ini juga merupakan sudut datang yang memungkinkan pemantulan batu berhasil dengan laju awal paling kecil. Untuk menjelaskan pengamatan ini, misalnya, kita perlu memperhitungkan ketergantungan $latex C_l$ dan $latex C_f$ pada $latex \theta$, lalu mencari nilai $latex \theta$ yang meminimumkan kehilangan energi $latex \mathcal W$.
+<h2>Deskripsi Gambar</h2>
+<strong><a id="Fig_4.1_Desc"></a>Gambar 4.1</strong>: Diagram teknis fisika yang memperlihatkan penampang batu pipih (digambarkan berwarna abu-abu) ketika menghantam permukaan air pada suatu sudut. Diagram ini mencakup sistem koordinat Kartesius ($latex x, y, z$), vektor satuan normal ($latex \vec{n}$) dan tangensial ($latex \vec{t}$) yang terkait dengan batu, serta sudut kemiringan batu ($latex \theta$), vektor kecepatan batu ($latex \vec{v}$), dan sudut datang ($latex \beta$). [<em><a href="#Fig_4.1">Kembali ke Gambar 4.1</a></em>]
+
+<strong><a id="Fig_4.2_Desc"></a>Gambar 4.2</strong>: Grafik yang menunjukkan kurva energi potensial sebagai fungsi kedalaman $latex z$. Garis horizontal $latex E$ menyatakan energi mekanik total sistem. Perpotongan garis $latex E$ dengan kurva pada $latex z_m$ mendefinisikan sebuah “titik balik”, yaitu kedalaman maksimum yang dapat dicapai benda sebelum gaya apung atau gaya hidrodinamik mendorongnya kembali ke atas. [<em><a href="#Fig_4.2">Kembali ke Gambar 4.2</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Bahan Renungan</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center" id="O005-LEGA-V101-CH04-P01">Soal 1</h3>
+Perhatikan Persamaan (<a href="#Stone_Euler1">4.5</a>).
+<ol>
+ 	<li><span style="font-size: 1rem;text-align: initial">Gunakan persamaan-persamaan tersebut untuk menentukan dimensi </span>$latex \omega_\alpha$, dengan $latex \alpha$ masing-masing bernilai $latex -y,\,n$, dan $latex p$.</li>
+ 	<li>Hubungkan dimensi $latex I_\alpha$ dengan dimensi $latex N_\alpha$.</li>
+ 	<li>Diketahui bahwa torsi berbentuk $latex \vec N = \vec r \times \vec f$, dengan $latex \vec r$ sebagai vektor posisi dan $latex \vec f$ sebagai gaya. Tentukan dimensi $latex N_\alpha$.</li>
+	<li>Gunakan hasil-hasil di atas untuk menentukan dimensi $latex I_\alpha$. Apakah hasil ini sesuai dengan definisi $latex I_\alpha \equiv \int ||\vec r||^2 \rho\,dV,$ dengan $latex \rho$ sebagai massa jenis dan $latex dV$ sebagai elemen volume?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH04-P02">Soal 2</h3>
+Soal ini didasarkan pada artikel L. Bocquet tahun 2003.
+
+Perhatikan Persamaan (<a href="#Stone_New5">4.11</a>) dan anggap bahwa batu berbentuk persegi. Ambil $latex t=0$ pada awal tumbukan, dengan kondisi awal $latex z(0)=0$ dan $latex \dot z(0)=v_z(0)\lt 0$. Rumus luas terendam pada soal ini berlaku selama perendaman parsial, yaitu $latex -a\sin(\theta)\leq z\leq 0$.
+<ol>
+ 	<li>Buktikan bahwa $latex S_{im} = a |z| / \sin(\theta)$.</li>
+ 	<li>Dengan menggunakan bentuk $latex S_{im}$ tersebut, buktikan bahwa Persamaan (<a href="#Stone_New5">4.11</a>) menjadi persamaan diferensial linear untuk $latex z$.</li>
+ 	<li>Carilah solusi umum persamaan diferensial biasa ini.</li>
+ 	<li>Terapkan kondisi batas dan buktikan bahwa $latex z(t)$ diberikan oleh</li>
+</ol>
+<p style="text-align: center">$latex \displaystyle z(t) = \frac{-g}{\omega_0^2} + \frac{g}{\omega_0^2} \cos(\omega_0 t) + \frac{v_z(0)}{\omega_0} \sin(\omega_0 t),$</p>
+<p style="text-align: center">$latex \displaystyle \text{dengan } \qquad \omega_0^2 = \frac{\left(C_l \cos(\theta)-C_f \sin(\theta)\right) \rho_w v_x(0)^2 a}{2 M \sin(\theta)}$.</p>
+
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH04-P03">Soal 3</h3>
+Soal ini didasarkan pada artikel L. Bocquet tahun 2003.
+
+Dinamika sisi batu persegi yang terendam selama fase tumbukan dideskripsikan oleh (lihat Soal 2). Untuk bagian-bagian berikut, abaikan ketebalan $latex h$, tetapkan $latex C \equiv C_l\cos(\theta)-C_f\sin(\theta)\gt 0$, gunakan $latex v_z(0)=-v_x(0)\tan(\beta)$, dan asumsikan ruas dalam tanda kurung siku pada hasil akhir positif. Dengan konvensi $latex z\lt 0$ di bawah permukaan, batu mulai terendam seluruhnya ketika $latex |z|\geq a\sin(\theta)$.
+<p style="text-align: center">$latex \displaystyle z(t) = \frac{-g}{\omega_0^2} + \frac{g}{\omega_0^2} \cos(\omega_0 t) + \frac{v_z(0)}{\omega_0} \sin(\omega_0 t),$</p>
+dengan
+<p style="text-align: center">$latex \displaystyle \omega_0^2 = \frac{\left(C_l \cos(\theta)-C_f \sin(\theta)\right) \rho_w v_x(0)^2 a}{2 M \sin(\theta)}.$</p>
+
+<ol>
+ 	<li>Gunakan bentuk ini untuk membuktikan bahwa sisi batu mencapai kedalaman $latex |z_m|$, dengan $latex z_m = - \frac{g}{\omega_0^2} \left[1+\sqrt{1+\frac{\omega_0^2 v_z(0)^2}{g^2}}\right].$</li>
+ 	<li>Syarat apa yang harus dipenuhi $latex z$ agar batu terendam seluruhnya?</li>
+ 	<li>Buktikan bahwa batu tidak akan terendam seluruhnya selama fase tumbukan jika
+$latex \displaystyle v_x(0)^2 &gt; \frac{4 M g}{C \rho_w a^2} \left[1 - \frac{2 \tan^2 \beta \, M}{a^3 C \rho_w \sin(\theta)}\right]^{-1}, \quad C = C_l \cos(\theta)-C_f \sin(\theta).$</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH04-P04">Soal 4</h3>
+Soal ini didasarkan pada artikel L. Bocquet tahun 2003.
+
+Dengan menggunakan persamaan gerak Euler (<a href="#Stone_Euler1">4.5</a>) bersama bentuk gaya angkat yang sesuai pada batu selama fase tumbukan, turunkan Persamaan (20) dalam artikel L. Bocquet tahun 2003,
+<p style="text-align: center">$latex \displaystyle \frac{d^2 \theta}{d t^2} + \nu^2 \left(\theta - \theta(0)\right) = \frac{{\mathcal M}_\theta}{J_1},$</p>
+dengan $latex \nu = ((J_0-J_1)/J_1)\,\Omega_0$, sedangkan $latex {\mathcal M}_\theta \equiv N_{-y}$ adalah komponen torsi yang diberikan air pada batu dalam arah peningkatan sudut kemiringan (sumbu $latex -\vec y$). Bentuk ini mempertahankan kuadrat frekuensi $latex \nu^2$ pada Persamaan (20) artikel sumber.
+
+</div>
+</div>
+&nbsp;

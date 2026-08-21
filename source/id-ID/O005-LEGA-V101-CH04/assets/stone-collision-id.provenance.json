@@ -1,0 +1,23 @@
+{
+  "schema": "o005-adapted-asset-provenance-v1",
+  "asset_id": "O005-LEGA-V101-CH04-FIG01-ID",
+  "language": "id-ID",
+  "source": {
+    "path": "authority/units/O005-LEGA-V101-CH04/assets/stone-collision-source.png",
+    "bytes": 20409,
+    "sha256": "89bd0040e8b3667dab192d6209c1933d25e85d8950ea14e014d3909244551c80",
+    "license": "CC BY-NC-SA 4.0",
+    "caption_attribution": "Adapted in the source book from L. Bocquet (2003), The physics of stone skipping."
+  },
+  "target": {
+    "path": "source/id-ID/O005-LEGA-V101-CH04/assets/stone-collision-id.svg",
+    "bytes": 3664,
+    "sha256": "bbeb5d0ec62ce85cb1ea336ada8cde15fc55d545373601c2cde963a9af0ddce0",
+    "view_box": "0 0 960 620",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "change": "The soft English-labeled raster was independently redrawn as a scalable accessible Indonesian SVG while preserving the coordinate axes, stone geometry, water surface, velocity, tangent and normal directions, dimensions, angles, and immersed-area notation.",
+  "method": "Independent code-native SVG redraw; no source bitmap pixels were copied into the target.",
+  "accessibility": "The SVG contains a Bahasa Indonesia title and a complete long description linked through aria-labelledby.",
+  "review": "Rendered at 960 by 620 and visually inspected for legibility, arrow directions, labels, contrast, and unclipped geometry. The frozen source raster remains unchanged in the authority closure."
+}

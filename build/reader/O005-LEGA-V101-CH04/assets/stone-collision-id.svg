@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Penampang batu pipih selama tumbukan dengan permukaan air</title>
+  <desc id="desc">Diagram memperlihatkan batu pipih yang membentuk sudut theta terhadap permukaan air. Vektor kecepatan v membentuk sudut datang beta. Sumbu x mendatar, sumbu z tegak, dan sumbu y tegak lurus bidang gambar. Vektor satuan t menyinggung batu dan n tegak lurus batu. Panjang karakteristik batu adalah a, ketebalannya h, kedalaman sisi yang terendam adalah minus z, dan luas permukaan terendam dilambangkan S sub im.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/>
+    </marker>
+    <style>
+      .axis,.measure,.vector{fill:none;stroke:#15191d;stroke-width:3;marker-end:url(#arrow)}
+      .measure{stroke-width:2;marker-start:url(#arrow)}
+      .guide{fill:none;stroke:#6b737b;stroke-width:2;stroke-dasharray:8 7}
+      .water{stroke:#277da8;stroke-width:5}
+      .stone{fill:#66727c;stroke:#222a30;stroke-width:3}
+      .immersed{fill:#b7d9e8;fill-opacity:.72;stroke:none}
+      .arc{fill:none;stroke:#15191d;stroke-width:2.5;marker-end:url(#arrow)}
+      .label{font-family:Arial,Helvetica,sans-serif;font-size:25px;fill:#15191d}
+      .math{font-family:Georgia,'Times New Roman',serif;font-size:32px;font-style:italic;fill:#15191d}
+      .small{font-family:Arial,Helvetica,sans-serif;font-size:21px;fill:#15191d}
+    </style>
+  </defs>
+
+  <line class="water" x1="30" y1="355" x2="930" y2="355"/>
+  <text class="small" x="45" y="337" fill="#1f698e">permukaan air</text>
+
+  <polygon class="stone" points="180,370 700,224 710,252 190,398"/>
+  <path class="immersed" d="M30 355 H233 L190 398 H30 Z"/>
+  <line class="guide" x1="180" y1="370" x2="180" y2="438"/>
+  <line class="guide" x1="700" y1="224" x2="700" y2="355"/>
+
+  <line class="axis" x1="104" y1="122" x2="218" y2="122"/>
+  <line class="axis" x1="104" y1="122" x2="104" y2="35"/>
+  <circle cx="104" cy="122" r="15" fill="#fff" stroke="#15191d" stroke-width="2.5"/>
+  <circle cx="104" cy="122" r="4" fill="#15191d"/>
+  <text class="math" x="226" y="132">x</text>
+  <text class="math" x="119" y="48">z</text>
+  <text class="math" x="62" y="151">y</text>
+
+  <line class="vector" x1="356" y1="321" x2="306" y2="214"/>
+  <line class="vector" x1="356" y1="321" x2="245" y2="352"/>
+  <text class="math" x="279" y="204">n</text>
+  <text class="math" x="213" y="365">t</text>
+
+  <line class="vector" x1="415" y1="330" x2="590" y2="374"/>
+  <text class="math" x="503" y="389">v</text>
+  <path class="arc" d="M545 355 A75 75 0 0 1 539 369"/>
+  <text class="math" x="558" y="344">β</text>
+
+  <line class="guide" x1="700" y1="252" x2="820" y2="355"/>
+  <line class="guide" x1="700" y1="252" x2="832" y2="252"/>
+  <path class="arc" d="M792 355 A92 92 0 0 0 775 308"/>
+  <text class="math" x="814" y="322">θ</text>
+
+  <line class="measure" x1="726" y1="223" x2="733" y2="252"/>
+  <text class="math" x="744" y="240">h</text>
+
+  <line class="measure" x1="164" y1="441" x2="718" y2="286"/>
+  <text class="math" x="441" y="489">a</text>
+
+  <line class="measure" x1="74" y1="355" x2="74" y2="398"/>
+  <text class="math" x="37" y="385">−z</text>
+
+  <text class="small" x="220" y="424" transform="rotate(-15 220 424)">luas terendam</text>
+  <text class="math" x="338" y="455" transform="rotate(-15 338 455)">S<tspan baseline-shift="sub" font-size="21">im</tspan></text>
+</svg>

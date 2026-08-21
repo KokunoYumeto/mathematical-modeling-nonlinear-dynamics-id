@@ -1,0 +1,51 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "mastery_path": "backend/mastery/O005-LEGA-V101-CH04.mastery.json",
+  "mastery_sha256": "799c9ad13c683b2575c7192c95e81dc3144d88061aef57ea173c918a687e9395",
+  "notebook_path": "source/id-ID/O005-LEGA-V101-CH04/notebooks/chapter-04-open-stone-skipping.ipynb",
+  "notebook_sha256": "49e68c250f6c4e9d6b612b11be86ed8030ce1aa483081cafb08c6ca535418b5e",
+  "problems": [
+    "O005-LEGA-V101-CH04-P01",
+    "O005-LEGA-V101-CH04-P02",
+    "O005-LEGA-V101-CH04-P03",
+    "O005-LEGA-V101-CH04-P04"
+  ],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 196,
+    "path": "backend/segments/O005-LEGA-V101-CH04.segments.jsonl",
+    "sha256": "c89f5eed3bcca294e546447010551abcc2087e1c31b7d3d98ae7f55498c4a295"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "chapter": "Stone-Skipping",
+    "content_sha256": "21b06c068a09c580d89f6a7bf71b770535f2fd9446fc1d42921e5aaaa9babbbf",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/stone-skipping/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-CH04/content.html",
+    "content_sha256": "4d19140e14d182466a049ce376ce3168b6d6230adcec80fd136d24c0cc05010b",
+    "figures": [
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH04/assets/stone-collision-id.svg",
+        "sha256": "bbeb5d0ec62ce85cb1ea336ada8cde15fc55d545373601c2cde963a9af0ddce0"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH04/assets/stone-potential-source.png",
+        "sha256": "e38c1e539565bfab8a128d8269d36b4983d9710b8affe5cc94a29060bed04dc6"
+      }
+    ],
+    "title": "Pemantulan Batu di Permukaan Air"
+  },
+  "unit_id": "O005-LEGA-V101-CH04"
+}

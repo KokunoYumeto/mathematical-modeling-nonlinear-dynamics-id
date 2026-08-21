@@ -118,6 +118,26 @@ UNIT_SPECS = {
             },
         ],
     },
+    "O005-LEGA-V101-CH04": {
+        "record_id": 39,
+        "modified_gmt": "2026-03-19T21:51:57",
+        "record_bytes": 71697,
+        "record_sha256": "a1a31a51f76e7b4f74b8ed302b112acaad6bd87b0b9b5cb134676c5205b03e55",
+        "assets": [
+            {
+                "path": "assets/stone-collision-source.png",
+                "epub_member": "EPUB/assets/Stone_coll-300x248.png",
+                "bytes": 20409,
+                "sha256": "89bd0040e8b3667dab192d6209c1933d25e85d8950ea14e014d3909244551c80",
+            },
+            {
+                "path": "assets/stone-potential-source.png",
+                "epub_member": "EPUB/assets/Stone_Pot-300x300.png",
+                "bytes": 9016,
+                "sha256": "e38c1e539565bfab8a128d8269d36b4983d9710b8affe5cc94a29060bed04dc6",
+            },
+        ],
+    },
 }
 
 

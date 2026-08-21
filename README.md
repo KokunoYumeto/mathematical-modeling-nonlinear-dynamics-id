@@ -7,7 +7,7 @@ Pressbooks v1.01 (Maret 2026). Sumber dan terjemahan berada di bawah lisensi
 Edisi ini tidak disokong atau disahkan oleh penulis maupun University of
 Arizona.
 
-Status saat ini: **Bab 1–3 dari 14 serta pengantar Bagian 2 telah diterjemahkan,
+Status saat ini: **Bab 1–4 dari 14 serta pengantar Bagian 2 telah diterjemahkan,
 dibangun, dan lolos QA.**
 Pekerjaan berlanjut secara berurutan; repositori ini belum merupakan edisi
 lengkap atau terbitan final.
@@ -18,12 +18,13 @@ lengkap atau terbitan final.
 - Bab 2 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH02/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH02/index.html); [notebook simulasi gelombang](source/id-ID/O005-LEGA-V101-CH02/notebooks/chapter-02-open-wave-simulation.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH02.mastery.json).
 - Pengantar Bagian 2 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT02/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT02/index.html).
 - Bab 3 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH03/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH03/index.html); [notebook bidang fase](source/id-ID/O005-LEGA-V101-CH03/notebooks/chapter-03-open-phase-plane.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH03.mastery.json).
+- Bab 4 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH04/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH04/index.html); [notebook pemantulan batu](source/id-ID/O005-LEGA-V101-CH04/notebooks/chapter-04-open-stone-skipping.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH04.mastery.json).
 
 ## Backend modular
 
-Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Tiga bab dan
-satu pengantar bagian yang selesai memiliki 698 segmen Inggris–Indonesia yang
-berpasangan, 37 ID soal tetap, tiga notebook terbuka, catatan unit berhash,
+Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Empat bab dan
+satu pengantar bagian yang selesai memiliki 894 segmen Inggris–Indonesia yang
+berpasangan, 41 ID soal tetap, empat notebook terbuka, catatan unit berhash,
 serta jalur eksplisit menuju aset, notebook, dan
 dukungan belajar. Lapisan ini dimaksudkan untuk memungkinkan pemindahan unit
 yang sama ke bahasa lain tanpa menjadikan Bahasa Indonesia sebagai kunci
@@ -43,6 +44,8 @@ python scripts/build_unit_reader.py --unit O005-LEGA-V101-PT02
 python scripts/qa_unit.py --unit O005-LEGA-V101-PT02 --deterministic-build
 python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH03
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH03 --execute-notebook --deterministic-build
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH04
+python scripts/qa_unit.py --unit O005-LEGA-V101-CH04 --execute-notebook --deterministic-build
 ```
 
 QA memeriksa kesetaraan struktur sumber–target, rumus dan tautan yang
@@ -57,6 +60,8 @@ yang telah dibuat meliputi penerjemahan ke Bahasa Indonesia, gambar ulang
 aksesibel untuk siklus pemodelan, pengindeksan modular, dukungan belajar baru,
 penggantian prompt MATLAB pada Soal 7 Bab 1, dan rekonstruksi terbuka simulasi
 gelombang Bab 2, notebook bidang fase terbuka Bab 3, serta lokalisasi berjejak
-untuk empat label penjelas pada Gambar 3.4. Semua notebook ditulis secara
+untuk empat label penjelas pada Gambar 3.4. Bab 4 menambahkan gambar ulang SVG
+aksesibel untuk Gambar 4.1, koreksi matematika yang tercatat, dan notebook
+pemantulan batu terbuka. Semua notebook ditulis secara
 independen. Rincian
 sumber, lisensi, keputusan, dan hash berada di `00_control/`.

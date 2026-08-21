@@ -102,6 +102,24 @@ UNIT_SPECS = {
         "plain_paragraphs": False,
         "change_note": "penerjemahan, pengindeksan modular, dan implementasi ulang analisis bidang fase dengan Python terbuka",
     },
+    "O005-LEGA-V101-CH04": {
+        "unit_type": "chapter",
+        "unit_number": 4,
+        "chapter_number": 4,
+        "source_title": "Stone-Skipping",
+        "target_title": "Pemantulan Batu di Permukaan Air",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/stone-skipping/",
+        "target_assets": [
+            "assets/stone-collision-id.svg",
+            "assets/stone-potential-source.png",
+        ],
+        "caption_count": 2,
+        "footnote_count": 4,
+        "notebook": "notebooks/chapter-04-open-stone-skipping.ipynb",
+        "problem_count": 4,
+        "plain_paragraphs": False,
+        "change_note": "penerjemahan, koreksi matematika terdokumentasi, gambar ulang aksesibel, pengindeksan modular, dan pendamping Python terbuka",
+    },
 }
 
 
@@ -175,8 +193,12 @@ def render_math(tex: str) -> str:
         tex,
         flags=re.DOTALL,
     )
-    tex = tex.replace(r"\begin{array}{c}", r"\substack{")
-    tex = tex.replace(r"\end{array}", "}")
+    tex = re.sub(
+        r"\\begin\{array\}\{c\}(.*?)\\end\{array\}",
+        lambda match: r"\substack{" + match.group(1) + "}",
+        tex,
+        flags=re.DOTALL,
+    )
     tex = tex.replace(r"\hbox{if }", r"\text{jika }")
     tex = tex.replace(r"\hbox{gaya}", r"\text{gaya}")
     tex = re.sub(r"\\hbox\{([^{}]*)\}", r"\\text{\1}", tex)

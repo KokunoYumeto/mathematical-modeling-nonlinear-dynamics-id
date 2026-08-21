@@ -7,9 +7,9 @@ Updated: 2026-08-21 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–3 and the visible Part 2 introduction are
-translated, built, and verified. Production now moves to Chapter 4,
-Pressbooks record 39, *Stone-Skipping*. The earlier
+into this lane. Chapters 1–4 and the visible Part 2 introduction are
+translated, built, and verified. Production now moves to the visible Part 3
+introduction, Pressbooks record 40, *Population Dynamics and Epidemiology*. The earlier
 cursor's record 29 / “Dimensional Analysis” pair was invalid and has been
 corrected from the frozen TOC.
 
@@ -152,7 +152,7 @@ corrected from the frozen TOC.
   manifest; manifest SHA-256
   `1957c32aab44de6589f8c5509da0393848f845c56deb15bd48234577893d7be5`.
 - Exact structure replay: 423/423 elements, 62/62 links, 404 source TeX
-  occurrences mapped to 406 declared target occurrences, and 23/23 stable
+  occurrences mapped to 407 declared target occurrences, and 23/23 stable
   problems; no unexplained drift.
 - Notebook: 13 cells / seven code cells / 19 assertions. NumPy 2.4.4,
   SciPy 1.17.1, and Matplotlib 3.10.9 executed successfully; conservative
@@ -166,10 +166,55 @@ corrected from the frozen TOC.
   Final-byte structural, locality, responsive-CSS, and accessibility checks
   pass; bounded browser evidence and its explicit limits are in `BUILD_QA.md`.
 
+## Admitted Chapter 4 boundary
+
+- Source record: Pressbooks chapter 39, *Stone-Skipping*; target title
+  *Pemantulan Batu di Permukaan Air*; modified `2026-03-19T21:51:57Z`.
+- Canonical record: 71,697 bytes, SHA-256
+  `a1a31a51f76e7b4f74b8ed302b112acaad6bd87b0b9b5cb134676c5205b03e55`;
+  raw source fragment: 31,497 bytes, SHA-256
+  `21b06c068a09c580d89f6a7bf71b770535f2fd9446fc1d42921e5aaaa9babbbf`.
+- Scope: 4,492 source words, 143 elements, 22 links, 245 protected TeX
+  occurrences, four problems, four footnotes, and two figures.
+- Complete natural id-ID fragment: 32,476 bytes, SHA-256
+  `4d19140e14d182466a049ce376ce3168b6d6230adcec80fd136d24c0cc05010b`.
+- Accessible independent Figure 4.1 SVG redraw: 3,664 bytes, SHA-256
+  `bbeb5d0ec62ce85cb1ea336ada8cde15fc55d545373601c2cde963a9af0ddce0`;
+  Figure 4.2 retains the frozen 9,016-byte source asset, SHA-256
+  `e38c1e539565bfab8a128d8269d36b4983d9710b8affe5cc94a29060bed04dc6`.
+- Four-record mastery layer: 18,558 bytes, SHA-256
+  `799c9ad13c683b2575c7192c95e81dc3144d88061aef57ea173c918a687e9395`.
+- Independent open stone-skipping notebook: 23,390 bytes, SHA-256
+  `49e68c250f6c4e9d6b612b11be86ed8030ce1aa483081cafb08c6ca535418b5e`;
+  pinned environment lock: 262 bytes, SHA-256
+  `a6a514bccd39c4c2b817b4faf284ef7f1adb9e31593649a76fa6ca3239af6f9e`.
+- Modular segment layer: 196 records / 140,847 bytes, SHA-256
+  `c89f5eed3bcca294e546447010551abcc2087e1c31b7d3d98ae7f55498c4a295`.
+- Exact replay: 143/143 elements, 22/22 links, 245 source TeX occurrences
+  mapped to 258 declared target occurrences, and four/four stable problems.
+  All mathematical interventions are enumerated as O005-CORR-0018 through
+  O005-CORR-0024 in `SOURCE_CORRECTIONS.csv`.
+- Notebook: 20 cells / seven code cells, all assertions passing under NumPy
+  2.4.4 and Matplotlib 3.10.9. It checks the free-flight, gyroscopic,
+  collision-depth, critical-speed, and jump-decay equations, while explicitly
+  making no experimental-validation claim.
+- Reader package: nine payload files / 447,163 bytes excluding its manifest;
+  manifest SHA-256
+  `0e9dff17d5f5d9625c16f5e7d62e5d0c84af75757a717e31ce53840e88eaab85`.
+  It renders 258 chapter and 119 mastery MathML nodes and resolves all local
+  dependencies. Repeated clean builds were byte-identical across ten files,
+  canonical tree SHA-256
+  `15f5b87b32ff5afdeaf2dd29cdd80c2f3f8c90b04a2d2ffc079c1ca671d6f1ef`.
+- Browser QA: at 1280×900 the 1,152 px main shell was centered; at 390×844
+  the chapter was 357.5 px wide and centered. Document scroll width equaled
+  client width at both sizes; both figures loaded at natural resolution,
+  long-description links were present, and the browser reported no console
+  error. Wide MathML remains locally horizontally scrollable by design.
+
 ## Next action
 
-Prepare and translate Chapter 4, Pressbooks chapter record 39,
-*Stone-Skipping*, as `O005-LEGA-V101-CH04`, preserving the hybrid
-free-flight/collision model, rigid-body equations, four problems, formulas,
-links, footnotes, both figures and descriptions, and the replacement/redraw
-boundary for Figure 4.1. Do not return to source selection.
+Prepare and translate visible Part 3 record 40, *Population Dynamics and
+Epidemiology*, as `O005-LEGA-V101-PT03`, then continue immediately to Chapter
+5 record 48, *Single-Species Models*. Preserve all four Part 3 paragraphs as
+reader content; do not manufacture mastery or notebook artifacts for the part
+introduction, and do not return to source selection.

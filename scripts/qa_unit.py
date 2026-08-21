@@ -125,6 +125,92 @@ QA_SPECS = {
         "lock": None,
         "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",
     },
+    "O005-LEGA-V101-CH04": {
+        "unit_type": "chapter",
+        "elements": 143,
+        "links": 22,
+        "math": 245,
+        "target_math": 258,
+        "reader_math": 258,
+        "math_replacements": {
+            21: (
+                "\\displaystyle \\rho_w \\left( \\frac{d \\vec V}{d t} + \\left(\\vec V \\cdot \\vec \\nabla \\right) \\vec V \\right)= - \\nabla p + \\mu \\nabla^2 \\vec V + \\vec f,",
+                "\\displaystyle \\rho_w \\left( \\frac{\\partial \\vec V}{\\partial t} + \\left(\\vec V \\cdot \\vec \\nabla \\right) \\vec V \\right)= - \\nabla p + \\mu \\nabla^2 \\vec V + \\vec f,",
+            ),
+            74: (
+                "\\begin{array}{ll}&amp;I_{-y} \\displaystyle \\frac{d \\omega_y}{d t} - \\omega_n \\omega_p (I_n - I_p) = N_{-y}\\\\&amp; \\displaystyle I_n \\frac{d \\omega_n}{d t} - \\omega_p \\omega_{-y} (I_p - I_{-y}) = N_n \\\\ &amp; \\displaystyle I_t \\frac{d \\omega_p}{d t} - \\omega_{-y} \\omega_n (I_{-y} - I_n) = N_p,\\end{array} \\qquad (4.5)",
+                "\\begin{array}{ll}&amp;I_{-y} \\displaystyle \\frac{d \\omega_{-y}}{d t} - \\omega_n \\omega_p (I_n - I_p) = N_{-y}\\\\&amp; \\displaystyle I_n \\frac{d \\omega_n}{d t} - \\omega_p \\omega_{-y} (I_p - I_{-y}) = N_n \\\\ &amp; \\displaystyle I_p \\frac{d \\omega_p}{d t} - \\omega_{-y} \\omega_n (I_{-y} - I_n) = N_p,\\end{array} \\qquad (4.5)",
+            ),
+            88: (
+                "\\begin{array} \\displaystyle J_1 \\frac{d \\omega_{-y}}{d t} - \\Omega_0\\, \\omega_p (J_0 - J_1) &amp;= 0 \\\\ \\displaystyle J_1 \\frac{d \\omega_p}{d t} - \\omega_{-y}\\, \\Omega_0 (J_1 - J_0) &amp;= 0, \\end{array} \\qquad (4.7)",
+                "\\begin{array}{ll} \\displaystyle J_1 \\frac{d \\omega_{-y}}{d t} - \\Omega_0\\, \\omega_p (J_0 - J_1) &amp;= 0 \\\\ \\displaystyle J_1 \\frac{d \\omega_p}{d t} - \\omega_{-y}\\, \\Omega_0 (J_1 - J_0) &amp;= 0, \\end{array} \\qquad (4.7)",
+            ),
+            94: (
+                "\\theta(t) = \\omega_{-y}(0)\\, t.",
+                "\\theta(t) = \\theta(0) + \\omega_{-y}(0)\\, t.",
+            ),
+            95: ("\\vec y", "-\\vec y"),
+            103: (
+                "\\theta(t) = \\theta(0) + \\frac{1}{\\delta} \\omega_{-y}(0) \\sin(\\delta t) - \\frac{1}{\\delta} \\omega_p(0) \\cos(\\delta t)",
+                "\\theta(t) = \\theta(0) + \\frac{\\omega_{-y}(0)}{\\delta} \\sin(\\delta t) + \\frac{\\omega_p(0)}{\\delta} \\left[1-\\cos(\\delta t)\\right]",
+            ),
+            108: (
+                "\\tau_f = \\frac{2 v_z(0)}{g},",
+                "\\tau_f = \\frac{2 v_z(0)}{g}, \\qquad v_z(0) \\gt 0,",
+            ),
+            130: (
+                "{\\mathcal U}(z) = \\int_0^z F(s)\\, ds,",
+                "{\\mathcal U}(z) = \\int_0^z {\\mathcal F}(s)\\, ds,",
+            ),
+            160: (
+                "\\begin{align} {\\mathcal W} &amp; \\simeq \\left[ \\text{force along } \\vec x \\right] \\cdot \\left[ \\text{distance covered by the stone along } \\vec x \\right] \\\\ &amp; \\simeq \\vec F \\cdot \\vec x l, \\end{align}",
+                "\\begin{align} {\\mathcal W} &amp; \\simeq \\left[ \\text{gaya sepanjang } \\vec x \\right] \\cdot \\left[ \\text{jarak yang ditempuh batu sepanjang } \\vec x \\right] \\\\ &amp; \\simeq \\vec F \\cdot \\vec x l, \\end{align}",
+            ),
+            199: ("\\theta = 20^o", "\\theta = 20^\\circ"),
+            202: ("C_n", "C_f"),
+            218: ("y,\\,n", "-y,\\,n"),
+            235: (
+                "\\displaystyle \\text{where } \\qquad \\omega_0^2 = \\frac{\\left(C_l \\cos(\\theta)-C_f \\sin(\\theta)\\right) \\rho_w v_x(0)^2 a}{2 M \\sin(\\theta)}",
+                "\\displaystyle \\text{dengan } \\qquad \\omega_0^2 = \\frac{\\left(C_l \\cos(\\theta)-C_f \\sin(\\theta)\\right) \\rho_w v_x(0)^2 a}{2 M \\sin(\\theta)}",
+            ),
+            242: (
+                "\\displaystyle \\frac{d^2 \\theta}{d t^2} + \\frac{J_0 - J_1}{J_1} (\\theta - \\theta(0)) = \\frac{{\\mathcal M}_\\theta}{J_1},",
+                "\\displaystyle \\frac{d^2 \\theta}{d t^2} + \\nu^2 \\left(\\theta - \\theta(0)\\right) = \\frac{{\\mathcal M}_\\theta}{J_1},",
+            ),
+            243: ("{\\mathcal M}_\\theta", "{\\mathcal M}_\\theta \\equiv N_{-y}"),
+            244: ("\\vec y", "-\\vec y"),
+        },
+        "math_insertions_before": {
+            82: ["\\vec p", "\\vec t"],
+            230: [
+                "t=0",
+                "z(0)=0",
+                "\\dot z(0)=v_z(0)\\lt 0",
+                "-a\\sin(\\theta)\\leq z\\leq 0",
+            ],
+            236: [
+                "h",
+                "C \\equiv C_l\\cos(\\theta)-C_f\\sin(\\theta)\\gt 0",
+                "v_z(0)=-v_x(0)\\tan(\\beta)",
+                "z\\lt 0",
+                "|z|\\geq a\\sin(\\theta)",
+            ],
+            243: ["\\nu = ((J_0-J_1)/J_1)\\,\\Omega_0"],
+            245: ["\\nu^2"],
+        },
+        "problems": 4,
+        "footnotes": 4,
+        "assets": [
+            "assets/stone-collision-id.svg",
+            "assets/stone-potential-source.png",
+        ],
+        "notebook": "notebooks/chapter-04-open-stone-skipping.ipynb",
+        "notebook_cells": 20,
+        "code_cells": 7,
+        "mastery_math": None,
+        "lock": None,
+        "lock_sha256": "a6a514bccd39c4c2b817b4faf284ef7f1adb9e31593649a76fa6ca3239af6f9e",
+    },
 }
 BUILDER = ROOT / "scripts" / "build_unit_reader.py"
 LATEX_RE = re.compile(r"\$latex\s+(.+?)\$", re.DOTALL)

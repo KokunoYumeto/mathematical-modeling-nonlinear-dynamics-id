@@ -1,0 +1,185 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Learning Objectives</h2>
+</header>
+<div class="textbox__content">
+
+At the end of this chapter, you will be able to do the following.
+<ul>
+ 	<li>Understand stone skipping as an alternation of free flight and collision phases.</li>
+ 	<li>Apply concepts of classical mechanics to describe the dynamics of the stone during each phase.</li>
+ 	<li>Justify approximations to simplify the equations of motion.</li>
+ 	<li>Formulate initial conditions for each phase, based on the outcome of the previous phase.</li>
+ 	<li>Analyze the dynamics of each phase.</li>
+ 	<li>Evaluate theoretical predictions against experimental observations.</li>
+</ul>
+</div>
+</div>
+We now consider the problem of modeling stone-skipping. The goal is to understand how the stone skims the surface of the water and how far it goes. With this information, it should be possible to suggest an optimal way of throwing the stone, in order to increase the number of rebounds. One of the major differences with the problem of the pendulum discussed previously, is that the stone cannot be considered as a point mass. As a consequence, we will use two sets of model equations: the conservation of momentum to describe the motion of the center of mass (a point), and the equations of motion for a rigid body, to describe the rotation of the stone about its center of mass.
+<h2>Experimental data</h2>
+We probably all have some sort of experience with stone-skipping, and we intuitively know that in order to get a large number of bounces, the stone should be rather flat, and thrown with a small incidence angle, and with a spin. We also know that if we do not throw the stone correctly, it may bounce once, but will then start tumbling while in the air and then sink. Remarkably enough, controlled experimental data is available for this problem. A 2004 article[footnote]C. Clanet, F. Hersen, and L. Bocquet, <a href="https://doi.org/10.1038/427029a"><em>Secrets of successful stone-skipping</em></a>, Nature <strong>427</strong>, 29 (2004).[/footnote] by C. Clanet, F. Hersen and L. Bocquet reports laboratory measurements giving the minimal initial velocity of the stone, the angle between the velocity vector of the stone and the water surface, as well as the collision time, as functions of the angle between the stone and the water surface.
+<h2>Assumptions and model equations</h2>
+The discussion below is based on the 2003 article[footnote]L. Bocquet, <em><a href="https://doi.org/10.1119/1.1519232">The physics of stone skipping</a></em>, Am. J. Phys. <strong>71</strong>, 150-155 (2003).[/footnote] by L. Bocquet, entitled <em>The physics of stone skipping</em>. We use the same notation, in order to make the reading easier.
+
+We will assume that the motion of the stone alternates between free flight, when the stone is in the air, and collisions with the surface of the water. Each of these stages can be described separately, using equations of classical mechanics. The initial conditions for say a free flight phase will be the position and velocity of the stone as it takes off from the water at the end of the preceding collision phase, and vice-versa. We will start by describing the collision process, and then discuss the free flight part of the motion.
+<h3>Collision phase<a id="Fig_4.1"></a></h3>
+[caption id="attachment_123" align="alignleft" width="300"]<img class="wp-image-123 size-medium" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Stone_coll-300x248.png" alt="Sketch of the collision process. Long description available." width="300" height="248" /> Figure 4.1. Cross-section of a flat stone during the collision process (adapted from L. Bocquet's 2003 article). [<a href="#Fig_4.1_Desc"><em>Image Description</em></a>][/caption]Consider a thin, flat (planar), homogeneous and symmetric (e.g. square or circular) stone of total mass $latex M$ and assume that during the collision process, the stone does not spin or tumble, and thus remains parallel to itself.[footnote]Is this assumption reasonable? Why or why not?[/footnote] As a consequence, the problem may be simplified by considering the cross-section of the stone through its center of mass and parallel to the plane defined by the vertical and the velocity vector of the stone (see Figure 4.1). All of the points in this cross-section (and in fact in the stone) thus move with the same velocity vector.
+
+The parameters for this problem are then the size $latex a$ of the stone ($latex a$ is the side length of a square stone or the diameter of a circular stone), its thickness $latex h \ll a$, its velocity vector $latex \vec v(t)$, and the angle $latex \theta$ (assumed constant during each collision phase) made by the stone with the surface of the water. We will call $latex \beta(t)$ the angle between $latex \vec v(t)$ and the horizontal, and define two orthonormal bases: $latex (\vec x, \vec y, \vec z)$ and $latex (\vec n, \vec y, \vec t)$, such that $latex \vec y$ is perpendicular to the plane of the cross-section, $latex \vec z$ points upward, $latex \vec n$ is normal and $latex \vec t$ is tangent to the surface of the stone. See Figure 4.1 for an illustration.
+
+Since we made the assumption that the stone does not rotate during the collision process, its motion can be reduced to that of its center of mass, and is completely described by Newton's law. The forces applied to the stone are the force of gravity, $latex - M g\, \vec z$, and the force $latex \vec F = F_x\, \vec x + F_z\, \vec z$ exerted by the water on the stone. If we write $latex \vec v = v_x\, \vec x + v_z\, \vec z$, we have
+<p style="text-align: center"><a id="Stone_New1" style="font-size: 1em;text-align: initial"></a>$latex M\ \frac{d v_x}{d t} = F_x, \qquad M\ \frac{d v_z}{d t} = - M g + F_z. \qquad (4.1)$</p>
+Of course, we now need a model for the force $latex \vec F$. First, this force can be considered as being the sum of a lift force, parallel to $latex \vec n$, and of a friction force, parallel to $latex \vec t$. Second, let us consider the dynamic of the water during the collision process. The fluid moves according to the Navier-Stokes equation,
+<p style="text-align: center">$latex \displaystyle \rho_w \left( \frac{d \vec V}{d t} + \left(\vec V \cdot \vec \nabla \right) \vec V \right)= - \nabla p + \mu \nabla^2 \vec V + \vec f,$</p>
+where $latex \rho_w$ is the density of the water, $latex \vec V$ is the velocity vector of a fluid particle, $latex p$ is the pressure, $latex \mu$ is the dynamic viscosity of the water, and $latex \vec f$ represents bulk forces (such as gravity) exerted on the water. At the interface between the water and the stone, the pressure $latex p$ is given by
+<p style="text-align: center">$latex \displaystyle p \simeq \frac{||\vec F||}{S_{im}},$</p>
+where $latex S_{im}$ is the surface area of the immersed portion of the stone (see Figure 4.1). We will now perform some dimensional analysis to compare the inertial and diffusive terms in this equation. We have
+<p style="text-align: center">$latex \displaystyle \frac{\left[ \rho_w \left( \vec V \cdot \vec \nabla\right) \vec V \right]}{\left[\mu \vec \nabla^2 \vec V\right]} = \left[ \frac{\rho_w ||\vec V|| L}{\mu} \right] = \left[ \frac{||\vec V|| L}{\nu_w} \right] \equiv Re,$</p>
+where $latex L$ is a characteristic length, $latex \nu_w = \mu / \rho_w$ is the kinematic viscosity of water, and $latex Re$ is called the Reynolds number. If we assume that $latex ||\vec V||$ is of the order of a few meters per second, that $latex L$ is of the order of the size of the stone - say a few centimeters - and since, for water, $latex \nu_w = 10^{-6}$ m<sup>2 </sup>s$latex ^{-1}$, we find
+<p style="text-align: center">$latex Re = \frac{10 \cdot 10^{-2}}{10^{-6}} = 10^5 \gg 1.$</p>
+As a consequence, viscous terms are negligible, and we can balance inertial terms with pressure terms. This gives
+<p style="text-align: center">$latex \left[ \frac{p}{L} \right] \simeq \left[ \rho_w \left( \vec V \cdot \vec \nabla\right) \vec V \right] = \left[ \frac{\rho_w ||\vec V||^2}{L} \right],$</p>
+which together with $latex p \simeq ||\vec F||/S_{im}$ gives
+<p style="text-align: center">$latex ||\vec F|| \propto \rho_w\, S_{im}\, ||\vec V||^2.$</p>
+Since $latex ||\vec V||$ and $latex ||\vec v||$ are comparable, we will thus consider that the intensity of the force $latex \vec F$ is proportional to the density of water $latex \rho_w$, the immersed surface area $latex S_{im}$, and the square of the velocity vector of the stone, $latex ||\vec v||^2$. We can then write
+<p style="text-align: center">$latex \vec F = \left(\frac{1}{2} C_l\, \vec n + \frac{1}{2} C_f \, \vec t \right) \rho_w \, S_{im} \left(v_x^2 + v_z^2\right),$</p>
+where the dimensionless coefficients $latex C_l$ and $latex C_f$ describe how the normal (lift) and tangential (friction) components of $latex \vec F$ vary with $latex \rho_w \, S_{im}\, ||\vec v||^2$. We will assume that these coefficients are constant. We can now substitute this expression into Equations (<a href="#Stone_New1">4.1</a>). Since $latex \vec n = - \sin(\theta) \, \vec x + \cos(\theta)\, \vec z$ and $latex \vec t = - \cos(\theta)\, \vec x - \sin(\theta) \vec z$, we get
+<p style="text-align: center"><a id="Stone_New2"></a>$latex \begin{array}{ll} \displaystyle M\ \frac{d v_x}{d t} = - \frac{1}{2} \rho_w \, S_{im}(z) \left(v_x^2 + v_z^2\right) \left(C_l \sin(\theta) + C_f \cos(\theta)\right),\\ \displaystyle M \ \frac{d v_z}{d t} = - M g + \frac{1}{2} \rho_w \, S_{im}(z) \left(v_x^2 + v_z^2\right) \left(C_l \cos(\theta) - C_f \sin(\theta)\right). \end{array}\qquad(4.2)$</p>
+These equations are nonlinear in $latex v_x$ and $latex v_z$. Moreover, we made explicit the dependence of $latex S_{im}$ on the vertical coordinate $latex z$ of the part of the stone that is the deepest under water (see Figure 4.1). Equations (<a href="#Stone_New2">4.2</a>) are valid as long as the stone is not completely immersed. If this happened, the lift exerted by the water on the stone would be given by Archimedes' law, and the stone would sink. At the beginning of the collision phase, $latex v_z &lt; 0$. In order for the stone to skim the surface of the water, we need to have $latex d v_z / d t &gt; 0$, so that $latex v_z$ is positive at the end of the collision phase. We see that the angle $latex \theta$ needs to be small for this to happen, since $latex C_l \cos(\theta) - C_f \sin(\theta)$ must be positive if we want
+<p style="text-align: center">$latex \frac{1}{2} \rho_w \, S_{im}(z) \left(v_x^2 + v_z^2\right) \left(C_l \cos(\theta) - C_f \sin(\theta)\right)$</p>
+to balance $latex - M g$.
+<h3>Free flight phase</h3>
+During a free flight phase, the motion of the center of mass of the stone is described by Newton's equation in which the only force is gravity:
+<p style="text-align: center"><a id="Stone_New3"></a>$latex \displaystyle M\ \frac{d v_x}{d t} = 0, \qquad M\ \frac{d v_z}{d t}= - M g. \qquad (4.3)$</p>
+If we denote by $latex X$ and $latex Z$ the coordinates of the stone, we have
+<p style="text-align: center"><a id="Stone_Pos1"></a>$latex X(t)=X(0) + v_x(0) t \qquad Z(t) = v_z(0) t -\frac{1}{2} g t^2, \qquad (4.4)$</p>
+where $latex t=0$ is taken at the beginning of the free flight phase. The initial position $latex (X(0), Z(0)=0)$ and velocity $latex (v_x(0),v_z(0))$ of the stone are given by the final position and velocities of the preceding collision phase, unless of course this is the first free flight phase.
+
+The rigid rotation of the stone about its center of mass is given by Euler's equations,
+<p style="text-align: center"><a id="Stone_Euler1"></a>$latex \begin{array}{ll}&amp;I_{-y} \displaystyle \frac{d \omega_y}{d t} - \omega_n \omega_p (I_n - I_p) = N_{-y}\\&amp; \displaystyle I_n \frac{d \omega_n}{d t} - \omega_p \omega_{-y} (I_p - I_{-y}) = N_n \\ &amp; \displaystyle I_t \frac{d \omega_p}{d t} - \omega_{-y} \omega_n (I_{-y} - I_n) = N_p,\end{array} \qquad (4.5)$</p>
+where $latex I_\alpha$, $latex \omega_\alpha$ and $latex N_\alpha$ are respectively the moment of inertia, angular frequency and torque about the body principal axis parallel to $latex \vec \alpha$. Here, $latex -\vec y$ and $latex \vec p$ are unit vectors tangent to the surface of the stone, and parallel to two of its principal axes. The orthonormal frame $latex (-\vec y, \vec n, \vec p)$ is attached to the center of mass of the stone, and rotates with it. A similar set of equations could be written for the collision phase of the motion, if we wanted to take into account the fact that the stone may be spinning and tumbling as it collides with the water.
+
+Since the stone is square or circular, one has $latex I_{-y} = I_p \equiv J_1$, and we will use the notation $latex I_n \equiv J_0$. Moreover, the only force acting on the stone, $latex -M g\, \vec z$, is applied at its center of mass, so that all of the torques are zero. Equations (<a href="#Stone_Euler1">4.5</a>) can then be simplified into
+<p style="text-align: center"><a id="Stone_Euler2"></a>$latex \begin{array}{ll}&amp; J_1 \displaystyle \frac{d \omega_{-y}}{d t} - \omega_n \omega_p (J_0 - J_1) = 0 \\ &amp; J_0\, \displaystyle \frac{d \omega_n}{d t} = 0 \\&amp; J_1 \displaystyle \frac{d \omega_p}{d t} - \omega_{-y} \omega_n (J_1 - J_0) =0. \end{array} \qquad (4.6)$</p>
+
+<h2>Analysis</h2>
+We will start by analyzing the equations for the free flight phase of the motion, and then go back to the collision process.
+<h3>Free flight phase</h3>
+From Equations (<a href="#Stone_Euler2">4.6</a>), we see that $latex \omega_n$ is conserved, and is thus equal to the initial spinning velocity $latex \Omega_0$ of the stone about the axis normal to its surface and through its center of mass. We are thus left with two linear equations,
+<p style="text-align: center"><a id="Stone_Euler3"></a> $latex \begin{array} \displaystyle J_1 \frac{d \omega_{-y}}{d t} - \Omega_0\, \omega_p (J_0 - J_1) &amp;= 0 \\ \displaystyle J_1 \frac{d \omega_p}{d t} - \omega_{-y}\, \Omega_0 (J_1 - J_0) &amp;= 0, \end{array} \qquad (4.7)$</p>
+which read, in matrix form, $latex \displaystyle \frac{d}{dt} \left(\begin{array}{c}\omega_{-y} \\ \omega_p \end{array}\right) = \left(\begin{array}{cc} 0 &amp; \delta \\ -\delta &amp; 0 \end{array}\right) \left(\begin{array}{c}\omega_{-y} \\ \omega_p \end{array}\right)$ with $latex \delta = \frac{\Omega_0 (J_0 -J_1)}{J_1}.$ In the absence of initial spin, i.e. if $latex \Omega_0 = 0$, we obtain
+<p style="text-align: center">$latex \omega_{-y} = \omega_{-y}(0) \qquad \omega_p = \omega_p(0),$</p>
+which implies, since $latex \omega_{-y}=d \theta/dt$,
+<p style="text-align: center">$latex \theta(t) = \omega_{-y}(0)\, t.$</p>
+In other words, if during the collision phase, the stone is even slightly put into rotation about the $latex \vec y$ axis, i.e. if $latex \omega_{-y}(0)$ is non-zero, then the stone will start tumbling during the free flight phase. At the next collision, the stone is likely to hit the water with a large incidence angle $latex \theta$, and then sink.
+
+It is thus critical that $latex \Omega_0$ be non-zero. In such a case, both $latex \omega_{-y}$ and $latex \omega_p$ oscillate in time with frequency $latex |\delta|$ and are given by
+<p style="text-align: center">$latex \begin{array}{c}\omega_{-y}(t) = \omega_{-y}(0) \cos(\delta t) + \omega_p(0) \sin(\delta t) \\ \omega_p(t) = \omega_p(0) \cos(\delta t) - \omega_{-y}(0) \sin(\delta t). \end{array}$</p>
+As a consequence,
+<p style="text-align: center">$latex \theta(t) = \theta(0) + \frac{1}{\delta} \omega_{-y}(0) \sin(\delta t) - \frac{1}{\delta} \omega_p(0) \cos(\delta t)$</p>
+and will remain close to $latex \theta(0)$ if the coefficients of the above equation are small. Thus, a spin about the $latex \vec n$ direction stabilizes the stone and prevents it from tumbling. This is called the <em>gyroscopic effect</em>.
+
+We now turn to the motion of the center of mass of the stone during a free flight phase. Equations (<a href="#Stone_Pos1">4.4</a>) tell us that the duration $latex \tau_f$ of each free flight phase is such that $latex Z(\tau_f)=0$, i.e.
+<p style="text-align: center">$latex \tau_f = \frac{2 v_z(0)}{g},$</p>
+and the length of each skip, that is the distance covered by the stone along the $latex \vec x$ direction is
+<p style="text-align: center">$latex \lambda = v_x(0) \tau_f = v_x(0) \frac{2 v_z(0)}{g}.$</p>
+From Equations (<a href="#Stone_New2">4.2</a>), it is clear that when $latex \theta$ is small, $latex v_x$ is decreasing during each collision phase. Thus the value $latex v_x(0)$ of $latex v_x$ at the beginning of each free flight phase will decrease from one free flight phase to the next. Since we do not expect $latex v_z$ to increase between two free flight phases, we see that the length of each skip decreases from one skip to the next, as expected.
+<h3>Collision phase</h3>
+Our analysis of Equations (<a href="#Stone_New2">4.2</a>) should first of all indicate under what conditions the stone is going to emerge and take off from the water at the end of a collision phase. Consider the equation for $latex v_z$,
+<p style="text-align: center"><a id="Stone_New4" style="font-size: 1em"></a>$latex M \displaystyle \frac{d v_z}{d t} = - M g + \frac{1}{2} \rho_w \, S_{im}(z) \left(v_x^2 + v_z^2\right) \left(C_l \cos(\theta) - C_f \sin(\theta)\right) . \quad (4.10)$</p>
+We can appreciate the information contained in this equation if we make the approximation $latex v_x \gg v_z$, which is reasonable, and also assume that $latex v_x^2 + v_z^2 = v^2 \equiv v_0^2$ is constant during the collision phase. The latter statement is not quite correct since the stone is slowed down by friction with the water, but if the stone bounces about 20 times, then the relative loss $latex (v^2(0) - v^2(\tau_c))/v^2(0)$ during each collision is small, at least for most collisions. Here, $latex \tau_c$ denotes the duration of the collision. Under these conditions, Equation (<a href="#Stone_New4">4.10</a>) reads
+<p style="text-align: center"><a id="Stone_New5"></a>$latex M \displaystyle \frac{d v_z}{d t} = - M g + \frac{1}{2} \rho_w S_{im}(z) v_0^2 \left(C_l \cos(\theta) - C_f \sin(\theta) \right) \equiv - {\mathcal F}(z). \quad (4.11)$</p>
+The right-hand-side, $latex - {\mathcal F}(z)$, is a function of $latex z$ only (recall that we assumed at the beginning that $latex \theta$ is constant during each collision phase), and since $latex v_z = d z / d t$, we can multiply both sides of this equation by $latex v_z$ and integrate with respect to $latex t$, to get
+<p style="text-align: center"><a id="Stone_potential" style="font-size: 1em"></a>$latex \displaystyle \frac{M}{2} \left(\frac{d z}{d t}\right)^2 = \int - {\mathcal F}(z) \frac{d z}{d t} \, dt = \int - {\mathcal F}(z) \, dz \equiv -\, {\mathcal U}(z) + E, \quad (4.12)$</p>
+where $latex {\mathcal U}(z) = \int_0^z F(s)\, ds,$ and the constant $latex E$ is arbitrary. When $latex z=0$, $latex S_{im}(z)=0$; moreover, $latex S_{im}(z)$ increases as $latex z$ becomes more negative. Therefore, the potential $latex {\mathcal U}(z)$ has a shape like that drawn in Figure 4.2 for negative $latex z$'s, provided $latex \theta$ is small enough.<a id="Fig_4.2"></a>
+
+[caption id="attachment_126" align="alignleft" width="300"]<img class="wp-image-126 size-medium" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Stone_Pot-300x300.png" alt="Shape of the potential U. Long description available." width="300" height="300" /> Figure 4.2. Shape of the potential <em>U</em>(<em>z</em>) as a function of <em>z</em> for <em>z </em>&lt; 0. [<a href="#Fig_4.2_Desc"><em>Image Description</em></a>][/caption]From the shape of $latex {\mathcal U}$, one can see that the trajectory of the stone will be such that $latex z$ will have a turning point at $latex z=z_m$, and that at the end of the collision phase, the stone will emerge with a vertical velocity $latex v_z(\tau_c) = - v_z(0)$, opposite to the vertical velocity it had at the beginning of the collision phase. This occurs only if the energy $latex E$ is such that the stone is not completely immersed when $latex z=z_m$. If we keep $latex E$ fixed, this imposes a condition on $latex v_0^2$ since the larger $latex v_0^2$, the smaller $latex |z_m|$. Therefore, the stone will not sink during a collision phase, provided $latex v_0^2 &gt; v_c^2$, where the critical velocity $latex v_c$ depends on the parameters of the problem. Since $latex v_x \gg v_z$, the condition on $latex v_0$ can also be re-written as a condition on the initial velocity of the stone in the $latex \vec x$ direction, which thus reads $latex v_x(0) &gt; v_c$. As shown in the 2003 article by L. Bocquet, and in the exercises at the end of this Chapter, one can calculate $latex S_{im}(z)$ for a stone of a particular shape, solve Equation (<a href="#Stone_New5">4.11</a>) explicitly, and obtain an expression for $latex v_c$.
+
+As mentioned above, we made the assumption that the dynamics was conservative (i.e. $latex v^2 = v_0^2$ was assumed constant). This is obviously not true since the stone does not keep bouncing forever. There is a loss of energy during the collision process, due to the friction of the stone on the surface of the water. Everything we said before will be qualitatively correct - in particular the stone will emerge with a vertical velocity only slightly smaller than $latex |v_z(0)|$ - as long as the relative loss of energy during a collision phase is small. This will certainly be true for the first bounces, but will cease to be valid for the last ones. Since this energy loss is the major reason for the slowing down of the stone, we will now try to estimate this quantity. The (signed) energy loss $latex \mathcal W$ is equal to the work of the friction force exerted by the water on the stone. This can be roughly estimated as
+<p style="text-align: center">$latex \begin{align} {\mathcal W} &amp; \simeq \left[ \text{force along } \vec x \right] \cdot \left[ \text{distance covered by the stone along } \vec x \right] \\ &amp; \simeq \vec F \cdot \vec x l, \end{align}$</p>
+where $latex l = v_x(0)\ \tau_c$. From Equation (<a href="#Stone_New5">4.11</a>), we see that
+<p style="text-align: center">$latex \left[\frac{\rho_w}{M} v_0^2 \right] = L^{-1} T^{-2},$</p>
+and we can thus expect
+<p style="text-align: center">$latex \tau_c \propto \displaystyle \sqrt{\frac{M}{a \rho_w v_0^2}} \simeq \sqrt{\frac{M}{a \rho_w}} \frac{1}{v_x(0)},$</p>
+where $latex a$ is the size (side length or diameter) of the stone. Therefore, $latex l = v_x(0) \tau_c$ does not depend on $latex v_x(0)$ at lowest order. During the collision, the right-hand-side of Equation (<a href="#Stone_New4">4.10</a>) is small, so we can write that
+<p style="text-align: center">$latex M g \simeq \vec F \cdot \vec z.$</p>
+Moreover, since
+<p style="text-align: center">$latex \displaystyle \frac{\vec F \cdot \vec x}{\vec F \cdot \vec z} = - \frac{C_l \sin(\theta) + C_f \cos(\theta)}{C_l \cos(\theta) - C_f \sin(\theta)} \equiv - \mu,$</p>
+(the ratio $latex \mu$ should not be confused with the dynamic viscosity of water), we have
+<p style="text-align: center">$latex \vec F \cdot \vec x \simeq - M g\, \mu,$</p>
+and
+<p style="text-align: center">$latex {\mathcal W} \simeq - M g\, \mu \, l.$</p>
+Thus, since the difference in kinetic energy between the beginning and the end of the collision phase is equal to $latex \mathcal W$, we have
+<p style="text-align: center">$latex \frac{1}{2} M v_x^2(\tau_c) - \frac{1}{2} M v_x^2(0) = {\mathcal W} = - M g\, \mu\, l,$</p>
+and the initial velocity $latex v_x(0)$ must satisfy
+<p style="text-align: center">$latex v_x(0) &gt; \sqrt{2\, g\, \mu\, l} \equiv V_c.$</p>
+Putting everything together, the velocity along $latex \vec x$ at the beginning of a collision phase must satisfy
+<p style="text-align: center">$latex v_x(0) &gt; \max(v_c,V_c),$</p>
+where $latex v_c$ is obtained by specifying that the stone should not become completely immersed during a collision, and $latex V_c$ is such that the stone is moving fast enough to compensate for the energy due to friction forces. Our discussion of the free flight phase shows that the length of each jump is proportional to the horizontal velocity $latex v_x$. We know that $latex v_x$ is conserved during a free flight phase (see Equation (<a href="#Stone_New3">4.3</a>)), and that $latex v_x^2$ decreases by $latex 2\, g\, \mu\, l$ during each collision phase. Since $latex |v_z|$ is the same at the beginning and end of each free flight phase, and since $latex v_z$ varies only slightly during a collision phase, the length of a jump after $latex N$ collision phases will be given by
+<p style="text-align: center">$latex \begin{align}\lambda_N &amp;= \frac{2 |v_z(0)|}{g} \sqrt{v_{x,0}^2 - 2 \, N \, g\, \mu\, l} = \frac{2 |v_z(0)| v_{x,0}}{g} \sqrt{1 - \frac{2 \, N \, g\, \mu\, l}{v_{x,0}^2}}\\ &amp;= \lambda_0 \sqrt{1 - \frac{N}{N_c}}, \qquad \lambda_0 = \frac{2 |v_z(0)| v_{x,0}}{g}, \ N_c = \frac{v_{x,0}^2}{2 \, g\, \mu\, l}, \end{align}$</p>
+where $latex v_{x,0}$ is the $latex \vec x$-velocity of the stone as it is initially thrown. We thus see that the length of each jump decreases as $latex N$ gets large, and scales like $latex \sqrt{1-N/N_c}$.
+<h2>Summary</h2>
+This model explains the existence of a minimum velocity at which the stone should be thrown; it explains why the stone should be given a spin; and it describes how the length of each jump decreases as the number of bounces increases. It also indicate that the angle $latex \theta$ between the stone and the surface of the water should be small. Experiments described in the article by C. Clanet <em>et al.</em>[footnote]Figures 1.b and 1.c of the 2004 article by C. Clanet <em>et al.</em> show the regions of successful stone-skipping in the ($latex \theta$,$latex ||v||$) and ($latex \theta$,$latex \beta$) planes; Figure 1.d shows the collision time as a function of $latex \theta$ for different values of $latex \beta$ (see Figure 4.1 for a definition of the parameters).[/footnote] show that $latex \theta = 20^o$ is optimal. This value of $latex \theta$ minimizes the collision time; it is also the incidence angle for which successful stone-skipping occurs with the smallest initial speed. In order to explain these observations, one would for instance have to take into account the dependence of $latex C_l$ and $latex C_n$ on $latex \theta$, and find the value of $latex \theta$ that minimizes the energy loss $latex \mathcal W$.
+<h2>Figure Descriptions</h2>
+<strong><a id="Fig_4.1_Desc"></a>Figure 4.1</strong>: A technical physics diagram illustrating the cross-section of a flat stone (represented in grey) hitting the surface of water at an angle. The diagram includes a Cartesian coordinate system ($latex x, y, z$), normal ($latex \vec{n}$) and tangential ($latex \vec{t}$) unit vectors associated with the stone, and angular parameters for the pitch ($latex \theta$), the velocity vector ($latex \vec{v}$), and the impact angle ($latex \beta$). [<em><a href="#Fig_4.1">Return to Figure 4.1</a></em>]
+
+<strong><a id="Fig_4.2_Desc"></a>Figure 4.2</strong>: A graph showing a potential energy curve as a function of depth $latex z$. A horizontal line $latex E$ represents the total mechanical energy of the system. The intersection of $latex E$ and the curve at $latex z_m$ defines a "turning point," representing the maximum depth the object can reach before being pushed back upward by buoyant or hydrodynamic forces. [<em><a href="#Fig_4.2">Return to Figure 4.2</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Food for Thought</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center">Problem 1</h3>
+Consider Equations (<a href="#Stone_Euler1">4.5</a>).
+<ol>
+ 	<li><span style="font-size: 1rem;text-align: initial">Use these equations to determine the dimension of </span>$latex \omega_\alpha$, where $latex \alpha$ is each of $latex y,\,n$ and $latex p$.</li>
+ 	<li>Relate the dimension of $latex I_\alpha$ to that of $latex N_\alpha$.</li>
+ 	<li>Given that a torque is of the form $latex \vec N = \vec r \times \vec f$ where $latex \vec r$ is a position vector and $latex \vec f$ a force, find the dimension of $latex N_\alpha$.</li>
+ 	<li>Use the above to find the dimension of $latex I_\alpha$. Does this agree with the definition $latex I_\alpha \equiv \int ||\vec r||^2 \rho\,dV,$ where $latex \rho$ is a density and $latex dV$ is a volume element?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 2</h3>
+This problem is based on the 2003 article by L. Bocquet.
+
+Consider Equation (<a href="#Stone_New5">4.11</a>), and assume that the stone has a square shape.
+<ol>
+ 	<li>Show that $latex S_{im} = a |z| / \sin(\theta)$.</li>
+ 	<li>Using the expression for $latex S_{im}$, show that Equation (<a href="#Stone_New5">4.11</a>) becomes a linear differential equation for $latex z$.</li>
+ 	<li>Find the general solution this ordinary differential equation.</li>
+ 	<li>Apply the boundary conditions and show that $latex z(t)$ is given by</li>
+</ol>
+<p style="text-align: center">$latex \displaystyle z(t) = \frac{-g}{\omega_0^2} + \frac{g}{\omega_0^2} \cos(\omega_0 t) + \frac{v_z(0)}{\omega_0} \sin(\omega_0 t),$</p>
+<p style="text-align: center">$latex \displaystyle \text{where } \qquad \omega_0^2 = \frac{\left(C_l \cos(\theta)-C_f \sin(\theta)\right) \rho_w v_x(0)^2 a}{2 M \sin(\theta)}$.</p>
+
+
+<hr />
+
+<h3 style="text-align: center">Problem 3</h3>
+This problem is based on the 2003 article by L. Bocquet.
+
+The dynamics of the immersed edge of a square stone during a collision phase is described by (see Problem 2)
+<p style="text-align: center">$latex \displaystyle z(t) = \frac{-g}{\omega_0^2} + \frac{g}{\omega_0^2} \cos(\omega_0 t) + \frac{v_z(0)}{\omega_0} \sin(\omega_0 t),$</p>
+where
+<p style="text-align: center">$latex \displaystyle \omega_0^2 = \frac{\left(C_l \cos(\theta)-C_f \sin(\theta)\right) \rho_w v_x(0)^2 a}{2 M \sin(\theta)}.$</p>
+
+<ol>
+ 	<li>Use this expression to show that the edge of the stone reaches a depth $latex |z_m|$, given by $latex z_m = - \frac{g}{\omega_0^2} \left[1+\sqrt{1+\frac{\omega_0^2 v_z(0)^2}{g^2}}\right].$</li>
+ 	<li>What is the condition on $latex z$ for the stone to be completely immersed?</li>
+ 	<li>Show that the stone will not be completely immersed during a collision phase if
+$latex \displaystyle v_x(0)^2 &gt; \frac{4 M g}{C \rho_w a^2} \left[1 - \frac{2 \tan^2 \beta \, M}{a^3 C \rho_w \sin(\theta)}\right]^{-1}, \quad C = C_l \cos(\theta)-C_f \sin(\theta).$</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 4</h3>
+This problem is based on the 2003 article by L. Bocquet.
+
+Using Euler's equations of motion (<a href="#Stone_Euler1">4.5</a>), together with the appropriate expressions for the lift force applied to stone during the collision phase, derive Equation (20) of the 2003 article by L. Bocquet,
+<p style="text-align: center">$latex \displaystyle \frac{d^2 \theta}{d t^2} + \frac{J_0 - J_1}{J_1} (\theta - \theta(0)) = \frac{{\mathcal M}_\theta}{J_1},$</p>
+where $latex {\mathcal M}_\theta$ is the projection on the $latex \vec y$ axis of the torque exerted by the water on the stone.
+
+</div>
+</div>
+&nbsp;

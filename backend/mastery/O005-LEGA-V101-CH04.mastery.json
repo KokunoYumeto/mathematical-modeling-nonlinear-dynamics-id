@@ -1,0 +1,273 @@
+{
+  "schema": "o005-mastery-v1",
+  "schema_version": "1.0.0",
+  "unit_id": "O005-LEGA-V101-CH04",
+  "language": "id-ID",
+  "source": {
+    "resource": "Joceline Lega, Introduction to Mathematical Modeling",
+    "edition": "University of Arizona Pressbooks v1.01 (Maret 2026)",
+    "record": "Pressbooks chapter 39",
+    "record_id": 39,
+    "source_title": "Stone-Skipping",
+    "target_title": "Pemantulan Batu di Permukaan Air",
+    "modified_utc": "2026-03-19T21:51:57Z",
+    "source_file": "authority/units/O005-LEGA-V101-CH04/content.raw.en.html",
+    "source_locator": "exact frozen Pressbooks record 39 content.raw, problems on lines 129–184",
+    "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/stone-skipping/",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "provenance_policy": {
+    "source_derived": "Ringkasan masalah merupakan adaptasi/terjemahan dari soal sumber dan tetap berada di bawah CC BY-NC-SA 4.0.",
+    "new_original": "Petunjuk, rekaman pemeriksaan/jawaban, serta solusi atau rubrik ditulis baru untuk edisi Bahasa Indonesia dan ditandai terpisah dari materi sumber. Sumber menyediakan perintah soal, tetapi tidak menyediakan himpunan solusi."
+  },
+  "article_link_catalog": [
+    {
+      "link_id": "O005-LEGA-V101-CH04-LINK01",
+      "title": "L. Bocquet (2003), The physics of stone skipping",
+      "url": "https://doi.org/10.1119/1.1519232"
+    }
+  ],
+  "problems": [
+    {
+      "problem_id": "O005-LEGA-V101-CH04-P01",
+      "ordinal": 1,
+      "problem_summary": "Gunakan persamaan Euler (4.5), dengan tiga sumbu utama yang ditulis secara konsisten sebagai \\(-y,n,p\\), untuk menentukan dimensi kecepatan sudut \\(\\omega_\\alpha\\), torsi \\(N_\\alpha\\), dan momen inersia \\(I_\\alpha\\); kemudian periksa hasil untuk \\(I_\\alpha\\) langsung dari definisi integralnya.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\omega_\\alpha",
+        "\\alpha",
+        "y,\\,n",
+        "p",
+        "I_\\alpha",
+        "N_\\alpha",
+        "\\vec N = \\vec r \\times \\vec f",
+        "\\vec r",
+        "\\vec f",
+        "I_\\alpha \\equiv \\int ||\\vec r||^2 \\rho\\,dV,",
+        "\\rho",
+        "dV"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Sudut tidak mempunyai dimensi fisik, sehingga setiap komponen kecepatan sudut berdimensi waktu invers. Setelah itu, samakan dimensi semua suku pada satu persamaan Euler dan gunakan \\([\\vec f]=MLT^{-2}\\)."
+      },
+      "check": {
+        "type": "exact_dimensional_analysis",
+        "final_answer": "Untuk \\(\\alpha\\in\\{-y,n,p\\}\\), berlaku \\([\\omega_\\alpha]=T^{-1}\\). Persamaan Euler memberi \\([N_\\alpha]=[I_\\alpha]T^{-2}\\). Karena \\(\\vec N=\\vec r\\times\\vec f\\), maka \\([N_\\alpha]=L(MLT^{-2})=ML^2T^{-2}\\), sehingga \\([I_\\alpha]=ML^2\\). Definisi \\(I_\\alpha=\\int ||\\vec r||^2\\rho\\,dV\\) menghasilkan dimensi yang sama: \\(L^2(ML^{-3})(L^3)=ML^2\\).",
+        "quick_check": "Suku \\(I_\\alpha\\dot\\omega_\\alpha\\), suku \\(I\\omega\\omega\\), dan \\(N_\\alpha\\) semuanya harus berdimensi \\(ML^2T^{-2}\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Kecepatan sudut adalah laju perubahan sudut; radian merupakan besaran tak berdimensi.",
+            "formula": "[\\omega_{-y}]=[\\omega_n]=[\\omega_p]=T^{-1},\\qquad [\\dot\\omega_\\alpha]=T^{-2}"
+          },
+          {
+            "explanation": "Dalam setiap persamaan Euler, suku turunan dan suku kopling harus memiliki dimensi yang sama.",
+            "formula": "[I_\\alpha\\dot\\omega_\\alpha]=[I\\omega\\omega]=[I_\\alpha]T^{-2}=[N_\\alpha]"
+          },
+          {
+            "explanation": "Torsi adalah hasil kali silang lengan posisi dan gaya. Hasil kali silang mengubah arah, tetapi tidak mengubah perkalian dimensinya.",
+            "formula": "[N_\\alpha]=[\\vec r][\\vec f]=L(MLT^{-2})=ML^2T^{-2}"
+          },
+          {
+            "explanation": "Gabungkan dua relasi sebelumnya untuk memperoleh dimensi momen inersia.",
+            "formula": "[I_\\alpha]=[N_\\alpha]T^2=ML^2"
+          },
+          {
+            "explanation": "Periksa secara independen melalui definisi kontinu, dengan massa jenis berdimensi massa per volume.",
+            "formula": "\\left[\\int ||\\vec r||^2\\rho\\,dV\\right]=L^2(ML^{-3})L^3=ML^2"
+          }
+        ],
+        "conclusion": "Analisis persamaan gerak dan definisi integral memberikan hasil yang identik. Tanda pada nama sumbu \\(-y\\) hanya menyatakan orientasi dan tidak memengaruhi dimensi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH04-P02",
+      "ordinal": 2,
+      "problem_summary": "Untuk batu persegi yang baru memasuki air, dengan \\(0<\\theta<\\pi/2\\), \\(z(0)=0\\), dan \\(\\dot z(0)=v_z(0)<0\\), turunkan luas terendam \\(S_{im}=a|z|/\\sin\\theta\\), reduksi Persamaan (4.11) menjadi ODE linear, lalu selesaikan ODE tersebut selama batu masih terendam sebagian.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH04-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "S_{im} = a |z| / \\sin(\\theta)",
+        "S_{im}",
+        "z",
+        "z(t)",
+        "\\displaystyle z(t) = \\frac{-g}{\\omega_0^2} + \\frac{g}{\\omega_0^2} \\cos(\\omega_0 t) + \\frac{v_z(0)}{\\omega_0} \\sin(\\omega_0 t),",
+        "\\displaystyle \\text{where } \\qquad \\omega_0^2 = \\frac{\\left(C_l \\cos(\\theta)-C_f \\sin(\\theta)\\right) \\rho_w v_x(0)^2 a}{2 M \\sin(\\theta)}"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Selama perendaman parsial, panjang bagian sisi batu yang berada di bawah permukaan air adalah \\(|z|/\\sin\\theta\\). Karena \\(z<0\\), gunakan \\(|z|=-z\\), tetapkan \\(C=C_l\\cos\\theta-C_f\\sin\\theta\\), dan kumpulkan koefisien \\(z\\) sebagai \\(\\omega_0^2\\)."
+      },
+      "check": {
+        "type": "exact_linear_ode_solution",
+        "final_answer": "Luas terendam ialah \\(S_{im}=a|z|/\\sin\\theta\\). Dengan pendekatan \\(v_0^2\\simeq v_x(0)^2\\), \\(C=C_l\\cos\\theta-C_f\\sin\\theta>0\\), dan \\(z<0\\), Persamaan (4.11) menjadi \\(\\ddot z+\\omega_0^2z=-g\\), dengan \\(\\omega_0^2=C\\rho_wv_x(0)^2a/(2M\\sin\\theta)\\). Solusi umumnya \\(z=-g/\\omega_0^2+A\\cos(\\omega_0t)+B\\sin(\\omega_0t)\\). Kondisi \\(z(0)=0\\) dan \\(\\dot z(0)=v_z(0)\\) memberi \\(A=g/\\omega_0^2\\), \\(B=v_z(0)/\\omega_0\\), sehingga diperoleh rumus yang diminta.",
+        "quick_check": "Substitusi \\(t=0\\) harus memberi \\(z(0)=0\\), sedangkan diferensiasi lalu substitusi \\(t=0\\) harus memberi \\(\\dot z(0)=v_z(0)\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Penampang batu membentuk sudut \\(\\theta\\) terhadap air. Kedalaman vertikal \\(|z|\\) bersesuaian dengan panjang terendam \\(|z|/\\sin\\theta\\) sepanjang batu; kalikan dengan lebar persegi \\(a\\).",
+            "formula": "S_{im}=a\\frac{|z|}{\\sin\\theta}"
+          },
+          {
+            "explanation": "Selama fase masuk, \\(z<0\\), jadi \\(|z|=-z\\). Masukkan luas tersebut ke persamaan gaya vertikal dengan besar kecepatan dianggap tetap dan didominasi oleh komponen horizontal.",
+            "formula": "M\\ddot z=-Mg-\\frac{C\\rho_wv_x(0)^2a}{2\\sin\\theta}z,\\qquad C=C_l\\cos\\theta-C_f\\sin\\theta"
+          },
+          {
+            "explanation": "Untuk \\(C>0\\), definisikan frekuensi karakteristik real dan bagi persamaan dengan massa.",
+            "formula": "\\omega_0^2=\\frac{C\\rho_wv_x(0)^2a}{2M\\sin\\theta},\\qquad \\ddot z+\\omega_0^2z=-g"
+          },
+          {
+            "explanation": "Jumlahkan satu solusi partikular konstan dengan solusi homogen osilator harmonik.",
+            "formula": "z(t)=-\\frac{g}{\\omega_0^2}+A\\cos(\\omega_0t)+B\\sin(\\omega_0t)"
+          },
+          {
+            "explanation": "Gunakan kedua kondisi awal pada saat sisi batu pertama kali menyentuh air.",
+            "formula": "A=\\frac{g}{\\omega_0^2},\\qquad B=\\frac{v_z(0)}{\\omega_0}"
+          },
+          {
+            "explanation": "Masukkan konstanta untuk memperoleh lintasan selama asumsi perendaman parsial masih berlaku.",
+            "formula": "z(t)=-\\frac{g}{\\omega_0^2}+\\frac{g}{\\omega_0^2}\\cos(\\omega_0t)+\\frac{v_z(0)}{\\omega_0}\\sin(\\omega_0t)"
+          }
+        ],
+        "conclusion": "Solusi ini hanya berlaku sebelum batu terendam seluruhnya, untuk sudut tetap, koefisien gaya tetap, dan perubahan besar kecepatan yang dapat diabaikan selama satu tumbukan."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH04-P03",
+      "ordinal": 3,
+      "problem_summary": "Dari solusi vertikal batu persegi, tentukan kedalaman maksimum, buktikan bahwa perendaman penuh terjadi saat \\(|z|\\ge a\\sin\\theta\\), lalu gunakan \\(v_z(0)=-v_x(0)\\tan\\beta\\) untuk memperoleh syarat kecepatan yang mencegah perendaman penuh; nyatakan secara eksplisit syarat \\(C>0\\) dan kepositifan penyebutnya.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH04-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle z(t) = \\frac{-g}{\\omega_0^2} + \\frac{g}{\\omega_0^2} \\cos(\\omega_0 t) + \\frac{v_z(0)}{\\omega_0} \\sin(\\omega_0 t),",
+        "\\displaystyle \\omega_0^2 = \\frac{\\left(C_l \\cos(\\theta)-C_f \\sin(\\theta)\\right) \\rho_w v_x(0)^2 a}{2 M \\sin(\\theta)}.",
+        "|z_m|",
+        "z_m = - \\frac{g}{\\omega_0^2} \\left[1+\\sqrt{1+\\frac{\\omega_0^2 v_z(0)^2}{g^2}}\\right].",
+        "z",
+        "\\displaystyle v_x(0)^2 &gt; \\frac{4 M g}{C \\rho_w a^2} \\left[1 - \\frac{2 \\tan^2 \\beta \\, M}{a^3 C \\rho_w \\sin(\\theta)}\\right]^{-1}, \\quad C = C_l \\cos(\\theta)-C_f \\sin(\\theta)."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Tulis bagian berosilasi dari \\(z(t)+g/\\omega_0^2\\) sebagai satu sinusoid; amplitudonya langsung memberi nilai minimum. Setelah menetapkan \\(|z_m|<a\\sin\\theta\\), kuadratkan hanya sesudah memastikan kedua ruas yang relevan positif."
+      },
+      "check": {
+        "type": "exact_turning_point_and_threshold",
+        "final_answer": "Untuk \\(v_z(0)<0\\), kedalaman maksimum ialah \\(z_m=-\\frac{g}{\\omega_0^2}\\left[1+\\sqrt{1+\\omega_0^2v_z(0)^2/g^2}\\right]\\). Batu persegi terendam seluruhnya ketika \\(|z|\\ge a\\sin\\theta\\), sehingga pantulan parsial memerlukan \\(|z_m|<a\\sin\\theta\\). Dengan \\(C=C_l\\cos\\theta-C_f\\sin\\theta>0\\), \\(v_z(0)=-v_x(0)\\tan\\beta\\), dan \\(D=1-2M\\tan^2\\beta/(a^3C\\rho_w\\sin\\theta)>0\\), syarat akhirnya adalah \\(v_x(0)^2>\\frac{4Mg}{C\\rho_wa^2}D^{-1}\\). Jika \\(D\\le0\\), tidak ada kecepatan horizontal berhingga yang memenuhi syarat tersebut dalam model dengan \\(\\beta\\) tetap.",
+        "quick_check": "Faktor \\(4Mg/(C\\rho_wa^2)\\) berdimensi kecepatan kuadrat, sedangkan \\(D\\) tak berdimensi; batas untuk \\(\\beta=0\\) mereduksi menjadi \\(v_x(0)^2>4Mg/(C\\rho_wa^2)\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Bagian sinus dan kosinus mempunyai amplitudo resultan yang diperoleh dari jumlah kuadrat koefisiennya.",
+            "formula": "R=\\sqrt{\\left(\\frac{g}{\\omega_0^2}\\right)^2+\\left(\\frac{v_z(0)}{\\omega_0}\\right)^2}=\\frac{g}{\\omega_0^2}\\sqrt{1+\\frac{\\omega_0^2v_z(0)^2}{g^2}}"
+          },
+          {
+            "explanation": "Nilai minimum lintasan adalah pergeseran konstan dikurangi amplitudo tersebut.",
+            "formula": "z_m=-\\frac{g}{\\omega_0^2}-R=-\\frac{g}{\\omega_0^2}\\left[1+\\sqrt{1+\\frac{\\omega_0^2v_z(0)^2}{g^2}}\\right]"
+          },
+          {
+            "explanation": "Jika sisi terendah berada pada \\(z<0\\), sisi tertinggi berada pada \\(z+a\\sin\\theta\\). Seluruh batu berada di bawah air tepat ketika sisi tertinggi tidak lagi positif.",
+            "formula": "z+a\\sin\\theta\\le0\\quad\\Longleftrightarrow\\quad |z|\\ge a\\sin\\theta"
+          },
+          {
+            "explanation": "Minta agar titik balik terjadi sebelum batas perendaman penuh. Setelah mengisolasi akar dan menguadratkan kedua ruas positif, syarat ini menyederhana menjadi batas pada \\(\\omega_0^2\\).",
+            "formula": "|z_m|<a\\sin\\theta\\quad\\Longleftrightarrow\\quad \\omega_0^2>\\frac{v_z(0)^2}{a^2\\sin^2\\theta}+\\frac{2g}{a\\sin\\theta}"
+          },
+          {
+            "explanation": "Gunakan hubungan geometris kecepatan datang dan ekspresi frekuensi dari model gaya angkat.",
+            "formula": "v_z(0)=-v_x(0)\\tan\\beta,\\qquad \\omega_0^2=\\frac{C\\rho_wv_x(0)^2a}{2M\\sin\\theta},\\qquad C>0"
+          },
+          {
+            "explanation": "Kumpulkan semua suku yang mengandung \\(v_x(0)^2\\) pada satu ruas. Pembagian mempertahankan arah pertidaksamaan hanya bila faktor dalam kurung positif.",
+            "formula": "v_x(0)^2>\\frac{4Mg}{C\\rho_wa^2}\\left[1-\\frac{2M\\tan^2\\beta}{a^3C\\rho_w\\sin\\theta}\\right]^{-1}"
+          }
+        ],
+        "conclusion": "Batas ini merupakan syarat dalam model ideal: batu masih harus terendam sebagian, \\(C>0\\), sudut dan koefisien gaya dianggap tetap, \\(v_x\\gg|v_z|\\), dan faktor penyebut harus positif."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH04-P04",
+      "ordinal": 4,
+      "problem_summary": "Turunkan bentuk berdimensi konsisten dari Persamaan (20) Bocquet untuk kestabilan giroskopik batu: jika \\(\\Omega_0\\) adalah putaran konstan terhadap sumbu normal, \\(\\theta_0=\\theta(0)\\), dan \\(\\nu=((J_0-J_1)/J_1)\\Omega_0\\), buktikan bahwa \\(\\ddot\\theta+\\nu^2(\\theta-\\theta_0)={\\mathcal M}_\\theta/J_1\\) di bawah asumsi torsi yang dinyatakan.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH04-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d^2 \\theta}{d t^2} + \\frac{J_0 - J_1}{J_1} (\\theta - \\theta(0)) = \\frac{{\\mathcal M}_\\theta}{J_1},",
+        "{\\mathcal M}_\\theta",
+        "\\vec y"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Pilih sumbu utama \\((1,2,3)=(-y,n,p)\\) dengan \\(I_1=I_3=J_1\\), \\(I_2=J_0\\), dan \\(\\omega_1=\\dot\\theta\\). Ambil \\(N_1={\\mathcal M}_\\theta\\), \\(N_2=N_3=0\\), lalu integralkan persamaan ketiga setelah persamaan kedua memberi \\(\\omega_2=\\Omega_0\\)."
+      },
+      "check": {
+        "type": "exact_gyroscopic_reduction",
+        "final_answer": "Dengan \\(I_1=I_3=J_1\\), \\(I_2=J_0\\), \\(\\omega_1=\\dot\\theta\\), hanya torsi angkat \\(N_1={\\mathcal M}_\\theta\\), serta \\(N_2=N_3=0\\), persamaan Euler kedua memberi \\(\\omega_2=\\Omega_0\\). Jika \\(\\omega_3(0)=0\\), persamaan ketiga memberi \\(\\omega_3=((J_1-J_0)/J_1)\\Omega_0(\\theta-\\theta_0)\\). Substitusi ke persamaan pertama menghasilkan \\(\\ddot\\theta+[(J_0-J_1)\\Omega_0/J_1]^2(\\theta-\\theta_0)={\\mathcal M}_\\theta/J_1\\), yaitu \\(\\ddot\\theta+\\nu^2(\\theta-\\theta_0)={\\mathcal M}_\\theta/J_1\\).",
+        "quick_check": "\\(\\nu\\) berdimensi \\(T^{-1}\\), sehingga \\(\\nu^2(\\theta-\\theta_0)\\) dan \\({\\mathcal M}_\\theta/J_1\\) sama-sama berdimensi \\(T^{-2}\\). Koefisien tanpa \\(\\Omega_0^2\\) dan tanpa kuadrat rasio inersia tidak lolos pemeriksaan ini."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Gunakan sumbu 1 untuk perubahan kemiringan, sumbu 2 untuk normal batu, dan sumbu 3 untuk arah tangensial pada bidang batu. Simetri batu pipih memberi dua momen inersia yang sama.",
+            "formula": "(1,2,3)=(-y,n,p),\\qquad I_1=I_3=J_1,\\quad I_2=J_0,\\quad \\omega_1=\\dot\\theta"
+          },
+          {
+            "explanation": "Abaikan torsi gesek rotasional dan pertahankan hanya torsi akibat gaya angkat pada sumbu kemiringan. Jika gaya angkat bekerja pada pusat daerah terendam \\(P\\), torsinya adalah proyeksi hasil kali silang terhadap sumbu tersebut.",
+            "formula": "N_1={\\mathcal M}_\\theta=(\\overrightarrow{OP}\\times\\vec F_{\\!l})\\cdot\\vec e_1,\\qquad N_2=N_3=0"
+          },
+          {
+            "explanation": "Persamaan Euler kedua, bersama \\(I_1=I_3\\), menyatakan bahwa putaran terhadap normal batu tetap.",
+            "formula": "J_0\\dot\\omega_2=0\\quad\\Longrightarrow\\quad\\omega_2=\\Omega_0"
+          },
+          {
+            "explanation": "Persamaan Euler ketiga menghubungkan kecepatan sudut tangensial dengan laju perubahan kemiringan.",
+            "formula": "J_1\\dot\\omega_3=(J_1-J_0)\\Omega_0\\dot\\theta"
+          },
+          {
+            "explanation": "Integralkan dengan \\(\\theta_0=\\theta(0)\\) dan asumsi \\(\\omega_3(0)=0\\), yakni tidak ada komponen sudut tangensial awal yang terpisah.",
+            "formula": "\\omega_3=\\frac{J_1-J_0}{J_1}\\Omega_0(\\theta-\\theta_0)"
+          },
+          {
+            "explanation": "Masukkan hasil tersebut ke persamaan Euler pertama dan bagi dengan \\(J_1\\). Dua faktor selisih inersia menghasilkan kuadrat positif.",
+            "formula": "\\ddot\\theta+\\frac{(J_0-J_1)^2}{J_1^2}\\Omega_0^2(\\theta-\\theta_0)=\\frac{{\\mathcal M}_\\theta}{J_1}"
+          },
+          {
+            "explanation": "Definisikan frekuensi giroskopik untuk memperoleh bentuk Persamaan (20) yang ringkas.",
+            "formula": "\\nu=\\frac{J_0-J_1}{J_1}\\Omega_0,\\qquad \\ddot\\theta+\\nu^2(\\theta-\\theta_0)=\\frac{{\\mathcal M}_\\theta}{J_1}"
+          }
+        ],
+        "conclusion": "Bentuk ini mengasumsikan batu simetris, putaran normal \\(\\Omega_0\\) konstan, hanya torsi angkat pada sumbu kemiringan yang dipertahankan, dan \\(\\omega_3(0)=0\\). Jika komponen tangensial awal tidak nol, integrasi menghasilkan suku pemaksa konstan tambahan. Rumus yang tercetak di bab sumber tanpa \\(\\Omega_0^2\\) dan tanpa kuadrat rasio inersia bukan Persamaan (20) berdimensi konsisten dari artikel Bocquet."
+      }
+    }
+  ]
+}

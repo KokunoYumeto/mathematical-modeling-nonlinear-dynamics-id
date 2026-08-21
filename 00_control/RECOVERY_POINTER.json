@@ -22,14 +22,14 @@
     "sha256": "6bdfc501e3134de338fc9862feb4abbbd503037295ab8c701a627cb33550c740"
   },
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-CH03",
+    "unit_id": "O005-LEGA-V101-CH04",
     "source_record_type": "chapters",
-    "source_record_id": 38,
-    "source_slug": "the-nonlinear-pendulum",
-    "target_content_sha256": "37c0b3df486f20fa29929d983fc70f92beb386cb980937a3cb032e6995e7cac3",
-    "reader_manifest_sha256": "1957c32aab44de6589f8c5509da0393848f845c56deb15bd48234577893d7be5",
-    "qa_tree_sha256": "427eabd4cd6a5f4e40c7df02c713f6c0f29d47949807ab39a64da2036bcd71c1"
+    "source_record_id": 39,
+    "source_slug": "stone-skipping",
+    "target_content_sha256": "4d19140e14d182466a049ce376ce3168b6d6230adcec80fd136d24c0cc05010b",
+    "reader_manifest_sha256": "0e9dff17d5f5d9625c16f5e7d62e5d0c84af75757a717e31ce53840e88eaab85",
+    "qa_tree_sha256": "15f5b87b32ff5afdeaf2dd29cdd80c2f3f8c90b04a2d2ffc079c1ca671d6f1ef"
   },
-  "current_unit": "O005-LEGA-V101-CH04",
-  "next_action": "Prepare and translate Pressbooks chapter record 39, Stone-Skipping, preserving four problems, 245 formulas, 22 links, two figures, four footnotes, descriptions, and the hybrid flight/collision model; redraw Figure 4.1 at the declared component boundary."
+  "current_unit": "O005-LEGA-V101-PT03",
+  "next_action": "Prepare and translate visible Pressbooks part record 40, Population Dynamics and Epidemiology, as four complete Indonesian paragraphs with no manufactured mastery/notebook surface; then advance directly to Chapter 5 record 48, Single-Species Models."
 }
