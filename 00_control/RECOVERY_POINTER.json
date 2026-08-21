@@ -24,14 +24,19 @@
   "last_verified_public_commit": "493a70632d4d71d3cb7a0729ba7a169a1b3900e9",
   "public_repository": "https://github.com/KokunoYumeto/mathematical-modeling-nonlinear-dynamics-id",
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-PT03",
-    "source_record_type": "parts",
-    "source_record_id": 40,
-    "source_slug": "part-3-population-dynamics-and-epidemiology",
-    "target_content_sha256": "8d40cff6e34bcae42c9ad743d743877ab95c0266fab235b9bfcdfdf9adc87933",
-    "reader_manifest_sha256": "c91ad40bb3914221338e29e4302a018297466cdb72cc021a81af18fe4d74ecc9",
-    "qa_tree_sha256": "778bad58be64f29210f7e7b507f539fdad5365689c609a94f57d3680acb68204"
+    "unit_id": "O005-LEGA-V101-CH05",
+    "source_record_type": "chapters",
+    "source_record_id": 48,
+    "source_slug": "single-species-models",
+    "source_canonical_sha256": "7f276a994f78af2af02d5bdd39b9566a50f5e3b09b25351c70cdff50736c66be",
+    "source_content_sha256": "476153ddf275a4c6d9f52e4268be21c009da3ba5a4e0b5b15fefc73c32d828f2",
+    "target_content_sha256": "8a8a205b1dfac9778c3e8549c036559dae88aff1e5262e9513cc5646d72bff7e",
+    "segment_sha256": "32732105bb934be792de3749e7ede0cf2cdd617126fab6efeddd9468d096dd9f",
+    "mastery_sha256": "d85cda9304f74e5f5d3ff874b37044e18068a9446bf6a3cd4682831bc8c45cc6",
+    "notebook_sha256": "b7a19523b1fedc344a1cda20cca0a8cfb8a46588f05ff7f59417fa59cfd9c7cd",
+    "reader_manifest_sha256": "de862361118699c3c398145bf2424d43a6f39610ad3c409c484aad19c506c30d",
+    "qa_tree_sha256": "16ec1089ec9abccc946cf5970a7d9a51e45855cce4036cea2f05b15329f1fc5e"
   },
-  "current_unit": "O005-LEGA-V101-CH05",
-  "next_action": "Freeze and translate Pressbooks chapter record 48, Single-Species Models, preserving 326 source lines, 364 elements, 50 links, 389 TeX occurrences, seven figures, seven footnotes, 16 problems, complete mastery, and an open deterministic notebook."
+  "current_unit": "O005-LEGA-V101-CH06",
+  "next_action": "Prepare and translate Pressbooks chapter record 53, Two-Species Models, as Model Populasi Dua Spesies, preserving 182 raw lines, 185 opening elements, 31 links, 227 TeX occurrences, four figures, three footnotes, and six problems, with complete mastery and an independent open phase-plane computation closure."
 }

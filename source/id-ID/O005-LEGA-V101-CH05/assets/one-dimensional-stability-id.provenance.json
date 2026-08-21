@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "unit_id": "O005-LEGA-V101-CH05",
+  "figure": "5.7",
+  "source": {
+    "authority_path": "authority/units/O005-LEGA-V101-CH05/assets/one-dimensional-stability-source.png",
+    "retained_copy_path": "source/id-ID/O005-LEGA-V101-CH05/assets/one-dimensional-stability-source.png",
+    "media_type": "image/png",
+    "width": 300,
+    "height": 220,
+    "bytes": 13876,
+    "sha256": "8f7964291a6dc3b3bcc5a9c26ceacaae491f9478c29a2705eec672f7e3ce2c3e"
+  },
+  "target": {
+    "path": "source/id-ID/O005-LEGA-V101-CH05/assets/one-dimensional-stability-id.svg",
+    "media_type": "image/svg+xml",
+    "width": 300,
+    "height": 220,
+    "viewBox": "0 0 300 220",
+    "bytes": 19612,
+    "sha256": "d1b2e208b6bba5e6b4ae02b630e0706a925c714eef83da6ecfbd94d1a7083eaf"
+  },
+  "adaptation": {
+    "type": "self-contained localized-label-only raster wrapper",
+    "language": "id-ID",
+    "embedded_raster_is_byte_identical": true,
+    "data_or_plot_geometry_changed": false,
+    "localized_labels": {
+      "stable": "stabil",
+      "unstable": "takstabil"
+    }
+  }
+}

@@ -134,12 +134,39 @@ UNIT_SPECS = {
         "plain_paragraphs": False,
         "change_note": "penerjemahan, koreksi matematika terdokumentasi, gambar ulang aksesibel, pengindeksan modular, dan pendamping Python terbuka",
     },
+    "O005-LEGA-V101-CH05": {
+        "unit_type": "chapter",
+        "unit_number": 5,
+        "chapter_number": 5,
+        "source_title": "Single-Species Models",
+        "target_title": "Model Populasi Satu Spesies",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/single-species-models/",
+        "target_assets": [
+            "assets/redhawk-count-id.svg",
+            "assets/redhawk-rate-id.svg",
+            "assets/redhawk-return-source.png",
+            "assets/cobweb-iterations-source.png",
+            "assets/logistic-bifurcation-source.png",
+            "assets/logistic-bifurcation-zoom-source.png",
+            "assets/one-dimensional-stability-id.svg",
+        ],
+        "caption_count": 7,
+        "footnote_count": 7,
+        "notebook": "notebooks/chapter-05-open-single-species-models.ipynb",
+        "data_files": [
+            "data/popclockest.txt",
+            "data/popclockest.provenance.json",
+        ],
+        "problem_count": 17,
+        "plain_paragraphs": False,
+        "change_note": "penerjemahan, koreksi matematika terdokumentasi, pelokalan label gambar, pengindeksan modular, dukungan ketuntasan, dan pendamping Python terbuka tanpa ketergantungan perangkat lunak berpemilik",
+    },
 }
 
 
 def configure(unit_id: str) -> None:
     global UNIT_ID, UNIT_SPEC, SOURCE_URL, SOURCE_FRAGMENT, TARGET_FRAGMENT
-    global TARGET_ASSETS, NOTEBOOK, NOTEBOOK_LOCK, MASTERY, SEGMENTS, UNIT_RECORD
+    global TARGET_ASSETS, DATA_FILES, NOTEBOOK, NOTEBOOK_LOCK, MASTERY, SEGMENTS, UNIT_RECORD
     global DEFAULT_OUTPUT, PROBLEM_COUNT
     UNIT_ID = unit_id
     UNIT_SPEC = UNIT_SPECS[unit_id]
@@ -150,6 +177,10 @@ def configure(unit_id: str) -> None:
     target_assets = UNIT_SPEC["target_assets"]
     notebook = UNIT_SPEC["notebook"]
     TARGET_ASSETS = [ROOT / "source" / "id-ID" / UNIT_ID / path for path in target_assets]
+    DATA_FILES = [
+        ROOT / "source" / "id-ID" / UNIT_ID / path
+        for path in UNIT_SPEC.get("data_files", [])
+    ]
     NOTEBOOK = ROOT / "source" / "id-ID" / UNIT_ID / notebook if notebook else None
     NOTEBOOK_LOCK = NOTEBOOK.parent / "requirements.lock" if NOTEBOOK else None
     MASTERY = ROOT / "backend" / "mastery" / f"{UNIT_ID}.mastery.json" if PROBLEM_COUNT else None
@@ -547,14 +578,28 @@ def write_backend(source: str, target: str, mastery: dict | None, pandoc: str) -
                 "notebook_sha256": digest(NOTEBOOK),
             }
         )
+    if DATA_FILES:
+        unit["data"] = [
+            {
+                "path": path.relative_to(ROOT).as_posix(),
+                "bytes": path.stat().st_size,
+                "sha256": digest(path),
+            }
+            for path in DATA_FILES
+        ]
     UNIT_RECORD.parent.mkdir(parents=True, exist_ok=True)
-    UNIT_RECORD.write_text(json.dumps(unit, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    UNIT_RECORD.write_text(
+        json.dumps(unit, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     return len(lines), segment_sha
 
 
 def build_reader(output: Path) -> dict:
     required = [SOURCE_FRAGMENT, TARGET_FRAGMENT, CSS]
     required.extend(TARGET_ASSETS)
+    required.extend(DATA_FILES)
     required.extend(path for path in (NOTEBOOK, NOTEBOOK_LOCK, MASTERY) if path is not None)
     missing = [str(path) for path in required if not path.is_file()]
     if missing:
@@ -582,6 +627,9 @@ def build_reader(output: Path) -> dict:
         nav_lines.append(f'    <a href="downloads/{NOTEBOOK.name}">Notebook Python</a>')
     if NOTEBOOK_LOCK:
         nav_lines.append(f'    <a href="downloads/{NOTEBOOK_LOCK.name}">Unduh requirements.lock</a>')
+    for data_file in DATA_FILES:
+        label = "Data Sensus resmi" if data_file.suffix == ".txt" else "Proveniens data"
+        nav_lines.append(f'    <a href="data/{data_file.name}">{label}</a>')
     navigation = "\n".join(nav_lines)
     mastery_html = mastery_section(mastery) if mastery else ""
     if NOTEBOOK:
@@ -634,6 +682,8 @@ def build_reader(output: Path) -> dict:
     shutil.copyfile(CSS, output / "assets" / "reader.css")
     for target_asset in TARGET_ASSETS:
         shutil.copyfile(target_asset, output / "assets" / target_asset.name)
+    for data_file in DATA_FILES:
+        shutil.copyfile(data_file, output / "data" / data_file.name)
     if NOTEBOOK and NOTEBOOK_LOCK:
         (output / "downloads").mkdir()
         shutil.copyfile(NOTEBOOK, output / "downloads" / NOTEBOOK.name)

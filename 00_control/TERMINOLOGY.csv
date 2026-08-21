@@ -71,3 +71,19 @@ O005-TERM-0069,difference equation,persamaan beda,admitted,Distinguish from pers
 O005-TERM-0070,chaos,kekacauan,admitted,Use perilaku kacau or dinamika kacau adjectivally.
 O005-TERM-0071,oscillatory dynamics,dinamika osilatori,admitted,
 O005-TERM-0072,confounding variable,variabel perancu,admitted,
+O005-TERM-0073,single-species model,model populasi satu spesies,admitted,Use the explicit population qualifier in titles and navigation.
+O005-TERM-0074,per capita rate of change,laju perubahan per kapita,admitted,
+O005-TERM-0075,normalized rate of change,laju perubahan ternormalisasi,admitted,
+O005-TERM-0076,carrying capacity,daya dukung,admitted,The population or environment referent should remain explicit in nearby prose.
+O005-TERM-0077,first-order difference equation,persamaan beda orde pertama,admitted,
+O005-TERM-0078,logistic map,peta logistik,admitted,Do not alternate with pemetaan logistik.
+O005-TERM-0079,period doubling,penggandaan periode,admitted,
+O005-TERM-0080,bifurcation diagram,diagram bifurkasi,admitted,
+O005-TERM-0081,continuous approximation,pendekatan kontinu,admitted,
+O005-TERM-0082,age distribution,distribusi umur,admitted,
+O005-TERM-0083,stage-class projection matrix,matriks proyeksi kelas tahap,admitted,Use tipe Lefkovitch when distinguishing it from a classical Leslie matrix.
+O005-TERM-0084,cobweb plot,diagram jaring laba-laba,admitted,
+O005-TERM-0085,return map,peta balik,admitted,
+O005-TERM-0086,nonhyperbolic,nonhiperbolik,admitted,
+O005-TERM-0087,Lyapunov exponent,eksponen Lyapunov,admitted,
+O005-TERM-0088,two-species model,model populasi dua spesies,admitted,Use the explicit population qualifier in titles and navigation.

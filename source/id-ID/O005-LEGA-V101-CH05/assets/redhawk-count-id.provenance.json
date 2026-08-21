@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "unit_id": "O005-LEGA-V101-CH05",
+  "figure": "5.1",
+  "source": {
+    "authority_path": "authority/units/O005-LEGA-V101-CH05/assets/redhawk-count-source.png",
+    "retained_copy_path": "source/id-ID/O005-LEGA-V101-CH05/assets/redhawk-count-source.png",
+    "media_type": "image/png",
+    "width": 300,
+    "height": 213,
+    "bytes": 10733,
+    "sha256": "6026cbadc87a030ce119b009551d8a9428b9af51083bd708832ef7dbcea676cd"
+  },
+  "target": {
+    "path": "source/id-ID/O005-LEGA-V101-CH05/assets/redhawk-count-id.svg",
+    "media_type": "image/svg+xml",
+    "width": 300,
+    "height": 213,
+    "viewBox": "0 0 300 213",
+    "bytes": 15401,
+    "sha256": "a21b1b432a8400215997d2de1862bbd609783a7ab6349318ff35e41d1cdc781b"
+  },
+  "adaptation": {
+    "type": "self-contained localized-label-only raster wrapper",
+    "language": "id-ID",
+    "embedded_raster_is_byte_identical": true,
+    "data_or_plot_geometry_changed": false,
+    "localized_labels": {
+      "Bird count": "Jumlah burung",
+      "Years": "Tahun"
+    }
+  }
+}

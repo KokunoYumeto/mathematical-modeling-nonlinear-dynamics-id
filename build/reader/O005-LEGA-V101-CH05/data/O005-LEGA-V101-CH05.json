@@ -1,0 +1,96 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "data": [
+    {
+      "bytes": 8148,
+      "path": "source/id-ID/O005-LEGA-V101-CH05/data/popclockest.txt",
+      "sha256": "f59dbd91b2bf975df7b7fb4af6de52dc3c68a705632e83d60410d98781206f09"
+    },
+    {
+      "bytes": 1669,
+      "path": "source/id-ID/O005-LEGA-V101-CH05/data/popclockest.provenance.json",
+      "sha256": "bac84dcb922041cb4447c98ef70dd7bbe19df17a2c5cd4f6f11350a4d81b30a4"
+    }
+  ],
+  "language": "id-ID",
+  "mastery_path": "backend/mastery/O005-LEGA-V101-CH05.mastery.json",
+  "mastery_sha256": "d85cda9304f74e5f5d3ff874b37044e18068a9446bf6a3cd4682831bc8c45cc6",
+  "notebook_path": "source/id-ID/O005-LEGA-V101-CH05/notebooks/chapter-05-open-single-species-models.ipynb",
+  "notebook_sha256": "b7a19523b1fedc344a1cda20cca0a8cfb8a46588f05ff7f59417fa59cfd9c7cd",
+  "problems": [
+    "O005-LEGA-V101-CH05-P01",
+    "O005-LEGA-V101-CH05-P02",
+    "O005-LEGA-V101-CH05-P03",
+    "O005-LEGA-V101-CH05-P04",
+    "O005-LEGA-V101-CH05-P05",
+    "O005-LEGA-V101-CH05-P06",
+    "O005-LEGA-V101-CH05-P07",
+    "O005-LEGA-V101-CH05-P08",
+    "O005-LEGA-V101-CH05-P09",
+    "O005-LEGA-V101-CH05-P10",
+    "O005-LEGA-V101-CH05-P11",
+    "O005-LEGA-V101-CH05-P12",
+    "O005-LEGA-V101-CH05-P13",
+    "O005-LEGA-V101-CH05-P14",
+    "O005-LEGA-V101-CH05-P15",
+    "O005-LEGA-V101-CH05-P16",
+    "O005-LEGA-V101-CH05-P17"
+  ],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 473,
+    "path": "backend/segments/O005-LEGA-V101-CH05.segments.jsonl",
+    "sha256": "32732105bb934be792de3749e7ede0cf2cdd617126fab6efeddd9468d096dd9f"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "chapter": "Single-Species Models",
+    "content_sha256": "476153ddf275a4c6d9f52e4268be21c009da3ba5a4e0b5b15fefc73c32d828f2",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/single-species-models/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-CH05/content.html",
+    "content_sha256": "8a8a205b1dfac9778c3e8549c036559dae88aff1e5262e9513cc5646d72bff7e",
+    "figures": [
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH05/assets/redhawk-count-id.svg",
+        "sha256": "a21b1b432a8400215997d2de1862bbd609783a7ab6349318ff35e41d1cdc781b"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH05/assets/redhawk-rate-id.svg",
+        "sha256": "d83fdfe09bd918f46dc347aa8755b287d6131ea10015862b69e3f3f26e05af85"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH05/assets/redhawk-return-source.png",
+        "sha256": "3b348b9c541b763ac802525038fa5f5dc7c5d8580c3b319479bbabc9732b7d5e"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH05/assets/cobweb-iterations-source.png",
+        "sha256": "97ea2323b18b6bcae1ef4ab0b89bf5e589654f8dc7ff757dbb2c587e15bf30dc"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH05/assets/logistic-bifurcation-source.png",
+        "sha256": "4768b2076566ba00ee818166b9053836cb0166eea81545eaf5962e92aaf0dc7b"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH05/assets/logistic-bifurcation-zoom-source.png",
+        "sha256": "13fb09c5410c24f15085e872ecc9e4967a8c05b41f3f7e5104141ce6868431d3"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH05/assets/one-dimensional-stability-id.svg",
+        "sha256": "d1b2e208b6bba5e6b4ae02b630e0706a925c714eef83da6ecfbd94d1a7083eaf"
+      }
+    ],
+    "title": "Model Populasi Satu Spesies"
+  },
+  "unit_id": "O005-LEGA-V101-CH05"
+}

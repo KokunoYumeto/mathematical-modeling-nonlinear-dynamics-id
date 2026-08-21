@@ -1,0 +1,326 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Tujuan Pembelajaran</h2>
+</header>
+<div class="textbox__content">
+
+Pada akhir bab ini, Anda akan mampu melakukan hal-hal berikut.
+<ul>
+ 	<li>Menyusun model waktu diskret untuk kelompok individu yang terisolasi atau saling berinteraksi, termasuk model dengan kelompok umur.</li>
+ 	<li>Menyelesaikan model waktu diskret linear secara eksak.</li>
+ 	<li>Menganalisis dinamika persamaan beda nonlinear orde pertama dengan menilai kestabilan titik tetap dan siklus periodik.</li>
+ 	<li>Menjelaskan jalur menuju kekacauan pada peta logistik.</li>
+ 	<li>Mengenali model waktu kontinu sebagai limit model waktu diskret.</li>
+</ul>
+</div>
+</div>
+<h2>Populasi Elang Ekor-Merah di Amerika Serikat</h2>
+Kita mulai dengan menganalisis data yang dikumpulkan oleh Audubon Society melalui kegiatan <a href="http://www.audubon.org/conservation/science/christmas-bird-count">Pencacahan Burung Natal</a>. Data pencacahan saat ini tersedia untuk setiap tahun sejak 1900. Informasi ini bersifat diskret (kita diberi jumlah burung yang dicacah pada akhir setiap tahun), tidak presisi (karena tidak semua burung tercacah dan orang yang berpartisipasi dalam upaya pencacahan berbeda-beda setiap tahun), serta niscaya mencerminkan gabungan banyak faktor (khususnya, bukan sekadar pertumbuhan atau penurunan akibat kelahiran dan kematian). Kita akan berfokus pada data elang ekor-merah, burung migran jarak pendek.<a id="Fig_5.1"></a>
+
+[caption id="attachment_41" align="alignleft" width="300"]<img class="wp-image-41" src="assets/redhawk-count-id.svg" alt="Plot jumlah burung tahunan. Deskripsi panjang tersedia." width="300" height="213" /> Gambar 5.1. Jumlah elang ekor-merah yang dicacah di Amerika Serikat, dari 1900 (tahun ke-1) hingga 2004 (tahun ke-105), berdasarkan data yang dikumpulkan oleh Audubon Society. [<a href="#Fig_5.1_Desc"><em>Deskripsi Gambar</em></a>][/caption]Gambar 5.1 menunjukkan jumlah elang ekor-merah yang dicacah di Amerika Serikat dari 1900 (tahun ke-1) hingga 2004 (tahun ke-105). Kita dapat melihat bahwa populasinya bertambah selama sebagian besar abad lalu dan tampaknya mulai mendekati kejenuhan pada akhir 1990-an. Untuk memahami data ini, kita dapat mencoba memplot laju perubahan populasi, yang didefinisikan sebagai
+
+$latex \displaystyle \frac{\Delta N}{\Delta t} = \frac{N(t + \Delta t) - N(t)}{\Delta t},$
+
+dengan $latex t$ menyatakan waktu dalam tahun, $latex N(t)$ jumlah burung yang dicacah pada waktu $latex t$, dan dalam kasus ini $latex \Delta t = 1$ tahun. Grafik tersebut menunjukkan bahwa besaran $latex \Delta N / \Delta t$ berfluktuasi dan besar fluktuasinya meningkat seiring waktu. Karena jumlah elang ekor-merah juga meningkat sebagai fungsi waktu, sebagai gantinya kita dapat melihat laju perubahan yang dinormalisasi terhadap jumlah individu, yang kita lambangkan dengan $latex R(t)$. Dengan demikian, kita mendefinisikan <em>laju perubahan per kapita</em> populasi elang ekor-merah sebagai
+<p style="text-align: center">$latex R(t) = \displaystyle \frac{N(t + \Delta t) - N(t)}{N(t) \Delta t}.$<a id="Fig_5.2"></a></p>
+
+[caption id="attachment_42" align="alignleft" width="300"]<img class="wp-image-42" src="assets/redhawk-rate-id.svg" alt="Plot laju perubahan ternormalisasi. Deskripsi panjang tersedia." width="300" height="213" /> Gambar 5.2. Plot besaran $latex R(t)$ untuk hasil pencacahan elang ekor-merah, berdasarkan data yang dikumpulkan oleh Audubon Society. [<a href="#Fig_5.2_Desc"><em>Deskripsi Gambar</em></a>][/caption]Gambar 5.2 menunjukkan $latex R(t)$ sebagai fungsi $latex t$. Fluktuasi tentu saja masih ada, tetapi kini sangat besar hanya ketika $latex N(t)$ relatif kecil. Selain itu, data tampak berfluktuasi di sekitar suatu nilai rata-rata yang positif (meskipun cukup kecil). Pada tahun-tahun terakhir, kecenderungan ini tidak lagi berlaku, dan sejak 1995, $latex R(t)$ tampak berosilasi di sekitar nilai yang lebih dekat ke nol.
+
+Oleh karena itu, masuk akal untuk mengharapkan $latex N(t+\Delta t)$ berperilaku seperti fungsi linear dari $latex N(t)$, dengan sejumlah fluktuasi, dan memperlihatkan kejenuhan pada tahun-tahun terakhir. Hal ini didukung oleh plot pada Gambar 5.3, yang menunjukkan $latex N(t + \Delta t) = N(t+ 1)$ sebagai fungsi $latex N(t)$. Kita melihat bahwa $latex N(t+ 1)$ sangat dekat dengan $latex 1.025\ N(t)$. Kemiringan ini diperoleh melalui pencocokan kuadrat terkecil antara data dan garis lurus yang melalui titik asal (ditampilkan dengan warna merah). Seperti terlihat pada Gambar 5.3, kesesuaiannya cukup baik. Nilai $latex 1.025$ dekat dengan, tetapi sedikit lebih kecil dan berada di luar, interval kepercayaan 95% [1.026, 1.029] untuk laju pertumbuhan tahunan elang ekor-merah di Amerika Utara, yang ditemukan dalam artikel tahun 2016 oleh C.S. Soykan <em>et al</em>.[footnote]Candan U. Soykan, John Sauer, Justin G. Schuetz, Geoffrey S. LeBaron, Kathy Dale, Gary M. Langham, <a href="http://dx.doi.org/10.1002/ecs2.1351"><em>Kecenderungan populasi burung musim dingin Amerika Utara berdasarkan model hierarkis</em></a>, Ecosphere <strong>7, </strong>e01351 (2016); Tabel S3, baris 206.[/footnote], yang menggunakan analisis statistik untuk memperkirakan kecenderungan populasi dari data pencacahan burung.<a id="Fig_5.3"></a>
+
+[caption id="attachment_43" align="alignleft" width="300"]<img class="wp-image-43" src="assets/redhawk-return-source.png" alt="Peta balik pertama jumlah burung tahunan. Deskripsi panjang tersedia." width="300" height="213" /> Gambar 5.3. Peta balik pertama, yang menunjukkan <em>N</em>(<em>t</em> + Δ<em>t</em>) sebagai fungsi <em>N</em>(<em>t</em>), untuk hasil pencacahan elang ekor-merah oleh Audubon Society. Garis lurus memiliki kemiringan 1.025. [<a href="#Fig_5.3_Desc"><em>Deskripsi Gambar</em></a>][/caption]Namun, perhatikan bahwa kita tidak mengharapkan—dan memang tidak terdapat—kesesuaian yang baik pada nilai-nilai kecil $latex N$. Akan tetapi, skala Gambar 5.3 menyebabkan sebaran titik-titik di dekat titik asal tidak tampak untuk $latex N(t) \lt 5,000$, yang berkaitan dengan waktu $latex t \le 50$ (lihat Gambar 5.1). Ringkasnya, meskipun datanya bising dan tidak presisi, suatu model sederhana untuk populasi elang ekor-merah di Amerika Serikat, katakanlah dari 1950 hingga 1995, tampaknya berbentuk
+<p style="text-align: center">$latex N (t + 1) = \kappa \ N(t),$</p>
+dengan $latex \kappa$ suatu konstanta yang dekat dengan $latex 1.025$. <span style="text-indent: 0em">Kita dapat memahami hubungan linear tersebut sebagai berikut. Jika migrasi masuk dan keluar Amerika Serikat kita abaikan—ingat bahwa elang ekor-merah merupakan burung migran jarak pendek—kita dapat menulis</span>
+<p style="text-align: center">$latex N(t + \Delta t) = N(t) + \text{jumlah kelahiran} - \text{jumlah kematian}.$</p>
+Sebagai pendekatan pertama, masuk akal untuk mengasumsikan bahwa jumlah kematian maupun jumlah kelahiran dapat ditulis sebagai hasil kali $latex N$ dengan suatu fungsi dari $latex N$ dan $latex t$. Pendekatan semacam ini berlaku untuk sebagian besar model dinamika populasi dalam sistem tertutup. Dengan demikian, kita mendefinisikan <em>laju kelahiran per kapita</em> $latex b,$ dan <em>laju kematian</em> per <em>kapita</em> $latex d$ sebagai
+<p style="text-align: center">$latex b = \displaystyle \frac{\text{jumlah kelahiran per }\Delta t}{N(t) \Delta t}, \qquad d = \displaystyle \frac{\text{jumlah kematian per }\Delta t}{N(t) \Delta t}.$</p>
+Maka,
+<p style="text-align: center">$latex N(t + \Delta t) = N(t) \left(1 + b \Delta t - d \Delta t\right) = \kappa\ N(t),$</p>
+<p style="text-align: center">$latex R(t)= \displaystyle \frac{N(t + \Delta t) - N(t)}{N(t) \Delta t} = b - d.$</p>
+Pada fase perkembangan, yaitu ketika jumlah individu jauh lebih rendah daripada populasi maksimum yang dapat ditopang lingkungan, kita dapat mengasumsikan bahwa $latex b$ dan $latex d$ konstan, sehingga diperoleh
+<p style="text-align: center"><a id="linear_growth"></a>$latex N(t+1) = \kappa\ N(t), \qquad \kappa = \text{konstan}.\qquad (5.1)$</p>
+Untuk elang ekor-merah, pembahasan di atas menyiratkan bahwa $latex \kappa \simeq 1.025$, yaitu $latex b-d=0.025\ \text{tahun}^{-1}$. Tentu saja, fluktuasi selalu ada dalam praktik, tetapi model sederhana ini, yang dikenal sebagai <em>persamaan Malthus dalam waktu diskret</em>, sudah cukup untuk menjelaskan pertumbuhan eksponensial (atau Malthusian) populasi. Memang, Persamaan (<a href="#linear_growth">5.1</a>) menyiratkan bahwa
+<p style="text-align: center">$latex N(t_0 + m \Delta t) = \kappa^m N(t_0).$</p>
+<p class="no-indent">Jika $latex \kappa &gt; 1$, yaitu jika kelahiran melebihi kematian, $latex N(t)$ bertumbuh secara eksponensial. Sebaliknya, jika $latex 0 \lt \kappa \lt 1$, $latex N(t)$ menyusut secara eksponensial dan spesies tersebut terdorong menuju kepunahan. Kita telah mengasumsikan bahwa $latex \kappa \ge 0$. Jika tidak, $latex N(t)$ akan bergantian antara nilai positif dan negatif, dan model dinamika populasi kita jelas cacat.</p>
+Ketika jumlah individu mendekati daya dukung lingkungan, efek nonlinear tidak lagi dapat diabaikan, dan laju pertumbuhan populasi berubah bersama jumlah individu $latex N(t)$. Misalnya, pertumbuhan logistik berkaitan dengan
+<p style="text-align: center">$latex \displaystyle N(t + \Delta t) = \Big(1 + \kappa \big(N_\infty - N(t)\big)\Big) \cdot N(t) \qquad \kappa = \text{konstan},$</p>
+yang memiliki faktor pengali pertumbuhan yang bergantung pada $latex N$ untuk setiap langkah $latex \Delta t$, yaitu $latex \Big(1 + \kappa \big(N_\infty - N(t)\big)\Big)$. Laju pertumbuhan fraksional per langkahnya adalah $latex \kappa\big(N_\infty-N(t)\big)$. Parameter $latex N_\infty$ menyatakan daya dukung lingkungan. Simbol $latex \kappa$ di sini berbeda dari pengali tak berdimensi pada Persamaan (5.1): parameter ini berdimensi invers populasi, $latex [\kappa]=[\text{populasi}]^{-1}$. Agar model populasi tetap bermakna, parameter dan rentang keadaan harus dipilih sehingga $latex 1+\kappa\bigl(N_\infty-N(t)\bigr)\geq 0$.
+<h2>Persamaan Beda Orde Pertama</h2>
+Contoh yang dibahas di atas menunjukkan bahwa model populasi diskret berbentuk $latex N(t+\Delta t) = f(N(t))$, atau secara ekuivalen,
+<p style="text-align: center"><a id="map"></a>$latex N_{k+1} = f(N_k), \qquad k \in \mathbb{N}, \qquad (5.2)$</p>
+dengan $latex N_k= N(k \Delta t)$. Persamaan (<a href="#map">5.2</a>) disebut <em>persamaan beda orde pertama</em>. Persamaan ini <em>linear</em> jika $latex f(x)$ linear terhadap $latex x$, dan memiliki <em>koefisien konstan</em> jika $latex f$ tidak bergantung pada $latex k$. Dalam konteks dinamika populasi, model seperti Persamaan (<a href="#map">5.2</a>) kadang-kadang disebut <em>model berinterval</em>. Persamaan (<a href="#linear_growth">5.1</a>), yang dapat ditulis sebagai
+<p style="text-align: center">$latex N_{k+1} = \kappa\ N_k,$</p>
+oleh karena itu merupakan persamaan beda linear orde pertama dengan koefisien konstan. Seperti disebutkan di atas, solusinya adalah
+<p style="text-align: center">$latex N_k = \kappa^k\ N_0,$</p>
+dengan $latex N_0$ sebagai kondisi awal.<a id="Fig_5.4"></a>
+
+[caption id="attachment_44" align="alignleft" width="287"]<img class="wp-image-44 size-medium" src="assets/cobweb-iterations-source.png" alt="Diagram jaring laba-laba. Deskripsi panjang tersedia." width="287" height="300" /> Gambar 5.4. Representasi grafis iterasi berurutan peta <em>N</em><sub><em>k</em>+1</sub> = <em>f</em>(<em>N<sub>k</sub></em>). Empat iterasi pertama N<sub>1</sub> hingga N<sub>4</sub> dari fungsi <em>f</em>, yang dimulai pada <em>N</em> = <em>N</em><sub>0</sub>, juga ditunjukkan. Simbol <em>N<sub>s</sub></em> dan <em>N<sub>u</sub></em> masing-masing merujuk pada titik tetap stabil dan tak stabil. [<a href="#Fig_5.4_Desc"><em>Deskripsi Gambar</em></a>][/caption]
+Secara lebih umum, kita dapat menulis
+<p style="text-align: center">$latex N_{k} = f^k(N_0),$</p>
+dengan $latex f^k$ merupakan iterasi ke-$latex k$ dari $latex f$. Bahkan jika grafik $latex f$ rumit, dinamika $latex N_k$ dapat divisualisasikan dengan mengiterasikan $latex f$ secara grafis, seperti ditunjukkan pada Gambar 5.4. Dimulai dari nilai awal $latex N_0$ untuk $latex N$, pertama-tama kita mencari $latex f(N_0)$ sebagai koordinat $latex y$ dari perpotongan grafik $latex f$ dengan garis $latex x = N_0$. Kemudian, kita menandai nilai $latex N_1 = f(N_0)$ pada sumbu $latex x$ dengan menggambar garis vertikal melalui perpotongan garis $latex x=y$ dan garis $latex y = f(N_0)$. Terakhir, proses ini kita ulang untuk memperoleh iterasi-iterasi $latex f$ berikutnya. Dalam contoh pada Gambar 5.4, iterasi yang dimulai pada $latex N = N_0$ konvergen menuju suatu <em>titik tetap</em> $latex N = N_s$.
+<h3>Titik Tetap dan Kestabilan Linearnya</h3>
+Titik tetap $latex N_c$ dari peta (<a href="#map">5.2</a>) memenuhi $latex N_c = f(N_c),$ dan diperoleh dengan mencari perpotongan garis berpersamaan $latex y = x$ dengan kurva $latex y = f(x)$. Dalam contoh pada Gambar 5.4, fungsi $latex f$ memiliki dua titik tetap, $latex N = N_s$ dan $latex N = N_u$. Kita dapat mempelajari <em>kestabilan linear</em> keduanya sebagai berikut. Misalkan $latex N = N_c + u,$ dengan $latex u$ suatu gangguan kecil. Maka,
+<p style="text-align: center">$latex f(N) = f(N_c + u) = f(N_c) + u f^\prime(N_c) + O(u^2),$</p>
+dan
+<p style="text-align: center">$latex f(N) - N_c = f(N)-f(N_c) = u f^\prime(N_c) + O(u^2) \simeq u f^\prime(N_c),$</p>
+dengan pendekatan terakhir sesuai jika $latex u$ cukup kecil. Peta linear $latex u_{k+1} = f^\prime(N_c) u_k$ memiliki iterasi yang konvergen menuju nol jika $latex |f^\prime(N_c)| \lt 1$, dan divergen jika $latex |f^\prime(N_c)| \gt 1$. Karena itu, titik tetap $latex N = N_c$ disebut <em>stabil secara linear</em> jika $latex |f^\prime(N_c)| \lt 1$, dan <em>tak stabil</em> jika $latex |f^\prime(N_c)| &gt; 1$. Jika $latex |f^\prime(N_c)| = 1,$ linearisasi tidak menentukan kestabilan titik $latex N = N_c$; titik tersebut <em>nonhiperbolik</em> dan suku nonlinear harus diperiksa.
+<h3>Peta Logistik</h3>
+Sebagai contoh, tinjau peta logistik yang didefinisikan oleh Persamaan (<a href="#map">5.2</a>), dengan $latex f(x) = a \ x \ (1 - x),$ dan $latex a$ merupakan parameter yang memenuhi $latex 0 \lt a \lt 4$. Jika $latex a \le 1$, maka $latex x = 0$ adalah satu-satunya titik tetap nonnegatif. Titik ini stabil untuk $latex a \lt 1$. Jika $latex a = 1$, titik tersebut nonhiperbolik: pada ruang keadaan fisik $latex x \in [0,1]$ ia menarik dari kanan, sedangkan pada garis real ia hanya menarik dari satu sisi. Untuk $latex a &gt; 1$, terdapat dua titik tetap, $latex x = 0$ dan $latex x = 1 - 1/a$. Analisis kestabilan linear menunjukkan bahwa $latex x = 0$ kini tak stabil karena $latex a &gt; 1$, dan bahwa $latex x = 1 - 1/a$ stabil secara linear jika $latex a \lt 3$ serta tak stabil jika $latex a &gt; 3$ (lihat latihan). Eksplorasi numerik dinamika persamaan beda $latex x_{n+1} = a\ x_n\ (1 - x_n)$ mengungkap adanya atraktor yang kian kompleks saat $latex a$ diperbesar, seperti siklus periode dua (misalnya pada $latex a = 3.2$), siklus periode empat (misalnya pada $latex a = 3.5$), dan siklus periode delapan (misalnya pada $latex a = 3.55$). Bahkan, terjadi kaskade <em>penggandaan periode</em> ketika $latex a$ diperbesar, dan dinamikanya memasuki keadaan kacau di sekitar $latex a = 3.57$.<a id="Fig_5.5"></a>
+
+[caption id="attachment_45" align="alignleft" width="300"]<img class="wp-image-45 size-medium" style="margin-bottom: -1ex" src="assets/logistic-bifurcation-source.png" alt="Diagram bifurkasi. Deskripsi panjang tersedia." width="300" height="241" /> Gambar 5.5. Diagram bifurkasi peta logistik. [<a href="#Fig_5.5_Desc"><em>Deskripsi Gambar</em></a>][/caption]Gambar 5.5 menunjukkan <em>diagram bifurkasi</em> peta logistik. Seperti disebutkan di atas, untuk nilai $latex a$ tertentu, iterasi $latex f$ secara berurutan konvergen menuju suatu atraktor, misalnya titik tetap, siklus periode dua, atau struktur yang jauh lebih rumit. Diagram bifurkasi $latex f$ merepresentasikan atraktor ini sebagai fungsi $latex a.$ Diagram tersebut diperoleh secara numerik dengan memplot himpunan titik
+<p style="text-align: center">$latex \left\{ x_k,\ k_{min} \lt k \lt k_{max} \right\},$</p>
+untuk nilai-nilai $latex a$ yang berbeda. Di sini, kondisi awalnya adalah suatu titik $latex x_0 \in (0,1)$, misalnya $latex x_0 = 1/2$; $latex k_{min}$ cukup besar agar dinamika sudah cukup dekat dengan atraktornya setelah $latex k_{min}$ iterasi; dan $latex k_{max}$ bergantung pada daya komputasi yang tersedia. Diagram bifurkasi pada Gambar 5.5 dihitung dengan $latex k_{min}=1500$ dan $latex k_{max}=1700$.<a id="Fig_5.6"></a>
+
+[caption id="attachment_46" align="alignleft" width="300"]<img class="size-medium wp-image-46" src="assets/logistic-bifurcation-zoom-source.png" alt="Pembesaran diagram bifurkasi. Deskripsi panjang tersedia." width="300" height="239" /> Gambar 5.6. Diagram bifurkasi peta logistik, untuk 3 ≤ <em>a</em> ≤ 4. [<a href="#Fig_5.6_Desc"><em>Deskripsi Gambar</em></a>][/caption]Pembesaran untuk $latex 3 \le a \le 4$ ditunjukkan pada Gambar 5.6. Siklus berperiode 2, 4, dan 8 tampak jelas. Jendela periode 3 dan 6 untuk nilai $latex a$ yang lebih besar juga mudah dikenali.
+
+Siklus periode-$latex n$ dapat dianalisis dengan melihat titik-titik tetap $latex f^n$. Tentu saja, ketika $latex n$ meningkat, pencarian titik-titik tetap tersebut dengan cepat menjadi sulit. Namun, dapat ditunjukkan bahwa semua bifurkasi penggandaan periode terjadi dengan cara serupa yang bersifat universal (lihat artikel P. Coullet &amp; C. Tresser, 1978[footnote]P. Coullet dan C. Tresser, <em><a href="http://dx.doi.org/10.1051/jphyscol:1978513">Itérations d'endomorphismes et groupe de renormalisation</a></em> J. Phys. Colloques <strong>39</strong>, C5: 25-28 (1978)[/footnote] dan M. Feigenbaum, 1980[footnote]Mitchell J. Feigenbaum, <a href="http://permalink.lanl.gov/object/tr?what=info:lanl-repo/lareport/LA-UR-80-5007"><em>Universal Behavior in Nonlinear Systems</em></a>, Los Alamos Science <strong>Summer 1980</strong>, 4-27 (1980)[/footnote]). Untuk uraian sederhana tentang berbagai jenis ketakstabilan yang terjadi dalam peta logistik dan peta teriterasi lainnya, pembaca dirujuk ke artikel Robert May tahun 1976 berjudul <a href="http://dx.doi.org/10.1038/261459a0"><em>Simple mathematical models with very complicated dynamics</em></a> serta latihan di akhir bab ini.
+<h2>Pendekatan Kontinu untuk Model Diskret Satu Spesies</h2>
+<p style="text-align: justify">Model diskret yang dibahas pada bagian pertama memenuhi</p>
+<p style="text-align: center">$latex \displaystyle \frac{N(t + \Delta t) - N(t)}{\Delta t} = N(t) R(t).$</p>
+<p style="text-align: justify">Ketika $latex \Delta t \rightarrow 0$, hasil bagi beda pada ruas kiri dapat didekati dengan $latex dN / dt$, sehingga kita memperoleh pendekatan kontinu berikut</p>
+<p style="text-align: center"><a id="cont_map"></a>$latex \displaystyle \frac{d N}{d t} = R(t) N(t). \qquad (5.3)$</p>
+<p style="text-align: justify">Pendekatan semacam ini bermakna hanya jika $latex N$ dapat dipandang sebagai fungsi yang dapat didiferensialkan terhadap $latex t$. Secara khusus, $latex N$ harus kontinu. Karena itu, Persamaan (<a href="#cont_map">5.3</a>) hanya menjadi model populasi yang masuk akal jika $latex N$ besar. Dalam kasus model fenomenologis, jika efek stokastik dapat diabaikan dan $latex N$ mendekati jumlah individu yang sebenarnya, jumlah tersebut seharusnya dekat dengan bilangan bulat $latex \text{round}(N(t))$ yang paling dekat dengan $latex N(t).$ Kemungkinan lain ialah mendefinisikan $latex N(t)$ sebagai kepadatan, misalnya jumlah rata-rata individu per satuan luas permukaan. Atau, $latex N(t)$ dapat dipandang sebagai nilai harapan dari populasi yang besar. Dalam konteks tersebut, berguna untuk memandang $latex R(t) \delta t + O(\delta t^2)$ sebagai perubahan bersih per kapita yang diharapkan; besaran ini bukan peluang jika laju bersihnya negatif, sehingga perubahan harapan pada $latex N$ selama selang waktu kecil antara $latex t$ dan $latex t + \delta t$ adalah $latex R(t) N(t) \delta t + O(\delta t^2)$. Dalam bagian selanjutnya dari catatan ini, kita terutama menggunakan model kontinu sehingga secara implisit mengasumsikan bahwa besaran-besaran yang relevan terdeskripsi secara memadai oleh variabel kontinu.</p>
+
+<h3>Model Linear</h3>
+<p style="text-align: justify">Jika $latex R(t) = b - d \equiv r$ dengan $latex b$ dan $latex d$ konstan, Persamaan (<a href="#cont_map">5.3</a>) berbentuk</p>
+<p style="text-align: center"><a id="cont_map_const"></a>$latex \displaystyle \frac{d N}{d t} = r\ N(t) \qquad (5.4)$</p>
+<p style="text-align: justify">dan solusinya adalah $latex N(t) = \exp(r t) N_0,$ dengan $latex N_0$ populasi pada $latex t = 0$. Jika $latex r &gt; 0,$ populasi bertumbuh secara eksponensial; jika $latex r \lt 0,$ $latex N(t)$ menyusut menuju nol dan spesies tersebut punah. Dengan demikian, terdapat analogi langsung antara kedua model linear yang diberikan oleh Persamaan (<a href="#linear_growth">5.1</a>) dan (<a href="#cont_map_const">5.4</a>), yang ditelaah lebih lanjut dalam latihan. Persamaan (<a href="#cont_map_const">5.4</a>) dikenal sebagai <em>persamaan Malthus dalam waktu kontinu</em>.</p>
+
+<h3>Model Logistik</h3>
+Sekarang tinjau model logistik, yang diberikan oleh
+<p style="text-align: center">$latex \displaystyle \frac{d N}{d t} = a N (N_c - N),$</p>
+dengan $latex N_c$ dan $latex a$ sebagai parameter. Persamaan ini, yang dikenal sebagai <em>persamaan Verhulst</em>, dapat disederhanakan menjadi
+<p style="text-align: center"><a id="Logistic_cont"></a> $latex \displaystyle \frac{d M}{d t} =\lambda M (1 - M)\quad (5.5)$</p>
+dengan melakukan perubahan variabel $latex \displaystyle M = \frac{N}{N_c}$ dan $latex \lambda = a N_c$. Perhatikan bahwa $latex M$ tak berdimensi dan $latex [\lambda] = 1/T.$ Kita sebenarnya dapat mengubah skala variabel waktu dan memperoleh model tanpa parameter, tetapi hal itu belum akan kita lakukan sekarang. Solusi Persamaan (<a href="#Logistic_cont">5.5</a>) dengan kondisi awal $latex M(0) = M_0$ dan $latex M_0 \gt 0$ adalah $latex M(t) = \displaystyle \left[1 + \frac{1-M_0}{M_0} \exp(- \lambda t)\right]^{-1},$ untuk semua nilai parameter $latex \lambda$ pada selang keberadaan solusi. Ketika $latex t \rightarrow \infty$, $latex M \rightarrow 1$ jika $latex \lambda &gt; 0$ untuk semua nilai positif $latex M_0$. Kasus $latex M_0=0$ merupakan kesetimbangan tersendiri dan solusinya tetap nol. Dalam variabel asal, kita memiliki $latex N \rightarrow N_c$. Besaran $latex N_c$ disebut <em>daya dukung</em> lingkungan. Besaran ini berkaitan dengan keadaan kesetimbangan tempat jumlah kematian mengimbangi jumlah kelahiran sehingga populasi dapat dipertahankan di tengah sumber daya yang terbatas. Jika $latex \lambda \lt 0$, maka $latex M \rightarrow 0$ jika $latex M_0 \lt 1$, dan $latex M \rightarrow \infty$ ketika $latex t \rightarrow t^*$, dengan $latex t^* = \displaystyle \frac{1}{- \lambda} \ln\left(\frac{M_0}{M_0-1}\right),$ jika $latex M_0 &gt; 1$. Dalam kasus ini, solusi tersebut divergen dalam waktu berhingga. Dinamika $latex M$ bersifat monoton untuk semua nilai $latex \lambda$, sehingga sama sekali berbeda dari dinamika peta logistik diskret, yang dapat memperlihatkan kekacauan.
+<h3>Model Otonom Umum</h3>
+Secara lebih umum, tinjau persamaan diferensial
+<p style="text-align: center"><a id="auto_cont"></a> $latex \displaystyle \frac{d N}{d t} = f(N), \qquad (5.6)$</p>
+dengan $latex f$ sebagai fungsi nonlinear dari $latex N$. Dalam konteks dinamika populasi, $latex f(N)$ disebut <em>laju pertumbuhan bersih populasi</em>. Besaran ini sering ditulis sebagai $latex f(N) = N R(N)$, dengan $latex R(N)$ sebagai <em>laju pertumbuhan bersih per kapita</em> populasi. Karena ruas kanan Persamaan (<a href="#auto_cont">5.6</a>) tidak bergantung pada $latex t$, persamaan diferensial ini disebut <em>otonom</em>.<a id="Fig_5.7"></a>
+
+[caption id="attachment_47" align="alignleft" width="300"]<img class="wp-image-47 size-medium" style="margin-bottom: -1ex" src="assets/one-dimensional-stability-id.svg" alt="Diagram kestabilan sistem satu dimensi. Deskripsi panjang tersedia." width="300" height="220" /> Gambar 5.7. Titik-titik tetap Persamaan (5.6) adalah nilai <em>N</em> tempat grafik <em>f</em>(<em>N</em>) memotong sumbu <em>x</em>. Kestabilan titik tetap <em>N<sub>c</sub></em> dapat disimpulkan dari perilaku <em>f</em>(<em>N</em>) di dekat <em>N</em> = <em>N<sub>c</sub></em>. [<a href="#Fig_5.7_Desc"><em>Deskripsi Gambar</em></a>][/caption]
+Titik tetap $latex N_c$ dari (<a href="#auto_cont">5.6</a>) diberikan oleh $latex f(N_c)=0$, dan dapat diperoleh secara grafis dengan melihat tempat grafik $latex f$ memotong sumbu horizontal. Kestabilan <em>nonlinear</em> titik-titik tetap ini juga dapat dinilai secara grafis. Periksalah tanda $latex f(N)$ pada kedua sisi $latex N = N_c$; nol bermultiplikitas genap tidak harus disertai perubahan tanda. Kita mengetahui bahwa jika $latex f(N) &gt; 0$ untuk $latex N \lt N_c$, maka $latex N$ akan bertumbuh menuju $latex N_c$, sedangkan jika $latex f(N) &gt; 0$ untuk $latex N &gt; N_c$, maka $latex N$ akan menjauh dari $latex N_c$. Karena itu, kestabilan setiap titik tetap $latex N_c$ dari $latex f$ dapat disimpulkan dengan menambahkan panah pada sumbu horizontal: panah mengarah ke kiri ketika $latex f$ negatif dan ke kanan ketika $latex f$ positif. Titik tetap stabil $latex N_c$ memiliki panah yang mengarah kepadanya dari kedua sisi, sedangkan titik tetap tak stabil dikaitkan dengan panah yang menjauh darinya. Hal ini diilustrasikan pada Gambar 5.7.
+<h2>Model Diskret dengan Distribusi Umur</h2>
+Model dengan distribusi umur menjelaskan jumlah individu dalam setiap kelompok umur suatu populasi dan memungkinkan perbedaan laju kelahiran dan kematian antarsubkelompok diperhitungkan. Sebagai contoh, perhatikan model tiga kelompok, dengan $latex N_1(t)$ menyatakan jumlah anak-anak pada waktu $latex t$; $latex N_2(t)$ menyatakan jumlah orang dewasa usia subur, dan $latex N_3(t)$ menyatakan jumlah orang dewasa yang lebih tua. Sistem persamaan beda sederhana yang menggambarkan dinamika populasi tersebut adalah sebagai berikut,
+<p style="text-align: center">$latex N_1(t + \Delta t) = N_1(t) + b_2 N_2(t) \Delta t - d_1 N_1(t) \Delta t - g_1 N_1(t) \Delta t$</p>
+<p style="text-align: center">$latex N_2(t + \Delta t) = N_2(t) + g_1 N_1(t) \Delta t - d_2 N_2(t) \Delta t - g_2 N_2(t) \Delta t$</p>
+<p style="text-align: center">$latex N_3(t + \Delta t) = N_3(t) + g_2 N_2(t) \Delta t - d_3 N_3(t) \Delta t,$</p>
+di mana $latex d_i$ adalah laju kematian per kapita kelompok $latex i$, $latex g_i$ adalah laju perpindahan individu yang bertahan hidup dari kelompok $latex i$ (atau, $latex g_i \Delta t$ menyatakan peluang bahwa seorang individu dalam kelompok $latex i$ akan berpindah ke kelompok $latex i+1$ selama $latex \Delta t$), dan $latex b_2$ adalah laju kelahiran per kapita pada kelompok 2. Selang waktu $latex \Delta t$ dapat berupa satu tahun atau lima tahun untuk populasi manusia. Selang tersebut harus lebih pendek daripada skala waktu khas sistem yang dimodelkan, misalnya waktu yang diperlukan seorang anak untuk menjadi dewasa atau waktu yang diperlukan seorang dewasa muda untuk berpindah ke kelompok 3.
+
+Sistem di atas bersifat linear sehingga dapat ditulis kembali dengan mudah sebagai persamaan beda bagi vektor $latex \vec C = (N_1,N_2,N_3)^T$, yaitu
+<p style="text-align: center"><a id="map_vector"></a> $latex \left(\begin{array}{c}N_1 \\ N_2 \\ N_3\end{array}\right)(t + \Delta t) = A \left(\begin{array}{c}N_1 \\ N_2 \\ N_3\end{array}\right)(t), \qquad (5.7)$</p>
+dengan $latex A = \displaystyle \left(\begin{array}{ccc} 1 - (d_1 + g_1) \Delta t &amp; b_2 \Delta t &amp; 0 \\ g_1 \Delta t &amp; 1 - (d_2 + g_2) \Delta t &amp; 0 \\ 0 &amp; g_2 \Delta t &amp; 1 - d_3 \Delta t\end{array}\right).$ Matriks $latex A$ memiliki entri konstan dan taknegatif jika laju-lajunya taknegatif serta $latex (d_1+g_1)\Delta t\leq 1$, $latex (d_2+g_2)\Delta t\leq 1$, dan $latex d_3\Delta t\leq 1$. Karena matriks ini memuat retensi pada diagonal dan kelas tahap, bentuknya lebih tepat disebut <em>matriks proyeksi kelas tahap bertipe Lefkovitch</em> daripada matriks Leslie klasik. Kita dapat mencari solusi Persamaan (<a href="#map_vector">5.7</a>) dalam bentuk $latex \vec C (t_0 + m \Delta t) = r^m \vec C(t_0),$ dengan $latex t_0$ sebagai suatu waktu awal. Substitusi bentuk ini ke dalam Persamaan (<a href="#map_vector">5.7</a>) menghasilkan $latex \displaystyle A \vec C(t_0) = r\, \vec C(t_0),$ yakni $latex \vec C(t_0)$ merupakan vektor eigen $latex A$ dengan nilai eigen $latex r$. Jika matriks $latex A$ dapat didiagonalkan, solusi umum Persamaan (<a href="#map_vector">5.7</a>) dapat ditulis sebagai
+<p style="text-align: center">$latex \vec C(m\, \Delta t) = a_1 r_1^m \vec C_1 + a_2 r_2^m \vec C_2 + a_3 r_3^m \vec C_3,$</p>
+di mana $latex \vec C_i$ adalah tiga vektor eigen $latex A$ yang bebas linear, dengan nilai eigen terkait $latex r_i$, sedangkan $latex a_i$ adalah koefisien yang ditentukan oleh kondisi awal $latex \vec C(0) = \vec C_0$, dengan $latex \vec C_0$ diketahui. Perhatikan bahwa karena $latex A$ memiliki entri riil, semua nilai eigennya riil atau terdiri atas satu nilai eigen riil dan sepasang nilai eigen kompleks konjugat. Dalam kasus terakhir, dua dari $latex \vec C_i$, misalnya $latex \vec C_2$ dan $latex \vec C_3$, juga saling konjugat kompleks, dan kondisi awal riil menghasilkan $latex a_3 = a_2^*$, dengan tanda bintang menyatakan konjugasi kompleks. Dinamika Persamaan (<a href="#map_vector">5.7</a>) bergantung pada letak nilai-nilai eigen $latex A$ di bidang kompleks relatif terhadap lingkaran satuan. Memang, jika $latex |r_i|&gt;1$, pertumbuhan eksponensial akan teramati pada arah $latex \vec C_i$, dengan pertumbuhan tercepat—dan karena itu dominan—sepanjang arah eigen yang terkait dengan nilai eigen utama $latex A$. Sebaliknya, jika semua nilai eigen $latex A$ bermodulus kurang dari 1, maka $latex \vec C(m\, \Delta t)$ akan menuju nol. Perilaku yang lebih kompleks, termasuk kekacauan, dapat teramati jika efek nonlinear diperhitungkan.
+<h3>Model LPA</h3>
+Bergantung pada jenis spesies yang populasinya dimodelkan, mungkin perlu dipertimbangkan efek lain selain kelahiran dan kematian. Sebagai ilustrasi, kini kita membahas model yang dikembangkan oleh R.F. Costantino dan rekan-rekannya[footnote]R.F. Costantino, J.M. Cushing, B. Dennis, and R.A. Desharnais, <a href="http://dx.doi.org/10.1038/375227a0"><em>Experimentally induced transitions in the dynamics behaviour of insect populations</em></a>, Nature <strong>375</strong>, 227-230 (1995).[/footnote][footnote]R.F. Costantino, R.A. Desharnais, J.M. Cushing, and B. Dennis, <a href="http://dx.doi.org/10.1126/science.275.5298.389"><em>Chaotic dynamics in an insect population</em></a>, Science <strong>275</strong>, 389-391 (1997).[/footnote][footnote]J.M. Cushing, R.F. Costantino, B. Dennis, R.A. Desharnais, and S.M. Henson, <a href="http://doi.org/10.1006/jtbi.1998.0736"><em>Nonlinear population dynamics: models, experiments and data</em></a>, J. Theor. Biol. <strong>194</strong>, 1-9 (1998).[/footnote] untuk populasi kumbang tepung, yang individunya diketahui memakan keturunannya sendiri. Tahap-tahap perkembangan kumbang adalah larva, pupa, dan dewasa. Jika $latex \Delta t$ dipilih (sekitar 2 minggu untuk kumbang tepung) agar sama dengan waktu rata-rata yang diperlukan larva untuk menjadi pupa dan pupa untuk menjadi dewasa reproduktif, maka, dengan mengukur waktu dalam satuan $latex \Delta t$ dan tanpa kanibalisme, diperoleh
+<p style="text-align: center">$latex \displaystyle \left\{\begin{array}{l} L(t + 1) = b A(t),\\ P(t + 1) = L(t) - d_l L(t),\\A(t + 1) = A(t) - d_a A(t) + P(t), \end{array}\right.$</p>
+di mana konstanta positif $latex d_l$ dan $latex d_a$ adalah peluang kematian larva dan dewasa selama selang $latex \Delta t\ (= 1)$, parameter $latex b &gt; 0$ adalah banyaknya rata-rata telur per individu dewasa yang menetas selama $latex \Delta t$, dan kematian pada tahap pupa diabaikan.
+
+Kanibalisme telur oleh kumbang dewasa dan larva masing-masing dimodelkan melalui faktor perkalian berbentuk $latex \exp(-c_{ea} A(t))$ dan $latex \exp(-c_{el} L(t))$, sedangkan kanibalisme pupa oleh kumbang dewasa dinyatakan dengan $latex \exp(-c_{pa} A(t))$ (lihat artikel Costantino et al. dan Cushing et al. yang disebutkan di atas). Di sini, konstanta $latex c_{ea}$, $latex c_{el}$, dan $latex c_{pa}$ semuanya positif. Suku-suku eksponensial menyatakan proporsi telur atau pupa yang bertahan hidup hingga tahap perkembangan berikutnya dan dapat dipahami sebagai berikut. Kumbang pada tahap merayap (larva dan dewasa) bergerak di dalam tepung dan dapat berjumpa dengan individu pada tahap tak bergerak, seperti telur dan pupa. Ketika hal itu terjadi, larva atau kumbang dewasa yang bergerak akan menggigit telur atau pupa tersebut sehingga membunuhnya. Kita mengasumsikan bahwa larva hanya membunuh telur karena pupa lebih besar daripada larva. Misalkan peluang seekor kumbang dewasa menjumpai satu telur selama selang waktu $latex \Delta t$ diberikan oleh $latex p\, \Delta t$, dengan $latex p$ konstan. Maka, peluang telur tersebut belum dimakan oleh kumbang dewasa ini pada akhir $latex \Delta t$ adalah $latex 1 - p \Delta t$, dan peluang telur ini (atau telur lainnya) menjadi larva adalah $latex \left(1 - p \Delta t\right)^{A(t)}$ karena terdapat $latex A(t)$ kumbang dewasa. Jadi, jika telur hanya dimakan oleh kumbang dewasa, kita akan menuliskan
+<p style="text-align: center">$latex \begin{align*}L(t + \Delta t) &amp; =b A(t) (1 - p \Delta t)^{A(t)}\\ &amp; =b A(t) \exp\left(A(t) \ln(1 - p \Delta t)\right)=b A(t) \exp\left(- c_{ea} A(t)\right),\end{align*}$</p>
+di mana $latex c_{ea} = - \ln(1 - p \Delta t)$. Dengan penalaran serupa, fakta bahwa telur juga dimakan oleh larva diperhitungkan dengan mengalikan ruas kanan persamaan di atas dengan $latex \exp(- c_{el} L(t))$. Dengan demikian, <em>model LPA</em> <em>deterministik</em> (LPA menyingkat istilah Inggris Larva, Pupa, Adult, yakni larva, pupa, dan dewasa), yang mencakup kanibalisme pupa dan telur oleh kumbang dewasa serta kanibalisme telur oleh larva, dituliskan sebagai
+<p style="text-align: center">$latex \displaystyle \left\{\begin{array}{l} L(t + 1)=b A(t) \exp(-c_{ea} A(t) - c_{el} L(t)),\\ P(t + 1) = L(t) - d_l L(t),\\A(t + 1) = A(t) - d_a A(t) + P(t) \exp(-c_{pa} A(t)). \end{array}\right.$</p>
+Ulasan mengenai sifat-sifat dinamik model LPA dapat ditemukan dalam artikel Jim Cushing <em>et al</em>. tahun 1998 yang berjudul <a href="http://doi.org/10.1006/jtbi.1998.0736"><em>Nonlinear population dynamics: models, experiments and data</em></a>. Secara khusus, dapat ditunjukkan bahwa lintasan model LPA yang bermula di oktan taknegatif akan tetap taknegatif. Selain itu, ketika suku stokastik ditambahkan ke persamaan-persamaan di atas, prediksi model yang dihasilkan—termasuk perilaku yang konsisten dengan dinamika kacau—menunjukkan kesesuaian yang sangat baik dengan eksperimen.
+<h2>Ringkasan</h2>
+Bab ini membahas model diskret dan kontinu untuk dinamika satu spesies. Pertama-tama, kita memperkenalkan pertumbuhan eksponensial dalam konteks pencacahan elang ekor-merah di Amerika Serikat oleh Audubon Society dan menambahkan saturasi nonlinear ke model terkait. Selanjutnya, kita membahas titik tetap dan siklus periodik pada pemetaan nonlinear satu dimensi serta melihat bahwa persamaan beda nonlinear sederhana, seperti peta logistik, dapat memiliki dinamika yang sangat kompleks dan memperlihatkan kekacauan. Kita juga mendeskripsikan model populasi linear dan nonlinear dengan kelompok umur. Salah satu contoh model nonlinear tersebut adalah model LPA, yang versi stokastiknya memberikan representasi akurat atas hasil pengamatan eksperimen. Terakhir, kita memperkenalkan model kontinu sebagai hampiran model diskret, membahas kestabilan global titik-titik tetapnya, dan menunjukkan bahwa persamaan diferensial biasa otonom reguler satu dimensi dan aliran otonom planar dua dimensi dengan solusi unik memiliki dinamika yang jauh lebih terbatas. Secara khusus, sistem-sistem tersebut tidak dapat memperlihatkan atraktor kacau.
+
+Metode dan teknik yang diperkenalkan dalam bab ini dapat diperumum ke situasi yang lebih kompleks. Latihan-latihan berikut membahas model dengan distribusi umur kontinu, tundaan dan pemanenan, serta perkembangan populasi Amerika Serikat.
+<h2>Deskripsi Gambar</h2>
+<a id="Fig_5.1_Desc"></a><strong>Gambar 5.1</strong>: Grafik garis yang menunjukkan "Jumlah burung" selama rentang "Tahun". Populasi tampak tetap mendekati nol selama 40 tahun pertama, lalu mengalami pertumbuhan cepat menyerupai pertumbuhan eksponensial dan mencapai puncak sekitar 60.000 burung pada tahun ke-100. Garisnya "berisik" (bergerigi), yang menunjukkan fluktuasi dari tahun ke tahun sembari mempertahankan kecenderungan naik yang jelas. [<em><a href="#Fig_5.1">Kembali ke Gambar 5.1</a></em>]
+
+<strong><a id="Fig_5.2_Desc"></a>Gambar 5.2</strong>: Grafik garis yang menunjukkan "Laju perubahan ternormalisasi" dengan sumbu horizontal berlabel "Tahun" yang membentang sedikit lebih dari 100 tahun. Grafik memperlihatkan volatilitas tinggi dan lonjakan besar selama 45 tahun pertama, diikuti oleh fluktuasi yang jauh lebih kecil dan stabil seiring berjalannya waktu. [<em><a href="#Fig_5.2">Kembali ke Gambar 5.2</a></em>]
+
+<strong><a id="Fig_5.3_Desc"></a>Gambar 5.3</strong>: Diagram pencar dengan garis regresi linear yang menunjukkan hubungan antara $latex N(t)$ pada sumbu horizontal dan $latex N(t+1)$ pada sumbu vertikal. Titik-titik data (lingkaran biru) berkelompok rapat di dekat titik asal (0,0) dan makin tersebar ketika populasi bertambah. Titik-titik tersebut mengikuti kecenderungan linear naik yang kuat dan berada dekat dengan garis merah tak terputus yang melalui titik asal. Besar fluktuasi di sekitar garis kecenderungan meningkat seiring dengan $latex N(t)$. [<em><a href="#Fig_5.3">Kembali ke Gambar 5.3</a></em>]
+
+<a id="Fig_5.4_Desc"></a><strong>Gambar 5.4</strong>: Diagram jaring laba-laba yang menunjukkan fungsi $latex y = f(x)$ dan garis identitas $latex y = x$. Garis bertangga merah (jaring laba-laba) bermula di $latex N_0$ dan berpilin ke dalam menuju titik tetap stabil $latex N_s$. Titik tetap tak stabil $latex N_u$ juga ditampilkan pada perpotongan yang lebih tinggi. [<em><a href="#Fig_5.4">Kembali ke Gambar 5.4</a></em>]
+
+<strong><a id="Fig_5.5_Desc"></a>Gambar 5.5</strong>: Diagram bifurkasi yang menampilkan parameter $latex a$ pada sumbu horizontal (dari 0.5 hingga 4) dan keadaan jangka panjang suatu sistem pada sumbu vertikal (dari 0 hingga 1). Satu kurva muncul pada $latex a=1$, naik dengan mulus, lalu mulai membentuk serangkaian cabang penggandaan periode pada $latex a=3$ sebelum memasuki kawasan kacau yang rapat di ujung kanan. [<em><a href="#Fig_5.5">Kembali ke Gambar 5.5</a></em>]
+
+<strong><a id="Fig_5.6_Desc"></a>Gambar 5.6</strong>: Diagram bifurkasi yang menampilkan parameter $latex a$ pada sumbu horizontal (dari 3 hingga 4) dan keadaan jangka panjang suatu sistem pada sumbu vertikal (dari 0 hingga 1). Diagram menunjukkan dua cabang di sebelah kiri yang bersesuaian dengan titik periode dua. Ketika $latex a$ meningkat, setiap cabang terpecah menjadi dua cabang (penggandaan periode), dan masing-masing cabang kemudian terpecah lagi menjadi dua cabang baru untuk nilai $latex a$ yang sedikit lebih tinggi. Proses ini berulang hingga grafik menampilkan kawasan gelap dan rapat yang mewakili perilaku kacau, dengan "jendela-jendela" kestabilan yang berselang-seling. [<em><a href="#Fig_5.6">Kembali ke Gambar 5.6</a></em>]
+
+<strong><a id="Fig_5.7_Desc"></a>Gambar 5.7</strong>: Diagram kestabilan untuk sistem satu dimensi yang menunjukkan fungsi $latex f(x)$ memotong sumbu $latex x$ di tiga titik tetap. Titik tengah merupakan kesetimbangan stabil, yang ditandai dengan kemiringan negatif dan panah-panah pada sumbu yang mengarah kepadanya. Kedua titik luar merupakan kesetimbangan tak stabil, yang ditandai dengan kemiringan positif dan panah-panah yang menjauhinya. [<em><a href="#Fig_5.7">Kembali ke Gambar 5.7</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Bahan Renungan</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P01">Soal 1</h3>
+Asumsikan bahwa suatu populasi tumbuh mengikuti $latex \displaystyle N(t+1) = \kappa N(t), \kappa &gt; 1.$
+<ol>
+ 	<li>Berapa lama waktu yang diperlukan agar jumlah individu menjadi dua kali lipat?</li>
+ 	<li>Perkirakan nilai $latex \kappa$ dari Gambar 5.1 pada selang pencocokan 1950–1995, yang menunjukkan jumlah elang ekor-merah di Amerika Serikat sebagai fungsi waktu.</li>
+ 	<li>Apakah perkiraan Anda untuk $latex \kappa$ cukup selaras dengan nilai $latex \kappa = 1.025$ yang diperoleh dari Gambar 5.3?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P02">Soal 2</h3>
+Perhatikan model kontinu $latex \displaystyle \frac{d N}{d t} = r N, r &gt; 0.$
+<ol>
+ 	<li>Berapa lama waktu yang diperlukan agar $latex N$ menjadi dua kali lipat?</li>
+ 	<li>Jika model ini merupakan hampiran persamaan beda berbentuk $latex N(t + \Delta t) = \kappa N(t),$ apa hubungan antara $latex \kappa$ dan $latex r$?</li>
+ 	<li>Berapa lama waktu yang diperlukan sistem yang dideskripsikan oleh model diskret untuk menggandakan populasinya?</li>
+ 	<li>Apakah model diskret lebih cepat atau lebih lambat daripada hampiran kontinunya? Bedakan korespondensi beda-maju dari pencuplikan eksak, dan gunakan korespondensi beda-maju untuk perbandingan cepat atau lambat.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P03"><span style="text-indent: 0em">Soal 3</span></h3>
+<span style="text-indent: 0em">Perhatikan model kontinu $latex \displaystyle \frac{dN}{dt} = r(N) N,$ </span>dengan $latex r(N)$ merupakan fungsi linear dari $latex N$: $latex r(N) = a N + b$.
+<ol>
+ 	<li>Bagaimana seharusnya tanda $latex a$ dan $latex b$ jika kita menginginkan populasi bertumbuh untuk nilai $latex N$ yang kecil dan mencapai saturasi untuk nilai $latex N$ yang besar?</li>
+ 	<li>Perubahan variabel apa yang harus dilakukan untuk mengubah model ini menjadi Persamaan (<a href="#Logistic_cont">5.5</a>)?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P04">Soal 4</h3>
+Tentukan titik tetap taktrivial dari peta logistik
+<p style="text-align: center">$latex x_{n+1} = a x_n (1 - x_n) \equiv f(x_n), 0 \lt a \lt 4.$</p>
+
+<ol>
+ 	<li>Tunjukkan bahwa titik tetap ini menjadi tak stabil ketika $latex a &gt; 3$.</li>
+ 	<li>Tunjukkan bahwa begitu titik tetap ini menjadi tak stabil, siklus periode dua pada pemetaan mulai muncul. <span style="text-decoration: underline">Petunjuk</span>: carilah titik tetap $latex f^2$.</li>
+ 	<li>Tentukan nilai $latex a$ ketika siklus periode dua ini menjadi tak stabil.</li>
+ 	<li>Periksa jawaban Anda dengan membandingkannya terhadap diagram bifurkasi pada Gambar 5.6.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P05">Soal 5</h3>
+Selesaikan persamaan beda $latex \displaystyle X(t + 1) = \left(\begin{array}{cc} 2 &amp; 2 \\ 1 &amp; 3 \end{array}\right) X(t)$, dengan $latex X(t)$ memiliki dua komponen: $latex \displaystyle X(t) = \left(\begin{array}{c} x(t) \\ y(t) \end{array}\right).$ Asumsikan kondisi awalnya adalah $latex x(0)=1$ dan $latex y(0) = 0.$
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P06">Soal 6</h3>
+Perhatikan persamaan diferensial $latex \displaystyle \frac{d x}{d t} = x (x - 1) (x - 2).$
+<ol>
+ 	<li>Apa saja titik tetap dinamikanya?</li>
+ 	<li>Apakah titik-titik tersebut stabil atau tak stabil?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P07">Soal 7</h3>
+Perhatikan persamaan diferensial $latex \displaystyle \frac{d x}{d t} = x^2 (x-1).$
+<ol>
+ 	<li>Apa saja titik tetap dinamikanya?</li>
+ 	<li>Apakah titik-titik tersebut stabil atau tak stabil?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P08">Soal 8</h3>
+Tinjau persamaan diferensial $latex \displaystyle \frac{d x}{d t} = a + x^2 (x-1) \equiv f(x), a \in \mathbb{R}.$
+<ol>
+ 	<li>Buatlah plot $latex f(x)$ sebagai fungsi $latex x$. Apa yang terjadi ketika $latex a$ berubah?</li>
+ 	<li>Tanpa melakukan perhitungan, sketsakan perilaku titik-titik tetap sebagai fungsi $latex a$.</li>
+ 	<li>Tunjukkan kestabilan setiap titik tetap pada diagram bifurkasi dalam pertanyaan (2).</li>
+ 	<li>Tetapkan nilai +1 untuk setiap titik tetap stabil dan nilai -1 untuk setiap titik tetap tak stabil. Untuk setiap nilai $latex a$, definisikan fungsi $latex g(a)$ sebagai jumlah indeks yang berkaitan dengan titik-titik tetap yang ada untuk nilai $latex a$ tersebut. Sketsakan grafik $latex g$ sebagai fungsi $latex a$. Apa yang Anda amati? Pada nilai kritis $latex a=0$ dan $latex a=4/27$, klasifikasikan titik tetap ganda sebagai nonhiperbolik, bukan memaksanya ke dalam pilihan stabil atau tak stabil.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P09">Soal 9</h3>
+Tinjau model populasi dengan umur $latex a$ sebagai variabel bebas kontinu. Definisikan distribusi umur $latex M(a,t)$ sedemikian sehingga jumlah individu yang berumur antara $latex a_1$ dan $latex a_2$ pada waktu $latex t$ diberikan oleh
+<p style="text-align: center">$latex \int_{a_1}^{a_2} M(a,t) d a.$</p>
+Tunjukkan bahwa dinamika $latex M$ dideskripsikan oleh persamaan diferensial parsial berikut, yang dikenal sebagai persamaan diferensial parsial <em>McKendrick</em> atau <em>von Foerster</em>,
+<p style="text-align: center">$latex \displaystyle \frac{\partial M}{\partial t} + \frac{\partial M}{\partial a} = - d(a) M,$</p>
+dengan fungsi mortalitas $latex d(a)$ menyatakan laju kematian per kapita individu berumur $latex a$.
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P10">Soal 10</h3>
+Gunakan metode karakteristik untuk menyelesaikan persamaan diferensial parsial McKendrick yang diturunkan dalam Soal 9. Nyatakan solusi dalam bentuk data awal $latex M(a,0)=M_0(a)$ dan syarat batas kelahiran $latex M(0,t)=B(t)$.
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P11">Soal 11</h3>
+Tinjau model LPA yang dijelaskan dalam bab ini. Apa saja dimensi parameter ($latex b$, $latex c_{ea}$, $latex c_{el}$, $latex c_{pa}$, $latex d_a$, $latex d_l$) yang muncul dalam model tersebut?
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P12">Soal 12</h3>
+Tulislah model yang menggambarkan situasi serupa dengan situasi pada model LPA (dengan kanibalisme), tetapi waktu yang dibutuhkan pupa untuk menjadi dewasa dua kali lebih lama daripada waktu yang dibutuhkan larva untuk menjadi pupa.
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P13">Soal 13</h3>
+Tulislah model yang menggambarkan populasi dengan dua subkelompok, individu juvenil dan dewasa, dengan individu dewasa memakan sebagian telurnya sendiri. Anda dapat menggunakan suku eksponensial yang serupa dengan suku dalam model LPA untuk menggambarkan kanibalisme.
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P14">Soal 14</h3>
+Tinjau model berikut,
+<p style="text-align: center">$latex \displaystyle \left\{\begin{array}{l} J(t + \Delta t)=b A(t) \exp\left(- c A(t)\right),\\ A(t + \Delta t)=(1 - d_J) J(t) + (1 - d_A) A(t), \end{array}\right.$</p>
+dengan $latex b\gt 0$, $latex c\gt 0$, dan $latex 0\leq d_J,d_A\leq 1$ sebagai parameter.
+<ol>
+ 	<li>Jelaskan dengan kata-kata suatu situasi yang dimodelkan oleh persamaan-persamaan di atas.</li>
+ 	<li>Dalam kondisi apa model ini memiliki titik tetap nontrivial? Apa makna biologis kondisi tersebut?</li>
+ 	<li>Bahas kestabilan titik-titik tetap model ini.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P15">Soal 15</h3>
+Bacalah artikel R. May berjudul <a href="http://dx.doi.org/10.1038/261459a0"><em>Simple mathematical models with complicated dynamics</em></a>, kemudian bahas (yaitu jelaskan, beri pembenaran, uraikan rinciannya, atau buktikan) pernyataan-pernyataan berikut yang terdapat dalam artikel tersebut.
+<ol>
+ 	<li>Halaman 460, kolom kiri, di atas Persamaan (3): "<em>Dengan menuliskan $latex X = b N/a$, persamaan tersebut dapat diubah menjadi bentuk kanonis $latex X_{t+1} = a X_t (1-X_t)$."</em></li>
+ 	<li>Halaman 460, kolom kiri, bagian bawah: "<em>Jika $latex X$ pernah melampaui satu, iterasi-iterasi berikutnya divergen menuju $latex - \infty$</em>."</li>
+ 	<li>Halaman 460, kolom kanan, di bawah Persamaan (6): "<em>Selama kemiringan ini berada di antara 45<sup>°</sup> dan -45<sup>°</sup> ... titik kesetimbangan $latex X^*$ setidaknya akan stabil secara lokal</em>."</li>
+ 	<li>Halaman 461, kolom kiri, di bawah Persamaan (9): "<em>Jelas bahwa titik kesetimbangan $latex X^*$ dari Persamaan (5) merupakan solusi Persamaan (9)</em>."</li>
+ 	<li>Persamaan (10): $latex \lambda^{(2)}(X^*) = [\lambda^{(1)}(X^*)]^2$.</li>
+ 	<li>Halaman 461, kolom kiri, bagian bawah: "<em>Ketika hal ini terjadi, kurva $latex F^{(2)}(X)$ harus membentuk sebuah ``gelung'', dan muncul dua titik tetap baru berperiode 2</em>."</li>
+ 	<li>Halaman 461, kolom kiri, bagian bawah: "<em>Kemiringan ini mudah ditunjukkan bernilai sama di kedua titik dan, secara lebih umum, bernilai sama di semua $latex k$ titik pada siklus periode $latex k$</em>."</li>
+ 	<li>Bagian bawah halaman 461 dan awal halaman 462: "<em>... hingga akhirnya muncul siklus tiga titik (pada $latex a = 3.8284 ...$ untuk persamaan (3))</em>."</li>
+ 	<li>Halaman 462, kolom kanan, bagian bawah: "<em>Siklus periode 3 ini tidak pernah stabil</em>."</li>
+ 	<li>Halaman 462, kolom kanan, bagian bawah: "<em>Ketika $latex F(X)$ terus menjadi semakin curam, kemiringan $latex \lambda^{(3)}$ untuk siklus tiga titik yang mula-mula stabil ini menurun melewati -1; siklus tersebut menjadi tak stabil dan, melalui proses bifurkasi, menghasilkan ... siklus-siklus stabil berperiode 6, 12, 24, ..., $latex 3 \times 2^n$</em>."</li>
+ 	<li>Gambarlah ilustrasi konsep bifurkasi tangen dan bifurkasi garpu rumput (lihat halaman 463, bagian atas kolom kiri).</li>
+ 	<li>Halaman 464, kolom kanan, bagian atas: "<em>... kemiringan peta yang diiterasikan $latex k$ kali, $latex F^{(k)}$, di setiap titik pada siklus periode $latex k$ sama dengan hasil kali kemiringan $latex F(X)$ di setiap titik $latex X^*_k$ pada siklus ini</em>."</li>
+ 	<li>Halaman 465, kolom kiri, bagian bawah: "<em>... ketika setiap pasangan siklus baru lahir melalui bifurkasi tangen (lihat Gbr. 5), salah satunya mula-mula stabil karena bukit dan lembah yang membulat halus memotong garis 45<sup>°</sup> dengan cara tersebut</em>."</li>
+ 	<li>Halaman 466, kolom kanan, bagian bawah: "<em>... dalam sistem kontinu dua dimensi ... lintasan dinamis tidak dapat saling berpotongan</em>."</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P16">Soal 16</h3>
+Tujuan soal ini adalah mengeksplorasi perubahan menyeluruh pada populasi Amerika Serikat. <a href="https://www.census.gov/">Biro Sensus Amerika Serikat</a> menyimpan berkas (<a href="https://www2.census.gov/programs-surveys/popest/tables/1900-1980/national/totals/popclockest.txt">popclockest.txt</a>) yang memuat perkiraan populasi nasional antara 1900 dan 1999. Gunakan salinan lokal terverifikasi dari himpunan data ini dalam buku catatan Python terbuka pendamping. Kemudian, jawablah pertanyaan-pertanyaan berikut.
+<ol>
+ 	<li>Buatlah plot populasi Amerika Serikat sebagai fungsi waktu. Apa kesimpulan Anda?</li>
+ 	<li>Dapatkah pertumbuhan populasi Amerika Serikat dimodelkan dengan persamaan evolusi sederhana berbentuk $latex N(t+1) = (1+R) N(t)$, dengan $latex t$ dalam tahun? Mengapa atau mengapa tidak? Jika dapat, perkirakan $latex R$.</li>
+ 	<li>Perkiraan populasi pascasensus diperoleh sebagaimana dijelaskan pada <a href="https://www.census.gov/programs-surveys/popest/technical-documentation/methodology.html">halaman metodologi Biro Sensus Amerika Serikat</a> (lihat, misalnya, <a href="https://www2.census.gov/programs-surveys/popest/technical-documentation/methodology/2020-2021/methods-statement-v2021.pdf">berkas metodologi untuk edisi 2021</a>). Jelaskan rumus utama yang diberikan pada bagian Ikhtisar artikel tersebut.</li>
+ 	<li>Berdasarkan perkiraan berikut[footnote]Diunduh pada 2005 dari halaman web Biro Sensus Amerika Serikat yang kini sudah dinonaktifkan (https://www.census.gov/popest/datasets.html)[/footnote], tentukan populasi Amerika Serikat pada 2004:
+<ol>
+ 	<li>Populasi pada 2001: 285,102,075.</li>
+ 	<li>Kelahiran, kematian, dan imigrasi internasional neto:
+<ul>
+ 	<li>2001-2002: 4,006,985; 2,429,999; 1,262,159.</li>
+ 	<li>2002-2003: 4,055,469; 2,432,874; 1,225,161.</li>
+ 	<li>2003-2004: 4,099,399; 2,453,984; 1,221,013.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH05-P17">Soal 17</h3>
+Tujuan bagian ini adalah mengeksplorasi evolusi populasi Amerika Serikat menggunakan kelompok umur yang berbeda. Perkiraan populasi menurut kelompok umur lima tahunan dari 2010 hingga 2019 dapat diperoleh dari <a href="https://www.census.gov/topics/population/age-and-sex/data/tables.html">situs web Biro Sensus Amerika Serikat</a> (setiap tahun memiliki tabel tersendiri).
+<ol>
+ 	<li>Gunakan informasi ini untuk memplot distribusi umur populasi Amerika Serikat pada tahun-tahun yang berbeda.
+<ol>
+ 	<li>Apakah terjadi perubahan besar selama empat tahun terakhir dalam himpunan data ini?</li>
+ 	<li>Himpunan data tersebut memiliki 18 kelompok umur. Gunakan distribusi umur yang baru saja Anda plot untuk mendefinisikan kelompok umur yang lebih luas, yang dapat digunakan dalam model sederhana.</li>
+</ol>
+</li>
+ 	<li>Dengan menggunakan perkiraan terkini atas laju <a href="https://www.cdc.gov/nchs/data/nvsr/nvsr67/nvsr67_01.pdf">kelahiran</a> dan <a href="https://www.cdc.gov/nchs/data/nvsr/nvsr65/nvsr65_04.pdf">kematian</a>, sebagaimana diterbitkan oleh Pusat Pengendalian dan Pencegahan Penyakit, buatlah model untuk memprediksi populasi dalam kelompok umur yang Anda definisikan, dengan data 2010 sebagai kondisi awal. Anda mungkin ingin memulai dengan Gambar 2 dan 3 dalam dokumen kelahiran dan kematian tersebut. Tabel-tabel di bagian akhir juga mungkin berguna. (Catatan: jangan mencoba mencetak berkas-berkas ini; panjangnya lebih dari 50 halaman!)
+<ol>
+ 	<li>Bagaimana perbandingan model Anda dengan perkiraan Biro Sensus untuk 2019?</li>
+ 	<li>Gunakan model Anda untuk memprediksi populasi setiap kelompok umur pada 2050. Apa kesimpulan Anda?</li>
+ 	<li>Bahas keterbatasan model Anda.</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>

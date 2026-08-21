@@ -226,19 +226,102 @@ QA_SPECS = {
         "lock": None,
         "lock_sha256": "a6a514bccd39c4c2b817b4faf284ef7f1adb9e31593649a76fa6ca3239af6f9e",
     },
+    "O005-LEGA-V101-CH05": {
+        "unit_type": "chapter",
+        "elements": 364,
+        "links": 50,
+        "math": 389,
+        "target_math": 403,
+        "reader_math": 403,
+        "math_replacements": {
+            26: (
+                r"N(t + \Delta t) = N(t) + \text{number of births} - \text{number of deaths}.",
+                r"N(t + \Delta t) = N(t) + \text{jumlah kelahiran} - \text{jumlah kematian}.",
+            ),
+            32: (
+                r"b = \displaystyle \frac{\text{number of births per }\Delta t}{N(t) \Delta t}, \qquad d = \displaystyle \frac{\text{number of deaths per }\Delta t}{N(t) \Delta t}.",
+                r"b = \displaystyle \frac{\text{jumlah kelahiran per }\Delta t}{N(t) \Delta t}, \qquad d = \displaystyle \frac{\text{jumlah kematian per }\Delta t}{N(t) \Delta t}.",
+            ),
+            37: (
+                r"N(t+1) = \kappa\ N(t), \qquad \kappa = \text{constant}.\qquad (5.1)",
+                r"N(t+1) = \kappa\ N(t), \qquad \kappa = \text{konstan}.\qquad (5.1)",
+            ),
+            39: (r"b - d = 0.025", r"b-d=0.025\ \text{tahun}^{-1}"),
+            48: (
+                r"\displaystyle N(t + \Delta t) = \Big(1 + \kappa \big(N_\infty - N(t)\big)\Big) \cdot N(t) \qquad \kappa = \text{constant},",
+                r"\displaystyle N(t + \Delta t) = \Big(1 + \kappa \big(N_\infty - N(t)\big)\Big) \cdot N(t) \qquad \kappa = \text{konstan},",
+            ),
+            65: (r"k^{\text{th}}", "k"),
+            364: ("b", r"b\gt 0"),
+            365: ("d_J", r"c\gt 0"),
+            366: ("d_A", r"0\leq d_J,d_A\leq 1"),
+        },
+        "math_insertions_before": {
+            52: [r"\kappa\big(N_\infty-N(t)\big)"],
+            53: [
+                r"\kappa",
+                r"[\kappa]=[\text{populasi}]^{-1}",
+                r"1+\kappa\bigl(N_\infty-N(t)\bigr)\geq 0",
+            ],
+            110: [r"x \in [0,1]"],
+            180: [r"M_0 \gt 0"],
+            186: ["M_0=0"],
+            243: [
+                r"(d_1+g_1)\Delta t\leq 1",
+                r"(d_2+g_2)\Delta t\leq 1",
+                r"d_3\Delta t\leq 1",
+            ],
+            347: ["a=0", "a=4/27"],
+            357: ["M(a,0)=M_0(a)", "M(0,t)=B(t)"],
+        },
+        "problems": 17,
+        "footnotes": 7,
+        "assets": [
+            "assets/redhawk-count-id.svg",
+            "assets/redhawk-rate-id.svg",
+            "assets/redhawk-return-source.png",
+            "assets/cobweb-iterations-source.png",
+            "assets/logistic-bifurcation-source.png",
+            "assets/logistic-bifurcation-zoom-source.png",
+            "assets/one-dimensional-stability-id.svg",
+        ],
+        "target_image_dimensions": [
+            ("300", "213"),
+            ("300", "213"),
+            ("300", "213"),
+            ("287", "300"),
+            ("300", "241"),
+            ("300", "239"),
+            ("300", "220"),
+        ],
+        "notebook": "notebooks/chapter-05-open-single-species-models.ipynb",
+        "data_files": [
+            "data/popclockest.txt",
+            "data/popclockest.provenance.json",
+        ],
+        "notebook_cells": 16,
+        "code_cells": 7,
+        "mastery_math": None,
+        "lock": None,
+        "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",
+    },
 }
 BUILDER = ROOT / "scripts" / "build_unit_reader.py"
 LATEX_RE = re.compile(r"\$latex\s+(.+?)\$", re.DOTALL)
 
 
 def configure(unit_id: str) -> None:
-    global UNIT_ID, SPEC, SOURCE, TARGET, ASSETS, NOTEBOOK, LOCK, MASTERY
+    global UNIT_ID, SPEC, SOURCE, TARGET, ASSETS, DATA_FILES, NOTEBOOK, LOCK, MASTERY
     global SEGMENTS, UNIT, BUILD
     UNIT_ID = unit_id
     SPEC = QA_SPECS[unit_id]
     SOURCE = ROOT / "authority" / "units" / UNIT_ID / "content.raw.en.html"
     TARGET = ROOT / "source" / "id-ID" / UNIT_ID / "content.html"
     ASSETS = [ROOT / "source" / "id-ID" / UNIT_ID / path for path in SPEC["assets"]]
+    DATA_FILES = [
+        ROOT / "source" / "id-ID" / UNIT_ID / path
+        for path in SPEC.get("data_files", [])
+    ]
     NOTEBOOK = ROOT / "source" / "id-ID" / UNIT_ID / SPEC["notebook"] if SPEC["notebook"] else None
     LOCK = NOTEBOOK.parent / "requirements.lock" if NOTEBOOK else None
     MASTERY = ROOT / "backend" / "mastery" / f"{UNIT_ID}.mastery.json" if SPEC["problems"] else None
@@ -281,9 +364,22 @@ def structural_replay() -> dict:
         if left.name == "img":
             left_attrs.pop("src", None); right_attrs.pop("src", None)
             left_attrs.pop("alt", None); right_attrs.pop("alt", None)
+            if SPEC.get("target_image_dimensions"):
+                left_attrs.pop("width", None); right_attrs.pop("width", None)
+                left_attrs.pop("height", None); right_attrs.pop("height", None)
         if left.name == "h3" and right.get("id", "").startswith(f"{UNIT_ID}-P"):
             right_attrs.pop("id", None)
         require(left_attrs == right_attrs, f"Unapproved attribute drift at element {index}: {left.name}")
+    if SPEC.get("target_image_dimensions"):
+        dimensions = [
+            (tag.get("width"), tag.get("height"))
+            for tag in target_tags
+            if tag.name == "img"
+        ]
+        require(
+            dimensions == SPEC["target_image_dimensions"],
+            "Target image dimensions differ from the native-size declaration",
+        )
     source_links = [tag["href"] for tag in source_tags if tag.name == "a" and tag.has_attr("href")]
     target_links = [tag["href"] for tag in target_tags if tag.name == "a" and tag.has_attr("href")]
     require(source_links == target_links and len(source_links) == SPEC["links"], "Source/target href sequence differs")
@@ -370,6 +466,15 @@ def backend_replay() -> dict:
         require(unit["notebook_sha256"] == sha(NOTEBOOK), "Unit notebook hash differs")
     else:
         require("notebook_sha256" not in unit, "Part unit unexpectedly binds a notebook")
+    expected_data = [
+        {
+            "path": path.relative_to(ROOT).as_posix(),
+            "bytes": path.stat().st_size,
+            "sha256": sha(path),
+        }
+        for path in DATA_FILES
+    ]
+    require(unit.get("data", []) == expected_data, "Unit data closure differs")
     return {"segments": len(records), "mastery": len(problems)}
 
 
@@ -410,6 +515,12 @@ def reader_replay(root: Path) -> dict:
     for asset in ASSETS:
         expected_asset = (root / "assets" / asset.name).resolve()
         require(expected_asset in local_files, f"Reader does not reference admitted asset: {asset.name}")
+    for data_file in DATA_FILES:
+        expected_data_file = (root / "data" / data_file.name).resolve()
+        require(
+            expected_data_file in local_files,
+            f"Reader does not expose admitted data file: {data_file.name}",
+        )
 
     manifest_path = root / "PACKAGE_MANIFEST.tsv"
     rows = manifest_path.read_text(encoding="utf-8").splitlines()

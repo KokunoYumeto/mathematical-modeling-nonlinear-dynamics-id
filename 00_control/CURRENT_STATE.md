@@ -7,9 +7,9 @@ Updated: 2026-08-21 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–4 and the visible Part 2 and Part 3 introductions
-are translated, built, and verified. Production now moves to Chapter 5,
-Pressbooks record 48, *Single-Species Models*. The earlier
+into this lane. Chapters 1–5 and the visible Part 2 and Part 3 introductions
+are translated, built, and verified. Production now moves to Chapter 6,
+Pressbooks record 53, *Two-Species Models*, as `O005-LEGA-V101-CH06`. The earlier
 cursor's record 29 / “Dimensional Analysis” pair was invalid and has been
 corrected from the frozen TOC.
 
@@ -44,16 +44,16 @@ corrected from the frozen TOC.
   `75eb7a3b4e5f67bf12c689aa3162ee8ba49149cd00c96e53cae119a524d11a5e`.
 - Modular segment layer: 125 records / 83,591 bytes, SHA-256
   `5fdfc7baca4367ceab409b6e55cc6a8144fd9fe39161d1b5174731420f7c9e7a`.
-- Reader package: eight payload files / 217,460 bytes, excluding the manifest;
+- Reader package: eight payload files / 217,520 bytes, excluding the manifest;
   manifest SHA-256
-  `04cb3ff2c58600389010d965190e52288a40e3dc1a6088c6bb90063a0fc2e87a`.
+  `8c94a298617a14de7af3bda5e7b07831c6cc1cd2b050529fa339eb818cd72942`.
 - Exact structure replay: 120/120 elements, 14/14 links, 14/14 TeX
   expressions, seven/seven problems; no unexplained drift.
 - Notebook: all seven code cells executed with the pinned environment; all
   deterministic numerical/model-selection assertions passed.
 - The generic reader renders 14 chapter and 46 mastery MathML nodes. Repeated
   clean builds were byte-identical across nine files, canonical tree SHA-256
-  `6cfa3acae2b7ef23e0265eee6c7ce7b9d59a4266f61a31300510ccc7363a1e67`.
+  `3dcbcf930f3b21eaa55f1277bccbd00ae60b6b910af3509260b3438cdc5b4dd1`.
 - Browser QA: centered 768 px article at 1280 px; clean 390 px mobile layout;
   zero horizontal overflow at both sizes. Audio/live widgets do not exist and
   were not exercised; external-link reachability was not tested.
@@ -80,16 +80,16 @@ corrected from the frozen TOC.
   `8e31dc2dfaa61b3e0f76dd04b29867fcadd303490622a8ea0e1f5ad77f2ce517`.
 - Modular segment layer: 121 records / 84,773 bytes, SHA-256
   `0e1dd86ab9c5dc0d2e6338a2ae8909e5d5825f4d8b5866ca7eab88dfb0246b6a`.
-- Reader package: eight payload files / 358,731 bytes, excluding the manifest;
+- Reader package: eight payload files / 358,791 bytes, excluding the manifest;
   manifest SHA-256
-  `9b4cbf27e7b433299e235aec2bbf13d9a00a4dbf47566474f125c9d127316288`.
+  `5189b7f1280718e3773f0abe8d895f5cc10c574c08986c9a5500ccbd936fde50`.
 - Exact structure replay: 103/103 elements, 10/10 links, 92/92 protected
   TeX expressions, and seven/seven problems; no unexplained drift.
 - Notebook: all seven code cells and 23 assertions passed with fixed seed
   `20260821`; the baseline produced a 15-seat median width and measured speed
   20 seats/second with regression R-squared 1.0.
 - Repeated clean builds were byte-identical across nine files, canonical tree
-  SHA-256 `568dc4dcc92fb005702a40106fde0821e61ec30341a662f72d17bc252240137e`.
+  SHA-256 `5cb3fd2ed90f1841e8dd8da0e93613b6d1ba8fb442c79cc49a8ff4c508dfa9b4`.
 - Browser QA: centered 768 px article at 1280 px and 357.5 px article at
   390 px; zero horizontal overflow, missing images, raw mastery TeX, or
   unlabeled images. External-link reachability and audio/live widgets were not
@@ -110,13 +110,13 @@ corrected from the frozen TOC.
   `c7351c8342d7334116e69fbd16b7e19030c9492237e00c99713bcca0697e4087`.
 - Modular segment layer: three paragraph records / 2,733 bytes, SHA-256
   `63492fc25014f6872dc8c5c4a90fad31813be679a7a0d78332e61ec1c77f7d54`.
-- Reader package: four payload files / 11,145 bytes, excluding the manifest;
+- Reader package: four payload files / 11,218 bytes, excluding the manifest;
   manifest SHA-256
-  `32e6dcc39f2c980e5b33b8befb788b7eab4310e05d3cf725130c418be3dd3f32`.
+  `e9a1ddbe2b77d428782ade23a239b9216ea3f8383290f4ddcf1fb505b5301c2b`.
 - Exact replay: zero/zero source-target elements, links, formulas, and
   problems; three/three paragraph boundaries and segment hashes exact.
 - Repeated clean builds were byte-identical across five files, canonical tree
-  SHA-256 `42a2af70218424bca7f768e665c10c429fcd3e68db40da41eecc4cd423c93cdd`.
+  SHA-256 `32b5dcf0c5dd9a8b73b3518c6e2bb7383942130b5787228b650e16cfe02b75d9`.
 - Browser QA: the article is centered at 768 px in a 1,280 px desktop viewport
   and 357.5 px in a 390 px mobile viewport; zero horizontal overflow or broken
   assets. The navigation and official-source label correctly identify a
@@ -148,9 +148,9 @@ corrected from the frozen TOC.
   Figure 3.4 adaptation (131,859 bytes, SHA-256
   `76172508b59ddce827f57d8e76d7c89c49dc9b56294a7ef32c6287e4228fe975`),
   with the unchanged source bitmap and an exact adaptation receipt retained.
-- Reader package: 16 payload files / 2,025,454 bytes, excluding the 1,670-byte
+- Reader package: 16 payload files / 2,025,462 bytes, excluding the 1,670-byte
   manifest; manifest SHA-256
-  `1957c32aab44de6589f8c5509da0393848f845c56deb15bd48234577893d7be5`.
+  `c062741f4df7d28ed1b57ac16390e3f2754dec627ed39f760b82a47a7ca29d87`.
 - Exact structure replay: 423/423 elements, 62/62 links, 404 source TeX
   occurrences mapped to 407 declared target occurrences, and 23/23 stable
   problems; no unexplained drift.
@@ -162,7 +162,7 @@ corrected from the frozen TOC.
   all nine figures and the notebook/lock locally, and exposes all three
   footnotes as Indonesian notes. Repeated clean builds were byte-identical
   across 17 files, canonical tree SHA-256
-  `427eabd4cd6a5f4e40c7df02c713f6c0f29d47949807ab39a64da2036bcd71c1`.
+  `f485e128318733f43fe967c165d30d3045219a161a776976c729663a57c152b2`.
   Final-byte structural, locality, responsive-CSS, and accessibility checks
   pass; bounded browser evidence and its explicit limits are in `BUILD_QA.md`.
 
@@ -198,13 +198,13 @@ corrected from the frozen TOC.
   2.4.4 and Matplotlib 3.10.9. It checks the free-flight, gyroscopic,
   collision-depth, critical-speed, and jump-decay equations, while explicitly
   making no experimental-validation claim.
-- Reader package: nine payload files / 447,163 bytes excluding its manifest;
+- Reader package: nine payload files / 447,218 bytes excluding its manifest;
   manifest SHA-256
-  `0e9dff17d5f5d9625c16f5e7d62e5d0c84af75757a717e31ce53840e88eaab85`.
+  `830384e8d193c40911d3bc520e7d2bf18fc60b8608f7893349832a0dd6e0f363`.
   It renders 258 chapter and 119 mastery MathML nodes and resolves all local
   dependencies. Repeated clean builds were byte-identical across ten files,
   canonical tree SHA-256
-  `15f5b87b32ff5afdeaf2dd29cdd80c2f3f8c90b04a2d2ffc079c1ca671d6f1ef`.
+  `12309752f9ba8f8c79918bc528cd884e1a99e28bf181a3b5a5bd37de2ef6cd52`.
 - Browser QA: at 1280×900 the 1,152 px main shell was centered; at 390×844
   the chapter was 357.5 px wide and centered. Document scroll width equaled
   client width at both sizes; both figures loaded at natural resolution,
@@ -229,12 +229,12 @@ corrected from the frozen TOC.
   the source's single emphasis element and paragraph order are exact.
 - Modular segment layer: four records / 6,687 bytes, SHA-256
   `9698e525582f2e412e0e87185cb597ef722d7bb59ed2381e66d5d5b61d31c21b`.
-- Reader package: four payload files / 16,945 bytes excluding the manifest;
+- Reader package: four payload files / 17,018 bytes excluding the manifest;
   manifest SHA-256
-  `c91ad40bb3914221338e29e4302a018297466cdb72cc021a81af18fe4d74ecc9`.
+  `4c3b585cdcb549809f7caac6648fc515b2f234778504fdecee9e1f820eb04995`.
   Repeated clean builds were byte-identical across five files, canonical tree
   SHA-256
-  `778bad58be64f29210f7e7b507f539fdad5365689c609a94f57d3680acb68204`.
+  `660a59f9b8c219334ba2dcbd8823e5264ff84cc286af18ad09f8d6cb4c4035e0`.
 - Browser QA: the desktop article was 768 px and centered in a 1,152 px main
   shell at 1280×900; the mobile article was 357.5 px and centered at 390×844.
   Document scroll width equaled client width, all four paragraphs rendered,
@@ -244,10 +244,49 @@ corrected from the frozen TOC.
   `493a70632d4d71d3cb7a0729ba7a169a1b3900e9` on `origin/main`. Remote-head
   equality and GitHub raw-byte readback of content, reader, and manifest passed.
 
+## Admitted Chapter 5 boundary
+
+- Source record: Pressbooks chapter 48, *Single-Species Models*; target title
+  *Model Populasi Satu Spesies*; modified `2026-03-27T02:27:32Z`.
+- Canonical record: 119,420 bytes, SHA-256
+  `7f276a994f78af2af02d5bdd39b9566a50f5e3b09b25351c70cdff50736c66be`;
+  raw source fragment: 51,685 bytes, SHA-256
+  `476153ddf275a4c6d9f52e4268be21c009da3ba5a4e0b5b15fefc73c32d828f2`.
+- Complete natural id-ID fragment: 54,818 bytes, SHA-256
+  `8a8a205b1dfac9778c3e8549c036559dae88aff1e5262e9513cc5646d72bff7e`.
+- Exact replay: 326 source/target lines, 364 ordered elements, 50 links, 389
+  source TeX occurrences mapped to 403 declared target occurrences, seven
+  figures, seven descriptions and footnotes, and 17 stable problems. Every
+  mathematical or typographic intervention is enumerated as O005-CORR-0025
+  through O005-CORR-0045.
+- Seventeen-record mastery layer: 59,424 bytes, SHA-256
+  `d85cda9304f74e5f5d3ff874b37044e18068a9446bf6a3cd4682831bc8c45cc6`;
+  17 hints/checks and 12 worked solutions plus five qualitative rubrics.
+- Independent open single-species notebook: 19,847 bytes, SHA-256
+  `b7a19523b1fedc344a1cda20cca0a8cfb8a46588f05ff7f59417fa59cfd9c7cd`;
+  16 cells / seven code cells / 40 assertions. The official 100-row Census
+  packet is 8,148 bytes, SHA-256
+  `f59dbd91b2bf975df7b7fb4af6de52dc3c68a705632e83d60410d98781206f09`.
+- Three figures have self-contained Indonesian-label SVG adaptations; four
+  reader figures retain the source raster. All seven display at native size,
+  centered, without avoidable enlargement.
+- Modular segment layer: 473 records / 292,942 bytes, SHA-256
+  `32732105bb934be792de3749e7ede0cf2cdd617126fab6efeddd9468d096dd9f`.
+- Reader package: 16 payload files / 968,497 bytes excluding its manifest;
+  manifest SHA-256
+  `de862361118699c3c398145bf2424d43a6f39610ad3c409c484aad19c506c30d`.
+  Repeated clean builds were byte-identical across 17 files, canonical tree
+  SHA-256 `16ec1089ec9abccc946cf5970a7d9a51e45855cce4036cea2f05b15329f1fc5e`.
+- Browser QA: desktop main shell 1,152 px and chapter 768 px, both centered;
+  mobile shell/chapter 357.5 px at 390×844. Navigation wraps on mobile,
+  document overflow is zero, seven figures load at native dimensions, all 67
+  IDs are unique, all fragment links resolve, and a fresh load has no browser
+  warning or error. Wide MathML remains locally scrollable by design.
+
 ## Next action
 
-Prepare and translate Chapter 5 record 48, *Single-Species Models*, as
-`O005-LEGA-V101-CH05`, preserving the complete 326-line source, 364-element
-topology, 50 links, 389 TeX occurrences, seven figures and descriptions,
-seven footnotes, and 16 problems. Provide complete mastery and an open
-single-species dynamics notebook; do not return to source selection.
+Prepare and translate Chapter 6 record 53, *Two-Species Models*, in full as
+`O005-LEGA-V101-CH06`, preserving the frozen 182-line raw source, 185 opening
+elements, 31 links, 227 TeX occurrences, four figures, three footnotes, and six
+problems. Add complete mastery and the bounded open phase-plane computation
+closure; do not return to source selection.

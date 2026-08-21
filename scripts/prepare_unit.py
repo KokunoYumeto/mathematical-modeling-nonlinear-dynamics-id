@@ -145,6 +145,56 @@ UNIT_SPECS = {
         "record_sha256": "e0c7435af2c60d11f80eef9924934c335c93100cd86de57170820560797f9576",
         "assets": [],
     },
+    "O005-LEGA-V101-CH05": {
+        "record_id": 48,
+        "modified_gmt": "2026-03-27T02:27:32",
+        "record_bytes": 119420,
+        "record_sha256": "7f276a994f78af2af02d5bdd39b9566a50f5e3b09b25351c70cdff50736c66be",
+        "assets": [
+            {
+                "path": "assets/redhawk-count-source.png",
+                "epub_member": "EPUB/assets/Redhawk_US_1-105-300x213.png",
+                "bytes": 10733,
+                "sha256": "6026cbadc87a030ce119b009551d8a9428b9af51083bd708832ef7dbcea676cd",
+            },
+            {
+                "path": "assets/redhawk-rate-source.png",
+                "epub_member": "EPUB/assets/Redhawk_US_1-105_rate-300x213.png",
+                "bytes": 17230,
+                "sha256": "5a181a42c3cf709bc906ac372d2d173c6afd57ed34e426a92e22a718a87cc97e",
+            },
+            {
+                "path": "assets/redhawk-return-source.png",
+                "epub_member": "EPUB/assets/Redhawk_US_1-105_1stR-300x213.png",
+                "bytes": 14910,
+                "sha256": "3b348b9c541b763ac802525038fa5f5dc7c5d8580c3b319479bbabc9732b7d5e",
+            },
+            {
+                "path": "assets/cobweb-iterations-source.png",
+                "epub_member": "EPUB/assets/Iterations-287x300.png",
+                "bytes": 16413,
+                "sha256": "97ea2323b18b6bcae1ef4ab0b89bf5e589654f8dc7ff757dbb2c587e15bf30dc",
+            },
+            {
+                "path": "assets/logistic-bifurcation-source.png",
+                "epub_member": "EPUB/assets/Logistic1a-300x241.png",
+                "bytes": 25987,
+                "sha256": "4768b2076566ba00ee818166b9053836cb0166eea81545eaf5962e92aaf0dc7b",
+            },
+            {
+                "path": "assets/logistic-bifurcation-zoom-source.png",
+                "epub_member": "EPUB/assets/Logistic2a-300x239.png",
+                "bytes": 58787,
+                "sha256": "13fb09c5410c24f15085e872ecc9e4967a8c05b41f3f7e5104141ce6868431d3",
+            },
+            {
+                "path": "assets/one-dimensional-stability-source.png",
+                "epub_member": "EPUB/assets/Gen_stable-300x220.png",
+                "bytes": 13876,
+                "sha256": "8f7964291a6dc3b3bcc5a9c26ceacaae491f9478c29a2705eec672f7e3ce2c3e",
+            },
+        ],
+    },
 }
 
 

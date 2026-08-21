@@ -1,0 +1,986 @@
+{
+  "schema": "o005-mastery-v1",
+  "schema_version": "1.0.0",
+  "unit_id": "O005-LEGA-V101-CH05",
+  "language": "id-ID",
+  "source": {
+    "resource": "Joceline Lega, Introduction to Mathematical Modeling",
+    "edition": "University of Arizona Pressbooks v1.01 (Maret 2026)",
+    "record": "Pressbooks chapter 48",
+    "record_id": 48,
+    "source_title": "Single-Species Models",
+    "target_title": "Model Populasi Satu Spesies",
+    "modified_utc": "2026-03-27T02:27:32Z",
+    "source_file": "authority/units/O005-LEGA-V101-CH05/content.raw.en.html",
+    "source_locator": "exact frozen Pressbooks record 48 content.raw, problems on lines 147–324",
+    "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/single-species-models/",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "provenance_policy": {
+    "source_derived": "Ringkasan masalah merupakan adaptasi/terjemahan dari soal sumber dan tetap berada di bawah CC BY-NC-SA 4.0.",
+    "new_original": "Petunjuk, rekaman pemeriksaan/jawaban, serta solusi atau rubrik ditulis baru untuk edisi Bahasa Indonesia dan ditandai terpisah dari materi sumber. Sumber menyediakan perintah soal dan satu petunjuk singkat pada Soal 4, tetapi tidak menyediakan himpunan solusi. Dukungan untuk tugas data tidak mengklaim telah mengakses data langsung; bila berkas resmi tidak tersedia secara lokal, hasil numerik wajib ditandai sebagai sintetis atau belum dapat ditentukan."
+  },
+  "article_link_catalog": [
+    {
+      "link_id": "O005-LEGA-V101-CH05-LINK01",
+      "title": "Robert M. May (1976), Simple mathematical models with very complicated dynamics",
+      "url": "https://doi.org/10.1038/261459a0"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH05-LINK02",
+      "title": "U.S. Census Bureau, popclockest.txt (1900–1999 national estimates)",
+      "url": "https://www2.census.gov/programs-surveys/popest/tables/1900-1980/national/totals/popclockest.txt"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH05-LINK03",
+      "title": "U.S. Census Bureau population-estimates methodology",
+      "url": "https://www.census.gov/programs-surveys/popest/technical-documentation/methodology.html"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH05-LINK04",
+      "title": "U.S. Census Bureau age-and-sex data tables",
+      "url": "https://www.census.gov/topics/population/age-and-sex/data/tables.html"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH05-LINK05",
+      "title": "CDC/NCHS birth-rate source cited by the chapter",
+      "url": "https://www.cdc.gov/nchs/data/nvsr/nvsr67/nvsr67_01.pdf"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH05-LINK06",
+      "title": "CDC/NCHS death-rate source cited by the chapter",
+      "url": "https://www.cdc.gov/nchs/data/nvsr/nvsr65/nvsr65_04.pdf"
+    }
+  ],
+  "problems": [
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P01",
+      "ordinal": 1,
+      "problem_summary": "Untuk model diskret \\(N(t+1)=\\kappa N(t)\\) dengan \\(\\kappa>1\\), tentukan waktu penggandaan, perkirakan \\(\\kappa\\) dari Gambar 5.1, lalu bandingkan perkiraan tersebut dengan \\(\\kappa=1{,}025\\) dari Gambar 5.3. Nyatakan secara eksplisit selang tahun yang dipakai untuk pembacaan grafik.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle N(t+1) = \\kappa N(t), \\kappa &gt; 1.",
+        "\\kappa",
+        "\\kappa = 1.025"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Iterasikan persamaan terlebih dahulu. Untuk perkiraan grafik, pilih dua titik \\((t_1,N_1)\\) dan \\((t_2,N_2)\\) pada satu rentang yang tampak mendekati pertumbuhan eksponensial—bukan pada bagian awal yang nyaris nol atau bagian yang sudah jenuh—lalu selesaikan \\(N_2/N_1=\\kappa^{t_2-t_1}\\)."
+      },
+      "check": {
+        "type": "exact_formula_with_graphical_estimate",
+        "final_answer": "Solusi model ialah \\(N(t)=\\kappa^tN(0)\\) untuk langkah tahunan. Waktu penggandaan real adalah \\(t_2=\\ln 2/\\ln\\kappa\\); waktu lintasan pertama pada kisi waktu bilangan bulat adalah \\(\\lceil\\ln2/\\ln\\kappa\\rceil\\) tahun. Dua pembacaan grafik memberi \\(\\widehat\\kappa=(N_2/N_1)^{1/(t_2-t_1)}\\). Untuk \\(\\kappa=1{,}025\\), waktu penggandaan real sekitar \\(28{,}07\\) tahun dan lintasan diskret pertama terjadi pada tahun ke-29.",
+        "quick_check": "Perkiraan dari gambar tidak mempunyai satu angka eksak. Jawaban harus menyebut \\(t_1,t_2,N_1,N_2\\), memakai rasio geometrik—bukan selisih aritmetis—dan membahas ketidakpastian pembacaan serta perubahan rezim pertumbuhan."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Iterasi berulang menghasilkan deret geometri.",
+            "formula": "N(t)=\\kappa^tN(0)"
+          },
+          {
+            "explanation": "Samakan populasi dengan dua kali kondisi awal dan ambil logaritma.",
+            "formula": "2N(0)=\\kappa^{t_2}N(0)\\quad\\Longrightarrow\\quad t_2=\\frac{\\ln2}{\\ln\\kappa}"
+          },
+          {
+            "explanation": "Karena model hanya diamati pada waktu bulat, penggandaan pertama yang benar-benar teramati menggunakan fungsi plafon.",
+            "formula": "m_{\\mathrm{dua}}=\\left\\lceil\\frac{\\ln2}{\\ln\\kappa}\\right\\rceil"
+          },
+          {
+            "explanation": "Perkiraan grafik dari dua titik harus menormalkan pertumbuhan terhadap panjang selang waktu.",
+            "formula": "\\widehat\\kappa=\\exp\\!\\left(\\frac{\\ln N_2-\\ln N_1}{t_2-t_1}\\right)"
+          }
+        ],
+        "conclusion": "Bagian grafik dinilai dari prosedur yang dapat direproduksi, bukan dari kecocokan dengan satu angka yang dipaksakan. Nilai 1,025 bahkan sedikit berada di bawah selang [1,026, 1,029] yang dikutip bab, sehingga perbandingan harus disebut dekat tetapi tidak berada di dalam selang itu."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P02",
+      "ordinal": 2,
+      "problem_summary": "Bandingkan waktu penggandaan model kontinu \\(\\dot N=rN\\) dengan model diskret \\(N(t+\\Delta t)=\\kappa N(t)\\). Gunakan secara eksplisit tafsiran hampiran beda-maju \\(\\kappa=1+r\\Delta t\\), dan bedakan dari pencuplikan eksak \\(\\kappa=e^{r\\Delta t}\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d N}{d t} = r N, r &gt; 0.",
+        "N(t + \\Delta t) = \\kappa N(t),",
+        "\\kappa",
+        "r"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Selesaikan ODE dengan eksponensial. Untuk hubungan yang dimaksud soal, ganti \\(dN/dt\\) dengan \\([N(t+\\Delta t)-N(t)]/\\Delta t\\). Ketika membandingkan waktu, gunakan \\(\\ln(1+x)<x\\) untuk \\(x>0\\)."
+      },
+      "check": {
+        "type": "exact_discrete_continuous_comparison",
+        "final_answer": "Model kontinu memberi \\(N(t)=N_0e^{rt}\\) dan \\(T_c=\\ln2/r\\). Hampiran beda-maju memberi \\(\\kappa=1+r\\Delta t\\). Waktu penggandaan diskret yang belum dibulatkan ialah \\(T_d=\\Delta t\\,\\ln2/\\ln(1+r\\Delta t)\\), sedangkan waktu langkah pertamanya ialah \\(\\Delta t\\lceil\\ln2/\\ln(1+r\\Delta t)\\rceil\\). Karena \\(\\ln(1+r\\Delta t)<r\\Delta t\\), berlaku \\(T_d>T_c\\): skema diskret beda-maju lebih lambat. Jika model diskret didefinisikan sebagai pencuplikan eksak ODE, \\(\\kappa=e^{r\\Delta t}\\) dan kedua waktu penggandaan sama.",
+        "quick_check": "Hubungan \\(\\kappa=1+r\\Delta t\\) dan \\(\\kappa=e^{r\\Delta t}\\) tidak boleh dicampur; yang pertama adalah langkah Euler/bentuk hampiran bab, yang kedua adalah aliran eksak."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Pisahkan variabel pada model kontinu.",
+            "formula": "N(t)=N_0e^{rt},\\qquad T_c=\\frac{\\ln2}{r}"
+          },
+          {
+            "explanation": "Hampiran beda-maju terhadap turunan menghasilkan pengali satu langkah.",
+            "formula": "\\frac{N(t+\\Delta t)-N(t)}{\\Delta t}=rN(t)\\quad\\Longrightarrow\\quad N(t+\\Delta t)=(1+r\\Delta t)N(t)"
+          },
+          {
+            "explanation": "Setelah \\(m\\) langkah, populasi dikalikan \\((1+r\\Delta t)^m\\).",
+            "formula": "m_*=\\frac{\\ln2}{\\ln(1+r\\Delta t)},\\qquad T_d=m_*\\Delta t"
+          },
+          {
+            "explanation": "Ketaksamaan logaritma menentukan urutan waktu penggandaan.",
+            "formula": "\\ln(1+r\\Delta t)<r\\Delta t\\quad\\Longrightarrow\\quad T_d>\\frac{\\ln2}{r}=T_c"
+          }
+        ],
+        "conclusion": "Pertanyaan cepat/lambat mempunyai jawaban hanya setelah hubungan diskret–kontinu ditetapkan. Dalam tafsiran beda-maju yang dimaksud bab, model diskret lebih lambat; dalam pencuplikan eksak, keduanya setara."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P03",
+      "ordinal": 3,
+      "problem_summary": "Untuk \\(\\dot N=r(N)N\\) dengan \\(r(N)=aN+b\\), tentukan tanda parameter agar populasi tumbuh ketika kecil dan jenuh pada kapasitas dukung positif, lalu ubah model ke bentuk logistik \\(\\dot M=\\lambda M(1-M)\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{dN}{dt} = r(N) N,",
+        "r(N)",
+        "r(N) = a N + b",
+        "N"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Pertumbuhan dekat \\(N=0\\) ditentukan oleh \\(r(0)=b\\). Kapasitas dukung positif adalah akar nonnol \\(aN+b=0\\). Gunakan akar itu sebagai skala populasi."
+      },
+      "check": {
+        "type": "exact_nondimensionalization",
+        "final_answer": "Diperlukan \\(b>0\\) dan \\(a<0\\). Tetapkan \\(K=-b/a>0\\), \\(M=N/K\\), dan \\(\\lambda=b\\). Karena \\(aK=-b\\), diperoleh \\(\\dot M=bM(1-M)=\\lambda M(1-M)\\). Kapasitas dukung dalam variabel asal ialah \\(N=K\\).",
+        "quick_check": "Ketika \\(0<N<K\\), ruas kanan harus positif; ketika \\(N>K\\), ruas kanan harus negatif."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Agar populasi kecil bertumbuh, laju per kapita pada nol harus positif.",
+            "formula": "r(0)=b>0"
+          },
+          {
+            "explanation": "Saturasi memerlukan laju per kapita menurun dan mempunyai akar positif.",
+            "formula": "a<0,\\qquad K=-\\frac{b}{a}>0"
+          },
+          {
+            "explanation": "Skalakan populasi dengan kapasitas dukung.",
+            "formula": "N=KM,\\qquad K\\dot M=(aK^2M^2+bKM)"
+          },
+          {
+            "explanation": "Gunakan \\(aK=-b\\) dan bagi dengan \\(K\\).",
+            "formula": "\\dot M=bM(1-M),\\qquad \\lambda=b"
+          }
+        ],
+        "conclusion": "Perubahan variabel memisahkan skala populasi \\(K\\) dari skala waktu \\(1/b\\)."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P04",
+      "ordinal": 4,
+      "problem_summary": "Analisis titik tetap nontrivial dan siklus periode dua pemetaan logistik \\(x_{n+1}=ax_n(1-x_n)\\): tentukan ambang hilangnya kestabilan titik tetap, keberadaan dua titik siklus, dan ambang hilangnya kestabilan siklus tersebut.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "x_{n+1} = a x_n (1 - x_n) \\equiv f(x_n), 0 \\lt a \\lt 4.",
+        "a &gt; 3",
+        "f^2",
+        "a"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Gunakan \\(f'(x)=a(1-2x)\\). Setelah memfaktorkan \\(f^2(x)-x\\), buang faktor yang hanya menghasilkan dua titik tetap \\(f\\); faktor kuadrat sisanya memberi dua titik siklus. Kestabilan siklus ditentukan oleh hasil kali turunan pada kedua titik."
+      },
+      "check": {
+        "type": "exact_period_doubling",
+        "final_answer": "Titik tetap nontrivial ialah \\(x^*=1-1/a\\) dan pengalinya \\(f'(x^*)=2-a\\), sehingga stabil untuk \\(1<a<3\\) dan takstabil untuk \\(a>3\\). Dua titik periode dua ialah \\(x_\\pm=[a+1\\pm\\sqrt{(a-3)(a+1)}]/(2a)\\), yang menjadi siklus sejati untuk \\(a>3\\). Pengali satu siklus adalah \\(f'(x_+)f'(x_-)=-a^2+2a+4\\); siklus stabil untuk \\(3<a<1+\\sqrt6\\) dan kehilangan kestabilan pada \\(a=1+\\sqrt6\\approx3{,}44949\\).",
+        "quick_check": "Pada \\(a=3\\), \\(x_+=x_-=2/3=x^*\\); pada \\(a=1+\\sqrt6\\), pengali siklus harus tepat \\(-1\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Pecahkan \\(f(x)=x\\).",
+            "formula": "x=0,\\qquad x^*=1-\\frac1a"
+          },
+          {
+            "explanation": "Uji pengali titik tetap nontrivial.",
+            "formula": "f'(x^*)=a(1-2x^*)=2-a,\\qquad |2-a|<1\\iff1<a<3"
+          },
+          {
+            "explanation": "Faktor baru dalam \\(f^2(x)-x\\) menghasilkan pasangan periode dua.",
+            "formula": "x_\\pm=\\frac{a+1\\pm\\sqrt{(a-3)(a+1)}}{2a}"
+          },
+          {
+            "explanation": "Turunan iterasi kedua adalah hasil kali turunan sepanjang siklus.",
+            "formula": "(f^2)'(x_\\pm)=f'(x_+)f'(x_-)=-a^2+2a+4"
+          },
+          {
+            "explanation": "Selesaikan syarat modulus kurang dari satu pada rentang \\(a>3\\).",
+            "formula": "|-a^2+2a+4|<1\\iff3<a<1+\\sqrt6"
+          }
+        ],
+        "conclusion": "Hasil ini menjelaskan cabang periode dua pertama pada diagram bifurkasi dan ambang penggandaan periode berikutnya."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P05",
+      "ordinal": 5,
+      "problem_summary": "Selesaikan sistem beda \\(X(t+1)=AX(t)\\) untuk \\(A=\\begin{pmatrix}2&2\\\\1&3\\end{pmatrix}\\) dan \\(X(0)=(1,0)^T\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle X(t + 1) = \\left(\\begin{array}{cc} 2 &amp; 2 \\\\ 1 &amp; 3 \\end{array}\\right) X(t)",
+        "\\displaystyle X(t) = \\left(\\begin{array}{c} x(t) \\\\ y(t) \\end{array}\\right).",
+        "x(0)=1",
+        "y(0) = 0."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Diagonal-kan matriks. Nilai eigennya bilangan bulat kecil; uraikan \\((1,0)^T\\) dalam basis vektor eigen sebelum menaikkan matriks ke pangkat \\(t\\)."
+      },
+      "check": {
+        "type": "exact_matrix_recurrence",
+        "final_answer": "Nilai eigen matriks adalah \\(1\\) dan \\(4\\), dengan vektor eigen yang dapat dipilih \\((-2,1)^T\\) dan \\((1,1)^T\\). Karena \\((1,0)^T=-\\frac13(-2,1)^T+\\frac13(1,1)^T\\), maka \\(X(t)=\\frac13(2+4^t,\\,4^t-1)^T\\).",
+        "quick_check": "Pada \\(t=0\\), rumus harus memberi \\((1,0)^T\\); pada \\(t=1\\), rumus harus memberi \\((2,1)^T=A(1,0)^T\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Hitung polinom karakteristik.",
+            "formula": "\\det(A-\\lambda I)=\\lambda^2-5\\lambda+4=(\\lambda-1)(\\lambda-4)"
+          },
+          {
+            "explanation": "Pilih satu vektor eigen untuk setiap nilai eigen.",
+            "formula": "v_1=(-2,1)^T,\\qquad v_4=(1,1)^T"
+          },
+          {
+            "explanation": "Uraikan kondisi awal.",
+            "formula": "X(0)=-\\frac13v_1+\\frac13v_4"
+          },
+          {
+            "explanation": "Kalikan setiap komponen eigen dengan pangkat nilai eigennya.",
+            "formula": "X(t)=-\\frac13v_1+\\frac{4^t}{3}v_4=\\frac13\\binom{2+4^t}{4^t-1}"
+          }
+        ],
+        "conclusion": "Komponen pada eigendireksi \\(\\lambda=4\\) mendominasi pertumbuhan jangka panjang."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P06",
+      "ordinal": 6,
+      "problem_summary": "Tentukan semua titik tetap dan kestabilannya untuk ODE satu dimensi \\(\\dot x=x(x-1)(x-2)\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d x}{d t} = x (x - 1) (x - 2)."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Akar ruas kanan adalah titik tetap. Untuk akar sederhana \\(x_c\\), tanda \\(f'(x_c)\\) menentukan kestabilan: negatif stabil, positif takstabil."
+      },
+      "check": {
+        "type": "exact_one_dimensional_stability",
+        "final_answer": "Titik tetapnya \\(x=0,1,2\\). Dengan \\(f'(x)=3x^2-6x+2\\), diperoleh \\(f'(0)=2\\), \\(f'(1)=-1\\), dan \\(f'(2)=2\\). Jadi \\(x=1\\) stabil asimtotik, sedangkan \\(x=0\\) dan \\(x=2\\) takstabil.",
+        "quick_check": "Diagram tanda harus berurutan: \\(f<0\\) pada \\(( -\\infty,0)\\), \\(f>0\\) pada \\((0,1)\\), \\(f<0\\) pada \\((1,2)\\), dan \\(f>0\\) pada \\((2,\\infty)\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Titik tetap adalah akar polinom.",
+            "formula": "x(x-1)(x-2)=0\\quad\\Longrightarrow\\quad x_c\\in\\{0,1,2\\}"
+          },
+          {
+            "explanation": "Diferensiasikan medan vektor.",
+            "formula": "f'(x)=3x^2-6x+2"
+          },
+          {
+            "explanation": "Evaluasi turunan pada tiap akar sederhana.",
+            "formula": "f'(0)=2>0,\\qquad f'(1)=-1<0,\\qquad f'(2)=2>0"
+          }
+        ],
+        "conclusion": "Panah fase menjauh dari 0 dan 2 serta menuju 1 dari kedua sisi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P07",
+      "ordinal": 7,
+      "problem_summary": "Tentukan semua titik tetap dan kestabilannya untuk \\(\\dot x=x^2(x-1)\\), termasuk sifat satu-sisi titik tetap ganda di \\(x=0\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d x}{d t} = x^2 (x-1)."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Uji turunan bekerja langsung pada akar sederhana \\(x=1\\), tetapi tidak memutuskan akar ganda \\(x=0\\). Untuk nol, periksa tanda \\(x^2(x-1)\\) di kiri dan kanan secara terpisah."
+      },
+      "check": {
+        "type": "exact_semistability",
+        "final_answer": "Titik tetapnya \\(x=0\\) dan \\(x=1\\). Titik \\(x=1\\) takstabil karena \\(f'(1)=1>0\\). Di sekitar \\(x=0\\), \\(f(x)<0\\) pada kedua sisi: lintasan dari kanan bergerak menuju 0, sedangkan lintasan dari kiri bergerak menjauh ke kiri. Jadi \\(x=0\\) semistabil—menarik dari kanan dan menolak dari kiri—dan tidak stabil dalam pengertian Lyapunov pada seluruh garis real.",
+        "quick_check": "Jawaban yang hanya memakai \\(f'(0)=0\\) belum selesai; nilai turunan nol membuat uji linear tidak konklusif."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Faktorisasi langsung memberi satu akar ganda dan satu akar sederhana.",
+            "formula": "x^2(x-1)=0\\quad\\Longrightarrow\\quad x=0,1"
+          },
+          {
+            "explanation": "Akar sederhana diuji melalui turunan.",
+            "formula": "f'(x)=3x^2-2x,\\qquad f'(1)=1>0"
+          },
+          {
+            "explanation": "Untuk \\(x<0\\) maupun \\(0<x<1\\), faktor \\(x^2\\) positif dan \\(x-1\\) negatif.",
+            "formula": "f(x)<0\\quad\\text{pada }(-\\infty,0)\\text{ dan }(0,1)"
+          }
+        ],
+        "conclusion": "Contoh ini menunjukkan mengapa titik nonhiperbolik tidak boleh otomatis disebut stabil marginal hanya karena \\(|f'|\\) berada pada batas uji linear."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P08",
+      "ordinal": 8,
+      "problem_summary": "Bangun diagram bifurkasi ODE \\(\\dot x=a+x^2(x-1)\\), klasifikasikan kestabilan semua cabang, dan hitung jumlah indeks buatan \\(g(a)\\) yang memberi +1 untuk titik stabil dan -1 untuk titik takstabil. Tangani secara terpisah nilai nonhiperbolik \\(a=0\\) dan \\(a=4/27\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d x}{d t} = a + x^2 (x-1) \\equiv f(x), a \\in \\mathbb{R}.",
+        "f(x)",
+        "x",
+        "a",
+        "g(a)"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Tulis \\(f(x)=x^3-x^2+a\\). Titik balik grafik terhadap \\(x\\) tidak bergantung pada \\(a\\): selesaikan \\(f_x=x(3x-2)=0\\), lalu lihat kapan nilai maksimum di \\(x=0\\) dan minimum di \\(x=2/3\\) menyentuh sumbu."
+      },
+      "check": {
+        "type": "exact_saddle_node_bifurcations",
+        "final_answer": "Bifurkasi terjadi pada \\(a=0\\) dan \\(a=4/27\\). Untuk \\(a<0\\) ada satu titik tetap takstabil; untuk \\(0<a<4/27\\) ada tiga titik tetap dengan urutan takstabil–stabil–takstabil dari kiri ke kanan; untuk \\(a>4/27\\) kembali ada satu titik takstabil. Karena itu \\(g(a)=-1\\) pada semua rentang hiperbolik. Pada \\(a=0\\), \\(x=0\\) adalah akar ganda semistabil; pada \\(a=4/27\\), \\(x=2/3\\) adalah akar ganda semistabil. Aturan +1/-1 dalam soal tidak mendefinisikan \\(g\\) tepat pada dua nilai tersebut kecuali konvensi tambahan diberikan.",
+        "quick_check": "Nilai ekstrem adalah \\(f(0)=a\\) dan \\(f(2/3)=a-4/27\\). Cabang stabil harus mempunyai \\(f_x<0\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Cari titik stasioner grafik kubik.",
+            "formula": "f_x=3x^2-2x=x(3x-2)=0\\quad\\Longrightarrow\\quad x=0,\\;2/3"
+          },
+          {
+            "explanation": "Grafik menyinggung sumbu saat nilai ekstremnya nol.",
+            "formula": "f(0)=a=0,\\qquad f(2/3)=a-4/27=0"
+          },
+          {
+            "explanation": "Pada rentang tengah, tiga akar melintasi cabang dengan turunan bertanda positif, negatif, positif.",
+            "formula": "0<a<4/27:\\qquad (-1)+(+1)+(-1)=-1"
+          },
+          {
+            "explanation": "Di luar rentang tengah hanya ada satu akar pada cabang dengan turunan positif.",
+            "formula": "a<0\\text{ atau }a>4/27:\\qquad g(a)=-1"
+          }
+        ],
+        "conclusion": "Jumlah indeks buatan tetap -1 selama semua titik tetap hiperbolik; pasangan stabil–takstabil lahir atau musnah bersama pada bifurkasi pelana-simpul."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P09",
+      "ordinal": 9,
+      "problem_summary": "Turunkan persamaan McKendrick–von Foerster \\(M_t+M_a=-d(a)M\\) dari keseimbangan kohort berumur kontinu, dengan asumsi kecepatan penuaan satu satuan umur per satuan waktu dan tanpa migrasi.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "M(a,t)",
+        "\\int_{a_1}^{a_2} M(a,t) d a.",
+        "\\displaystyle \\frac{\\partial M}{\\partial t} + \\frac{\\partial M}{\\partial a} = - d(a) M,",
+        "d(a)"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Ikuti satu kohort selama selang kecil \\(h\\): individu yang berumur \\(a\\) pada waktu \\(t\\) berumur \\(a+h\\) pada waktu \\(t+h\\). Samakan perubahan orde pertama distribusi dengan kehilangan mortalitas \\(d(a)h\\)."
+      },
+      "check": {
+        "type": "exact_conservation_derivation",
+        "final_answer": "Keseimbangan kohort lokal adalah \\(M(a+h,t+h)=M(a,t)[1-d(a)h]+O(h^2)\\). Ekspansi Taylor ruas kiri memberi \\(M+h(M_t+M_a)+O(h^2)\\). Setelah mengurangi \\(M\\), membagi dengan \\(h\\), dan mengambil \\(h\\to0\\), diperoleh \\(M_t+M_a=-d(a)M\\). Persamaan ini belum menentukan solusi unik tanpa distribusi awal dan syarat batas kelahiran pada \\(a=0\\).",
+        "quick_check": "Integrasi terhadap semua umur harus memberi perubahan jumlah total sama dengan kelahiran pada batas umur nol dikurangi integral kematian."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Dalam waktu \\(h\\), kohort bergeser sejauh \\(h\\) pada sumbu umur dan sebagian kecil meninggal.",
+            "formula": "M(a+h,t+h)=M(a,t)(1-d(a)h)+O(h^2)"
+          },
+          {
+            "explanation": "Ekspansi Taylor mengikuti arah karakteristik \\((da/dt)=1\\).",
+            "formula": "M(a+h,t+h)=M(a,t)+hM_t+hM_a+O(h^2)"
+          },
+          {
+            "explanation": "Samakan suku orde pertama.",
+            "formula": "M_t+M_a=-d(a)M"
+          },
+          {
+            "explanation": "Periksa keseimbangan total untuk \\(P(t)=\\int_0^\\infty M(a,t)\\,da\\).",
+            "formula": "P'(t)=M(0,t)-\\int_0^\\infty d(a)M(a,t)\\,da"
+          }
+        ],
+        "conclusion": "Suku transportasi menyatakan penuaan deterministik, sedangkan ruas kanan menyatakan kehilangan karena mortalitas. Kelahiran memasuki model melalui batas \\(M(0,t)\\), bukan melalui ruas kanan interior."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P10",
+      "ordinal": 10,
+      "problem_summary": "Selesaikan persamaan McKendrick–von Foerster dengan metode karakteristik dalam bentuk umum, memakai distribusi awal \\(M(a,0)=M_0(a)\\) dan batas kelahiran \\(M(0,t)=B(t)\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Karakteristik memenuhi \\(a-t=\\text{konstan}\\). Telusuri karakteristik dari \\((a,t)\\) ke belakang: bila \\(a\\ge t\\), ia mengenai garis awal \\(t=0\\); bila \\(a<t\\), ia mengenai batas kelahiran \\(a=0\\)."
+      },
+      "check": {
+        "type": "exact_characteristic_solution",
+        "final_answer": "Dengan \\(M_0(a)=M(a,0)\\) dan \\(B(t)=M(0,t)\\), solusi ialah \\(M(a,t)=M_0(a-t)\\exp[-\\int_{a-t}^{a}d(s)ds]\\) untuk \\(a\\ge t\\), dan \\(M(a,t)=B(t-a)\\exp[-\\int_0^{a}d(s)ds]\\) untuk \\(0\\le a<t\\). Diperlukan kompatibilitas \\(B(0)=M_0(0)\\). Tanpa \\(M_0\\) dan \\(B\\), perintah sumber tidak mempunyai satu solusi unik.",
+        "quick_check": "Untuk mortalitas konstan \\(d(a)=d_0\\), faktor kelangsungan hidup harus mereduksi menjadi \\(e^{-d_0t}\\) pada cabang awal dan \\(e^{-d_0a}\\) pada cabang batas."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Parametrisasikan karakteristik dengan \\(da/ds=1\\) dan \\(dt/ds=1\\).",
+            "formula": "a-t=\\xi"
+          },
+          {
+            "explanation": "Sepanjang karakteristik, PDE menjadi ODE peluruhan.",
+            "formula": "\\frac{dM}{ds}=-d(a(s))M"
+          },
+          {
+            "explanation": "Jika karakteristik mengenai garis awal pada umur \\(a-t\\), integralkan mortalitas selama waktu \\(t\\).",
+            "formula": "a\\ge t:\\quad M(a,t)=M_0(a-t)\\exp\\left[-\\int_{a-t}^{a}d(s)\\,ds\\right]"
+          },
+          {
+            "explanation": "Jika karakteristik lahir pada waktu \\(t-a\\), integralkan mortalitas dari umur nol hingga \\(a\\).",
+            "formula": "0\\le a<t:\\quad M(a,t)=B(t-a)\\exp\\left[-\\int_0^{a}d(s)\\,ds\\right]"
+          }
+        ],
+        "conclusion": "Dua cabang solusi dipisahkan oleh karakteristik \\(a=t\\); data awal mengatur kohort yang sudah hidup pada \\(t=0\\), sedangkan data batas mengatur kohort yang lahir sesudahnya."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P11",
+      "ordinal": 11,
+      "problem_summary": "Tentukan dimensi parameter \\(b,c_{ea},c_{el},c_{pa},d_a,d_l\\) dalam model LPA ketika \\(L,P,A\\) adalah jumlah individu dan waktu dihitung per langkah \\(\\Delta t\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "b",
+        "c_{ea}",
+        "c_{el}",
+        "c_{pa}",
+        "d_a",
+        "d_l"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Argumen fungsi eksponensial harus tak berdimensi. Faktor \\(1-d_a\\) dan \\(1-d_l\\) adalah peluang bertahan satu langkah. Bandingkan pula dimensi \\(L(t+1)\\) dengan \\(bA(t)\\)."
+      },
+      "check": {
+        "type": "exact_dimensional_analysis",
+        "final_answer": "Jika simbol \\(I\\) menyatakan satuan jumlah individu, maka \\([c_{ea}]=[c_{el}]=[c_{pa}]=I^{-1}\\). Parameter \\(d_a\\) dan \\(d_l\\) adalah peluang kematian per langkah dan tak berdimensi, dengan nilai fisik antara 0 dan 1. Parameter \\(b\\) adalah jumlah larva menetas per dewasa per langkah; secara dimensional rasio jumlah terhadap jumlah, jadi tak berdimensi setelah satu langkah dijadikan satuan waktu. Jika waktu fisik dipertahankan, pelabelannya adalah individu per dewasa per \\(\\Delta t\\).",
+        "quick_check": "Semua eksponen \\(-cA\\) atau \\(-cL\\) harus tak berdimensi, dan setiap ruas persamaan harus kembali berdimensi jumlah individu."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Eksponen tidak boleh membawa satuan.",
+            "formula": "[c_{ea}A]=[c_{el}L]=[c_{pa}A]=1"
+          },
+          {
+            "explanation": "Karena semua variabel keadaan adalah hitungan individu, koefisien kanibalisme berdimensi kebalikan hitungan.",
+            "formula": "[c_{ea}]=[c_{el}]=[c_{pa}]=I^{-1}"
+          },
+          {
+            "explanation": "Koefisien kematian muncul di dalam faktor kelangsungan hidup satu langkah.",
+            "formula": "[d_a]=[d_l]=1,\\qquad 0\\le d_a,d_l\\le1"
+          },
+          {
+            "explanation": "Koefisien fekunditas mengubah hitungan dewasa menjadi hitungan larva pada langkah berikutnya.",
+            "formula": "[b]=I/I=1\\quad\\text{per langkah waktu}"
+          }
+        ],
+        "conclusion": "Sebutan tak berdimensi tidak menghapus makna biologis per langkah; selalu catat panjang fisik \\(\\Delta t\\) yang diwakili satu iterasi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P12",
+      "ordinal": 12,
+      "problem_summary": "Modifikasi model LPA berkanibalisme agar fase pupa berlangsung dua langkah waktu, yakni dua kali fase larva-ke-pupa. Berikan satu model konsisten dan jelaskan arti setiap keadaan baru.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Jangan memperlambat semua transisi dengan satu koefisien saja. Pecah pupa menjadi dua kelas berurutan, \\(P_1\\) dan \\(P_2\\), sehingga individu harus melewati dua pembaruan sebelum masuk kelas dewasa."
+      },
+      "check": {
+        "type": "qualitative_model_design",
+        "final_answer": "Salah satu jawaban sah memakai keadaan \\((L,P_1,P_2,A)\\): \\(L_{t+1}=bA_te^{-c_{ea}A_t-c_{el}L_t}\\), \\(P_{1,t+1}=(1-d_l)L_t\\), \\(P_{2,t+1}=s_{p1}P_{1,t}e^{-c_{pa}A_t}\\), dan \\(A_{t+1}=(1-d_a)A_t+s_{p2}P_{2,t}e^{-c_{pa}A_t}\\). Dengan \\(s_{p1}=s_{p2}=1\\) bila kematian pupa diabaikan, pupa baru memerlukan dua perpindahan kelas sebelum menjadi dewasa. Model lain dapat diterima bila penundaan dua langkah, konservasi arus individu, dan lokasi kanibalisme dinyatakan jelas.",
+        "required_evidence": [
+          "Dua tahap pupa atau satu penundaan eksplisit mencegah pupa menjadi dewasa setelah hanya satu langkah.",
+          "Semua aliran masuk dan keluar kelas ditulis tanpa menggandakan individu.",
+          "Peluang bertahan dan suku kanibalisme mempunyai rentang serta makna biologis.",
+          "Dalam batas tanpa kanibalisme/kematian pupa, satu kohort dapat ditelusuri dari larva hingga dewasa dalam jumlah langkah yang benar."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "dimensions": [
+          {
+            "criterion": "Representasi penundaan",
+            "full_credit": "Memakai dua kelas pupa atau variabel tertunda yang secara pasti memberi masa pupa dua langkah.",
+            "partial_credit": "Hanya mengurangi laju transisi tetapi sebagian pupa masih langsung menjadi dewasa pada satu langkah."
+          },
+          {
+            "criterion": "Keseimbangan kohort",
+            "full_credit": "Setiap kelas mempunyai asal dan tujuan tunggal yang dapat ditelusuri; tidak ada kohort yang hilang atau dihitung dua kali tanpa proses kematian eksplisit.",
+            "partial_credit": "Persamaan menghasilkan individu baru dari lebih dari satu jalur tanpa penjelasan."
+          },
+          {
+            "criterion": "Kanibalisme dan mortalitas",
+            "full_credit": "Menempatkan faktor kanibalisme pada telur/pupa yang relevan dan mendefinisikan semua peluang bertahan.",
+            "partial_credit": "Menyalin faktor eksponensial tanpa menjelaskan kelas yang dilindungi atau dimangsa."
+          },
+          {
+            "criterion": "Pemeriksaan batas",
+            "full_credit": "Menelusuri satu kohort pada kasus sederhana dan menunjukkan bahwa waktu pupa tepat dua kali waktu larva-ke-pupa.",
+            "partial_credit": "Tidak memeriksa arti waktu model."
+          }
+        ],
+        "model_response_outline": [
+          "Definisikan pupa tahun/ langkah pertama dan kedua secara terpisah.",
+          "Masukkan larva baru hanya ke kelas pupa pertama.",
+          "Masukkan dewasa baru hanya dari kelas pupa kedua.",
+          "Nyatakan apakah kanibalisme dan kematian terjadi pada satu atau kedua tahap pupa."
+        ]
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P13",
+      "ordinal": 13,
+      "problem_summary": "Susun model diskret dua kelas—juvenil dan dewasa—dengan produksi telur oleh dewasa serta kanibalisme telur oleh dewasa yang dinyatakan melalui faktor kelangsungan hidup eksponensial.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Mulailah dari jumlah telur \\(bA_t\\). Jika peluang telur lolos dari tiap dewasa bersifat independen, gunakan \\(e^{-cA_t}\\). Persamaan dewasa harus memuat dewasa yang bertahan dan juvenil yang matang."
+      },
+      "check": {
+        "type": "qualitative_model_design",
+        "final_answer": "Contoh minimal yang konsisten adalah \\(J_{t+1}=bA_te^{-cA_t}\\) dan \\(A_{t+1}=s_JJ_t+s_AA_t\\), dengan \\(b,c>0\\), \\(0\\le s_J,s_A\\le1\\). Di sini \\(e^{-cA_t}\\) adalah fraksi telur yang lolos dari kanibalisme, \\(s_J\\) fraksi juvenil yang bertahan dan matang, serta \\(s_A\\) fraksi dewasa yang bertahan. Penambahan retensi juvenil dapat diterima bila kelas juvenil berlangsung lebih dari satu langkah dan arusnya didefinisikan.",
+        "required_evidence": [
+          "Faktor kanibalisme menurun ketika jumlah dewasa meningkat.",
+          "Dewasa yang menghasilkan telur tidak otomatis hilang dari kelas dewasa.",
+          "Transisi juvenil-ke-dewasa dan kelangsungan hidup dewasa diberi rentang probabilitas.",
+          "Semua parameter mempunyai interpretasi dan satuan per langkah."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "dimensions": [
+          {
+            "criterion": "Produksi dan kelangsungan hidup telur",
+            "full_credit": "Menghasilkan \\(bA_t\\) telur dan mengalikannya dengan fungsi kelangsungan hidup seperti \\(e^{-cA_t}\\) yang berada dalam \\((0,1]\\).",
+            "partial_credit": "Kanibalisme ditambahkan sebagai pengurangan linear yang dapat menghasilkan jumlah negatif tanpa batas parameter."
+          },
+          {
+            "criterion": "Dinamika kelas",
+            "full_credit": "Membedakan juvenil baru, pematangan juvenil, dan kelangsungan hidup dewasa tanpa penghitungan ganda.",
+            "partial_credit": "Tidak jelas kapan juvenil menjadi dewasa atau apakah dewasa bertahan."
+          },
+          {
+            "criterion": "Konsistensi biologis",
+            "full_credit": "Menjamin keadaan nonnegatif untuk keadaan awal nonnegatif dan parameter dalam rentang yang dinyatakan.",
+            "partial_credit": "Parameter tidak dibatasi sehingga populasi dapat menjadi negatif."
+          },
+          {
+            "criterion": "Kasus batas",
+            "full_credit": "Menunjukkan bahwa \\(c=0\\) menghapus kanibalisme dan \\(A_t=0\\) menghasilkan nol telur baru.",
+            "partial_credit": "Tidak menguji perilaku dasar model."
+          }
+        ],
+        "model_response_outline": [
+          "Gunakan dua variabel keadaan \\(J_t\\) dan \\(A_t\\).",
+          "Modelkan telur yang selamat sebagai \\(bA_te^{-cA_t}\\).",
+          "Gabungkan juvenil yang matang dengan dewasa yang bertahan pada pembaruan \\(A\\)."
+        ]
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P14",
+      "ordinal": 14,
+      "problem_summary": "Interpretasikan model \\(J'=bAe^{-cA}\\), \\(A'=(1-d_J)J+(1-d_A)A\\); tentukan syarat keberadaan titik tetap positif dan makna biologisnya, lalu klasifikasikan kestabilan titik nol dan titik positif. Sertakan parameter \\(c>0\\) yang terlewat dalam kalimat sumber dan syarat peluang \\(0\\le d_J,d_A\\le1\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\left\\{\\begin{array}{l} J(t + \\Delta t)=b A(t) \\exp\\left(- c A(t)\\right),\\\\ A(t + \\Delta t)=(1 - d_J) J(t) + (1 - d_A) A(t), \\end{array}\\right.",
+        "b",
+        "d_J",
+        "d_A"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Tulis \\(s_J=1-d_J\\), \\(s_A=1-d_A\\), dan \\(\\mathcal R_0=bs_J/d_A\\). Pada titik tetap positif, persamaan kedua memberi \\(J^*=d_AA^*/s_J\\). Untuk kestabilan diskret, gunakan kriteria Jury pada polinom karakteristik Jacobian."
+      },
+      "check": {
+        "type": "exact_fixed_points_and_discrete_stability",
+        "final_answer": "Model menggambarkan dewasa yang menghasilkan juvenil dengan kelangsungan hidup telur \\(e^{-cA}\\), juvenil yang bertahan/matang dengan peluang \\(1-d_J\\), dan dewasa yang bertahan dengan peluang \\(1-d_A\\). Untuk \\(b,c>0\\), \\(0<d_A\\le1\\), dan \\(0\\le d_J<1\\), tetapkan \\(\\mathcal R_0=b(1-d_J)/d_A\\). Titik nol stabil jika \\(\\mathcal R_0<1\\), nonhiperbolik pada \\(\\mathcal R_0=1\\), dan takstabil jika \\(\\mathcal R_0>1\\). Titik positif ada tepat ketika \\(\\mathcal R_0>1\\), dengan \\(A^*=c^{-1}\\ln\\mathcal R_0\\) dan \\(J^*=d_AA^*/(1-d_J)\\). Titik positif stabil jika \\(0<\\ln\\mathcal R_0<1+1/d_A\\). Pada kesamaan, determinan Jacobian bernilai 1 dan sepasang nilai eigen kompleks mencapai lingkaran satuan; untuk nilai lebih besar titik itu takstabil. Penyebutan bifurkasi Neimark–Sacker memerlukan syarat nondegenerasi tambahan.",
+        "quick_check": "Substitusi titik positif harus memberi \\(b(1-d_J)e^{-cA^*}=d_A\\). Syarat kestabilan tidak boleh diterapkan sebagai uji ODE; ini pemetaan diskret dan memerlukan semua nilai eigen di dalam lingkaran satuan."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Gunakan peluang bertahan satu langkah untuk menyingkat notasi.",
+            "formula": "s_J=1-d_J,\\qquad s_A=1-d_A,\\qquad \\mathcal R_0=\\frac{bs_J}{d_A}"
+          },
+          {
+            "explanation": "Pada titik tetap positif, persamaan dewasa menghubungkan kedua kelas.",
+            "formula": "d_AA^*=s_JJ^*\\quad\\Longrightarrow\\quad J^*=\\frac{d_A}{s_J}A^*"
+          },
+          {
+            "explanation": "Masukkan relasi itu ke persamaan juvenil dan batalkan \\(A^*>0\\).",
+            "formula": "bs_Je^{-cA^*}=d_A\\quad\\Longrightarrow\\quad A^*=\\frac1c\\ln\\mathcal R_0"
+          },
+          {
+            "explanation": "Jacobian di titik nol mempunyai polinom karakteristik yang lulus kriteria Jury tepat di bawah ambang reproduksi.",
+            "formula": "p_0(\\lambda)=\\lambda^2-s_A\\lambda-bs_J,\\qquad \\rho(D F(0,0))<1\\iff bs_J<d_A"
+          },
+          {
+            "explanation": "Di titik positif, turunan produksi juvenil adalah \\((d_A/s_J)(1-cA^*)\\).",
+            "formula": "p_*(\\lambda)=\\lambda^2-s_A\\lambda-d_A(1-\\ln\\mathcal R_0)"
+          },
+          {
+            "explanation": "Tiga ketaksamaan Jury menyisakan satu batas nontrivial.",
+            "formula": "\\rho(D F(J^*,A^*))<1\\iff 0<\\ln\\mathcal R_0<1+\\frac1{d_A}"
+          }
+        ],
+        "conclusion": "\\(\\mathcal R_0=1\\) adalah ambang penggantian populasi. Kanibalisme tidak menentukan apakah cabang positif pertama kali ada, tetapi menentukan besar kesetimbangannya dan, bersama mortalitas dewasa, ambang pasangan nilai eigen kompleks mencapai lingkaran satuan pada reproduksi tinggi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P15",
+      "ordinal": 15,
+      "problem_summary": "Baca artikel May tentang dinamika pemetaan logistik dan jelaskan atau buktikan empat belas pernyataan sumber mengenai penskalaan, kestabilan lokal, iterasi, siklus periode dua dan tiga, bifurkasi, pengali siklus, serta ketakberpotongan lintasan ODE dua dimensi.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH05-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "X = b N/a",
+        "X_{t+1} = a X_t (1-X_t)",
+        "- \\infty",
+        "X^*",
+        "\\lambda^{(2)}(X^*) = [\\lambda^{(1)}(X^*)]^2",
+        "F^{(2)}(X)",
+        "k",
+        "a = 3.8284 ...",
+        "\\lambda^{(3)}",
+        "3 \\times 2^n",
+        "F^{(k)}",
+        "X^*_k"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Kelompokkan pernyataan menjadi empat alat: substitusi aljabar; kriteria \\(|F'|<1\\); aturan rantai untuk \\((F^k)'\\); dan keunikan solusi ODE. Untuk pernyataan periode tiga, jangan menganggap dua pemakaian kata “siklus ini” menunjuk cabang yang sama—identifikasi orbit stabil dan takstabil yang lahir berpasangan."
+      },
+      "check": {
+        "type": "qualitative_article_analysis",
+        "final_answer": "Tidak ada satu paragraf jawaban tunggal. Jawaban tuntas harus membahas keempat belas butir dengan turunan atau gambar yang sesuai. Fakta pemeriksa utama ialah: penskalaan menghasilkan pemetaan logistik; kestabilan lokal setara dengan \\(|F'(X^*)|<1\\); turunan iterasi adalah hasil kali turunan sepanjang orbit; ambang kelahiran siklus periode tiga adalah \\(a=1+\\sqrt8\\approx3{,}828427\\); dan lintasan ODE otonom dengan medan yang menjamin keunikan tidak dapat berpotongan pada bidang fase. Butir 9–10 harus dibaca dengan membedakan dua cabang siklus periode tiga, bukan sebagai klaim bahwa satu orbit sekaligus tidak pernah stabil dan mula-mula stabil.",
+        "required_evidence": [
+          "Substitusi \\(X=bN/a\\) ditunjukkan langkah demi langkah dari persamaan asal artikel.",
+          "Sudut kemiringan antara -45° dan 45° diterjemahkan menjadi \\(|F'|<1\\), dengan kasus batas disebut nonhiperbolik.",
+          "Butir tentang \\(F^2\\) dan \\(F^k\\) dibuktikan memakai aturan rantai, bukan hanya dikutip.",
+          "Gambar bifurkasi membedakan pelana-simpul/tangen dari flip/penggandaan periode; istilah garpu rumput dijelaskan bila dipakai secara visual.",
+          "Pembahasan periode tiga mengidentifikasi cabang stabil dan takstabil serta konteks anteseden kata “ini”.",
+          "Pernyataan lintasan tidak berpotongan diberi syarat ODE otonom dan keunikan solusi; proyeksi waktu atau sistem nonunik tidak dicampur."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "dimensions": [
+          {
+            "criterion": "Penskalaan dan domain",
+            "full_credit": "Menurunkan bentuk kanonis, melacak domain parameter/keadaan, dan menguji klaim divergensi setelah \\(X>1\\) pada domain parameter yang dimaksud artikel.",
+            "partial_credit": "Menyalin substitusi tanpa memasukkannya ke persamaan atau mengabaikan domain."
+          },
+          {
+            "criterion": "Kestabilan dan iterasi",
+            "full_credit": "Menghubungkan kemiringan dengan pengali, membuktikan \\((F^2)'(X^*)=[F'(X^*)]^2\\), serta memberi rumus produk pengali untuk siklus periode \\(k\\).",
+            "partial_credit": "Menyatakan syarat modulus tanpa aturan rantai."
+          },
+          {
+            "criterion": "Bifurkasi periode dua",
+            "full_credit": "Menjelaskan bagaimana titik tetap baru \\(F^2\\) yang bukan titik tetap \\(F\\) membentuk satu siklus periode dua dan bagaimana pengalinya menentukan kestabilan.",
+            "partial_credit": "Menganggap setiap titik tetap \\(F^2\\) otomatis berperiode tepat dua."
+          },
+          {
+            "criterion": "Jendela periode tiga",
+            "full_credit": "Menjelaskan ambang \\(1+\\sqrt8\\), pasangan orbit yang lahir melalui bifurkasi tangen, cabang yang mula-mula stabil, dan rangkaian penggandaan periode berikutnya; ambiguitas butir 9–10 diselesaikan melalui konteks artikel.",
+            "partial_credit": "Mengulang kedua kutipan yang tampak bertentangan tanpa membedakan orbit."
+          },
+          {
+            "criterion": "Gambar bifurkasi",
+            "full_credit": "Menggambar bifurkasi tangen dan flip/garpu-rumput dengan cabang stabil/takstabil, sumbu parameter, dan arah perubahan parameter.",
+            "partial_credit": "Gambar tanpa label kestabilan atau tanpa parameter."
+          },
+          {
+            "criterion": "Sistem kontinu dua dimensi",
+            "full_credit": "Menggunakan teorema keunikan: dua lintasan yang bertemu pada keadaan dan waktu yang sama harus merupakan solusi yang sama; menyatakan syarat regularitas dan keotonomian yang relevan.",
+            "partial_credit": "Hanya menyatakan lintasan tidak berpotongan tanpa alasan atau syarat."
+          },
+          {
+            "criterion": "Ketepatan terhadap artikel",
+            "full_credit": "Membedakan kutipan May, pembuktian sendiri, dan koreksi/penjelasan kontekstual; menyertakan nomor halaman/butir secara dapat dilacak.",
+            "partial_credit": "Mengatribusikan tafsiran sendiri kepada penulis tanpa bukti."
+          }
+        ],
+        "model_response_outline": [
+          "Butir 1–3: lakukan penskalaan dan terjemahkan kemiringan geometris menjadi pengali.",
+          "Butir 4–7 dan 12: gunakan komposisi serta aturan rantai untuk titik tetap dan siklus.",
+          "Butir 8–10 dan 13: jelaskan kelahiran berpasangan orbit periode tiga dan kehilangan kestabilannya.",
+          "Butir 11: bedakan bifurkasi tangen dari flip/penggandaan periode.",
+          "Butir 14: gunakan keunikan solusi ODE, dengan syarat yang disebutkan."
+        ]
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P16",
+      "ordinal": 16,
+      "problem_summary": "Analisis perubahan populasi Amerika Serikat 1900–1999, uji model \\(N(t+1)=(1+R)N(t)\\), jelaskan persamaan keseimbangan demografis, dan hitung populasi 2004 dari angka kelahiran, kematian, serta imigrasi neto yang tercetak. Ganti perintah MATLAB/EXCEL dengan analisis Python terbuka dan jangan mengklaim hasil data yang belum dibekukan secara lokal.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH05-LINK02",
+        "O005-LEGA-V101-CH05-LINK03"
+      ],
+      "source_formula_occurrences": [
+        "N(t+1) = (1+R) N(t)",
+        "N(t)",
+        "t",
+        "R"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Untuk bagian data, simpan berkas resmi sebagai masukan lokal beserta URL, tanggal pengambilan, byte, dan SHA-256; jangan mengunduh ketika notebook dijalankan. Estimasikan \\(R\\) dari \\(\\log N\\) dan periksa residu serta kestabilan parameter pada beberapa rentang. Bagian 2004 dapat dihitung sepenuhnya dari angka yang tercetak dengan identitas \\(P_{t+1}=P_t+B-D+I\\)."
+      },
+      "check": {
+        "type": "offline_data_analysis_with_exact_balance",
+        "final_answer": "Tanpa salinan lokal berhash dari `popclockest.txt`, tidak ada nilai \\(R\\) atau kesimpulan grafik yang boleh diklaim sebagai hasil data resmi; gunakan paket sintetis hanya untuk mendemonstrasikan metode dan tandai demikian. Untuk berkas resmi, jawaban harus memplot \\(N_t\\), mengestimasi \\(R\\) melalui \\(\\log N_t=\\alpha+t\\log(1+R)\\), memeriksa residu/holdout, dan menjelaskan mengapa satu \\(R\\) mungkin tidak tetap sepanjang satu abad. Persamaan keseimbangan nasional ialah \\(P_{t+1}=P_t+B_t-D_t+I_t\\). Dari angka tercetak: 2002 = 287.941.220; 2003 = 290.788.976; dan populasi 2004 = 293.655.404.",
+        "quick_check": "Kenaikan tahunan berturut-turut harus 2.839.145, 2.847.756, dan 2.866.428; jumlah akhir harus 293.655.404. Hasil berbasis data eksternal harus menyebut identitas berkas, bukan sekadar ‘dari Census’."
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "dimensions": [
+          {
+            "criterion": "Provenans data",
+            "full_credit": "Menggunakan salinan lokal berhash dari berkas resmi dan mencatat URL/vintage; atau memakai data sintetis yang dinyatakan terang-terangan tanpa klaim empiris.",
+            "partial_credit": "Menyebut situs Census tetapi tidak dapat menunjukkan berkas atau memakai pengunduhan langsung yang tidak dapat direproduksi."
+          },
+          {
+            "criterion": "Eksplorasi grafik",
+            "full_credit": "Memplot jumlah dan/atau log jumlah terhadap waktu, menandai perubahan rezim, dan tidak menyimpulkan pertumbuhan eksponensial hanya dari bentuk kurva naik.",
+            "partial_credit": "Menyajikan satu grafik tanpa skala, label, atau pembahasan."
+          },
+          {
+            "criterion": "Uji model laju tetap",
+            "full_credit": "Mengestimasi \\(R\\), memeriksa residu dan holdout atau membandingkan beberapa rentang waktu, lalu membatasi klaim pada rentang yang didukung.",
+            "partial_credit": "Melaporkan satu \\(R\\) tanpa diagnostik."
+          },
+          {
+            "criterion": "Metodologi demografis",
+            "full_credit": "Menjelaskan populasi awal ditambah kelahiran, dikurangi kematian, ditambah migrasi neto; membedakan estimasi pascasensus dari penghitungan sensus langsung.",
+            "partial_credit": "Menyebut komponen tanpa tanda atau hubungan matematis."
+          },
+          {
+            "criterion": "Hitungan 2004",
+            "full_credit": "Menunjukkan tiga pembaruan tahunan dan memperoleh 293.655.404.",
+            "partial_credit": "Angka akhir benar tanpa jejak hitung, atau satu komponen migrasi diberi tanda salah."
+          },
+          {
+            "criterion": "Perangkat terbuka",
+            "full_credit": "Analisis berjalan secara offline dengan Python terbuka dari masukan lokal; tidak memerlukan MATLAB atau Excel.",
+            "partial_credit": "Prosedur masih bergantung pada perangkat proprieter atau koneksi langsung."
+          }
+        ],
+        "model_response_outline": [
+          "Bekukan dan identifikasi data sebelum analisis; bila tidak tersedia, gunakan paket sintetis hanya sebagai latihan metode.",
+          "Estimasi laju pada skala log dan uji apakah residu mendukung satu laju tetap.",
+          "Jelaskan persamaan keseimbangan demografis secara terpisah dari pemodelan eksponensial.",
+          "Hitung 2004 dengan menambahkan kelahiran dan migrasi neto serta mengurangi kematian untuk tiap tahun."
+        ]
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH05-P17",
+      "ordinal": 17,
+      "problem_summary": "Gunakan distribusi umur Amerika Serikat 2010–2019 serta laju kelahiran/kematian yang sesuai vintagenya untuk merancang model kelompok umur, validasi terhadap 2019, proyeksikan skenario hingga 2050, dan bahas keterbatasan. Semua data harus berupa paket lokal berhash; bila hanya data sintetis tersedia, jangan menyatakan kesimpulan empiris tentang Amerika Serikat.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH05-LINK04",
+        "O005-LEGA-V101-CH05-LINK05",
+        "O005-LEGA-V101-CH05-LINK06"
+      ],
+      "source_formula_occurrences": [],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Mulailah dari vektor 18 kelompok umur dan tampilkan jumlah serta proporsinya. Gabungkan kelompok hanya setelah menetapkan alasan biologis atau kebijakan. Bentuk matriks proyeksi dengan fekunditas pada baris pertama, kelangsungan hidup/transisi pada subdiagonal, dan kelas umur terakhir yang terbuka; tahan data 2019 untuk validasi, bukan untuk penyetelan."
+      },
+      "check": {
+        "type": "offline_age_structured_model_rubric",
+        "final_answer": "Tidak ada satu jawaban numerik yang sah tanpa tabel Census dan tabel laju yang dibekukan beserta vintage, satuan, serta hash. Jawaban lengkap harus: memplot jumlah dan proporsi umur untuk tahun yang tersedia; mendefinisikan agregasi kelompok dan matriks proyeksi \\(\\mathbf n_{t+1}=A\\mathbf n_t\\); mengestimasi transisi/fekunditas tanpa kebocoran data 2019; membandingkan prediksi 2019 dengan observasi memakai residu atau galat relatif per kelompok; menghasilkan proyeksi 2050 sebagai skenario dengan analisis sensitivitas; dan membahas asumsi laju tetap, migrasi, agregasi, kelas umur terbuka, kejutan demografis, serta ketidakpastian data. Dengan paket sintetis, hanya perilaku metode yang boleh dilaporkan.",
+        "required_evidence": [
+          "Manifest masukan mencatat sumber, vintage, satuan, byte, dan SHA-256 atau menyatakan data sintetis secara eksplisit.",
+          "Plot membedakan jumlah absolut dari proporsi dan menyatakan secara tepat tahun yang dimaksud oleh ‘empat tahun terakhir’.",
+          "Aturan agregasi 18 kelompok dapat direproduksi dan tidak dipilih setelah melihat hasil 2050.",
+          "Matriks menjamin keadaan nonnegatif serta menangani kelas umur tertua yang terbuka.",
+          "Validasi 2019 memakai data yang tidak digunakan untuk kalibrasi dan melaporkan galat per kelompok.",
+          "Proyeksi 2050 disajikan sebagai beberapa skenario atau selang sensitivitas, bukan ramalan pasti.",
+          "Keterbatasan mencakup sedikitnya laju yang berubah, migrasi, agregasi, dan kejutan struktural."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "dimensions": [
+          {
+            "criterion": "Data dan keterlacakan",
+            "full_credit": "Membekukan tabel Census/CDC yang tepat dengan metadata dan hash, menyelaraskan definisi umur/tahun, serta memisahkan data kalibrasi dari validasi.",
+            "partial_credit": "Menggabungkan tabel dari vintage atau satuan berbeda tanpa dokumentasi."
+          },
+          {
+            "criterion": "Analisis distribusi umur",
+            "full_credit": "Menyajikan jumlah dan proporsi, membandingkan tahun secara konsisten, serta menjelaskan perubahan dengan ukuran yang dapat diperiksa.",
+            "partial_credit": "Hanya menampilkan grafik tanpa normalisasi atau ukuran perubahan."
+          },
+          {
+            "criterion": "Agregasi kelompok",
+            "full_credit": "Mendefinisikan pemetaan 18 kelompok ke kelompok model dengan alasan yang berkaitan dengan fekunditas, transisi umur, atau tujuan analisis.",
+            "partial_credit": "Memilih kelompok arbitrer tanpa aturan reproduktif."
+          },
+          {
+            "criterion": "Struktur model",
+            "full_credit": "Membangun matriks nonnegatif dengan fekunditas, kelangsungan hidup, perpindahan kelompok, kelas terminal, dan—bila dimasukkan—migrasi sebagai komponen terpisah.",
+            "partial_credit": "Matriks tidak sesuai dimensi atau kehilangan populasi tanpa mekanisme."
+          },
+          {
+            "criterion": "Validasi 2019",
+            "full_credit": "Membandingkan prediksi yang benar-benar di luar sampel dengan data 2019 dan melaporkan pola residu serta ukuran galat per kelompok.",
+            "partial_credit": "Menyetel model ke 2019 lalu menyebut kecocokan itu validasi."
+          },
+          {
+            "criterion": "Skenario 2050",
+            "full_credit": "Menjalankan beberapa asumsi laju/migrasi, melaporkan sensitivitas dan perubahan struktur umur, serta menghindari presisi palsu.",
+            "partial_credit": "Memberi satu angka 2050 tanpa skenario atau ketidakpastian."
+          },
+          {
+            "criterion": "Kritik model",
+            "full_credit": "Membahas laju periodik versus kohort, perubahan fertilitas/mortalitas, migrasi, agregasi, kejadian luar biasa, dan keterbatasan ekstrapolasi tiga dekade.",
+            "partial_credit": "Hanya menyatakan bahwa model sederhana."
+          },
+          {
+            "criterion": "Pelaksanaan terbuka dan offline",
+            "full_credit": "Notebook Python berjalan tanpa jaringan dari paket lokal atau sintetis yang ditandai dan menghasilkan ulang seluruh tabel/grafik.",
+            "partial_credit": "Hasil bergantung pada klik manual, perangkat proprieter, atau URL langsung."
+          }
+        ],
+        "model_response_outline": [
+          "Audit dan bekukan data sebelum memilih kelompok umur.",
+          "Gunakan 2010–2018 untuk penyusunan/kalibrasi dan tahan 2019 sebagai uji.",
+          "Bangun model proyeksi nonnegatif serta dokumentasikan semua laju dan satuan.",
+          "Bandingkan prediksi 2019 dengan observasi sebelum memperpanjang ke 2050.",
+          "Laporkan 2050 sebagai skenario sensitif terhadap fertilitas, mortalitas, dan migrasi."
+        ]
+      }
+    }
+  ]
+}

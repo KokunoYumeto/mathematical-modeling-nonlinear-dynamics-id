@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "unit_id": "O005-LEGA-V101-CH05",
+  "figure": "5.2",
+  "source": {
+    "authority_path": "authority/units/O005-LEGA-V101-CH05/assets/redhawk-rate-source.png",
+    "retained_copy_path": "source/id-ID/O005-LEGA-V101-CH05/assets/redhawk-rate-source.png",
+    "media_type": "image/png",
+    "width": 300,
+    "height": 213,
+    "bytes": 17230,
+    "sha256": "5a181a42c3cf709bc906ac372d2d173c6afd57ed34e426a92e22a718a87cc97e"
+  },
+  "target": {
+    "path": "source/id-ID/O005-LEGA-V101-CH05/assets/redhawk-rate-id.svg",
+    "media_type": "image/svg+xml",
+    "width": 300,
+    "height": 213,
+    "viewBox": "0 0 300 213",
+    "bytes": 24046,
+    "sha256": "d83fdfe09bd918f46dc347aa8755b287d6131ea10015862b69e3f3f26e05af85"
+  },
+  "adaptation": {
+    "type": "self-contained localized-label-only raster wrapper",
+    "language": "id-ID",
+    "embedded_raster_is_byte_identical": true,
+    "data_or_plot_geometry_changed": false,
+    "localized_labels": {
+      "Normalized rate of change": "Laju perubahan ternormalisasi",
+      "Years": "Tahun"
+    }
+  }
+}

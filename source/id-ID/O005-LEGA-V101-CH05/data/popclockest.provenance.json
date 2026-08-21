@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_id": "O005-LEGA-V101-CH05-DATA01",
+  "unit_id": "O005-LEGA-V101-CH05",
+  "filename": "popclockest.txt",
+  "title": "Historical National Population Estimates: July 1, 1900 to July 1, 1999",
+  "publisher": "Population Estimates Program, Population Division, U.S. Census Bureau",
+  "source_url": "https://www2.census.gov/programs-surveys/popest/tables/1900-1980/national/totals/popclockest.txt",
+  "source_relation": "The source URL is the official URL cited by Problem 16 of Pressbooks record 48.",
+  "retrieved_at_utc": "2026-08-21T20:58:31Z",
+  "http_status": 200,
+  "response_content_type": "text/plain",
+  "response_last_modified": "Wed, 24 Aug 2016 20:52:17 GMT",
+  "bytes": 8148,
+  "sha256": "f59dbd91b2bf975df7b7fb4af6de52dc3c68a705632e83d60410d98781206f09",
+  "line_endings": "LF",
+  "terminal_lf": true,
+  "parser_contract": {
+    "row_pattern": "^\\s*July 1,\\s+(\\d{4})\\s+([\\d,]+)",
+    "expected_year_min": 1900,
+    "expected_year_max": 1999,
+    "expected_rows": 100
+  },
+  "source_notes": [
+    "The source states that 1900–1949 exclude Alaska and Hawaii.",
+    "The source states that 1940–1979 cover the resident population plus Armed Forces overseas; other years cover only the resident population.",
+    "The source states that 1900–1929 values are rounded to the nearest thousand."
+  ],
+  "rights_note": "Official U.S. Census Bureau statistical data, redistributed verbatim for offline reproducibility with source attribution; no endorsement is implied. This project makes no broader rights claim for the source website.",
+  "change_note": "No content changes; exact downloaded bytes are retained."
+}

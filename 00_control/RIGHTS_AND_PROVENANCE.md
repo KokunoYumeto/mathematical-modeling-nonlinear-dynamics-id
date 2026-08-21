@@ -72,3 +72,42 @@ energy and dissipation checks, and open plotting without claiming to port the
 absent programs. Figure 3.2 is retained unchanged; because its embedded axis
 label uses `dθ/dt` while the scaled prose uses `dθ/dτ`, the Indonesian text
 states that source-figure notation explicitly.
+
+## Chapter 4 and Part 3 component record
+
+Chapter 4 retains Figure 4.2 byte-for-byte and supplies an independently drawn
+accessible SVG for Figure 4.1. The redraw implements only the geometry,
+notation, and physical relationships stated in the admitted chapter; it does
+not copy unavailable drawing source. The open NumPy/Matplotlib notebook is an
+independent implementation of the printed equations and explicitly makes no
+experimental-validation claim. Its derivation corrections and assumptions are
+enumerated in `SOURCE_CORRECTIONS.csv`. Both the translated chapter and its
+adapted reader components are distributed within the book's CC BY-NC-SA 4.0
+ShareAlike boundary.
+
+The visible Part 3 introduction is a four-paragraph translation of frozen
+Pressbooks part record 40 under the same CC BY-NC-SA 4.0 boundary. It has no
+asset, formula, exercise, mastery, notebook, audio, or live-widget surface.
+
+## Chapter 5 component record
+
+Chapter 5 retains all seven frozen Pressbooks raster figures byte-for-byte.
+Figures 5.1, 5.2, and 5.7 additionally have self-contained SVG adaptations in
+which only the English graph labels were replaced by Indonesian labels; each
+SVG embeds the exact frozen raster and has a provenance receipt binding source
+and target hashes. The adaptations and translated long descriptions remain
+within the reader's CC BY-NC-SA 4.0 boundary.
+
+Problem 16's `popclockest.txt` is an exact 8,148-byte response from the official
+U.S. Census Bureau URL cited by the source chapter, SHA-256
+`f59dbd91b2bf975df7b7fb4af6de52dc3c68a705632e83d60410d98781206f09`.
+It is redistributed solely as a separately attributed, hashed offline data
+packet for reproducibility. The adjacent provenance JSON records the publisher,
+URL, retrieval response, parser contract, scope caveats, and change status. No
+broader rights claim is made for the Census website or any third-party material.
+
+No MATLAB or Excel code was imported. The Chapter 5 NumPy/SciPy/Matplotlib
+notebook is a new independent implementation of the mathematical models and
+uses the local Census packet without network access at runtime. The original
+hints, checks, and worked solutions/rubrics are labeled by provenance and are
+distributed compatibly with the reader's ShareAlike boundary.

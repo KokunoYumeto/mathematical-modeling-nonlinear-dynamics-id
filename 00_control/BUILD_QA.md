@@ -229,3 +229,79 @@ Required gates for each translated chapter unit:
   paragraphs rendered, and no console error occurred. External source-link
   reachability was not tested. No audio, live widget, formula, mastery,
   notebook, or figure exists in this unit.
+
+## Admitted build — O005-LEGA-V101-CH05 — 2026-08-21
+
+- Builder: `scripts/build_unit_reader.py --unit O005-LEGA-V101-CH05`, Pandoc
+  3.9.0.2, native MathML for chapter and mastery mathematics.
+- QA: `scripts/qa_unit.py --unit O005-LEGA-V101-CH05 --execute-notebook
+  --deterministic-build`, exit 0.
+- Structural replay: 326 / 326 source-target lines, 364 / 364 ordered
+  elements, 50 / 50 links, 389 source TeX occurrences mapped to 403 declared
+  target occurrences, seven / seven figures, and 17 / 17 source problems with
+  stable IDs. The declared corrections are O005-CORR-0025–0045.
+- Backend: 473 paired segments / 292,942 bytes, SHA-256
+  `32732105bb934be792de3749e7ede0cf2cdd617126fab6efeddd9468d096dd9f`;
+  17 complete mastery records / 59,424 bytes, SHA-256
+  `d85cda9304f74e5f5d3ff874b37044e18068a9446bf6a3cd4682831bc8c45cc6`.
+- Notebook: 16 cells / seven code cells / 40 assertions, unique deterministic
+  cell IDs, clean stored outputs, NumPy 2.4.4, SciPy 1.17.1, and Matplotlib
+  3.10.9. Period-1/2/4/8 attractors, Lyapunov exponents, exact ODE checks,
+  stage-projection spectral radius, LPA nonnegativity, and Census fits passed.
+  The exact local 100-row Census packet and its provenance were hash-verified;
+  execution performs no network fetch.
+- Reader: 16 payload files / 968,497 bytes excluding the 1,670-byte manifest;
+  403 chapter and 310 mastery MathML nodes; 12 local dependencies; seven
+  loaded figures; seven localized notes; zero missing dependency, duplicate
+  ID, broken internal fragment, raw mastery TeX, token shape, local path, or
+  U+FFFD.
+- Figures 5.1, 5.2, and 5.7 use separately provenanced self-contained SVG
+  label adaptations. All seven reader figures render at their intrinsic width
+  rather than being enlarged. Reader manifest SHA-256
+  `de862361118699c3c398145bf2424d43a6f39610ad3c409c484aad19c506c30d`.
+- Deterministic double build: 17 files including manifest, byte-identical;
+  canonical tree SHA-256
+  `16ec1089ec9abccc946cf5970a7d9a51e45855cce4036cea2f05b15329f1fc5e`.
+- Browser visual QA against the final bytes: at 1280×720 the main shell was
+  1,152 px and the chapter 768 px, both centered; at 390×844 the shell and
+  chapter were 357.5 px and centered. Document scroll width equaled client
+  width at both sizes. The six-link navigation wrapped to three mobile rows
+  without horizontal scrolling, all seven images loaded at native dimensions,
+  all 67 IDs were unique, and every local fragment resolved. A fresh local
+  load contained no script and reported no browser warning or error. Wide
+  MathML surfaces remain locally horizontally scrollable by design.
+- External-link reachability was not tested. No audio or live widget exists in
+  this unit; none was exercised.
+
+## Reader-style reflow migration — all completed units — 2026-08-21
+
+The final Chapter 5 browser pass established two additive shared-reader
+repairs: do not enlarge source figures beyond their intrinsic width, and wrap
+the navigation links on narrow screens instead of requiring a page-level
+horizontal strip. The six earlier completed readers were rebuilt from the
+same final `source/reader/reader.css` (4,706 bytes, SHA-256
+`281dd35fe70a01f037ee5f30fb87dfd2a5167d912dba1dbf5832bc198fe17e1a`).
+The builder also now writes unit-record JSON with explicit LF line endings;
+all seven unit records were normalized so clean builds are not host-newline
+dependent. No source translation, segment, mastery, notebook, or asset bytes
+changed.
+
+| Unit | Payload bytes | Package-manifest SHA-256 | Deterministic tree SHA-256 |
+|---|---:|---|---|
+| O005-LEGA-V101-CH01 | 217,520 | `8c94a298617a14de7af3bda5e7b07831c6cc1cd2b050529fa339eb818cd72942` | `3dcbcf930f3b21eaa55f1277bccbd00ae60b6b910af3509260b3438cdc5b4dd1` |
+| O005-LEGA-V101-CH02 | 358,791 | `5189b7f1280718e3773f0abe8d895f5cc10c574c08986c9a5500ccbd936fde50` | `5cb3fd2ed90f1841e8dd8da0e93613b6d1ba8fb442c79cc49a8ff4c508dfa9b4` |
+| O005-LEGA-V101-PT02 | 11,218 | `e9a1ddbe2b77d428782ade23a239b9216ea3f8383290f4ddcf1fb505b5301c2b` | `32b5dcf0c5dd9a8b73b3518c6e2bb7383942130b5787228b650e16cfe02b75d9` |
+| O005-LEGA-V101-CH03 | 2,025,462 | `c062741f4df7d28ed1b57ac16390e3f2754dec627ed39f760b82a47a7ca29d87` | `f485e128318733f43fe967c165d30d3045219a161a776976c729663a57c152b2` |
+| O005-LEGA-V101-CH04 | 447,218 | `830384e8d193c40911d3bc520e7d2bf18fc60b8608f7893349832a0dd6e0f363` | `12309752f9ba8f8c79918bc528cd884e1a99e28bf181a3b5a5bd37de2ef6cd52` |
+| O005-LEGA-V101-PT03 | 17,018 | `4c3b585cdcb549809f7caac6648fc515b2f234778504fdecee9e1f820eb04995` | `660a59f9b8c219334ba2dcbd8823e5264ff84cc286af18ad09f8d6cb4c4035e0` |
+
+Each unit's structure/backend/locality QA and deterministic two-build replay
+passed after migration. A single bounded browser sweep then loaded all seven
+completed units at 1280×720 and 390×844. Every desktop main shell was 1,152 px
+and every article 768 px; every mobile shell/article was 357.5 px. All were
+centered within 0.1 px, document overflow was zero, mobile navigation wrapped
+without overflow, all 20 reader images loaded, no image was enlarged beyond
+its intrinsic width, and the fresh sweep reported no script, warning, or
+error. Notebook execution was not repeated because notebook bytes and
+computation code were unchanged; Chapter 5's notebook was executed in the
+immediately preceding full QA run.
