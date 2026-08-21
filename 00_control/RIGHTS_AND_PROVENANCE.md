@@ -46,3 +46,8 @@ copied. The Chapter 2 NumPy/Matplotlib notebook is a new, independently written
 implementation of the mathematical behavior described in the chapter. It
 records every convention needed where the prose is underdetermined and remains
 distributed compatibly with the reader's ShareAlike boundary.
+
+The visible Part 2 introduction is a three-paragraph translation of frozen
+Pressbooks part record 28 under the same CC BY-NC-SA 4.0 boundary. It has no
+asset, formula, exercise, mastery, or computational component; none was
+fabricated for the edition.

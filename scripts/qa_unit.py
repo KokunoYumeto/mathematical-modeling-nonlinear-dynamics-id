@@ -20,6 +20,7 @@ from bs4 import BeautifulSoup, Tag
 ROOT = Path(__file__).resolve().parents[1]
 QA_SPECS = {
     "O005-LEGA-V101-CH01": {
+        "unit_type": "chapter",
         "elements": 120,
         "links": 14,
         "math": 14,
@@ -32,6 +33,7 @@ QA_SPECS = {
         "lock": "numpy==2.4.4\nscipy==1.17.1\nmatplotlib==3.10.9\n",
     },
     "O005-LEGA-V101-CH02": {
+        "unit_type": "chapter",
         "elements": 103,
         "links": 10,
         "math": 92,
@@ -42,6 +44,20 @@ QA_SPECS = {
         "code_cells": 7,
         "mastery_math": 155,
         "lock": "numpy==2.4.4\nmatplotlib==3.10.9\n",
+    },
+    "O005-LEGA-V101-PT02": {
+        "unit_type": "part",
+        "elements": 0,
+        "links": 0,
+        "math": 0,
+        "problems": 0,
+        "asset": None,
+        "notebook": None,
+        "notebook_cells": 0,
+        "code_cells": 0,
+        "mastery_math": 0,
+        "lock": None,
+        "plain_paragraphs": 3,
     },
 }
 BUILDER = ROOT / "scripts" / "build_unit_reader.py"
@@ -55,10 +71,10 @@ def configure(unit_id: str) -> None:
     SPEC = QA_SPECS[unit_id]
     SOURCE = ROOT / "authority" / "units" / UNIT_ID / "content.raw.en.html"
     TARGET = ROOT / "source" / "id-ID" / UNIT_ID / "content.html"
-    ASSET = ROOT / "source" / "id-ID" / UNIT_ID / SPEC["asset"]
-    NOTEBOOK = ROOT / "source" / "id-ID" / UNIT_ID / SPEC["notebook"]
-    LOCK = NOTEBOOK.parent / "requirements.lock"
-    MASTERY = ROOT / "backend" / "mastery" / f"{UNIT_ID}.mastery.json"
+    ASSET = ROOT / "source" / "id-ID" / UNIT_ID / SPEC["asset"] if SPEC["asset"] else None
+    NOTEBOOK = ROOT / "source" / "id-ID" / UNIT_ID / SPEC["notebook"] if SPEC["notebook"] else None
+    LOCK = NOTEBOOK.parent / "requirements.lock" if NOTEBOOK else None
+    MASTERY = ROOT / "backend" / "mastery" / f"{UNIT_ID}.mastery.json" if SPEC["problems"] else None
     SEGMENTS = ROOT / "backend" / "segments" / f"{UNIT_ID}.segments.jsonl"
     UNIT = ROOT / "backend" / "units" / f"{UNIT_ID}.json"
     BUILD = ROOT / "build" / "reader" / UNIT_ID
@@ -107,7 +123,15 @@ def structural_replay() -> dict:
     source_math = [match.strip() for match in LATEX_RE.findall(source_text)]
     target_math = [match.strip() for match in LATEX_RE.findall(target_text)]
     require(source_math == target_math and len(source_math) == SPEC["math"], "Source/target TeX sequence differs")
-    require("Python" in target_text, "Open Python replacement is missing")
+    if NOTEBOOK:
+        require("Python" in target_text, "Open Python replacement is missing")
+    if SPEC.get("plain_paragraphs"):
+        source_paragraphs = [part for part in re.split(r"\r?\n\s*\r?\n", source_text.strip()) if part.strip()]
+        target_paragraphs = [part for part in re.split(r"\r?\n\s*\r?\n", target_text.strip()) if part.strip()]
+        require(
+            len(source_paragraphs) == len(target_paragraphs) == SPEC["plain_paragraphs"],
+            "Plain-paragraph topology differs",
+        )
     require("\ufffd" not in target_text, "Target contains U+FFFD")
     ids = [tag["id"] for tag in target_tags if tag.has_attr("id")]
     require(len(ids) == len(set(ids)), "Duplicate target IDs")
@@ -117,11 +141,12 @@ def structural_replay() -> dict:
 
 
 def backend_replay() -> dict:
-    mastery = json.loads(MASTERY.read_text(encoding="utf-8"))
-    require(mastery["unit_id"] == UNIT_ID and mastery["language"] == "id-ID", "Mastery identity differs")
-    problems = mastery["problems"]
-    require([p["problem_id"] for p in problems] == [f"{UNIT_ID}-P{i:02d}" for i in range(1, SPEC["problems"] + 1)], "Mastery IDs differ")
-    require(all(p.get("hint") and p.get("check") and p.get("solution_or_rubric") for p in problems), "Mastery record incomplete")
+    mastery = json.loads(MASTERY.read_text(encoding="utf-8")) if MASTERY else None
+    problems = mastery["problems"] if mastery else []
+    if mastery:
+        require(mastery["unit_id"] == UNIT_ID and mastery["language"] == "id-ID", "Mastery identity differs")
+        require([p["problem_id"] for p in problems] == [f"{UNIT_ID}-P{i:02d}" for i in range(1, SPEC["problems"] + 1)], "Mastery IDs differ")
+        require(all(p.get("hint") and p.get("check") and p.get("solution_or_rubric") for p in problems), "Mastery record incomplete")
 
     records = [json.loads(line) for line in SEGMENTS.read_text(encoding="utf-8").splitlines() if line]
     require(records, "Segment backend is empty")
@@ -133,15 +158,23 @@ def backend_replay() -> dict:
 
     unit = json.loads(UNIT.read_text(encoding="utf-8"))
     require(unit["unit_id"] == UNIT_ID and unit["segments"]["count"] == len(records), "Unit backend identity/count differs")
-    for branch, key, path in (
+    bound_paths = [
         ("source", "content_sha256", SOURCE),
         ("target", "content_sha256", TARGET),
-        ("target", "figure_sha256", ASSET),
-    ):
+    ]
+    if ASSET:
+        bound_paths.append(("target", "figure_sha256", ASSET))
+    for branch, key, path in bound_paths:
         require(unit[branch][key] == sha(path), f"Unit {branch}.{key} differs")
     require(unit["segments"]["sha256"] == sha(SEGMENTS), "Unit segment hash differs")
-    require(unit["mastery_sha256"] == sha(MASTERY), "Unit mastery hash differs")
-    require(unit["notebook_sha256"] == sha(NOTEBOOK), "Unit notebook hash differs")
+    if MASTERY:
+        require(unit["mastery_sha256"] == sha(MASTERY), "Unit mastery hash differs")
+    else:
+        require("mastery_sha256" not in unit and unit["problems"] == [], "Part unit unexpectedly binds mastery")
+    if NOTEBOOK:
+        require(unit["notebook_sha256"] == sha(NOTEBOOK), "Unit notebook hash differs")
+    else:
+        require("notebook_sha256" not in unit, "Part unit unexpectedly binds a notebook")
     return {"segments": len(records), "mastery": len(problems)}
 
 
@@ -151,7 +184,7 @@ def reader_replay(root: Path) -> dict:
     soup = BeautifulSoup(index.read_text(encoding="utf-8"), "html.parser")
     require(soup.html and soup.html.get("lang") == "id-ID", "Reader lang is not id-ID")
     require(len(soup.find_all("h1")) == 1, "Reader requires exactly one h1")
-    require(len(soup.select("article.chapter math")) == SPEC["math"], f"Reader chapter requires exactly {SPEC['math']} MathML formulas")
+    require(len(soup.select(f"article.{SPEC['unit_type']} math")) == SPEC["math"], f"Reader unit requires exactly {SPEC['math']} MathML formulas")
     mastery_math = len(soup.select("#dukungan-belajar math"))
     if SPEC["mastery_math"] is not None:
         require(mastery_math == SPEC["mastery_math"], "Reader mastery MathML count differs")
@@ -207,6 +240,8 @@ def reader_replay(root: Path) -> dict:
 
 
 def notebook_replay(execute: bool) -> dict:
+    if NOTEBOOK is None:
+        return {"cells": 0, "code_cells": 0, "executed": False, "applicable": False}
     notebook = json.loads(NOTEBOOK.read_text(encoding="utf-8"))
     cells = notebook.get("cells", [])
     code = [cell for cell in cells if cell.get("cell_type") == "code"]

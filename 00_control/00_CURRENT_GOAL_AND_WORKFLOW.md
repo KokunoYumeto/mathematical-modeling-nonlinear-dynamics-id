@@ -23,13 +23,14 @@ statement; never represent the Pressbooks theme as part of the independently
 reproducible source closure.
 
 The first two chapter boundaries, `O005-LEGA-V101-CH01` (record 25) and
-`O005-LEGA-V101-CH02` (record 27), are translated, built, independently
-rereviewed, and deterministically verified. Their complete topology,
-identifiers, protected mathematics, links, figures, fourteen stable problem
-IDs, mastery records, and two open Python notebooks are bound in the current
-state, cursor, and QA log. The immediate boundary is now the visible Part 2
-introduction, Pressbooks part record 28, *Models from Classical Mechanics*, as
-`O005-LEGA-V101-PT02`; it precedes Chapter 3 record 38 and must not be skipped.
+`O005-LEGA-V101-CH02` (record 27), and the visible Part 2 introduction
+`O005-LEGA-V101-PT02` (record 28) are translated, built, rereviewed, and
+deterministically verified. Their complete topology, identifiers, protected
+mathematics, links, figures, fourteen stable problem IDs, mastery records, two
+open Python notebooks, and 249 paired segments are bound in the current state,
+cursor, and QA log. The immediate boundary is now Chapter 3, Pressbooks record
+38, *The Nonlinear Pendulum*, as `O005-LEGA-V101-CH03`, with all 23 problems
+and every formula, link, figure, description, and computation surface.
 
 Continue in exact frozen TOC order through all front/back matter and
 fourteen chapters: 54,932 source words, 113 exercises, twelve projects, eleven

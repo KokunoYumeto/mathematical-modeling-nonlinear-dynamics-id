@@ -22,14 +22,14 @@
     "sha256": "6bdfc501e3134de338fc9862feb4abbbd503037295ab8c701a627cb33550c740"
   },
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-CH02",
-    "source_record_type": "chapters",
-    "source_record_id": 27,
-    "source_slug": "first-steps-modeling-the-wave",
-    "target_content_sha256": "e044dbfde28c561f43922fabf24af41cc47b2fb4e3307fb6146646b700cf8c4c",
-    "reader_manifest_sha256": "5296b09661d64f4c33aaaa4736404f0d87eb5ea4bc51e5e8660719607da2dace",
-    "qa_tree_sha256": "b0f14a66e0a4e3ed39c79e39daa3ee3b46a6b5af75bb1856247caf4aca0c05b2"
+    "unit_id": "O005-LEGA-V101-PT02",
+    "source_record_type": "parts",
+    "source_record_id": 28,
+    "source_slug": "part-2-models-from-classical-mechanics",
+    "target_content_sha256": "c7351c8342d7334116e69fbd16b7e19030c9492237e00c99713bcca0697e4087",
+    "reader_manifest_sha256": "32e6dcc39f2c980e5b33b8befb788b7eab4310e05d3cf725130c418be3dd3f32",
+    "qa_tree_sha256": "42a2af70218424bca7f768e665c10c429fcd3e68db40da41eecc4cd423c93cdd"
   },
-  "current_unit": "O005-LEGA-V101-PT02",
-  "next_action": "Prepare and translate visible Pressbooks part record 28, Models from Classical Mechanics, before Chapter 3 record 38; extend the same modular backend without skipping part content."
+  "current_unit": "O005-LEGA-V101-CH03",
+  "next_action": "Prepare and translate Pressbooks chapter record 38, The Nonlinear Pendulum, preserving 23 problems and every formula, link, figure, description, and computation surface."
 }

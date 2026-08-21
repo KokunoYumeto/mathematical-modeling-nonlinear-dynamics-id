@@ -80,3 +80,32 @@ Required gates for each translated chapter unit:
   exact source TeX remains in backend/provenance fields.
 - External scholarly link reachability was not tested. No audio or live widget
   exists in this unit; none was exercised.
+
+## Admitted build — O005-LEGA-V101-PT02 — 2026-08-21
+
+- Builder: `scripts/build_unit_reader.py --unit O005-LEGA-V101-PT02`, Pandoc
+  3.9.0.2; no mathematics conversion was applicable.
+- QA: `scripts/qa_unit.py --unit O005-LEGA-V101-PT02
+  --deterministic-build`, exit 0.
+- Structural replay: source and target each contain three plain-text paragraph
+  units and no parser-visible element, href, TeX expression, or problem. All
+  three ordered source/target segment hashes replayed.
+- Backend: three paired translation segments; stable unit type `part`; empty
+  problem set; mastery, notebook, and asset fields correctly absent rather
+  than represented by dummy files.
+- Reader: four payload files / 11,145 bytes excluding
+  `PACKAGE_MANIFEST.tsv`; one local CSS dependency; no missing dependency,
+  duplicate ID, broken fragment, local profile path, personal-name leak,
+  token shape, proprietary-tool source, or U+FFFD.
+- Reader manifest: 397 bytes, SHA-256
+  `32e6dcc39f2c980e5b33b8befb788b7eab4310e05d3cf725130c418be3dd3f32`.
+- Deterministic double build: five files including manifest, byte-identical;
+  canonical tree SHA-256
+  `42a2af70218424bca7f768e665c10c429fcd3e68db40da41eecc4cd423c93cdd`.
+- Existing-unit regression: current generalized builder reproduced all nine
+  existing Chapter 1 files and all nine existing Chapter 2 files byte-for-byte.
+- Browser visual QA: 768 px centered article at 1280×720 and 357.5 px article
+  at 390×844; zero horizontal overflow or broken images. Navigation, header,
+  article label, and official-source link all identify the unit as a section.
+- External source-link reachability was not tested. No audio, live widget,
+  formula, mastery, or notebook surface exists in this unit.

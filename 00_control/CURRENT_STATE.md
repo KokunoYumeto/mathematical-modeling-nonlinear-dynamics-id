@@ -7,11 +7,11 @@ Updated: 2026-08-21 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. The complete Chapter 1 and Chapter 2 units,
-`O005-LEGA-V101-CH01` and `O005-LEGA-V101-CH02`, are translated, built, and
-verified. Production now moves to the visible Part 2 introduction, Pressbooks
-record 28, before Chapter 3. The earlier cursor's record 29 / “Dimensional
-Analysis” pair was invalid and has been corrected from the frozen TOC.
+into this lane. The complete Chapter 1, Chapter 2, and visible Part 2
+introduction units are translated, built, and verified. Production now moves
+to Chapter 3, Pressbooks record 38, *The Nonlinear Pendulum*. The earlier
+cursor's record 29 / “Dimensional Analysis” pair was invalid and has been
+corrected from the frozen TOC.
 
 ## Verified authority
 
@@ -95,9 +95,37 @@ Analysis” pair was invalid and has been corrected from the frozen TOC.
   unlabeled images. External-link reachability and audio/live widgets were not
   exercised.
 
+## Admitted Part 2 introduction boundary
+
+- Source record: visible Pressbooks part 28, *Models from Classical
+  Mechanics*; target title *Model-Model dari Mekanika Klasik*; modified
+  `2024-06-29T02:57:03Z`.
+- Canonical record: 2,296 bytes, SHA-256
+  `03ead95b0ebcfb470c92bb7e48a85ce45d7639ec0aafb00f981eaf90ffd3f1e9`;
+  authority manifest: 657 bytes, SHA-256
+  `888785538e02b410ec91b1e1a4f2906c5ffeb1525c8b14408c2547b2b7d868a5`.
+- Scope: 121 source words in three visible paragraphs, with no formula, link,
+  asset, exercise, mastery, or notebook surface.
+- Complete natural id-ID fragment: 713 bytes, SHA-256
+  `c7351c8342d7334116e69fbd16b7e19030c9492237e00c99713bcca0697e4087`.
+- Modular segment layer: three paragraph records / 2,733 bytes, SHA-256
+  `63492fc25014f6872dc8c5c4a90fad31813be679a7a0d78332e61ec1c77f7d54`.
+- Reader package: four payload files / 11,145 bytes, excluding the manifest;
+  manifest SHA-256
+  `32e6dcc39f2c980e5b33b8befb788b7eab4310e05d3cf725130c418be3dd3f32`.
+- Exact replay: zero/zero source-target elements, links, formulas, and
+  problems; three/three paragraph boundaries and segment hashes exact.
+- Repeated clean builds were byte-identical across five files, canonical tree
+  SHA-256 `42a2af70218424bca7f768e665c10c429fcd3e68db40da41eecc4cd423c93cdd`.
+- Browser QA: the article is centered at 768 px in a 1,280 px desktop viewport
+  and 357.5 px in a 390 px mobile viewport; zero horizontal overflow or broken
+  assets. The navigation and official-source label correctly identify a
+  section rather than a chapter. External-link reachability and audio/live
+  widgets were not exercised.
+
 ## Next action
 
-Prepare and translate the exact visible Part 2 introduction, Pressbooks part
-record 28, *Models from Classical Mechanics*, as `O005-LEGA-V101-PT02` before
-proceeding to Chapter 3, record 38, *The Nonlinear Pendulum*. Do not return to
-source selection.
+Prepare and translate Chapter 3, Pressbooks chapter record 38, *The Nonlinear
+Pendulum*, as `O005-LEGA-V101-CH03`, preserving all 7,125 source words, 23
+problems, formulas, links, figures, descriptions, and computation surfaces.
+Do not return to source selection.

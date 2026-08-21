@@ -21,6 +21,8 @@ CSS = ROOT / "source" / "reader" / "reader.css"
 
 UNIT_SPECS = {
     "O005-LEGA-V101-CH01": {
+        "unit_type": "chapter",
+        "unit_number": 1,
         "chapter_number": 1,
         "source_title": "On the Nature of Mathematical Modeling",
         "target_title": "Tentang Hakikat Pemodelan Matematika",
@@ -28,9 +30,12 @@ UNIT_SPECS = {
         "target_asset": "assets/modeling-cycle-id.svg",
         "notebook": "notebooks/problem-07-open-curve-fitting.ipynb",
         "problem_count": 7,
+        "plain_paragraphs": False,
         "change_note": "penerjemahan, gambar ulang aksesibel, pengindeksan modular, dan pendamping Python terbuka",
     },
     "O005-LEGA-V101-CH02": {
+        "unit_type": "chapter",
+        "unit_number": 2,
         "chapter_number": 2,
         "source_title": "First Steps: Modeling the Wave",
         "target_title": "Langkah Awal: Memodelkan Gelombang",
@@ -38,7 +43,20 @@ UNIT_SPECS = {
         "target_asset": "assets/the-wave-source.png",
         "notebook": "notebooks/chapter-02-open-wave-simulation.ipynb",
         "problem_count": 7,
+        "plain_paragraphs": False,
         "change_note": "penerjemahan, pengindeksan modular, dan implementasi ulang simulasi dengan Python terbuka",
+    },
+    "O005-LEGA-V101-PT02": {
+        "unit_type": "part",
+        "unit_number": 2,
+        "source_title": "Models from Classical Mechanics",
+        "target_title": "Model-Model dari Mekanika Klasik",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/part/part-2-models-from-classical-mechanics/",
+        "target_asset": None,
+        "notebook": None,
+        "problem_count": 0,
+        "plain_paragraphs": True,
+        "change_note": "penerjemahan dan pengindeksan modular",
     },
 }
 
@@ -52,14 +70,16 @@ def configure(unit_id: str) -> None:
     SOURCE_URL = UNIT_SPEC["source_url"]
     SOURCE_FRAGMENT = ROOT / "authority" / "units" / UNIT_ID / "content.raw.en.html"
     TARGET_FRAGMENT = ROOT / "source" / "id-ID" / UNIT_ID / "content.html"
-    TARGET_ASSET = ROOT / "source" / "id-ID" / UNIT_ID / UNIT_SPEC["target_asset"]
-    NOTEBOOK = ROOT / "source" / "id-ID" / UNIT_ID / UNIT_SPEC["notebook"]
-    NOTEBOOK_LOCK = NOTEBOOK.parent / "requirements.lock"
-    MASTERY = ROOT / "backend" / "mastery" / f"{UNIT_ID}.mastery.json"
+    PROBLEM_COUNT = UNIT_SPEC["problem_count"]
+    target_asset = UNIT_SPEC["target_asset"]
+    notebook = UNIT_SPEC["notebook"]
+    TARGET_ASSET = ROOT / "source" / "id-ID" / UNIT_ID / target_asset if target_asset else None
+    NOTEBOOK = ROOT / "source" / "id-ID" / UNIT_ID / notebook if notebook else None
+    NOTEBOOK_LOCK = NOTEBOOK.parent / "requirements.lock" if NOTEBOOK else None
+    MASTERY = ROOT / "backend" / "mastery" / f"{UNIT_ID}.mastery.json" if PROBLEM_COUNT else None
     SEGMENTS = ROOT / "backend" / "segments" / f"{UNIT_ID}.segments.jsonl"
     UNIT_RECORD = ROOT / "backend" / "units" / f"{UNIT_ID}.json"
     DEFAULT_OUTPUT = ROOT / "build" / "reader" / UNIT_ID
-    PROBLEM_COUNT = UNIT_SPEC["problem_count"]
 
 
 configure("O005-LEGA-V101-CH01")
@@ -123,8 +143,9 @@ def render_math(tex: str) -> str:
 
 def replace_pressbooks_markup(fragment: str) -> str:
     matches = list(CAPTION_RE.finditer(fragment))
-    if len(matches) != 1:
-        raise RuntimeError(f"Expected one Pressbooks caption shortcode, found {len(matches)}")
+    expected = 1 if TARGET_ASSET else 0
+    if len(matches) != expected:
+        raise RuntimeError(f"Expected {expected} Pressbooks caption shortcode(s), found {len(matches)}")
 
     def caption(match: re.Match[str]) -> str:
         attributes, inner = match.groups()
@@ -315,9 +336,16 @@ def text_slots(fragment: str) -> list[tuple[str, str]]:
     return slots
 
 
-def write_backend(source: str, target: str, mastery: dict, pandoc: str) -> tuple[int, str]:
-    source_slots = text_slots(source)
-    target_slots = text_slots(target)
+def unit_text_slots(fragment: str) -> list[tuple[str, str]]:
+    if UNIT_SPEC["plain_paragraphs"]:
+        paragraphs = [canonical_text(part) for part in re.split(r"\r?\n\s*\r?\n", fragment.strip())]
+        return [(f"/fragment/p[{index}]/text()[1]", text) for index, text in enumerate(paragraphs, 1) if text]
+    return text_slots(fragment)
+
+
+def write_backend(source: str, target: str, mastery: dict | None, pandoc: str) -> tuple[int, str]:
+    source_slots = unit_text_slots(source)
+    target_slots = unit_text_slots(target)
     if [path for path, _ in source_slots] != [path for path, _ in target_slots]:
         raise RuntimeError("Source and target text-slot topology differs")
     SEGMENTS.parent.mkdir(parents=True, exist_ok=True)
@@ -341,6 +369,27 @@ def write_backend(source: str, target: str, mastery: dict, pandoc: str) -> tuple
     payload = ("\n".join(lines) + "\n").encode("utf-8")
     SEGMENTS.write_bytes(payload)
     segment_sha = hashlib.sha256(payload).hexdigest()
+    source_record = {
+        "work": "Introduction to Mathematical Modeling",
+        "author": "Joceline Lega",
+        "edition": "v1.01 (Maret 2026)",
+        UNIT_SPEC["unit_type"]: UNIT_SPEC["source_title"],
+        "url": SOURCE_URL,
+        "license": "CC BY-NC-SA 4.0",
+        "content_sha256": digest(SOURCE_FRAGMENT),
+    }
+    target_record = {
+        "title": UNIT_SPEC["target_title"],
+        "content_path": TARGET_FRAGMENT.relative_to(ROOT).as_posix(),
+        "content_sha256": digest(TARGET_FRAGMENT),
+    }
+    if TARGET_ASSET:
+        target_record.update(
+            {
+                "figure_path": TARGET_ASSET.relative_to(ROOT).as_posix(),
+                "figure_sha256": digest(TARGET_ASSET),
+            }
+        )
     unit = {
         "schema": "o005-unit-v1",
         "unit_id": UNIT_ID,
@@ -348,48 +397,47 @@ def write_backend(source: str, target: str, mastery: dict, pandoc: str) -> tuple
         "resource_id": "O005",
         "language": "id-ID",
         "source_language": "en",
-        "source": {
-            "work": "Introduction to Mathematical Modeling",
-            "author": "Joceline Lega",
-            "edition": "v1.01 (Maret 2026)",
-            "chapter": UNIT_SPEC["source_title"],
-            "url": SOURCE_URL,
-            "license": "CC BY-NC-SA 4.0",
-            "content_sha256": digest(SOURCE_FRAGMENT),
-        },
-        "target": {
-            "title": UNIT_SPEC["target_title"],
-            "content_path": TARGET_FRAGMENT.relative_to(ROOT).as_posix(),
-            "content_sha256": digest(TARGET_FRAGMENT),
-            "figure_path": TARGET_ASSET.relative_to(ROOT).as_posix(),
-            "figure_sha256": digest(TARGET_ASSET),
-        },
+        "source": source_record,
+        "target": target_record,
         "segments": {
             "count": len(lines),
             "path": SEGMENTS.relative_to(ROOT).as_posix(),
             "sha256": segment_sha,
         },
-        "problems": [problem["problem_id"] for problem in mastery["problems"]],
-        "mastery_path": MASTERY.relative_to(ROOT).as_posix(),
-        "mastery_sha256": digest(MASTERY),
-        "notebook_path": NOTEBOOK.relative_to(ROOT).as_posix(),
-        "notebook_sha256": digest(NOTEBOOK),
+        "problems": [problem["problem_id"] for problem in mastery["problems"]] if mastery else [],
         "build": {"script": Path(__file__).relative_to(ROOT).as_posix(), "pandoc": pandoc},
     }
+    if UNIT_SPEC["unit_type"] != "chapter":
+        unit["unit_type"] = UNIT_SPEC["unit_type"]
+    if mastery and MASTERY:
+        unit.update(
+            {
+                "mastery_path": MASTERY.relative_to(ROOT).as_posix(),
+                "mastery_sha256": digest(MASTERY),
+            }
+        )
+    if NOTEBOOK:
+        unit.update(
+            {
+                "notebook_path": NOTEBOOK.relative_to(ROOT).as_posix(),
+                "notebook_sha256": digest(NOTEBOOK),
+            }
+        )
     UNIT_RECORD.parent.mkdir(parents=True, exist_ok=True)
     UNIT_RECORD.write_text(json.dumps(unit, ensure_ascii=False, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return len(lines), segment_sha
 
 
 def build_reader(output: Path) -> dict:
-    required = [SOURCE_FRAGMENT, TARGET_FRAGMENT, TARGET_ASSET, NOTEBOOK, NOTEBOOK_LOCK, MASTERY, CSS]
+    required = [SOURCE_FRAGMENT, TARGET_FRAGMENT, CSS]
+    required.extend(path for path in (TARGET_ASSET, NOTEBOOK, NOTEBOOK_LOCK, MASTERY) if path is not None)
     missing = [str(path) for path in required if not path.is_file()]
     if missing:
         raise FileNotFoundError("Missing inputs: " + ", ".join(missing))
     source = SOURCE_FRAGMENT.read_text(encoding="utf-8")
     target = TARGET_FRAGMENT.read_text(encoding="utf-8")
-    mastery = json.loads(MASTERY.read_text(encoding="utf-8"))
-    if [p["problem_id"] for p in mastery["problems"]] != [f"{UNIT_ID}-P{i:02d}" for i in range(1, PROBLEM_COUNT + 1)]:
+    mastery = json.loads(MASTERY.read_text(encoding="utf-8")) if MASTERY else None
+    if mastery and [p["problem_id"] for p in mastery["problems"]] != [f"{UNIT_ID}-P{i:02d}" for i in range(1, PROBLEM_COUNT + 1)]:
         raise RuntimeError("Mastery problem IDs are not the exact ordered problem set")
     pandoc = pandoc_version()
     if pandoc != "pandoc 3.9.0.2":
@@ -398,13 +446,27 @@ def build_reader(output: Path) -> dict:
 
     body = wrap_inline_runs(replace_pressbooks_markup(target))
     harden_links(body)
-    notebook_sha = digest(NOTEBOOK)
+    unit_label = "Bab" if UNIT_SPEC["unit_type"] == "chapter" else "Bagian"
+    source_unit_label = "bab" if UNIT_SPEC["unit_type"] == "chapter" else "bagian"
+    unit_number = UNIT_SPEC["unit_number"]
+    article_class = "chapter" if UNIT_SPEC["unit_type"] == "chapter" else "chapter part"
+    nav_lines = ['    <a href="#isi">Isi bab</a>' if unit_label == "Bab" else '    <a href="#isi">Isi bagian</a>']
+    if mastery:
+        nav_lines.append('    <a href="#dukungan-belajar">Dukungan belajar</a>')
+    if NOTEBOOK:
+        nav_lines.append(f'    <a href="downloads/{NOTEBOOK.name}">Notebook Python</a>')
+    navigation = "\n".join(nav_lines)
+    mastery_html = mastery_section(mastery) if mastery else ""
+    if NOTEBOOK:
+        footer_detail = f" · notebook SHA-256 <code>{digest(NOTEBOOK)}</code>"
+    else:
+        footer_detail = ""
     page = f'''<!doctype html>
 <html lang="id-ID">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bab {UNIT_SPEC['chapter_number']} edisi Bahasa Indonesia Introduction to Mathematical Modeling karya Joceline Lega.">
+  <meta name="description" content="{unit_label} {unit_number} edisi Bahasa Indonesia Introduction to Mathematical Modeling karya Joceline Lega.">
   <title>{UNIT_SPEC['target_title']} — Joceline Lega</title>
   <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
   <link rel="stylesheet" href="assets/reader.css">
@@ -412,28 +474,26 @@ def build_reader(output: Path) -> dict:
 <body>
   <a class="skip-link" href="#isi">Lewati ke isi utama</a>
   <header class="reader-header">
-    <p class="eyebrow">O005 · C120 · Bab {UNIT_SPEC['chapter_number']}</p>
+    <p class="eyebrow">O005 · C120 · {unit_label} {unit_number}</p>
     <h1>{UNIT_SPEC['target_title']}</h1>
     <p class="byline">Joceline Lega · Edisi Bahasa Indonesia</p>
   </header>
   <nav class="unit-nav" aria-label="Navigasi unit">
-    <a href="#isi">Isi bab</a>
-    <a href="#dukungan-belajar">Dukungan belajar</a>
-    <a href="downloads/{NOTEBOOK.name}">Notebook Python</a>
+{navigation}
   </nav>
   <main id="isi" tabindex="-1">
     <aside class="edition-notice" aria-labelledby="edition-notice-title">
       <h2 id="edition-notice-title">Tentang edisi ini</h2>
-      <p>Terjemahan Bahasa Indonesia independen dari <cite>Introduction to Mathematical Modeling</cite>, v1.01 (Maret 2026), oleh Joceline Lega, University of Arizona. <a href="{SOURCE_URL}" rel="external noopener noreferrer">Baca sumber resmi bab ini</a>.</p>
+      <p>Terjemahan Bahasa Indonesia independen dari <cite>Introduction to Mathematical Modeling</cite>, v1.01 (Maret 2026), oleh Joceline Lega, University of Arizona. <a href="{SOURCE_URL}" rel="external noopener noreferrer">Baca sumber resmi {source_unit_label} ini</a>.</p>
       <p>Sumber dan terjemahan dilisensikan dengan <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license external noopener noreferrer">CC BY-NC-SA 4.0</a>. Perubahan mencakup {UNIT_SPEC['change_note']}. Edisi ini tidak disokong atau disahkan oleh penulis maupun University of Arizona.</p>
     </aside>
-    <article class="chapter" aria-label="Bab {UNIT_SPEC['chapter_number']}">
+    <article class="{article_class}" aria-label="{unit_label} {unit_number}">
 {str(body)}
     </article>
-    {mastery_section(mastery)}
+    {mastery_html}
   </main>
   <footer>
-    <p>Unit <code>{UNIT_ID}</code> · {segment_count} segmen berpasangan · notebook SHA-256 <code>{notebook_sha}</code>.</p>
+    <p>Unit <code>{UNIT_ID}</code> · {segment_count} segmen berpasangan{footer_detail}.</p>
   </footer>
 </body>
 </html>
@@ -442,14 +502,17 @@ def build_reader(output: Path) -> dict:
     if output.exists():
         shutil.rmtree(output)
     (output / "assets").mkdir(parents=True)
-    (output / "downloads").mkdir()
     (output / "data").mkdir()
     (output / "index.html").write_text(page, encoding="utf-8", newline="\n")
     shutil.copyfile(CSS, output / "assets" / "reader.css")
-    shutil.copyfile(TARGET_ASSET, output / "assets" / TARGET_ASSET.name)
-    shutil.copyfile(NOTEBOOK, output / "downloads" / NOTEBOOK.name)
-    shutil.copyfile(NOTEBOOK_LOCK, output / "downloads" / NOTEBOOK_LOCK.name)
-    shutil.copyfile(MASTERY, output / "data" / MASTERY.name)
+    if TARGET_ASSET:
+        shutil.copyfile(TARGET_ASSET, output / "assets" / TARGET_ASSET.name)
+    if NOTEBOOK and NOTEBOOK_LOCK:
+        (output / "downloads").mkdir()
+        shutil.copyfile(NOTEBOOK, output / "downloads" / NOTEBOOK.name)
+        shutil.copyfile(NOTEBOOK_LOCK, output / "downloads" / NOTEBOOK_LOCK.name)
+    if MASTERY:
+        shutil.copyfile(MASTERY, output / "data" / MASTERY.name)
     shutil.copyfile(SEGMENTS, output / "data" / SEGMENTS.name)
     shutil.copyfile(UNIT_RECORD, output / "data" / UNIT_RECORD.name)
 

@@ -1,0 +1,33 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "problems": [],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 3,
+    "path": "backend/segments/O005-LEGA-V101-PT02.segments.jsonl",
+    "sha256": "63492fc25014f6872dc8c5c4a90fad31813be679a7a0d78332e61ec1c77f7d54"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "content_sha256": "7b76d2afda0711045ad6de67d3a9c00c04d0360fe126af7ca4f1a455375ed7fc",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "part": "Models from Classical Mechanics",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/part/part-2-models-from-classical-mechanics/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-PT02/content.html",
+    "content_sha256": "c7351c8342d7334116e69fbd16b7e19030c9492237e00c99713bcca0697e4087",
+    "title": "Model-Model dari Mekanika Klasik"
+  },
+  "unit_id": "O005-LEGA-V101-PT02",
+  "unit_type": "part"
+}

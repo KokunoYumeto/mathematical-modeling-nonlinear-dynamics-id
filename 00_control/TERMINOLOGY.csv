@@ -30,3 +30,9 @@ O005-TERM-0028,clockwise,searah jarum jam,admitted,
 O005-TERM-0029,wave dies,gelombang padam,admitted,Use for loss of propagation rather than ordinary decay of a pulse.
 O005-TERM-0030,responsiveness,daya tanggap,admitted,
 O005-TERM-0031,monotone,monoton,admitted,Use monoton naik or monoton turun when direction matters.
+O005-TERM-0032,differential equation,persamaan diferensial,admitted,
+O005-TERM-0033,dimensional analysis,analisis dimensi,admitted,Distinguish from checking the physical dimension of an individual term.
+O005-TERM-0034,phase plane,bidang fase,admitted,
+O005-TERM-0035,nonlinear pendulum,pendulum nonlinear,admitted,Use consistently in the part introduction and Chapter 3.
+O005-TERM-0036,rigid body,benda tegar,admitted,
+O005-TERM-0037,stone-skipping,pemantulan batu di permukaan air,admitted,Use for the practice of skipping stones across a water surface.
