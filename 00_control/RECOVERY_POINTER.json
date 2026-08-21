@@ -21,6 +21,8 @@
     "bytes": 14504,
     "sha256": "6bdfc501e3134de338fc9862feb4abbbd503037295ab8c701a627cb33550c740"
   },
+  "last_verified_public_commit": "184f3df2ece1d6b44b2f0fd852ca86c3511ae642",
+  "public_repository": "https://github.com/KokunoYumeto/mathematical-modeling-nonlinear-dynamics-id",
   "last_completed_unit": {
     "unit_id": "O005-LEGA-V101-CH04",
     "source_record_type": "chapters",

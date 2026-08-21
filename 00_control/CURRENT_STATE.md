@@ -210,6 +210,10 @@ corrected from the frozen TOC.
   client width at both sizes; both figures loaded at natural resolution,
   long-description links were present, and the browser reported no console
   error. Wide MathML remains locally horizontally scrollable by design.
+- Published production commit:
+  `184f3df2ece1d6b44b2f0fd852ca86c3511ae642` on `origin/main`. Remote-head
+  equality passed. GitHub raw-byte readback matched the local hashes for the
+  target content, reader index, package manifest, notebook, and Figure 4.1 SVG.
 
 ## Next action
 
