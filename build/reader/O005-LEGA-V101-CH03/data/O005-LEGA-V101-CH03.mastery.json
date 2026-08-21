@@ -1,0 +1,1346 @@
+{
+  "schema": "o005-mastery-v1",
+  "schema_version": "1.0.0",
+  "unit_id": "O005-LEGA-V101-CH03",
+  "language": "id-ID",
+  "source": {
+    "resource": "Joceline Lega, Introduction to Mathematical Modeling",
+    "edition": "University of Arizona Pressbooks v1.01 (Maret 2026)",
+    "record": "Pressbooks chapter 38",
+    "record_id": 38,
+    "source_title": "The Nonlinear Pendulum",
+    "target_title": "Pendulum Nonlinear",
+    "modified_utc": "2026-03-27T02:14:38Z",
+    "source_file": "authority/units/O005-LEGA-V101-CH03/content.raw.en.html",
+    "source_locator": "exact frozen Pressbooks record 38 content.raw, problems on lines 162–408",
+    "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/the-nonlinear-pendulum/",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "provenance_policy": {
+    "source_derived": "Ringkasan masalah merupakan adaptasi/terjemahan dari soal sumber dan tetap berada di bawah CC BY-NC-SA 4.0.",
+    "new_original": "Petunjuk, rekaman pemeriksaan/jawaban, serta solusi atau rubrik ditulis baru untuk edisi Bahasa Indonesia dan ditandai terpisah dari materi sumber. Sumber menyediakan perintah soal, tetapi tidak menyediakan himpunan solusi."
+  },
+  "article_link_catalog": [
+    {
+      "link_id": "O005-LEGA-V101-CH03-LINK01",
+      "title": "Phase Plane App",
+      "url": "https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field"
+    }
+  ],
+  "problems": [
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P01",
+      "ordinal": 1,
+      "problem_summary": "Buktikan kesetaraan bentuk \\(\\theta(\\tau)=C\\cos(\\tau+\\phi)\\) dan \\(\\theta(\\tau)=A\\cos\\tau+B\\sin\\tau\\) dengan menyatakan \\(A,B\\) melalui \\(C,\\phi\\). Sebaliknya, tentukan \\(C,\\phi\\) dari \\(A,B\\), lalu jelaskan ketidakunikannya.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\theta(\\tau) = C \\cos(\\tau + \\phi),",
+        "A, B \\in \\mathbb{R}",
+        "\\theta(\\tau) = A \\cos(\\tau) + B \\sin(\\tau),",
+        "C, \\phi \\in \\mathbb{R}"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Kembangkan \\(\\cos(\\tau+\\phi)\\). Untuk arah sebaliknya, gunakan panjang vektor \\((A,-B)\\) dan fungsi sudut dua-argumen agar kuadran tidak hilang."
+      },
+      "check": {
+        "type": "exact_with_nonuniqueness",
+        "final_answer": "\\(A=C\\cos\\phi\\) dan \\(B=-C\\sin\\phi\\). Dari \\(A,B\\), pilihan baku ialah \\(C=\\sqrt{A^2+B^2}\\ge0\\) dan \\(\\phi=\\operatorname{atan2}(-B,A)\\pmod{2\\pi}\\). Jika \\(A=B=0\\), maka \\(C=0\\) dan \\(\\phi\\) sembarang; jika \\(C\\) boleh negatif, pasangan \\((-C,\\phi+\\pi)\\) juga setara.",
+        "quick_check": "Harus berlaku \\(A^2+B^2=C^2\\), dan substitusi pada \\(\\tau=0\\) serta turunannya memberi \\(A=C\\cos\\phi\\), \\(B=-C\\sin\\phi\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Gunakan rumus jumlah sudut kosinus.",
+            "formula": "C\\cos(\\tau+\\phi)=C\\cos\\phi\\cos\\tau-C\\sin\\phi\\sin\\tau"
+          },
+          {
+            "explanation": "Bandingkan koefisien \\(\\cos\\tau\\) dan \\(\\sin\\tau\\).",
+            "formula": "A=C\\cos\\phi,\\qquad B=-C\\sin\\phi"
+          },
+          {
+            "explanation": "Kuadratkan dan jumlahkan kedua relasi untuk memperoleh amplitudo baku nonnegatif.",
+            "formula": "C=\\sqrt{A^2+B^2}"
+          },
+          {
+            "explanation": "Jika \\(C>0\\), sudut ditentukan oleh pasangan kosinus dan sinusnya; \\(\\operatorname{atan2}\\) mempertahankan kuadran.",
+            "formula": "\\phi=\\operatorname{atan2}(-B,A)+2k\\pi,\\qquad k\\in\\mathbb Z"
+          },
+          {
+            "explanation": "Ketidakunikan berasal dari periodisitas fase, pilihan tanda amplitudo, dan fase bebas pada solusi nol.",
+            "formula": "(C,\\phi)\\sim(C,\\phi+2k\\pi)\\sim(-C,\\phi+(2k+1)\\pi)"
+          }
+        ],
+        "conclusion": "Bentuk amplitudo–fase dan bentuk kombinasi sinus–kosinus mendeskripsikan keluarga solusi yang sama; konvensi \\(C\\ge0\\) menghilangkan ketidakunikan tanda, tetapi fase tetap hanya unik modulo \\(2\\pi\\)."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P02",
+      "ordinal": 2,
+      "problem_summary": "Untuk osilasi periodik pendulum nonlinear tak berdimensi pada energi \\(-1<E<1\\), tuliskan periodenya sebagai integral terhadap sudut dan buktikan bahwa periode meningkat bersama energi, sehingga juga meningkat bersama amplitudo.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "T",
+        "\\theta",
+        "E"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Pada titik balik \\(\\theta=\\pm\\alpha\\), kecepatan nol sehingga \\(E=-\\cos\\alpha\\). Ubah integral seperempat periode dengan \\(\\sin(\\theta/2)=k\\sin u\\), \\(k=\\sin(\\alpha/2)\\)."
+      },
+      "check": {
+        "type": "exact_integral_and_monotonicity",
+        "final_answer": "Dengan \\(\\alpha=\\arccos(-E)\\) dan \\(k=\\sqrt{(1+E)/2}\\), \\(T(E)=4\\int_0^\\alpha[2(\\cos\\theta+E)]^{-1/2}\\,d\\theta=4K(k)\\). Karena integran \\((1-k^2\\sin^2u)^{-1/2}\\) meningkat ketat terhadap \\(k\\in(0,1)\\), sedangkan \\(k\\) meningkat terhadap \\(E\\), maka \\(T\\) meningkat ketat pada \\(-1<E<1\\).",
+        "quick_check": "Batas amplitudo kecil memberi \\(T\\to2\\pi\\) ketika \\(E\\to-1^+\\), sedangkan \\(T\\to\\infty\\) ketika \\(E\\to1^-\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "assumption": "-1<E<1",
+        "steps": [
+          {
+            "explanation": "Gunakan integral energi dan nilai energi pada titik balik positif \\(\\alpha\\).",
+            "formula": "\\frac12\\left(\\frac{d\\theta}{d\\tau}\\right)^2=\\cos\\theta+E,\\qquad E=-\\cos\\alpha"
+          },
+          {
+            "explanation": "Simetri empat kuadran osilasi memberi periode penuh dari integral seperempat periode.",
+            "formula": "T(E)=4\\int_0^\\alpha\\frac{d\\theta}{\\sqrt{2(\\cos\\theta+E)}}"
+          },
+          {
+            "explanation": "Tetapkan \\(k=\\sin(\\alpha/2)=\\sqrt{(1+E)/2}\\) dan substitusikan \\(\\sin(\\theta/2)=k\\sin u\\); integral yang muncul adalah integral eliptik lengkap jenis pertama \\(K\\).",
+            "formula": "T(E)=4\\int_0^{\\pi/2}\\frac{du}{\\sqrt{1-k^2\\sin^2u}}=4K(k)"
+          },
+          {
+            "explanation": "Untuk setiap \\(0<u<\\pi/2\\), integran meningkat ketat ketika \\(k\\) meningkat; integrasi mempertahankan ketaksamaan ketat.",
+            "formula": "\\frac{\\partial}{\\partial k}(1-k^2\\sin^2u)^{-1/2}=\\frac{k\\sin^2u}{(1-k^2\\sin^2u)^{3/2}}>0"
+          },
+          {
+            "explanation": "Karena \\(dk/dE=1/(4k)>0\\), periode meningkat terhadap energi dan amplitudo \\(\\alpha\\).",
+            "formula": "\\frac{dT}{dE}>0"
+          }
+        ],
+        "conclusion": "Nonlinearitas membuat osilasi beramplitudo lebih besar berlangsung lebih lambat; periode mendekati periode harmonik \\(2\\pi\\) untuk amplitudo kecil dan divergen di separatriks."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P03",
+      "ordinal": 3,
+      "problem_summary": "Untuk massa \\(m\\) pada pegas vertikal tanpa gesekan dengan gaya gravitasi \\(F_g=-mg\\) dan gaya pulih \\(F_r=-k(x-x_0)\\), turunkan persamaan gerak, skalakan ulang hingga bebas parameter, buktikan kekekalan energi, dan deskripsikan dinamikanya.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "m",
+        "x",
+        "F_g = - m g",
+        "g \\gt 0",
+        "F_r = - k (x - x_0)",
+        "k \\gt 0",
+        "x_0"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Gabungkan gravitasi dan pegas dengan menggeser koordinat ke posisi setimbang \\(x_e=x_0-mg/k\\), lalu gunakan skala waktu \\(\\sqrt{m/k}\\)."
+      },
+      "check": {
+        "type": "exact_dynamics",
+        "final_answer": "Persamaan geraknya \\(m\\ddot x=-mg-k(x-x_0)=-k(x-x_e)\\), \\(x_e=x_0-mg/k\\). Dengan \\(q=(x-x_e)/L\\) dan \\(\\tau=\\sqrt{k/m}\\,t\\), diperoleh \\(q_{\\tau\\tau}+q=0\\), tanpa parameter kontinu. Energi \\(H=\\tfrac12m\\dot x^2+\\tfrac12k(x-x_0)^2+mgx\\) kekal. Geraknya harmonik mengelilingi \\(x_e\\), berperiode \\(2\\pi\\sqrt{m/k}\\).",
+        "quick_check": "Gravitasi hanya menggeser titik setimbang; frekuensi \\(\\sqrt{k/m}\\) tidak bergantung pada \\(g\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Jumlahkan kedua gaya dalam hukum Newton.",
+            "formula": "m\\ddot x=-mg-k(x-x_0)"
+          },
+          {
+            "explanation": "Lengkapi pergeseran terhadap posisi setimbang statis.",
+            "formula": "x_e=x_0-\\frac{mg}{k},\\qquad m\\ddot x=-k(x-x_e)"
+          },
+          {
+            "explanation": "Gunakan panjang acuan taknol \\(L\\) dan waktu alami pegas.",
+            "formula": "q=\\frac{x-x_e}{L},\\qquad \\tau=\\sqrt{\\frac{k}{m}}t,\\qquad q_{\\tau\\tau}+q=0"
+          },
+          {
+            "explanation": "Kalikan persamaan gerak dengan \\(\\dot x\\) dan integralkan.",
+            "formula": "\\frac{d}{dt}\\left[\\frac12m\\dot x^2+\\frac12k(x-x_0)^2+mgx\\right]=0"
+          },
+          {
+            "explanation": "Solusi dalam koordinat yang digeser adalah osilasi harmonik.",
+            "formula": "x(t)=x_e+C\\cos\\left(\\sqrt{k/m}\\,t+\\phi\\right)"
+          }
+        ],
+        "conclusion": "Keempat parameter sumber terserap dari persamaan tak berdimensi melalui pergeseran ruang dan penskalaan waktu; kombinasi parameter tetap diperlukan untuk mengubah kembali posisi setimbang dan periode ke satuan fisik."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P04",
+      "ordinal": 4,
+      "problem_summary": "Untuk sistem \\(\\dot x=F(x,y)\\), \\(\\dot y=G(x,y)\\), tentukan syarat titik tetap, kembangkan kedua ruas kanan hingga orde dua di sekitar \\((x_0,y_0)\\), dan turunkan sistem linearisasinya beserta matriks Jacobi.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\frac{d x}{d t} = F(x,y) \\qquad \\frac{d y}{d t} = G(x,y).",
+        "x = x_0 + \\mu",
+        "y = y_0 + \\nu",
+        "\\displaystyle \\frac{d}{d t} \\left(\\begin{array}{c}\\mu \\cr \\nu \\end{array}\\right) = J(x_0,y_0) \\left(\\begin{array}{c}\\mu \\cr \\nu \\end{array}\\right),",
+        "\\displaystyle J(x_0,y_0) = \\left(\\begin{array}{cc} \\left. \\frac{\\partial F(x,y)}{\\partial x} \\right|_{(x_0,y_0)} &amp; \\left. \\frac{\\partial F(x,y)}{\\partial y} \\right|_{(x_0,y_0)} \\cr \\left. \\frac{\\partial G(x,y)}{\\partial x} \\right|_{(x_0,y_0)} &amp; \\left. \\frac{\\partial G(x,y)}{\\partial y} \\right|_{(x_0,y_0)}\\end{array}\\right)."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Tuliskan ekspansi Taylor dua variabel untuk \\(F\\) dan \\(G\\). Di titik tetap suku konstanta nol; linearisasi diperoleh dengan membuang semua suku berderajat dua dan lebih tinggi."
+      },
+      "check": {
+        "type": "exact_symbolic",
+        "final_answer": "Titik tetap memenuhi \\(F(x_0,y_0)=G(x_0,y_0)=0\\). Dengan \\(z=(\\mu,\\nu)^T\\), sistem penuh ialah \\(\\dot z=J(x_0,y_0)z+\\tfrac12(H_F[z,z],H_G[z,z])^T+O(\\|z\\|^3)\\); linearisasinya adalah \\(\\dot z=J(x_0,y_0)z\\).",
+        "quick_check": "Setiap entri \\(J\\) harus merupakan turunan parsial pertama yang dievaluasi di \\((x_0,y_0)\\); suku kuadrat tidak boleh tersisa dalam sistem linear."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Syarat keadaan tidak berubah adalah kedua komponen medan vektor sama dengan nol.",
+            "formula": "F(x_0,y_0)=0,\\qquad G(x_0,y_0)=0"
+          },
+          {
+            "explanation": "Ekspansi komponen pertama hingga suku kuadrat, dengan semua turunan dievaluasi di titik tetap, adalah:",
+            "formula": "F=F_0+F_x\\mu+F_y\\nu+\\frac12(F_{xx}\\mu^2+2F_{xy}\\mu\\nu+F_{yy}\\nu^2)+O(\\|(\\mu,\\nu)\\|^3)"
+          },
+          {
+            "explanation": "Komponen kedua mempunyai bentuk sejajar.",
+            "formula": "G=G_0+G_x\\mu+G_y\\nu+\\frac12(G_{xx}\\mu^2+2G_{xy}\\mu\\nu+G_{yy}\\nu^2)+O(\\|(\\mu,\\nu)\\|^3)"
+          },
+          {
+            "explanation": "Karena \\(F_0=G_0=0\\), bagian orde pertama tepat merupakan perkalian matriks Jacobi dengan simpangan.",
+            "formula": "\\frac{d}{dt}\\binom{\\mu}{\\nu}=\\begin{pmatrix}F_x&F_y\\\\G_x&G_y\\end{pmatrix}_{(x_0,y_0)}\\binom{\\mu}{\\nu}+O(\\|(\\mu,\\nu)\\|^2)"
+          },
+          {
+            "explanation": "Membuang suku nonlinear menghasilkan linearisasi yang diminta.",
+            "formula": "\\dot z=J(x_0,y_0)z"
+          }
+        ],
+        "conclusion": "Matriks Jacobi mengendalikan dinamika lokal orde pertama; bila titik tetap nonhiperbolik, suku orde lebih tinggi dapat menentukan perilaku yang tidak terlihat dari linearisasi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P05",
+      "ordinal": 5,
+      "problem_summary": "Selesaikan sistem linear diagonal \\(\\dot x=ax\\), \\(\\dot y=by\\) dengan \\(a>0>b\\), lalu gambarkan bidang fase, lintasan khusus, dan arah gerak saat waktu bertambah.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d}{d t} \\left(\\begin{array}{c} x \\cr y \\end{array}\\right) = \\left( \\begin{array}{cc} a &amp; 0 \\cr 0 &amp; b \\end{array} \\right) \\left(\\begin{array}{c} x \\cr y \\end{array}\\right),",
+        "a \\gt 0,\\ b \\lt 0."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Selesaikan kedua persamaan skalar secara terpisah. Sumbu koordinat adalah lintasan invarian; untuk lintasan lain, hilangkan \\(t\\) dari \\(x=C_1e^{at}\\), \\(y=C_2e^{bt}\\)."
+      },
+      "check": {
+        "type": "exact_phase_portrait",
+        "final_answer": "\\(x=C_1e^{at}\\), \\(y=C_2e^{bt}\\). Titik asal adalah pelana: sumbu \\(y\\) merupakan manifold stabil dan panah menuju asal, sedangkan sumbu \\(x\\) merupakan manifold tak stabil dan panah menjauhi asal. Lintasan lain memenuhi \\(y=K|x|^{b/a}\\) pada setiap setengah-bidang dan, saat \\(t\\) meningkat, bergerak dari arah sumbu \\(y\\) menuju arah sumbu \\(x\\).",
+        "quick_check": "Karena \\(b/a<0\\), kurva nonaksial mendekati sumbu \\(y\\) saat \\(t\\to-\\infty\\) dan sumbu \\(x\\) saat \\(t\\to+\\infty\\), tanpa memotong kedua sumbu."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Kedua koordinat terpisah dan dapat diintegralkan langsung.",
+            "formula": "x(t)=C_1e^{at},\\qquad y(t)=C_2e^{bt}"
+          },
+          {
+            "explanation": "Jika \\(C_1=0\\), lintasan berada pada sumbu \\(y\\) dan menuju asal karena \\(b<0\\).",
+            "formula": "x=0,\\qquad y(t)\\to0\\quad(t\\to\\infty)"
+          },
+          {
+            "explanation": "Jika \\(C_2=0\\), lintasan berada pada sumbu \\(x\\) dan menjauhi asal karena \\(a>0\\).",
+            "formula": "y=0,\\qquad |x(t)|\\to\\infty\\quad(t\\to\\infty)"
+          },
+          {
+            "explanation": "Pada tiap kuadran, hilangkan waktu untuk memperoleh bentuk kurva.",
+            "formula": "|y|=K|x|^{b/a},\\qquad K>0"
+          }
+        ],
+        "plot_check": "Gambar harus mempunyai empat keluarga kurva hiperbolik-tergeneralisasi, dua separatriks berupa sumbu, dan panah dari dekat sumbu \\(y\\) ke dekat sumbu \\(x\\).",
+        "conclusion": "Satu arah mengerut dan satu arah mengembang, sehingga titik asal merupakan titik pelana."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P06",
+      "ordinal": 6,
+      "problem_summary": "Gambarkan bidang fase di sekitar simpul stabil, spiral tak stabil, pusat, dan titik pelana, termasuk arah lintasannya.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Mulailah dari arah eigen. Tanyakan apakah jarak ke titik tetap mengecil, membesar, tetap terbatas pada kurva tertutup, atau mengecil pada satu arah tetapi membesar pada arah lain."
+      },
+      "check": {
+        "type": "qualitative_phase_portrait",
+        "final_answer": "Simpul stabil memiliki lintasan masuk tanpa berputar; spiral tak stabil memiliki lintasan berputar ke luar; pusat dikelilingi kurva tertutup tanpa tarikan atau tolakan; pelana mempunyai dua cabang manifold stabil yang masuk dan dua cabang manifold tak stabil yang keluar.",
+        "required_evidence": [
+          "Setiap sketsa menandai titik tetap dan arah waktu.",
+          "Simpul dan pelana menunjukkan arah eigennya.",
+          "Spiral memperlihatkan rotasi dan pertumbuhan radius, sedangkan pusat memperlihatkan orbit tertutup."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "dimensions": [
+          {
+            "criterion": "Simpul stabil",
+            "full_credit": "Semua lintasan yang cukup dekat mengarah masuk; lintasan eigendireksi lurus dan lintasan umum akhirnya menyinggung arah eigen yang meluruh paling lambat.",
+            "partial_credit": "Arah masuk benar, tetapi digambar berputar atau tanpa arah eigen."
+          },
+          {
+            "criterion": "Spiral tak stabil",
+            "full_credit": "Lintasan berputar sambil menjauhi titik tetap; orientasi putaran dinyatakan bergantung pada matriks, bukan pada tipe spiral saja.",
+            "partial_credit": "Spiral digambar tanpa panah atau justru menuju ke dalam."
+          },
+          {
+            "criterion": "Pusat",
+            "full_credit": "Keluarga orbit tertutup mengelilingi titik tetap dan tidak mempunyai komponen radial bersih.",
+            "partial_credit": "Kurva tertutup ada tetapi diberi spiral masuk/keluar."
+          },
+          {
+            "criterion": "Titik pelana",
+            "full_credit": "Manifold stabil dan tak stabil dibedakan; ketika waktu maju, lintasan umum yang melintas dekat titik tetap memasuki lingkungannya hampir sejajar arah stabil lalu keluar hampir sejajar arah tak stabil.",
+            "partial_credit": "Bentuk silang ada tetapi panah atau separatriks salah."
+          }
+        ],
+        "conclusion": "Empat tipe dibedakan oleh kombinasi rotasi, arah radial, dan jumlah arah stabil versus tak stabil."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P07",
+      "ordinal": 7,
+      "problem_summary": "Nyatakan pola nilai eigen linearisasi sistem dua dimensi di sekitar simpul stabil, spiral tak stabil, pusat, dan titik pelana, beserta batas penafsiran linearisasi.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Untuk matriks real \\(2\\times2\\), nilai eigen nonreal muncul sebagai pasangan konjugat. Tanda bagian real menentukan tarikan atau tolakan; tanda determinan membedakan pelana."
+      },
+      "check": {
+        "type": "exact_classification",
+        "final_answer": "Simpul stabil: dua nilai eigen real negatif. Spiral tak stabil: \\(\\alpha\\pm i\\beta\\) dengan \\(\\alpha>0\\), \\(\\beta\\ne0\\). Pusat linear: \\(\\pm i\\beta\\), \\(\\beta\\ne0\\). Pelana: dua nilai eigen real dengan tanda berlawanan. Untuk sistem nonlinear, nilai eigen imajiner murni tidak cukup sendirian untuk membuktikan pusat.",
+        "quick_check": "Pelana selalu mempunyai determinan negatif; simpul stabil mempunyai jejak negatif dan determinan positif; spiral tak stabil mempunyai jejak positif dan diskriminan karakteristik negatif."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Peluruhan tanpa rotasi memerlukan nilai eigen real dengan bagian real negatif.",
+            "formula": "\\lambda_1<0,\\qquad \\lambda_2<0"
+          },
+          {
+            "explanation": "Rotasi ke luar memerlukan pasangan konjugat dengan bagian real positif.",
+            "formula": "\\lambda_{1,2}=\\alpha\\pm i\\beta,\\qquad \\alpha>0,\\ \\beta\\ne0"
+          },
+          {
+            "explanation": "Pusat pada sistem linear mempunyai frekuensi tanpa pertumbuhan atau peluruhan.",
+            "formula": "\\lambda_{1,2}=\\pm i\\beta,\\qquad \\beta\\ne0"
+          },
+          {
+            "explanation": "Pelana mempunyai tepat satu arah stabil dan satu arah tak stabil.",
+            "formula": "\\lambda_1\\lambda_2<0"
+          }
+        ],
+        "conclusion": "Klasifikasi ini tegas untuk titik tetap hiperbolik; kasus nilai eigen nol atau imajiner murni pada sistem nonlinear memerlukan analisis suku nonlinear."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P08",
+      "ordinal": 8,
+      "problem_summary": "Berikan matriks \\(2\\times2\\) dengan semua entri taknol yang menghasilkan, pada titik asal sistem \\(\\dot X=AX\\), masing-masing simpul stabil, spiral tak stabil, pusat, dan titik pelana; periksa potret fasenya dengan perangkat lunak terbuka.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH03-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "A",
+        "\\dot X = A X"
+      ],
+      "notebook": {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/notebooks/chapter-03-open-phase-plane.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived_adapted_to_open_python",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Pilih matriks sederhana dengan jejak dan determinan yang mengatur tipe yang diinginkan, lalu hitung nilai eigennya. Pastikan tidak ada satu pun dari empat entri yang nol."
+      },
+      "check": {
+        "type": "exact_matrix_examples",
+        "final_answer": "Contoh berturut-turut adalah \\(\\begin{pmatrix}-2&1\\\\1&-2\\end{pmatrix}\\), \\(\\begin{pmatrix}1&-1\\\\1&1\\end{pmatrix}\\), \\(\\begin{pmatrix}1&-2\\\\1&-1\\end{pmatrix}\\), dan \\(\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}\\). Nilai eigennya berturut-turut \\(-1,-3\\); \\(1\\pm i\\); \\(\\pm i\\); dan \\(\\pm\\sqrt2\\).",
+        "quick_check": "Semua 16 entri pada empat contoh taknol, dan tanda bagian real atau hasil kali nilai eigennya cocok dengan tipe yang diminta."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Matriks simetris pertama mempunyai dua nilai eigen negatif dan dua arah eigen bebas.",
+            "formula": "A_s=\\begin{pmatrix}-2&1\\\\1&-2\\end{pmatrix},\\qquad \\sigma(A_s)=\\{-1,-3\\}"
+          },
+          {
+            "explanation": "Matriks kedua adalah pertumbuhan seragam ditambah rotasi.",
+            "formula": "A_u=\\begin{pmatrix}1&-1\\\\1&1\\end{pmatrix},\\qquad \\sigma(A_u)=\\{1\\pm i\\}"
+          },
+          {
+            "explanation": "Matriks ketiga berjejak nol dan berdeterminan satu.",
+            "formula": "A_c=\\begin{pmatrix}1&-2\\\\1&-1\\end{pmatrix},\\qquad \\sigma(A_c)=\\{\\pm i\\}"
+          },
+          {
+            "explanation": "Matriks keempat mempunyai determinan negatif.",
+            "formula": "A_p=\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix},\\qquad \\sigma(A_p)=\\{\\pm\\sqrt2\\}"
+          }
+        ],
+        "notebook_check": "Notebook menyediakan pola terbuka NumPy/SciPy/Matplotlib untuk nilai eigen dan bidang fase, tetapi belum memuat keempat matriks soal. Tambahkan satu sel yang mengevaluasi keempat matriks; potret hasilnya harus menunjukkan masuk tanpa rotasi, spiral keluar, orbit tertutup, dan pelana dalam urutan yang sama.",
+        "conclusion": "Contoh tidak unik; nilai eigen dan potret fase, bukan penampilan entri semata, menentukan klasifikasinya."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P09",
+      "ordinal": 9,
+      "problem_summary": "Jelaskan prosedur menentukan sifat titik tetap \\((x_0,y_0)\\) pada sistem dua dimensi \\(\\dot x=F(x,y)\\), \\(\\dot y=G(x,y)\\), termasuk kasus ketika linearisasi tidak memberi keputusan.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "(x_0,y_0)",
+        "\\displaystyle \\frac{d x}{d t} = F(x,y), \\qquad \\frac{d y}{d t} = G(x,y)."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Setelah mencari akar bersama \\(F=G=0\\), hitung jejak \\(s\\), determinan \\(d\\), dan diskriminan \\(\\Delta=s^2-4d\\) dari matriks Jacobi."
+      },
+      "check": {
+        "type": "classification_procedure",
+        "final_answer": "Hitung \\(J=\\begin{pmatrix}F_x&F_y\\\\G_x&G_y\\end{pmatrix}_{(x_0,y_0)}\\), \\(s=\\operatorname{tr}J\\), \\(d=\\det J\\), dan \\(\\Delta=s^2-4d\\). Jika \\(d<0\\): pelana. Jika \\(d>0,\\Delta>0\\): simpul, stabil untuk \\(s<0\\) dan tak stabil untuk \\(s>0\\). Jika \\(d>0,\\Delta=0\\): nilai eigen real berulang \\(s/2\\) memberi simpul stabil untuk \\(s<0\\) dan simpul tak stabil untuk \\(s>0\\); bentuk Jordan hanya menentukan apakah simpulnya proper atau tak proper. Jika \\(d>0,\\Delta<0\\): spiral dengan stabilitas ditentukan tanda \\(s\\); bila \\(s=0\\), linearisasinya pusat tetapi klasifikasi nonlinear belum diputuskan. Kasus \\(d=0\\) atau bagian real nilai eigen nol memerlukan pemeriksaan tambahan.",
+        "quick_check": "Setiap klasifikasi harus didahului verifikasi \\(F(x_0,y_0)=G(x_0,y_0)=0\\); linearisasi hanya menjamin tipe topologis secara langsung pada titik hiperbolik."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Cari semua titik tetap sebagai akar bersama medan vektor.",
+            "formula": "F(x_0,y_0)=0,\\qquad G(x_0,y_0)=0"
+          },
+          {
+            "explanation": "Evaluasi matriks Jacobi dan polinom karakteristiknya.",
+            "formula": "p(\\lambda)=\\lambda^2-s\\lambda+d,\\qquad s=\\operatorname{tr}J,\\ d=\\det J"
+          },
+          {
+            "explanation": "Determinan negatif berarti nilai eigen real berlainan tanda.",
+            "formula": "d<0\\Longrightarrow\\text{pelana}"
+          },
+          {
+            "explanation": "Untuk determinan positif dan diskriminan positif, nilai eigen real bertanda sama; jejak menentukan tandanya.",
+            "formula": "d>0,\\ \\Delta>0:\\quad s<0\\Rightarrow\\text{simpul stabil},\\quad s>0\\Rightarrow\\text{simpul tak stabil}"
+          },
+          {
+            "explanation": "Untuk diskriminan negatif, bagian real pasangan konjugat adalah \\(s/2\\).",
+            "formula": "d>0,\\ \\Delta<0:\\quad s<0\\Rightarrow\\text{spiral stabil},\\quad s>0\\Rightarrow\\text{spiral tak stabil}"
+          },
+          {
+            "explanation": "Akar real berulang yang tidak nol masih hiperbolik dan memberi simpul; bentuk Jordan membedakan simpul proper dari simpul tak proper.",
+            "formula": "d>0,\\ \\Delta=0,\\ s\\ne0\\Longrightarrow\\text{simpul stabil atau tak stabil}"
+          },
+          {
+            "explanation": "Jika terdapat nilai eigen nol atau pasangan imajiner murni, periksa suku nonlinear, fungsi Lyapunov, atau integral pertama.",
+            "formula": "d=0\\ \\text{atau}\\ s=0,\\Delta<0\\Longrightarrow\\text{linearisasi mungkin tidak konklusif untuk sistem nonlinear}"
+          }
+        ],
+        "conclusion": "Jejak–determinan memberi klasifikasi cepat dan lengkap bagi titik hiperbolik, tetapi tidak boleh dipakai untuk mengklaim pusat nonlinear hanya dari nilai eigen imajiner murni."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P10",
+      "ordinal": 10,
+      "problem_summary": "Gambarkan dan klasifikasikan bidang fase enam sistem yang diberikan, mencakup semua rezim parameter: osilator teredam, sistem kubik konservatif dan teredam, sistem Lotka–Volterra, sistem kompetisi, serta osilator potensial sumur ganda. Periksa hasil dengan perangkat lunak terbuka.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH03-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d}{d t} \\left(\\begin{array}{c}x \\cr y \\end{array}\\right) = \\left(\\begin{array}{c}y \\cr - x - c\\, y \\end{array}\\right), \\qquad c \\gt 0",
+        "\\displaystyle \\frac{d}{d t} \\left(\\begin{array}{c}x \\cr y \\end{array}\\right) = \\left(\\begin{array}{c}y \\cr x (x+1) (x-2) \\end{array}\\right)",
+        "\\displaystyle \\frac{d}{d t} \\left(\\begin{array}{c}x \\cr y \\end{array}\\right) = \\left(\\begin{array}{c}y \\cr x (x+1) (x-2) - c\\, y \\end{array}\\right), \\qquad c \\gt 0",
+        "\\displaystyle \\frac{d}{d t} \\left(\\begin{array}{c}x \\cr y \\end{array}\\right) = \\left(\\begin{array}{c} x (6 - 2 y) \\cr y (x - 3) \\end{array}\\right)",
+        "\\displaystyle \\frac{d}{d t} \\left(\\begin{array}{c}x \\cr y \\end{array}\\right) = \\left(\\begin{array}{c} x (1 - x - 2 y) \\cr y (1 - 3 x - y) / 2 \\end{array}\\right)",
+        "\\displaystyle \\frac{d}{d t} \\left(\\begin{array}{c}x \\cr y \\end{array}\\right) = \\left(\\begin{array}{c} y \\cr x -x^3 \\end{array}\\right)"
+      ],
+      "notebook": {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/notebooks/chapter-03-open-phase-plane.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived_adapted_to_open_python",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Untuk setiap sistem: cari semua titik tetap, hitung matriks Jacobi dan nilai eigen, lalu cari energi atau integral pertama bila ada. Untuk sistem teredam, turunkan laju perubahan energi; jangan melewatkan nilai redaman kritis."
+      },
+      "check": {
+        "type": "multi_system_phase_portrait",
+        "final_answer": "(1) Asal stabil: spiral untuk \\(0<c<2\\), simpul degenerat kritis untuk \\(c=2\\), simpul stabil untuk \\(c>2\\). (2) \\((-1,0)\\) dan \\((2,0)\\) pelana, \\((0,0)\\) pusat. (3) Kedua titik luar tetap pelana; asal spiral stabil untuk \\(0<c<\\sqrt8\\), simpul kritis untuk \\(c=\\sqrt8\\), dan simpul stabil untuk \\(c>\\sqrt8\\). (4) \\((0,0)\\) pelana dan \\((3,3)\\) pusat dengan orbit tertutup di kuadran positif. (5) \\((0,0)\\) simpul tak stabil, \\((1,0)\\) dan \\((0,1)\\) simpul stabil, serta \\((1/5,2/5)\\) pelana pemisah basin. (6) \\((0,0)\\) pelana, \\((\\pm1,0)\\) pusat, dengan separatriks berbentuk angka delapan pada energi nol.",
+        "required_evidence": [
+          "Semua titik tetap dan nilai eigen atau jejak–determinan dicatat.",
+          "Kasus kritis \\(c=2\\) dan \\(c=\\sqrt8\\) dipisahkan dari rezim lain.",
+          "Sistem konservatif memakai kurva tingkat energi; sistem teredam menunjukkan energi menurun.",
+          "Arah panah, separatriks, sumbu invarian, dan basin yang relevan tampak pada sketsa atau notebook."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Sistem (1) mempunyai polinom karakteristik \\(\\lambda^2+c\\lambda+1\\). Pada redaman kritis, solusi bukan dua eksponensial bebas.",
+            "formula": "\\lambda_{\\pm}=\\frac{-c\\pm\\sqrt{c^2-4}}2;\\quad c=2:\\ x=(A+Bt)e^{-t},\\ y=(B-A-Bt)e^{-t}"
+          },
+          {
+            "explanation": "Pada sistem (2), tulis \\(f(x)=x(x+1)(x-2)\\). Jacobi di \\((x_*,0)\\) mempunyai \\(\\lambda^2=f'(x_*)\\); energi memakai \\(V'=-f\\).",
+            "formula": "f'(-1)=3,\\ f'(0)=-2,\\ f'(2)=6;\\quad V(x)=-\\frac{x^4}{4}+\\frac{x^3}{3}+x^2"
+          },
+          {
+            "explanation": "Pada sistem (3), redaman tidak mengubah titik tetap. Di asal, \\(\\lambda^2+c\\lambda+2=0\\); pada titik luar determinan negatif. Energi turun kecuali saat \\(y=0\\).",
+            "formula": "\\lambda_{\\pm}(0)=\\frac{-c\\pm\\sqrt{c^2-8}}2,\\qquad \\dot H=-cy^2\\le0"
+          },
+          {
+            "explanation": "Sistem (4) memiliki sumbu invarian. Di kuadran positif terdapat integral pertama yang minimum di \\((3,3)\\), sehingga level-levelnya tertutup.",
+            "formula": "H(x,y)=x-3\\ln x+2y-6\\ln y,\\qquad x>0,\\ y>0"
+          },
+          {
+            "explanation": "Sistem (5) mempunyai empat titik tetap. Evaluasi Jacobi memberi klasifikasi dan manifold stabil pelana membagi basin menuju dua keadaan batas.",
+            "formula": "(0,0),\\ (1,0),\\ (0,1),\\ (1/5,2/5);\\qquad \\det J(1/5,2/5)=-1/5<0"
+          },
+          {
+            "explanation": "Sistem (6) konservatif dengan potensial sumur ganda; level energi menentukan dua keluarga orbit dalam dan satu keluarga luar.",
+            "formula": "H=\\frac12y^2-\\frac12x^2+\\frac14x^4;\\quad H=0\\text{ adalah separatriks angka delapan}"
+          }
+        ],
+        "plot_check": "Gunakan pola integrasi dan medan vektor terbuka dalam notebook sebagai kerangka, lalu definisikan sendiri enam ruas kanan soal; notebook belum memuat keenam kasus tersebut. Hasil tambahan harus menampilkan titik tetap, arah waktu, separatriks, dan transisi pada nilai redaman kritis yang konsisten dengan klasifikasi analitik.",
+        "conclusion": "Linearisasi menentukan struktur lokal pada titik hiperbolik, sedangkan energi, integral pertama, dan separatriks diperlukan untuk menyusun potret global."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P11",
+      "ordinal": 11,
+      "problem_summary": "Analisis osilator van der Pol: deskripsikan kasus \\(\\epsilon=0\\), efek suku nonlinear untuk \\(|x|\\) kecil dan besar, perilaku amplitudo menengah, serta potret fase; kemudian periksa secara komputasional.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH03-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d^2 x}{d t^2} + \\omega^2 x = \\epsilon \\frac{d x}{d t} (1 - x^2), \\qquad \\epsilon \\ge 0.",
+        "\\epsilon=0",
+        "|x|",
+        "1"
+      ],
+      "notebook": {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/notebooks/chapter-03-open-phase-plane.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived_adapted_to_open_python",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Gunakan energi osilator harmonik \\(H=(y^2+\\omega^2x^2)/2\\), dengan \\(y=\\dot x\\), lalu hitung \\(\\dot H\\). Tanda \\(1-x^2\\) menjelaskan mekanisme pemilihan amplitudo."
+      },
+      "check": {
+        "type": "analytic_and_computational",
+        "final_answer": "Dengan asumsi \\(\\omega>0\\): untuk \\(\\epsilon=0\\), orbit adalah elips tertutup berperiode \\(2\\pi/\\omega\\). Untuk \\(\\epsilon>0\\), \\(\\dot H=\\epsilon y^2(1-x^2)\\): energi bertambah ketika \\(|x|<1\\) dan berkurang ketika \\(|x|>1\\). Karena itu titik asal menjadi tak stabil dan lintasan nontrivial menuju satu siklus batas stabil, berarah searah jarum jam pada bidang \\((x,y)\\).",
+        "quick_check": "Pada sumbu \\(x>0,y=0\\), \\(\\dot y=-\\omega^2x<0\\), sehingga orientasi harus ke bawah dan kemudian searah jarum jam."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "assumption": "Diasumsikan \\(\\omega>0\\); kasus \\(\\omega=0\\) bersifat degenerat dan tidak mempunyai osilator harmonik yang dinyatakan dalam soal.",
+        "steps": [
+          {
+            "explanation": "Tetapkan \\(y=\\dot x\\) untuk memperoleh sistem bidang fase.",
+            "formula": "\\dot x=y,\\qquad \\dot y=-\\omega^2x+\\epsilon y(1-x^2)"
+          },
+          {
+            "explanation": "Jika \\(\\epsilon=0\\), energi harmonik kekal dan levelnya berupa elips.",
+            "formula": "H=\\frac12(y^2+\\omega^2x^2),\\qquad \\dot H=0"
+          },
+          {
+            "explanation": "Untuk \\(\\epsilon>0\\), turunan energi mempunyai tanda yang berubah menurut amplitudo posisi.",
+            "formula": "\\dot H=y(\\dot y+\\omega^2x)=\\epsilon y^2(1-x^2)"
+          },
+          {
+            "explanation": "Di bagian dalam, mekanisme bertindak sebagai redaman negatif; di bagian luar, sebagai redaman positif. Keseimbangan rata-rata kedua efek memilih orbit periodik stabil.",
+            "formula": "|x|<1\\Rightarrow\\dot H\\ge0,\\qquad |x|>1\\Rightarrow\\dot H\\le0"
+          },
+          {
+            "explanation": "Linearisasi titik asal mempunyai bagian real positif untuk \\(\\epsilon>0\\), sehingga titik asal menolak lintasan.",
+            "formula": "\\lambda^2-\\epsilon\\lambda+\\omega^2=0"
+          }
+        ],
+        "notebook_check": "Adaptasikan pola solve_ivp dalam notebook dengan menambahkan ruas kanan van der Pol; kasus ini belum tersedia sebagai sel siap-jalan. Untuk beberapa kondisi awal nonnol dan \\(\\epsilon>0\\), integrasi tambahan harus mendekati kurva periodik yang sama setelah transien; lintasan awal di dalam membesar dan lintasan awal di luar mengecil.",
+        "conclusion": "Siklus batas tidak mengejutkan: penguatan amplitudo kecil dan peredaman amplitudo besar menyediakan umpan balik yang menstabilkan amplitudo menengah."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P12",
+      "ordinal": 12,
+      "problem_summary": "Untuk \\(\\dot x=\\lambda x-\\gamma x^3\\), tentukan dimensi \\(\\lambda\\) dan \\(\\gamma\\), skalakan waktu untuk menghilangkan besar \\(\\lambda\\), lalu skalakan amplitudo untuk menghilangkan besar \\(\\gamma\\), dengan memperlakukan tanda dan kasus nol secara jujur.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d x}{d t} = \\lambda x - \\gamma x^3.",
+        "\\lambda",
+        "\\gamma",
+        "[x]",
+        "t_0",
+        "\\tau = t / t_0"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Samakan dimensi setiap suku dengan \\([x]T^{-1}\\). Untuk \\(\\lambda\\gamma\\ne0\\), gunakan \\(t_0=1/|\\lambda|\\) dan skala amplitudo \\(x_0=\\sqrt{|\\lambda|/|\\gamma|}\\)."
+      },
+      "check": {
+        "type": "exact_nondimensionalization",
+        "final_answer": "\\([\\lambda]=T^{-1}\\) dan \\([\\gamma]=[x]^{-2}T^{-1}\\). Dengan \\(\\tau=|\\lambda|t\\), persamaan menjadi \\(dx/d\\tau=\\operatorname{sgn}(\\lambda)x-(\\gamma/|\\lambda|)x^3\\). Jika \\(\\gamma\\ne0\\), tetapkan \\(x=\\sqrt{|\\lambda|/|\\gamma|}\\,X\\), sehingga \\(dX/d\\tau=\\operatorname{sgn}(\\lambda)X-\\operatorname{sgn}(\\gamma)X^3\\). Untuk \\(\\lambda,\\gamma>0\\), bentuknya \\(X'=X-X^3\\). Tanda dan kasus parameter nol tidak dapat dihilangkan oleh penskalaan real biasa.",
+        "quick_check": "Setiap suku persamaan tak berdimensi harus bebas satuan; transformasi amplitudo hanya sah bila \\(\\lambda\\gamma\\ne0\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Turunan waktu memiliki dimensi besaran dibagi waktu.",
+            "formula": "[\\dot x]=[x]T^{-1}"
+          },
+          {
+            "explanation": "Samakan dimensi suku linear dan kubik dengan ruas kiri.",
+            "formula": "[\\lambda]=T^{-1},\\qquad [\\gamma]=[x]^{-2}T^{-1}"
+          },
+          {
+            "explanation": "Untuk \\(\\lambda\\ne0\\), gunakan waktu tak berdimensi yang tidak membalik orientasi waktu.",
+            "formula": "\\tau=|\\lambda|t,\\qquad \\frac{dx}{d\\tau}=\\operatorname{sgn}(\\lambda)x-\\frac{\\gamma}{|\\lambda|}x^3"
+          },
+          {
+            "explanation": "Untuk \\(\\gamma\\ne0\\), serap besar koefisien kubik ke skala amplitudo.",
+            "formula": "x=\\sqrt{\\frac{|\\lambda|}{|\\gamma|}}X,\\qquad \\frac{dX}{d\\tau}=\\operatorname{sgn}(\\lambda)X-\\operatorname{sgn}(\\gamma)X^3"
+          },
+          {
+            "explanation": "Jika parameter positif seperti lazim pada bentuk normal bifurkasi superkritis, kedua besar parameter hilang sepenuhnya.",
+            "formula": "\\lambda>0,\\gamma>0:\\qquad X'=X-X^3"
+          }
+        ],
+        "conclusion": "Penskalaan menghilangkan besar kedua parameter nonnol, tetapi menyisakan kelas dinamik diskret yang ditentukan oleh tanda; kasus \\(\\lambda=0\\) atau \\(\\gamma=0\\) adalah rezim berbeda."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P13",
+      "ordinal": 13,
+      "problem_summary": "Gunakan hukum gravitasi Newton untuk menunjukkan bahwa gaya pada benda bermassa \\(m\\) di dekat permukaan Bumi dapat dihampiri dengan \\(F\\simeq mg\\), lalu nyatakan \\(g\\) melalui konstanta gravitasi \\(G\\), massa Bumi \\(M\\), dan jari-jari Bumi \\(R\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "m_1",
+        "m_2",
+        "\\displaystyle F = G \\frac{m_1 m_2}{r^2},",
+        "r",
+        "G",
+        "m",
+        "F \\simeq m g",
+        "g",
+        "M",
+        "R"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Ambil kedua massa sebagai \\(m\\) dan \\(M\\), lalu tulis jarak pusatnya \\(r=R+h\\). Untuk \\(|h|\\ll R\\), faktor \\((1+h/R)^{-2}\\) hampir satu."
+      },
+      "check": {
+        "type": "exact_approximation",
+        "final_answer": "\\(F=GMm/(R+h)^2=m[GM/R^2](1+h/R)^{-2}\\). Di dekat permukaan, \\(|h|\\ll R\\), sehingga \\(F\\simeq mg\\) dengan \\(g=GM/R^2\\).",
+        "quick_check": "Dimensi \\(GM/R^2\\) harus \\(LT^{-2}\\), dan galat relatif orde pertama dari mengganti \\(R+h\\) dengan \\(R\\) adalah sekitar \\(2|h|/R\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Masukkan massa benda dan Bumi ke hukum gravitasi.",
+            "formula": "F=G\\frac{mM}{r^2}"
+          },
+          {
+            "explanation": "Pada ketinggian \\(h\\) dari permukaan, jarak antarpusat adalah \\(R+h\\).",
+            "formula": "F=m\\frac{GM}{R^2}\\left(1+\\frac{h}{R}\\right)^{-2}"
+          },
+          {
+            "explanation": "Jika \\(|h|/R\\) kecil, faktor koreksi mendekati satu.",
+            "formula": "\\left(1+\\frac{h}{R}\\right)^{-2}=1-2\\frac{h}{R}+O((h/R)^2)"
+          },
+          {
+            "explanation": "Definisikan percepatan gravitasi permukaan sebagai koefisien gaya per massa.",
+            "formula": "g=\\frac{GM}{R^2},\\qquad F\\simeq mg"
+          }
+        ],
+        "conclusion": "Anggapan \\(g\\) konstan adalah hampiran lokal yang sah ketika perubahan ketinggian jauh lebih kecil daripada jari-jari Bumi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P14",
+      "ordinal": 14,
+      "problem_summary": "Kembangkan \\(\\cos x\\) di sekitar nol hingga orde lima, gunakan sisa Taylor untuk memberi syarat yang menjamin \\(|E_5(x)|<0{,}05\\), lalu periksa syarat itu secara numerik.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "f(x)",
+        "x = x_0",
+        "\\displaystyle f(x) = \\sum_{i = 0}^n f^{(i)}(x_0) \\frac{(x - x_0)^i}{i !} + f^{(n+1)}(\\bar x) \\frac{(x - x_0)^{n+1}}{(n+1)!}, \\qquad (3.20)",
+        "\\bar x \\in [x_0,x]",
+        "E_n(x)",
+        "\\displaystyle E_n(x) = f(x) - \\sum_{i = 0}^n f^{(i)}(x_0) \\frac{(x - x_0)^i}{i !} .",
+        "f(x) = \\cos(x)",
+        "x_0 = 0",
+        "n = 5",
+        "|x|",
+        "\\vert E_5(x) \\vert \\lt 0.05"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Koefisien pangkat ganjil kosinus nol. Dalam sisa Lagrange orde lima, turunan keenam adalah \\(-\\cos\\bar x\\), yang nilai mutlaknya paling besar satu."
+      },
+      "check": {
+        "type": "exact_bound",
+        "final_answer": "\\(\\cos x=1-x^2/2+x^4/24+E_5(x)\\), dengan \\(E_5(x)=-\\cos(\\bar x)x^6/720\\). Karena \\(|E_5(x)|\\le|x|^6/720\\), syarat cukup ialah \\(|x|<36^{1/6}\\approx1{,}817120593\\).",
+        "quick_check": "Pada setiap nilai uji dalam interval tersebut, galat aktual \\(|\\cos x-(1-x^2/2+x^4/24)|\\) harus kurang dari \\(0{,}05\\); batas ini cukup, tidak diklaim perlu."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Evaluasi turunan kosinus di nol hingga orde lima.",
+            "formula": "P_5(x)=1-\\frac{x^2}{2!}+\\frac{x^4}{4!}"
+          },
+          {
+            "explanation": "Sisa Lagrange memakai turunan keenam di suatu titik antara nol dan \\(x\\).",
+            "formula": "E_5(x)=\\frac{f^{(6)}(\\bar x)x^6}{6!}=-\\frac{\\cos(\\bar x)x^6}{720}"
+          },
+          {
+            "explanation": "Batasi kosinus dengan satu.",
+            "formula": "|E_5(x)|\\le\\frac{|x|^6}{720}"
+          },
+          {
+            "explanation": "Paksa batas atas itu lebih kecil daripada toleransi yang diminta.",
+            "formula": "\\frac{|x|^6}{720}<0.05\\Longleftrightarrow |x|<36^{1/6}\\approx1.817120593"
+          }
+        ],
+        "conclusion": "Pemeriksaan numerik memvalidasi ketaksamaan pada titik sampel, sedangkan bukti sisa Taylor menjaminnya pada seluruh interval yang dinyatakan."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P15",
+      "ordinal": 15,
+      "problem_summary": "Untuk model \\(u_t=\\mu u+\\alpha u_{xx}-\\beta u^3\\) dengan \\(\\alpha,\\beta>0\\), tentukan dimensi ketiga parameter dan jumlah parameter relevan setelah penskalaan ruang, waktu, dan amplitudo, termasuk peran tanda atau nolnya \\(\\mu\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{\\partial u}{\\partial t} = \\mu u + \\alpha \\frac{\\partial^2 u}{\\partial x^2} - \\beta u^3, \\qquad u \\in \\mathbb{R}, \\quad \\alpha, \\beta \\gt 0.",
+        "\\alpha",
+        "\\beta",
+        "\\mu",
+        "[u]"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Samakan dimensi semua suku dengan \\([u]T^{-1}\\). Untuk \\(\\mu\\ne0\\), coba \\(t=|\\mu|^{-1}\\tau\\), \\(x=\\sqrt{\\alpha/|\\mu|}\\,X\\), dan \\(u=\\sqrt{|\\mu|/\\beta}\\,U\\)."
+      },
+      "check": {
+        "type": "exact_nondimensionalization",
+        "final_answer": "\\([\\mu]=T^{-1}\\), \\([\\alpha]=L^2T^{-1}\\), dan \\([\\beta]=[u]^{-2}T^{-1}\\). Untuk \\(\\mu\\ne0\\), penskalaan \\(t=\\tau/|\\mu|\\), \\(x=\\sqrt{\\alpha/|\\mu|}\\,X\\), \\(u=\\sqrt{|\\mu|/\\beta}\\,U\\) memberi \\(U_\\tau=\\operatorname{sgn}(\\mu)U+U_{XX}-U^3\\). Jadi tidak ada parameter kontinu relevan, tetapi tanda \\(\\mu\\) dan rezim \\(\\mu=0\\) tetap membedakan kelas dinamika.",
+        "quick_check": "Untuk \\(\\mu>0\\), bentuk bakunya \\(U_\\tau=U+U_{XX}-U^3\\); koefisien ketiga suku pada ruas kanan semuanya satu dalam besar."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Turunan waktu menetapkan dimensi acuan setiap suku.",
+            "formula": "[u_t]=[u]T^{-1}"
+          },
+          {
+            "explanation": "Samakan masing-masing suku linear, difusif, dan kubik dengan dimensi acuan.",
+            "formula": "[\\mu]=T^{-1},\\qquad [\\alpha]=L^2T^{-1},\\qquad [\\beta]=[u]^{-2}T^{-1}"
+          },
+          {
+            "explanation": "Untuk \\(\\mu\\ne0\\), gunakan tiga skala yang tersedia untuk menyerap besar ketiga parameter.",
+            "formula": "t=\\frac{\\tau}{|\\mu|},\\qquad x=\\sqrt{\\frac{\\alpha}{|\\mu|}}X,\\qquad u=\\sqrt{\\frac{|\\mu|}{\\beta}}U"
+          },
+          {
+            "explanation": "Substitusi dan pembagian oleh skala bersama menghasilkan bentuk tanpa parameter kontinu.",
+            "formula": "U_{\\tau}=\\operatorname{sgn}(\\mu)U+U_{XX}-U^3"
+          },
+          {
+            "explanation": "Penskalaan positif tidak dapat mengubah tanda \\(\\mu\\), dan skala berbasis \\(|\\mu|\\) tidak berlaku saat \\(\\mu=0\\).",
+            "formula": "\\mu>0,\\quad \\mu<0,\\quad \\mu=0\\ \\text{adalah tiga rezim diskret}"
+          }
+        ],
+        "conclusion": "Model memiliki nol kelompok parameter kontinu tak berdimensi dalam setiap rezim \\(\\mu\\ne0\\); tanda dan degenerasi nol adalah informasi kualitatif yang tidak boleh disebut telah ‘dihilangkan’."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P16",
+      "ordinal": 16,
+      "problem_summary": "Tuliskan \\(\\ddot x+V'(x)=0\\) sebagai sistem orde pertama, cari titik tetapnya, linearisasikan di titik tetap sembarang, lalu buktikan bahwa maksimum nondegenerat \\(V\\) memberi pelana dan minimum nondegenerat \\(V\\) memberi pusat linear.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d^2 x}{d t^2} + \\frac{d V}{d x} = 0,",
+        "V(x)",
+        "V"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Tetapkan \\(y=\\dot x\\). Pada titik tetap \\((x_*,0)\\), persamaan karakteristik linearisasi sangat sederhana: \\(\\lambda^2+V''(x_*)=0\\)."
+      },
+      "check": {
+        "type": "exact_linearization",
+        "final_answer": "Sistem orde pertamanya \\(\\dot x=y\\), \\(\\dot y=-V'(x)\\). Titik tetap adalah \\((x_*,0)\\) dengan \\(V'(x_*)=0\\). Matriks linearnya \\(J_* =\\begin{pmatrix}0&1\\\\-V''(x_*)&0\\end{pmatrix}\\), sehingga \\(\\lambda^2=-V''(x_*)\\). Jika \\(V''(x_*)<0\\), nilai eigen real berlainan tanda dan titik itu pelana; jika \\(V''(x_*)>0\\), nilai eigen \\(\\pm i\\sqrt{V''(x_*)}\\) dan linearisasinya pusat.",
+        "quick_check": "Kasus \\(V''(x_*)=0\\) harus dinyatakan tidak konklusif, bukan dipaksa menjadi pusat atau pelana."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Perkenalkan kecepatan sebagai variabel kedua.",
+            "formula": "\\dot x=y,\\qquad \\dot y=-V'(x)"
+          },
+          {
+            "explanation": "Kedua turunan waktu harus nol pada titik tetap.",
+            "formula": "y_*=0,\\qquad V'(x_*)=0"
+          },
+          {
+            "explanation": "Linearisasi dalam \\(\\xi=x-x_*\\), \\(\\eta=y\\) adalah:",
+            "formula": "\\frac{d}{dt}\\binom{\\xi}{\\eta}=\\begin{pmatrix}0&1\\\\-V''(x_*)&0\\end{pmatrix}\\binom{\\xi}{\\eta}"
+          },
+          {
+            "explanation": "Polinom karakteristik langsung menghubungkan kelengkungan potensial dengan tipe titik.",
+            "formula": "\\lambda^2+V''(x_*)=0"
+          },
+          {
+            "explanation": "Maksimum nondegenerat mempunyai kelengkungan negatif; minimum nondegenerat mempunyai kelengkungan positif.",
+            "formula": "V''<0\\Rightarrow\\lambda=\\pm\\sqrt{-V''};\\qquad V''>0\\Rightarrow\\lambda=\\pm i\\sqrt{V''}"
+          }
+        ],
+        "conclusion": "Maksimum potensial tidak stabil dalam satu arah waktu dan stabil dalam arah lain, sedangkan minimum menopang osilasi kecil; degenerasi memerlukan suku potensial berorde lebih tinggi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P17",
+      "ordinal": 17,
+      "problem_summary": "Untuk sistem konservatif \\(\\ddot x+V'(x)=0\\) dengan \\((x_0,0)\\) sebuah titik pelana, temukan persamaan lintasan bidang fase di dekat titik tersebut dan arah garis singgung separatriksnya.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d^2 x}{d t^2} + \\frac{d V}{d x} = 0,",
+        "V(x)",
+        "(x_0, 0)"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Gunakan kekekalan \\(H=y^2/2+V(x)\\). Separatriks yang melalui pelana mempunyai energi tepat \\(V(x_0)\\); kemudian kembangkan \\(V\\) hingga orde dua."
+      },
+      "check": {
+        "type": "exact_local_separatrix",
+        "final_answer": "Dengan \\(y=\\dot x\\), lintasan energi memenuhi \\(y=\\pm\\sqrt{2(E-V(x))}\\). Separatriks melalui pelana memakai \\(E=V(x_0)\\): \\(y=\\pm\\sqrt{2[V(x_0)-V(x)]}\\). Jika pelana nondegenerat, \\(V''(x_0)<0\\) dan garis singgungnya \\(y=\\pm\\sqrt{-V''(x_0)}(x-x_0)\\).",
+        "quick_check": "Kemiringan kedua garis singgung harus sama dengan dua nilai eigen \\(\\lambda=\\pm\\sqrt{-V''(x_0)}\\) karena vektor eigennya berbentuk \\((1,\\lambda)\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "assumption": "Titik pelana nondegenerat, sehingga V'(x_0)=0 dan V''(x_0)<0.",
+        "steps": [
+          {
+            "explanation": "Kalikan persamaan oleh \\(\\dot x\\) untuk memperoleh integral energi.",
+            "formula": "H(x,y)=\\frac12y^2+V(x)=E"
+          },
+          {
+            "explanation": "Lintasan yang melalui \\((x_0,0)\\) mempunyai energi pelana.",
+            "formula": "E_s=V(x_0),\\qquad y=\\pm\\sqrt{2[V(x_0)-V(x)]}"
+          },
+          {
+            "explanation": "Kembangkan potensial di sekitar titik kritis.",
+            "formula": "V(x)=V(x_0)+\\frac12V''(x_0)(x-x_0)^2+O((x-x_0)^3)"
+          },
+          {
+            "explanation": "Substitusi memberi dua cabang yang menyinggung arah eigen stabil dan tak stabil.",
+            "formula": "y^2=-V''(x_0)(x-x_0)^2+O((x-x_0)^3)"
+          }
+        ],
+        "conclusion": "Separatriks adalah kurva energi pelana; secara lokal kedua cabangnya menyinggung garis eigen dengan kemiringan \\(\\pm\\sqrt{-V''(x_0)}\\)."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P18",
+      "ordinal": 18,
+        "problem_summary": "Untuk \\(\\ddot x+V'(x)=0\\), buktikan bahwa lintasan berenergi \\(E\\) di antara infimum dan supremum potensial memotong sumbu \\(x\\), dan bahwa garis singgungnya vertikal pada titik potong dengan \\(V'(x)\\ne0\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d^2 x}{d t^2} + \\frac{d V}{d x} = 0,",
+        "V(x)",
+        "\\left(x,\\dfrac{dx}{dt}\\right)",
+        "E",
+        "\\min(V) \\lt E \\lt \\max(V)",
+        "\\displaystyle \\frac{d V}{d x} \\ne 0"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Tulis kurva energi sebagai \\(y^2=2(E-V(x))\\). Perpotongan sumbu memenuhi \\(y=0\\); untuk kemiringan, lebih aman memandang \\(x\\) sebagai fungsi \\(y\\) di dekat titik potong."
+      },
+      "check": {
+        "type": "analytic_proof",
+        "final_answer": "Karena \\(V\\) kontinu dan \\(\\inf V<E<\\sup V\\), teorema nilai antara memberi sedikitnya satu \\(x_*\\) dengan \\(V(x_*)=E\\); pada kurva energi ini berarti \\(y=0\\), jadi lintasan memotong sumbu \\(x\\). Dari \\(y^2=2(E-V(x))\\), diperoleh \\(dx/dy=-y/V'(x)\\); jika \\(V'(x_*)\\ne0\\), maka \\(dx/dy=0\\) di perpotongan, sehingga garis singgungnya vertikal.",
+        "quick_check": "Rumus \\(dy/dx=-V'(x)/y\\) harus divergen di titik potong biasa; jika \\(V'(x_*)=0\\), argumen vertikal tidak berlaku dan titik itu dapat berupa kesetimbangan atau separatriks."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Energi mekanis kekal pada setiap lintasan.",
+            "formula": "\\frac12y^2+V(x)=E,\\qquad y=\\dot x"
+          },
+          {
+            "explanation": "Nilai energi yang terletak ketat di dalam rentang kontinu \\(V\\) dicapai pada sedikitnya satu posisi.",
+            "formula": "\\exists x_*:\\quad V(x_*)=E"
+          },
+          {
+            "explanation": "Pada posisi tersebut, persamaan energi memaksa kecepatan nol.",
+            "formula": "y^2=2(E-V(x_*))=0"
+          },
+          {
+            "explanation": "Turunkan implisit kurva energi terhadap \\(y\\) dan evaluasi pada perpotongan biasa.",
+            "formula": "2y=-2V'(x)\\frac{dx}{dy}\\Longrightarrow\\frac{dx}{dy}=-\\frac{y}{V'(x)}\\to0"
+          }
+        ],
+        "conclusion": "Titik balik biasa adalah perpotongan sumbu dengan garis singgung vertikal; syarat \\(V'\\ne0\\) tepat mengecualikan titik kritis potensial."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P19",
+      "ordinal": 19,
+      "problem_summary": "Gambarkan potret fase sistem konservatif untuk potensial berbentuk satu sumur halus dengan satu minimum dan \\(V(x)\\to+\\infty\\) pada kedua ujung, menggunakan kurva tingkat energi.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d^2 x}{d t^2} + \\frac{d V}{d x}=0,",
+        "V(x)",
+        "\\displaystyle \\lim_{x \\to - \\infty} V(x) = \\lim_{x \\to + \\infty} V(x) = + \\infty.",
+        "x"
+      ],
+      "notebook": {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/notebooks/chapter-03-open-phase-plane.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Untuk setiap energi, gambar \\(y=\\pm\\sqrt{2(E-V(x))}\\) hanya pada posisi dengan \\(V(x)\\le E\\). Titik minimum potensial menjadi pusat."
+      },
+      "check": {
+        "type": "qualitative_energy_portrait",
+        "final_answer": "Jika minimum tunggal berada di \\(x_m\\) dengan energi \\(E_m=V(x_m)\\), maka \\((x_m,0)\\) adalah pusat. Untuk setiap \\(E>E_m\\), persamaan \\(V(x)=E\\) mempunyai dua titik balik dan level \\(y=\\pm\\sqrt{2(E-V(x))}\\) membentuk satu oval tertutup yang mengelilingi pusat. Semua gerak berenergi hingga terikat dan periodik.",
+        "required_evidence": [
+          "Pusat di minimum potensial ditandai.",
+          "Setiap oval simetris terhadap sumbu x dan memotongnya vertikal pada dua titik balik.",
+          "Panah menunjukkan bagian atas bergerak ke kanan dan bagian bawah ke kiri.",
+          "Oval energi yang lebih tinggi mengelilingi oval energi yang lebih rendah."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Gunakan energi untuk menentukan seluruh kurva fase.",
+            "formula": "y=\\pm\\sqrt{2(E-V(x))},\\qquad V(x)\\le E"
+          },
+          {
+            "explanation": "Pada energi minimum, satu-satunya titik adalah kesetimbangan pusat.",
+            "formula": "E=E_m:\\quad (x,y)=(x_m,0)"
+          },
+          {
+            "explanation": "Karena potensial naik ke takhingga di kedua ujung, setiap \\(E>E_m\\) mempunyai dua titik balik yang membatasi interval gerak.",
+            "formula": "V(x_-(E))=V(x_+(E))=E"
+          },
+          {
+            "explanation": "Cabang positif dan negatif bertemu di kedua titik balik, membentuk oval tertutup.",
+            "formula": "x_-(E)\\le x\\le x_+(E)"
+          }
+        ],
+        "notebook_check": "Notebook memperagakan cara membentuk potret fase dari potensial pendulum. Gunakan pola terbuka itu dengan menambahkan potensial satu-sumur representatif; hasil tambahan harus memperlihatkan oval tertutup bersarang tanpa separatriks atau lintasan tak terbatas.",
+        "conclusion": "Konfinemen potensial pada kedua arah membuat semua level energi di atas minimum berupa osilasi periodik."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P20",
+      "ordinal": 20,
+      "problem_summary": "Gambarkan potret fase untuk potensial dua sumur yang naik ke \\(+\\infty\\) pada kedua ujung, dengan minimum kiri lebih dalam, minimum kanan lebih dangkal, dan satu maksimum di antaranya.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d^2 x}{d t^2} + \\frac{d V}{d x} = 0,",
+        "V(x)",
+        "\\displaystyle \\lim_{x \\to - \\infty} V(x) = \\lim_{x \\to + \\infty} V(x) = + \\infty.",
+        "x"
+      ],
+      "notebook": {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/notebooks/chapter-03-open-phase-plane.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Namai energi minimum kiri \\(E_L\\), minimum kanan \\(E_R\\), dan puncak tengah \\(E_s\\), dengan \\(E_L<E_R<E_s\\). Topologi level berubah setiap kali energi melewati salah satu nilai kritis."
+      },
+      "check": {
+        "type": "qualitative_energy_portrait",
+        "final_answer": "Kedua minimum memberi pusat dan maksimum tengah memberi pelana. Untuk \\(E_L<E<E_R\\), hanya ada oval di sumur kiri. Untuk \\(E_R<E<E_s\\), ada dua keluarga oval terpisah, masing-masing mengelilingi satu pusat. Pada \\(E=E_s\\), separatriks melalui pelana membentuk dua lobus yang memisahkan kedua sumur. Untuk \\(E>E_s\\), satu oval luar mengelilingi kedua sumur. Karena \\(V\\to+\\infty\\) di kedua arah, semua level reguler tetap terikat.",
+        "required_evidence": [
+          "Dua pusat dan satu pelana ditempatkan pada absis titik kritis potensial.",
+          "Tidak ada orbit di sumur kanan pada energi di bawah minimum kanannya.",
+          "Separatriks energi puncak dan perubahan dua oval menjadi satu oval ditampilkan.",
+          "Arah panah dan simetri terhadap sumbu x benar."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Titik minimum nondegenerat menghasilkan pusat dan maksimum menghasilkan pelana.",
+            "formula": "V''(x_L)>0,\\quad V''(x_R)>0,\\quad V''(x_s)<0"
+          },
+          {
+            "explanation": "Di bawah minimum kanan, himpunan \\(V\\le E\\) hanya berada di sumur kiri.",
+            "formula": "E_L<E<E_R:\\quad \\text{satu komponen terikat}"
+          },
+          {
+            "explanation": "Di antara minimum kanan dan puncak, daerah yang diizinkan terpecah menjadi dua interval.",
+            "formula": "E_R<E<E_s:\\quad \\text{dua oval terpisah}"
+          },
+          {
+            "explanation": "Pada energi pelana, kedua lobus bertemu di titik pelana dan menjadi separatriks.",
+            "formula": "E=E_s=V(x_s)"
+          },
+          {
+            "explanation": "Di atas penghalang, satu interval posisi menghubungkan kedua sumur.",
+            "formula": "E>E_s:\\quad \\text{satu oval luar}"
+          }
+        ],
+        "notebook_check": "Adaptasikan konstruksi kurva energi pada notebook dengan potensial dua-sumur taksimetris yang mempertahankan urutan energi kritis gambar; sel tambahan harus menunjukkan satu oval, dua oval, separatriks dua lobus, lalu satu oval luar.",
+        "conclusion": "Energi puncak adalah ambang perpindahan antar-sumur; kedalaman yang berbeda menentukan kapan keluarga orbit di tiap sumur pertama kali muncul."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P21",
+      "ordinal": 21,
+      "problem_summary": "Gambarkan potret fase untuk potensial yang menuju \\(+\\infty\\) saat \\(x\\to-\\infty\\) dan \\(-\\infty\\) saat \\(x\\to+\\infty\\), dengan satu minimum lokal diikuti satu maksimum lokal.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d^2 x}{d t^2} + \\frac{d V}{d x} = 0,",
+        "V(x)",
+        "\\displaystyle \\lim_{x \\to - \\infty} V(x) = + \\infty, \\quad \\lim_{x \\to + \\infty} V(x) = \\,- \\infty."
+      ],
+      "notebook": {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/notebooks/chapter-03-open-phase-plane.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Namai energi minimum \\(E_m\\) dan maksimum \\(E_s\\). Karena potensial turun tanpa batas ke kanan, selalu periksa komponen lintasan terbuka di samping orbit yang mungkin terperangkap dekat minimum."
+      },
+      "check": {
+        "type": "qualitative_energy_portrait",
+        "final_answer": "Minimum lokal memberi pusat dan maksimum lokal di kanannya memberi pelana. Untuk \\(E_m<E<E_s\\), terdapat oval tertutup di sekitar pusat serta komponen lintasan terbuka di sisi kanan. Pada \\(E=E_s\\), sebuah separatriks homoklinik mengelilingi pusat dan dua cabang separatriks lain melalui pelana menuju sisi kanan tak terbatas. Untuk \\(E>E_s\\), penghalang terlampaui dan level reguler menjadi lintasan terbuka dari titik balik kiri menuju \\(x\\to+\\infty\\). Untuk \\(E<E_m\\), hanya komponen terbuka di kanan yang ada.",
+        "required_evidence": [
+          "Satu pusat dan satu pelana ditempatkan pada titik kritis yang benar.",
+          "Orbit tertutup dan lintasan terbuka yang hidup pada energi sama tidak dicampuradukkan.",
+          "Separatriks pada energi maksimum serta perubahan topologi di kedua energi kritis ditampilkan.",
+          "Daerah terlarang V(x)>E ditinggalkan kosong."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Kurva fase selalu diperoleh dari himpunan posisi yang memenuhi \\(V(x)\\le E\\).",
+            "formula": "y=\\pm\\sqrt{2(E-V(x))}"
+          },
+          {
+            "explanation": "Di antara dua energi kritis, himpunan posisi yang diizinkan mempunyai satu interval terbatas dekat sumur dan satu interval tak terbatas di kanan.",
+            "formula": "E_m<E<E_s:\\quad \\text{satu oval + satu komponen terbuka}"
+          },
+          {
+            "explanation": "Pada energi maksimum, pelana menghubungkan batas perangkap lokal dengan saluran lepas ke kanan.",
+            "formula": "E=E_s=V(x_s)"
+          },
+          {
+            "explanation": "Di atas penghalang, hanya satu titik balik kiri tersisa dan lintasan melaju tanpa batas ke kanan.",
+            "formula": "E>E_s:\\quad x\\to+\\infty,\\ |y|\\to\\infty"
+          }
+        ],
+        "notebook_check": "Adaptasikan konstruksi kurva energi pada notebook dengan potensial yang memiliki asimtot dan dua titik kritis seperti gambar; sel tambahan harus memperlihatkan keberadaan bersama oval dan lintasan terbuka untuk energi antara minimum dan maksimum.",
+        "conclusion": "Sumur lokal dapat menahan sebagian keadaan awal meskipun potensial global terbuka ke kanan; separatriks pelana membatasi keadaan terperangkap."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P22",
+      "ordinal": 22,
+      "problem_summary": "Gambarkan potret fase untuk potensial yang menuju \\(-\\infty\\) saat \\(x\\to-\\infty\\) dan \\(+\\infty\\) saat \\(x\\to+\\infty\\), dengan dua maksimum lokal dan dua minimum lokal seperti pada gambar sumber.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d^2 x}{d t^2} + \\frac{d V}{d x} = 0,",
+        "V(x)",
+        "\\displaystyle \\lim_{x \\to - \\infty} V(x) = \\,- \\infty, \\quad \\lim_{x \\to + \\infty} V(x) = + \\infty.",
+        "x"
+      ],
+      "notebook": {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/notebooks/chapter-03-open-phase-plane.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Beri nama energi pada keempat titik kritis menurut tinggi aktual gambar, lalu naikkan \\(E\\) melewati nilai-nilai itu satu per satu. Selalu ada saluran terbuka ke kiri karena \\(V\\to-\\infty\\) di sana."
+      },
+      "check": {
+        "type": "qualitative_energy_portrait",
+        "final_answer": "Kedua minimum adalah pusat dan kedua maksimum adalah pelana. Dengan urutan tinggi pada gambar \\(E_{m2}<E_{m1}<E_{s1}<E_{s2}\\): di bawah \\(E_{m2}\\) hanya ada lintasan terbuka ke kiri; saat melewati tiap minimum, keluarga oval di sumur itu muncul; pada \\(E_{s1}\\), separatriks pelana pertama menggabungkan sumur dangkal dengan saluran kiri; untuk \\(E_{s1}<E<E_{s2}\\), lintasan kiri terbuka hadir bersama oval di sumur kanan; pada \\(E_{s2}\\), separatriks kedua membuka sumur kanan; di atasnya hanya tersisa keluarga lintasan terbuka global dengan satu titik balik kanan.",
+        "required_evidence": [
+          "Dua pusat, dua pelana, dan urutan energi kritis dari gambar ditandai.",
+          "Komponen terbuka ke kiri hadir pada setiap energi.",
+          "Keluarga oval muncul atau hilang tepat ketika energi melewati minimum atau maksimum yang sesuai.",
+          "Kedua separatriks dan daerah V(x)>E digambar konsisten dengan kurva potensial."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Gunakan satu rumus level energi untuk semua rezim dan hitung komponen interval \\(V\\le E\\).",
+            "formula": "y=\\pm\\sqrt{2(E-V(x))}"
+          },
+          {
+            "explanation": "Minimum yang lebih dalam di kanan melahirkan oval pertama; minimum dangkal melahirkan oval kedua ketika energinya tercapai.",
+            "formula": "E_{m2}<E_{m1}:\\quad E_{m2}<E<E_{m1}\\Rightarrow\\text{oval kanan saja, selain komponen terbuka kiri}"
+          },
+          {
+            "explanation": "Di antara energi minimum dangkal dan maksimum pertama, kedua sumur mempunyai oval terpisah, di samping komponen terbuka kiri.",
+            "formula": "E_{m1}<E<E_{s1}:\\quad \\text{dua oval + satu komponen terbuka}"
+          },
+          {
+            "explanation": "Melewati pelana pertama menghubungkan sumur dangkal dengan wilayah lepas; sumur kanan tetap terkurung hingga pelana kedua.",
+            "formula": "E_{s1}<E<E_{s2}:\\quad \\text{komponen terbuka kiri + oval kanan}"
+          },
+          {
+            "explanation": "Di atas puncak tertinggi, himpunan posisi yang diizinkan tersambung dari \\(-\\infty\\) hingga satu titik balik kanan.",
+            "formula": "E>E_{s2}:\\quad \\text{satu komponen terbuka global}"
+          }
+        ],
+        "notebook_check": "Adaptasikan konstruksi kurva energi pada notebook dengan potensial contoh yang benar-benar mempertahankan urutan dua puncak dan dua lembah pada gambar; jangan menyimpulkan topologi dari polinom contoh yang urutan energinya berbeda.",
+        "conclusion": "Potret lengkap diperoleh dengan melacak perubahan komponen kurva tingkat pada empat energi kritis; asimtot kiri menjamin saluran lepas pada setiap energi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH03-P23",
+      "ordinal": 23,
+      "problem_summary": "Lakukan analisis dimensi terhadap persamaan Navier–Stokes yang diberikan: tentukan dimensi kedua suku inersia, tekanan, rapat gaya badan, dan viskositas kinematik; kemudian skalakan ruang, kecepatan, waktu, tekanan, serta gaya agar hanya tersisa bilangan Reynolds \\(\\mathrm{Re}=Ul/\\nu\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{\\partial \\vec v}{\\partial t} + \\left(\\vec v \\cdot \\nabla \\right) \\vec v = -\\frac{1}{\\rho} \\nabla p + \\nu \\nabla^2 \\vec v +\\frac{1}{\\rho} \\vec F, ",
+        "\\vec v",
+        "\\rho",
+        "p",
+        "\\nu",
+        "\\vec F",
+        "\\nabla",
+        "U",
+        "l",
+        "\\vec V",
+        "\\vec X",
+        "\\vec v = U \\vec V",
+        "\\vec x = l \\vec X",
+        "\\vec x",
+        "Re = U l / \\nu"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Gunakan \\([\\vec v]=LT^{-1}\\), \\([\\rho]=ML^{-3}\\), dan \\([\\nabla]=L^{-1}\\). Skala adveksi alami memberi \\(t=(l/U)\\tau\\), \\(p=\\rho U^2P\\), serta \\(\\vec F=(\\rho U^2/l)\\vec f\\)."
+      },
+      "check": {
+        "type": "exact_dimensional_reduction",
+        "final_answer": "Kedua suku kiri berdimensi \\(LT^{-2}\\). Dimensi tekanan \\([p]=ML^{-1}T^{-2}\\), rapat gaya badan \\([\\vec F]=ML^{-2}T^{-2}\\), dan viskositas kinematik \\([\\nu]=L^2T^{-1}\\). Dengan \\(\\vec x=l\\vec X\\), \\(\\vec v=U\\vec V\\), \\(t=(l/U)\\tau\\), \\(p=\\rho U^2P\\), dan \\(\\vec F=(\\rho U^2/l)\\vec f\\), persamaan menjadi \\(\\vec V_\\tau+(\\vec V\\cdot\\nabla_X)\\vec V=-\\nabla_XP+\\mathrm{Re}^{-1}\\nabla_X^2\\vec V+\\vec f\\), dengan \\(\\mathrm{Re}=Ul/\\nu\\).",
+        "quick_check": "Koefisien suku tak tunak, adveksi, tekanan, dan gaya harus satu; koefisien viskositas harus tepat \\(1/\\mathrm{Re}\\), bukan \\(\\mathrm{Re}\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Turunan waktu kecepatan dan percepatan advektif mempunyai dimensi yang sama, sebagaimana wajib agar dapat dijumlahkan.",
+            "formula": "[\\partial_t\\vec v]=LT^{-2},\\qquad [(\\vec v\\cdot\\nabla)\\vec v]=(LT^{-1})(L^{-1})(LT^{-1})=LT^{-2}"
+          },
+          {
+            "explanation": "Samakan suku gradien tekanan dan gaya badan per massa dengan percepatan.",
+            "formula": "[p]=ML^{-1}T^{-2},\\qquad [\\vec F]=ML^{-2}T^{-2}"
+          },
+          {
+            "explanation": "Samakan suku viskositas dengan percepatan.",
+            "formula": "[\\nu](L^{-2})(LT^{-1})=LT^{-2}\\Longrightarrow[\\nu]=L^2T^{-1}"
+          },
+          {
+            "explanation": "Masukkan skala karakteristik ruang, kecepatan, dan waktu adveksi.",
+            "formula": "\\vec x=l\\vec X,\\qquad \\vec v=U\\vec V,\\qquad t=\\frac{l}{U}\\tau"
+          },
+          {
+            "explanation": "Pilih skala tekanan dinamik dan rapat gaya agar kedua suku berskala seperti \\(U^2/l\\).",
+            "formula": "p=\\rho U^2P,\\qquad \\vec F=\\frac{\\rho U^2}{l}\\vec f"
+          },
+          {
+            "explanation": "Bagi seluruh persamaan dengan \\(U^2/l\\); hanya perbandingan inersia dan viskositas yang tersisa.",
+            "formula": "\\frac{\\partial\\vec V}{\\partial\\tau}+(\\vec V\\cdot\\nabla_X)\\vec V=-\\nabla_XP+\\frac1{\\mathrm{Re}}\\nabla_X^2\\vec V+\\vec f,\\qquad \\mathrm{Re}=\\frac{Ul}{\\nu}"
+          }
+        ],
+        "conclusion": "Bilangan Reynolds adalah satu-satunya parameter kontinu dalam bentuk tak berdimensi yang diberikan; ia membandingkan pengangkutan inersial dengan difusi momentum viskos."
+      }
+    }
+  ]
+}

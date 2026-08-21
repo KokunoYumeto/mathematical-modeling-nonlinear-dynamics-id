@@ -1,0 +1,98 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "mastery_path": "backend/mastery/O005-LEGA-V101-CH03.mastery.json",
+  "mastery_sha256": "c9375f9c54b0e67ba301b495763d235ece03aaaa2fd12ac6b88aaaacaadc915e",
+  "notebook_path": "source/id-ID/O005-LEGA-V101-CH03/notebooks/chapter-03-open-phase-plane.ipynb",
+  "notebook_sha256": "45bb23aaf15fc03d5f7e878995c9cd0a38a31c2bf64f325b3fdb1e204939505f",
+  "problems": [
+    "O005-LEGA-V101-CH03-P01",
+    "O005-LEGA-V101-CH03-P02",
+    "O005-LEGA-V101-CH03-P03",
+    "O005-LEGA-V101-CH03-P04",
+    "O005-LEGA-V101-CH03-P05",
+    "O005-LEGA-V101-CH03-P06",
+    "O005-LEGA-V101-CH03-P07",
+    "O005-LEGA-V101-CH03-P08",
+    "O005-LEGA-V101-CH03-P09",
+    "O005-LEGA-V101-CH03-P10",
+    "O005-LEGA-V101-CH03-P11",
+    "O005-LEGA-V101-CH03-P12",
+    "O005-LEGA-V101-CH03-P13",
+    "O005-LEGA-V101-CH03-P14",
+    "O005-LEGA-V101-CH03-P15",
+    "O005-LEGA-V101-CH03-P16",
+    "O005-LEGA-V101-CH03-P17",
+    "O005-LEGA-V101-CH03-P18",
+    "O005-LEGA-V101-CH03-P19",
+    "O005-LEGA-V101-CH03-P20",
+    "O005-LEGA-V101-CH03-P21",
+    "O005-LEGA-V101-CH03-P22",
+    "O005-LEGA-V101-CH03-P23"
+  ],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 449,
+    "path": "backend/segments/O005-LEGA-V101-CH03.segments.jsonl",
+    "sha256": "0008a0facb9d0616b8f0c13876c8c8089458069c78aba4b65b1c5a7159bba39e"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "chapter": "The Nonlinear Pendulum",
+    "content_sha256": "94b72c6c8c7e869639f9088d33d614f1029d2dc69ac57ff7451c288b6e917ccd",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/the-nonlinear-pendulum/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-CH03/content.html",
+    "content_sha256": "37c0b3df486f20fa29929d983fc70f92beb386cb980937a3cb032e6995e7cac3",
+    "figures": [
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/assets/nonlinear-pendulum-source.png",
+        "sha256": "10bd1a917faadd58ab70645455e2ce9f092bc3f9833e50aee83ac2e89be9783a"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/assets/phase-portrait-1-source.png",
+        "sha256": "e9483fbe666497aab3695456eecf5ce4ffce0440db2605c37c3a257d0b2e70de"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/assets/phase-portrait-2-source.png",
+        "sha256": "5c42026faf31e340f38829471db0a9f22a76bb467fff2508f1490f62bc2949f0"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/assets/phase-portrait-construction-id-v3.png",
+        "sha256": "76172508b59ddce827f57d8e76d7c89c49dc9b56294a7ef32c6287e4228fe975"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/assets/phase-portrait-3-source.png",
+        "sha256": "6392b654687eadb3d547d99db7069694f0cdb91671ace0082fd164817305e6d5"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/assets/potential-1-source.png",
+        "sha256": "d846bc553c4c59aa388697a521a9f0a935a869a96f6f8ef8e2bbe7b58e0a2388"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/assets/potential-2-source.png",
+        "sha256": "0983ed663132286f874444b322707167ef402bf32a270a9bd24802b76539b74c"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/assets/potential-3-source.png",
+        "sha256": "4aa716e47c4efdf46750e0fa4e1c3883f75ab63abdda7705685b986c1244070e"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH03/assets/potential-4-source.png",
+        "sha256": "ed6153fffcb4ac0dca7b2372c062277ec67b2ffc5f7c17a0bb238c0febb7397d"
+      }
+    ],
+    "title": "Pendulum Nonlinear"
+  },
+  "unit_id": "O005-LEGA-V101-CH03"
+}

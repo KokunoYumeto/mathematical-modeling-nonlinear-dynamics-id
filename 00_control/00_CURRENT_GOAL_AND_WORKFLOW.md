@@ -22,15 +22,16 @@ notice, and non-endorsement. Maintain component-level rights. Redraw Figure
 statement; never represent the Pressbooks theme as part of the independently
 reproducible source closure.
 
-The first two chapter boundaries, `O005-LEGA-V101-CH01` (record 25) and
-`O005-LEGA-V101-CH02` (record 27), and the visible Part 2 introduction
-`O005-LEGA-V101-PT02` (record 28) are translated, built, rereviewed, and
-deterministically verified. Their complete topology, identifiers, protected
-mathematics, links, figures, fourteen stable problem IDs, mastery records, two
-open Python notebooks, and 249 paired segments are bound in the current state,
-cursor, and QA log. The immediate boundary is now Chapter 3, Pressbooks record
-38, *The Nonlinear Pendulum*, as `O005-LEGA-V101-CH03`, with all 23 problems
-and every formula, link, figure, description, and computation surface.
+The first three chapter boundaries, `O005-LEGA-V101-CH01` (record 25),
+`O005-LEGA-V101-CH02` (record 27), and `O005-LEGA-V101-CH03` (record 38), plus
+the visible Part 2 introduction `O005-LEGA-V101-PT02` (record 28), are
+translated, built, rereviewed, and deterministically verified. Their complete
+topology, identifiers, protected mathematics, links, figures, 37 stable
+problem IDs and mastery records, three open Python notebooks, and 698 paired
+segments are bound in the current state, cursor, and QA log. The immediate
+boundary is Chapter 4, Pressbooks record 39, *Stone-Skipping*, as
+`O005-LEGA-V101-CH04`, preserving all four problems, 245 formulas, 22 links,
+two figures, four footnotes, descriptions, and hybrid flight/collision model.
 
 Continue in exact frozen TOC order through all front/back matter and
 fourteen chapters: 54,932 source words, 113 exercises, twelve projects, eleven

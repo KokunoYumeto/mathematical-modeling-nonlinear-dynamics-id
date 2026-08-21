@@ -1,0 +1,77 @@
+{
+  "assets": [
+    {
+      "bytes": 11678,
+      "epub_member": "EPUB/assets/Fig_NLP-1-300x268.png",
+      "path": "assets/nonlinear-pendulum-source.png",
+      "sha256": "10bd1a917faadd58ab70645455e2ce9f092bc3f9833e50aee83ac2e89be9783a"
+    },
+    {
+      "bytes": 247117,
+      "epub_member": "EPUB/assets/PP_NLP-1024x806.png",
+      "path": "assets/phase-portrait-1-source.png",
+      "sha256": "e9483fbe666497aab3695456eecf5ce4ffce0440db2605c37c3a257d0b2e70de"
+    },
+    {
+      "bytes": 297538,
+      "epub_member": "EPUB/assets/PP2_NLP-1024x763.png",
+      "path": "assets/phase-portrait-2-source.png",
+      "sha256": "5c42026faf31e340f38829471db0a9f22a76bb467fff2508f1490f62bc2949f0"
+    },
+    {
+      "bytes": 258152,
+      "epub_member": "EPUB/assets/PP2b_NLP-1024x993.png",
+      "path": "assets/phase-portrait-construction-source.png",
+      "sha256": "4df4090e177969f1c911ee9f1edb6ebaa734bf724e69def16ef94f9b929e8479"
+    },
+    {
+      "bytes": 379047,
+      "epub_member": "EPUB/assets/PP3_NLP-1024x765.png",
+      "path": "assets/phase-portrait-3-source.png",
+      "sha256": "6392b654687eadb3d547d99db7069694f0cdb91671ace0082fd164817305e6d5"
+    },
+    {
+      "bytes": 10087,
+      "epub_member": "EPUB/assets/Mech_pot1-1-300x218.png",
+      "path": "assets/potential-1-source.png",
+      "sha256": "d846bc553c4c59aa388697a521a9f0a935a869a96f6f8ef8e2bbe7b58e0a2388"
+    },
+    {
+      "bytes": 9208,
+      "epub_member": "EPUB/assets/Mech_pot2-1-300x166.png",
+      "path": "assets/potential-2-source.png",
+      "sha256": "0983ed663132286f874444b322707167ef402bf32a270a9bd24802b76539b74c"
+    },
+    {
+      "bytes": 13587,
+      "epub_member": "EPUB/assets/Mech_pot3-1-300x271.png",
+      "path": "assets/potential-3-source.png",
+      "sha256": "4aa716e47c4efdf46750e0fa4e1c3883f75ab63abdda7705685b986c1244070e"
+    },
+    {
+      "bytes": 9734,
+      "epub_member": "EPUB/assets/Mech_pot4-1-300x160.png",
+      "path": "assets/potential-4-source.png",
+      "sha256": "ed6153fffcb4ac0dca7b2372c062277ec67b2ffc5f7c17a0bb238c0febb7397d"
+    }
+  ],
+  "content_raw": {
+    "bytes": 55761,
+    "path": "content.raw.en.html",
+    "sha256": "94b72c6c8c7e869639f9088d33d614f1029d2dc69ac57ff7451c288b6e917ccd"
+  },
+  "content_rendered": {
+    "bytes": 66693,
+    "path": "content.rendered.en.html",
+    "sha256": "944cc46fe19fc0b2a86e60275dc68bb6eb1a616c7746e9fca6ba0c7a1bc2a2ac"
+  },
+  "record": {
+    "bytes": 128063,
+    "path": "source-record.canonical.json",
+    "sha256": "240a00176ea39c067c36393facf35308bdbee11925dbc293bad2ce33ca9c339c"
+  },
+  "schema": "o005-unit-authority-v1",
+  "source_modified_gmt": "2026-03-27T02:14:38Z",
+  "source_record_id": 38,
+  "unit_id": "O005-LEGA-V101-CH03"
+}

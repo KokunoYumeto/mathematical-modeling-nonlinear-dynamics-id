@@ -1,0 +1,22 @@
+{
+  "schema": "o005-adapted-asset-provenance-v1",
+  "asset_id": "O005-LEGA-V101-CH03-FIG04-ID",
+  "language": "id-ID",
+  "source": {
+    "path": "source/id-ID/O005-LEGA-V101-CH03/assets/phase-portrait-construction-source.png",
+    "bytes": 258152,
+    "sha256": "4df4090e177969f1c911ee9f1edb6ebaa734bf724e69def16ef94f9b929e8479",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "target": {
+    "path": "source/id-ID/O005-LEGA-V101-CH03/assets/phase-portrait-construction-id.png",
+    "bytes": 138995,
+    "sha256": "eadc389a25e09749e140773d87d9b43f9bbb3b49e47ae3b1e5a3b940695a61e0",
+    "dimensions": "1024x1024",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "change": "Four explanatory English labels were replaced with equivalent Indonesian labels; mathematical symbols, energy labels, axes, curves, arrows, and diagram meaning were retained.",
+  "method": "OpenAI built-in image editing followed by deterministic ImageMagick resizing, grayscale palette quantization, and metadata stripping.",
+  "prompt": "Replace only the four English explanatory text blocks with: Minimum V adalah pusat; Maksimum V adalah titik pelana; Nilai E kurang dari 1 bersesuaian dengan orbit tertutup; Lintasan simetris terhadap sumbu horizontal. Preserve every plotted curve, arrow, axis, dashed guide, dot, leader, mathematical symbol V, Lambda, x, and boxed label E > 1, E = 1, E < 1.",
+  "review": "The localized bitmap was visually compared with the frozen source; all requested Indonesian labels and mathematical/diagram surfaces are present and legible. The source bitmap remains retained unchanged for provenance."
+}

@@ -27,7 +27,9 @@ UNIT_SPECS = {
         "source_title": "On the Nature of Mathematical Modeling",
         "target_title": "Tentang Hakikat Pemodelan Matematika",
         "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/chapter-1/",
-        "target_asset": "assets/modeling-cycle-id.svg",
+        "target_assets": ["assets/modeling-cycle-id.svg"],
+        "caption_count": 1,
+        "footnote_count": 0,
         "notebook": "notebooks/problem-07-open-curve-fitting.ipynb",
         "problem_count": 7,
         "plain_paragraphs": False,
@@ -40,7 +42,9 @@ UNIT_SPECS = {
         "source_title": "First Steps: Modeling the Wave",
         "target_title": "Langkah Awal: Memodelkan Gelombang",
         "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/first-steps-modeling-the-wave/",
-        "target_asset": "assets/the-wave-source.png",
+        "target_assets": ["assets/the-wave-source.png"],
+        "caption_count": 1,
+        "footnote_count": 0,
         "notebook": "notebooks/chapter-02-open-wave-simulation.ipynb",
         "problem_count": 7,
         "plain_paragraphs": False,
@@ -52,18 +56,58 @@ UNIT_SPECS = {
         "source_title": "Models from Classical Mechanics",
         "target_title": "Model-Model dari Mekanika Klasik",
         "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/part/part-2-models-from-classical-mechanics/",
-        "target_asset": None,
+        "target_assets": [],
+        "caption_count": 0,
+        "footnote_count": 0,
         "notebook": None,
         "problem_count": 0,
         "plain_paragraphs": True,
         "change_note": "penerjemahan dan pengindeksan modular",
+    },
+    "O005-LEGA-V101-CH03": {
+        "unit_type": "chapter",
+        "unit_number": 3,
+        "chapter_number": 3,
+        "source_title": "The Nonlinear Pendulum",
+        "target_title": "Pendulum Nonlinear",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/the-nonlinear-pendulum/",
+        "target_assets": [
+            "assets/nonlinear-pendulum-source.png",
+            "assets/phase-portrait-1-source.png",
+            "assets/phase-portrait-2-source.png",
+            "assets/phase-portrait-construction-id-v3.png",
+            "assets/phase-portrait-3-source.png",
+            "assets/potential-1-source.png",
+            "assets/potential-2-source.png",
+            "assets/potential-3-source.png",
+            "assets/potential-4-source.png",
+        ],
+        "caption_count": 5,
+        "footnote_count": 3,
+        "split_caption_tail": True,
+        "reader_markup_replacements": [
+            (
+                "<em>V </em>(<em>x</em>) = - cos(<em>x</em>)",
+                "$latex V(x) = - \\cos(x)$",
+                1,
+            ),
+            (
+                '<img class="wp-image-29 size-medium" src="assets/nonlinear-pendulum-source.png" alt="Sketsa sebuah pendulum. Deskripsi panjang tersedia." width="300" height="268" />',
+                '<img class="wp-image-29 size-medium" src="assets/nonlinear-pendulum-source.png" alt="Sketsa sebuah pendulum. Deskripsi panjang tersedia." width="300" height="268" style="max-width: 300px; margin-inline: auto;" />',
+                1,
+            ),
+        ],
+        "notebook": "notebooks/chapter-03-open-phase-plane.ipynb",
+        "problem_count": 23,
+        "plain_paragraphs": False,
+        "change_note": "penerjemahan, pengindeksan modular, dan implementasi ulang analisis bidang fase dengan Python terbuka",
     },
 }
 
 
 def configure(unit_id: str) -> None:
     global UNIT_ID, UNIT_SPEC, SOURCE_URL, SOURCE_FRAGMENT, TARGET_FRAGMENT
-    global TARGET_ASSET, NOTEBOOK, NOTEBOOK_LOCK, MASTERY, SEGMENTS, UNIT_RECORD
+    global TARGET_ASSETS, NOTEBOOK, NOTEBOOK_LOCK, MASTERY, SEGMENTS, UNIT_RECORD
     global DEFAULT_OUTPUT, PROBLEM_COUNT
     UNIT_ID = unit_id
     UNIT_SPEC = UNIT_SPECS[unit_id]
@@ -71,9 +115,9 @@ def configure(unit_id: str) -> None:
     SOURCE_FRAGMENT = ROOT / "authority" / "units" / UNIT_ID / "content.raw.en.html"
     TARGET_FRAGMENT = ROOT / "source" / "id-ID" / UNIT_ID / "content.html"
     PROBLEM_COUNT = UNIT_SPEC["problem_count"]
-    target_asset = UNIT_SPEC["target_asset"]
+    target_assets = UNIT_SPEC["target_assets"]
     notebook = UNIT_SPEC["notebook"]
-    TARGET_ASSET = ROOT / "source" / "id-ID" / UNIT_ID / target_asset if target_asset else None
+    TARGET_ASSETS = [ROOT / "source" / "id-ID" / UNIT_ID / path for path in target_assets]
     NOTEBOOK = ROOT / "source" / "id-ID" / UNIT_ID / notebook if notebook else None
     NOTEBOOK_LOCK = NOTEBOOK.parent / "requirements.lock" if NOTEBOOK else None
     MASTERY = ROOT / "backend" / "mastery" / f"{UNIT_ID}.mastery.json" if PROBLEM_COUNT else None
@@ -87,6 +131,7 @@ configure("O005-LEGA-V101-CH01")
 LATEX_RE = re.compile(r"\$latex\s+(.+?)\$", re.DOTALL)
 COMPANION_MATH_RE = re.compile(r"\\\((.+?)\\\)|\\\[(.+?)\\\]", re.DOTALL)
 CAPTION_RE = re.compile(r"\[caption\s+([^\]]*)\](.*?)\[/caption\]", re.DOTALL)
+FOOTNOTE_RE = re.compile(r"\[footnote\](.*?)\[/footnote\]", re.DOTALL)
 BLOCK_LINE_RE = re.compile(
     r"^</?(?:address|article|aside|blockquote|details|div|dl|fieldset|figcaption|figure|"
     r"footer|form|h[1-6]|header|hr|li|main|nav|ol|p|pre|section|table|ul)\b",
@@ -118,9 +163,23 @@ def render_math(tex: str) -> str:
     # exact frozen/source TeX in data-tex and the aligned backend.
     tex = tex.replace(r"\left\{ \begin{array}{ll}", r"\begin{cases}")
     tex = tex.replace(r"\end{array} \right.", r"\end{cases}")
+
+    def parenthesized_array(match: re.Match[str]) -> str:
+        body = match.group(1).replace(r"\cr", r"\\")
+        return r"\begin{pmatrix}" + body + r"\end{pmatrix}"
+
+    tex = re.sub(
+        r"\\left\s*\(\s*\\begin\{array\}\{c{1,2}\}(.*?)"
+        r"\\end\{array\}\s*\\right\s*\)",
+        parenthesized_array,
+        tex,
+        flags=re.DOTALL,
+    )
     tex = tex.replace(r"\begin{array}{c}", r"\substack{")
     tex = tex.replace(r"\end{array}", "}")
     tex = tex.replace(r"\hbox{if }", r"\text{jika }")
+    tex = tex.replace(r"\hbox{gaya}", r"\text{gaya}")
+    tex = re.sub(r"\\hbox\{([^{}]*)\}", r"\\text{\1}", tex)
     proc = subprocess.run(
         ["pandoc", "--from=markdown+tex_math_dollars", "--to=html5", "--mathml"],
         input=f"${tex}$",
@@ -142,8 +201,15 @@ def render_math(tex: str) -> str:
 
 
 def replace_pressbooks_markup(fragment: str) -> str:
+    for old, new, expected in UNIT_SPEC.get("reader_markup_replacements", []):
+        observed = fragment.count(old)
+        if observed != expected:
+            raise RuntimeError(
+                f"Expected {expected} reader-only markup occurrence(s) of {old!r}, found {observed}"
+            )
+        fragment = fragment.replace(old, new)
     matches = list(CAPTION_RE.finditer(fragment))
-    expected = 1 if TARGET_ASSET else 0
+    expected = UNIT_SPEC["caption_count"]
     if len(matches) != expected:
         raise RuntimeError(f"Expected {expected} Pressbooks caption shortcode(s), found {len(matches)}")
 
@@ -156,12 +222,25 @@ def replace_pressbooks_markup(fragment: str) -> str:
         caption_html = inner[image.end():].strip()
         caption_html = re.sub(r"\[\s*(<a\b.*?</a>)\s*\]\s*$", r"\1", caption_html, flags=re.DOTALL)
         figure_id = html.escape(ident.group(1) if ident else "figure-1-1", quote=True)
-        return (
+        result = (
             f'<figure id="{figure_id}" class="reader-figure">{image.group(0)}'
             f'<figcaption>{caption_html}</figcaption></figure>'
         )
+        if UNIT_SPEC.get("split_caption_tail"):
+            result += "\n"
+        return result
 
     fragment = CAPTION_RE.sub(caption, fragment)
+    footnotes = list(FOOTNOTE_RE.finditer(fragment))
+    if len(footnotes) != UNIT_SPEC["footnote_count"]:
+        raise RuntimeError(
+            f"Expected {UNIT_SPEC['footnote_count']} Pressbooks footnote shortcode(s), "
+            f"found {len(footnotes)}"
+        )
+    fragment = FOOTNOTE_RE.sub(
+        r'<span class="reader-footnote" role="note"><strong>Catatan:</strong> \1</span>',
+        fragment,
+    )
     fragment = LATEX_RE.sub(lambda m: render_math(m.group(1).strip()), fragment)
     return fragment.replace("&nbsp;", " ")
 
@@ -383,13 +462,22 @@ def write_backend(source: str, target: str, mastery: dict | None, pandoc: str) -
         "content_path": TARGET_FRAGMENT.relative_to(ROOT).as_posix(),
         "content_sha256": digest(TARGET_FRAGMENT),
     }
-    if TARGET_ASSET:
+    if len(TARGET_ASSETS) == 1:
+        target_asset = TARGET_ASSETS[0]
         target_record.update(
             {
-                "figure_path": TARGET_ASSET.relative_to(ROOT).as_posix(),
-                "figure_sha256": digest(TARGET_ASSET),
+                "figure_path": target_asset.relative_to(ROOT).as_posix(),
+                "figure_sha256": digest(target_asset),
             }
         )
+    elif TARGET_ASSETS:
+        target_record["figures"] = [
+            {
+                "path": path.relative_to(ROOT).as_posix(),
+                "sha256": digest(path),
+            }
+            for path in TARGET_ASSETS
+        ]
     unit = {
         "schema": "o005-unit-v1",
         "unit_id": UNIT_ID,
@@ -430,7 +518,8 @@ def write_backend(source: str, target: str, mastery: dict | None, pandoc: str) -
 
 def build_reader(output: Path) -> dict:
     required = [SOURCE_FRAGMENT, TARGET_FRAGMENT, CSS]
-    required.extend(path for path in (TARGET_ASSET, NOTEBOOK, NOTEBOOK_LOCK, MASTERY) if path is not None)
+    required.extend(TARGET_ASSETS)
+    required.extend(path for path in (NOTEBOOK, NOTEBOOK_LOCK, MASTERY) if path is not None)
     missing = [str(path) for path in required if not path.is_file()]
     if missing:
         raise FileNotFoundError("Missing inputs: " + ", ".join(missing))
@@ -455,6 +544,8 @@ def build_reader(output: Path) -> dict:
         nav_lines.append('    <a href="#dukungan-belajar">Dukungan belajar</a>')
     if NOTEBOOK:
         nav_lines.append(f'    <a href="downloads/{NOTEBOOK.name}">Notebook Python</a>')
+    if NOTEBOOK_LOCK:
+        nav_lines.append(f'    <a href="downloads/{NOTEBOOK_LOCK.name}">Unduh requirements.lock</a>')
     navigation = "\n".join(nav_lines)
     mastery_html = mastery_section(mastery) if mastery else ""
     if NOTEBOOK:
@@ -505,8 +596,8 @@ def build_reader(output: Path) -> dict:
     (output / "data").mkdir()
     (output / "index.html").write_text(page, encoding="utf-8", newline="\n")
     shutil.copyfile(CSS, output / "assets" / "reader.css")
-    if TARGET_ASSET:
-        shutil.copyfile(TARGET_ASSET, output / "assets" / TARGET_ASSET.name)
+    for target_asset in TARGET_ASSETS:
+        shutil.copyfile(target_asset, output / "assets" / target_asset.name)
     if NOTEBOOK and NOTEBOOK_LOCK:
         (output / "downloads").mkdir()
         shutil.copyfile(NOTEBOOK, output / "downloads" / NOTEBOOK.name)

@@ -7,9 +7,9 @@ Updated: 2026-08-21 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. The complete Chapter 1, Chapter 2, and visible Part 2
-introduction units are translated, built, and verified. Production now moves
-to Chapter 3, Pressbooks record 38, *The Nonlinear Pendulum*. The earlier
+into this lane. Chapters 1–3 and the visible Part 2 introduction are
+translated, built, and verified. Production now moves to Chapter 4,
+Pressbooks record 39, *Stone-Skipping*. The earlier
 cursor's record 29 / “Dimensional Analysis” pair was invalid and has been
 corrected from the frozen TOC.
 
@@ -44,16 +44,16 @@ corrected from the frozen TOC.
   `75eb7a3b4e5f67bf12c689aa3162ee8ba49149cd00c96e53cae119a524d11a5e`.
 - Modular segment layer: 125 records / 83,591 bytes, SHA-256
   `5fdfc7baca4367ceab409b6e55cc6a8144fd9fe39161d1b5174731420f7c9e7a`.
-- Reader package: eight payload files / 217,390 bytes, excluding the manifest;
+- Reader package: eight payload files / 217,460 bytes, excluding the manifest;
   manifest SHA-256
-  `1ba10f670dab0b4cf78b30ef17e25984f21e486ac95f98db50d5f3d899d96cb9`.
+  `04cb3ff2c58600389010d965190e52288a40e3dc1a6088c6bb90063a0fc2e87a`.
 - Exact structure replay: 120/120 elements, 14/14 links, 14/14 TeX
   expressions, seven/seven problems; no unexplained drift.
 - Notebook: all seven code cells executed with the pinned environment; all
   deterministic numerical/model-selection assertions passed.
 - The generic reader renders 14 chapter and 46 mastery MathML nodes. Repeated
   clean builds were byte-identical across nine files, canonical tree SHA-256
-  `29ceb15656b43f45da8b801ccefab60b20a9d4f3d00a55a73dcbdb941770d082`.
+  `6cfa3acae2b7ef23e0265eee6c7ce7b9d59a4266f61a31300510ccc7363a1e67`.
 - Browser QA: centered 768 px article at 1280 px; clean 390 px mobile layout;
   zero horizontal overflow at both sizes. Audio/live widgets do not exist and
   were not exercised; external-link reachability was not tested.
@@ -80,16 +80,16 @@ corrected from the frozen TOC.
   `8e31dc2dfaa61b3e0f76dd04b29867fcadd303490622a8ea0e1f5ad77f2ce517`.
 - Modular segment layer: 121 records / 84,773 bytes, SHA-256
   `0e1dd86ab9c5dc0d2e6338a2ae8909e5d5825f4d8b5866ca7eab88dfb0246b6a`.
-- Reader package: eight payload files / 358,661 bytes, excluding the manifest;
+- Reader package: eight payload files / 358,731 bytes, excluding the manifest;
   manifest SHA-256
-  `5296b09661d64f4c33aaaa4736404f0d87eb5ea4bc51e5e8660719607da2dace`.
+  `9b4cbf27e7b433299e235aec2bbf13d9a00a4dbf47566474f125c9d127316288`.
 - Exact structure replay: 103/103 elements, 10/10 links, 92/92 protected
   TeX expressions, and seven/seven problems; no unexplained drift.
 - Notebook: all seven code cells and 23 assertions passed with fixed seed
   `20260821`; the baseline produced a 15-seat median width and measured speed
   20 seats/second with regression R-squared 1.0.
 - Repeated clean builds were byte-identical across nine files, canonical tree
-  SHA-256 `b0f14a66e0a4e3ed39c79e39daa3ee3b46a6b5af75bb1856247caf4aca0c05b2`.
+  SHA-256 `568dc4dcc92fb005702a40106fde0821e61ec30341a662f72d17bc252240137e`.
 - Browser QA: centered 768 px article at 1280 px and 357.5 px article at
   390 px; zero horizontal overflow, missing images, raw mastery TeX, or
   unlabeled images. External-link reachability and audio/live widgets were not
@@ -123,9 +123,53 @@ corrected from the frozen TOC.
   section rather than a chapter. External-link reachability and audio/live
   widgets were not exercised.
 
+## Admitted Chapter 3 boundary
+
+- Source record: Pressbooks chapter 38, *The Nonlinear Pendulum*; target title
+  *Pendulum Nonlinear*; modified `2026-03-27T02:14:38Z`.
+- Canonical record: 128,063 bytes, SHA-256
+  `240a00176ea39c067c36393facf35308bdbee11925dbc293bad2ce33ca9c339c`;
+  authority manifest: 2,716 bytes, SHA-256
+  `77d490822fd1ba9fcfab559ffe9d8941f8d483d0adaa79eb60c5f621c23c673b`.
+- Scope: 7,125 source words, 423 source elements, 62 links, 404 protected TeX
+  occurrences, 23 problems, three footnotes, and nine source figures with
+  complete local asset closure.
+- Complete natural id-ID fragment: 57,724 bytes, SHA-256
+  `37c0b3df486f20fa29929d983fc70f92beb386cb980937a3cb032e6995e7cac3`.
+- Twenty-three-record mastery layer: 77,899 bytes, SHA-256
+  `c9375f9c54b0e67ba301b495763d235ece03aaaa2fd12ac6b88aaaacaadc915e`.
+- Independent open phase-plane notebook: 19,642 bytes, SHA-256
+  `45bb23aaf15fc03d5f7e878995c9cd0a38a31c2bf64f325b3fdb1e204939505f`;
+  pinned environment lock: 276 bytes, SHA-256
+  `e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041`.
+- Modular segment layer: 449 records / 285,519 bytes, SHA-256
+  `0008a0facb9d0616b8f0c13876c8c8089458069c78aba4b65b1c5a7159bba39e`.
+- The reader uses eight byte-identical source figures and one localized
+  Figure 3.4 adaptation (131,859 bytes, SHA-256
+  `76172508b59ddce827f57d8e76d7c89c49dc9b56294a7ef32c6287e4228fe975`),
+  with the unchanged source bitmap and an exact adaptation receipt retained.
+- Reader package: 16 payload files / 2,025,454 bytes, excluding the 1,670-byte
+  manifest; manifest SHA-256
+  `1957c32aab44de6589f8c5509da0393848f845c56deb15bd48234577893d7be5`.
+- Exact structure replay: 423/423 elements, 62/62 links, 404 source TeX
+  occurrences mapped to 406 declared target occurrences, and 23/23 stable
+  problems; no unexplained drift.
+- Notebook: 13 cells / seven code cells / 19 assertions. NumPy 2.4.4,
+  SciPy 1.17.1, and Matplotlib 3.10.9 executed successfully; conservative
+  energy drift was `1.943e-15`, the damped energy never increased, and the
+  dissipation-balance error was `1.559e-05`.
+- Reader renders 408 chapter MathML nodes and 455 mastery MathML nodes, resolves
+  all nine figures and the notebook/lock locally, and exposes all three
+  footnotes as Indonesian notes. Repeated clean builds were byte-identical
+  across 17 files, canonical tree SHA-256
+  `427eabd4cd6a5f4e40c7df02c713f6c0f29d47949807ab39a64da2036bcd71c1`.
+  Final-byte structural, locality, responsive-CSS, and accessibility checks
+  pass; bounded browser evidence and its explicit limits are in `BUILD_QA.md`.
+
 ## Next action
 
-Prepare and translate Chapter 3, Pressbooks chapter record 38, *The Nonlinear
-Pendulum*, as `O005-LEGA-V101-CH03`, preserving all 7,125 source words, 23
-problems, formulas, links, figures, descriptions, and computation surfaces.
-Do not return to source selection.
+Prepare and translate Chapter 4, Pressbooks chapter record 39,
+*Stone-Skipping*, as `O005-LEGA-V101-CH04`, preserving the hybrid
+free-flight/collision model, rigid-body equations, four problems, formulas,
+links, footnotes, both figures and descriptions, and the replacement/redraw
+boundary for Figure 4.1. Do not return to source selection.

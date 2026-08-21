@@ -22,14 +22,14 @@
     "sha256": "6bdfc501e3134de338fc9862feb4abbbd503037295ab8c701a627cb33550c740"
   },
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-PT02",
-    "source_record_type": "parts",
-    "source_record_id": 28,
-    "source_slug": "part-2-models-from-classical-mechanics",
-    "target_content_sha256": "c7351c8342d7334116e69fbd16b7e19030c9492237e00c99713bcca0697e4087",
-    "reader_manifest_sha256": "32e6dcc39f2c980e5b33b8befb788b7eab4310e05d3cf725130c418be3dd3f32",
-    "qa_tree_sha256": "42a2af70218424bca7f768e665c10c429fcd3e68db40da41eecc4cd423c93cdd"
+    "unit_id": "O005-LEGA-V101-CH03",
+    "source_record_type": "chapters",
+    "source_record_id": 38,
+    "source_slug": "the-nonlinear-pendulum",
+    "target_content_sha256": "37c0b3df486f20fa29929d983fc70f92beb386cb980937a3cb032e6995e7cac3",
+    "reader_manifest_sha256": "1957c32aab44de6589f8c5509da0393848f845c56deb15bd48234577893d7be5",
+    "qa_tree_sha256": "427eabd4cd6a5f4e40c7df02c713f6c0f29d47949807ab39a64da2036bcd71c1"
   },
-  "current_unit": "O005-LEGA-V101-CH03",
-  "next_action": "Prepare and translate Pressbooks chapter record 38, The Nonlinear Pendulum, preserving 23 problems and every formula, link, figure, description, and computation surface."
+  "current_unit": "O005-LEGA-V101-CH04",
+  "next_action": "Prepare and translate Pressbooks chapter record 39, Stone-Skipping, preserving four problems, 245 formulas, 22 links, two figures, four footnotes, descriptions, and the hybrid flight/collision model; redraw Figure 4.1 at the declared component boundary."
 }

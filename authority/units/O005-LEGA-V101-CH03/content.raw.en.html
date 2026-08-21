@@ -1,0 +1,410 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Learning Objectives</h2>
+</header>
+<div class="textbox__content">
+
+At the end of this chapter, you will be able to do the following.
+<ul>
+ 	<li>Apply the modeling process to a simple mechanical system, the nonlinear pendulum.</li>
+ 	<li>Use Newton’s law to derive a differential equation for the dynamics of the pendulum.</li>
+ 	<li>Combine variables and parameters into dimensionless quantities.</li>
+ 	<li>Assess whether a mathematical model is dimensionally correct.</li>
+ 	<li>Synthesize the dynamics of an autonomous second order differential equation by means of energy methods or phase plane analysis.</li>
+</ul>
+</div>
+</div>
+<h2>Nature of the problem, assumptions and model equations</h2>
+We consider the motion of a pendulum, that is of a mass suspended at one end of a string, the other end being attached to a fixed point (see Figure 3.1). It is known that the period of the pendulum depends on its amplitude. We refer the reader to Figure 4 of a <a href="https://doi.org/10.1119/1.2215616">2005 article by Lima and Arun</a>, and references therein. <a id="Fig_3.1"></a>
+
+[caption id="attachment_33" align="alignleft" width="300"]<img class="wp-image-29 size-medium" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Fig_NLP-1-300x268.png" alt="Sketch of a pendulum. Long description available." width="300" height="268" /> Figure 3.1. Sketch of a pendulum. [<a href="#Fig_3.1_Desc"><em>Image Description</em></a>][/caption]In what follows, we will assume that the object attached to the string is a <em>point mass</em>, that the string is massless and that neither the mass of the object nor the length of the string change with time. We will consider that motion takes place in a plane (note this is an approximation since the pendulum tends to undergo a slow precession motion). We will use <em>Newton's law</em> to describe the dynamics of the pendulum. The forces acting on the mass are the force of gravity $latex \vec F_g$, which we will consider constant (see exercises for a justification), the tension $latex \vec F_t$ exerted by the string, and the friction force $latex \vec F_f$ exerted on the mass by the surrounding air. We will assume that this force is proportional to the negative of the velocity of the mass. This too is an approximation; for more information, see for instance <a href="https://doi.org/10.1119/1.14838"><em>Pendulum Damping</em></a> by P. Squire (1986).
+
+In order to set up the problem, we define a basis of vectors $latex (\vec \imath, \vec \jmath)$ for the plane in which the motion is taking place. We call $latex l$ the length of the string and $latex m$ the mass of the object attached to the string. We measure the position of the point mass in terms of the angle $latex \theta$ between the string and the vertical (see Figure 3.1). The position vector of the point mass $latex \vec x$ is given by
+<p style="text-align: center">$latex \vec x = l \sin(\theta)\, \vec \imath - l \cos(\theta)\, \vec \jmath \equiv l \vec r,$</p>
+<p class="no-indent">where $latex \vec r = \sin(\theta) \vec \imath- \cos(\theta) \vec \jmath$. The unit vector orthogonal to $latex \vec r$ and such that $latex (\vec r, \vec \theta)$ forms a direct basis of the $latex (x,y)$ plane is $latex \vec \theta = \cos(\theta)\, \vec \imath+ \sin(\theta)\, \vec \jmath.$</p>
+We can now use this information to express the first and second derivatives of the position vector $latex \vec x$ in terms of the vectors $latex \vec r$ and $latex \vec \theta$, as well as of the derivatives of the angle $latex \theta$. Indeed, we have
+<p style="text-align: center"><a id="D1_NLP"></a>$latex \displaystyle \frac{d \vec x}{d t} = \left(l \cos(\theta)\, \vec \imath+ l \sin(\theta)\, \vec \jmath\,\right) \frac{d \theta}{d t} = l \frac{d \theta}{d t} \vec \theta \qquad (3.1)$</p>
+<p style="text-align: center"><a id="D2_NLP"></a>$latex \begin{align*} \frac{d^2 \vec x}{d t^2} &amp;= l \frac{d^2 \theta}{d t^2} \vec \theta + \left(- l \sin(\theta)\, \vec \imath+ l \cos(\theta)\, \vec \jmath\,\right) \left(\frac{d \theta}{d t}\right)^2 \\ &amp; = l \frac{d^2 \theta}{d t^2} \vec \theta - l \left(\frac{d \theta}{d t} \right)^2 \vec r. \end{align*} \qquad (3.2) $</p>
+<p class="no-indent">Newton's law tells us that the acceleration of the point mass is equal to the sum of the forces applied to the mass. In other words, we have</p>
+<p style="text-align: center"><a id="Newton_NLP"></a>$latex \displaystyle m \frac{d^2 \vec x}{d t^2} = \vec F_g +\vec F_t +\vec F_f, \qquad (3.3)$</p>
+<p class="no-indent">where</p>
+
+<ul>
+ 	<li>$latex \vec F_g = - m g \, \vec \jmath= m g \cos(\theta)\, \vec r - m g \sin(\theta)\, \vec \theta$ is the force of gravity,</li>
+ 	<li>$latex \vec F_t = - T\, \vec r$ is the tension exerted by the string,</li>
+ 	<li>$latex \displaystyle \vec F_f = - c \frac{d \vec x}{d t} = - c l \frac{d \theta}{d t}\, \vec \theta$, with $latex c \gt 0$, is the friction force (we used Equation (<a href="#D1_NLP">3.1</a>) to obtain the last equality).</li>
+</ul>
+Note that we have expressed the forces in terms of the vectors $latex \vec r$ and $latex \vec \theta$, and not $latex \vec \imath$ and $latex \vec \jmath$. The reason is that the expression for $latex d^2 \vec x / d t^2$ is simple if written in terms of $latex \vec r $ and $latex \vec \theta$ (see Equation (<a href="#D2_NLP">3.2</a>)). Putting all of this information together, we obtain
+<p style="text-align: center">$latex \displaystyle m l \frac{d^2 \theta}{d t^2} \, \vec \theta - m l \left(\frac{d \theta}{d t}\right)^2 \, \vec r = m g \cos(\theta)\, \vec r - m g \sin(\theta)\, \vec \theta - T \, \vec r - c l \frac{d \theta}{d t} \, \vec \theta,$</p>
+<p class="no-indent">which, by projecting onto the $latex \vec r$ and $latex \vec \theta$ directions, gives the system of equations</p>
+<p style="text-align: center"><a id="E1_NLP"></a>$latex \displaystyle - m l \left(\frac{d \theta}{d t}\right)^2 = m g \cos(\theta) - T \qquad (3.4)$</p>
+<p style="text-align: center"><a id="E2_NLP"></a>$latex \displaystyle m l \frac{d ^2 \theta}{d t^2} = - m g \sin(\theta) - c l \frac{d \theta}{d t}. \qquad (3.5)$</p>
+<p class="no-indent">Equation (3.4) gives an expression for the tension $latex T$ in terms of the angle $latex \theta$ and its derivative, and Equation (3.5), which does not involve $latex T$, is a <em>nonlinear</em> ordinary differential equation for the angle $latex \theta$. This equation describes the motion of the <em>nonlinear pendulum</em>. It is typically complemented with <em>initial conditions</em>, which give the angle and angular velocity of the pendulum at a particular time, say $latex t = 0$. These initial conditions read</p>
+<p style="text-align: center"><a id="init_NLP"></a>$latex \displaystyle \theta(0) = \theta_0, \qquad \frac{d \theta}{d t}(0) = \Omega_0, \qquad (3.6)$</p>
+<p class="no-indent">where $latex \theta_0$ and $latex \Omega_0$ are known.</p>
+
+<h2>Analysis in the absence of friction</h2>
+In the absence of friction, Equation (<a href="#E2_NLP">3.5</a>) can be re-written as
+<p style="text-align: center"><a id="E3_NLP"></a>$latex \displaystyle \frac{d^2 \theta}{d t^2} = - \frac{g}{l} \sin(\theta) = - \omega_0^2 \sin(\theta), \qquad (3.7)$</p>
+<p class="no-indent">where we set $latex \omega_0 = \sqrt{g / l}$.</p>
+
+<h3><a id="Dimensional analysis"></a>Dimensional analysis</h3>
+The first step in analyzing a model is to perform some <em>dimensional analysis</em>, in order to check that the various terms appearing in the equation(s) that form the model have the same dimension. In what follows, we will use the following standard notation:
+<ul>
+ 	<li>$latex T$ (not to be confused with the tension above) will represent quantities that have the <em>dimension </em>of a time. Note that such quantities may be expressed in different <em>units</em>, such as seconds, minutes, days, years, etc.</li>
+ 	<li>$latex M$ will represent quantities that have the dimension of a mass. The corresponding units may be grams, kilograms, etc.</li>
+ 	<li>$latex L$ will represent quantities that have the dimension of a length. Here again, such quantities my have different units, such as meters, feet, yards, kilometers, etc.</li>
+</ul>
+It is thus important to distinguish between <em>dimension</em> and <em>units</em>. Consider for instance the terms appearing in Equation (<a href="#E3_NLP">3.7</a>). The angle $latex \theta$ is dimensionless (note that this does not mean it has no units, since typically angles are measured in radians or degrees). Quantities which appear as arguments of functions (such as $latex \theta$ in the $latex \sin(\theta)$ term of Equation (<a href="#E3_NLP">3.7</a>)) must be dimensionless. This is something that we always have to check, each time we are faced with a mathematical expression. Second, the left-hand-side of Equation (<a href="#E3_NLP">3.7</a>) has the dimension of inverse time square. We thus write (the bracket notation indicating "dimension")
+<p style="text-align: center">$latex \displaystyle \left[\frac{d^2 \theta}{d t^2}\right] = T^{-2}.$</p>
+<p class="no-indent">The right-hand-side of Equation (<a href="#E3_NLP">3.7</a>) must have the same dimension. Since functions, such as $latex \sin(\theta)$ are dimensionless, we conclude that</p>
+<p style="text-align: center">$latex \displaystyle \left[\frac{g}{l}\right] = T^{-2},$</p>
+<p class="no-indent">which we must now check. To do so, we need to find the dimension of the acceleration of gravity $latex g$. As indicated by its name, $latex g$ has the dimension of an acceleration, i.e. $latex [g] = L\, T^{-2}.$ Since $latex [l] = L$, we see that indeed, $latex [g / l] = T^{-2}$. As a consequence, $latex [\omega_0] = T^{-1}$, i.e. $latex \omega_0$ is a frequency, as expected. Equation (<a href="#E3_NLP">3.7</a>) is therefore dimensionally correct.</p>
+
+<h3><a id="Scaling"></a>Scalings</h3>
+Before starting to analyze a differential equation, it is often useful to rescale it, that is rewrite it in a form that has as few parameters as possible. The reason is that, quite often, quantities that control the dynamics of the problem are not the parameters themselves, but combinations thereof. For instance, Equation (<a href="#E3_NLP">3.7</a>) tells us that the combination $latex g / l$ is the relevant quantity to describe the motion of a frictionless pendulum. As a consequence, there is only one relevant parameter, $latex \omega_0$, instead of two ($latex g$ and $latex l$). We can even go one step further. Since $latex \omega_0$ has the dimension of an inverse time, we can define a characteristic time
+<p style="text-align: center">$latex \displaystyle t_0 = \sqrt{\frac{l}{g}},$</p>
+<p class="no-indent">and define a <em>dimensionless</em> time variable $latex \tau$ as</p>
+<p style="text-align: center">$latex \tau = \frac{t}{t_0}.$</p>
+<p class="no-indent">By substituting these relations in Equations (<a href="#E3_NLP">3.7</a>) and (<a href="#init_NLP">3.6</a>), we obtain</p>
+<p style="text-align: center"><a id="E4_NLP"></a>$latex \displaystyle \frac{d^2 \theta}{d \tau^2}= - \sin(\theta), \qquad (3.8)$</p>
+<p class="no-indent">together with the initial conditions</p>
+<p style="text-align: center"><a id="init2_NLP"></a>$latex \displaystyle \theta(0) = \theta_0, \qquad \frac{d \theta}{d \tau}(0) = t_0 \Omega_0. \qquad (3.9)$</p>
+<p class="no-indent">In other words, the motion of the frictionless nonlinear pendulum can be described by an ordinary differential equation, (<a href="#E4_NLP">3.8</a>), which has no parameters! This is a very important result since it will dramatically simplify our investigation of the nonlinear pendulum: if we can completely characterize the dynamics of Equation (<a href="#E4_NLP">3.8</a>), then we are done with our analysis of Equation (<a href="#E3_NLP">3.7</a>); there is no need to vary parameters!</p>
+
+<h3><a id="Harmonic oscillator"></a>Small oscillations: the harmonic oscillator</h3>
+If the pendulum undergoes small oscillations, that is if $latex \theta$ is small, we can write a Taylor expansion of the expression $latex \sin(\theta)$ in powers of $latex \theta$ and obtain a simplified equation. In particular, if we keep only the first term in the expansion, Equation (<a href="#E4_NLP">3.8</a>) becomes the equation for the harmonic oscillator. Indeed, at lowest order, $latex \sin(\theta) \simeq \theta$, and substitution into Equation  (<a href="#E4_NLP">3.8</a>) gives
+<p style="text-align: center"><a id="E5_NLP"></a>$latex \displaystyle \frac{d^2 \theta}{d \tau^2} + \theta = 0. \qquad (3.10)$</p>
+<p class="no-indent">The general solution of this equation is</p>
+<p style="text-align: center"><a id="sol1_NLP"></a>$latex \displaystyle \theta(\tau) = A \cos(\tau) + B \sin(\tau) \qquad (3.11)$</p>
+<p class="no-indent" style="text-align: left">or equivalently (see exercises)</p>
+<p style="text-align: center"><a id="sol2_NLP"></a>$latex \theta(\tau) = C \cos(\tau + \phi), \qquad (3.12)$</p>
+<p class="no-indent">where $latex A$, $latex B$, $latex C$ and $latex \phi$ are constants. If we now impose the initial conditions (<a href="#init2_NLP">3.9</a>), we get</p>
+<p style="text-align: center">$latex \theta_0 = \theta(0) = A, \qquad t_0 \Omega_0 = \displaystyle \frac{d \theta}{d \tau}(0) = B,$</p>
+<p class="no-indent">or</p>
+<p style="text-align: center">$latex \theta_0 = \theta(0) = C \cos(\phi), \qquad t_0 \Omega_0 = \displaystyle \frac{d \theta}{d \tau}(0) = - C \sin(\phi).$</p>
+<p class="no-indent">The first system of equations gives $latex A$ and $latex B$ directly, whereas one needs to solve the second system for $latex C$ and $latex \phi$ (see exercises) in order to have an expression for $latex \theta(\tau)$. Writing the solution as (<a href="#sol1_NLP">3.11</a>) makes it easier to impose the initial conditions, but Equation (<a href="#sol2_NLP">3.12</a>) makes it easier to describe the dynamics of the solution. We indeed see that the angle $latex \theta$ oscillates as a function of time between the values $latex C = \sqrt{\theta_0^2 + t_0^2 \Omega_0^2}$ and $latex -C$, with a period equal to $latex 2 \pi$ (in the scaled variable $latex \tau$). The pendulum oscillates indefinitely, which is as expected since we assumed that the dynamics is frictionless.</p>
+
+<h3>Nonlinear dynamics</h3>
+Equation (<a href="#E4_NLP">3.8</a>) can be solved explicitly in terms of elliptic functions, but writing such an expression would not necessarily help us describe the motion of the pendulum. We will thus not try to solve this equation, but instead qualitatively describe its dynamics in the corresponding phase space. This may seem surprising to readers who did not take a course on dynamical systems. My hope is to convince you, on a few examples throughout this text, that this is a most general and efficient way of dealing with nonlinear differential equations.
+
+Our goal will be to describe the solutions of (<a href="#E4_NLP">3.8</a>) in the <em>phase plane</em> $latex (\theta, d\theta/d\tau)$. Each initial condition $latex (\theta_0,t_0 \Omega_0)$ will be associated with a curve in this plane. [footnote]See the appendix on ordinary differential equations for the existence and uniqueness of solutions to initial value problems, and for a brief description of phase plane analysis.[/footnote] If we know the arrangement of these solution curves, we can give a complete qualitative description of the dynamics of the nonlinear pendulum. An expression for the solution curves can be obtained as follows. If we multiply Equation (<a href="#E4_NLP">3.8</a>) by $latex d \theta / d \tau$ and integrate, we obtain
+<p style="text-align: center">$latex \displaystyle \frac{1}{2} \left(\frac{d \theta}{d \tau}\right)^2 = \cos(\theta) + E,$</p>
+<p class="no-indent">where the constant $latex E$ is arbitrary. It represents the energy of the dimensionless pendulum, and is conserved by the dynamics. The set of solution curves is thus described by</p>
+<p style="text-align: center"><a id="sol_curv"></a>$latex \displaystyle \frac{d \theta}{d \tau} = \pm \sqrt{2 \cos(\theta) + 2 E}, \qquad \displaystyle \frac{d \theta}{d t} \in \mathbb{R}, \qquad E \in [-1,\infty). \qquad (3.13)$</p>
+<p class="no-indent">If $latex E \gt 1$, then the left hand side of Equation (<a href="#sol_curv">3.13</a>) is real for all values of $latex \theta$, and the corresponding solution curves are not closed. On the other hand, if $latex -1 \le E \le 1$, $latex d \theta / dt$ is real only for values of $latex \theta$ in intervals of the form $latex [-\arccos(E)+ 2 m \pi, \arccos(E) + 2 m \pi]$, $latex m \in \mathbb{Z}$, and the corresponding solution curves are closed orbits. Finally, because of the $latex \pm$ sign in the right hand side of (<a href="#sol_curv">3.13</a>), trajectories are symmetric with respect to the horizontal axis of the phase plane. We can use software such as Maple or MATLAB to plot these curves, paying particular attention to the special cases $latex E = -1$ and $latex E = 1.$ Figure 3.2 shows some of these trajectories. The description of the dynamics is completed by adding arrows to the curves, indicating the direction in which each trajectory is followed. This is not a difficult task since by definition $latex d \theta / d \tau$ is positive if $latex \theta$ increases as a function of $latex \tau$ and negative otherwise. As a consequence, the arrows point to the right in the upper part of the phase plane, and to the left in the lower part.<a id="Fig_3.2"></a></p>
+
+[caption id="attachment_30" align="alignnone" width="800"]<img class="wp-image-30" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/PP_NLP-1024x806.png" alt="Phase portrait. Long description available." width="800" height="630" /> Figure 3.2. Solution curves of the frictionless nonlinear pendulum. [<a href="#Fig_3.2_Desc"><em>Image Description</em></a>][/caption]These results can be confirmed by using a phase plane analysis software such as the <a href="https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field">Phase Plane App</a>. This program can be run in MATLAB. It allows the user to enter Equation (<a href="#E4_NLP">3.8</a>) written as a first order system,
+<p style="text-align: center">$latex \displaystyle \frac{d \theta}{d \tau} = \Lambda, \qquad \frac{d \Lambda}{d \tau} = - \sin(\theta),$</p>
+<p class="no-indent">and to plot the corresponding <a id="Direction field"></a>direction field and trajectories in the phase plane. The direction field for this system is obtained by plotting vectors with components $latex (1,-\sin(\theta))$ (i.e. the right-hand-sides of the above equations) at points of coordinates $latex (\theta, \Lambda)$ in the phase plane. The solution curve of  (<a href="#E4_NLP">3.8</a>) that goes through the point $latex (\theta, \Lambda)$ is tangent to the direction field at that point. Figure 3.3 shows the phase plane for Equation  (<a href="#E4_NLP">3.8</a>), as obtained with PPLANE (developed by John C. Polking at Rice University). The solution curves found numerically are, as expected, in excellent agreement with those shown in Figure 3.2, which were obtained from Equation (<a href="#sol_curv">3.13</a>).<a id="Fig_3.3"></a></p>
+
+[caption id="attachment_31" align="alignnone" width="800"]<img class="wp-image-31" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/PP2_NLP-1024x763.png" alt="Phase portrait. Long description available." width="800" height="596" /> Figure 3.3. Phase plane of the frictionless nonlinear pendulum, as obtained with the software PPLANE. [<a href="#Fig_3.3_Desc"><em>Image Description</em></a>][/caption]More generally, any dynamical system of the form
+<p style="text-align: center"><a id="var"></a>$latex \displaystyle \frac{d^2 x}{d t^2} + \frac{d V}{d x} = 0 \quad (3.14)$</p>
+<p class="no-indent">can be analyzed in this manner. Indeed, multiplying Equation (<a href="#var">3.14</a>) by $latex dx/dt$ and integrating once gives</p>
+<p style="text-align: center"><a id="var_int"></a>$latex \displaystyle \frac{1}{2} \left(\frac{d x}{d t}\right)^2 + V(x) = E, \quad (3.15)$</p>
+<p class="no-indent">where the energy $latex E$ is a constant of motion. By letting $latex \displaystyle \frac{d x}{d t} = \Lambda,$ we obtain an equation for the solution curves in the ($latex x$,$latex \Lambda$) plane:</p>
+<p style="text-align: center">$latex \Lambda = \pm \sqrt{2 \left(E - V(x)\right)}, \qquad \Lambda \in \mathbb{R}.$</p>
+The corresponding phase portrait can be sketched by noticing that solution curves of energy $latex E$ only exist for values of $latex x$ such that $latex E \ge V(x)$. In particular, <em>fixed points</em> of the dynamics, which are such that $latex x(t) = x_0$ is constant in time, are extrema of $latex V(x)$ (from Equation (<a href="#var">3.14</a>)), and the corresponding energy is given by $latex E = V(x_0)$ (from Equation  (<a href="#var_int">3.15</a>)). One can check that minima of $latex V$ correspond to <em>centers</em> and maxima of $latex V$ to <em>saddle points</em> (see exercises). Moreover, trajectories of energy $latex E$ that cross the horizontal axis $latex (\Lambda = 0)$ do so at values of $latex x$ such that $latex V(x) = E$. These trajectories have a vertical tangent at the points of crossing (see exercises). Finally, trajectories which emanate from or converge to saddle points are tangent to the eigenvectors of the linearization of (<a href="#var">3.14</a>) written as a first order system, at these equilibrium points (see exercises). Figure 3.4 illustrates how the previous statements may be used to plot the phase portrait of Equation (<a href="#var">3.14</a>) with $latex V(x) = - \cos(x)$. The result should be compared to Figures 3.2 and 3.3.<a id="Fig_3.4"></a>
+
+[caption id="attachment_32" align="aligncenter" width="800"]<img class="wp-image-32" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/PP2b_NLP-1024x993.png" alt="Phase portrait construction. Long description available." width="800" height="775" /> Figure 3.4. Construction of the phase portrait of Equation (<a href="#var">3.14</a>), with <em>V </em>(<em>x</em>) = - cos(<em>x</em>). [<a href="#Fig_3.4_Desc"><em>Image Description</em></a>][/caption]In Figure 3.4, the graph of $latex V$ as a function of $latex x$ is shown at the top. For each value of the energy $latex E,$ the quantity $latex E - V$ is proportional to $latex \Lambda^2.$ This information allows us to infer the behavior of the various solution curves in the $latex (x, \Lambda)$ plane. The resulting phase portrait is plotted at the bottom.
+<h2>Analysis in the presence of friction</h2>
+In the presence of friction, the equation of motion for the nonlinear pendulum reads
+<p style="text-align: center"><a id="E5b_NLP"></a>$latex \displaystyle \frac{d^2 \theta}{d t^2} = -\frac{g}{l} \sin(\theta) - \frac{c}{m} \frac{d \theta}{d t}. \qquad (3.16)$</p>
+<p class="no-indent">As before, we first need to check that the dimension of the last term is the correct one. We have</p>
+<p style="text-align: center">$latex \displaystyle \left[ \frac{c}{m} \frac{d \theta}{d t}\right] = \left[ \frac{1}{l \, m}\, c\, l\, \frac{d \theta}{d t}\right] = L^{-1} M^{-1} [\hbox{force}] = L^{-1} M^{-1} M L T^{-2} = T^{-2},$</p>
+<p class="no-indent">where we have used the fact that</p>
+<p class="no-indent" style="text-align: center">$latex \displaystyle \vec F_f = -c\, l\, \frac{d\theta}{d t}\, \vec \theta.$</p>
+<p class="no-indent">We now proceed to simplify Equation (<a href="#E5b_NLP">3.16</a>) by making the change of variable $latex \tau = t / t_0$. We find</p>
+<p style="text-align: center"><a id="E6_NLP"></a>$latex \displaystyle \frac{d^2 \theta}{d \tau^2} = - \sin(\theta) - \alpha \frac{d \theta}{d \tau}, \qquad \alpha = \frac{c}{m} \sqrt \frac{l}{g}, \qquad (3.17)$</p>
+<p class="no-indent">and we can check that the parameter $latex \alpha$ is dimensionless, since</p>
+<p style="text-align: center">$latex [\alpha] = [c] M^{-1} T = [\hbox{force}] L^{-1} T M^{-1}\, T = M L T^{-2} \, L^{-1}\, T^2\, M^{-1} = 1.$</p>
+<p class="no-indent">If $latex c = 0$, then $latex \alpha = 0$, and we recover Equation (<a href="#E4_NLP">3.8</a>). The initial conditions for Equation (<a href="#E6_NLP">3.17</a>) are, as before, given by Equation (<a href="#init2_NLP">3.9</a>). Our next step in this analysis is to describe the phase portrait of Equation (<a href="#E6_NLP">3.17</a>). We cannot use the same method as before, since the energy $latex E$ is no longer conserved. Indeed, we can calculate</p>
+<p style="text-align: center">$latex \displaystyle \begin{align*} \frac{d E}{d \tau} &amp;= \frac{d}{d \tau} \left(\frac{1}{2} \left(\frac{d \theta}{d \tau}\right)^2 - \cos(\theta)\right) = \frac{d \theta}{d \tau} \, \frac{d^2 \theta}{d \tau^2} + \sin(\theta)\, \frac{d \theta}{d \tau} \\ &amp;= \left(\frac{d^2 \theta}{d \tau^2} + \sin(\theta)\right) \frac{d \theta}{d \tau} \end{align*}$</p>
+<p class="no-indent">which gives</p>
+<p style="text-align: center">$latex \displaystyle \frac{d E}{d \tau} = - \alpha \left(\frac{d \theta}{d \tau}\right)^2.$</p>
+<p class="no-indent">Thus, since $latex \alpha \gt 0$, the energy $latex E$ is either constant (if $latex d \theta / d \tau = 0$) or decreasing as a function of time. Since $latex E$ is bounded from below by $latex -1$, one can expect that trajectories for which $latex d \theta / d \tau \ne 0$ will converge towards solutions of energy $latex E = -1$. Such solutions are given by $latex \cos(\theta)=1$, i.e. $latex \theta = 2 n \pi$, $latex n \in \mathbb{Z}$; they are fixed points of the dynamics. Pictorially, we can imagine a particle being trapped in one of the valleys of the potential $latex V(x)=-\cos(x)$, losing energy as it moves, and therefore converging to the local minimum of the potential.</p>
+We now turn to the description of the phase plane for Equation (<a href="#E6_NLP">3.17</a>). The corresponding first order system reads
+<p style="text-align: center"><a id="E7_NLP"></a>$latex \begin{align*} \displaystyle \frac{d \theta}{d \tau} &amp; = \Lambda, \\ \frac{d \Lambda}{d \tau} &amp;= -\sin(\theta) - \alpha \Lambda. \end{align*} \qquad (3.18)$</p>
+<p class="no-indent">Fixed points are obtained by setting the left-hand-sides of the above equations to zero, that is solving $latex \Lambda = 0$ and $latex \sin(\theta) = 0,$ which corresponds to points of coordinates $latex (n \pi, 0)$, $latex n \in \mathbb{Z}$ in the $latex (\theta,\Lambda)$ plane. Information on the local dynamics may be obtained by <em>linearizing</em> system (<a href="#E7_NLP">3.18</a>) about these fixed points. To this end, we set</p>
+<p style="text-align: center">$latex \theta = n \pi + \mu, \qquad \Lambda = 0 + \nu,$</p>
+<p class="no-indent">where $latex \mu$ and $latex \nu$ are small, and substitute in Equations (<a href="#E7_NLP">3.18</a>). We find</p>
+<p style="text-align: center"><a id="lin_sys_NLP"></a>$latex \begin{align*} \displaystyle \frac{d \mu}{d \tau} &amp; = \nu, \\ \frac{d \nu}{d \tau} &amp; = -\sin(n \pi + \mu) - \alpha \nu \qquad \qquad \qquad (3.19) \\ &amp; = -\cos(n \pi) \mu - \alpha \nu + O(\mu^3), \end{align*}$</p>
+<p class="no-indent">which, if $latex \mu$ is small, can be approximated by the following <em>linear</em> system</p>
+<p style="text-align: center">$latex \displaystyle \frac{d}{d \tau} \left(\begin{array}{c}\mu \cr \nu \end{array}\right) = \left( \begin{array}{cc} 0 &amp; 1 \cr -\cos(n \pi) &amp; - \alpha \end{array}\right) \left(\begin{array}{c}\mu \cr \nu \end{array}\right).$</p>
+<p class="no-indent">The matrix</p>
+<p class="no-indent" style="text-align: center">$latex \displaystyle J(n \pi,0) = \left( \begin{array}{cc} 0 &amp; 1 \cr -\cos(n \pi) &amp; - \alpha \end{array}\right)$</p>
+<p class="no-indent">is called the <em>Jacobian</em> of system (<a href="#E7_NLP">3.18</a>) at the fixed point $latex (n \pi,0)$. The general solution of (<a href="#lin_sys_NLP">3.19</a>) can be written in terms of the eigenvalues and eigenvectors of $latex J(n \pi,0)$, and this information may be used to assess the linear stability of the corresponding fixed point [footnote]See the <a href="https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/appendix-ordinary-differential-equations#Phase_Plane_Analysis">phase plane analysis section</a> of the appendix on ordinary differential equations for a review.[/footnote]. Since the characteristic polynomial of a $latex 2 \times 2$ matrix $latex A$ is given by $latex \lambda^2 - \lambda \hbox{Tr}(A) + \det(A) = 0$, the eigenvalues of $latex J(n \pi, 0)$ satisfy the characteristic equation</p>
+<p style="text-align: center">$latex \displaystyle \lambda^2 + \alpha \lambda + \cos(n \pi) = 0.$</p>
+<p class="no-indent">If $latex n = 2 p$ is even, $latex \cos(n \pi) = 1$; the product of the two eigenvalues of $latex J(2 p \pi, 0)$ or, equivalently, the determinant of $latex J(2 p \pi, 0)$, is positive. The eigenvalues of $latex J(2 p \pi, 0)$ are thus either of the same sign and real, or complex conjugate (recall that the eigenvalues of a matrix with real entries either are real or come in complex conjugate pairs). The sum of the eigenvalues of $latex J(2 p \pi, 0)$ or, equivalently, the trace of $latex J(2 p \pi, 0)$, is $latex -\alpha$, which is negative. The fixed points $latex (2 p \pi,0)$, $latex p \in \mathbb{Z}$, are thus always stable. We can decide on the nature of these fixed points by comparing the square of the trace of $latex J(2 p \pi, 0)$ to four times its determinant or, more directly, by calculating the eigenvalues of $latex J(2 p \pi, 0)$. They are given by</p>
+<p style="text-align: center">$latex \displaystyle \lambda^\pm_{(2 p \pi,0)} = -\frac{\alpha}{2} \pm \sqrt{\frac{\alpha^2}{4}-1}.$</p>
+<p class="no-indent">The fixed points $latex (2 p \pi,0)$ are therefore stable nodes (if $latex \alpha^2 \gt 4)$ or stable spirals (if $latex \alpha^2 \lt 4$). Similarly, if $latex n = 2 p + 1$ is odd, the eigenvalues of $latex J((2 p + 1)\pi,0)$ have a product equal to $latex \cos((2 p + 1) \pi) = -1$ and are therefore both real and of opposite signs. [footnote]Since $latex J(n \pi, 0)$ has real entries, if its eigenvalues were complex, then they would be complex conjugate and their product would have to be positive.[/footnote] As a consequence, the fixed points $latex ((2 p + 1)\pi,0)$ are saddle points. For completeness, we give the eigenvalues of $latex J((2 p + 1)\pi,0)$, which read</p>
+<p style="text-align: center">$latex \displaystyle \lambda^\pm_{((2 p + 1)\pi,0)} = - \frac{\alpha}{2} \pm \sqrt{\frac{\alpha^2}{4} + 1}.$</p>
+<p class="no-indent">These facts are summarized in the phase portrait of Figure 3.5, obtained with PPLANE. We see that trajectories tangent to the eigenvectors of $latex J((2 p + 1) \pi, 0)$ at the points $latex ((2 p + 1) \pi, 0)$ are <em>separatrices</em> of the phase plane. They are called the <em>stable</em> and unstable <em>manifolds</em> of the saddle points $latex ((2 p + 1) \pi,0)$. As expected, the unstable manifold of $latex ((2 p + 1) \pi,0)$ contains the the stable fixed points $latex (2 p \pi,0)$ and $latex ((2 p + 2) \pi,0)$. Trajectories which connect two different fixed points are called <em>heteroclinic</em> orbits.<a id="Fig_3.5"></a></p>
+
+[caption id="attachment_33" align="alignnone" width="1024"]<img class="wp-image-33 size-large" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/PP3_NLP-1024x765.png" alt="Phase portrait. Long description available." width="1024" height="765" /> Figure 3.5. Phase plane of the nonlinear pendulum with friction, as obtained with the software PPLANE. [<a href="#Fig_3.5_Desc"><em>Image Description</em></a>][/caption]
+<h2>Summary</h2>
+The nonlinear pendulum provides a good illustration of the modeling process. Newton's law, together with a set of simplifying hypotheses, allowed us to derive a differential equation model for the angle of the nonlinear pendulum, with or without friction. We then reviewed how to use dimensional analysis to rescale dependent and independent variables in order to obtain a dimensionless model with a reduced number of parameters. The second order differential equations derived in this chapter were studied in terms of phase plane analysis. The phase plane of a two-dimensional conservative system may be obtained by plotting level-sets of the conserved energy. Curves of constant energy may either be found analytically or drawn from the graph of the potential energy. The phase plane of non-conservative two-dimensional dynamical systems may often be inferred from the analysis of the fixed points of the system and of their linear stability. More precisely, nonlinear terms do not change the nature of stable or unstable nodes and spirals, and of saddles points. The reader may want to consult an elementary text on dynamical systems for further details.
+<h2>Figure Descriptions</h2>
+<a id="Fig_3.1_Desc"></a><strong>Figure 3.1</strong>: A physics diagram of a simple pendulum of length $latex L$ and mass $latex m$. It shows the pendulum suspended from a pivot, displaced by an angle $latex \theta$ from the vertical. Vectors indicate gravity $latex \vec{g}$ acting downward, along with a polar coordinate system defined by radial vector $latex \vec{r}$ and angular vector $latex \vec{\theta}$. A Cartesian coordinate frame with unit vectors $latex \vec{i}$ and $latex \vec{j}$ is shown to the left. [<em><a href="#Fig_3.1">Return to Figure 3.1</a></em>]
+
+<a id="Fig_3.2_Desc"></a><strong>Figure 3.2</strong>: A phase portrait for a simple pendulum plotted with angular displacement $latex \theta$ on the horizontal axis and angular velocity $latex d\theta/dt$ on the vertical axis. The graph shows a series of closed elliptical orbits centered on the $latex \theta$-axis, separated by X-shaped curves (separatrices), with wavy horizontal paths at the top and bottom of the frame. [<em><a href="#Fig_3.2">Return to Figure 3.2</a></em>]
+
+<a id="Fig_3.3_Desc"></a><strong>Figure 3.3</strong>: A phase portrait of the nonlinear system $latex x' = y$ and $latex y' = -\sin(x)$. The plot shows a vector field and trajectories on a Cartesian plane with $latex x$ ranging from approximately $latex -15$ to $latex 15$ and $latex y$ from $latex -2.5$ to $latex 2.5$. It features a series of fixed points along the $x$-axis: stable centers (surrounded by closed orbits) and unstable saddle points (X-shapes). [<em><a href="#Fig_3.3">Return to Figure 3.3</a></em>]
+
+<a id="Fig_3.4_Desc"></a><strong>Figure 3.4</strong>: A dual-panel mathematical diagram. The top plot shows a periodic potential energy curve $latex V(x)$ with local minima and maxima. The bottom plot shows the corresponding phase portrait with energy levels $latex E &lt; 1$ (closed orbits), $latex E = 1$ (separatrices), and $latex E &gt; 1$ (unbounded trajectories). Dashed vertical lines connect the potential minima to centers and the potential maxima to unstable saddle points. [<em><a href="#Fig_3.4">Return to Figure 3.4</a></em>]
+
+<a id="Fig_3.5_Desc"></a><strong>Figure 3.5</strong>: A phase portrait for a damped pendulum system defined by $latex x' = y$ and $latex y' = -\sin(x) - a y$, with damping coefficient $latex a = 0.1$. The plot features a vector field and trajectories. Unlike the undamped version, the trajectories now form inward spirals toward the stable equilibrium points on the $latex x$-axis, indicating a loss of energy over time. [<em><a href="#Fig_3.5">Return to Figure 3.5</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Food for Thought</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center">Problem 1</h3>
+Show that
+<p style="text-align: center">$latex \theta(\tau) = C \cos(\tau + \phi),$ with $latex A, B \in \mathbb{R}$</p>
+<p class="no-indent" style="text-align: left">can be written as</p>
+<p class="no-indent" style="text-align: center">$latex \theta(\tau) = A \cos(\tau) + B \sin(\tau),$</p>
+<p style="text-align: left">with $latex C, \phi \in \mathbb{R}$ by expressing $latex A$ and $latex B$ in terms of $latex C$ and $latex \phi$.</p>
+<p class="no-indent">Conversely, explain how you would find $latex C$ and $latex \phi$, knowing $latex A$ and $latex B$. Are $latex C$ and $latex \phi$ uniquely determined? Why or why not?</p>
+
+
+<hr />
+
+<h3 style="text-align: center">Problem 2</h3>
+It is shown in the text that there exist solutions to Equation (<a href="#E4_NLP">3.8</a>) which exhibit periodic oscillations.
+<ol>
+ 	<li>Write down an equation for the period $latex T$ of these oscillations, as an integral over the angle variable $latex \theta$. Your answer should depend on the energy $latex E$.</li>
+ 	<li>Show that the period $latex T$ is an increasing function of the energy $latex E$. In other words, show that the period of the nonlinear pendulum increases with its amplitude.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 3</h3>
+Consider a one-dimensional frictionless spring-mass system, where the forces acting on the mass $latex m$ at position $latex x$ are the force of gravity $latex F_g = - m g$ with $latex g \gt 0$ constant, and the restoring force of the spring given by $latex F_r = - k (x - x_0)$, where $latex k \gt 0$ and $latex x_0$ are constant.
+<ol>
+ 	<li>Use Newton's law to write down an equation for the position $latex x$ of the mass.</li>
+ 	<li>Re-scale the resulting equation. How many parameters can you get rid of?</li>
+ 	<li>Show that the frictionless spring-mass system is conservative.</li>
+ 	<li>Describe the dynamics of this system.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 4</h3>
+<p style="text-align: left">Consider the following system of differential equations,</p>
+<p style="text-align: center">$latex \frac{d x}{d t} = F(x,y) \qquad \frac{d y}{d t} = G(x,y).$</p>
+
+<ol>
+ 	<li>What conditions should be satisfied by the coordinates $latex x$ and $latex y$ of a fixed point of this system?</li>
+ 	<li>Assume that $latex (x_0, y_0)$ is a fixed point of the above system. We are interested in describing the dynamics of the system in the vicinity of the fixed point. To do so, set $latex x = x_0 + \mu$, $latex y = y_0 + \nu$, substitute these expressions into the above system, and Taylor-expand the right-hand sides in powers of $latex \mu$ and $latex \nu$, up to order two.</li>
+ 	<li>Using the results of part (2) above, show that the linearization of the system about the fixed point $latex (x_0,y_0)$ reads
+<p class="no-indent" style="text-align: center">$latex \displaystyle \frac{d}{d t} \left(\begin{array}{c}\mu \cr \nu \end{array}\right) = J(x_0,y_0) \left(\begin{array}{c}\mu \cr \nu \end{array}\right),$</p>
+<span style="font-size: 1rem;text-align: center">where the Jacobian $latex J(x_0,y_0)$ of the system at $latex (x_0,y_0)$ is given by</span></li>
+</ol>
+<p style="text-align: center">$latex \displaystyle J(x_0,y_0) = \left(\begin{array}{cc} \left. \frac{\partial F(x,y)}{\partial x} \right|_{(x_0,y_0)} &amp; \left. \frac{\partial F(x,y)}{\partial y} \right|_{(x_0,y_0)} \cr \left. \frac{\partial G(x,y)}{\partial x} \right|_{(x_0,y_0)} &amp; \left. \frac{\partial G(x,y)}{\partial y} \right|_{(x_0,y_0)}\end{array}\right).$</p>
+
+
+<hr />
+
+<h3 style="text-align: center">Problem 5</h3>
+Consider a linear system of the form
+<p style="text-align: center">$latex \displaystyle \frac{d}{d t} \left(\begin{array}{c} x \cr y \end{array}\right) = \left( \begin{array}{cc} a &amp; 0 \cr 0 &amp; b \end{array} \right) \left(\begin{array}{c} x \cr y \end{array}\right),$</p>
+<p class="no-indent">where $latex a \gt 0,\ b \lt 0.$</p>
+
+<ol>
+ 	<li>Give the general solution to this system.</li>
+ 	<li>Sketch the phase plane of this system, paying particular attention to special trajectories. Can you tell in which direction the solution curves are traced out as time goes on? If so, add arrows to the trajectories you drew.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 6</h3>
+Sketch the phase plane in the vicinity of the following types of fixed points:
+<ol>
+ 	<li>A stable node.</li>
+ 	<li>An unstable spiral.</li>
+ 	<li>A center.</li>
+ 	<li>A saddle point.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 7</h3>
+Describe the eigenvalues of the linearization of a system of dimension two in the vicinity of the following fixed points:
+<ol>
+ 	<li>A stable node.</li>
+ 	<li>An unstable spiral.</li>
+ 	<li>A center.</li>
+ 	<li>A saddle point.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 8</h3>
+Find a 2 by 2 matrix $latex A$ whose entries are all non-zero, and such that the linear system $latex \dot X = A X$ has a fixed point of the following type at the origin:
+<ol>
+ 	<li>A stable node.</li>
+ 	<li>An unstable spiral.</li>
+ 	<li>A center.</li>
+ 	<li>A saddle point.</li>
+</ol>
+Check your answer with a phase plane analysis software, such as the <a href="https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field">Phase Plane App</a> or equivalent software.
+
+<hr />
+
+<h3 style="text-align: center">Problem 9</h3>
+Explain how you would determine the nature (e.g. stable or unstable node or spiral, linear center or saddle point) of a fixed point $latex (x_0,y_0)$ of the two-dimensional differential system
+<p style="text-align: center">$latex \displaystyle \frac{d x}{d t} = F(x,y), \qquad \frac{d y}{d t} = G(x,y).$</p>
+
+
+<hr />
+
+<h3 style="text-align: center">Problem 10</h3>
+Sketch the phase planes of the following dynamical systems. If the answer depends on the parameter(s) of the problem, all cases should be considered. Use the <a href="https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field">Phase Plane App</a> or equivalent software to check your results.
+<ol>
+ 	<li>$latex \displaystyle \frac{d}{d t} \left(\begin{array}{c}x \cr y \end{array}\right) = \left(\begin{array}{c}y \cr - x - c\, y \end{array}\right), \qquad c \gt 0$.</li>
+ 	<li>$latex \displaystyle \frac{d}{d t} \left(\begin{array}{c}x \cr y \end{array}\right) = \left(\begin{array}{c}y \cr x (x+1) (x-2) \end{array}\right)$.</li>
+ 	<li>$latex \displaystyle \frac{d}{d t} \left(\begin{array}{c}x \cr y \end{array}\right) = \left(\begin{array}{c}y \cr x (x+1) (x-2) - c\, y \end{array}\right), \qquad c \gt 0$.</li>
+ 	<li>$latex \displaystyle \frac{d}{d t} \left(\begin{array}{c}x \cr y \end{array}\right) = \left(\begin{array}{c} x (6 - 2 y) \cr y (x - 3) \end{array}\right)$.</li>
+ 	<li>$latex \displaystyle \frac{d}{d t} \left(\begin{array}{c}x \cr y \end{array}\right) = \left(\begin{array}{c} x (1 - x - 2 y) \cr y (1 - 3 x - y) / 2 \end{array}\right)$.</li>
+ 	<li>$latex \displaystyle \frac{d}{d t} \left(\begin{array}{c}x \cr y \end{array}\right) = \left(\begin{array}{c} y \cr x -x^3 \end{array}\right)$.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 11</h3>
+Consider the van der Pol oscillator,
+<p style="text-align: center">$latex \displaystyle \frac{d^2 x}{d t^2} + \omega^2 x = \epsilon \frac{d x}{d t} (1 - x^2), \qquad \epsilon \ge 0.$</p>
+
+<ol>
+ 	<li>Describe the dynamics when $latex \epsilon=0$.</li>
+ 	<li>What is the effect of the right-hand-side when $latex |x|$ is small?</li>
+ 	<li>What is the effect of the right-hand-side when $latex |x|$ is much larger than $latex 1$?</li>
+ 	<li>Based on your answers to the previous questions, explain what you expect to happen for intermediate values of $latex |x|$.</li>
+ 	<li>Sketch the phase plane of the van der Pol oscillator.</li>
+ 	<li>Check your answer with the <a href="https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field">Phase Plane App</a> or equivalent software. Is the result surprising? Why or why not?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 12</h3>
+Consider the following differential equation, $latex \displaystyle \frac{d x}{d t} = \lambda x - \gamma x^3.$
+<ol>
+ 	<li>What is the dimension of $latex \lambda$?</li>
+ 	<li>What is the dimension of $latex \gamma$? Your answer should be in terms of the dimension of $latex x$, denoted by $latex [x]$.</li>
+ 	<li>Let $latex t_0$ be a characteristic time scale for this problem. Define a dimensionless time variable $latex \tau = t / t_0$, and show that you can make a change of variable from $latex t$ to $latex \tau$, to "remove" the parameter $latex \lambda$.</li>
+ 	<li>Can you find a change of variable that would allow you to remove $latex \gamma$ as well?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center"><span style="text-indent: 0em">Problem 13</span></h3>
+<span style="text-indent: 0em">The force of gravity between two bodies of mass $latex m_1$ </span> and $latex m_2$ has intensity $latex \displaystyle F = G \frac{m_1 m_2}{r^2},$ where $latex r$ is the distance between the centers of mass of the two bodies, and $latex G$ is the gravitational constant.
+<ol>
+ 	<li>Use this formula to show that for an object of mass $latex m$ at the surface of the Earth, one can approximate the force $latex F$ by $latex F \simeq m g$, where the acceleration of gravity $latex g$ is constant.</li>
+ 	<li>Express $latex g$ in terms of $latex G$, the mass $latex M$ of the Earth, and the radius $latex R$ of the Earth.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center"><span style="text-indent: 0em">Problem 14</span></h3>
+<span style="text-indent: 0em">Consider a smooth function $latex f(x)$, and its Taylor </span>expansion near $latex x = x_0$,
+<p style="text-align: center">$latex \displaystyle f(x) = \sum_{i = 0}^n f^{(i)}(x_0) \frac{(x - x_0)^i}{i !} + f^{(n+1)}(\bar x) \frac{(x - x_0)^{n+1}}{(n+1)!}, \qquad (3.20)$</p>
+<p class="no-indent">where $latex \bar x \in [x_0,x]$. Let $latex E_n(x)$ be the error made by approximating $latex f$ with its Taylor expansion truncated to order $latex n$,</p>
+<p style="text-align: center">$latex \displaystyle E_n(x) = f(x) - \sum_{i = 0}^n f^{(i)}(x_0) \frac{(x - x_0)^i}{i !} .$</p>
+
+<ol>
+ 	<li>Use Equation (3.20) above to write the Taylor expansion of $latex f(x) = \cos(x)$, near $latex x_0 = 0$ to order $latex n = 5$.</li>
+ 	<li>Find a condition on $latex |x|$ which ensures that $latex \vert E_5(x) \vert \lt 0.05$.</li>
+ 	<li>Use a calculator or MATLAB to check your answer to the previous question.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 15</h3>
+Consider the following model
+<p style="text-align: center">$latex \displaystyle \frac{\partial u}{\partial t} = \mu u + \alpha \frac{\partial^2 u}{\partial x^2} - \beta u^3, \qquad u \in \mathbb{R}, \quad \alpha, \beta \gt 0.$</p>
+
+<ol>
+ 	<li>What are the dimensions of the parameters $latex \alpha$, $latex \beta$ and $latex \mu$? Write $latex [u]$ for the dimension of $latex u$.</li>
+ 	<li>How many relevant parameters does this model have? Explain.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 16</h3>
+Consider the second order differential equation $latex \displaystyle \frac{d^2 x}{d t^2} + \frac{d V}{d x} = 0,$ where $latex V(x)$ is a smooth potential.
+<ol>
+ 	<li>Re-write this second order equation as a first-order system.</li>
+ 	<li>Find the fixed points of the first-order system and show that they correspond to critical points of $latex V$.</li>
+ 	<li>Find the linearized system about an arbitrary fixed point and show that maxima of $latex V$ correspond to saddle points and minima of $latex V$ to linear centers.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center"><span style="text-indent: 0em">Problem 17</span></h3>
+<span style="text-indent: 0em">Consider the dynamical system </span><span style="text-indent: 0em">$latex \displaystyle \frac{d^2 x}{d t^2} + \frac{d V}{d x} = 0,$ </span>where $latex V(x)$ is a smooth function. Assume that $latex (x_0, 0)$ is a saddle point of the corresponding first-order system of differential equations.
+<p class="no-indent">Find an equation describing the trajectories in the associated phase plane near the fixed point $latex (x_0, 0)$.</p>
+
+
+<hr />
+
+<h3 class="no-indent" style="text-align: center"><span style="text-indent: 0em">Problem 18</span></h3>
+<p class="no-indent"><span style="text-indent: 0em">Consider the dynamical system </span><span style="text-indent: 0em">$latex \displaystyle \frac{d^2 x}{d t^2} + \frac{d V}{d x} = 0,$ </span>where $latex V(x)$ is a smooth function.</p>
+<p class="no-indent">Show that, in the phase plane of coordinates $latex \left(x,\dfrac{dx}{dt}\right)$, trajectories with energy $latex E$ such that $latex \min(V) \lt E \lt \max(V)$ (where $latex \min(V)$ and/or $latex \max(V)$ may be infinite depending on the potential $latex V$) cross the $latex x$-axis. In addition, show that they have a vertical tangent at points of crossing where $latex \displaystyle \frac{d V}{d x} \ne 0$.</p>
+
+
+<hr />
+
+<h3 class="no-indent" style="text-align: center"><span style="text-indent: 0em">Problem 19</span></h3>
+<p class="no-indent"><span style="text-indent: 0em">Sketch the phase plane associated with the</span> differential equation $latex \displaystyle \frac{d^2 x}{d t^2} + \frac{d V}{d x}=0,$ where the potential $latex V(x)$ has the shape given below. Only the portion of the graph of $latex V(x)$ near its minimum is shown. You may assume that the trends suggested by the picture continue outside of the plot area, i.e. that $latex \displaystyle \lim_{x \to - \infty} V(x) = \lim_{x \to + \infty} V(x) = + \infty.$</p>
+<p class="no-indent"><img class="wp-image-34 aligncenter" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Mech_pot1-1-300x218.png" alt="Shape of the potential V. Long description below." width="207" height="150" /></p>
+<strong>Image description</strong>: A graph of a potential energy function showing a single, smooth, U-shaped curve (like a slightly deformed parabola) with a minimum at the center. The curve opens upward and rises toward infinity on both the left and right sides. An arrow below the curve indicates the horizontal axis is $latex x$.
+
+<hr />
+
+<h3 class="no-indent" style="text-align: center">Problem 20</h3>
+<p class="no-indent">Sketch the phase plane associated with the differential equation $latex \displaystyle \frac{d^2 x}{d t^2} + \frac{d V}{d x} = 0,$ where the potential $latex V(x)$ has the shape given below. Only the portion of the graph of $latex V(x)$ near its extrema is shown. You may assume that the trends suggested by the picture continue outside of the plot area, i.e. that $latex \displaystyle \lim_{x \to - \infty} V(x) = \lim_{x \to + \infty} V(x) = + \infty.$</p>
+<p class="no-indent"><img class="wp-image-35 aligncenter" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Mech_pot2-1-300x166.png" alt="Shape of the potential V. Long description below." width="270" height="150" /></p>
+<strong>Image description</strong>: A graph of a potential energy function featuring two distinct valleys (local minima) separated by a single central peak (local maximum). The valley on the left is deeper than the valley on the right. An arrow labeled $latex x$ indicates the horizontal axis. The curve rises sharply at both the far left and far right ends.
+
+<hr />
+
+<h3 class="no-indent" style="text-align: center">Problem 21</h3>
+<p class="no-indent">Sketch the phase plane associated with the differential equation $latex \displaystyle \frac{d^2 x}{d t^2} + \frac{d V}{d x} = 0,$ where the potential $latex V(x)$ has the shape given below. Only the portion of the graph of $latex V(x)$ near its extrema is shown. You may assume that the trends suggested by the picture continue outside of the plot area, i.e. that $latex \displaystyle \lim_{x \to - \infty} V(x) = + \infty, \quad \lim_{x \to + \infty} V(x) = \,- \infty.$</p>
+<p class="no-indent"><img class="wp-image-36 aligncenter" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Mech_pot3-1-300x271.png" alt="Shape of the potential V. Long description below." width="166" height="150" /></p>
+<strong>Image description</strong>: A graph of a potential energy function showing a smooth curve with one local minimum (a valley) and one local maximum (a peak). An arrow below the curve indicates the horizontal axis is $x$. The curve descends from the left into the valley, rises to the peak, and then descends sharply toward the right.
+
+<hr />
+
+<h3 class="no-indent" style="text-align: center">Problem 22</h3>
+<p class="no-indent">Sketch the phase plane associated with the differential equation $latex \displaystyle \frac{d^2 x}{d t^2} + \frac{d V}{d x} = 0,$ where the potential $latex V(x)$ has the shape given below. Only the portion of the graph of $latex V(x)$ near its extrema is shown. You may assume that the trends suggested by the picture continue outside of the plot area, i.e. that $latex \displaystyle \lim_{x \to - \infty} V(x) = \,- \infty, \quad \lim_{x \to + \infty} V(x) = + \infty.$</p>
+<p class="no-indent"><img class="wp-image-37 aligncenter" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Mech_pot4-1-300x160.png" alt="Shape of the potential V. Long description below." width="282" height="150" /></p>
+<strong>Image description</strong>: A graph of a potential energy function featuring two peaks (local maxima) and two distinct valleys (local minima). The curve starts by rising to a small peak on the left, dips into a shallow valley, rises to a taller central peak, dips into a much deeper valley on the right, and finally rises sharply toward infinity. An arrow labeled $latex x$ indicates the horizontal axis.
+
+<hr />
+
+<h3 class="no-indent" style="text-align: center">Problem 23</h3>
+<p class="no-indent">Consider the Navier-Stokes equation</p>
+<p class="no-indent" style="text-align: center">$latex \displaystyle \frac{\partial \vec v}{\partial t} + \left(\vec v \cdot \nabla \right) \vec v = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \vec v +\frac{1}{\rho} \vec F, $</p>
+<p class="no-indent">where the vector $latex \vec v$ represents the velocity of a fluid in 3 spatial dimensions, $latex \rho$ is the density of the fluid, $latex p$ is its pressure, $latex \nu$ is the kinematic viscosity of the fluid, and $latex \vec F$ stands for the density of bulk forces applied to the fluid. The operator $latex \nabla$ is the gradient in 3 dimensions.</p>
+
+<ol>
+ 	<li>
+<p class="no-indent">What is the dimension of the two terms on the left hand side of the equation? Why should these dimensions be the same?</p>
+</li>
+ 	<li>
+<p class="no-indent">Use this information to find the dimension of $latex p$ and that of $latex \vec F$. Is the result what you expected, based on your knowledge of forces and pressure?</p>
+</li>
+ 	<li>
+<p class="no-indent">Find the dimension of $latex \nu$.</p>
+</li>
+ 	<li>
+<p class="no-indent">Let $latex U$ be a characteristic velocity, and $latex l$ a characteristic length. Define dimensionless variables $latex \vec V$ and $latex \vec X$ such that $latex \vec v = U \vec V$ and $latex \vec x = l \vec X$, where $latex \vec x$ is the position vector. Re-write the Navier-Stokes equation in terms of these new variables.</p>
+</li>
+ 	<li>
+<p class="no-indent">Show that if you now re-scale time and introduce dimensionless versions of $latex p$ and $latex \vec F$, then the dimensionless Navier-Stokes equation involves only one parameter, $latex Re = U l / \nu$. This parameter is called the <em>Reynolds number</em>.</p>
+</li>
+</ol>
+</div>
+</div>

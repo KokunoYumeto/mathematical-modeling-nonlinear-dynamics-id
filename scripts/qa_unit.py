@@ -25,7 +25,8 @@ QA_SPECS = {
         "links": 14,
         "math": 14,
         "problems": 7,
-        "asset": "assets/modeling-cycle-id.svg",
+        "footnotes": 0,
+        "assets": ["assets/modeling-cycle-id.svg"],
         "notebook": "notebooks/problem-07-open-curve-fitting.ipynb",
         "notebook_cells": 12,
         "code_cells": 7,
@@ -38,7 +39,8 @@ QA_SPECS = {
         "links": 10,
         "math": 92,
         "problems": 7,
-        "asset": "assets/the-wave-source.png",
+        "footnotes": 0,
+        "assets": ["assets/the-wave-source.png"],
         "notebook": "notebooks/chapter-02-open-wave-simulation.ipynb",
         "notebook_cells": 15,
         "code_cells": 7,
@@ -51,7 +53,8 @@ QA_SPECS = {
         "links": 0,
         "math": 0,
         "problems": 0,
-        "asset": None,
+        "footnotes": 0,
+        "assets": [],
         "notebook": None,
         "notebook_cells": 0,
         "code_cells": 0,
@@ -59,19 +62,82 @@ QA_SPECS = {
         "lock": None,
         "plain_paragraphs": 3,
     },
+    "O005-LEGA-V101-CH03": {
+        "unit_type": "chapter",
+        "elements": 423,
+        "links": 62,
+        "math": 404,
+        "target_math": 407,
+        "reader_math": 408,
+        "math_replacements": {
+            101: (
+                "\\displaystyle \\frac{d \\theta}{d \\tau} = \\pm \\sqrt{2 \\cos(\\theta) + 2 E}, \\qquad \\displaystyle \\frac{d \\theta}{d t} \\in \\mathbb{R}, \\qquad E \\in [-1,\\infty). \\qquad (3.13)",
+                "\\displaystyle \\frac{d \\theta}{d \\tau} = \\pm \\sqrt{2 \\cos(\\theta) + 2 E}, \\qquad \\displaystyle \\frac{d \\theta}{d \\tau} \\in \\mathbb{R}, \\qquad E \\in [-1,\\infty). \\qquad (3.13)",
+            ),
+            105: ("d \\theta / dt", "d \\theta / d\\tau"),
+            107: (
+                "[-\\arccos(E)+ 2 m \\pi, \\arccos(E) + 2 m \\pi]",
+                "[-\\arccos(-E)+ 2 m \\pi, \\arccos(-E) + 2 m \\pi]",
+            ),
+            116: ("(1,-\\sin(\\theta))", "(\\Lambda,-\\sin(\\theta))"),
+            147: (
+                "\\displaystyle \\left[ \\frac{c}{m} \\frac{d \\theta}{d t}\\right] = \\left[ \\frac{1}{l \\, m}\\, c\\, l\\, \\frac{d \\theta}{d t}\\right] = L^{-1} M^{-1} [\\hbox{force}] = L^{-1} M^{-1} M L T^{-2} = T^{-2},",
+                "\\displaystyle \\left[ \\frac{c}{m} \\frac{d \\theta}{d t}\\right] = \\left[ \\frac{1}{l \\, m}\\, c\\, l\\, \\frac{d \\theta}{d t}\\right] = L^{-1} M^{-1} [\\hbox{gaya}] = L^{-1} M^{-1} M L T^{-2} = T^{-2},",
+            ),
+            152: (
+                "[\\alpha] = [c] M^{-1} T = [\\hbox{force}] L^{-1} T M^{-1}\\, T = M L T^{-2} \\, L^{-1}\\, T^2\\, M^{-1} = 1.",
+                "[\\alpha] = [c] M^{-1} T = [\\hbox{gaya}] L^{-1} T M^{-1}\\, T = M L T^{-2} \\, L^{-1}\\, T^2\\, M^{-1} = 1.",
+            ),
+            203: ("\\alpha^2 \\gt 4)", "\\alpha^2 \\gt 4"),
+            238: ("E &lt; 1", "-1 &lt; E &lt; 1"),
+            246: ("A, B \\in \\mathbb{R}", "C, \\phi \\in \\mathbb{R}"),
+            248: ("C, \\phi \\in \\mathbb{R}", "A, B \\in \\mathbb{R}"),
+            297: (
+                "\\displaystyle \\frac{d^2 x}{d t^2} + \\omega^2 x = \\epsilon \\frac{d x}{d t} (1 - x^2), \\qquad \\epsilon \\ge 0.",
+                "\\displaystyle \\frac{d^2 x}{d t^2} + \\omega^2 x = \\epsilon \\frac{d x}{d t} (1 - x^2), \\qquad \\epsilon \\ge 0, \\qquad \\omega \\gt 0.",
+            ),
+            330: (
+                "\\bar x \\in [x_0,x]",
+                "\\bar x \\in [\\min(x_0,x),\\max(x_0,x)]",
+            ),
+            359: ("\\min(V) \\lt E \\lt \\max(V)", "\\inf V \\lt E \\lt \\sup V"),
+            360: ("\\min(V)", "\\inf V"),
+            361: ("\\max(V)", "\\sup V"),
+        },
+        "math_insertions_before": {237: ["x"], 241: ["E=-1"], 379: ["x"]},
+        "problems": 23,
+        "footnotes": 3,
+        "assets": [
+            "assets/nonlinear-pendulum-source.png",
+            "assets/phase-portrait-1-source.png",
+            "assets/phase-portrait-2-source.png",
+            "assets/phase-portrait-construction-id-v3.png",
+            "assets/phase-portrait-3-source.png",
+            "assets/potential-1-source.png",
+            "assets/potential-2-source.png",
+            "assets/potential-3-source.png",
+            "assets/potential-4-source.png",
+        ],
+        "notebook": "notebooks/chapter-03-open-phase-plane.ipynb",
+        "notebook_cells": 13,
+        "code_cells": 7,
+        "mastery_math": None,
+        "lock": None,
+        "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",
+    },
 }
 BUILDER = ROOT / "scripts" / "build_unit_reader.py"
 LATEX_RE = re.compile(r"\$latex\s+(.+?)\$", re.DOTALL)
 
 
 def configure(unit_id: str) -> None:
-    global UNIT_ID, SPEC, SOURCE, TARGET, ASSET, NOTEBOOK, LOCK, MASTERY
+    global UNIT_ID, SPEC, SOURCE, TARGET, ASSETS, NOTEBOOK, LOCK, MASTERY
     global SEGMENTS, UNIT, BUILD
     UNIT_ID = unit_id
     SPEC = QA_SPECS[unit_id]
     SOURCE = ROOT / "authority" / "units" / UNIT_ID / "content.raw.en.html"
     TARGET = ROOT / "source" / "id-ID" / UNIT_ID / "content.html"
-    ASSET = ROOT / "source" / "id-ID" / UNIT_ID / SPEC["asset"] if SPEC["asset"] else None
+    ASSETS = [ROOT / "source" / "id-ID" / UNIT_ID / path for path in SPEC["assets"]]
     NOTEBOOK = ROOT / "source" / "id-ID" / UNIT_ID / SPEC["notebook"] if SPEC["notebook"] else None
     LOCK = NOTEBOOK.parent / "requirements.lock" if NOTEBOOK else None
     MASTERY = ROOT / "backend" / "mastery" / f"{UNIT_ID}.mastery.json" if SPEC["problems"] else None
@@ -122,9 +188,23 @@ def structural_replay() -> dict:
     require(source_links == target_links and len(source_links) == SPEC["links"], "Source/target href sequence differs")
     source_math = [match.strip() for match in LATEX_RE.findall(source_text)]
     target_math = [match.strip() for match in LATEX_RE.findall(target_text)]
-    require(source_math == target_math and len(source_math) == SPEC["math"], "Source/target TeX sequence differs")
-    if NOTEBOOK:
-        require("Python" in target_text, "Open Python replacement is missing")
+    require(len(source_math) == SPEC["math"], "Frozen source TeX census differs")
+    expected_target_math: list[str] = []
+    replacements = SPEC.get("math_replacements", {})
+    insertions = SPEC.get("math_insertions_before", {})
+    for index, value in enumerate(source_math):
+        expected_target_math.extend(insertions.get(index, []))
+        if index in replacements:
+            old, new = replacements[index]
+            require(value == old, f"Declared source TeX correction surface {index} differs")
+            value = new
+        expected_target_math.append(value)
+    expected_target_math.extend(insertions.get(len(source_math), []))
+    require(
+        target_math == expected_target_math
+        and len(target_math) == SPEC.get("target_math", SPEC["math"]),
+        "Source/target TeX sequence differs outside declared corrections",
+    )
     if SPEC.get("plain_paragraphs"):
         source_paragraphs = [part for part in re.split(r"\r?\n\s*\r?\n", source_text.strip()) if part.strip()]
         target_paragraphs = [part for part in re.split(r"\r?\n\s*\r?\n", target_text.strip()) if part.strip()]
@@ -137,7 +217,15 @@ def structural_replay() -> dict:
     require(len(ids) == len(set(ids)), "Duplicate target IDs")
     expected = [f"{UNIT_ID}-P{i:02d}" for i in range(1, SPEC["problems"] + 1)]
     require([tag["id"] for tag in target_tags if tag.name == "h3" and tag.has_attr("id")] == expected, "Problem IDs differ")
-    return {"elements": len(source_tags), "links": len(source_links), "math": len(source_math), "problems": len(expected)}
+    result = {
+        "elements": len(source_tags),
+        "links": len(source_links),
+        "math": len(source_math),
+        "problems": len(expected),
+    }
+    if len(target_math) != len(source_math):
+        result["target_math"] = len(target_math)
+    return result
 
 
 def backend_replay() -> dict:
@@ -162,10 +250,16 @@ def backend_replay() -> dict:
         ("source", "content_sha256", SOURCE),
         ("target", "content_sha256", TARGET),
     ]
-    if ASSET:
-        bound_paths.append(("target", "figure_sha256", ASSET))
+    if len(ASSETS) == 1:
+        bound_paths.append(("target", "figure_sha256", ASSETS[0]))
     for branch, key, path in bound_paths:
         require(unit[branch][key] == sha(path), f"Unit {branch}.{key} differs")
+    if len(ASSETS) > 1:
+        expected_figures = [
+            {"path": path.relative_to(ROOT).as_posix(), "sha256": sha(path)}
+            for path in ASSETS
+        ]
+        require(unit["target"].get("figures") == expected_figures, "Unit target figure set differs")
     require(unit["segments"]["sha256"] == sha(SEGMENTS), "Unit segment hash differs")
     if MASTERY:
         require(unit["mastery_sha256"] == sha(MASTERY), "Unit mastery hash differs")
@@ -184,11 +278,20 @@ def reader_replay(root: Path) -> dict:
     soup = BeautifulSoup(index.read_text(encoding="utf-8"), "html.parser")
     require(soup.html and soup.html.get("lang") == "id-ID", "Reader lang is not id-ID")
     require(len(soup.find_all("h1")) == 1, "Reader requires exactly one h1")
-    require(len(soup.select(f"article.{SPEC['unit_type']} math")) == SPEC["math"], f"Reader unit requires exactly {SPEC['math']} MathML formulas")
+    target_math_count = SPEC.get("reader_math", SPEC.get("target_math", SPEC["math"]))
+    require(
+        len(soup.select(f"article.{SPEC['unit_type']} math")) == target_math_count,
+        f"Reader unit requires exactly {target_math_count} MathML formulas",
+    )
     mastery_math = len(soup.select("#dukungan-belajar math"))
     if SPEC["mastery_math"] is not None:
         require(mastery_math == SPEC["mastery_math"], "Reader mastery MathML count differs")
     require(len(soup.find_all("details")) == 3 * SPEC["problems"], "Reader mastery disclosure count differs")
+    require(
+        len(soup.select('span.reader-footnote[role="note"]')) == SPEC["footnotes"],
+        "Reader footnote conversion count differs",
+    )
+    require("[footnote]" not in index.read_text(encoding="utf-8"), "Reader exposes a footnote shortcode")
     ids = [tag["id"] for tag in soup.find_all(id=True)]
     require(len(ids) == len(set(ids)), "Reader contains duplicate IDs")
     local_files: set[Path] = set()
@@ -203,6 +306,9 @@ def reader_replay(root: Path) -> dict:
         require(root.resolve() in path.parents or path == root.resolve(), f"Reader path escapes root: {value}")
         require(path.is_file(), f"Missing local reader dependency: {value}")
         local_files.add(path)
+    for asset in ASSETS:
+        expected_asset = (root / "assets" / asset.name).resolve()
+        require(expected_asset in local_files, f"Reader does not reference admitted asset: {asset.name}")
 
     manifest_path = root / "PACKAGE_MANIFEST.tsv"
     rows = manifest_path.read_text(encoding="utf-8").splitlines()
@@ -234,7 +340,7 @@ def reader_replay(root: Path) -> dict:
         "files": len(actual),
         "bytes": sum(path.stat().st_size for path in actual),
         "local_dependencies": len(local_files),
-        "chapter_mathml": SPEC["math"],
+        "chapter_mathml": target_math_count,
         "mastery_mathml": mastery_math,
     }
 
@@ -252,7 +358,10 @@ def notebook_replay(execute: bool) -> dict:
         require(len(code) == SPEC["code_cells"], "Notebook code-cell census differs")
     require(len({cell.get("id") for cell in cells}) == len(cells), "Notebook cell IDs are not unique")
     require(all(not cell.get("outputs") and cell.get("execution_count") is None for cell in code), "Notebook must remain output-clean")
-    require(LOCK.read_text(encoding="utf-8") == SPEC["lock"], "Notebook lock differs")
+    if SPEC.get("lock") is not None:
+        require(LOCK.read_text(encoding="utf-8") == SPEC["lock"], "Notebook lock differs")
+    else:
+        require(sha(LOCK) == SPEC["lock_sha256"], "Notebook lock hash differs")
     if execute:
         env = dict(os.environ)
         env["MPLBACKEND"] = "Agg"

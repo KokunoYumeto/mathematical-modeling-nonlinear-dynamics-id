@@ -1,0 +1,27 @@
+{
+  "schema": "o005-adapted-asset-provenance-v1",
+  "asset_id": "O005-LEGA-V101-CH03-FIG04-ID-V2",
+  "language": "id-ID",
+  "source": {
+    "path": "source/id-ID/O005-LEGA-V101-CH03/assets/phase-portrait-construction-source.png",
+    "bytes": 258152,
+    "sha256": "4df4090e177969f1c911ee9f1edb6ebaa734bf724e69def16ef94f9b929e8479",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "edit_input": {
+    "path": "source/id-ID/O005-LEGA-V101-CH03/assets/phase-portrait-construction-id.png",
+    "bytes": 138995,
+    "sha256": "eadc389a25e09749e140773d87d9b43f9bbb3b49e47ae3b1e5a3b940695a61e0"
+  },
+  "target": {
+    "path": "source/id-ID/O005-LEGA-V101-CH03/assets/phase-portrait-construction-id-v2.png",
+    "bytes": 133689,
+    "sha256": "77441628eb0b5b5de59829a9aaadfdaef31d07fbc172cd2420f1a230e3774213",
+    "dimensions": "1024x1024",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "change": "The Indonesian closed-orbit label was narrowed from E < 1 to the mathematically correct -1 < E < 1; the remaining Indonesian labels and diagram semantics were retained.",
+  "method": "OpenAI built-in image editing followed by deterministic ImageMagick resizing, grayscale palette quantization, and metadata stripping.",
+  "prompt": "Change only the upper-right explanatory label from ‘Nilai E kurang dari 1 bersesuaian dengan orbit tertutup’ to the exact text ‘−1 < E < 1 bersesuaian dengan orbit tertutup’. Preserve every other semantic element and label; add no objects, color, shading, or watermark.",
+  "review": "The corrected bitmap was visually inspected at 1024 by 1024. The interval label is exact and legible; the potential, phase curves, axes, arrows, guides, critical points, energy boxes, and other Indonesian labels remain present. The frozen source and first localized candidate remain retained for provenance."
+}

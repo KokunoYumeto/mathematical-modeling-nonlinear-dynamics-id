@@ -56,6 +56,68 @@ UNIT_SPECS = {
         "record_sha256": "03ead95b0ebcfb470c92bb7e48a85ce45d7639ec0aafb00f981eaf90ffd3f1e9",
         "assets": [],
     },
+    "O005-LEGA-V101-CH03": {
+        "record_id": 38,
+        "modified_gmt": "2026-03-27T02:14:38",
+        "record_bytes": 128063,
+        "record_sha256": "240a00176ea39c067c36393facf35308bdbee11925dbc293bad2ce33ca9c339c",
+        "assets": [
+            {
+                "path": "assets/nonlinear-pendulum-source.png",
+                "epub_member": "EPUB/assets/Fig_NLP-1-300x268.png",
+                "bytes": 11678,
+                "sha256": "10bd1a917faadd58ab70645455e2ce9f092bc3f9833e50aee83ac2e89be9783a",
+            },
+            {
+                "path": "assets/phase-portrait-1-source.png",
+                "epub_member": "EPUB/assets/PP_NLP-1024x806.png",
+                "bytes": 247117,
+                "sha256": "e9483fbe666497aab3695456eecf5ce4ffce0440db2605c37c3a257d0b2e70de",
+            },
+            {
+                "path": "assets/phase-portrait-2-source.png",
+                "epub_member": "EPUB/assets/PP2_NLP-1024x763.png",
+                "bytes": 297538,
+                "sha256": "5c42026faf31e340f38829471db0a9f22a76bb467fff2508f1490f62bc2949f0",
+            },
+            {
+                "path": "assets/phase-portrait-construction-source.png",
+                "epub_member": "EPUB/assets/PP2b_NLP-1024x993.png",
+                "bytes": 258152,
+                "sha256": "4df4090e177969f1c911ee9f1edb6ebaa734bf724e69def16ef94f9b929e8479",
+            },
+            {
+                "path": "assets/phase-portrait-3-source.png",
+                "epub_member": "EPUB/assets/PP3_NLP-1024x765.png",
+                "bytes": 379047,
+                "sha256": "6392b654687eadb3d547d99db7069694f0cdb91671ace0082fd164817305e6d5",
+            },
+            {
+                "path": "assets/potential-1-source.png",
+                "epub_member": "EPUB/assets/Mech_pot1-1-300x218.png",
+                "bytes": 10087,
+                "sha256": "d846bc553c4c59aa388697a521a9f0a935a869a96f6f8ef8e2bbe7b58e0a2388",
+            },
+            {
+                "path": "assets/potential-2-source.png",
+                "epub_member": "EPUB/assets/Mech_pot2-1-300x166.png",
+                "bytes": 9208,
+                "sha256": "0983ed663132286f874444b322707167ef402bf32a270a9bd24802b76539b74c",
+            },
+            {
+                "path": "assets/potential-3-source.png",
+                "epub_member": "EPUB/assets/Mech_pot3-1-300x271.png",
+                "bytes": 13587,
+                "sha256": "4aa716e47c4efdf46750e0fa4e1c3883f75ab63abdda7705685b986c1244070e",
+            },
+            {
+                "path": "assets/potential-4-source.png",
+                "epub_member": "EPUB/assets/Mech_pot4-1-300x160.png",
+                "bytes": 9734,
+                "sha256": "ed6153fffcb4ac0dca7b2372c062277ec67b2ffc5f7c17a0bb238c0febb7397d",
+            },
+        ],
+    },
 }
 
 

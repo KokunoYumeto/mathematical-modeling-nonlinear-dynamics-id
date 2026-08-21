@@ -51,3 +51,24 @@ The visible Part 2 introduction is a three-paragraph translation of frozen
 Pressbooks part record 28 under the same CC BY-NC-SA 4.0 boundary. It has no
 asset, formula, exercise, mastery, or computational component; none was
 fabricated for the edition.
+
+## Chapter 3 component record
+
+Chapter 3 retains eight source figures byte-for-byte. Figure 3.4 has a separate
+Indonesian adaptation in which only four explanatory English labels were
+localized; the unmodified source bitmap remains beside it. The exact source
+and target hashes, prompt, method, dimensions, change statement, and review are
+recorded through the versioned `phase-portrait-construction-id*.provenance.json`
+receipts. The final 1,024×1,024 adaptation is 131,859 bytes, SHA-256
+`76172508b59ddce827f57d8e76d7c89c49dc9b56294a7ef32c6287e4228fe975`;
+both closed-orbit labels state the exact interval `-1 < E < 1`. The source and
+adapted figures remain within the reader's CC BY-NC-SA 4.0 boundary.
+
+The source mentions Maple, MATLAB, PPLANE, and a proprietary phase-plane app,
+but no program source was imported. The NumPy/SciPy/Matplotlib phase-plane
+notebook is newly and independently written from the stated equations. It
+implements equilibrium classification, conservative and damped integration,
+energy and dissipation checks, and open plotting without claiming to port the
+absent programs. Figure 3.2 is retained unchanged; because its embedded axis
+label uses `dθ/dt` while the scaled prose uses `dθ/dτ`, the Indonesian text
+states that source-figure notation explicitly.
