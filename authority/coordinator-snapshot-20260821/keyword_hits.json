@@ -1,0 +1,262 @@
+[
+  {
+    "unit": "front-matter:22:introduction-2",
+    "keyword": "MATLAB",
+    "context": "endices are provided to review the basic mathematical tools needed to build and analyze the models. MATLAB GUIs are supplied with the course materials, allowing readers to explore the role of model parameters through graphical user interfaces, without requiring know"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "keyword": "MATLAB",
+    "context": "nd the data points on the same graph. Is the fit satisfactory? Why or why not? Problem 7 Browse the MATLAB documentation on curve fitting, and familiarize yourself with MATLAB's basic fitting interface. Create a set of data points close to the graphs of the followin"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "keyword": "MATLAB",
+    "context": " why not? Problem 7 Browse the MATLAB documentation on curve fitting, and familiarize yourself with MATLAB's basic fitting interface. Create a set of data points close to the graphs of the following functions, and see if the fit proposed by MATLAB is satisfactory. W"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "keyword": "MATLAB",
+    "context": "a set of data points close to the graphs of the following functions, and see if the fit proposed by MATLAB is satisfactory. What do you conclude? $latex f(x) = 3 x + 5.$ $latex f(x) = 7 x.$ $latex f(x) = \\exp(3 x + 7).$ $latex f(x) = \\exp(7 x).$"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "keyword": "MATLAB",
+    "context": "changing these parameters. [caption id=\"attachment_101\" align=\"alignnone\" width=\"1920\"] Figure 2.1. MATLAB Graphic User Interface (GUI) for the Mexican Wave model. [ Image Description ][/caption] The MATLAB code The_Wave.m simulates the above model. Figure 2.1 shows"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "keyword": "MATLAB",
+    "context": "MATLAB Graphic User Interface (GUI) for the Mexican Wave model. [ Image Description ][/caption] The MATLAB code The_Wave.m simulates the above model. Figure 2.1 shows the corresponding MATLAB interface. The various parameters may be modified by adjusting sliders. Wh"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "keyword": "The_Wave.m",
+    "context": "ic User Interface (GUI) for the Mexican Wave model. [ Image Description ][/caption] The MATLAB code The_Wave.m simulates the above model. Figure 2.1 shows the corresponding MATLAB interface. The various parameters may be modified by adjusting sliders. When the simulatio"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "keyword": "MATLAB",
+    "context": "[/caption] The MATLAB code The_Wave.m simulates the above model. Figure 2.1 shows the corresponding MATLAB interface. The various parameters may be modified by adjusting sliders. When the simulation runs, a plot of $latex x(i)$ is shown in the top left window, and i"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "keyword": "MATLAB",
+    "context": "heart, leading to contraction and relaxation of the heart muscle). Figure Descriptions Figure 2.1 : MATLAB Graphical User Interface for \"The Wave\" containing four data plots and a parameters control panel. The main bar chart shows a distribution of \"enthusiasm\" acro"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "keyword": "Maple",
+    "context": "s are symmetric with respect to the horizontal axis of the phase plane. We can use software such as Maple or MATLAB to plot these curves, paying particular attention to the special cases $latex E = -1$ and $latex E = 1.$ Figure 3.2 shows some of these trajectories."
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "keyword": "MATLAB",
+    "context": "metric with respect to the horizontal axis of the phase plane. We can use software such as Maple or MATLAB to plot these curves, paying particular attention to the special cases $latex E = -1$ and $latex E = 1.$ Figure 3.2 shows some of these trajectories. The descr"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "keyword": "Phase Plane App",
+    "context": "tion ][/caption]These results can be confirmed by using a phase plane analysis software such as the Phase Plane App . This program can be run in MATLAB. It allows the user to enter Equation ( 3.8 ) written as a first order system, $latex \\displaystyle \\frac{d \\theta}{d \\tau}"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "keyword": "MATLAB",
+    "context": "d by using a phase plane analysis software such as the Phase Plane App . This program can be run in MATLAB. It allows the user to enter Equation ( 3.8 ) written as a first order system, $latex \\displaystyle \\frac{d \\theta}{d \\tau} = \\Lambda, \\qquad \\frac{d \\Lambda}{"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "keyword": "PPLANE",
+    "context": "ection field at that point. Figure 3.3 shows the phase plane for Equation ( 3.8 ), as obtained with PPLANE (developed by John C. Polking at Rice University). The solution curves found numerically are, as expected, in excellent agreement with those shown in Figure 3."
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "keyword": "PPLANE",
+    "context": "800\"] Figure 3.3. Phase plane of the frictionless nonlinear pendulum, as obtained with the software PPLANE. [ Image Description ][/caption]More generally, any dynamical system of the form $latex \\displaystyle \\frac{d^2 x}{d t^2} + \\frac{d V}{d x} = 0 \\quad (3.14)$ c"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "keyword": "PPLANE",
+    "context": "c{\\alpha^2}{4} + 1}.$ These facts are summarized in the phase portrait of Figure 3.5, obtained with PPLANE. We see that trajectories tangent to the eigenvectors of $latex J((2 p + 1) \\pi, 0)$ at the points $latex ((2 p + 1) \\pi, 0)$ are separatrices of the phase pla"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "keyword": "PPLANE",
+    "context": "24\"] Figure 3.5. Phase plane of the nonlinear pendulum with friction, as obtained with the software PPLANE. [ Image Description ][/caption] Summary The nonlinear pendulum provides a good illustration of the modeling process. Newton's law, together with a set of simp"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "keyword": "Phase Plane App",
+    "context": "iral. A center. A saddle point. Check your answer with a phase plane analysis software, such as the Phase Plane App or equivalent software. Problem 9 Explain how you would determine the nature (e.g. stable or unstable node or spiral, linear center or saddle point) of a fixed"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "keyword": "Phase Plane App",
+    "context": ". If the answer depends on the parameter(s) of the problem, all cases should be considered. Use the Phase Plane App or equivalent software to check your results. $latex \\displaystyle \\frac{d}{d t} \\left(\\begin{array}{c}x \\cr y \\end{array}\\right) = \\left(\\begin{array}{c}y \\cr"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "keyword": "Phase Plane App",
+    "context": "es of $latex |x|$. Sketch the phase plane of the van der Pol oscillator. Check your answer with the Phase Plane App or equivalent software. Is the result surprising? Why or why not? Problem 12 Consider the following differential equation, $latex \\displaystyle \\frac{d x}{d t}"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "keyword": "MATLAB",
+    "context": "ondition on $latex |x|$ which ensures that $latex \\vert E_5(x) \\vert \\lt 0.05$. Use a calculator or MATLAB to check your answer to the previous question. Problem 15 Consider the following model $latex \\displaystyle \\frac{\\partial u}{\\partial t} = \\mu u + \\alpha \\fra"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "keyword": "MATLAB",
+    "context": "est.txt ) containing national population estimates between 1900 and 1999. Import this data set into MATLAB or EXCEL. Then answer the following questions. Plot the U.S. population as a function of time. What do you conclude? Can the growth of the U.S. population be m"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "keyword": "EXCEL",
+    "context": "containing national population estimates between 1900 and 1999. Import this data set into MATLAB or EXCEL. Then answer the following questions. Plot the U.S. population as a function of time. What do you conclude? Can the growth of the U.S. population be modeled by"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "keyword": "PPLANE",
+    "context": "dth=\"800\"] Figure 6.1. Phase plane of model (6.2) with a = 1 and b = 0.5, plotted with the software PPLANE. [ Image Description ][/caption] This analysis thus indicates that if the initial values of $latex f$ and $latex s$ are positive, then the dynamics will conver"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "keyword": "PPLANE",
+    "context": "Figure 6.1 shows the phase plane of system ( 6.2 ) for $latex a=1$ and $latex b=0.5$, obtained with PPLANE. In this case, the fixed point $latex P_2$ is a stable spiral. As an exercise, the reader should work out the case where $latex b > 1$, for which only two of t"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "keyword": "PPLANE",
+    "context": " 6.2. Phase plane of the Lotka-Volterra model (6.2) with a = 1 and b = 0, plotted with the software PPLANE. [ Image Description ][/caption] It is possible to observe oscillations, provided we set $latex b = 0$. This is indeed a necessary condition if we want $latex "
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "keyword": "PPLANE",
+    "context": "3. Phase plane of system (6.4), with a = 0.5, b = 0.8, and c = 1 (ε = 1), plotted with the software PPLANE. [ Image Description ][/caption][caption id=\"attachment_52\" align=\"alignnone\" width=\"800\"] Figure 6.4. Phase plane of system (6.4), with a = 1.2, b = 2, and c "
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "keyword": "PPLANE",
+    "context": ".4. Phase plane of system (6.4), with a = 1.2, b = 2, and c = 1 (ε = -1), plotted with the software PPLANE. [ Image Description ][/caption] From an ecological point of view, the two species coexist if $latex P_3$ is stable, i.e. if $latex \\epsilon = 1$. If not, then"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "keyword": "Phase Plane App",
+    "context": "phase plane analysis to describe the long-term dynamics of this system. Check your results with the Phase Plane App or equivalent software. What is the biological significance of what you found out in part (1)? Problem 4 Consider the following model $latex \\displaystyle \\lef"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "keyword": "Phase Plane App",
+    "context": "int. Use the above information to sketch the phase plane of this system. Check your answer with the Phase Plane App or equivalent software. Could this model describe a biological system? Why or why not? Problem 5 Consider the system $latex \\displaystyle \\left\\{\\begin{align*}"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "keyword": "PPLANE",
+    "context": "ne\" width=\"800\"] Figure 7.1. Phase plane of system ( 7.4 ), with δ = 0.2, plotted with the software PPLANE. Only the dynamics inside T (not shaded) is relevant. [ Image Description ][/caption]Figure 7.1 shows the phase portrait of ( 7.4 ), obtained with PPLANE, with"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "keyword": "PPLANE",
+    "context": "evant. [ Image Description ][/caption]Figure 7.1 shows the phase portrait of ( 7.4 ), obtained with PPLANE, with $latex \\delta = 0.2$. In this case, we see that all trajectories in $latex \\mathcal T$ converge towards one of the fixed points, i.e. $latex \\displaystyl"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "keyword": "PPLANE",
+    "context": "ptible. This is illustrated in Figure 7.2, which shows the phase portrait of ( 7.6 ), obtained with PPLANE, with $latex \\delta = 0.2$ and $latex \\eta = 1$. [caption id=\"attachment_55\" align=\"alignnone\" width=\"800\"] Figure 7.2. Phase plane of system ( 7.6 ), with δ ="
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "keyword": "PPLANE",
+    "context": "\"800\"] Figure 7.2. Phase plane of system ( 7.6 ), with δ = 0.2 and η = 1, plotted with the software PPLANE. Only the dynamics inside T (not shaded) is relevant. [ Image Description ][/caption]If on the other hand $latex \\eta + \\delta \\lt 1$, then $latex P_1$ is a sa"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "keyword": "PPLANE",
+    "context": "00\"] Figure 7.3. Phase plane of system ( 7.6 ), with δ = 0.2 and η = 0.1, plotted with the software PPLANE. Only the dynamics inside T (not shaded) is relevant. [ Image Description ][/caption] Summary This chapter illustrates how the modeling concepts discussed in t"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "keyword": "PPLANE",
+    "context": "h=\"800\"] Figure 8.1. Phase plane of system ( 8.1 ), with [A]=1 and [B]=3, plotted with the software PPLANE. [ Image Description ][/caption]The Jacobian of ( 8.1 ) about the fixed point $latex P$ is $latex J(P) = \\left(\\begin{array}{cc} [B] - 1 & [A]^2 \\\\ -[B] & -[A]"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "keyword": "PPLANE",
+    "context": "ure 8.2. Time dependence of [X] and [Y] for the trajectory of Figure 8.1, plotted with the software PPLANE. [ Image Description ][/caption]If $latex P$ is stable, i.e. if $latex T \\lt 0$, then all trajectories should end up at $latex P$. However, if $latex P$ is an "
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "keyword": "PPLANE",
+    "context": "Figure 8.3: Phase plane of system ( 8.3 ), with f=1, s=1, q=0.01 and ω=2, plotted with the software PPLANE. [ Image Description ][/caption]In what follows, we set $latex f = 1$. Field and Noyes (1974) estimated the values of $latex s$, $latex q$, $latex \\omega$ as w"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "keyword": "PPLANE",
+    "context": "uations, in order to remove these parameters from the dimensionless model? Explain. Problem 6 Using PPLANE, simulate the Brusselator model ( 8.1 ) with $latex [A]=1$. Describe what happens as the parameter $latex [B]$ varies from 1.5 to 2.5. Problem 7 Using PPLANE, "
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "keyword": "PPLANE",
+    "context": " [A]=1$. Describe what happens as the parameter $latex [B]$ varies from 1.5 to 2.5. Problem 7 Using PPLANE, simulate the Brusselator model ( 8.1 ) with $latex [A]=1$. Describe what happens as the parameter $latex [B]$ varies from 3 to 5. What is special with the val"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "keyword": "PPLANE",
+    "context": "tex \\tau$ defined in the discussion of the Oregonator reactions are dimensionless. Problem 10 Using PPLANE, simulate the reduced Oregonator model ( 8.3 ) with $latex f=1$, $latex s=1$ and $latex \\omega=2$. Describe what happens as the parameter $latex q$ varies from"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "keyword": "MAPLE",
+    "context": "atex f=1$, and analyze their stability. You may want to use a symbolic calculation package, such as MAPLE or MATHEMATICA. Problem 12 Consider the chemical reactions $latex \\begin{array}{ccc} & k_1 & \\\\ A + X & \\rightarrow & 2 X, \\end{array}$ $latex \\begin{array}{cc"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "keyword": "MATHEMATICA",
+    "context": ", and analyze their stability. You may want to use a symbolic calculation package, such as MAPLE or MATHEMATICA. Problem 12 Consider the chemical reactions $latex \\begin{array}{ccc} & k_1 & \\\\ A + X & \\rightarrow & 2 X, \\end{array}$ $latex \\begin{array}{ccc} & k_2 & \\\\ X"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "keyword": "MATLAB",
+    "context": " N . [ Image Description ][/caption]To provide a visual understanding of this result, the Diffusion MATLAB GUI (see Figure 9.1) simulates the random motion of $latex M$ non-interacting particles on a grid - so that each particle can only go up, down, left or right, "
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "keyword": "PPLANE",
+    "context": "one\" width=\"800\"] Figure 9.2. Phase plane of system ( 9.10 ), with c = 1, plotted with the software PPLANE. [ Image Description ][/caption] [caption id=\"attachment_212\" align=\"alignnone\" width=\"800\"] Figure 9.3. Phase plane of system ( 9.10 ), with c = 3, plotted wi"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "keyword": "PPLANE",
+    "context": "one\" width=\"800\"] Figure 9.3. Phase plane of system ( 9.10 ), with c = 3, plotted with the software PPLANE. [ Image Description ][/caption] Chemical waves When a chemical reaction takes place in a spatially extended system, diffusion should be taken into account. As"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "keyword": "MATLAB",
+    "context": "nd by means of dynamical systems methods. Figure Descriptions Figure 9.1 : A screen snapshot of the MATLAB Graphic User Interface for the diffusion GUI, titled \"Diffusion at the microscopic level.\" It features two plots. The left is a 2D scatter plot titled \"Particl"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "keyword": "diffusion GUI",
+    "context": "ds. Figure Descriptions Figure 9.1 : A screen snapshot of the MATLAB Graphic User Interface for the diffusion GUI, titled \"Diffusion at the microscopic level.\" It features two plots. The left is a 2D scatter plot titled \"Particles undergoing a random walk,\" showing 1000 re"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "keyword": "MATLAB",
+    "context": "ation ( 10.1 ), including secondary instabilities and space-time disorder, may be explored with the MATLAB GUI interface called Patterns . This GUI allows the user to select the parameters and start a simulation from small, random initial conditions. Color-coded sna"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "keyword": "Phase Plane app",
+    "context": "yzing their stability, as well as through numerical simulations (no coding necessary if you use the Phase Plane app). Assess various disease control strategies based on your interpretation of how parameters affect the dynamics of the system. Evaluate the contributions of the"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "keyword": "Phase Plane app",
+    "context": "and describe the dynamics of the classical Lotka-Volterra model (no coding necessary if you use the Phase Plane app). Examine and justify the different modifications proposed in the article. Implement the corresponding models and analyze the resulting dynamics: use phase pla"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "keyword": "Phase Plane app",
+    "context": "s (find the fixed points and study their stability) as well as numerical simulations (e.g. with the Phase Plane app). Compare the results to the discussion in Chapter 7 of this text. Decide whether exploring additional variations of the model is warranted. Synthesize the res"
+  }
+]

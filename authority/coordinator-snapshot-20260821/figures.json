@@ -1,0 +1,354 @@
+[
+  {
+    "unit": "chapter:25:chapter-1",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Modeling_Cycle-1024x508.png",
+    "alt": "Flow chart illustrating the modeling process. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/The_Wave.png",
+    "alt": "MATLAB GUI for the wave. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Fig_NLP-1-300x268.png",
+    "alt": "Sketch of a pendulum. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/PP_NLP-1024x806.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/PP2_NLP-1024x763.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/PP2b_NLP-1024x993.png",
+    "alt": "Phase portrait construction. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/PP3_NLP-1024x765.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Mech_pot1-1-300x218.png",
+    "alt": "Shape of the potential V. Long description below.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Mech_pot2-1-300x166.png",
+    "alt": "Shape of the potential V. Long description below.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Mech_pot3-1-300x271.png",
+    "alt": "Shape of the potential V. Long description below.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Mech_pot4-1-300x160.png",
+    "alt": "Shape of the potential V. Long description below.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Stone_coll-300x248.png",
+    "alt": "Sketch of the collision process. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Stone_Pot-300x300.png",
+    "alt": "Shape of the potential U. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Redhawk_US_1-105-300x213.png",
+    "alt": "Plot of annual bird count. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Redhawk_US_1-105_rate-300x213.png",
+    "alt": "Plot of the normalized rate of change. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Redhawk_US_1-105_1stR-300x213.png",
+    "alt": "First return map of the annual bird count. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Iterations-287x300.png",
+    "alt": "Cobweb plot. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Logistic1a-300x241.png",
+    "alt": "Bifurcation diagram. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Logistic2a-300x239.png",
+    "alt": "Zoomed-in bifurcation diagram. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Gen_stable-300x220.png",
+    "alt": "Stability diagram of a one-dimensional system. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CLV_PP1-1024x784.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CLV_PP2-1024x777.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CCS_PP1-1024x769.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CCS_PP2-1024x770.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CSIR_PP-1024x760.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CESIR_PP1-1024x759.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CESIR_PP2-1024x759.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/BR_PP-1024x685.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/BR_PPt-1024x876.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/COR2_PP-1024x671.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/Diffusion-300x261.png",
+    "alt": "MATLAB GUI. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/TW_PP1.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/TW_PP2.png",
+    "alt": "Phase portrait. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/Collage-200x300.png",
+    "alt": "Photo collage. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/SH1-300x141.png",
+    "alt": "Numerical simulations of two-dimensional patterns. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/Pat_growth-1-300x142.png",
+    "alt": "Plots of growth rate. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_node-300x217.png",
+    "alt": "Phase portrait of a stable node. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_star-300x217.png",
+    "alt": "Phase portrait of a stable star. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_deg_node-300x217.png",
+    "alt": "Phase portrait of a stable degenerate node. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_spiral-300x218.png",
+    "alt": "Phase portrait of a stable spiral. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_saddle-300x255.png",
+    "alt": "Phase portrait of a saddle point. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_line-300x217.png",
+    "alt": "Phase portrait in the presence of a line of fixed points. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_center-241x300.png",
+    "alt": "Phase portrait of a (linear) center. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "src": "https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_stability-1-1024x690.png",
+    "alt": "Fixed points classification diagram. Long description available.",
+    "title": "",
+    "caption": "",
+    "rights_signal": false
+  }
+]

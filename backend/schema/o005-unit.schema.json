@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/o005-unit.schema.json",
+  "title": "O005 modular unit record",
+  "type": "object",
+  "required": ["schema", "unit_id", "course_id", "resource_id", "language", "source", "target", "segments", "problems", "mastery_path", "notebook_path", "build"],
+  "properties": {
+    "schema": {"const": "o005-unit-v1"},
+    "unit_id": {"type": "string"},
+    "course_id": {"const": "C120"},
+    "resource_id": {"const": "O005"},
+    "language": {"const": "id-ID"},
+    "source_language": {"const": "en"},
+    "source": {"type": "object"},
+    "target": {"type": "object"},
+    "segments": {"type": "object"},
+    "problems": {"type": "array", "minItems": 7, "maxItems": 7, "uniqueItems": true},
+    "mastery_path": {"type": "string"},
+    "mastery_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "notebook_path": {"type": "string"},
+    "notebook_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "build": {"type": "object"}
+  }
+}

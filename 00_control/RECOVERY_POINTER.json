@@ -1,0 +1,32 @@
+{
+  "schema": "o005-recovery-pointer-v1",
+  "lane_root": ".",
+  "status": "active_translation",
+  "read_first": [
+    "00_control/00_CURRENT_GOAL_AND_WORKFLOW.md",
+    "00_control/CURRENT_STATE.md",
+    "00_control/TRANSLATION_CURSOR.json",
+    "00_control/DECISION_LOG.md",
+    "00_control/TERMINOLOGY.csv",
+    "00_control/RIGHTS_AND_PROVENANCE.md",
+    "00_control/BUILD_QA.md"
+  ],
+  "semantic_manifest": {
+    "path": "authority/coordinator-snapshot-20260821/snapshot/semantic_closure_manifest.tsv",
+    "bytes": 5230,
+    "sha256": "d40956f8bd4cca1545c4ec7a809bfb8d20c18c4ed84b101b39e8262e2f42eba5"
+  },
+  "asset_manifest": {
+    "path": "authority/coordinator-snapshot-20260821/snapshot/asset_manifest.tsv",
+    "bytes": 14504,
+    "sha256": "6bdfc501e3134de338fc9862feb4abbbd503037295ab8c701a627cb33550c740"
+  },
+  "last_completed_unit": {
+    "unit_id": "O005-LEGA-V101-CH01",
+    "target_content_sha256": "4525a8ff80cc1d05c4d86cc11b00b53ec2d0430b9e404715625f248a7758fee3",
+    "reader_manifest_sha256": "124a67a728f9d6b1d6425c1199b9545c6804d5b06f6d0dff6acb425458fe39d4",
+    "qa_tree_sha256": "175ae18c0e8b2a0d41a75887ebb271127691ca8324f655129d49fe0528d6edad"
+  },
+  "current_unit": "O005-LEGA-V101-CH02",
+  "next_action": "Prepare the exact Chapter 2 record (Pressbooks record 27), translate it contiguously in source order, and extend the same modular backend."
+}

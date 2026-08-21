@@ -1,0 +1,27 @@
+{
+  "content_raw": {
+    "bytes": 17621,
+    "path": "content.raw.en.html",
+    "sha256": "6918a59e19b3faf3f938a4d3a72bd7f04cac385cb6e53275c3fe61a2b7b49f09"
+  },
+  "content_rendered": {
+    "bytes": 18855,
+    "path": "content.rendered.en.html",
+    "sha256": "9566364b111332a5fb6d134eb2f35673d368f0deda33ba86363fec5d26eaaf38"
+  },
+  "figure": {
+    "bytes": 75844,
+    "epub_member": "EPUB/assets/Modeling_Cycle-1024x508.png",
+    "path": "assets/modeling-cycle-source.png",
+    "sha256": "29c1df3263dd7fe76769803e54c23ddcd198198e86edbfd7e4d6f0c618f708e3"
+  },
+  "record": {
+    "bytes": 37918,
+    "path": "source-record.canonical.json",
+    "sha256": "0286cb444c7f2f4a2db83865f948d3d3dc00147e2280fa665a1abc68ad804826"
+  },
+  "schema": "o005-unit-authority-v1",
+  "source_modified_gmt": "2026-03-27T02:08:36Z",
+  "source_record_id": 25,
+  "unit_id": "O005-LEGA-V101-CH01"
+}

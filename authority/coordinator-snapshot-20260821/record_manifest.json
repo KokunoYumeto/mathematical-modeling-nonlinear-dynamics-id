@@ -1,0 +1,222 @@
+[
+  {
+    "kind": "front-matter",
+    "id": 22,
+    "slug": "introduction-2",
+    "title": "Preface",
+    "modified_gmt": "2024-06-29T02:46:15",
+    "canonical_bytes": 11380,
+    "sha256": "b8ab499c797f89f734b9179f8a82e3afe508cadabd62cd485f281348ade1f383",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/front-matter/22"
+  },
+  {
+    "kind": "parts",
+    "id": 23,
+    "slug": "part-1-what-is-a-model",
+    "title": "Introduction",
+    "modified_gmt": "2024-06-29T02:56:19",
+    "canonical_bytes": 2106,
+    "sha256": "a5b7d445ca02f514b7b065dde2834ede1959c5eb256a2c6d31342c302276470b",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/parts/23"
+  },
+  {
+    "kind": "chapters",
+    "id": 25,
+    "slug": "chapter-1",
+    "title": "On the Nature of Mathematical Modeling",
+    "modified_gmt": "2026-03-27T02:08:36",
+    "canonical_bytes": 37918,
+    "sha256": "0286cb444c7f2f4a2db83865f948d3d3dc00147e2280fa665a1abc68ad804826",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/25"
+  },
+  {
+    "kind": "chapters",
+    "id": 27,
+    "slug": "first-steps-modeling-the-wave",
+    "title": "First Steps: Modeling the Wave",
+    "modified_gmt": "2026-03-27T02:10:41",
+    "canonical_bytes": 39193,
+    "sha256": "428a143edeec7843d3f4a2e2f02e5aa50fcde2cff366ca976988ecfa4191e69b",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/27"
+  },
+  {
+    "kind": "parts",
+    "id": 28,
+    "slug": "part-2-models-from-classical-mechanics",
+    "title": "Models from Classical Mechanics",
+    "modified_gmt": "2024-06-29T02:57:03",
+    "canonical_bytes": 2296,
+    "sha256": "03ead95b0ebcfb470c92bb7e48a85ce45d7639ec0aafb00f981eaf90ffd3f1e9",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/parts/28"
+  },
+  {
+    "kind": "chapters",
+    "id": 38,
+    "slug": "the-nonlinear-pendulum",
+    "title": "The Nonlinear Pendulum",
+    "modified_gmt": "2026-03-27T02:14:38",
+    "canonical_bytes": 128063,
+    "sha256": "240a00176ea39c067c36393facf35308bdbee11925dbc293bad2ce33ca9c339c",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/38"
+  },
+  {
+    "kind": "chapters",
+    "id": 39,
+    "slug": "stone-skipping",
+    "title": "Stone-Skipping",
+    "modified_gmt": "2026-03-19T21:51:57",
+    "canonical_bytes": 71697,
+    "sha256": "a1a31a51f76e7b4f74b8ed302b112acaad6bd87b0b9b5cb134676c5205b03e55",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/39"
+  },
+  {
+    "kind": "parts",
+    "id": 40,
+    "slug": "part-3-population-dynamics-and-epidemiology",
+    "title": "Population Dynamics and Epidemiology",
+    "modified_gmt": "2024-06-29T02:57:20",
+    "canonical_bytes": 5758,
+    "sha256": "e0c7435af2c60d11f80eef9924934c335c93100cd86de57170820560797f9576",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/parts/40"
+  },
+  {
+    "kind": "chapters",
+    "id": 48,
+    "slug": "single-species-models",
+    "title": "Single-Species Models",
+    "modified_gmt": "2026-03-27T02:27:32",
+    "canonical_bytes": 119420,
+    "sha256": "7f276a994f78af2af02d5bdd39b9566a50f5e3b09b25351c70cdff50736c66be",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/48"
+  },
+  {
+    "kind": "chapters",
+    "id": 53,
+    "slug": "two-species-models",
+    "title": "Two-Species Models",
+    "modified_gmt": "2026-03-27T02:30:16",
+    "canonical_bytes": 63377,
+    "sha256": "cdcc1c12fc5c0245ffbb94c6cfdc706570f50540bb6719d78e1391f282b114de",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/53"
+  },
+  {
+    "kind": "chapters",
+    "id": 57,
+    "slug": "epidemiology",
+    "title": "Epidemiology",
+    "modified_gmt": "2026-03-19T20:23:36",
+    "canonical_bytes": 48627,
+    "sha256": "dcf828ca5ce0c58ced8eb5203dfd1b5a949bd6af3b9c000017a6dd133bb58d2f",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/57"
+  },
+  {
+    "kind": "parts",
+    "id": 58,
+    "slug": "632-2-2",
+    "title": "Chemical Reactions and Spatial Effects",
+    "modified_gmt": "2026-03-17T22:14:18",
+    "canonical_bytes": 6589,
+    "sha256": "75d370fb729c39ba436eb1a91f5876291ef4c0487235b968d8a0a0002481f232",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/parts/58"
+  },
+  {
+    "kind": "chapters",
+    "id": 62,
+    "slug": "chemical-reactions",
+    "title": "Chemical Reactions",
+    "modified_gmt": "2026-03-24T21:29:34",
+    "canonical_bytes": 60372,
+    "sha256": "1c9f5f1ec75756f23720a3ef5d278302de0957347a59dde6f8021d3a970d7656",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/62"
+  },
+  {
+    "kind": "chapters",
+    "id": 196,
+    "slug": "diffusion",
+    "title": "Diffusion",
+    "modified_gmt": "2026-03-19T20:10:36",
+    "canonical_bytes": 65160,
+    "sha256": "e53b35acf85334d2df48124211843b08b7ca1e9e9ca8c91465f215dfbb219c2a",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/196"
+  },
+  {
+    "kind": "chapters",
+    "id": 194,
+    "slug": "pattern-formation",
+    "title": "Pattern Formation",
+    "modified_gmt": "2026-03-19T20:11:05",
+    "canonical_bytes": 49768,
+    "sha256": "fbabaa5ed87f7b1e1a2a851555b2e0b7b37d3398a6450b67ffb73efcdb614f06",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/194"
+  },
+  {
+    "kind": "parts",
+    "id": 409,
+    "slug": "appendices",
+    "title": "Appendices",
+    "modified_gmt": "2024-07-04T01:20:04",
+    "canonical_bytes": 1664,
+    "sha256": "ccc3b6a575bf84e7ae94d3b3f5320e59279b088bede008e0e99bb423821a05c8",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/parts/409"
+  },
+  {
+    "kind": "chapters",
+    "id": 410,
+    "slug": "linear-algebra",
+    "title": "Refresher: Linear Algebra",
+    "modified_gmt": "2026-03-19T20:11:37",
+    "canonical_bytes": 29468,
+    "sha256": "762b7d0825a0669bc603f74b7d9b4c183a5e862dc594d3f9d467788397be31ce",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/410"
+  },
+  {
+    "kind": "chapters",
+    "id": 413,
+    "slug": "appendix-vector-calculus",
+    "title": "Refresher: Vector Calculus",
+    "modified_gmt": "2026-03-19T19:53:52",
+    "canonical_bytes": 31922,
+    "sha256": "fa1364a307b033035bce94975db0667edf3b8d208e73b4e07882b090cafab377",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/413"
+  },
+  {
+    "kind": "chapters",
+    "id": 445,
+    "slug": "appendix-ordinary-differential-equations",
+    "title": "Refresher: Ordinary Differential Equations",
+    "modified_gmt": "2026-03-19T20:12:31",
+    "canonical_bytes": 136353,
+    "sha256": "4c1d86fe406cb145189312bc82c7c1572632335b2cab0eb29ee6fbfa1fa9a37c",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/445"
+  },
+  {
+    "kind": "chapters",
+    "id": 555,
+    "slug": "examples-of-project-topics",
+    "title": "Modeling Projects",
+    "modified_gmt": "2026-03-24T21:46:02",
+    "canonical_bytes": 38887,
+    "sha256": "cb9e10a0a6df089194f2bb90bc335d641230cce00dc47c90b6d1802dd6769013",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/chapters/555"
+  },
+  {
+    "kind": "back-matter",
+    "id": 767,
+    "slug": "accessibility-statement",
+    "title": "Accessibility Statement",
+    "modified_gmt": "2026-04-14T19:55:11",
+    "canonical_bytes": 8643,
+    "sha256": "b83809539e7891f791d94a4b52f260e90b43a9b5f74336cd66e0eb3d61e01e1f",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/back-matter/767"
+  },
+  {
+    "kind": "back-matter",
+    "id": 771,
+    "slug": "versioning-history",
+    "title": "Version History",
+    "modified_gmt": "2026-03-27T03:58:27",
+    "canonical_bytes": 4360,
+    "sha256": "0052fc28351f4f57432488687643f6cd422fa965621c7cddc364dba4b0bbf53d",
+    "endpoint": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/wp-json/pressbooks/v2/back-matter/771"
+  }
+]

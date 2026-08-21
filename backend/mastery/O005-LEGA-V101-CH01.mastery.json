@@ -1,0 +1,533 @@
+{
+  "schema": "o005-mastery-v1",
+  "schema_version": "1.0.0",
+  "unit_id": "O005-LEGA-V101-CH01",
+  "language": "id-ID",
+  "source": {
+    "resource": "Joceline Lega, Introduction to Mathematical Modeling",
+    "edition": "University of Arizona Pressbooks v1.01 (Maret 2026)",
+    "record": "Pressbooks chapter 25",
+    "source_title": "On the Nature of Mathematical Modeling",
+    "target_title": "Tentang Hakikat Pemodelan Matematika",
+    "modified_utc": "2026-03-27T02:08:36Z",
+    "source_file": "authority/units/O005-LEGA-V101-CH01/content.raw.en.html",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "provenance_policy": {
+    "source_derived": "Ringkasan masalah merupakan adaptasi/terjemahan dari soal sumber dan tetap berada di bawah CC BY-NC-SA 4.0.",
+    "new_original": "Petunjuk, rekaman pemeriksaan/jawaban, serta solusi atau rubrik ditulis baru untuk edisi Bahasa Indonesia dan ditandai terpisah dari materi sumber."
+  },
+  "article_link_catalog": [
+    {
+      "link_id": "O005-LEGA-V101-CH01-LINK01",
+      "context": "Pembahasan fraktal dalam tubuh bab",
+      "url": "http://dx.doi.org/10.1016/S0097-8493(03)00154-7"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH01-LINK02",
+      "title": "Uses and Abuses of Mathematics in Biology",
+      "author": "R. May",
+      "url": "http://dx.doi.org/10.1126/science.1094442"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH01-LINK03",
+      "title": "Rapid Response Could Have Curbed Foot-and-Mouth Epidemic",
+      "author": "Martin Enserink",
+      "url": "http://dx.doi.org/10.1126/science.294.5540.26"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH01-LINK04",
+      "title": "Disease control: Virtual plagues get real",
+      "author": "V. Gewin",
+      "url": "http://dx.doi.org/10.1038/427774a"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH01-LINK05",
+      "title": "African swine fever outbreak alarms wildlife biologists and veterinarians",
+      "author": "Erik Stokstad",
+      "url": "http://dx.doi.org/10.1126/science.aar8220"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH01-LINK06",
+      "title": "U.K. expands kill zone for badgers in fight against bovine TB, sparking controversy",
+      "author": "Erik Stokstad",
+      "url": "http://dx.doi.org/10.1126/science.aap9427"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH01-LINK07",
+      "title": "Italy’s olive crisis intensifies as deadly tree disease spreads",
+      "author": "Alison Abbott",
+      "url": "https://doi.org/10.1038/d41586-018-07389-8"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH01-LINK08",
+      "title": "Why computer simulations should replace animal testing for heart drugs",
+      "authors": [
+        "Elisa Passini",
+        "Blanca Rodriguez",
+        "Patricia Benito"
+      ],
+      "url": "https://theconversation.com/why-computer-simulations-should-replace-animal-testing-for-heart-drugs-93409"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH01-LINK09",
+      "title": "Could computer models be the key to better COVID vaccines?",
+      "author": "Elie Dolgin",
+      "url": "https://doi.org/10.1038/d41586-022-00924-8"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH01-LINK10",
+      "title": "OFF THE GRID: Computer models that forecast overloaded power lines are holding back U.S. solar and wind energy projects",
+      "author": "Dan Charles",
+      "url": "https://dx.doi.org/10.1126/science.adk7207"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH01-LINK11",
+      "title": "Simple Lessons from Complexity",
+      "authors": [
+        "N. Goldenfeld",
+        "L. Kadanoff"
+      ],
+      "url": "http://dx.doi.org/10.1126/science.284.5411.87"
+    }
+  ],
+  "problems": [
+    {
+      "problem_id": "O005-LEGA-V101-CH01-P01",
+      "ordinal": 1,
+      "problem_summary": "Bacalah artikel R. May, “Uses and Abuses of Mathematics in Biology”. Jelaskan bagaimana artikel tersebut memperlihatkan bahaya mempercayai model secara membuta, lalu nilai apakah argumennya meyakinkan dengan alasan dan bukti yang jelas.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH01-LINK02"
+      ],
+      "source_formula_occurrences": [],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Pisahkan tiga lapisan: asumsi biologis, struktur matematis, dan bukti empiris. Untuk tiap lapisan, tanyakan apa yang dapat gagal dan apakah kegagalan itu terlihat oleh pembaca hasil model."
+      },
+      "check": {
+        "type": "qualitative",
+        "final_answer": "Tidak ada satu jawaban ya/tidak. Jawaban tuntas harus menghubungkan sedikitnya dua risiko ke argumen atau contoh dalam artikel, lalu memberi penilaian pribadi yang dapat diperdebatkan dan didukung bukti.",
+        "required_evidence": [
+          "Bahaya kepercayaan buta dijelaskan sebagai akibat asumsi, data, parameter, validasi, atau domain penerapan—bukan sekadar klaim bahwa model bisa salah.",
+          "Penilaian tentang daya yakinkan artikel menyertakan alasan dan setidaknya satu keterbatasan atau sanggahan."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "dimensions": [
+          {
+            "criterion": "Ketepatan membaca",
+            "full_credit": "Merangkum tesis dan contoh relevan artikel secara setia serta membedakan ucapan penulis dari tafsiran sendiri.",
+            "partial_credit": "Menyebut tema umum tetapi tidak menautkannya pada bagian atau contoh tertentu."
+          },
+          {
+            "criterion": "Analisis risiko",
+            "full_credit": "Menjelaskan sekurang-kurangnya dua mekanisme seperti asumsi biologis yang lemah, ketidakpastian parameter/data, ekstrapolasi, atau kesan presisi palsu, beserta akibatnya.",
+            "partial_credit": "Hanya mengatakan model tidak sempurna tanpa menjelaskan mekanismenya."
+          },
+          {
+            "criterion": "Evaluasi argumen",
+            "full_credit": "Memberi keputusan yang bernuansa tentang daya yakinkan artikel, dengan bukti, batas, dan kemungkinan sanggahan.",
+            "partial_credit": "Memberi opini tanpa dukungan."
+          },
+          {
+            "criterion": "Implikasi praktik",
+            "full_credit": "Menarik satu pelajaran operasional: nyatakan asumsi, uji terhadap data, laporkan ketidakpastian, dan batasi klaim pada domain yang diuji.",
+            "partial_credit": "Memberi anjuran umum yang tidak dapat diperiksa."
+          }
+        ],
+        "model_response_outline": [
+          "Model merupakan argumen bersyarat: keluarannya hanya seandal asumsi, data, dan implementasinya.",
+          "Matematika yang canggih tidak dengan sendirinya mengubah hipotesis biologis menjadi bukti.",
+          "Karena itu hasil model perlu diuji, ketidakpastian dan batas penerapan perlu dinyatakan, dan keputusan tidak boleh bertumpu pada satu keluaran tanpa analisis alternatif."
+        ]
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH01-P02",
+      "ordinal": 2,
+      "problem_summary": "Bacalah sedikitnya tiga artikel berita pada daftar sumber. Dengan rujukan yang tepat, bahas apakah model matematika patut digunakan untuk keputusan yang memengaruhi manusia dan masyarakat, mengapa, serta kriteria apa yang wajib dipenuhi model untuk pembuatan kebijakan.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH01-LINK03",
+        "O005-LEGA-V101-CH01-LINK04",
+        "O005-LEGA-V101-CH01-LINK05",
+        "O005-LEGA-V101-CH01-LINK06",
+        "O005-LEGA-V101-CH01-LINK07",
+        "O005-LEGA-V101-CH01-LINK08",
+        "O005-LEGA-V101-CH01-LINK09",
+        "O005-LEGA-V101-CH01-LINK10"
+      ],
+      "source_formula_occurrences": [],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Buat matriks perbandingan untuk sekurang-kurangnya tiga artikel: tujuan keputusan, data, asumsi, pihak yang menerima manfaat/risiko, ketidakpastian, dan akibat jika prediksi keliru. Gunakan matriks itu sebagai bukti bagi posisi Anda."
+      },
+      "check": {
+        "type": "qualitative",
+        "final_answer": "Posisi yang dapat dipertanggungjawabkan biasanya bersyarat: model boleh mendukung, tetapi tidak menggantikan, keputusan; kelayakannya bergantung pada transparansi, validasi, ketidakpastian, keadilan, dan mekanisme pertanggungjawaban.",
+        "required_evidence": [
+          "Sedikitnya tiga artikel dibahas dan dirujuk secara dapat dilacak.",
+          "Jawaban menjawab kedua pertanyaan: boleh/tidaknya penggunaan model dan kriteria untuk kebijakan.",
+          "Kriteria diterjemahkan menjadi tindakan yang dapat diperiksa, bukan slogan."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "dimensions": [
+          {
+            "criterion": "Cakupan sumber",
+            "full_credit": "Membandingkan sedikitnya tiga artikel secara substantif dan memberi rujukan yang tepat.",
+            "partial_credit": "Menyebut tiga artikel tetapi hanya satu atau dua yang benar-benar dianalisis."
+          },
+          {
+            "criterion": "Sintesis lintas kasus",
+            "full_credit": "Menunjukkan persamaan dan perbedaan penggunaan model pada bidang yang dibaca, termasuk konsekuensi keputusan.",
+            "partial_credit": "Merangkum artikel satu per satu tanpa sintesis."
+          },
+          {
+            "criterion": "Posisi normatif",
+            "full_credit": "Mengambil posisi yang jelas dan bernuansa, menimbang manfaat, risiko, alternatif, dan siapa yang menanggung kesalahan.",
+            "partial_credit": "Memilih ya atau tidak tanpa mempertimbangkan pertukaran kepentingan."
+          },
+          {
+            "criterion": "Kriteria kebijakan",
+            "full_credit": "Mencakup mutu serta keterwakilan data, asumsi transparan, validasi luar sampel, sensitivitas dan ketidakpastian, skenario pembanding, audit/reproduksibilitas, keadilan, komunikasi, pemantauan, serta rencana revisi.",
+            "partial_credit": "Mendaftar kriteria umum tanpa cara mengujinya."
+          },
+          {
+            "criterion": "Argumen berbukti",
+            "full_credit": "Setiap klaim utama ditopang contoh atau bukti dari artikel dan batas kesimpulannya diakui.",
+            "partial_credit": "Klaim utama tidak terhubung dengan bacaan."
+          }
+        ],
+        "model_response_outline": [
+          "Model dapat memperjelas konsekuensi skenario dan menyatukan bukti, sehingga layak dipakai sebagai salah satu masukan.",
+          "Penggunaan itu harus bersyarat karena model menyederhanakan kenyataan dan kesalahan berdampak tidak merata pada masyarakat.",
+          "Keputusan akhir perlu menggabungkan hasil model, bukti empiris, pertimbangan etis, keahlian domain, konsultasi dengan pihak terdampak, serta prosedur koreksi ketika bukti berubah."
+        ]
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH01-P03",
+      "ordinal": 3,
+      "problem_summary": "Bayangkan Anda harus mengambil keputusan bisnis atau pemerintahan yang memengaruhi masa depan banyak orang dan keputusan itu bertumpu pada simulasi model matematika. Susun pertanyaan yang perlu diajukan kepada pengembang model sebelum keputusan dibuat.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Kelompokkan pertanyaan menurut tujuan, data, asumsi, implementasi, pengujian, ketidakpastian, dampak, dan tata kelola. Untuk setiap jawaban pengembang, tanyakan bukti apa yang dapat memverifikasinya."
+      },
+      "check": {
+        "type": "qualitative",
+        "final_answer": "Daftar tuntas mencakup apa yang diprediksi, populasi/domain yang berlaku, asal dan keterbatasan data, asumsi, validasi, sensitivitas, ketidakpastian, skenario alternatif, reproduksibilitas, dampak distribusional, serta kondisi penghentian atau pembaruan model.",
+        "required_evidence": [
+          "Pertanyaan tidak hanya meminta akurasi tunggal; pertanyaan juga menyelidiki mekanisme kegagalan.",
+          "Ada pertanyaan tentang konsekuensi bagi pihak yang berbeda dan tentang siapa yang bertanggung jawab memantau hasil."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "dimensions": [
+          {
+            "criterion": "Tujuan dan ruang lingkup",
+            "full_credit": "Menanyakan keputusan apa yang didukung, keluaran apa yang diprediksi, rentang waktu, populasi, dan keadaan tempat model tidak berlaku.",
+            "partial_credit": "Hanya menanyakan tujuan secara umum."
+          },
+          {
+            "criterion": "Data dan asumsi",
+            "full_credit": "Menanyakan sumber, mutu, keterwakilan, data hilang, asumsi penyederhanaan, dan bukti untuk setiap asumsi penting.",
+            "partial_credit": "Menanyakan jumlah data tanpa mutu atau keterwakilan."
+          },
+          {
+            "criterion": "Pengujian",
+            "full_credit": "Menanyakan pembandingan dengan data yang tidak dipakai membangun model, tolok ukur, kasus batas, verifikasi kode, dan kajian independen.",
+            "partial_credit": "Menerima kecocokan pada data pelatihan sebagai satu-satunya bukti."
+          },
+          {
+            "criterion": "Ketidakpastian dan ketahanan",
+            "full_credit": "Menanyakan interval/rentang, sensitivitas terhadap parameter dan asumsi, skenario ekstrem, serta variabel yang paling menentukan keputusan.",
+            "partial_credit": "Meminta satu prediksi titik saja."
+          },
+          {
+            "criterion": "Dampak dan tata kelola",
+            "full_credit": "Menanyakan siapa yang diuntungkan atau dirugikan, bias yang mungkin terjadi, bagaimana hasil dikomunikasikan, siapa yang dapat mengaudit, dan kapan model direvisi atau dihentikan.",
+            "partial_credit": "Tidak membahas dampak distribusional atau pertanggungjawaban."
+          }
+        ],
+        "exemplar_questions": [
+          "Keputusan spesifik apa yang dapat dan tidak dapat didukung oleh model ini?",
+          "Data apa yang dipakai untuk membangun serta menguji model, dan siapa yang kurang terwakili?",
+          "Asumsi mana yang paling memengaruhi hasil dan bagaimana hasil berubah bila asumsi itu dilonggarkan?",
+          "Bagaimana kinerja pada data luar sampel dan dibandingkan dengan aturan dasar yang lebih sederhana?",
+          "Rentang hasil yang masuk akal apa, bukan hanya nilai paling mungkin?",
+          "Siapa yang meninjau implementasi secara independen dan dapatkah analisis direproduksi?",
+          "Kelompok mana yang menanggung kerugian jika model salah?",
+          "Bukti baru apa yang akan memicu pembaruan, penangguhan, atau penolakan model?"
+        ]
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH01-P04",
+      "ordinal": 4,
+      "problem_summary": "Bacalah artikel N. Goldenfeld dan L. Kadanoff, “Simple Lessons from Complexity”. Ringkas pokok-pokoknya dan tentukan kesimpulan penulis mana yang terutama harus diingat ketika mengembangkan model, disertai alasan.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH01-LINK11"
+      ],
+      "source_formula_occurrences": [],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Jangan sekadar membuat ringkasan berurutan. Catat tesis, contoh, dan pelajaran metodologis artikel; lalu hubungkan satu pelajaran pilihan Anda dengan langkah konkret dalam siklus pemodelan."
+      },
+      "check": {
+        "type": "qualitative",
+        "final_answer": "Tidak ada satu kesimpulan pilihan yang wajib. Jawaban tuntas harus setia pada artikel, membedakan ringkasan dari evaluasi, dan menerjemahkan kesimpulan pilihan menjadi praktik pemodelan yang konkret.",
+        "required_evidence": [
+          "Pokok artikel disertai contoh atau bagian pendukung.",
+          "Kesimpulan yang diprioritaskan disebut jelas dan alasan prioritasnya terkait dengan pembangunan atau pengujian model."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "dimensions": [
+          {
+            "criterion": "Kesetiaan ringkasan",
+            "full_credit": "Menyajikan tesis, alur, dan pokok utama artikel secara proporsional tanpa mengganti pandangan penulis dengan opini sendiri.",
+            "partial_credit": "Mengambil satu kutipan atau tema dan menganggapnya mewakili seluruh artikel."
+          },
+          {
+            "criterion": "Pemakaian bukti",
+            "full_credit": "Menghubungkan tiap pokok utama dengan contoh, argumen, atau bagian yang dapat ditelusuri dalam artikel.",
+            "partial_credit": "Membuat daftar klaim tanpa bukti tekstual."
+          },
+          {
+            "criterion": "Pemahaman kompleksitas",
+            "full_credit": "Menjelaskan bagaimana interaksi, skala, pola kolektif, atau pemilihan tingkat deskripsi memengaruhi apa yang harus dimasukkan ke model.",
+            "partial_credit": "Menggunakan kata kompleks hanya sebagai sinonim untuk sulit."
+          },
+          {
+            "criterion": "Kesimpulan prioritas",
+            "full_credit": "Memilih kesimpulan yang benar-benar berasal dari artikel dan membela pilihannya dengan pertukaran kepentingan yang jelas.",
+            "partial_credit": "Memilih tanpa alasan atau memberi nasihat yang tidak berasal dari artikel."
+          },
+          {
+            "criterion": "Penerapan",
+            "full_credit": "Mengubah pelajaran menjadi tindakan, misalnya memilih skala/variabel yang relevan, menguji pola lintas skala, membandingkan model sederhana, atau memeriksa batas domain.",
+            "partial_credit": "Penerapan tetap abstrak dan tidak dapat diperiksa."
+          }
+        ],
+        "model_response_outline": [
+          "Ringkasan yang baik mengidentifikasi hubungan antara aturan/interaksi pada satu tingkat dan perilaku kolektif pada tingkat lain.",
+          "Pelajaran metodologis perlu dikaitkan dengan pemilihan variabel, skala, dan derajat kompleksitas model.",
+          "Kesimpulan pilihan harus dinilai dari kemampuannya mencegah kesalahan nyata dalam pembangunan, penafsiran, atau ekstrapolasi model."
+        ]
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH01-P05",
+      "ordinal": 5,
+      "problem_summary": "Untuk data bidang D dan garis y=ax+b, buktikan bahwa ada pasangan (a,b) yang meminimumkan jumlah kuadrat selisih vertikal antara data dan nilai garis. Tafsirkan pasangan itu sebagai pencocokan linear dengan metode kuadrat terkecil.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "D=\\{(X_i,Y_i)\\mid i=1,\\ldots,n\\}",
+        "y=ax+b",
+        "F=\\{(X_i,f(X_i))\\mid i=1,\\ldots,n\\}",
+        "\\delta(a,b)=\\sum_{i=1}^{n}(f(X_i)-Y_i)^2"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Pusatkan data dengan \\(\\bar X\\) dan \\(\\bar Y\\). Untuk setiap a, minimalkan lebih dahulu terhadap b; lalu masalah yang tersisa hanyalah meminimumkan polinom kuadrat satu variabel. Jangan lupa kasus semua X_i sama."
+      },
+      "check": {
+        "type": "exact_with_degenerate_case",
+        "final_answer": "Jika \\(S_{xx}=\\sum_i(X_i-\\bar X)^2>0\\), maka \\(a=S_{xy}/S_{xx}\\) dan \\(b=\\bar Y-a\\bar X\\), dengan \\(S_{xy}=\\sum_i(X_i-\\bar X)(Y_i-\\bar Y)\\). Jika \\(S_{xx}=0\\), semua pasangan yang memenuhi \\(a\\bar X+b=\\bar Y\\) merupakan peminimum.",
+        "quick_check": "Pasangan harus memenuhi kedua persamaan normal: \\(a\\sum X_i^2+b\\sum X_i=\\sum X_iY_i\\) dan \\(a\\sum X_i+nb=\\sum Y_i\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "assumption": "n≥1",
+        "steps": [
+          {
+            "explanation": "Untuk garis \\(f(x)=ax+b\\), tulis rata-rata \\(\\bar X=n^{-1}\\sum_iX_i\\) dan \\(\\bar Y=n^{-1}\\sum_iY_i\\).",
+            "formula": "\\delta(a,b)=\\sum_{i=1}^{n}(aX_i+b-Y_i)^2"
+          },
+          {
+            "explanation": "Pisahkan bagian terpusat dan bagian rata-rata. Suku silang hilang karena jumlah deviasi dari rata-rata sama dengan nol.",
+            "formula": "\\delta(a,b)=\\sum_i\\left[a(X_i-\\bar X)-(Y_i-\\bar Y)\\right]^2+n(a\\bar X+b-\\bar Y)^2"
+          },
+          {
+            "explanation": "Untuk a tetap, suku kedua minimum dan bernilai nol pada pilihan berikut.",
+            "formula": "b=\\bar Y-a\\bar X"
+          },
+          {
+            "explanation": "Dengan \\(S_{xx}=\\sum_i(X_i-\\bar X)^2\\), \\(S_{xy}=\\sum_i(X_i-\\bar X)(Y_i-\\bar Y)\\), dan \\(S_{yy}=\\sum_i(Y_i-\\bar Y)^2\\), fungsi yang tersisa adalah polinom kuadrat.",
+            "formula": "\\delta(a,\\bar Y-a\\bar X)=S_{xx}a^2-2S_{xy}a+S_{yy}"
+          },
+          {
+            "explanation": "Jika \\(S_{xx}>0\\), lengkapi kuadrat. Koefisien kuadrat positif, sehingga titik stasioner adalah minimum global yang unik.",
+            "formula": "\\delta=S_{xx}\\left(a-\\frac{S_{xy}}{S_{xx}}\\right)^2+S_{yy}-\\frac{S_{xy}^2}{S_{xx}}"
+          },
+          {
+            "explanation": "Jadi peminimum unik ketika nilai X tidak semuanya sama adalah:",
+            "formula": "\\hat a=\\frac{S_{xy}}{S_{xx}},\\qquad \\hat b=\\bar Y-\\hat a\\bar X"
+          },
+          {
+            "explanation": "Jika \\(S_{xx}=0\\), semua \\(X_i=\\bar X\\), sehingga kemiringan tidak dapat diidentifikasi. Nilai minimum tetap tercapai oleh setiap pasangan pada garis parameter berikut.",
+            "formula": "a\\bar X+b=\\bar Y"
+          }
+        ],
+        "conclusion": "Dengan demikian, untuk setiap himpunan data takkosong selalu ada sedikitnya satu pasangan peminimum. Keunikannya memerlukan sedikitnya dua nilai X yang berbeda."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH01-P06",
+      "ordinal": 6,
+      "problem_summary": "Gunakan metode kuadrat terkecil untuk mencari garis yang paling cocok dengan titik (1,3.3), (2.5,8), (4,13), (7,22), dan (8,25.5). Gambarkan garis bersama data dan nilai apakah kecocokannya memadai.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "(1,3.3),\\ (2.5,8),\\ (4,13),\\ (7,22),\\ (8,25.5)"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Hitung \\(\\bar x\\), \\(\\bar y\\), \\(S_{xx}\\), dan \\(S_{xy}\\), lalu gunakan hasil Masalah 5. Setelah menggambar, periksa residual, bukan hanya apakah garis tampak dekat."
+      },
+      "check": {
+        "type": "numeric",
+        "final_answer": "Garis kuadrat terkecil adalah \\(\\hat y=(551/175)x+67/350\\approx3.148571x+0.191429\\). SSE \\(=1463/12250\\approx0.119429\\) dan \\(R^2\\approx0.999656\\). Pada skala data, kecocokan sangat rapat; penilaian akhir tetap harus mempertimbangkan ketelitian pengukuran dan tujuan model.",
+        "tolerances": {
+          "slope_absolute": 1e-06,
+          "intercept_absolute": 1e-06,
+          "sse_absolute": 1e-06
+        }
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Rata-rata koordinat adalah:",
+            "formula": "\\bar x=4.5,\\qquad \\bar y=14.36"
+          },
+          {
+            "explanation": "Jumlah kuadrat dan hasil kali terpusat adalah:",
+            "formula": "S_{xx}=\\sum_i(x_i-\\bar x)^2=35,\\qquad S_{xy}=\\sum_i(x_i-\\bar x)(y_i-\\bar y)=110.2"
+          },
+          {
+            "explanation": "Masukkan ke rumus kuadrat terkecil.",
+            "formula": "\\hat a=\\frac{110.2}{35}=\\frac{551}{175},\\qquad \\hat b=14.36-4.5\\hat a=\\frac{67}{350}"
+          },
+          {
+            "explanation": "Maka garis yang digambar bersama lima titik adalah:",
+            "formula": "\\hat y=\\frac{551}{175}x+\\frac{67}{350}"
+          },
+          {
+            "explanation": "Residual \\(\\hat y_i-y_i\\), dalam urutan data, semuanya kecil.",
+            "formula": "\\left(0.04,\\ \\frac{11}{175},\\ -\\frac{3}{14},\\ \\frac{81}{350},\\ -0.12\\right)"
+          },
+          {
+            "explanation": "Ukuran kecocokan numeriknya adalah:",
+            "formula": "\\mathrm{SSE}=\\sum_i(\\hat y_i-y_i)^2=\\frac{1463}{12250}\\approx0.119429,\\qquad R^2\\approx0.999656"
+          }
+        ],
+        "plot_check": "Grafik yang benar menampilkan kelima titik dan satu garis lurus; setiap titik berada sangat dekat dengan garis, tanpa pola lengkung yang jelas pada residual.",
+        "conclusion": "Kecocokan memadai untuk menggambarkan tren linear pada data ini karena simpangannya kecil relatif terhadap rentang y. Namun, lima titik saja tidak membuktikan bahwa hubungan di luar rentang 1≤x≤8 juga linear, dan tanpa informasi galat pengukuran tidak ada ambang kememadaian yang mutlak."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH01-P07",
+      "ordinal": 7,
+      "problem_summary": "Gunakan notebook terbuka Python/SciPy untuk membuat himpunan data yang dekat dengan empat fungsi yang diberikan, mencocokkan bentuk linear dan eksponensial yang sesuai, memeriksa grafik serta residual, lalu menilai apakah setiap pencocokan memadai dan menarik kesimpulan umum.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "f(x)=3x+5",
+        "f(x)=7x",
+        "f(x)=\\exp(3x+7)",
+        "f(x)=\\exp(7x)"
+      ],
+      "notebook": {
+        "path": "source/id-ID/O005-LEGA-V101-CH01/notebooks/problem-07-open-curve-fitting.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "separately_owned_open_replacement"
+      },
+      "provenance": {
+        "problem_summary": "source_derived_adapted_to_open_python",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Gunakan seed tetap, simpan data asli, dan cocokkan tiap fungsi dengan keluarga yang tepat. Bandingkan data–kurva serta plot residual. Untuk fungsi eksponensial, noise relatif sering lebih masuk akal daripada noise aditif yang sama pada semua skala."
+      },
+      "check": {
+        "type": "computational_qualitative",
+        "final_answer": "Tanpa noise, parameter yang harus dipulihkan ialah (a,b)=(3,5), a=7, (a,b)=(3,7), dan a=7 untuk empat fungsi secara berurutan. Dengan noise kecil, taksiran harus dekat dengan nilai tersebut, kurva harus mengikuti data dalam domain sampel, dan residual tidak boleh menunjukkan pola sistematis yang besar.",
+        "required_evidence": [
+          "Notebook pada path tercatat dapat dijalankan ulang dengan seed tetap.",
+          "Empat data sintetis, empat kurva hasil cocok, dan empat pemeriksaan residual tersedia.",
+          "Kesimpulan membedakan kecocokan numerik dari penjelasan kausal serta tidak mengekstrapolasi di luar domain sampel tanpa peringatan."
+        ]
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Bangun data deterministik dengan generator acak ber-seed. Gunakan noise aditif kecil untuk kasus linear dan noise relatif kecil untuk kasus eksponensial.",
+            "formula": "y_i=f(x_i)+\\varepsilon_i\\quad\\text{atau}\\quad y_i=f(x_i)(1+\\varepsilon_i)"
+          },
+          {
+            "explanation": "Definisikan empat keluarga model terbuka yang akan diteruskan kepada pengoptimal SciPy.",
+            "formula": "g_1(x;a,b)=ax+b,\\quad g_2(x;a)=ax,\\quad g_3(x;a,b)=\\exp(ax+b),\\quad g_4(x;a)=\\exp(ax)"
+          },
+          {
+            "explanation": "Untuk tiap data, minimalkan jumlah kuadrat residual dengan keluarga yang cocok dan titik awal yang wajar.",
+            "formula": "\\operatorname*{arg\\,min}_{\\theta}\\sum_i\\left[g(x_i;\\theta)-y_i\\right]^2"
+          },
+          {
+            "explanation": "Bandingkan taksiran dengan parameter pembangkit. Dalam batas noise kecil, hasil yang diharapkan mendekati nilai berikut.",
+            "formula": "(\\hat a,\\hat b)\\approx(3,5),\\quad \\hat a\\approx7,\\quad (\\hat a,\\hat b)\\approx(3,7),\\quad \\hat a\\approx7"
+          },
+          {
+            "explanation": "Gambarkan data, kurva, dan residual \\(r_i=y_i-g(x_i;\\hat\\theta)\\). Kecocokan memadai bila simpangan sebanding dengan noise yang ditambahkan, residual tidak berpola kuat, dan parameter stabil terhadap pengulangan atau perubahan kecil yang masuk akal.",
+            "formula": "r_i=y_i-g(x_i;\\hat\\theta)"
+          }
+        ],
+        "conclusion": "Keluarga fungsi yang benar biasanya memulihkan parameter dan mengikuti data sintetis yang memang dibangkitkan dari keluarga itu. Namun, kecocokan dekat pada sampel terbatas tidak membuktikan mekanisme penyebab, keunikan bentuk model, atau ketepatan ekstrapolasi. Domain x, bentuk noise, jumlah data, titik awal, dan pilihan keluarga model semuanya memengaruhi penilaian.",
+        "notebook_check": "Jalankan seluruh sel dari kernel bersih; hasil, parameter, dan gambar harus terbangun ulang tanpa layanan eksternal atau perangkat lunak proprieter."
+      }
+    }
+  ]
+}

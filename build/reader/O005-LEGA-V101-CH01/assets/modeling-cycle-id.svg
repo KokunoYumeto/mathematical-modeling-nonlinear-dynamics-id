@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="508" viewBox="0 0 1024 508" role="img" aria-labelledby="title desc">
+  <title id="title">Siklus pemodelan matematika</title>
+  <desc id="desc">Bagan alir dimulai dari Mulai, kemudian Tentukan Harapan terhadap Model, Peroleh Data, Pilih Jenis Model, Buat Asumsi, Susun Model, dan Uji Model. Keputusan Apakah Model Memenuhi Harapan mengarah ke Selesai jika ya, atau kembali ke Buat Asumsi jika tidak.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="16" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#e8a800"/>
+    </marker>
+    <style>
+      .step{fill:#4d91c6;stroke:#2f6792;stroke-width:1.5}
+      .start{fill:#f7bd16;stroke:#d89b00;stroke-width:1.5}
+      .done{fill:#67ae44;stroke:#4d8d30;stroke-width:1.5}
+      .decision{fill:#f17827;stroke:#d55d12;stroke-width:1.5}
+      .arrow{fill:none;stroke:#e8a800;stroke-width:8;marker-end:url(#arrow)}
+      .label{font-family:Arial,Helvetica,sans-serif;font-size:18px;text-anchor:middle;dominant-baseline:middle;fill:#fff}
+      .small{font-family:Arial,Helvetica,sans-serif;font-size:19px;fill:#171717}
+      .cycle{font-family:Arial,Helvetica,sans-serif;font-size:32px;text-anchor:middle;fill:#171717}
+    </style>
+  </defs>
+
+  <rect class="start" x="18" y="18" width="210" height="52" rx="28"/>
+  <text class="label" x="123" y="45">Mulai</text>
+
+  <rect class="step" x="344" y="8" width="190" height="76"/>
+  <text class="label" x="439" y="35" aria-label="Tentukan Harapan terhadap Model"><tspan x="439">Tentukan Harapan</tspan> <tspan x="439" dy="27">terhadap Model</tspan></text>
+
+  <rect class="step" x="607" y="8" width="170" height="76"/>
+  <text class="label" x="692" y="47">Peroleh Data</text>
+
+  <rect class="step" x="851" y="8" width="170" height="76"/>
+  <text class="label" x="936" y="35" aria-label="Pilih Jenis Model"><tspan x="936">Pilih Jenis</tspan> <tspan x="936" dy="27">Model</tspan></text>
+
+  <rect class="step" x="851" y="198" width="170" height="76"/>
+  <text class="label" x="936" y="225" aria-label="Buat Asumsi"><tspan x="936">Buat</tspan> <tspan x="936" dy="27">Asumsi</tspan></text>
+
+  <rect class="step" x="607" y="198" width="170" height="76"/>
+  <text class="label" x="692" y="225" aria-label="Susun Model"><tspan x="692">Susun</tspan> <tspan x="692" dy="27">Model</tspan></text>
+
+  <rect class="step" x="344" y="198" width="190" height="76"/>
+  <text class="label" x="439" y="225" aria-label="Uji Model"><tspan x="439">Uji</tspan> <tspan x="439" dy="27">Model</tspan></text>
+
+  <polygon class="decision" points="439,354 590,430 439,506 288,430"/>
+  <text class="label" x="439" y="414" aria-label="Apakah Model Memenuhi Harapan?"><tspan x="439">Apakah Model</tspan> <tspan x="439" dy="27">Memenuhi Harapan?</tspan></text>
+
+  <rect class="done" x="4" y="404" width="212" height="52" rx="28"/>
+  <text class="label" x="110" y="431">Selesai</text>
+
+  <path class="arrow" d="M 242 45 H 326"/>
+  <path class="arrow" d="M 548 45 H 589"/>
+  <path class="arrow" d="M 791 45 H 833"/>
+  <path class="arrow" d="M 936 100 V 180"/>
+  <path class="arrow" d="M 837 236 H 795"/>
+  <path class="arrow" d="M 593 236 H 552"/>
+  <path class="arrow" d="M 439 288 V 337"/>
+  <path class="arrow" d="M 274 430 H 230"/>
+  <text class="small" x="245" y="468">Ya</text>
+  <path class="arrow" d="M 607 430 H 875 Q 936 430 936 369 V 292"/>
+  <text class="small" x="608" y="468">Tidak</text>
+
+  <text class="cycle" x="690" y="355">Siklus Pemodelan</text>
+  <path class="arrow" d="M 584 376 C 544 352 552 317 584 310"/>
+  <path class="arrow" d="M 815 310 C 851 322 855 360 819 376"/>
+</svg>

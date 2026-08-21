@@ -1,0 +1,212 @@
+[
+  {
+    "unit": "chapter:25:chapter-1",
+    "classes": "textbox textbox--learning-objectives",
+    "title": "Learning Objectives",
+    "text_prefix": "Learning Objectives At the end of this chapter, you will be able to do the following. Describe what a mathematical model is. Describe what it takes to be a good mathematical modeler. Explain how to build a mathematical model by going through the modeling cycle. Discuss the role of hypotheses in the "
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "classes": "textbox textbox--exercises",
+    "title": "Food for Thought",
+    "text_prefix": "Food for Thought Problem 1 Read the article by R. May entitled Uses and Abuses of Mathematics in Biology . How does this article illustrate the dangers of trusting models blindly? Do you find the arguments convincing? Problem 2 Read at least three of the news articles below. Rapid Response Could Hav"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "classes": "textbox textbox--learning-objectives",
+    "title": "Learning Objectives",
+    "text_prefix": "Learning Objectives At the end of this chapter, you will be able to do the following. Apply the modeling process by developing a model from the ground up. Translate word statements into mathematical formulations. Test the behavior of a model with a numerical simulation. Assess whether a mathematical"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "classes": "textbox textbox--exercises",
+    "title": "Food for Thought",
+    "text_prefix": "Food for Thought Problem 1 Find three different bell-shaped or pulse-like functions. How do you adjust their height? How do you adjust their width? Problem 2 Find a monotone, differentiable function $latex f(x)$ defined on the real line, and such that $latex \\lim_{x \\to -\\infty} f(x) = -6,$ $latex \\"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "classes": "textbox textbox--learning-objectives",
+    "title": "Learning Objectives",
+    "text_prefix": "Learning Objectives At the end of this chapter, you will be able to do the following. Apply the modeling process to a simple mechanical system, the nonlinear pendulum. Use Newton’s law to derive a differential equation for the dynamics of the pendulum. Combine variables and parameters into dimension"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "classes": "textbox textbox--exercises",
+    "title": "Food for Thought",
+    "text_prefix": "Food for Thought Problem 1 Show that $latex \\theta(\\tau) = C \\cos(\\tau + \\phi),$ with $latex A, B \\in \\mathbb{R}$ can be written as $latex \\theta(\\tau) = A \\cos(\\tau) + B \\sin(\\tau),$ with $latex C, \\phi \\in \\mathbb{R}$ by expressing $latex A$ and $latex B$ in terms of $latex C$ and $latex \\phi$. Co"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "classes": "textbox textbox--learning-objectives",
+    "title": "Learning Objectives",
+    "text_prefix": "Learning Objectives At the end of this chapter, you will be able to do the following. Understand stone skipping as an alternation of free flight and collision phases. Apply concepts of classical mechanics to describe the dynamics of the stone during each phase. Justify approximations to simplify the"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "classes": "textbox textbox--exercises",
+    "title": "Food for Thought",
+    "text_prefix": "Food for Thought Problem 1 Consider Equations ( 4.5 ). Use these equations to determine the dimension of $latex \\omega_\\alpha$, where $latex \\alpha$ is each of $latex y,\\,n$ and $latex p$. Relate the dimension of $latex I_\\alpha$ to that of $latex N_\\alpha$. Given that a torque is of the form $latex"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "classes": "textbox textbox--learning-objectives",
+    "title": "Learning Objectives",
+    "text_prefix": "Learning Objectives At the end of this chapter, you will be able to do the following. Construct discrete-time models for isolated or interacting groups of individuals, including models with age groups. Solve linear discrete-time models exactly. Analyze the dynamics of first order nonlinear differenc"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "classes": "textbox textbox--exercises",
+    "title": "Food for Thought",
+    "text_prefix": "Food for Thought Problem 1 Assume that a population grows according to $latex \\displaystyle N(t+1) = \\kappa N(t), \\kappa > 1.$ How long does it take to double the number of individuals? Estimate the value of $latex \\kappa$ from Figure 5.1, which shows the number of Red-tailed Hawks in the United Sta"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "classes": "textbox textbox--learning-objectives",
+    "title": "Learning Objectives",
+    "text_prefix": "Learning Objectives At the end of this chapter, you will be able to do the following. Create coupled differential equation models for predator-prey and competing species systems. Formulate dimensionless versions of two-dimensional models and appraise their dynamics by means of phase plane analysis. "
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "classes": "textbox textbox--exercises",
+    "title": "Food for Thought",
+    "text_prefix": "Food for Thought Problem 1 Write a time-continuous model which describes the following situation. Species $latex x$ survives by eating nutrients $latex n$ and has a per-capita death rate equal to $latex d$. The nutrients $latex n$ are supplied to the system at a constant rate. Problem 2 Is model ( 6"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "classes": "textbox textbox--learning-objectives",
+    "title": "Learning Objectives",
+    "text_prefix": "Learning Objectives At the end of this chapter, you will be able to do the following. Construct compartmental models describing infections and disease outbreaks. Formulate dimensionless versions of two-dimensional models and appraise their dynamics by means of phase plane analysis. Translate the res"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "classes": "textbox textbox--exercises",
+    "title": "Food for Thought",
+    "text_prefix": "Food for Thought Problem 1 Write model ( 7.1 ) in dimensionless form by defining $latex \\tau = \\lambda k b t / \\delta^2$ and appropriate variables $latex x$, $latex y$ and $latex v$. Explain what you are doing and check that $latex \\tau$ is dimensionless. Problem 2 Consider model ( 7.2 ). Find the f"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "classes": "textbox textbox--learning-objectives",
+    "title": "Learning Objectives",
+    "text_prefix": "Learning Objectives At the end of this chapter, you will be able to do the following. Assemble systems of coupled nonlinear ordinary differential equations describing how concentrations of chemical reactants evolve in time. Predict the dynamics of chemical reactions by applying the methods of analys"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "classes": "textbox textbox--exercises",
+    "title": "Food for Thought",
+    "text_prefix": "Food for Thought Problem 1 Consider the following chemical reactions $latex \\begin{array}{ccccc} & k_1 & & k_3 & \\\\ A + B & \\rightleftharpoons & C &\\rightarrow & B + D,\\\\ & k_2 & & & \\end{array}$ $latex \\begin{array}{ccc} & k_4 & \\\\ B + E & \\rightleftharpoons & F. \\\\ & k_5 & \\end{array}$ Write diffe"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "classes": "textbox textbox--learning-objectives",
+    "title": "Learning Objectives",
+    "text_prefix": "Learning Objectives At the end of this chapter, you will be able to do the following. Construct continuity equations using ideas from vector calculus. Interpret reaction-diffusion equations as special cases of continuity equations. Solve the heat equation. Describe diffusion at the microscopic level"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "classes": "textbox textbox--exercises",
+    "title": "Food for Thought",
+    "text_prefix": "Food for Thought Problem 1 Describe the behavior of system ( 9.10 ) near the origin if $latex c = 2$. Problem 2 Consider the function $latex \\displaystyle f(x,t) = \\frac{1}{2 \\sqrt{\\pi D_0 t}} \\int_{-\\infty}^\\infty \\exp\\left[-\\frac{(x-x_0)^2}{4 D_0 t}\\right] H(x_0)\\ dx_0.$ Calculate $latex \\partial "
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "classes": "textbox textbox--learning-objectives",
+    "title": "Learning Objectives",
+    "text_prefix": "Learning Objectives At the end of this chapter, you will be able to do the following. Explain why different sets of parameters in a single generic model may lead to different types of patterns. Analyze the linear stability of a homogeneous solution to a pattern-forming system. Predict the wavelength"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "classes": "textbox textbox--exercises",
+    "title": "Food for Thought",
+    "text_prefix": "Food for Thought Problem 1 Consider Equation ( 10.2 ) with $latex \\mu = 0$. Find a solution to this equation in the form $latex \\psi(x,t) = \\exp[i(\\omega t + q x + p y)], \\qquad \\omega,\\, q,\\,p\\, \\in \\mathbb{R}.$ Try to express $latex \\omega$, $latex q$ and $latex p$ in terms of the parameters of th"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "classes": "textbox textbox--exercises",
+    "title": "Food for Thought",
+    "text_prefix": "Food for Thought Problem 1 Show that eigenvectors $latex u$ and $latex v$ of a matrix $latex A$ corresponding to different eigenvalues are linearly independent. Problem 2 Find the determinant of the following matrix $latex C = \\left[\\begin{array}{ccc} 2 & 2 & 6 \\\\ 4 & 3 & 12 \\\\ 6 & 4 & 16 \\end{array"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "classes": "textbox textbox--exercises",
+    "title": "Food for Thought",
+    "text_prefix": "Food for Thought Problem 1 What is the type (linear, separable, exact, solvable after a change of variable, Riccati's, Bernoulli's, Clairaut's) of the following first order equations? (Do not try to solve the equations). $latex \\displaystyle (1-y^3) \\sinh(3 x) y^\\prime + 7 \\cosh(y) \\exp(x)=0.$ $late"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "classes": "textbox textbox--key-takeaways",
+    "title": "Answers",
+    "text_prefix": "Answers Problem 1 Separable. $latex e^x$ is an integrating factor. Homogeneous of degree 2. Linear. Linear. Exact. Bernoulli with $latex n=-1.$ Problem 2 (5): $latex \\displaystyle y = -\\frac{1}{2 x^2} + \\frac{C}{x^2} e^{x^2}.$ (6): $latex K = x \\cos(x) \\sin(y) + x y^2.$ Problem 3 $latex \\displaystyl"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "classes": "textbox shaded",
+    "title": "",
+    "text_prefix": "Understand and quantify whether different cooperative strategies between group members lead to increased problem-solving performance."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "classes": "textbox shaded",
+    "title": "",
+    "text_prefix": "Explore a simple mechanistic description of the zoonotic transmission of SARS-CoV-2 at the Wuhan market, the subsequent spread to humans, and associated mitigation measures."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "classes": "textbox shaded",
+    "title": "",
+    "text_prefix": "Develop a compartmental model to assess the potential of non-pharmaceutical interventions to mitigate the spread of COVID-19 in Italy, before vaccines became available."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "classes": "textbox shaded",
+    "title": "",
+    "text_prefix": "Develop a compartmental model to assess the effect of non-pharmaceutical interventions and COVID-19 vaccination campaigns on the health-care system in Italy."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "classes": "textbox shaded",
+    "title": "",
+    "text_prefix": "Develop an ODE model of diabetes and study its dynamics, including the analysis of disease management strategies."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "classes": "textbox shaded",
+    "title": "",
+    "text_prefix": "Develop and agent-based models to explain how visual cues can lead to the emergence of collective behaviors in crowds."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "classes": "textbox shaded",
+    "title": "",
+    "text_prefix": "Develop and compare two different compartmental models for the transmission of dengue, a vector-borne disease."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "classes": "textbox shaded",
+    "title": "",
+    "text_prefix": "Develop predator-prey models, analyze their behavior, and consider their relevance in ecology."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "classes": "textbox shaded",
+    "title": "",
+    "text_prefix": "A predator-prey system that takes fear into account."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "classes": "textbox shaded",
+    "title": "",
+    "text_prefix": "Understand how honeybees create a dynamic network of scents that allows them to locate their queen from afar."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "classes": "textbox shaded",
+    "title": "",
+    "text_prefix": "How sea water temperature and krill density affect whale migration along the coast of California."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "classes": "textbox shaded",
+    "title": "",
+    "text_prefix": "A simple model that reproduces the geometric and scaling properties of melt ponds in the Arctic."
+  }
+]

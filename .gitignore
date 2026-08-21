@@ -1,0 +1,16 @@
+# Rejected-candidate audit payloads are retained locally but are not part of
+# the selected Lega edition repository.
+authority/archives/libretexts-*
+authority/archives/sayama-*
+authority/extracted/libretexts-*
+authority/extracted/sayama-*
+
+# Local coordination records are retained on the workstation but are not
+# publication content.
+00_control/O005_SELECTION_HANDOFF_20260821.md
+00_control/USER_DIRECTIVE_VERBATIM_20260821.md
+
+# Reproducible local interpreter/rendering debris.
+**/__pycache__/
+*.pyc
+texput.log

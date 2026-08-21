@@ -1,0 +1,2501 @@
+[
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h2",
+    "id": "",
+    "classes": "textbox__title",
+    "text": "Learning Objectives"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "What is a model?"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "How to develop a mathematical model"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Identify what we want to model"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Obtain data"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Choose the level of complexity of the model"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Make assumptions"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Set up the model"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Test the model"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Why develop mathematical models"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "What does it take to be a good modeler?"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Summary"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Figure Descriptions"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Food for Thought"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 1"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 2"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 3"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 4"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 5"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 6"
+  },
+  {
+    "unit": "chapter:25:chapter-1",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 7"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h2",
+    "id": "",
+    "classes": "textbox__title",
+    "text": "Learning Objectives"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Formulation of the problem"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Obtain data and choose the level of complexity of the model"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Make assumptions"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Set up the model"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Test the model"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Summary"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Figure Descriptions"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Food for Thought"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 1"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 2"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 3"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 4"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 5"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 6"
+  },
+  {
+    "unit": "chapter:27:first-steps-modeling-the-wave",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 7"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h2",
+    "id": "",
+    "classes": "textbox__title",
+    "text": "Learning Objectives"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Nature of the problem, assumptions and model equations"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Analysis in the absence of friction"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Dimensional analysis"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Scalings"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Small oscillations: the harmonic oscillator"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Nonlinear dynamics"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Analysis in the presence of friction"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Summary"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Figure Descriptions"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Food for Thought"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 1"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 2"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 3"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 4"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 5"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 6"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 7"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 8"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 9"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 10"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 11"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 12"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 13"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 14"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 15"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 16"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 17"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "no-indent",
+    "text": "Problem 18"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "no-indent",
+    "text": "Problem 19"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "no-indent",
+    "text": "Problem 20"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "no-indent",
+    "text": "Problem 21"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "no-indent",
+    "text": "Problem 22"
+  },
+  {
+    "unit": "chapter:38:the-nonlinear-pendulum",
+    "level": "h3",
+    "id": "",
+    "classes": "no-indent",
+    "text": "Problem 23"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h2",
+    "id": "",
+    "classes": "textbox__title",
+    "text": "Learning Objectives"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Experimental data"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Assumptions and model equations"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Collision phase"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Free flight phase"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Analysis"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Free flight phase"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Collision phase"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Summary"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Figure Descriptions"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Food for Thought"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 1"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 2"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 3"
+  },
+  {
+    "unit": "chapter:39:stone-skipping",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 4"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "textbox__title",
+    "text": "Learning Objectives"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "The population of Red-tailed Hawks in the US"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "First-order difference equations"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Fixed points and their linear stability"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "The logistic map"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Continuous approximation of a one-species discrete model"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Linear model"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "The Logistic model"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "General autonomous model"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Discrete models with age distribution"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "The LPA Model"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Summary"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Figure Descriptions"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Food for Thought"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 1"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 2"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 3"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 4"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 5"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 6"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 7"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 8"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 9"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 10"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 11"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 12"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 13"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 14"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 15"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 16"
+  },
+  {
+    "unit": "chapter:48:single-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 17"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "textbox__title",
+    "text": "Learning Objectives"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Predator-prey models: the Lotka-Volterra equations"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Scalings"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Phase plane analysis"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Analysis near the origin, $latex P_0$"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Analysis near $latex P_1$"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Analysis near $latex P_2$"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Two competing species"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Scalings"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Phase plane analysis"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Analysis near the origin, $latex P_0$"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Analysis near $latex P_1$"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Analysis near $latex P_2$"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Analysis near $latex P_3$"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Summary"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Figure Descriptions"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Food for Thought"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 1"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 2"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 3"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 4"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 5"
+  },
+  {
+    "unit": "chapter:53:two-species-models",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 6"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "level": "h2",
+    "id": "",
+    "classes": "textbox__title",
+    "text": "Learning Objectives"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Viral infections"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Modeling infectious diseases"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "The SIR model"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "The classic endemic model"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Summary"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Figure Descriptions"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Food for Thought"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 1"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 2"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 3"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 4"
+  },
+  {
+    "unit": "chapter:57:epidemiology",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 5"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h2",
+    "id": "",
+    "classes": "textbox__title",
+    "text": "Learning Objectives"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "The law of mass action"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "The Brusselator and Oregonator models"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "The Brusselator"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "The Oregonator"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Chemical waves"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Summary"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Figure Descriptions"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Food for Thought"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 1"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 2"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 3"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 4"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 5"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 6"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 7"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 8"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 9"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 10"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 11"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 12"
+  },
+  {
+    "unit": "chapter:62:chemical-reactions",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 13"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h2",
+    "id": "",
+    "classes": "textbox__title",
+    "text": "Learning Objectives"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Diffusion at the macroscopic level"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Reaction-diffusion equations"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "The heat equation"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Diffusion at the microscopic level"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "The Fisher-Kolmogorov-Petrovsky-Piscounov equation"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Chemical waves"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Summary"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Figure Descriptions"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Food for Thought"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 1"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 2"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 3"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 4"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 5"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 6"
+  },
+  {
+    "unit": "chapter:196:diffusion",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 7"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h2",
+    "id": "",
+    "classes": "textbox__title",
+    "text": "Learning Objectives"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Pattern Formation"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Turing patterns"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "The complex Swift-Hohenberg equation"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Vegetation patterns"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Summary"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Figure Descriptions"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Food for Thought"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 1"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 2"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 3"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 4"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 5"
+  },
+  {
+    "unit": "chapter:194:pattern-formation",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 6"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Vector spaces"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Definitions"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Linear mappings"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Properties of linear mappings"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Matrices"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Definitions"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Properties"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Eigenvalues and eigenvectors"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Definitions"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Properties"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h2",
+    "id": "",
+    "classes": "textbox__title",
+    "text": "Food for Thought"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 1"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 2"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 3"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 4"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 5"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 6"
+  },
+  {
+    "unit": "chapter:410:linear-algebra",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 7"
+  },
+  {
+    "unit": "chapter:413:appendix-vector-calculus",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "The gradient"
+  },
+  {
+    "unit": "chapter:413:appendix-vector-calculus",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Line integrals and gradient fields"
+  },
+  {
+    "unit": "chapter:413:appendix-vector-calculus",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Line integrals"
+  },
+  {
+    "unit": "chapter:413:appendix-vector-calculus",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example 1"
+  },
+  {
+    "unit": "chapter:413:appendix-vector-calculus",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example 2"
+  },
+  {
+    "unit": "chapter:413:appendix-vector-calculus",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Gradient fields"
+  },
+  {
+    "unit": "chapter:413:appendix-vector-calculus",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example"
+  },
+  {
+    "unit": "chapter:413:appendix-vector-calculus",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "The curl"
+  },
+  {
+    "unit": "chapter:413:appendix-vector-calculus",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Stokes's and Green's theorems"
+  },
+  {
+    "unit": "chapter:413:appendix-vector-calculus",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Stokes's theorem"
+  },
+  {
+    "unit": "chapter:413:appendix-vector-calculus",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Green's theorem"
+  },
+  {
+    "unit": "chapter:413:appendix-vector-calculus",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "The divergence theorem"
+  },
+  {
+    "unit": "chapter:413:appendix-vector-calculus",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Example: the continuity equation"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Definitions and basic existence theorems"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Definitions"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Existence and uniqueness theorems"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "The Cauchy-Peano theorem"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "The Picard-Lindelöf Theorem"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "First order differential equations"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Separable equations"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Equations where M and N are both homogeneous of degree n"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Exact equations"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Integrating factor"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Linear equations"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example 1"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example 2"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Bernoulli's equation"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Riccati's equation"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Clairaut's equation"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Second order differential equations"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Equations without y"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Equations without x"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Linear equations"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "How to solve the homogeneous equation"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h5",
+    "id": "",
+    "classes": "",
+    "text": "Equations with constant coefficients"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h6",
+    "id": "",
+    "classes": "",
+    "text": "Example 1"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h6",
+    "id": "",
+    "classes": "",
+    "text": "Example 2"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h5",
+    "id": "",
+    "classes": "",
+    "text": "Cauchy-Euler equation"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h6",
+    "id": "",
+    "classes": "",
+    "text": "Example"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h5",
+    "id": "",
+    "classes": "",
+    "text": "Other equations"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "How to find a particular solution to the full equation"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h5",
+    "id": "",
+    "classes": "",
+    "text": "Equations with constant coefficients: Method of undetermined coefficients"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h6",
+    "id": "",
+    "classes": "",
+    "text": "Example 1"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h6",
+    "id": "",
+    "classes": "",
+    "text": "Example 2"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h5",
+    "id": "",
+    "classes": "",
+    "text": "Cauchy-Euler equations"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h5",
+    "id": "",
+    "classes": "",
+    "text": "Other equations"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h6",
+    "id": "",
+    "classes": "",
+    "text": "Example"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Linear differential equations of order higher than two"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "How to solve the homogeneous equation"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Equations with constant coefficients"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h5",
+    "id": "",
+    "classes": "",
+    "text": "Example 1"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h5",
+    "id": "",
+    "classes": "",
+    "text": "Example 2"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Cauchy-Euler equation"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h5",
+    "id": "",
+    "classes": "",
+    "text": "Example"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "How to find a particular solution to the full equation"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Systems of first order linear differential equations"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "How to solve the homogeneous system"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example 1"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example 2"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "How to find a particular solution to the full system"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example 1"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h4",
+    "id": "",
+    "classes": "",
+    "text": "Example 2"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Phase plane analysis"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "Figure Descriptions"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h2",
+    "id": "",
+    "classes": "textbox__title",
+    "text": "Food for Thought"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 1"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 2"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 3"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 4"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 5"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 6"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 7"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 8"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 9"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 10"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 11"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h2",
+    "id": "",
+    "classes": "textbox__title",
+    "text": "Answers"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 1"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 2"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 3"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 4"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 5"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 6"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 7"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 8"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 9"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 10"
+  },
+  {
+    "unit": "chapter:445:appendix-ordinary-differential-equations",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Problem 11"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h2",
+    "id": "",
+    "classes": "uacm-text-center",
+    "text": "1. Collective Intelligence"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Information"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Expectations"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h2",
+    "id": "",
+    "classes": "uacm-text-center",
+    "text": "2. A Model for the Early Spread of COVID-19"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Information"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Expectations"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h2",
+    "id": "",
+    "classes": "uacm-text-center",
+    "text": "3. Non-pharmaceutical Interventions for the Mitigation of Disease Spread"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Information"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Expectations"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h2",
+    "id": "",
+    "classes": "uacm-text-center",
+    "text": "4. Vaccination Campaigns, Non-pharmaceutical Interventions, and the Burden of COVID-19"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Information"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Expectations"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h2",
+    "id": "",
+    "classes": "uacm-text-center",
+    "text": "5. Glucose–Insulin Dynamics"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Information"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Expectations"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h2",
+    "id": "",
+    "classes": "uacm-text-center",
+    "text": "6. Collective Behaviors in Crowds"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Information"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Expectations"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h2",
+    "id": "",
+    "classes": "uacm-text-center",
+    "text": "7. Trade-off Between Model Complexity and Parameter Identification"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Information"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Expectations"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h2",
+    "id": "",
+    "classes": "uacm-text-center",
+    "text": "8. Predator-Prey Models"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Information"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Expectations"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "9. Predator-Prey Interactions when the Prey Fears the Predator"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Information"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Expectations"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "10. Communication in Honeybee Swarms"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Information"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Expectations"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "11. Whale Migration"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Information"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Expectations"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h2",
+    "id": "",
+    "classes": "",
+    "text": "12. Melt Ponds in the Arctic"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Information"
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "level": "h3",
+    "id": "",
+    "classes": "",
+    "text": "Project Expectations"
+  }
+]

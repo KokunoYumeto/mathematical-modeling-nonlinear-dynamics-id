@@ -1,0 +1,3 @@
+# Exact source witnesses, manifests, notebooks, and generated reader bytes are
+# hash-bound. Disable checkout/check-in newline conversion on every platform.
+* -text

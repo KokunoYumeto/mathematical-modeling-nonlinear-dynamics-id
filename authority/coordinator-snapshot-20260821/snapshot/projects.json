@@ -1,0 +1,142 @@
+[
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "number": 1,
+    "title": "Collective Intelligence",
+    "word_count": 150,
+    "software": [],
+    "links": [
+      "https://doi.org/10.1016/j.plrev.2018.10.004"
+    ],
+    "text": "Understand and quantify whether different cooperative strategies between group members lead to increased problem-solving performance.  Project Information  Article : Agent-based models of collective intelligence by S.M. Reia, A.C. Amado, J.F. Fontanari, Physics of Life Reviews 31 , 320–331 (2019). Relevant Course Sections : The modeling process (Chapter 1). Agent-based models (Chapter 2). Useful Advanced Knowledge : Logical reasoning and critical thinking. Coding.  Project Expectations  Synthesize the different models introduced in the article and contrast the problem-solving approaches they represent. Develop a code to reproduce the authors' results on the performance of each approach as a function group size. Interpret the outcome of your exploration of each model, including the role of relevant parameters. Evaluate the hypotheses made in support of the overall modeling strategy and assess the validity of the conclusions reached by the authors. Interpret any additional explorations of the model and defend your conclusions."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "number": 2,
+    "title": "A Model for the Early Spread of COVID-19",
+    "word_count": 146,
+    "software": [],
+    "links": [
+      "https://doi.org/10.1016/j.ijid.2020.02.058"
+    ],
+    "text": "Explore a simple mechanistic description of the zoonotic transmission of SARS-CoV-2 at the Wuhan market, the subsequent spread to humans, and associated mitigation measures.  Project Information  Article : A conceptual model for the coronavirus disease 2019 (COVID-19) outbreak in Wuhan, China with individual reaction and governmental action by Q. Lin et al. , Int. J. Infectious Diseases 93 , 211–216 (2020). Relevant Course Topics : The modeling process (Chapter 1). Compartmental models and epidemiology (Chapter 7). Useful Advanced Knowledge : Dynamical Systems. Numerical simulations of systems of ODEs.  Project Expectations  Summarize the model hypotheses. Construct the compartmental model and analyze its behavior. Synthesize the modeling approach and explore different scenarios. Evaluate the contributions of the model in light of what was known about the disease in early 2020. Assess how to revise the model hypotheses given what is currently known about SARS-CoV-2 and its variants."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "number": 3,
+    "title": "Non-pharmaceutical Interventions for the Mitigation of Disease Spread",
+    "word_count": 155,
+    "software": [],
+    "links": [
+      "https://doi.org/10.1038/s41591-020-0883-7"
+    ],
+    "text": "Develop a compartmental model to assess the potential of non-pharmaceutical interventions to mitigate the spread of COVID-19 in Italy, before vaccines became available.  Project Information  Article : Modelling the COVID-19 epidemic and implementation of population-wide interventions in Italy by G. Giordano, F. Blanchini, R. Bruno, P. Colaneri, A. Di Filippo, A. Di Matteo, and M. Colaneri, Nature Medicine 26 , 855–860 (2020). Relevant Course Sections : The modeling process (Chapter 1). Fixed points and their stability (Chapter 3). Epidemics (Chapter 7). Useful Advanced Knowledge : Dynamical Systems. Numerical simulations of systems of ODEs (requires some coding experience). Proofs.  Project Expectations  Summarize the model hypotheses, construct the compartmental model, and analyze its behavior. Write a code to simulate the coupled ODEs, explore different mitigation scenarios, and reproduce the results of the article. Synthesize the modeling approach, and evaluate the contributions of the model in light of what was known about COVID-19 in early 2020."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "number": 4,
+    "title": "Vaccination Campaigns, Non-pharmaceutical Interventions, and the Burden of COVID-19",
+    "word_count": 171,
+    "software": [],
+    "links": [
+      "https://doi.org/10.1038/s41591-021-01334-5"
+    ],
+    "text": "Develop a compartmental model to assess the effect of non-pharmaceutical interventions and COVID-19 vaccination campaigns on the health-care system in Italy.  Project Information  Article : Modeling vaccination rollouts, SARS-CoV-2 variants and the requirement for non-pharmaceutical interventions in Italy by G. Giordano, M. Colaneri, A. Di Filippo, F. Blanchini, P. Bolzern, G. De Nicolao, P. Sacchi, P. Colaneri, and R. Bruno, Nature Medicine 27 , 993–998 (2021). Relevant Course Sections : The modeling process (Chapter 1). Epidemics (Chapter 7). Useful Advanced Knowledge : Dynamical Systems. Numerical simulations of systems of ODEs (requires some coding experience).  Project Expectations  Summarize the model hypotheses, construct the compartmental model, and discuss the significance and importance of each term, especially those related to vaccination. Write a code to simulate the coupled ODEs, explore different vaccine rollout scenarios, and reproduce the results of the article. Quantify how vaccination campaigns and non-pharmaceutical strategies affect the health-care system and the number of disease-related deaths. Synthesize the modeling approach and evaluate the contributions of model."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "number": 5,
+    "title": "Glucose–Insulin Dynamics",
+    "word_count": 165,
+    "software": [
+      "phase plane app"
+    ],
+    "links": [
+      "https://doi.org/10.1080/17513758.2022.2146769"
+    ],
+    "text": "Develop an ODE model of diabetes and study its dynamics, including the analysis of disease management strategies.  Project Information  Article : Dynamics of a Glucose–Insulin Model by M. Ma & J. Li, Journal of Biological Dynamics 16 , 733-745 (2022). Relevant Course Sections : The modeling process (Chapter 1). Phase plane analysis (Chapter 3). Chemical reactions (Chapter 8). Useful Advanced Knowledge : Dynamical Systems. Numerical simulations of systems of ODEs. Proofs. Michaelis-Menten kinetics.  Project Expectations  Summarize the model hypotheses, compare current and previous approaches to model glucose-insulin dynamics discussed in the article, and explain how the current model is constructed. Develop a complete phase plane analysis of the model by finding all of its fixed points and analyzing their stability, as well as through numerical simulations (no coding necessary if you use the Phase Plane app). Assess various disease control strategies based on your interpretation of how parameters affect the dynamics of the system. Evaluate the contributions of the model and interpret any of its limitations."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "number": 6,
+    "title": "Collective Behaviors in Crowds",
+    "word_count": 164,
+    "software": [],
+    "links": [
+      "https://doi.org/10.1098/rspb.2021.2089"
+    ],
+    "text": "Develop and agent-based models to explain how visual cues can lead to the emergence of collective behaviors in crowds.  Project Information  Article : The visual coupling between neighbours explains local interactions underlying human ‘flocking’ by G.C. Dachner, T.D. Wirth, E. Richmond, and W.H. Warren, Proc. R. Soc. B 289 , 20212089 (2022). Relevant Course Sections : The modeling process (Chapter 1). Agent-based models (Chapter 2). Useful Advanced Knowledge : Coding. Advanced Applied Analysis.  Project Expectations  Synthesize the motivations of the authors and judge (critique, argue against or in favor of) their modeling choices, based on your understanding of the problem and of the data discussed in the article. Develop a code to simulate the dynamics between agents and reproduce the \"simulation experiments\" described in the article. Explore the effect of different parameter choices and compile your results, including any limitations of the model. Decide how you might improve the model and explore some of these improvements. Appraise the modeling approach and its contributions."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "number": 7,
+    "title": "Trade-off Between Model Complexity and Parameter Identification",
+    "word_count": 188,
+    "software": [],
+    "links": [
+      "https://doi.org/10.1016/j.mbs.2013.10.007"
+    ],
+    "text": "Develop and compare two different compartmental models for the transmission of dengue, a vector-borne disease.  Project Information  Article : Comparing vector-host and SIR models for dengue transmission by A. Pandey, A. Mubayi, J. Medlock, Mathematical Biosciences 246 , 252–259 (2013). Relevant Course Sections : The modeling process (Chapter 1). Epidemics (Chapter 7). Useful Advanced Knowledge : Dynamical Systems. Numerical simulations of systems of ODEs (requires some coding experience). Theory of Probability. Markov-Chain Monte-Carlo (MCMC) methods.  Project Expectations  Describe how vector-borne diseases are transmitted, summarize the modeling hypotheses, and build the compartmental models introduced in the article. Discuss the significance of the different terms in each of the models, and justify their form in light of the hypotheses that were made. Develop a numerical simulation of each model and simulate trajectories for different initial conditions and parameter choices, including those identified in the article. Describe the MCMC method for parameter estimation and reflect on the trade-off between model complexity and difficulties associated with parameter identification. Conclude with your own reflection on what modelers should take into account during the model selection step of the modeling process."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "number": 8,
+    "title": "Predator-Prey Models",
+    "word_count": 265,
+    "software": [
+      "phase plane app"
+    ],
+    "links": [
+      "https://doi.org/10.1038/s41586-019-1857-0",
+      "https://dx.doi.org/10.1038/s41598-018-25436-2"
+    ],
+    "text": "Develop predator-prey models, analyze their behavior, and consider their relevance in ecology.  Project Information  Article : Asymptotic stability of a modified Lotka-Volterra model with small immigrations by T. Tahara, M.K. Areja Gavina, T. Kawano, J.M. Tubay, J.F. Rabajante, H. Ito, S. Morita, G. Ichinose, T. Okabe, T. Togashi, K. Tainaka, A. Shimizu, T. Nagatani & J. Yoshimura, Scientific Reports 8 , 7029 (2018). Context Article : Long-term cyclic persistence in an experimental predator–prey system by B. Blasius, L. Rudolf, G. Weithoff, U. Gaedke & G.F. Fussmann, Nature 577 , 226-230 (2020). The context article describes recent experimental results on the persistence of cyclic dynamics a predator-prey system. Relevant Course Sections : The modeling process (Chapter 1). Fixed points and their stability (Chapter 3). Two-Species Models (Chapter 6). Useful Advanced Knowledge : Dynamical Systems. Advanced Applied Analysis. Proofs.  Project Expectations  Describe the modeling approach and the goals of the study. Analyze the linear model and describe the dynamics of the classical Lotka-Volterra model (no coding necessary if you use the Phase Plane app). Examine and justify the different modifications proposed in the article. Implement the corresponding models and analyze the resulting dynamics: use phase plane analysis techniques (find the fixed points and study their stability) as well as numerical simulations (e.g. with the Phase Plane app). Compare the results to the discussion in Chapter 7 of this text. Decide whether exploring additional variations of the model is warranted. Synthesize the results and critically evaluate the contributions of the work, especially in light of the recent discoveries presented in the context article."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "number": 9,
+    "title": "Predator-Prey Interactions when the Prey Fears the Predator",
+    "word_count": 102,
+    "software": [],
+    "links": [
+      "https://doi.org/10.1016/j.physa.2019.123359"
+    ],
+    "text": "A predator-prey system that takes fear into account.  Project Information  Article : Fear factor in a prey–predator system in deterministic and stochastic environment by J. Roy & S. Alam, Physica A 541 , 123359 (2020). Relevant Course Topics : The modeling process (Chapter 1). Stability analysis (Chapter 3). Competing species (Chapter 6). Useful Advanced Knowledge : Dynamical Systems. Numerical simulations of systems of ODEs. Proofs. Real analysis.  Project Expectations  Synthesize the modeling approach. Construct the deterministic autonomous model. Find the fixed points and analyze their stability. Explore the dynamics of the deterministic model, both with and without seasonal forcing. Assess the contributions of the model."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "number": 10,
+    "title": "Communication in Honeybee Swarms",
+    "word_count": 115,
+    "software": [],
+    "links": [
+      "https://doi.org/10.1073/pnas.2011916118",
+      "https://www.pnas.org/content/suppl/2021/03/23/2011916118.DCSupplemental"
+    ],
+    "text": "Understand how honeybees create a dynamic network of scents that allows them to locate their queen from afar.  Project Information  Article : Flow-mediated olfactory communication in honeybee swarms by D.M.T. Nguyen et al. , PNAS 118 , e2011916118 (2021). Relevant Course Topics : The modeling process (Chapter 1). Agent-based models (Chapter 2). Diffusion (Chapter 9). Useful Advanced Knowledge : Applied Mathematical Analysis. Partial Differential Equations. Coding. Stochastic Processes. Additional Information : Movies and a detailed description of the model are provided in the online supplementary materials .  Project Expectations  Summarize the data-collection process and subsequent analysis. Explain how the agent-based model works. Reproduce some of its results. Synthesize the modeling approach. Appraise the contributions of model."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "number": 11,
+    "title": "Whale Migration",
+    "word_count": 109,
+    "software": [],
+    "links": [
+      "https://doi.org/10.1016/j.ecolmodel.2020.109225"
+    ],
+    "text": "How sea water temperature and krill density affect whale migration along the coast of California.  Project Information  Article : Disentangling the biotic and abiotic drivers of emergent migratory behavior using individual-based models by S. Dodson et al ., Ecological Modelling 432 , 109225 (2020). Relevant Course Topics : The modeling process (Chapter 1). Agent-based models (Chapter 2). Diffusion (Chapter 9). Useful Advanced Knowledge : Applied Mathematical Analysis. Theory of Probability. Coding. Stochastic Processes.  Project Expectations  Synthesize the modeling approach. Construct approximate seasonal maps of sea water temperature and krill density. Build and run the individual-based model. Appraise the contributions of the model in light of our current knowledge of climate change."
+  },
+  {
+    "unit": "chapter:555:examples-of-project-topics",
+    "number": 12,
+    "title": "Melt Ponds in the Arctic",
+    "word_count": 139,
+    "software": [],
+    "links": [
+      "https://doi.org/10.1029/2000JC000449",
+      "https://doi.org/10.1088/1367-2630/ab26db",
+      "https://nsidc.org/data/g02180/versions/1"
+    ],
+    "text": "A simple model that reproduces the geometric and scaling properties of melt ponds in the Arctic.  Project Information  Article : Ising model for melt ponds on Arctic sea ice by Y-P. Ma et al., New J. Phys. 21 , 063029 (2019). Relevant Course Topics : The modeling process (Chapter 1). Scalings and Energy Minimization Methods (Chapter 3). Agent-based models (Chapter 2). Useful Advanced Knowledge : Physics (phase transitions, the Ising model). Applied Mathematical Analysis. Coding. Additional Information : for helicopter images of sea ice, see Aerial observations of the evolution of ice surface conditions during summer by D.K. Perovich, W.B. Tucker III, K.A. Ligett, as well as the SHEBA Reconnaissance Imagery, Version 1 database.  Project Expectations  Synthesize the modeling approach. Construct the model and explore its behavior. Reproduce the results of the article. Assess the contributions of the model."
+  }
+]

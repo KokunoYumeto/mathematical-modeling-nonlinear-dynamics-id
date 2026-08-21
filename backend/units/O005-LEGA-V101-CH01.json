@@ -1,0 +1,46 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_ch01_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "mastery_path": "backend/mastery/O005-LEGA-V101-CH01.mastery.json",
+  "mastery_sha256": "58f5c0aff94d3d6290775906ebfb4f81e9fafb50b31d60aa8b21080541c77a6d",
+  "notebook_path": "source/id-ID/O005-LEGA-V101-CH01/notebooks/problem-07-open-curve-fitting.ipynb",
+  "notebook_sha256": "75eb7a3b4e5f67bf12c689aa3162ee8ba49149cd00c96e53cae119a524d11a5e",
+  "problems": [
+    "O005-LEGA-V101-CH01-P01",
+    "O005-LEGA-V101-CH01-P02",
+    "O005-LEGA-V101-CH01-P03",
+    "O005-LEGA-V101-CH01-P04",
+    "O005-LEGA-V101-CH01-P05",
+    "O005-LEGA-V101-CH01-P06",
+    "O005-LEGA-V101-CH01-P07"
+  ],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 125,
+    "path": "backend/segments/O005-LEGA-V101-CH01.segments.jsonl",
+    "sha256": "5fdfc7baca4367ceab409b6e55cc6a8144fd9fe39161d1b5174731420f7c9e7a"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "chapter": "On the Nature of Mathematical Modeling",
+    "content_sha256": "6918a59e19b3faf3f938a4d3a72bd7f04cac385cb6e53275c3fe61a2b7b49f09",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/chapter-1/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-CH01/content.html",
+    "content_sha256": "4525a8ff80cc1d05c4d86cc11b00b53ec2d0430b9e404715625f248a7758fee3",
+    "figure_path": "source/id-ID/O005-LEGA-V101-CH01/assets/modeling-cycle-id.svg",
+    "figure_sha256": "d7183e2bfe20bb2bc72da3a39943c34feb66d60522792bbe967b2a8c89ac1d2a",
+    "title": "Tentang Hakikat Pemodelan Matematika"
+  },
+  "unit_id": "O005-LEGA-V101-CH01"
+}

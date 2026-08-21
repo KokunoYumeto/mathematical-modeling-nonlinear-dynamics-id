@@ -1,0 +1,127 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Learning Objectives</h2>
+</header>
+<div class="textbox__content">
+
+At the end of this chapter, you will be able to do the following.
+<ul>
+ 	<li>Describe what a mathematical model is.</li>
+ 	<li>Describe what it takes to be a good mathematical modeler.</li>
+ 	<li>Explain how to build a mathematical model by going through the modeling cycle.</li>
+ 	<li>Discuss the role of hypotheses in the model-building process and how they limit potential applications of the model.</li>
+ 	<li>Reflect on the appropriate use of mathematical models.</li>
+</ul>
+</div>
+</div>
+<h2>What is a model?</h2>
+The word <em>model</em> refers to a representation, often simplified, of an object or of an observation. A model is thus expected to at least mimic, but preferably explain and predict relevant aspects of a given phenomenon. A <em>mathematical model</em> typically consists of one or more equations relating <em>dependent</em> (or output) to <em>independent</em> (or input) variables. Often, a mathematical model involves <em>parameters</em>.
+
+This definition raises the question of <em>reproduction</em> versus <em>explanation</em>. Consider for instance the formation of ripples on a sandy beach. One could imagine developing a model which would take into account how each particle of sand interacts with its neighbors, with the surrounding air, and with particles at rest on the ground. This would be a fairly complicated model, which would involve many dynamical equations, but which should, under appropriate circumstances, be able to reproduce the formation of sand ripples. Another approach could be at a more global level. One could then imagine a model that considers the elevation of the sand on the ground and shows that, in some parameter regime, this quantity oscillates as a function of space. Both models would reproduce the desired phenomenon, but would provide different types of explanation. This is due to the difference in their nature: the former is a model at the <em>microscopic</em> or particulate level, the latter is a model at the <em>macroscopic</em> level. A third model could be a sort of "black box," whose input would be relevant parameters such as the speed of the wind, and the mass and size of the particles of sand, and whose output would be a stripe pattern with the correct properties (period, height, etc). One could create such a model by conducting careful experiments, tabulating the results, and finding functions that fit the data. This model would not offer an explanation as to why sand ripples form, but could still have some predictive capabilities.
+
+Along the same lines, it is well-known that mountains, clouds, trees or even some artistic works <a href="http://dx.doi.org/10.1016/S0097-8493(03)00154-7">resemble fractals</a>. Recognizing this fact may help graphic designers create convincing and aesthetically pleasing virtual landscapes, but does not for instance explain how mountains or clouds are formed.
+
+Different models may thus produce similar results, and modelers need to decide which model best suits their needs. This is of course a subjective task, the  outcome of which should be based on the answers to the following questions.
+<ul>
+ 	<li><em>What do we want the model to </em><em>do: reproduce, explain, predict, etc?</em></li>
+ 	<li><em>Is a predictive but costly </em><em>model worth the effort invested in its creation?</em></li>
+ 	<li><em>What minimal  set of </em><em>criteria should the model satisfy?</em></li>
+</ul>
+<p class="no-indent">A related issue is that different phenomena may lead to similar behaviors (a little like different diseases may have similar symptoms). As a consequence, a model which reproduces the desired behaviors may not have any explanatory or predictive value (similarly, one cannot reasonably diagnose a disease based on symptoms that are not unique to this particular disease).</p>
+<span style="text-decoration: underline">In this text</span>, we will not consider curve-fitting approaches (although see the exercises for applications of the least squares method), but focus our attention on models that are <em>descriptive and explanatory</em>. Such models will often consist of a collection of dynamical equations. We will discuss how to analyze them, in order to assess their ability to reproduce and predict relevant phenomena. We will assume the reader has a working knowledge of calculus, differential equations and linear algebra. Brief reviews of these topics are provided in the appendices.
+<h2>How to develop a mathematical model</h2>
+We now turn to the basic steps involved in the creation of a mathematical model. We will follow these guidelines in all of the models discussed here, very explicitly at first, and then in a more implicit fashion.<a id="Fig_1.1"></a>
+
+[caption id="attachment_24" align="aligncenter" width="1024"]<img class="wp-image-24 size-large" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Modeling_Cycle-1024x508.png" alt="Flow chart illustrating the modeling process. Long description available." width="1024" height="508" /> Figure 1.1. The Mathematical Modeling Process and the Modeling Cycle. [<a href="#Fig_1.1_Desc"><em>Image Description</em></a>][/caption]
+<h3>Identify what we want to model</h3>
+The first step is to decide what the model should accomplish. In other words, we need to find a set of criteria that a satisfactory model should meet. These criteria typically result from balancing the desire of having a perfect model against any time and cost constraints associated with creating such a model.
+<h3>Obtain data</h3>
+This is often the best way to develop an intuitive understanding of the phenomenon of interest. If appropriate, we should also master the basic physical, biological or chemical principles that are responsible for the observed behavior. This may be fairly involved, and often requires finding information in the literature and/or discussing the data with experts.
+<h3>Choose the level of complexity of the model</h3>
+Going back to the example of the formation of sand ripples discussed above, we should for instance decide whether a microscopic model should be preferred to a macroscopic model. Such a decision may be based on personal taste, on the nature of available data, and on the current level of understanding of the phenomenon.
+<h3><span style="text-indent: 0em">Make assumptions</span></h3>
+<span style="text-indent: 0em">We have to decide which facts (or</span> parameters) are irrelevant and therefore negligible, and which ones have to be taken into account.
+<h3><span style="text-indent: 0em">Set up the model</span></h3>
+<span style="text-indent: 0em">We need to define the independent</span> and dependent variables, define the relevant parameters, and write a mathematical formulation of the model. This formulation should be as simple as possible, and we should have a clear understanding of the significance of each of the terms that appear in the equations forming the mathematical model.
+<h3><span style="text-indent: 0em">Test the model</span></h3>
+<span style="text-indent: 0em">This is a crucial step in deciding</span> whether we are satisfied with our model. The behavior of the model may be investigated analytically, or numerically, or both. We then have to ask ourselves whether our intuition generally agrees with what the model does, whether the model is qualitatively and quantitatively correct, and whether limiting cases make sense. If not, we need to find why and amend the model accordingly - in other words, we need to go back to the previous steps. This is thus <em>an iterative process</em>, illustrated in Figure 1.1, during which the model is perfected by testing the results of our analysis of the model against our intuition, against available experimental data, or against the accepted understanding of the phenomenon under study.
+<h2>Why develop mathematical models</h2>
+A mathematical model is a set of equations that reflects our understanding of a given phenomenon. It may look mysterious to the neophyte, but for someone who knows how to <em>read</em> a model, it is an efficient and concise means of communication. A lot of effort, thinking, testing and understanding goes into the creation of a model, but in the end, all this work is summarized by a set of equations or by the formulation of some iterative process. Such a model is a scientists' expression of their perception of the world.
+
+Models have also more practical purposes. They may be used to describe or investigate limiting situations which cannot be reached in practice. In particular, the different ingredients of a model may be isolated from one another by setting all parameters but a few to zero. Models also allow us to save time and resources. For instance, computer simulations of car crashes are cheaper than performing actual experiments. Flight simulators are used as training devices. Models may be run as part of feasibility studies, or to test the outcome of various possible scenarios.
+
+Because models are increasingly used to make decisions that impact society (see for instance the news articles listed in Problem 2 at the end of this chapter), it is important to know their limitations, to realize which hypotheses they are based upon, and to know the role, which may be crucial, that these hypotheses play in the model. An article by R. May, entitled <a href="http://dx.doi.org/10.1126/science.1094442"><em>Uses and Abuses of Mathematics in Biology</em></a>, further reflects on such issues.
+<h2>What does it take to be a good modeler?</h2>
+Mathematical modeling combines various areas of mathematics (for instance differential equations, calculus, linear algebra, numerical analysis, probability theory, dynamical systems, statistics, uncertainty quantification) with, depending on the nature of the model, knowledge of physics, biology, chemistry, astrophysics, geology, hydrology, etc. These subjects are typically taught independently from one another, and the main instructional goal of a mathematical modeling course is to discuss how to draw on various areas of knowledge in order to build and analyze a model. As a consequence, a reader well trained in mathematics and other scientific disciplines will find that there is no "new material'' in these notes. What is new is the use of a variety of mathematical tools to reach a single objective: develop, understand, and test mathematical models.
+
+Successful mathematical modeling thus requires some sort of resourcefulness, since the modeler should be able to "think" of the right tools or methods to use. It also requires some curiosity, imagination and patience; an ability to understand problems that are not purely mathematical; an ability to simplify a given problem, in order to decide what is relevant and what is not; an ability to turn concepts into equations, to decide whether a model is good or inadequate; and finally an ability to discuss problems with others, particularly those whose expertise is different from one's own.
+<h2>Summary</h2>
+The phrase <em>mathematical modeling</em> may be understood in a variety of ways. In these notes, only models that are explanatory, predictive, and have a mathematical formulation qualify as mathematical models. In particular, curve fitting techniques or statistical models are not discussed.
+
+The modeling process involves a series of steps that modelers need to go through in a systematic fashion. These include knowing what one wants to model, getting data, deciding on the type of model to be developed, making assumptions, constructing the model, testing and amending it, and finally using the model. It is particularly important that simplifying hypotheses made in the development of the model be clearly understood, especially if the results are used for policy or decision making purposes.
+
+Mathematical modeling is an interdisciplinary activity which requires an appreciation for the power of mathematical analysis, an interest in applied disciplines, a solid mathematical and computational background, as well as good communication skills.
+<h2>Figure Descriptions</h2>
+<strong><a id="Fig_1.1_Desc"></a>Figure 1.1</strong>: A flowchart of the "Modeling Cycle" showing an iterative process of eight steps. It begins with "Start" and "Identify Model Expectations," moves through data collection, model selection, model assumptions, model setup, model testing, and concludes with a decision diamond: "Model Meets Expectations?". If "No," it loops back to "Make Assumptions"; if "Yes," the process ends at "Done." [<em><a href="#Fig_1.1">Return to Figure 1.1</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Food for Thought</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center">Problem 1</h3>
+Read the article by R. May entitled <a href="http://dx.doi.org/10.1126/science.1094442"><em>Uses and Abuses of Mathematics in Biology</em></a>. How does this article illustrate the dangers of trusting models blindly? Do you find the arguments convincing?
+
+<hr />
+
+<h3 style="text-align: center">Problem 2</h3>
+Read at least three of the news articles below.
+<ul>
+ 	<li><a href="http://dx.doi.org/10.1126/science.294.5540.26"><em> Rapid Response Could Have Curbed Foot-and-Mouth Epidemic</em></a> by Martin Enserink</li>
+ 	<li><a href="http://dx.doi.org/10.1038/427774a"><em>Disease control: Virtual plagues get real</em></a> by V. Gewin</li>
+ 	<li><a href="http://dx.doi.org/10.1126/science.aar8220"><em>African swine fever outbreak alarms wildlife biologists and veterinarians</em></a> by Erik Stokstad</li>
+ 	<li><a href="http://dx.doi.org/10.1126/science.aap9427"><em>U.K. expands kill zone for badgers in fight against bovine TB, sparking controversy</em></a> by Erik Stokstad</li>
+ 	<li id="h.p_12pFkdMsvwa_" class="TYR86d zfr3Q RuayVd"><a class="dhtgD aw5Odc" href="https://doi.org/10.1038/d41586-018-07389-8"><em>Italy’s olive crisis intensifies as deadly tree disease spreads</em></a> by Alison Abbott</li>
+ 	<li id="h.p_EnpScykOvwbA" class="TYR86d zfr3Q RuayVd"><a href="https://theconversation.com/why-computer-simulations-should-replace-animal-testing-for-heart-drugs-93409">Why computer simulations should replace animal testing for heart drugs</a>, by Elisa Passini, Blanca Rodriguez, and Patricia Benito</li>
+ 	<li><a title="Could computer models be the key to better COVID vaccines?" href="https://doi.org/10.1038/d41586-022-00924-8"><em>Could computer models be the key to better COVID vaccines?</em></a><em> </em>by Elie Dolgin</li>
+ 	<li><a href="https://dx.doi.org/10.1126/science.adk7207"><em>OFF THE GRID: Computer models that forecast overloaded power lines are holding back U.S. solar and wind energy projects</em></a>, by Dan Charles</li>
+</ul>
+Then answer the following questions; include a discussion of the articles that you read (with proper references) in your argumentation.
+<ul>
+ 	<li>Do you believe mathematical models should be used to make decisions that impact people and society? Why or why not?</li>
+ 	<li>What criteria do you think such models should satisfy, if they are to be used for policy-making purposes?</li>
+</ul>
+
+<hr />
+
+<h3 style="text-align: center">Problem 3</h3>
+Assume you are an important business or government person, and that you have to make a decision that will influence the future of many people. Your decision relies on simulations of a mathematical model. What kind of questions would you ask the developers of the model, in order to help you in your decision-making process?
+
+<hr />
+
+<h3 style="text-align: center">Problem 4</h3>
+Read the article by N. Goldenfeld and L. Kadanoff, entitled <a href="http://dx.doi.org/10.1126/science.284.5411.87"><em>Simple Lessons from Complexity</em></a>. Summarize the main points of this paper and indicate which of the authors' conclusions you think one should especially keep in mind when developing a model.
+
+<hr />
+
+<h3 style="text-align: center">Problem 5</h3>
+Consider a set of data points in the plane $latex D =\{(X_i,Y_i),\ i=1,\dots n\},$ and a straight line of equation $latex y =a x + b.$ Define the distance $latex \delta$ between the data set $latex D$ and the set $latex F = \{(X_i,f(X_i)),\ i = 1, \dots n\}$ as $latex \delta = \sum_{i=1}^{n} (f(X_i)-Y_i)^2.$
+<p class="no-indent">Show that one can find a pair $latex (a, b)$ which minimizes the value of $latex \delta.$ This particular choice of parameters provides a linear fit, $latex y = a x + b,$ of the data set $latex D.$ This fitting technique is called the<em> least squares method</em>.</p>
+
+
+<hr />
+
+<h3 style="text-align: center">Problem 6</h3>
+Using the least squares method (see Problem 5), find the straight line that best fits the following data points: (1,3.3), (2.5, 8), (4,13), (7,22), (8,25.5). Plot the line and the data points on the same graph. Is the fit satisfactory? Why or why not?
+
+<hr />
+
+<h3 style="text-align: center">Problem 7</h3>
+Browse the MATLAB documentation on curve fitting, and familiarize yourself with MATLAB's basic fitting interface. Create a set of data points close to the graphs of the following functions, and see if the fit proposed by MATLAB is satisfactory. What do you conclude?
+<ol>
+ 	<li>$latex f(x) = 3 x + 5.$</li>
+ 	<li>$latex f(x) = 7 x.$</li>
+ 	<li>$latex f(x) = \exp(3 x + 7).$</li>
+ 	<li>$latex f(x) = \exp(7 x).$</li>
+</ol>
+</div>
+</div>

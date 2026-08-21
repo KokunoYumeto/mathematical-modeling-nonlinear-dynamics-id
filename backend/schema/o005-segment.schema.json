@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/o005-segment.schema.json",
+  "title": "O005 aligned translation segment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "segment_id", "unit_id", "ordinal", "html_path",
+    "source_language", "target_language", "source_text", "target_text",
+    "source_sha256", "target_sha256", "status"
+  ],
+  "properties": {
+    "schema": {"const": "o005-segment-v1"},
+    "segment_id": {"type": "string", "pattern": "^O005-LEGA-V101-CH[0-9]{2}-S[0-9]{4}$"},
+    "unit_id": {"type": "string", "pattern": "^O005-LEGA-V101-CH[0-9]{2}$"},
+    "ordinal": {"type": "integer", "minimum": 1},
+    "html_path": {"type": "string", "minLength": 1},
+    "source_language": {"const": "en"},
+    "target_language": {"const": "id-ID"},
+    "source_text": {"type": "string", "minLength": 1},
+    "target_text": {"type": "string", "minLength": 1},
+    "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "target_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "status": {"const": "translated"}
+  }
+}
