@@ -609,3 +609,52 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   mastery/backend, reader package, correction/terminology records, pipeline,
   reader-facing status and recovery controls, plus the complete frozen Chapter
   9 authority record and its three source rasters.
+
+## Admitted build — O005-LEGA-V101-CH09 — 2026-08-22
+
+- Builder: `scripts/build_unit_reader.py --unit O005-LEGA-V101-CH09`, Pandoc
+  3.9.0.2, native MathML for chapter and mastery mathematics. The builder
+  losslessly normalizes the frozen source's one crossing footnote-span pair and
+  one one-word bibliography anchor before rendering and segment pairing; the
+  target authoring HTML itself is balanced and descriptive.
+- Final gate: `scripts/qa_unit.py --unit O005-LEGA-V101-CH09
+  --execute-notebook --deterministic-build`, exit 0. Exact replay covers 166 /
+  166 ordered elements, 27 / 27 links, 213 source TeX occurrences mapped to
+  214 target occurrences, three / three figures, five / five footnotes, and
+  seven / seven stable problems.
+- Target: 29,698 bytes, SHA-256
+  `0b4633d88a3aed144738429bccc466f1d3f472714bbeb57e0ddb338cdab329e4`.
+  Backend: 228 paired segments / 145,487 bytes, SHA-256
+  `fb0b37030cf91b8eef4c1d0d751d3f8d190dabdc74b14222db79dda55002081f`;
+  seven mastery records / 28,465 bytes, SHA-256
+  `9b5beba72aae6132d7bce4a72ca36041caee499b27cd93806b96694804c1b1fc`.
+- Independent open diffusion notebook: 10 cells / four code cells / 73 static
+  assertion sites, 23,561 bytes, SHA-256
+  `bbc57501bb83e4195e1c65ad30bd235c67aa1342028aa6a323207ec66101ec97`.
+  Fresh locked execution passed 123 dynamic evaluations. Independent review
+  found no executable, dependency, provenance, determinism, or numerical
+  issue; alternate integrations reproduced the c=1 sign changes and the
+  monotone nonnegative c=2 and c=3 profiles.
+- Reader: ten payload files / 724,082 bytes excluding the 1,071-byte manifest;
+  214 chapter and 189 mastery MathML nodes; six local dependencies; three
+  loaded figures. Manifest SHA-256
+  `f7b3bdf67c22956f80e6e94d6a968aca4932e450615e3ffb4fba4d6e9b3836d3`.
+  Deterministic double build: eleven files, byte-identical, canonical tree
+  SHA-256 `8a9a1e68ec70673f2d14a5622d26088a64ca38452ec153f3622b9482488ab7cc`.
+- Independent translation review's two final findings were repaired: the
+  Fisher publisher statement now identifies the agreeing party as the chapter
+  author, and the Müller DOI anchor contains the complete article title.
+  Independent mastery review's four residual English *front* terms were
+  replaced with the controlled Indonesian *muka gelombang* terminology.
+- Browser visual QA against final bytes: at 1280×900 the main shell / article
+  widths were 1,152 / 768 px and centered; at 390×844 the shell/article was
+  357.5 px and centered. Document scroll width equaled client width; the three
+  figures loaded responsively at intrinsic 300×261, 3087×2329, and 3087×2288;
+  all 38 IDs were unique; all 33 fragment links resolved; 21 mastery
+  disclosures and five complete notes rendered; the Problem 7 target landed
+  at 79.86 px below the 70.60 px sticky navigation; and a fresh load had no
+  warning or error. External-link reachability was not tested and no
+  audio/live widget exists.
+- Every earlier completed unit (CH01, CH02, PT02, CH03, CH04, PT03, CH05,
+  CH06, CH07, PT04, and CH08) passed a fresh structure/backend/locality/
+  accessibility/package regression after the Chapter 9 pipeline additions.

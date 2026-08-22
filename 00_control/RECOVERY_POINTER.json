@@ -33,19 +33,19 @@
     "all_bytes_and_sha256_equal": true
   },
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-CH08",
+    "unit_id": "O005-LEGA-V101-CH09",
     "source_record_type": "chapters",
-    "source_record_id": 62,
-    "source_slug": "chemical-reactions",
-    "source_canonical_sha256": "1c9f5f1ec75756f23720a3ef5d278302de0957347a59dde6f8021d3a970d7656",
-    "source_content_sha256": "d822c7b12a1f859ad3218ab7c6dc5f80f47e0e6f9115ef82544cdb08393e6830",
-    "target_content_sha256": "49a6be865bf34fac62b832b7d2338982595c48e1ff5c1e0389e626b197659e0a",
-    "segment_sha256": "09725f630eb53b477329baf3a4d8c5a08605496e70fae0c113544bd81f146631",
-    "mastery_sha256": "f244ce8bc66e7fd8bb5fb62af32a95bbff0093741148c528a6b5514d1a12c0fa",
-    "notebook_sha256": "8cbc3faa8d63683d15ac4498d2c7249763622789988df9e5684250fef1f74a5b",
-    "reader_manifest_sha256": "1302a06298f3434e5e9f1b503fa602c05ce46b201e4e724f7a4c3fcaeb276275",
-    "qa_tree_sha256": "313c59b2b4dcafd7a5b4336ad8b9f8105afb8eb0641e478350fc43f41fa0591f"
+    "source_record_id": 196,
+    "source_slug": "diffusion",
+    "source_canonical_sha256": "e53b35acf85334d2df48124211843b08b7ca1e9e9ca8c91465f215dfbb219c2a",
+    "source_content_sha256": "84fe10d60eaacdb18efb97d52035e3f6e923012c7041e7b3d037b866e90af442",
+    "target_content_sha256": "0b4633d88a3aed144738429bccc466f1d3f472714bbeb57e0ddb338cdab329e4",
+    "segment_sha256": "fb0b37030cf91b8eef4c1d0d751d3f8d190dabdc74b14222db79dda55002081f",
+    "mastery_sha256": "9b5beba72aae6132d7bce4a72ca36041caee499b27cd93806b96694804c1b1fc",
+    "notebook_sha256": "bbc57501bb83e4195e1c65ad30bd235c67aa1342028aa6a323207ec66101ec97",
+    "reader_manifest_sha256": "f7b3bdf67c22956f80e6e94d6a968aca4932e450615e3ffb4fba4d6e9b3836d3",
+    "qa_tree_sha256": "8a9a1e68ec70673f2d14a5622d26088a64ca38452ec153f3622b9482488ab7cc"
   },
-  "current_unit": "O005-LEGA-V101-CH09",
-  "next_action": "Complete the source-order Indonesian translation of Pressbooks chapter record 196, Diffusion, preserving 172 raw lines, 166 ordered opening/void elements, 27 hrefs, 213 TeX occurrences, three figures, five footnotes, and seven problems; add complete mastery and one independent open random-walk/Fisher-KPP notebook replacing unavailable MATLAB/PPLANE surfaces."
+  "current_unit": "O005-LEGA-V101-CH10",
+  "next_action": "Freeze official Pressbooks chapter record 194, Pattern Formation, with canonical/raw/rendered records, exact asset closure, census, and hashes; then begin its complete natural id-ID translation as O005-LEGA-V101-CH10."
 }

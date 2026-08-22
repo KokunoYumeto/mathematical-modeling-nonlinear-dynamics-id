@@ -7,7 +7,7 @@ Pressbooks v1.01 (Maret 2026). Sumber dan terjemahan berada di bawah lisensi
 Edisi ini tidak disokong atau disahkan oleh penulis maupun University of
 Arizona.
 
-Status saat ini: **Bab 1–8 dari 14 serta pengantar Bagian 2–4 telah diterjemahkan,
+Status saat ini: **Bab 1–9 dari 14 serta pengantar Bagian 2–4 telah diterjemahkan,
 dibangun, dan lolos QA.**
 Pekerjaan berlanjut secara berurutan; repositori ini belum merupakan edisi
 lengkap atau terbitan final.
@@ -25,12 +25,13 @@ lengkap atau terbitan final.
 - Bab 7 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH07/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH07/index.html); [notebook epidemiologi terbuka](source/id-ID/O005-LEGA-V101-CH07/notebooks/chapter-07-open-epidemiology.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH07.mastery.json).
 - Pengantar Bagian 4 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT04/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT04/index.html).
 - Bab 8 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH08/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH08/index.html); [notebook reaksi kimia terbuka](source/id-ID/O005-LEGA-V101-CH08/notebooks/chapter-08-open-chemical-reactions.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH08.mastery.json).
+- Bab 9 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH09/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH09/index.html); [notebook difusi terbuka](source/id-ID/O005-LEGA-V101-CH09/notebooks/chapter-09-open-diffusion.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH09.mastery.json).
 
 ## Backend modular
 
-Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Delapan bab dan
-tiga pengantar bagian yang selesai memiliki 1.965 segmen Inggris–Indonesia yang
-berpasangan, 82 ID soal tetap, delapan notebook terbuka, catatan unit berhash,
+Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Sembilan bab dan
+tiga pengantar bagian yang selesai memiliki 2.193 segmen Inggris–Indonesia yang
+berpasangan, 89 ID soal tetap, sembilan notebook terbuka, catatan unit berhash,
 serta jalur eksplisit menuju aset, notebook, dan
 dukungan belajar. Lapisan ini dimaksudkan untuk memungkinkan pemindahan unit
 yang sama ke bahasa lain tanpa menjadikan Bahasa Indonesia sebagai kunci
@@ -64,6 +65,8 @@ python scripts/build_unit_reader.py --unit O005-LEGA-V101-PT04
 python scripts/qa_unit.py --unit O005-LEGA-V101-PT04 --deterministic-build
 python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH08
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH08 --execute-notebook --deterministic-build
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH09
+python scripts/qa_unit.py --unit O005-LEGA-V101-CH09 --execute-notebook --deterministic-build
 ```
 
 QA memeriksa kesetaraan struktur sumber–target, rumus dan tautan yang
@@ -98,3 +101,7 @@ berlaku. Bab 8 mempertahankan tiga potret fase sumber, mencatat koreksi
 matematika dan bibliografi secara eksplisit, mengganti ketergantungan PPLANE,
 MAPLE, serta MATHEMATICA dengan satu notebook NumPy/SciPy/Matplotlib terbuka,
 dan menambahkan tiga belas paket dukungan belajar lengkap.
+Bab 9 mempertahankan tiga gambar sumber, memperbaiki derivasi kontinuitas,
+argumen gerak acak, ambang laju Fisher–KPP, fluks kemotaksis, markup catatan,
+dan aksesibilitas sitasi secara berjejak, serta menambahkan notebook difusi
+NumPy/SciPy/Matplotlib dan tujuh paket dukungan belajar lengkap.

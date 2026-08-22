@@ -233,6 +233,29 @@ UNIT_SPECS = {
         "plain_paragraphs": False,
         "change_note": "penerjemahan, koreksi dan klarifikasi terdokumentasi, pengindeksan modular, dukungan ketuntasan, serta pendamping Brusselator dan Oregonator dengan Python terbuka tanpa ketergantungan PPLANE, MAPLE, atau MATHEMATICA",
     },
+    "O005-LEGA-V101-CH09": {
+        "unit_type": "chapter",
+        "unit_number": 9,
+        "chapter_number": 9,
+        "source_title": "Diffusion",
+        "target_title": "Difusi",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/diffusion/",
+        "target_assets": [
+            "assets/diffusion-random-walk-source.png",
+            "assets/fisher-traveling-wave-phase-1-source.png",
+            "assets/fisher-traveling-wave-phase-2-source.png",
+        ],
+        "caption_count": 3,
+        "footnote_count": 5,
+        "notebook": "notebooks/chapter-09-open-diffusion.ipynb",
+        "problem_count": 7,
+        "plain_paragraphs": False,
+        "normalize_crossing_footnote_spans": True,
+        "normalize_partial_title_links": [
+            "https://doi.org/10.1126/science.230.4726.661",
+        ],
+        "change_note": "penerjemahan, koreksi dan klarifikasi terdokumentasi, pengindeksan modular, dukungan ketuntasan, serta pendamping gerak acak dan Fisher–KPP dengan Python terbuka tanpa ketergantungan MATLAB atau PPLANE",
+    },
 }
 
 
@@ -267,6 +290,14 @@ LATEX_RE = re.compile(r"\$latex\s+(.+?)\$", re.DOTALL)
 COMPANION_MATH_RE = re.compile(r"\\\((.+?)\\\)|\\\[(.+?)\\\]", re.DOTALL)
 CAPTION_RE = re.compile(r"\[caption\s+([^\]]*)\](.*?)\[/caption\]", re.DOTALL)
 FOOTNOTE_RE = re.compile(r"\[footnote\](.*?)\[/footnote\]", re.DOTALL)
+FOOTNOTE_SPAN_OPEN_RE = re.compile(
+    r"(<span\b[^>]*>)([^<>]*?)\[footnote\]([^<>]*?)(</span>)",
+    re.IGNORECASE,
+)
+FOOTNOTE_SPAN_CLOSE_RE = re.compile(
+    r"(<span\b[^>]*>)([^<>]*?)\[/footnote\]([^<>]*?)(</span>)",
+    re.IGNORECASE,
+)
 BLOCK_LINE_RE = re.compile(
     r"^</?(?:address|article|aside|blockquote|details|div|dl|fieldset|figcaption|figure|"
     r"footer|form|h[1-6]|header|hr|li|main|nav|ol|p|pre|section|table|ul)\b",
@@ -280,6 +311,53 @@ def digest(path: Path) -> str:
 
 def canonical_text(value: str) -> str:
     return " ".join(value.replace("\u00a0", " ").split())
+
+
+def normalize_crossing_footnote_spans(fragment: str) -> str:
+    """Move shortcode boundaries outside spans when the frozen source crosses them."""
+    if not UNIT_SPEC.get("normalize_crossing_footnote_spans"):
+        return fragment
+    fragment, opened = FOOTNOTE_SPAN_OPEN_RE.subn(
+        lambda match: (
+            f"{match.group(1)}{match.group(2)}{match.group(4)}"
+            f"[footnote]{match.group(3)}"
+        ),
+        fragment,
+    )
+    fragment, closed = FOOTNOTE_SPAN_CLOSE_RE.subn(
+        lambda match: (
+            f"{match.group(1)}{match.group(2)}{match.group(4)}"
+            f"[/footnote]{match.group(3)}"
+        ),
+        fragment,
+    )
+    if opened != closed:
+        raise RuntimeError(
+            "Crossing Pressbooks footnote/span repair found unmatched boundaries"
+        )
+    return fragment
+
+
+def normalize_partial_title_links(fragment: str) -> str:
+    """Expand known one-word source links to their complete emphasized titles."""
+    for href in UNIT_SPEC.get("normalize_partial_title_links", []):
+        pattern = re.compile(
+            rf'(<em><a\b(?=[^>]*\bhref="{re.escape(href)}")[^>]*>)'
+            r'(.*?)(</a>)(.*?)(</em>)',
+            re.DOTALL,
+        )
+        fragment, count = pattern.subn(
+            lambda match: (
+                f"{match.group(1)}{match.group(2)}{match.group(4)}"
+                f"{match.group(3)}{match.group(5)}"
+            ),
+            fragment,
+        )
+        if count != 1:
+            raise RuntimeError(
+                f"Expected one partial-title link normalization for {href}, found {count}"
+            )
+    return fragment
 
 
 def pandoc_version() -> str:
@@ -340,6 +418,8 @@ def render_math(tex: str) -> str:
 
 
 def replace_pressbooks_markup(fragment: str) -> str:
+    fragment = normalize_crossing_footnote_spans(fragment)
+    fragment = normalize_partial_title_links(fragment)
     for old, new, expected in UNIT_SPEC.get("reader_markup_replacements", []):
         observed = fragment.count(old)
         if observed != expected:
@@ -542,6 +622,8 @@ def mastery_section(mastery: dict) -> str:
 
 
 def text_slots(fragment: str) -> list[tuple[str, str]]:
+    fragment = normalize_crossing_footnote_spans(fragment)
+    fragment = normalize_partial_title_links(fragment)
     soup = BeautifulSoup(fragment, "html.parser")
     slots: list[tuple[str, str]] = []
     counters: dict[str, int] = {}

@@ -22,18 +22,18 @@ notice, and non-endorsement. Maintain component-level rights. Redraw Figure
 statement; never represent the Pressbooks theme as part of the independently
 reproducible source closure.
 
-Chapter boundaries `O005-LEGA-V101-CH01` through `CH08` (records 25, 27, 38,
-39, 48, 53, 57, and 62) and the visible Part 2–4 introductions (records 28, 40,
-and 58) are translated, built, independently rereviewed where applicable, and
-deterministically verified. Their complete topology, identifiers, protected
-mathematics, links, figures, 82 stable problem IDs and mastery records, eight
-open Python notebooks, and 1,965 paired segments are bound in the current
-state, cursor, and QA log. The immediate boundary is Chapter 9, Pressbooks
-record 196, *Diffusion*, as `O005-LEGA-V101-CH09`: translate its exact 172 raw
-lines, 166 opening/void elements, 27 hrefs, 213 TeX occurrences, three figures,
-five footnotes, and seven problems; supply complete mastery and an independent
-open random-walk/Fisher–KPP notebook replacing the unavailable MATLAB/PPLANE
-surfaces without returning to source selection.
+Chapter boundaries `O005-LEGA-V101-CH01` through `CH09` (records 25, 27, 38,
+39, 48, 53, 57, 62, and 196) and the visible Part 2–4 introductions (records
+28, 40, and 58) are translated, built, independently rereviewed where
+applicable, and deterministically verified. Their complete topology,
+identifiers, protected mathematics, links, figures, 89 stable problem IDs and
+mastery records, nine open Python notebooks, and 2,193 paired segments are
+bound in the current state, cursor, and QA log. The immediate boundary is
+Chapter 10, Pressbooks record 194, *Pattern Formation*, as
+`O005-LEGA-V101-CH10`: first freeze its exact canonical/raw/rendered authority,
+asset closure, census, and hashes, then translate the complete unit in source
+order and add only the independently authored open computation and mastery
+surfaces required by its verified source scope.
 
 Continue in exact frozen TOC order through all front/back matter and
 fourteen chapters: 54,932 source words, 113 exercises, twelve projects, eleven

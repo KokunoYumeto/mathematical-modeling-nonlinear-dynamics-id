@@ -1,0 +1,66 @@
+<h2>Gelombang kimia</h2>
+Ketika reaksi kimia berlangsung dalam sistem yang membentang secara spasial, difusi perlu diperhitungkan. Akibatnya, persamaan laju yang dibahas dalam Bab 8 berubah menjadi persamaan diferensial parsial. Suku-suku reaksi tetap sama, tetapi konsentrasi setiap zat kimia kini berdifusi dengan koefisien difusi yang bergantung pada ukuran dan berat molekul yang bersangkutan. Jika reaksinya bersifat osilatori, muka gelombang, yang misalnya bersesuaian dengan konsentrasi tinggi suatu zat kimia, merambat di dalam sistem. Selain itu, jika reaksi dibatasi pada permukaan dua dimensi dan gelombang dipicu di suatu titik dalam ruang, muka gelombangnya berbentuk lingkaran. Sebuah artikel tahun 2001 karya C. Sachs <em>et al</em>.[footnote]C. Sachs, M. Hildebrand, S. Völkening, J. Wintterlin, G. Ertl, <a href="https://doi.org/10.1126/science.1062883"><em>Spatiotemporal self-organization in a surface reaction: from the atomic to the mesoscopic scale</em></a>, Science <strong>293</strong>, 1635-1638 (2001).[/footnote] menjelaskan bagaimana muka gelombang semacam itu diamati dalam eksperimen dan mengusulkan model reaksi-difusi yang mereproduksi perilaku ini. Para penulis juga membahas keterbatasan model reaksi-difusi ketika parameter makroskopis dipengaruhi oleh rincian interaksi mikroskopis.
+
+Apa yang akan terjadi jika muka gelombang terputus, misalnya jika gelombang melewati wilayah tempat reaksi tidak dapat berlangsung? Jika muka gelombang tertambat pada satu titik, muka tersebut akan melengkung dan akhirnya membentuk gelombang spiral. Gelombang semacam itu sering diamati dalam eksperimen ketika reaksi Belousov-Zhabotinsky dibatasi pada permukaan dua dimensi, seperti film tipis, cakram kaca berpori, atau bahkan selembar kertas saring. Untuk informasi lebih lanjut, pembaca dapat merujuk pada artikel asli karya S.C. Müller <em>et al</em>.[footnote]S.C. Müller, T. Plesser and B. Hess, <em><a href="https://doi.org/10.1126/science.230.4726.661">The structure of the core of the spiral wave in the Belousov-Zhabotinskii reaction</a></em>, Science <strong>230</strong>, 661-663 (1985).[/footnote], yang membahas eksperimen yang mengungkap struktur inti gelombang spiral semacam itu.
+<h2>Ringkasan</h2>
+Persamaan reaksi-difusi memperluas model persamaan diferensial biasa ke seluruh ranah spasial dalam satu, dua, atau tiga dimensi. Pada tingkat makroskopis, difusi mendeskripsikan kecenderungan suatu besaran untuk menyebar dengan bergerak ke arah yang berlawanan dengan gradien lokalnya. Pada tingkat mikroskopis, difusi berkaitan dengan gerak acak isotropik. Beberapa persamaan reaksi-difusi memiliki solusi gelombang berjalan yang dapat ditemukan dengan menggunakan metode sistem dinamik.
+<h2>Deskripsi Gambar</h2>
+<strong><a id="Fig_9.1_Desc"></a>Gambar 9.1</strong>: Tangkapan layar Antarmuka Pengguna Grafis MATLAB untuk GUI difusi, yang berjudul "Difusi pada tingkat mikroskopis". Gambar ini memuat dua plot. Di sebelah kiri terdapat plot sebar dua dimensi berjudul "Partikel yang menjalani gerak acak", yang memperlihatkan 1.000 titik partikel merah bergerombol di sekitar $latex (0,0)$. Di sebelah kanan terdapat grafik linear yang seharusnya dibaca sebagai "Rata-rata kuadrat jarak sebagai fungsi jumlah langkah", yang memperlihatkan garis biru naik hingga nilai sekitar 210 selama 200 langkah. Kontrol penggeser untuk "Jumlah partikel" (1.000) dan "Jumlah langkah" (200) terletak di bawah grafik, bersama sebuah tombol "GO". [<em><a href="#Fig_9.1">Kembali ke Gambar 9.1</a></em>]
+
+<strong><a id="Fig_9.2_Desc"></a>Gambar 9.2</strong>: Potret fase untuk variabel $latex v$ dan $latex w$ yang memperlihatkan medan vektor dan beberapa lintasan. Sistem didefinisikan oleh persamaan $latex v' = w$ dan $latex w' = -cw - v(1-v)$ dengan $latex c=1$. Terdapat dua titik kesetimbangan: spiral stabil di titik asal $latex (0,0)$ dan titik pelana di $latex (1,0)$. Sebuah lintasan tebal, yang dikenal sebagai orbit heteroklinik, menghubungkan titik pelana dengan spiral. [<em><a href="#Fig_9.2">Kembali ke Gambar 9.2</a></em>]
+
+<strong><a id="Fig_9.3_Desc"></a>Gambar 9.3</strong>: Potret fase untuk variabel $latex v$ dan $latex w$ dengan persamaan $latex v' = w$ dan $latex w' = -cw - v(1-v)$, dengan $latex c=3$. Potret ini memperlihatkan medan vektor dan beberapa lintasan. Terdapat dua titik kesetimbangan: simpul stabil di $latex (0,0)$ dan titik pelana di $latex (1,0)$. Sebuah orbit heteroklinik tebal menghubungkan titik pelana di $latex (1,0)$ dengan simpul stabil di $latex (0,0)$ melalui lintasan yang tidak berosilasi. [<em><a href="#Fig_9.3">Kembali ke Gambar 9.3</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Bahan Renungan</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center">Soal 1</h3>
+Deskripsikan perilaku sistem (<a href="#Eq_9.10">9.10</a>) di dekat titik asal jika $latex c = 2$.
+
+<hr />
+
+<h3 style="text-align: center">Soal 2</h3>
+Pertimbangkan fungsi
+<p style="text-align: center">$latex \displaystyle f(x,t) = \frac{1}{2 \sqrt{\pi D_0 t}} \int_{-\infty}^\infty \exp\left[-\frac{(x-x_0)^2}{4 D_0 t}\right] H(x_0)\ dx_0.$</p>
+
+<ol>
+ 	<li><span style="font-size: 1rem;text-align: initial">Hitung $latex \partial f / \partial t$.</span></li>
+ 	<li>Hitung <span style="font-size: 1rem;text-align: initial">$latex \partial^2 f / \partial x^2$</span>.</li>
+ 	<li>Tunjukkan bahwa $latex f$ merupakan solusi persamaan diferensial</li>
+</ol>
+<p style="text-align: center">$latex \displaystyle \frac{\partial f}{\partial t} = D_0 \frac{\partial^2 f}{\partial x^2}.$</p>
+
+
+<hr />
+
+<h3 style="text-align: center">Soal 3</h3>
+Pertimbangkan sekumpulan bakteri yang bersifat <em>kemotaktik</em> terhadap makanan. Artinya, pada tingkat makroskopis, fluks bakteri $latex \vec \jmath$ diberikan oleh
+<p style="text-align: center">$latex \vec \jmath = \chi b \vec \nabla n - D \vec \nabla b,$</p>
+di mana $latex n$ adalah konsentrasi nutrien, $latex b$ adalah kepadatan bakteri, $latex D$ adalah koefisien difusi, dan $latex \chi$ adalah <em>koefisien kemotaksis</em>.
+
+Tuliskan model reaksi-difusi sederhana untuk $latex n$ dan $latex b$ yang memperhitungkan pergerakan bakteri, difusi nutrien, dan fakta bahwa bakteri berkembang biak dengan memakan nutrien.
+
+<hr />
+
+<h3 style="text-align: center">Soal 4</h3>
+Pertimbangkan bakteri kemotaktik yang dideskripsikan dalam Soal 3. Deskripsikan bagaimana Anda akan memodifikasi gerak acak setiap bakteri pada tingkat mikroskopis agar mencakup kemotaksis.
+
+<hr />
+
+<h3 style="text-align: center">Soal 5</h3>
+Pertimbangkan sebuah partikel yang melakukan gerak acak satu dimensi dengan panjang setiap langkah satu satuan. Peluang partikel melangkah ke kanan adalah $latex p$, sedangkan peluangnya melangkah ke kiri adalah $latex 1-p$, dengan $latex p$ tidak harus sama dengan 1/2. Jelaskan seberapa jauh partikel diperkirakan telah berpindah setelah $latex N$ langkah: nyatakan perpindahan bertanda rata-rata (posisi harapan) dari titik awal, lalu bedakan hasil tersebut dari simpangan khas terhadap nilai rata-rata.
+
+<hr />
+
+<h3 style="text-align: center">Soal 6</h3>
+Pertimbangkan lintasan heteroklinik pada Gambar 9.2. Buat sketsa grafik $latex v$ sebagai fungsi $latex \xi$. Jelaskan mengapa fungsi semacam itu tidak dapat merepresentasikan kepadatan populasi.
+
+<hr />
+
+<h3 style="text-align: center">Soal 7</h3>
+Pertimbangkan lintasan heteroklinik pada Gambar 9.3. Buat sketsa grafik $latex v$ sebagai fungsi $latex \xi$.
+
+</div>
+</div>

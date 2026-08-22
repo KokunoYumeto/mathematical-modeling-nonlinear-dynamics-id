@@ -141,3 +141,17 @@ O005-TERM-0139,spiral wave,gelombang spiral,admitted,
 O005-TERM-0140,phase shift,pergeseran fase,admitted,
 O005-TERM-0141,stiff problem,masalah kaku,admitted,Explain this as the coexistence of very short and very long characteristic time scales on first use.
 O005-TERM-0142,reversible reaction,reaksi reversibel,admitted,
+O005-TERM-0143,continuity equation,persamaan kontinuitas,admitted,Use hukum neraca lokal when explaining the equation with a nonzero source term.
+O005-TERM-0144,flux,fluks,admitted,Use rapat fluks when the vector denotes transported amount per area per time.
+O005-TERM-0145,Fick's law,hukum Fick,admitted,
+O005-TERM-0146,diffusion tensor,tensor difusi,admitted,
+O005-TERM-0147,heat equation,persamaan panas,admitted,
+O005-TERM-0148,Brownian motion,gerak Brown,admitted,
+O005-TERM-0149,random walk,gerak acak,admitted,Prefer gerak acak over jalan acak in this edition.
+O005-TERM-0150,mean squared distance,rata-rata kuadrat jarak,admitted,Do not use kuadrat jarak rata-rata because that can mean the square of the mean distance.
+O005-TERM-0151,Fisher-KPP equation,persamaan Fisher-KPP,admitted,Expand the four surnames on first use.
+O005-TERM-0152,traveling wave,gelombang berjalan,admitted,
+O005-TERM-0153,wave speed,laju gelombang,admitted,Use laju rambat when emphasizing propagation through space.
+O005-TERM-0154,chemotaxis,kemotaksis,admitted,
+O005-TERM-0155,chemotactic,kemotaktik,admitted,
+O005-TERM-0156,degenerate stable node,simpul stabil degenerat,admitted,

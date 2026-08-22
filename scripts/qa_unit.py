@@ -478,6 +478,70 @@ QA_SPECS = {
         "lock": None,
         "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",
     },
+    "O005-LEGA-V101-CH09": {
+        "unit_type": "chapter",
+        "elements": 166,
+        "links": 27,
+        "math": 213,
+        "target_math": 214,
+        "reader_math": 214,
+        "problems": 7,
+        "footnotes": 5,
+        "assets": [
+            "assets/diffusion-random-walk-source.png",
+            "assets/fisher-traveling-wave-phase-1-source.png",
+            "assets/fisher-traveling-wave-phase-2-source.png",
+        ],
+        "target_image_dimensions": [
+            ("300", "261"),
+            ("800", "604"),
+            ("800", "593"),
+        ],
+        "math_replacements": {
+            18: ("N_i", "F"),
+            26: ("\\Omega", "\\partial \\Omega"),
+            38: (
+                "\\displaystyle 0 = \\iiint_\\Omega \\left[-\\frac{\\partial F}{\\partial t} + R(x,y,z,t) - \\vec \\nabla \\cdot \\vec \\jmath \\right] \\ dV.",
+                "\\displaystyle 0 = \\iiint_\\Omega \\left[-\\frac{\\partial F}{\\partial t} + R(x,y,z,t,F) - \\vec \\nabla \\cdot \\vec \\jmath \\right] \\ dV.",
+            ),
+            84: (
+                "|\\vec r_1|^2 = l^2, \\qquad \\hbox{and} \\qquad \\langle |\\vec r_1|^2 \\rangle = l^2,",
+                "|\\vec r_1|^2 = l^2, \\qquad \\hbox{dan} \\qquad \\langle |\\vec r_1|^2 \\rangle = l^2,",
+            ),
+            98: (
+                "\\begin{array}{ll} \\langle \\vec r_n \\cdot (\\vec r_{n+1}-\\vec r_n) \\rangle &amp;= l\\, (\\vec r_n \\cdot \\vec \\imath) \\langle \\cos(\\theta_{n+1}) \\rangle + l\\, (\\vec r_n \\cdot \\vec \\jmath) \\langle \\sin(\\theta_{n+1}) \\rangle \\\\ &amp;= 0, \\end{array}",
+                "\\begin{array}{ll} \\left\\langle \\vec r_n \\cdot (\\vec r_{n+1}-\\vec r_n) \\mid \\vec r_n \\right\\rangle &amp;= l\\, (\\vec r_n \\cdot \\vec \\imath) \\langle \\cos(\\theta_{n+1}) \\rangle + l\\, (\\vec r_n \\cdot \\vec \\jmath) \\langle \\sin(\\theta_{n+1}) \\rangle \\\\ &amp;= 0, \\end{array}",
+            ),
+            124: (
+                "\\displaystyle n = \\frac{N}{K}, \\qquad x = X \\sqrt \\frac{r}{D}, \\qquad y = Y\\sqrt \\frac{r}{D}, \\qquad \\tau = r\\, t,",
+                "\\displaystyle n = \\frac{N}{K}, \\qquad x = X \\sqrt \\frac{r}{D}, \\qquad \\tau = r\\, t,",
+            ),
+            128: ("n(x,t) = v (\\xi)", "n(x,\\tau) = v (\\xi)"),
+            129: ("\\xi = x - c t", "\\xi = x - c \\tau"),
+            131: (
+                "\\displaystyle \\frac{\\partial n}{\\partial t} = - c \\frac{d v}{d \\xi}, \\qquad \\frac{\\partial n}{\\partial x} = \\frac{d v}{d \\xi},",
+                "\\displaystyle \\frac{\\partial n}{\\partial \\tau} = - c \\frac{d v}{d \\xi}, \\qquad \\frac{\\partial n}{\\partial x} = \\frac{d v}{d \\xi},",
+            ),
+            167: ("0 &lt; c &lt; 2.", "0 &lt; c &lt; 2"),
+            198: (
+                "\\vec \\jmath = \\chi \\vec \\nabla n - D \\vec \\nabla b,",
+                "\\vec \\jmath = \\chi b \\vec \\nabla n - D \\vec \\nabla b,",
+            ),
+        },
+        "math_insertions_before": {73: ["\\vec \\mu=(\\xi,\\zeta,\\eta)"]},
+        "notebook": "notebooks/chapter-09-open-diffusion.ipynb",
+        "notebook_cells": 10,
+        "code_cells": 4,
+        "mastery_math": 189,
+        "footnote_links": [
+            "https://doi.org/10.1016/j.physrep.2003.08.001",
+        ],
+        "descriptive_links": [
+            "https://doi.org/10.1126/science.230.4726.661",
+        ],
+        "lock": None,
+        "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",
+    },
 }
 BUILDER = ROOT / "scripts" / "build_unit_reader.py"
 LATEX_RE = re.compile(r"\$latex\s+(.+?)\$", re.DOTALL)
@@ -687,6 +751,20 @@ def reader_replay(root: Path) -> dict:
         len(soup.select('span.reader-footnote[role="note"]')) == SPEC["footnotes"],
         "Reader footnote conversion count differs",
     )
+    for href in SPEC.get("footnote_links", []):
+        link = soup.find("a", href=href)
+        require(link is not None, f"Required footnote link is missing: {href}")
+        require(
+            link.find_parent("span", class_="reader-footnote") is not None,
+            f"Required link escaped its rendered footnote: {href}",
+        )
+    for href in SPEC.get("descriptive_links", []):
+        link = soup.find("a", href=href)
+        require(link is not None, f"Required descriptive link is missing: {href}")
+        require(
+            len(" ".join(link.get_text(" ", strip=True).split())) >= 20,
+            f"Link text is not descriptive enough: {href}",
+        )
     require("[footnote]" not in index.read_text(encoding="utf-8"), "Reader exposes a footnote shortcode")
     ids = [tag["id"] for tag in soup.find_all(id=True)]
     require(len(ids) == len(set(ids)), "Reader contains duplicate IDs")

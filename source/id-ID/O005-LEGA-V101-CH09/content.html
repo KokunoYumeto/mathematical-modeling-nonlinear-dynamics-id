@@ -1,0 +1,172 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Tujuan Pembelajaran</h2>
+</header>
+<div class="textbox__content">
+
+Pada akhir bab ini, Anda akan mampu melakukan hal-hal berikut.
+<ul>
+ 	<li>Menyusun persamaan kontinuitas dengan menggunakan konsep kalkulus vektor.</li>
+ 	<li>Menafsirkan persamaan reaksi-difusi sebagai kasus khusus persamaan kontinuitas.</li>
+ 	<li>Menyelesaikan persamaan panas.</li>
+ 	<li>Mendeskripsikan difusi pada tingkat mikroskopis.</li>
+ 	<li>Membandingkan proses difusi pada tingkat mikroskopis dan makroskopis.</li>
+ 	<li>Menunjukkan keberadaan solusi gelombang berjalan untuk persamaan Fisher-KPP.</li>
+</ul>
+</div>
+</div>
+<h2>Difusi pada tingkat makroskopis</h2>
+<h3>Persamaan reaksi-difusi</h3>
+Tinjau suatu besaran $latex F(x,y,z,t)$ yang bergantung pada tiga variabel ruang $latex x$, $latex y$, dan $latex z$, serta waktu $latex t.$ Asumsikan bahwa $latex F$ mengukur kepadatan suatu spesies, dalam jumlah individu per satuan volume. Perlakuan serupa berlaku untuk jumlah individu per satuan luas dalam model dua dimensi, atau per satuan panjang dalam model satu dimensi. Kita ingin mendeskripsikan evolusi $latex F$.
+
+Tinjau suatu daerah tertutup $latex \Omega$ di dalam ruang, dan misalkan $latex N_i$ menyatakan jumlah individu di dalam $latex \Omega$. Dari definisi $latex F$, kita mengetahui bahwa
+<p style="text-align: center">$latex \displaystyle N_i = \iiint_\Omega F(x,y,z,t)\ dV,$</p>
+di mana $latex d V$ menyatakan elemen volume di dalam $latex \Omega$. Mari kita hitung turunan $latex N_i$ terhadap waktu. Kita akan mengasumsikan bahwa $latex F$ cukup teratur untuk memungkinkan pertukaran urutan operasi turunan dan integral. Dengan demikian,
+<p style="text-align: center"><a id="Eq_9.1"></a>$latex \displaystyle \frac{d N_i}{d t} = \frac{d}{d t} \iiint_\Omega F(x,y,z,t)\ dV = \iiint_\Omega \frac{\partial F}{\partial t}\ dV. \qquad (9.1)$</p>
+Di sisi lain, perubahan $latex N_i$ harus mencerminkan perubahan lokal pada $latex F$, serta transpor melalui batas $latex \partial \Omega$ dari $latex \Omega$. Dengan demikian, kita memiliki
+<p style="text-align: center"><a id="Eq_9.2"></a>$latex \displaystyle \frac{d N_i}{d t} = \iiint_\Omega R(x,y,z,t,F)\ dV - \iint_{\partial \Omega} \vec \jmath (\vec r) \cdot \vec n \ dS, \qquad (9.2)$</p>
+di mana $latex R$ adalah <em>suku reaksi</em> yang mendeskripsikan perubahan lokal pada $latex F$, $latex \vec r$ adalah vektor posisi, $latex \vec n$ adalah vektor normal pada $latex \partial \Omega$ yang mengarah ke luar, $latex dS$ adalah elemen permukaan pada $latex \partial \Omega$, dan $latex \vec \jmath$ adalah vektor rapat fluks individu dalam neraca $latex N_i$. Suku terakhir dalam (<a href="#Eq_9.2">9.2</a>) adalah negatif dari fluks $latex \vec \jmath$ melalui batas $latex \Omega$. Tanda negatif muncul karena $latex \vec n$ mengarah ke luar dan individu yang meninggalkan $latex \Omega$ menyebabkan $latex N_i$ berkurang. Dengan teorema divergensi (sekali lagi, secara tersirat kita mengasumsikan semua besaran cukup teratur), suku ini dapat ditulis ulang sebagai
+<p style="text-align: center">$latex \displaystyle - \iint_{\partial \Omega} \vec \jmath(\vec r) \cdot \vec n \ dS = - \iiint_\Omega \vec \nabla \cdot \vec \jmath\ dV,$</p>
+sehingga
+<p style="text-align: center"><a id="Eq_9.3"></a>$latex \displaystyle \frac{d N_i}{d t} = \iiint_\Omega \left[R(x,y,z,t,F) - \vec \nabla \cdot \vec \jmath \right] \ dV. \qquad (9.3)$</p>
+Dengan menggabungkan Persamaan (<a href="#Eq_9.1">9.1</a>) dan (<a href="#Eq_9.3">9.3</a>), kita memperoleh
+<p style="text-align: center">$latex \displaystyle 0 = \iiint_\Omega \left[-\frac{\partial F}{\partial t} + R(x,y,z,t,F) - \vec \nabla \cdot \vec \jmath \right] \ dV.$</p>
+Karena kesamaan ini berlaku untuk sembarang daerah tertutup $latex \Omega$, kita memperoleh <em>persamaan kontinuitas berikut</em>
+<p style="text-align: center"><a id="Eq_9.4"></a>$latex \displaystyle \frac{\partial F}{\partial t} = R(x,y,z,t,F) - \vec \nabla \cdot \vec \jmath, \qquad (9.4)$</p>
+yang merupakan hukum neraca lokal bagi $latex F$; persamaan ini menjadi hukum konservasi ketika suku sumber bersihnya lenyap. Selanjutnya, kita perlu menghubungkan $latex \vec \jmath$ dengan $latex F$. Sebagai pendekatan pertama, kita akan mengasumsikan bahwa <em>hukum Fick</em> berlaku, yaitu bahwa $latex \vec \jmath$ hanya bergantung pada gradien $latex F$,
+<p style="text-align: center">$latex \vec \jmath = - D \, \vec \nabla F,$</p>
+di mana <em>tensor difusi</em> $latex D$ adalah matriks koefisien difusi. Entri-entri $latex D$ dapat bergantung pada $latex F$; dalam hal ini, kita memiliki <em>difusi nonlinear</em>. Bergantung pada sifat-sifat medium, $latex D$ mungkin tidak diagonal atau bahkan tidak isotropik. Dalam pembahasan selanjutnya, kita membuat asumsi penyederhanaan bahwa $latex D = D_0 I_3$, dengan $latex I_3$ sebagai matriks identitas $latex 3 \times 3$ dan $latex D_0$ sebagai konstanta. Dengan demikian, $latex \vec \jmath$ sebanding dengan gradien $latex F$,
+<p style="text-align: center"><a id="Eq_9.5"></a>$latex \vec \jmath = - D_0 \vec \nabla F. \qquad (9.5)$</p>
+Di sini $latex D_0$ bernilai positif, yang mendeskripsikan fakta bahwa $latex F$ “bergerak menjauhi” daerah berkonsentrasi tinggi menuju daerah berkonsentrasi rendah. Dengan menggabungkan (<a href="#Eq_9.4">9.4</a>) dan (<a href="#Eq_9.5">9.5</a>), kita memperoleh <em>persamaan reaksi-difusi</em> berikut,
+<p style="text-align: center"><a id="E1_9.6"></a>$latex \displaystyle \frac{\partial F}{\partial t} = R(x,y,z,t,F) + D_0 \Delta F, \qquad (9.6)$</p>
+di mana $latex \Delta = {\vec \nabla}^2$ menyatakan operator Laplace. Jika $latex F$ dan $latex R$ seragam dalam ruang, yaitu $latex F(x,y,z,t) = G(t)$ dan $latex R(x,y,z,t,F) = H(t,G)$, maka Persamaan (<a href="#E1_9.6">9.6</a>) tereduksi menjadi persamaan diferensial biasa,
+<p style="text-align: center">$latex \displaystyle \frac{d G}{d t} = H(t,G),$</p>
+di mana $latex H$ dapat berupa, misalnya, model logistik $latex H(t,G) = G (1 - G)$. Dengan demikian, kita dapat memperluas semua model yang telah dibahas dengan mengubah sistem persamaan diferensial biasa menjadi sistem persamaan diferensial parsial, disertai suku difusi yang sesuai.
+<h3>Persamaan panas</h3>
+Jika tidak terdapat suku reaksi, Persamaan (<a href="#E1_9.6">9.6</a>) menjadi <em>persamaan panas</em>,
+<p style="text-align: center"><a id="Eq_9.7"></a>$latex \displaystyle \frac{\partial F}{\partial t} = D_0 \Delta F. \qquad (9.7)$</p>
+Persamaan ini linear dalam $latex F$. Jika syarat awal dan syarat batas yang sesuai diberikan, solusi tunggal dapat ditemukan dalam bentuk fungsi Green. Pada domain tak hingga, misalnya, solusi (<a href="#Eq_9.7">9.7</a>) dengan syarat awal $latex F(x,y,z,0) = H(x,y,z)$ adalah
+<p style="text-align: center">$latex \displaystyle \begin{align*} F(x,y,z,t) = &amp; \left(\frac{1}{4 \pi D_0 t}\right)^{3/2} \\ &amp; \int_{-\infty}^\infty \int_{-\infty}^\infty \int_{-\infty}^\infty \exp\left[- \frac{|\vec r - \vec \mu|^2}{4 D_0 t}\right] H(\xi,\zeta,\eta)\, d \xi\, d \zeta \, d \eta,\end{align*}$</p>
+di mana $latex \vec \mu=(\xi,\zeta,\eta)$ dan
+<p style="text-align: center">$latex |\vec r - \vec \mu|^2 = (x-\xi)^2 + (y - \zeta)^2 + (z - \eta)^2.$</p>
+Dari sudut pandang analisis dimensi, kita mengetahui bahwa
+<p style="text-align: center">$latex \left[ D_0 \right] = \frac{L^2}{T}.$</p>
+Akibatnya, kuadrat skala panjang karakteristik pada masalah ini diperkirakan sebanding dengan skala waktu karakteristik.
+<h2>Difusi pada tingkat mikroskopis</h2>
+Deskripsi mikroskopis difusi adalah sebagai berikut. Sebagai contoh, perhatikan sekumpulan molekul dalam fluida, seperti molekul zat warna di dalam air. Jika suhunya tidak nol, molekul-molekul ini bergerak secara acak dan mengalami apa yang disebut <em>gerak Brown</em>. Apa yang kita sebut difusi pada tingkat makroskopis merupakan akibat gerak acak pada tingkat mikroskopis. Agar gagasan ini lebih intuitif, perhatikan sebuah partikel yang melakukan gerak acak di bidang: setiap langkah mempunyai panjang tertentu $latex l$, tetapi arahnya dipilih secara acak dari distribusi seragam. Setelah $latex N$ langkah, atau secara ekuivalen setelah waktu $latex T = N \delta t$, dengan $latex \delta t$ menyatakan waktu yang berlalu antara dua langkah berturut-turut, partikel berada pada jarak $latex L$ dari posisi awalnya, sedemikian sehingga
+<p style="text-align: center">$latex \langle L^2 \rangle = N l^2.$</p>
+Untuk melihatnya, nyatakan $latex \vec r_i$ sebagai vektor posisi partikel setelah $latex i$ langkah. Demi kesederhanaan, anggap partikel memulai gerak acaknya dari titik asal. Karena setiap langkah panjangnya $latex l$,
+<p style="text-align: center">$latex |\vec r_1|^2 = l^2, \qquad \hbox{dan} \qquad \langle |\vec r_1|^2 \rangle = l^2,$</p>
+di mana rata-rata $latex \langle \cdot \rangle$ dihitung atas semua kemungkinan realisasi langkah pertama partikel. Akan kita buktikan dengan induksi bahwa setelah $latex k$ langkah, dengan $latex k \in \mathbb{N}$, berlaku
+<p style="text-align: center">$latex \langle |\vec r_k|^2 \rangle = k\, l^2.$</p>
+Kita mengetahui bahwa pernyataan ini benar untuk $latex k = 1$. Sekarang akan kita tunjukkan bahwa jika pernyataan tersebut benar untuk $latex k = n$, pernyataan itu juga benar untuk $latex k = n+1$. Jadi, kita mengasumsikan bahwa
+<p style="text-align: center">$latex \langle |\vec r_n|^2 \rangle = n\, l^2,$</p>
+dan menghitung $latex \langle|\vec r_{n+1}|^2\rangle$. Kita mempunyai
+<p style="text-align: center">$latex \begin{array}{l}|\vec r_{n+1}|^2 &amp;= |[\vec r_n + (\vec r_{n+1}-\vec r_n)]|^2 \\ &amp;= |\vec r_n|^2 + 2 \vec r_n \cdot (\vec r_{n+1}-\vec r_n) + |(\vec r_{n+1}-\vec r_n)|^2.\end{array}$</p>
+Namun,
+<p style="text-align: center">$latex \vec r_{n+1} - \vec r_n = l\, [\cos(\theta_{n+1}) \vec \imath + \sin(\theta_{n+1}) \vec \jmath],$</p>
+di mana $latex (\vec \imath, \vec \jmath)$ merupakan basis ortonormal bidang, sedangkan sudut $latex \theta_{n+1}$ berdistribusi seragam dan independen dari riwayat gerak acak sebelumnya. Oleh karena itu, dengan mengondisikan pada posisi partikel saat ini,
+<p style="text-align: center">$latex \begin{array}{ll} \left\langle \vec r_n \cdot (\vec r_{n+1}-\vec r_n) \mid \vec r_n \right\rangle &amp;= l\, (\vec r_n \cdot \vec \imath) \langle \cos(\theta_{n+1}) \rangle + l\, (\vec r_n \cdot \vec \jmath) \langle \sin(\theta_{n+1}) \rangle \\ &amp;= 0, \end{array}$</p>
+Dengan mengambil ekspektasi total, suku silang tersebut tetap bernilai nol, sedangkan $latex |(\vec r_{n+1}-\vec r_n)|^2 = l^2$. Dengan demikian,
+<p style="text-align: center">$latex \langle |\vec r_{n+1}|^2 \rangle = \langle |\vec r_n|^2 \rangle + 0 + l^2 = (n+1)\, l^2.$</p>
+Oleh karena itu, $latex \langle |\vec r_k|^2 \rangle = k\, l^2$ untuk setiap bilangan bulat positif $latex k$. Jadi, $latex \langle L^2 \rangle = N l^2$ dan karena $latex T = N \delta t$, diperoleh $latex \langle L^2 \rangle \propto T$.
+
+Perhatikan eksperimen berikut. Banyak partikel yang tidak saling berinteraksi dilepaskan secara serentak dari titik asal, dan setiap partikel melakukan gerak acak isotropik di bidang. Perhitungan di atas menunjukkan bahwa setelah selang waktu $latex T$, kita mengharapkan terbentuknya awan partikel; jika jarak $latex L$ antara setiap partikel dan titik asal diukur, seharusnya diperoleh $latex \langle L^2 \rangle \propto T.$<a id="Fig_9.1"></a>
+
+[caption id="attachment_209" align="alignleft" width="300"]<img class="wp-image-209" src="assets/diffusion-random-walk-source.png" alt="Simulasi gerak acak partikel dan grafik hubungan antara rata-rata kuadrat jarak dan jumlah langkah. Deskripsi panjang tersedia." width="300" height="261" /> Gambar 9.1. Antarmuka pengguna grafis yang menampilkan (kiri) awan partikel setelah dua ratus langkah dan (kanan) hubungan linear antara ⟨ <em>L</em><sup>2</sup> ⟩ dan <em>N</em>. [<a href="#Fig_9.1_Desc"><em>Deskripsi Gambar</em></a>][/caption]Untuk memberikan gambaran visual tentang hasil ini, antarmuka pengguna grafis MATLAB <em>Diffusion</em> (lihat Gambar 9.1) menyimulasikan gerak acak $latex M$ partikel yang tidak saling berinteraksi pada suatu kisi—setiap partikel hanya dapat bergerak ke atas, ke bawah, ke kiri, atau ke kanan dengan peluang yang sama. Semua partikel memulai gerak acaknya dari titik asal di pusat kotak. Untuk setiap partikel, jarak $latex L$ antara posisinya setelah $latex N$ langkah (atau secara ekuivalen setelah waktu $latex T = N \delta t$, dengan $latex \delta t$ tetap) dan titik asal diukur sebagai fungsi $latex N$. Hasilnya dirata-ratakan untuk seluruh partikel, lalu diplot. Pengguna dapat memilih jumlah langkah maksimum, $latex N_{max}$, serta jumlah partikel $latex M$. Antarmuka menampilkan posisi semua partikel seiring berjalannya waktu. Pada gambar sumber yang tersedia, semua penanda partikel yang tampak berwarna merah; tidak ada satu partikel yang ditonjolkan dengan warna lain. Pada akhir simulasi, grafik rata-rata $latex L^2$ ditampilkan sebagai fungsi $latex N$.
+
+Simulasi ini menunjukkan bahwa difusi yang dimodelkan oleh persamaan panas pada tingkat makroskopis dapat dipahami sebagai akibat gerak acak partikel-partikel yang tidak saling berinteraksi pada tingkat mikroskopis. Kedua fenomena ini memang mempunyai sifat penskalaan yang sama. Korespondensi tersebut sebenarnya dapat dirumuskan secara ketat, tetapi tidak akan kita bahas di sini. Namun, deskripsi mikroskopis difusi berguna untuk selalu diingat. Kita sering mengembangkan model makroskopis berdasarkan pemahaman tentang perilaku pada tingkat mikroskopis. Karena itu, penting untuk mengetahui dalam kondisi apa suatu fenomena tertentu dapat dimodelkan secara memadai pada tingkat makroskopis dengan suku-suku difusi.
+<h2>Persamaan Fisher-Kolmogorov-Petrovsky-Piscounov</h2>
+Sekarang kita beralih ke sebuah contoh sederhana persamaan reaksi-difusi satu dimensi, yang dikenal sebagai persamaan Fisher-Kolmogorov-Petrovsky-Piscounov (Fisher-KPP).[footnote]R.A. Fisher, <a href="https://doi.org/10.1111/j.1469-1809.1937.tb02153.x"><em>The wave of advance of advantageous genes</em></a>, Annals of Eugenics <strong>7</strong>, 355–369 (1937). Pernyataan penerbit, yang juga disetujui penulis bab ini: “Tulisan para pendukung eugenika kerap sarat prasangka terhadap kelompok ras, etnis, dan penyandang disabilitas. Publikasi daring materi ini ditujukan bagi penelitian ilmiah dan bukan merupakan dukungan atau promosi terhadap pandangan yang dinyatakan dalam artikel-artikel tersebut ataupun terhadap eugenika secara umum.”[/footnote][footnote]A. Kolmogorov, I. Petrovsky, N. Piscounoff, <em>Study of the diffusion equation with growth of the quantity of matter and its application to a biology problem</em>, Bulletin de l'Université d'état à Moscou, Ser. int., Section A, Vol. 1 (1937); diterjemahkan dalam P. Pelcé, <em>Dynamics of curved fronts</em>, Academic Press, San Diego, 1988.[/footnote] Perhatikan versi satu dimensi persamaan logistik dengan difusi,
+<p style="text-align: center">$latex \displaystyle \frac{\partial N}{\partial t} = r N \left(1 - \frac{N}{K} \right) + D \frac{\partial^2 N}{\partial X^2},$</p>
+di mana $latex r$, $latex K$, dan $latex D$ merupakan konstanta. Persamaan ini dapat dibuat tak berdimensi dengan melakukan penskalaan pada ruang, waktu, dan variabel terikat $latex N$. Untuk itu, kita definisikan
+<p style="text-align: center">$latex \displaystyle n = \frac{N}{K}, \qquad x = X \sqrt \frac{r}{D}, \qquad \tau = r\, t,$</p>
+dan diperoleh persamaan Fisher-KPP tak berdimensi,
+<p style="text-align: center"><a id="Eq_9.8"></a>$latex \displaystyle \frac{\partial n}{\partial \tau} = n \left(1 - n \right) + \frac{\partial^2 n}{\partial x^2}. \qquad (9.8)$</p>
+<span style="text-align: initial;font-size: 1em">Persamaan ini </span><span style="text-align: initial;font-size: 1em">telah dipelajari secara luas </span><span style="text-align: initial;font-size: 1em">dalam literatur</span>[footnote]Untuk suatu tinjauan, lihat misalnya W. van Saarloos, <a style="text-align: initial;font-size: 1em" href="https://doi.org/10.1016/j.physrep.2003.08.001"><em>Front propagation into unstable states</em></a><span style="text-align: initial;font-size: 1em">, Physics Reports </span><strong style="text-align: initial;font-size: 1em">386</strong><span style="text-align: initial;font-size: 1em">, 29-222 (2003).</span>[/footnote], dan di bawah ini kita hanya membahas salah satu sifatnya, yakni adanya suatu keluarga solusi gelombang berjalan yang didefinisikan pada garis real.
+
+Persamaan (<a href="#Eq_9.8">9.8</a>) mempunyai dua solusi seragam dan konstan, yaitu $latex n = 0$ dan $latex n = 1$. Kita dapat mencari solusi gelombang berjalan yang menghubungkan kedua solusi tersebut. Untuk itu, kita tetapkan $latex n(x,\tau) = v (\xi)$, dengan $latex \xi = x - c \tau$ dan $latex c$ sebagai parameter laju rambat, lalu menyubstitusikannya ke dalam (<a href="#Eq_9.8">9.8</a>). Dengan menggunakan aturan rantai, diperoleh
+<p style="text-align: center">$latex \displaystyle \frac{\partial n}{\partial \tau} = - c \frac{d v}{d \xi}, \qquad \frac{\partial n}{\partial x} = \frac{d v}{d \xi},$</p>
+sehingga $latex v$ memenuhi persamaan diferensial biasa
+<p style="text-align: center"><a id="Eq_9.9"></a>$latex \displaystyle \frac{d^2 v}{d \xi^2} + c \frac{d v}{d \xi} + v (1 - v) = 0. \qquad (9.9)$</p>
+Dinamika persamaan ini dapat dideskripsikan secara kualitatif dengan meninjau bidang fase yang bersesuaian. Misalkan $latex \frac{d v}{d \xi} = w$. Maka,
+<p style="text-align: center">$latex \displaystyle \frac{d w}{d \xi} = \frac{d^2 v}{d \xi^2} = - c w - v (1 - v),$</p>
+dan (<a href="#Eq_9.9">9.9</a>) ekuivalen dengan sistem dinamik berikut
+<p style="text-align: center"><a id="Eq_9.10"></a>$latex \displaystyle \frac{d}{d \xi} \left(\begin{array}{c}v \\ w\end{array} \right) = \left( \begin{array}{c} w \\ - c w - v (1 - v) \end{array} \right). \qquad (9.10)$</p>
+Titik tetapnya pada bidang $latex (v,w)$ adalah $latex P_0 = (0,0)$ dan $latex P_1 = (1,0)$. Matriks Jacobi sistem ini adalah
+<p style="text-align: center">$latex J(v,w) = \left(\begin{array}{cc} 0 &amp; 1 \\ - 1 + 2 v &amp; - c \end{array}\right),$</p>
+dan
+<p style="text-align: center">$latex J(0,0) = \left(\begin{array}{cc} 0 &amp; 1 \\ - 1 &amp; - c \end{array}\right), \qquad J(1,0) = \left(\begin{array}{cc} 0 &amp; 1 \\ 1 &amp; - c \end{array}\right).$</p>
+Untuk $latex P_1$, $latex \det(J(P_1)) = -1$, sehingga $latex P_1$ merupakan titik pelana. Titik asal mempunyai nilai eigen $latex \lambda_1$ dan $latex \lambda_2$ dengan $latex \lambda_1 \lambda_2 = 1 &gt; 0$ dan $latex \lambda_1 + \lambda_2 = - c$. Tanpa mengurangi keumuman, kita dapat mengasumsikan bahwa $latex c$ tidak negatif, sebab mengganti $latex c$ dengan $latex -c$ sama artinya dengan mengganti $latex \xi$ dengan $latex -\xi$ dalam Persamaan (<a href="#Eq_9.9">9.9</a>). Jika $latex c = 0$, titik asal merupakan pusat. Jika $latex c &gt; 0$, titik asal merupakan simpul stabil atau spiral stabil. Namun, fakta bahwa $latex P_1$ merupakan pelana dan titik asal merupakan penarik lokal tidak membuktikan klaim bahwa, untuk setiap $latex c &gt; 0$, terdapat lintasan yang menghubungkan $latex P_1$ dengan $latex P_0$. Jika lintasan global semacam itu ada dan layak secara fisik, lintasan tersebut bersesuaian dengan sebuah <em>muka</em> yang bergerak dengan laju $latex c$ dan menggambarkan pertumbuhan keadaan $latex n = 1$ menuju wilayah dengan $latex n = 0$.
+
+Diskriminan polinom karakteristik $latex J(P_0)$, yaitu $latex c^2 - 4$, bernilai positif untuk $latex c &gt; 2$, nol pada nilai kritis c = 2, dan negatif di bawah nilai itu. Jadi, titik asal merupakan simpul stabil untuk $latex c &gt; 2$, simpul stabil degenerat dengan nilai eigen ganda −1 pada nilai kritis, dan spiral stabil untuk $latex 0 &lt; c &lt; 2$. Analisis global menunjukkan bahwa cabang manifold tak stabil yang relevan menghasilkan muka monoton tak negatif ketika c ≥ 2, sedangkan di bawah ambang itu lintasan kandidat berosilasi di sekitar titik asal dan melintasi v = 0. Gambar 9.2 dan 9.3 memperlihatkan potret fase (<a href="#Eq_9.10">9.10</a>) masing-masing untuk $latex c = 1$ dan $latex c = 3$. Pada kedua gambar, garis penuh tebal menunjukkan lintasan kandidat yang menghubungkan $latex P_1$ dan $latex P_0$; lintasan pertama berubah tanda dan tidak layak sebagai kepadatan, sedangkan lintasan kedua memberikan muka monoton yang dapat diterima. Dengan demikian, jika $latex n$ mendeskripsikan kepadatan populasi, ambang laju yang tertulis sebagai $latex 2$ harus mencakup kesamaan: laju yang diperbolehkan ialah c ≥ 2. Meskipun terdapat seluruh keluarga muka semacam itu, laju yang dipilih oleh persamaan diferensial parsial (<a href="#Eq_9.8">9.8</a>) bergantung pada data awal. Data awal dengan ekor yang cukup curam—misalnya data yang memiliki dukungan kompak—menyeleksi laju asimtotik minimum, sedangkan ekor eksponensial yang lebih landai dapat menyeleksi laju yang lebih besar.<a id="Fig_9.2"></a>
+
+[caption id="attachment_211" align="alignnone" width="800"]<img class="wp-image-211" src="assets/fisher-traveling-wave-phase-1-source.png" alt="Potret fase sistem gelombang berjalan Fisher-KPP untuk c = 1. Deskripsi panjang tersedia." width="800" height="604" /> Gambar 9.2. Bidang fase sistem (<a href="#Eq_9.10">9.10</a>), dengan <em>c</em> = 1, yang diplot menggunakan perangkat lunak PPLANE. [<a href="#Fig_9.2_Desc"><em>Deskripsi Gambar</em></a>][/caption]
+<a id="Fig_9.3"></a>
+
+[caption id="attachment_212" align="alignnone" width="800"]<img class="wp-image-212" src="assets/fisher-traveling-wave-phase-2-source.png" alt="Potret fase sistem gelombang berjalan Fisher-KPP untuk c = 3. Deskripsi panjang tersedia." width="800" height="593" /> Gambar 9.3. Bidang fase sistem (<a href="#Eq_9.10">9.10</a>), dengan <em>c</em> = 3, yang diplot menggunakan perangkat lunak PPLANE. [<a href="#Fig_9.3_Desc"><em>Deskripsi Gambar</em></a>][/caption]
+<h2>Gelombang kimia</h2>
+Ketika reaksi kimia berlangsung dalam sistem yang membentang secara spasial, difusi perlu diperhitungkan. Akibatnya, persamaan laju yang dibahas dalam Bab 8 berubah menjadi persamaan diferensial parsial. Suku-suku reaksi tetap sama, tetapi konsentrasi setiap zat kimia kini berdifusi dengan koefisien difusi yang bergantung pada ukuran dan berat molekul yang bersangkutan. Jika reaksinya bersifat osilatori, muka gelombang, yang misalnya bersesuaian dengan konsentrasi tinggi suatu zat kimia, merambat di dalam sistem. Selain itu, jika reaksi dibatasi pada permukaan dua dimensi dan gelombang dipicu di suatu titik dalam ruang, muka gelombangnya berbentuk lingkaran. Sebuah artikel tahun 2001 karya C. Sachs <em>et al</em>.[footnote]C. Sachs, M. Hildebrand, S. Völkening, J. Wintterlin, G. Ertl, <a href="https://doi.org/10.1126/science.1062883"><em>Spatiotemporal self-organization in a surface reaction: from the atomic to the mesoscopic scale</em></a>, Science <strong>293</strong>, 1635-1638 (2001).[/footnote] menjelaskan bagaimana muka gelombang semacam itu diamati dalam eksperimen dan mengusulkan model reaksi-difusi yang mereproduksi perilaku ini. Para penulis juga membahas keterbatasan model reaksi-difusi ketika parameter makroskopis dipengaruhi oleh rincian interaksi mikroskopis.
+
+Apa yang akan terjadi jika muka gelombang terputus, misalnya jika gelombang melewati wilayah tempat reaksi tidak dapat berlangsung? Jika muka gelombang tertambat pada satu titik, muka tersebut akan melengkung dan akhirnya membentuk gelombang spiral. Gelombang semacam itu sering diamati dalam eksperimen ketika reaksi Belousov-Zhabotinsky dibatasi pada permukaan dua dimensi, seperti film tipis, cakram kaca berpori, atau bahkan selembar kertas saring. Untuk informasi lebih lanjut, pembaca dapat merujuk pada artikel asli karya S.C. Müller <em>et al</em>.[footnote]S.C. Müller, T. Plesser and B. Hess, <em><a href="https://doi.org/10.1126/science.230.4726.661">The structure of the core of the spiral wave in the Belousov-Zhabotinskii reaction</a></em>, Science <strong>230</strong>, 661-663 (1985).[/footnote], yang membahas eksperimen yang mengungkap struktur inti gelombang spiral semacam itu.
+<h2>Ringkasan</h2>
+Persamaan reaksi-difusi memperluas model persamaan diferensial biasa ke seluruh ranah spasial dalam satu, dua, atau tiga dimensi. Pada tingkat makroskopis, difusi mendeskripsikan kecenderungan suatu besaran untuk menyebar dengan bergerak ke arah yang berlawanan dengan gradien lokalnya. Pada tingkat mikroskopis, difusi berkaitan dengan gerak acak isotropik. Beberapa persamaan reaksi-difusi memiliki solusi gelombang berjalan yang dapat ditemukan dengan menggunakan metode sistem dinamik.
+<h2>Deskripsi Gambar</h2>
+<strong><a id="Fig_9.1_Desc"></a>Gambar 9.1</strong>: Tangkapan layar Antarmuka Pengguna Grafis MATLAB untuk GUI difusi, yang berjudul "Difusi pada tingkat mikroskopis". Gambar ini memuat dua plot. Di sebelah kiri terdapat plot sebar dua dimensi berjudul "Partikel yang menjalani gerak acak", yang memperlihatkan 1.000 titik partikel merah bergerombol di sekitar $latex (0,0)$. Di sebelah kanan terdapat grafik linear yang seharusnya dibaca sebagai "Rata-rata kuadrat jarak sebagai fungsi jumlah langkah", yang memperlihatkan garis biru naik hingga nilai sekitar 210 selama 200 langkah. Kontrol penggeser untuk "Jumlah partikel" (1.000) dan "Jumlah langkah" (200) terletak di bawah grafik, bersama sebuah tombol "GO". [<em><a href="#Fig_9.1">Kembali ke Gambar 9.1</a></em>]
+
+<strong><a id="Fig_9.2_Desc"></a>Gambar 9.2</strong>: Potret fase untuk variabel $latex v$ dan $latex w$ yang memperlihatkan medan vektor dan beberapa lintasan. Sistem didefinisikan oleh persamaan $latex v' = w$ dan $latex w' = -cw - v(1-v)$ dengan $latex c=1$. Terdapat dua titik kesetimbangan: spiral stabil di titik asal $latex (0,0)$ dan titik pelana di $latex (1,0)$. Sebuah lintasan tebal, yang dikenal sebagai orbit heteroklinik, menghubungkan titik pelana dengan spiral. [<em><a href="#Fig_9.2">Kembali ke Gambar 9.2</a></em>]
+
+<strong><a id="Fig_9.3_Desc"></a>Gambar 9.3</strong>: Potret fase untuk variabel $latex v$ dan $latex w$ dengan persamaan $latex v' = w$ dan $latex w' = -cw - v(1-v)$, dengan $latex c=3$. Potret ini memperlihatkan medan vektor dan beberapa lintasan. Terdapat dua titik kesetimbangan: simpul stabil di $latex (0,0)$ dan titik pelana di $latex (1,0)$. Sebuah orbit heteroklinik tebal menghubungkan titik pelana di $latex (1,0)$ dengan simpul stabil di $latex (0,0)$ melalui lintasan yang tidak berosilasi. [<em><a href="#Fig_9.3">Kembali ke Gambar 9.3</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Bahan Renungan</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center" id="O005-LEGA-V101-CH09-P01">Soal 1</h3>
+Deskripsikan perilaku sistem (<a href="#Eq_9.10">9.10</a>) di dekat titik asal jika $latex c = 2$.
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH09-P02">Soal 2</h3>
+Pertimbangkan fungsi
+<p style="text-align: center">$latex \displaystyle f(x,t) = \frac{1}{2 \sqrt{\pi D_0 t}} \int_{-\infty}^\infty \exp\left[-\frac{(x-x_0)^2}{4 D_0 t}\right] H(x_0)\ dx_0.$</p>
+
+<ol>
+ 	<li><span style="font-size: 1rem;text-align: initial">Hitung $latex \partial f / \partial t$.</span></li>
+ 	<li>Hitung <span style="font-size: 1rem;text-align: initial">$latex \partial^2 f / \partial x^2$</span>.</li>
+ 	<li>Tunjukkan bahwa $latex f$ merupakan solusi persamaan diferensial</li>
+</ol>
+<p style="text-align: center">$latex \displaystyle \frac{\partial f}{\partial t} = D_0 \frac{\partial^2 f}{\partial x^2}.$</p>
+
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH09-P03">Soal 3</h3>
+Pertimbangkan sekumpulan bakteri yang bersifat <em>kemotaktik</em> terhadap makanan. Artinya, pada tingkat makroskopis, fluks bakteri $latex \vec \jmath$ diberikan oleh
+<p style="text-align: center">$latex \vec \jmath = \chi b \vec \nabla n - D \vec \nabla b,$</p>
+di mana $latex n$ adalah konsentrasi nutrien, $latex b$ adalah kepadatan bakteri, $latex D$ adalah koefisien difusi, dan $latex \chi$ adalah <em>koefisien kemotaksis</em>.
+
+Tuliskan model reaksi-difusi sederhana untuk $latex n$ dan $latex b$ yang memperhitungkan pergerakan bakteri, difusi nutrien, dan fakta bahwa bakteri berkembang biak dengan memakan nutrien.
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH09-P04">Soal 4</h3>
+Pertimbangkan bakteri kemotaktik yang dideskripsikan dalam Soal 3. Deskripsikan bagaimana Anda akan memodifikasi gerak acak setiap bakteri pada tingkat mikroskopis agar mencakup kemotaksis.
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH09-P05">Soal 5</h3>
+Pertimbangkan sebuah partikel yang melakukan gerak acak satu dimensi dengan panjang setiap langkah satu satuan. Peluang partikel melangkah ke kanan adalah $latex p$, sedangkan peluangnya melangkah ke kiri adalah $latex 1-p$, dengan $latex p$ tidak harus sama dengan 1/2. Jelaskan seberapa jauh partikel diperkirakan telah berpindah setelah $latex N$ langkah: nyatakan perpindahan bertanda rata-rata (posisi harapan) dari titik awal, lalu bedakan hasil tersebut dari simpangan khas terhadap nilai rata-rata.
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH09-P06">Soal 6</h3>
+Pertimbangkan lintasan heteroklinik pada Gambar 9.2. Buat sketsa grafik $latex v$ sebagai fungsi $latex \xi$. Jelaskan mengapa fungsi semacam itu tidak dapat merepresentasikan kepadatan populasi.
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH09-P07">Soal 7</h3>
+Pertimbangkan lintasan heteroklinik pada Gambar 9.3. Buat sketsa grafik $latex v$ sebagai fungsi $latex \xi$.
+
+</div>
+</div>

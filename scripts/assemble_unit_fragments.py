@@ -555,6 +555,16 @@ SPECS = {
         ],
         "replacements": [],
     },
+    "O005-LEGA-V101-CH09": {
+        "source_lines": 172,
+        "problem_count": 7,
+        "fragments": [
+            "01-objectives-macroscopic-diffusion.html",
+            "02-microscopic-diffusion-fisher-kpp.html",
+            "03-chemical-waves-summary-exercises.html",
+        ],
+        "replacements": [],
+    },
 }
 
 

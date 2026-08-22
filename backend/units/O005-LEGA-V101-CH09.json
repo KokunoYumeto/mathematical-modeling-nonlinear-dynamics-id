@@ -1,0 +1,58 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "mastery_path": "backend/mastery/O005-LEGA-V101-CH09.mastery.json",
+  "mastery_sha256": "9b5beba72aae6132d7bce4a72ca36041caee499b27cd93806b96694804c1b1fc",
+  "notebook_path": "source/id-ID/O005-LEGA-V101-CH09/notebooks/chapter-09-open-diffusion.ipynb",
+  "notebook_sha256": "bbc57501bb83e4195e1c65ad30bd235c67aa1342028aa6a323207ec66101ec97",
+  "problems": [
+    "O005-LEGA-V101-CH09-P01",
+    "O005-LEGA-V101-CH09-P02",
+    "O005-LEGA-V101-CH09-P03",
+    "O005-LEGA-V101-CH09-P04",
+    "O005-LEGA-V101-CH09-P05",
+    "O005-LEGA-V101-CH09-P06",
+    "O005-LEGA-V101-CH09-P07"
+  ],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 228,
+    "path": "backend/segments/O005-LEGA-V101-CH09.segments.jsonl",
+    "sha256": "fb0b37030cf91b8eef4c1d0d751d3f8d190dabdc74b14222db79dda55002081f"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "chapter": "Diffusion",
+    "content_sha256": "84fe10d60eaacdb18efb97d52035e3f6e923012c7041e7b3d037b866e90af442",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/diffusion/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-CH09/content.html",
+    "content_sha256": "0b4633d88a3aed144738429bccc466f1d3f472714bbeb57e0ddb338cdab329e4",
+    "figures": [
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH09/assets/diffusion-random-walk-source.png",
+        "sha256": "4659e7a659e47069360aedfe1f6a6511516e8c99d96ccc9421d5edc34e33648e"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH09/assets/fisher-traveling-wave-phase-1-source.png",
+        "sha256": "a3080ea906a114bc538bb27ca30c22a40953ee77eeda75537a7f120e44e45366"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH09/assets/fisher-traveling-wave-phase-2-source.png",
+        "sha256": "17bb5d8b4b0f3f0b34e68a7276290020c7b34f3592df1ca307769bdea591bbcb"
+      }
+    ],
+    "title": "Difusi"
+  },
+  "unit_id": "O005-LEGA-V101-CH09"
+}

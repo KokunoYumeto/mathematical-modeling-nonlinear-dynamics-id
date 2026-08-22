@@ -7,11 +7,10 @@ Updated: 2026-08-22 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–8 and the visible Part 2–4 introductions are
-translated, built, and verified. Production now moves to Chapter 9,
-Pressbooks record 196, *Diffusion*, as `O005-LEGA-V101-CH09`; its exact
-authority record and three-asset closure are frozen. The next visible source
-item is Chapter 10, record 194, *Pattern Formation*.
+into this lane. Chapters 1–9 and the visible Part 2–4 introductions are
+translated, built, and verified. Production now moves to Chapter 10,
+Pressbooks record 194, *Pattern Formation*, as `O005-LEGA-V101-CH10`; its
+authority freeze is the next executable action.
 
 ## Verified authority
 
@@ -457,7 +456,7 @@ item is Chapter 10, record 194, *Pattern Formation*.
   ordered inventory SHA-256 is
   `a1b5285726f9fa6325432afe7363de65b2e9f621d678619d44418e4c5e561c77`.
 
-## Frozen Chapter 9 boundary
+## Admitted Chapter 9 boundary
 
 - Pressbooks chapter 196, *Diffusion*; modified
   `2026-03-19T20:10:36Z`. Canonical record: 65,160 bytes, SHA-256
@@ -467,18 +466,50 @@ item is Chapter 10, record 194, *Pattern Formation*.
 - Scope: 172 raw lines, 166 ordered opening/void elements, 27 hrefs, 213 TeX
   occurrences, three figures, five footnotes, and seven problems. All three
   frozen rasters match the authority manifest byte-for-byte.
-- The bounded primary-byte audit identifies explicit algebraic, probabilistic,
-  traveling-wave, flux, markup, figure-description, and bibliographic repairs
-  for the correction ledger. The open companion is one deterministic
-  NumPy/SciPy/Matplotlib notebook covering a two-dimensional random walk and
-  Fisher–KPP phase portraits at c=1, 2, and 3. Next source item: Chapter 10
-  record 194, *Pattern Formation*.
+- Complete natural id-ID target: 29,698 bytes, SHA-256
+  `0b4633d88a3aed144738429bccc466f1d3f472714bbeb57e0ddb338cdab329e4`.
+  Exact replay preserves 166 / 166 ordered elements, 27 / 27 links, 213
+  source TeX occurrences mapped to 214 declared target occurrences, three /
+  three figures, five / five footnotes, and seven / seven stable problems.
+  Corrections O005-CORR-0087–0106 bind every mathematical, bibliographic,
+  markup, and accessibility intervention.
+- Seven-record mastery layer: 28,465 bytes, SHA-256
+  `9b5beba72aae6132d7bce4a72ca36041caee499b27cd93806b96694804c1b1fc`;
+  every record has a hint, final-answer check, and worked solution or explicit
+  rubric. Independent review corrected four residual English uses of *front*.
+- Independent open diffusion notebook: 23,561 bytes, SHA-256
+  `bbc57501bb83e4195e1c65ad30bd235c67aa1342028aa6a323207ec66101ec97`;
+  10 cells / four code cells / 73 assertion sites. Fresh locked execution under
+  Python 3.13.9, NumPy 2.4.4, SciPy 1.17.1, and Matplotlib 3.10.9 passed all
+  123 dynamic assertion evaluations. Independent recomputation confirmed the
+  random-walk mean-square-displacement law, Fisher–KPP eigenvalues, the
+  oscillatory sign-changing profile for c=1, the critical nonnegative profile
+  for c=2, and the slow-tail rate for c=3.
+- Modular segment layer: 228 records / 145,487 bytes, SHA-256
+  `fb0b37030cf91b8eef4c1d0d751d3f8d190dabdc74b14222db79dda55002081f`.
+  The builder losslessly normalizes the frozen source's one crossing footnote
+  span and one one-word bibliography anchor before pairing; the target and
+  final reader retain balanced, descriptive markup.
+- Reader package: ten payload files / 724,082 bytes excluding its 1,071-byte
+  manifest; manifest SHA-256
+  `f7b3bdf67c22956f80e6e94d6a968aca4932e450615e3ffb4fba4d6e9b3836d3`.
+  It renders 214 chapter and 189 mastery MathML nodes and resolves all six
+  local dependencies. Repeated builds were byte-identical across eleven files,
+  canonical tree SHA-256
+  `8a9a1e68ec70673f2d14a5622d26088a64ca38452ec153f3622b9482488ab7cc`.
+- Independent translation review found two final issues and both were repaired:
+  the modern Fisher disclaimer now unambiguously refers to the chapter author,
+  and the Müller DOI exposes the complete cited title. Browser QA at 1280×900
+  and 390×844 found centered 768 / 357.5 px articles, zero page overflow,
+  three loaded responsive figures, 38 unique IDs, no broken fragment, complete
+  footnotes, and an empty fresh-load warning/error log. The Problem 7 target
+  landed at 79.86 px below the 70.60 px sticky navigation. External-link
+  reachability was not tested; no audio/live widget exists.
 
 ## Next action
 
-Complete Chapter 9 record 196, *Diffusion*, in source order as
-`O005-LEGA-V101-CH09`, preserving 172 raw lines, 166 ordered opening/void
-elements, 27 hrefs, 213 TeX occurrences, three source figures, five footnotes,
-and seven stable problems. Add complete mastery and one independently authored
-random-walk/Fisher–KPP notebook, ledger every correction, then build, execute,
-inspect, and publish the verified boundary without a confirmation pause.
+Freeze official Pressbooks Chapter 10 record 194, *Pattern Formation*, as
+`O005-LEGA-V101-CH10`: materialize its canonical/raw/rendered records and exact
+asset closure, compute the full structural/content census, bind all hashes,
+then begin the complete natural id-ID translation in source order. Do not
+return to source selection or delay translation once the authority closes.

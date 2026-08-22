@@ -1,0 +1,53 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Tujuan Pembelajaran</h2>
+</header>
+<div class="textbox__content">
+
+Pada akhir bab ini, Anda akan mampu melakukan hal-hal berikut.
+<ul>
+ 	<li>Menyusun persamaan kontinuitas dengan menggunakan konsep kalkulus vektor.</li>
+ 	<li>Menafsirkan persamaan reaksi-difusi sebagai kasus khusus persamaan kontinuitas.</li>
+ 	<li>Menyelesaikan persamaan panas.</li>
+ 	<li>Mendeskripsikan difusi pada tingkat mikroskopis.</li>
+ 	<li>Membandingkan proses difusi pada tingkat mikroskopis dan makroskopis.</li>
+ 	<li>Menunjukkan keberadaan solusi gelombang berjalan untuk persamaan Fisher-KPP.</li>
+</ul>
+</div>
+</div>
+<h2>Difusi pada tingkat makroskopis</h2>
+<h3>Persamaan reaksi-difusi</h3>
+Tinjau suatu besaran $latex F(x,y,z,t)$ yang bergantung pada tiga variabel ruang $latex x$, $latex y$, dan $latex z$, serta waktu $latex t.$ Asumsikan bahwa $latex F$ mengukur kepadatan suatu spesies, dalam jumlah individu per satuan volume. Perlakuan serupa berlaku untuk jumlah individu per satuan luas dalam model dua dimensi, atau per satuan panjang dalam model satu dimensi. Kita ingin mendeskripsikan evolusi $latex F$.
+
+Tinjau suatu daerah tertutup $latex \Omega$ di dalam ruang, dan misalkan $latex N_i$ menyatakan jumlah individu di dalam $latex \Omega$. Dari definisi $latex F$, kita mengetahui bahwa
+<p style="text-align: center">$latex \displaystyle N_i = \iiint_\Omega F(x,y,z,t)\ dV,$</p>
+di mana $latex d V$ menyatakan elemen volume di dalam $latex \Omega$. Mari kita hitung turunan $latex N_i$ terhadap waktu. Kita akan mengasumsikan bahwa $latex F$ cukup teratur untuk memungkinkan pertukaran urutan operasi turunan dan integral. Dengan demikian,
+<p style="text-align: center"><a id="Eq_9.1"></a>$latex \displaystyle \frac{d N_i}{d t} = \frac{d}{d t} \iiint_\Omega F(x,y,z,t)\ dV = \iiint_\Omega \frac{\partial F}{\partial t}\ dV. \qquad (9.1)$</p>
+Di sisi lain, perubahan $latex N_i$ harus mencerminkan perubahan lokal pada $latex F$, serta transpor melalui batas $latex \partial \Omega$ dari $latex \Omega$. Dengan demikian, kita memiliki
+<p style="text-align: center"><a id="Eq_9.2"></a>$latex \displaystyle \frac{d N_i}{d t} = \iiint_\Omega R(x,y,z,t,F)\ dV - \iint_{\partial \Omega} \vec \jmath (\vec r) \cdot \vec n \ dS, \qquad (9.2)$</p>
+di mana $latex R$ adalah <em>suku reaksi</em> yang mendeskripsikan perubahan lokal pada $latex F$, $latex \vec r$ adalah vektor posisi, $latex \vec n$ adalah vektor normal pada $latex \partial \Omega$ yang mengarah ke luar, $latex dS$ adalah elemen permukaan pada $latex \partial \Omega$, dan $latex \vec \jmath$ adalah vektor rapat fluks individu dalam neraca $latex N_i$. Suku terakhir dalam (<a href="#Eq_9.2">9.2</a>) adalah negatif dari fluks $latex \vec \jmath$ melalui batas $latex \Omega$. Tanda negatif muncul karena $latex \vec n$ mengarah ke luar dan individu yang meninggalkan $latex \Omega$ menyebabkan $latex N_i$ berkurang. Dengan teorema divergensi (sekali lagi, secara tersirat kita mengasumsikan semua besaran cukup teratur), suku ini dapat ditulis ulang sebagai
+<p style="text-align: center">$latex \displaystyle - \iint_{\partial \Omega} \vec \jmath(\vec r) \cdot \vec n \ dS = - \iiint_\Omega \vec \nabla \cdot \vec \jmath\ dV,$</p>
+sehingga
+<p style="text-align: center"><a id="Eq_9.3"></a>$latex \displaystyle \frac{d N_i}{d t} = \iiint_\Omega \left[R(x,y,z,t,F) - \vec \nabla \cdot \vec \jmath \right] \ dV. \qquad (9.3)$</p>
+Dengan menggabungkan Persamaan (<a href="#Eq_9.1">9.1</a>) dan (<a href="#Eq_9.3">9.3</a>), kita memperoleh
+<p style="text-align: center">$latex \displaystyle 0 = \iiint_\Omega \left[-\frac{\partial F}{\partial t} + R(x,y,z,t,F) - \vec \nabla \cdot \vec \jmath \right] \ dV.$</p>
+Karena kesamaan ini berlaku untuk sembarang daerah tertutup $latex \Omega$, kita memperoleh <em>persamaan kontinuitas berikut</em>
+<p style="text-align: center"><a id="Eq_9.4"></a>$latex \displaystyle \frac{\partial F}{\partial t} = R(x,y,z,t,F) - \vec \nabla \cdot \vec \jmath, \qquad (9.4)$</p>
+yang merupakan hukum neraca lokal bagi $latex F$; persamaan ini menjadi hukum konservasi ketika suku sumber bersihnya lenyap. Selanjutnya, kita perlu menghubungkan $latex \vec \jmath$ dengan $latex F$. Sebagai pendekatan pertama, kita akan mengasumsikan bahwa <em>hukum Fick</em> berlaku, yaitu bahwa $latex \vec \jmath$ hanya bergantung pada gradien $latex F$,
+<p style="text-align: center">$latex \vec \jmath = - D \, \vec \nabla F,$</p>
+di mana <em>tensor difusi</em> $latex D$ adalah matriks koefisien difusi. Entri-entri $latex D$ dapat bergantung pada $latex F$; dalam hal ini, kita memiliki <em>difusi nonlinear</em>. Bergantung pada sifat-sifat medium, $latex D$ mungkin tidak diagonal atau bahkan tidak isotropik. Dalam pembahasan selanjutnya, kita membuat asumsi penyederhanaan bahwa $latex D = D_0 I_3$, dengan $latex I_3$ sebagai matriks identitas $latex 3 \times 3$ dan $latex D_0$ sebagai konstanta. Dengan demikian, $latex \vec \jmath$ sebanding dengan gradien $latex F$,
+<p style="text-align: center"><a id="Eq_9.5"></a>$latex \vec \jmath = - D_0 \vec \nabla F. \qquad (9.5)$</p>
+Di sini $latex D_0$ bernilai positif, yang mendeskripsikan fakta bahwa $latex F$ “bergerak menjauhi” daerah berkonsentrasi tinggi menuju daerah berkonsentrasi rendah. Dengan menggabungkan (<a href="#Eq_9.4">9.4</a>) dan (<a href="#Eq_9.5">9.5</a>), kita memperoleh <em>persamaan reaksi-difusi</em> berikut,
+<p style="text-align: center"><a id="E1_9.6"></a>$latex \displaystyle \frac{\partial F}{\partial t} = R(x,y,z,t,F) + D_0 \Delta F, \qquad (9.6)$</p>
+di mana $latex \Delta = {\vec \nabla}^2$ menyatakan operator Laplace. Jika $latex F$ dan $latex R$ seragam dalam ruang, yaitu $latex F(x,y,z,t) = G(t)$ dan $latex R(x,y,z,t,F) = H(t,G)$, maka Persamaan (<a href="#E1_9.6">9.6</a>) tereduksi menjadi persamaan diferensial biasa,
+<p style="text-align: center">$latex \displaystyle \frac{d G}{d t} = H(t,G),$</p>
+di mana $latex H$ dapat berupa, misalnya, model logistik $latex H(t,G) = G (1 - G)$. Dengan demikian, kita dapat memperluas semua model yang telah dibahas dengan mengubah sistem persamaan diferensial biasa menjadi sistem persamaan diferensial parsial, disertai suku difusi yang sesuai.
+<h3>Persamaan panas</h3>
+Jika tidak terdapat suku reaksi, Persamaan (<a href="#E1_9.6">9.6</a>) menjadi <em>persamaan panas</em>,
+<p style="text-align: center"><a id="Eq_9.7"></a>$latex \displaystyle \frac{\partial F}{\partial t} = D_0 \Delta F. \qquad (9.7)$</p>
+Persamaan ini linear dalam $latex F$. Jika syarat awal dan syarat batas yang sesuai diberikan, solusi tunggal dapat ditemukan dalam bentuk fungsi Green. Pada domain tak hingga, misalnya, solusi (<a href="#Eq_9.7">9.7</a>) dengan syarat awal $latex F(x,y,z,0) = H(x,y,z)$ adalah
+<p style="text-align: center">$latex \displaystyle \begin{align*} F(x,y,z,t) = &amp; \left(\frac{1}{4 \pi D_0 t}\right)^{3/2} \\ &amp; \int_{-\infty}^\infty \int_{-\infty}^\infty \int_{-\infty}^\infty \exp\left[- \frac{|\vec r - \vec \mu|^2}{4 D_0 t}\right] H(\xi,\zeta,\eta)\, d \xi\, d \zeta \, d \eta,\end{align*}$</p>
+di mana $latex \vec \mu=(\xi,\zeta,\eta)$ dan
+<p style="text-align: center">$latex |\vec r - \vec \mu|^2 = (x-\xi)^2 + (y - \zeta)^2 + (z - \eta)^2.$</p>
+Dari sudut pandang analisis dimensi, kita mengetahui bahwa
+<p style="text-align: center">$latex \left[ D_0 \right] = \frac{L^2}{T}.$</p>
+Akibatnya, kuadrat skala panjang karakteristik pada masalah ini diperkirakan sebanding dengan skala waktu karakteristik.

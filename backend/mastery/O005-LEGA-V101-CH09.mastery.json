@@ -1,0 +1,488 @@
+{
+  "schema": "o005-mastery-v1",
+  "schema_version": "1.0.0",
+  "unit_id": "O005-LEGA-V101-CH09",
+  "language": "id-ID",
+  "source": {
+    "resource": "Joceline Lega, Introduction to Mathematical Modeling",
+    "edition": "University of Arizona Pressbooks v1.01 (Maret 2026)",
+    "record": "Pressbooks chapter 196",
+    "record_id": 196,
+    "source_title": "Diffusion",
+    "target_title": "Difusi",
+    "modified_utc": "2026-03-19T20:10:36Z",
+    "source_file": "authority/units/O005-LEGA-V101-CH09/content.raw.en.html",
+    "source_locator": "exact frozen Pressbooks record 196 content.raw, equations on lines 22–101, problems on lines 125–169",
+    "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/diffusion/",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "provenance_policy": {
+    "source_derived": "Ringkasan masalah merupakan adaptasi/terjemahan dari soal sumber dan tetap berada di bawah CC BY-NC-SA 4.0.",
+    "new_original": "Petunjuk, rekaman pemeriksaan/jawaban, solusi, rubrik, dan implementasi komputasi ditulis baru untuk edisi Bahasa Indonesia dan ditandai terpisah dari materi sumber. Sumber tidak menyediakan himpunan solusi. Diferensiasi kernel panas, penutupan model kemotaksis, statistik gerak acak, dan klasifikasi gelombang berjalan dilakukan secara independen; koreksi faktor kepadatan pada fluks kemotaksis dinyatakan secara eksplisit."
+  },
+  "article_link_catalog": [
+    {
+      "link_id": "O005-LEGA-V101-CH09-LINK01",
+      "title": "Notebook Python terbuka Bab 9: difusi",
+      "url": "notebooks/chapter-09-open-diffusion.ipynb"
+    }
+  ],
+  "problems": [
+    {
+      "problem_id": "O005-LEGA-V101-CH09-P01",
+      "ordinal": 1,
+      "problem_summary": "Untuk sistem bidang fase Fisher-KPP (9.10), deskripsikan perilaku di dekat titik asal ketika \\(c=2\\).",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH09-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d}{d \\xi} \\left(\\begin{array}{c}v \\\\ w\\end{array} \\right) = \\left( \\begin{array}{c} w \\\\ - c w - v (1 - v) \\end{array} \\right). \\qquad (9.10)",
+        "c = 2"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-09-open-diffusion.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Evaluasi matriks Jacobi di \\((v,w)=(0,0)\\), lalu periksa bukan hanya akar polinom karakteristik, tetapi juga dimensi ruang eigennya ketika diskriminan nol."
+      },
+      "check": {
+        "type": "exact_fisher_c2_degenerate_stable_node",
+        "final_answer": "Untuk \\(c=2\\), \\(J(0,0)=\\begin{pmatrix}0&1\\\\-1&-2\\end{pmatrix}\\) dan polinom karakteristiknya \\(\\lambda^2+2\\lambda+1=(\\lambda+1)^2\\). Jadi \\(\\lambda=-1\\) mempunyai multiplisitas aljabar dua, tetapi \\(J+I\\) berperingkat satu sehingga ruang eigennya hanya berdimensi satu, dengan arah \\(w=-v\\). Titik asal adalah simpul stabil degenerat (simpul tak wajar), bukan spiral. Linearisasinya memberi \\(v(\\xi)=(A+B\\xi)e^{-\\xi}\\) dan \\(w(\\xi)=[B-A-B\\xi]e^{-\\xi}\\); lintasan mendekati titik asal tanpa berotasi dan secara generik menyinggung satu-satunya arah eigen.",
+        "quick_check": "Jejak harus \\(-2\\), determinan harus \\(1\\), diskriminan harus nol, dan \\(\\dim\\ker(J+I)=1\\). Dua eigenvektor bebas akan secara keliru mengklasifikasikan simpul ini sebagai simpul bintang."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Linearisasikan sistem \\(v'=w\\), \\(w'=-cw-v(1-v)\\) di titik asal.",
+            "formula": "J_0=\\begin{pmatrix}0&1\\\\-1&-c\\end{pmatrix}"
+          },
+          {
+            "explanation": "Substitusikan nilai kritis \\(c=2\\).",
+            "formula": "\\det(\\lambda I-J_0)=\\lambda^2+2\\lambda+1=(\\lambda+1)^2"
+          },
+          {
+            "explanation": "Periksa multiplisitas geometrik akar ganda.",
+            "formula": "J_0+I=\\begin{pmatrix}1&1\\\\-1&-1\\end{pmatrix},\\qquad\\ker(J_0+I)=\\operatorname{span}\\{(1,-1)^T\\}"
+          },
+          {
+            "explanation": "Persamaan skalar linear di sekitar titik asal memiliki akar karakteristik ganda.",
+            "formula": "v''+2v'+v=0\\quad\\Longrightarrow\\quad v=(A+B\\xi)e^{-\\xi}"
+          },
+          {
+            "explanation": "Turunkan \\(v\\) untuk memperoleh komponen kedua dan melihat peluruhan tanpa rotasi.",
+            "formula": "w=v'=[B-A-B\\xi]e^{-\\xi}\\longrightarrow0\\qquad(\\xi\\to\\infty)"
+          }
+        ],
+        "conclusion": "Nilai \\(c=2\\) adalah batas fokus–simpul: titik asal tetap asimtotik stabil, tetapi memiliki satu arah eigen untuk nilai eigen \\(-1\\) yang berulang."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH09-P02",
+      "ordinal": 2,
+      "problem_summary": "Untuk integral kernel panas satu dimensi yang diberikan, hitung \\(\\partial f/\\partial t\\) dan \\(\\partial^2f/\\partial x^2\\), lalu tunjukkan bahwa \\(f\\) memenuhi persamaan panas \\(f_t=D_0f_{xx}\\).",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH09-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle f(x,t) = \\frac{1}{2 \\sqrt{\\pi D_0 t}} \\int_{-\\infty}^\\infty \\exp\\left[-\\frac{(x-x_0)^2}{4 D_0 t}\\right] H(x_0)\\ dx_0.",
+        "\\partial f / \\partial t",
+        "\\partial^2 f / \\partial x^2",
+        "\\displaystyle \\frac{\\partial f}{\\partial t} = D_0 \\frac{\\partial^2 f}{\\partial x^2}."
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-09-open-diffusion.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Namai integran tanpa \\(H\\) sebagai \\(K(x,x_0,t)\\) dan tetapkan \\(a=x-x_0\\). Diferensiasikan faktor \\(t^{-1/2}\\) dan eksponensial secara terpisah; untuk turunan ruang, hitung dahulu \\(K_x\\), kemudian \\(K_{xx}\\)."
+      },
+      "check": {
+        "type": "exact_heat_kernel_differentiation_and_verification",
+        "final_answer": "Ambil \\(D_0>0\\), \\(t>0\\), dan misalnya \\(H\\in L^1(\\mathbb R)\\), sehingga diferensiasi di bawah tanda integral sah pada setiap selang waktu yang dijauhkan dari nol. Dengan \\(K=[2\\sqrt{\\pi D_0t}]^{-1}\\exp[-(x-x_0)^2/(4D_0t)]\\), diperoleh \\(K_t=K[-1/(2t)+(x-x_0)^2/(4D_0t^2)]\\) dan \\(K_{xx}=K[-1/(2D_0t)+(x-x_0)^2/(4D_0^2t^2)]\\). Karena \\(K_t=D_0K_{xx}\\), maka \\(f_t=\\int K_tH\\,dx_0=D_0\\int K_{xx}H\\,dx_0=D_0f_{xx}\\).",
+        "quick_check": "Koefisien \\((x-x_0)^2\\) pada \\(f_t\\) harus \\(1/(4D_0t^2)\\), sedangkan pada \\(f_{xx}\\) harus \\(1/(4D_0^2t^2)\\); mengalikan rumus kedua dengan \\(D_0\\) harus menghasilkan rumus pertama tepat."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Definisikan kernel dan nyatakan syarat cukup untuk menukar turunan dengan integral.",
+            "formula": "K(x,x_0,t)=\\frac{1}{2\\sqrt{\\pi D_0t}}e^{-(x-x_0)^2/(4D_0t)},\\qquad f=\\int_{-\\infty}^{\\infty}KH\\,dx_0"
+          },
+          {
+            "explanation": "Untuk \\(H\\in L^1(\\mathbb R)\\) dan \\(t\\in[\\varepsilon,T]\\) dengan \\(\\varepsilon>0\\), turunan kernel dibatasi oleh konstanta kali fungsi yang dapat diintegralkan terhadap \\(|H|\\); teorema konvergensi terdominasi membenarkan diferensiasi di bawah integral.",
+            "formula": "f_t=\\int_{-\\infty}^{\\infty}K_tH\\,dx_0,\\qquad f_{xx}=\\int_{-\\infty}^{\\infty}K_{xx}H\\,dx_0"
+          },
+          {
+            "explanation": "Diferensiasikan prefaktor dan eksponen terhadap waktu.",
+            "formula": "K_t=K\\left[-\\frac1{2t}+\\frac{(x-x_0)^2}{4D_0t^2}\\right]"
+          },
+          {
+            "explanation": "Diferensiasikan dua kali terhadap \\(x\\).",
+            "formula": "K_x=-\\frac{x-x_0}{2D_0t}K,\\qquad K_{xx}=K\\left[-\\frac1{2D_0t}+\\frac{(x-x_0)^2}{4D_0^2t^2}\\right]"
+          },
+          {
+            "explanation": "Bandingkan kedua turunan kernel secara langsung.",
+            "formula": "D_0K_{xx}=K\\left[-\\frac1{2t}+\\frac{(x-x_0)^2}{4D_0t^2}\\right]=K_t"
+          },
+          {
+            "explanation": "Integrasikan identitas tersebut terhadap \\(x_0\\).",
+            "formula": "\\frac{\\partial f}{\\partial t}=\\int K_tH\\,dx_0=D_0\\int K_{xx}H\\,dx_0=D_0\\frac{\\partial^2f}{\\partial x^2}"
+          }
+        ],
+        "conclusion": "Kernel Gauss yang diberikan adalah solusi fundamental persamaan panas satu dimensi; konvolusinya dengan data \\(H\\) memenuhi persamaan panas untuk setiap \\(t>0\\) di bawah asumsi regularitas yang dinyatakan."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH09-P03",
+      "ordinal": 3,
+      "problem_summary": "Untuk bakteri yang kemotaktik terhadap nutrien \\(n\\) dan berdensitas \\(b\\), tuliskan satu model reaksi-difusi sederhana yang mencakup gerak bakteri, difusi nutrien, konsumsi nutrien, dan pertumbuhan bakteri.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH09-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\vec \\jmath = \\chi \\vec \\nabla n - D \\vec \\nabla b"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-09-open-diffusion.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Gunakan fluks bakteri yang terkoreksi secara fisik, \\(\\vec\\jmath_b=\\chi b\\nabla n-D\\nabla b\\), agar fluks kemotaktik lenyap ketika tidak ada bakteri. Deklarasikan satu laju konsumsi, satu faktor hasil pertumbuhan, fluks nutrien, serta syarat awal dan batas."
+      },
+      "check": {
+        "type": "declared_chemotaxis_nutrient_bacteria_closure",
+        "final_answer": "Satu penutupan sederhana adalah \\(\\partial_t n=D_n\\Delta n-\\kappa bn\\) dan \\(\\partial_t b=D\\Delta b-\\chi\\nabla\\!\\cdot(b\\nabla n)+Y\\kappa bn\\), dengan \\(D_n,D,\\chi,\\kappa,Y>0\\). Model ini memakai fluks nutrien \\(\\vec\\jmath_n=-D_n\\nabla n\\), fluks bakteri terkoreksi \\(\\vec\\jmath_b=\\chi b\\nabla n-D\\nabla b\\), konsumsi \\(R_n=-\\kappa bn\\), dan pertumbuhan \\(R_b=Y\\kappa bn\\). Lengkapi dengan data awal nonnegatif serta, misalnya, syarat tanpa fluks \\(\\vec\\jmath_n\\cdot\\vec\\nu=\\vec\\jmath_b\\cdot\\vec\\nu=0\\) pada batas domain. Ini adalah satu pilihan model yang dinyatakan, bukan penutupan unik.",
+        "quick_check": "Tanda kemotaksis dalam persamaan \\(b\\) harus \\(-\\chi\\nabla\\cdot(b\\nabla n)\\), karena hukum neraca memakai \\(-\\nabla\\cdot\\vec\\jmath_b\\). Dengan batas tanpa fluks, reaksi harus saling hapus dalam \\(d\\int(n+b/Y)/dt\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Bedakan koefisien difusi nutrien dari koefisien difusi bakteri dan tetapkan fluks masing-masing.",
+            "formula": "\\vec\\jmath_n=-D_n\\nabla n,\\qquad\\vec\\jmath_b=\\chi b\\nabla n-D\\nabla b"
+          },
+          {
+            "explanation": "Faktor \\(b\\) pada fluks kemotaktik diperlukan agar tidak ada arus bakteri ketika \\(b=0\\); bentuk tercetak pada sumber tanpa faktor ini dikoreksi dalam edisi terjemahan.",
+            "formula": "b=0\\quad\\Longrightarrow\\quad\\vec\\jmath_b=0"
+          },
+          {
+            "explanation": "Pilih hukum aksi massa sederhana untuk konsumsi nutrien dan hubungkan pertumbuhan bakteri melalui faktor hasil \\(Y\\).",
+            "formula": "R_n=-\\kappa bn,\\qquad R_b=Y\\kappa bn"
+          },
+          {
+            "explanation": "Masukkan fluks dan reaksi ke hukum neraca \\(u_t=R_u-\\nabla\\cdot\\vec\\jmath_u\\).",
+            "formula": "\\begin{aligned}\\partial_t n&=D_n\\Delta n-\\kappa bn,\\\\\\partial_t b&=D\\Delta b-\\chi\\nabla\\cdot(b\\nabla n)+Y\\kappa bn.\\end{aligned}"
+          },
+          {
+            "explanation": "Tutup masalah nilai awal-batas pada domain \\(\\Omega\\) dengan salah satu pilihan yang konsisten.",
+            "formula": "n(\\vec x,0)=n_0\\ge0,\\quad b(\\vec x,0)=b_0\\ge0,\\quad\\vec\\jmath_n\\cdot\\vec\\nu=\\vec\\jmath_b\\cdot\\vec\\nu=0\\text{ pada }\\partial\\Omega"
+          },
+          {
+            "explanation": "Periksa neraca total nutrien ekuivalen ketika tidak ada fluks melalui batas.",
+            "formula": "\\frac d{dt}\\int_\\Omega\\left(n+\\frac bY\\right)dV=0"
+          }
+        ],
+        "conclusion": "Model ini menggabungkan difusi nutrien, difusi acak bakteri, drift menuju gradien nutrien, konsumsi, dan pertumbuhan dalam satu penutupan minimal yang tanda serta neracanya dapat diperiksa."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH09-P04",
+      "ordinal": 4,
+      "problem_summary": "Untuk bakteri kemotaktik pada Soal 3, jelaskan cara memodifikasi gerak acak setiap bakteri pada tingkat mikroskopis agar partikel secara statistik bergerak menuju konsentrasi nutrien yang lebih tinggi.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH09-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "chemotactic",
+        "\\vec \\jmath = \\chi \\vec \\nabla n - D \\vec \\nabla b"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-09-open-diffusion.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Pertahankan komponen acaknya, tetapi beri bobot lebih besar kepada arah yang berakhir pada nilai nutrien lebih tinggi. Gunakan normalisasi yang menjamin semua peluang positif dan berjumlah satu."
+      },
+      "check": {
+        "type": "qualitative_biased_microscopic_chemotactic_walk",
+        "final_answer": "Pada kisi \\(d\\)-dimensi dengan panjang langkah \\(\\ell\\), salah satu aturan yang sah adalah memilih arah \\(\\vec e\\in\\{\\pm\\vec e_1,\\ldots,\\pm\\vec e_d\\}\\) dengan peluang \\(P(\\vec e\\mid\\vec x)=\\exp\\{\\beta[n(\\vec x+\\ell\\vec e)-n(\\vec x)]\\}/\\sum_{\\vec e'}\\exp\\{\\beta[n(\\vec x+\\ell\\vec e')-n(\\vec x)]\\}\\), dengan \\(\\beta>0\\). Aturan ini tetap acak, tetapi memihak langkah menaiki gradien nutrien. Untuk gradien lemah, \\(P(\\vec e\\mid\\vec x)=1/(2d)+(\\beta\\ell/(2d))\\vec e\\cdot\\nabla n+O(\\ell^2)\\), sehingga \\(E[\\Delta\\vec X\\mid\\vec x]=(\\beta\\ell^2/d)\\nabla n+O(\\ell^3)\\). Dalam limit banyak partikel, drift ini menyumbang fluks sebanding dengan \\(b\\nabla n\\), sedangkan bagian acak menyumbang \\(-D\\nabla b\\).",
+        "quick_check": "Pada nutrien seragam, semua \\(2d\\) arah harus berpeluang \\(1/(2d)\\). Membalik gradien harus membalik arah drift, semua peluang harus tetap nonnegatif, dan jumlah peluang harus tepat satu."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Gunakan himpunan arah kisi yang simetris agar aturan kembali menjadi gerak acak isotropik saat tidak ada sinyal nutrien.",
+            "formula": "\\mathcal E=\\{\\pm\\vec e_1,\\ldots,\\pm\\vec e_d\\}"
+          },
+          {
+            "explanation": "Ukur perubahan nutrien yang akan dialami oleh satu langkah kandidat.",
+            "formula": "\\Delta_{\\vec e}n=n(\\vec x+\\ell\\vec e)-n(\\vec x)"
+          },
+          {
+            "explanation": "Ubah perubahan itu menjadi bobot positif dan normalkan.",
+            "formula": "P(\\vec e\\mid\\vec x)=\\frac{e^{\\beta\\Delta_{\\vec e}n}}{\\sum_{\\vec e'\\in\\mathcal E}e^{\\beta\\Delta_{\\vec e'}n}}"
+          },
+          {
+            "explanation": "Ekspansi gradien lemah memperlihatkan bias arah secara eksplisit.",
+            "formula": "P(\\vec e\\mid\\vec x)=\\frac1{2d}+\\frac{\\beta\\ell}{2d}\\vec e\\cdot\\nabla n+O(\\ell^2)"
+          },
+          {
+            "explanation": "Jumlahkan perpindahan berbobot untuk memperoleh drift rata-rata satu langkah.",
+            "formula": "\\mathbb E[\\Delta\\vec X\\mid\\vec x]=\\ell\\sum_{\\vec e\\in\\mathcal E}\\vec eP(\\vec e\\mid\\vec x)=\\frac{\\beta\\ell^2}{d}\\nabla n+O(\\ell^3)"
+          }
+        ],
+        "conclusion": "Kemotaksis mikroskopis dapat dimodelkan sebagai gerak acak berbias, bukan gerak deterministik: bakteri masih dapat bergerak ke segala arah, tetapi rata-rata drift-nya menuju nutrien yang lebih tinggi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH09-P05",
+      "ordinal": 5,
+      "problem_summary": "Untuk gerak acak satu dimensi dengan langkah satu satuan, peluang ke kanan \\(p\\), dan peluang ke kiri \\(1-p\\), tentukan perpindahan bertanda rata-rata setelah \\(N\\) langkah serta bedakan drift tersebut dari simpangan khas di sekitar rata-rata.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH09-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "p",
+        "1-p",
+        "1/2",
+        "N"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-09-open-diffusion.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Nyatakan langkah ke-\\(i\\) sebagai \\(X_i\\in\\{-1,+1\\}\\) dan posisi sebagai \\(S_N=\\sum_iX_i\\). Hitung \\(E[X_i]\\) dan \\(E[X_i^2]\\) sebelum memakai aditivitas nilai harapan dan varians."
+      },
+      "check": {
+        "type": "exact_biased_unit_random_walk_moments",
+        "final_answer": "Dengan langkah independen \\(X_i=+1\\) berpeluang \\(p\\) dan \\(X_i=-1\\) berpeluang \\(1-p\\), diperoleh \\(E[X_i]=2p-1\\) dan \\(\\operatorname{Var}(X_i)=4p(1-p)\\). Maka untuk \\(S_N=\\sum_{i=1}^NX_i\\), \\(E[S_N]=N(2p-1)\\), \\(\\operatorname{Var}(S_N)=4Np(1-p)\\), dan simpangan bakunya \\(\\sigma_N=2\\sqrt{Np(1-p)}\\). Jadi posisi tipikal adalah \\(N(2p-1)+O(\\sqrt N)\\). Jika \\(p\\ne1/2\\), drift berorde \\(N\\) akhirnya mendominasi sebaran berorde \\(\\sqrt N\\); jika \\(p=1/2\\), rata-ratanya nol tetapi jarak tipikal dari titik awal berorde \\(\\sqrt N\\), dengan \\(\\sigma_N=\\sqrt N\\).",
+        "quick_check": "Untuk \\(p=1\\) hasilnya harus \\(S_N=N\\) tanpa varians; untuk \\(p=0\\), \\(S_N=-N\\); dan untuk \\(p=1/2\\), nilai harapan nol serta varians \\(N\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Modelkan setiap langkah sebagai variabel acak bertanda satu satuan.",
+            "formula": "P(X_i=1)=p,\\qquad P(X_i=-1)=1-p"
+          },
+          {
+            "explanation": "Hitung dua momen pertama satu langkah.",
+            "formula": "\\mathbb E[X_i]=p-(1-p)=2p-1,\\qquad\\mathbb E[X_i^2]=1"
+          },
+          {
+            "explanation": "Kurangi kuadrat rata-rata untuk memperoleh varians satu langkah.",
+            "formula": "\\operatorname{Var}(X_i)=1-(2p-1)^2=4p(1-p)"
+          },
+          {
+            "explanation": "Gunakan independensi untuk menjumlahkan nilai harapan dan varians.",
+            "formula": "\\mathbb E[S_N]=N(2p-1),\\qquad\\operatorname{Var}(S_N)=4Np(1-p)"
+          },
+          {
+            "explanation": "Bedakan lokasi pusat distribusi dari lebar tipikalnya.",
+            "formula": "\\sigma_N=2\\sqrt{Np(1-p)},\\qquad S_N=N(2p-1)+O(\\sigma_N)"
+          },
+          {
+            "explanation": "Jika yang diminta adalah jarak kuadrat rata-rata dari titik awal, gabungkan drift dan varians.",
+            "formula": "\\mathbb E[S_N^2]=N^2(2p-1)^2+4Np(1-p)"
+          }
+        ],
+        "conclusion": "Bias menghasilkan perpindahan terarah linear dalam \\(N\\), sementara ketidakpastian difusif di sekitar perpindahan rata-rata hanya tumbuh seperti \\(\\sqrt N\\)."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH09-P06",
+      "ordinal": 6,
+      "problem_summary": "Untuk lintasan heteroklinik pada Gambar 9.2 dengan \\(c=1\\), sketsakan \\(v(\\xi)\\) dan jelaskan mengapa profil tersebut tidak dapat merepresentasikan kepadatan populasi.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH09-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d}{d \\xi} \\left(\\begin{array}{c}v \\\\ w\\end{array} \\right) = \\left( \\begin{array}{c} w \\\\ - c w - v (1 - v) \\end{array} \\right). \\qquad (9.10)",
+        "c=1"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-09-open-diffusion.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Ingat bahwa \\(w=dv/d\\xi\\). Hitung nilai eigen di \\((0,0)\\) untuk \\(c=1\\), lalu terjemahkan putaran lintasan pada bidang \\((v,w)\\) menjadi perubahan tanda dan ekstrem berulang pada grafik \\(v(\\xi)\\)."
+      },
+      "check": {
+        "type": "fisher_c1_oscillatory_negative_profile",
+        "final_answer": "Untuk \\(c=1\\), nilai eigen titik asal adalah \\(\\lambda=(-1\\pm i\\sqrt3)/2\\), sehingga titik asal merupakan spiral stabil. Sepanjang orbit heteroklinik, \\(v(-\\infty)=1\\) dan \\(v(\\infty)=0\\), tetapi ketika mendekati nol profil berosilasi dengan amplitudo yang meluruh: \\(v(\\xi)\\sim e^{-\\xi/2}[A\\cos(\\sqrt3\\xi/2)+B\\sin(\\sqrt3\\xi/2)]\\). Karena profil nontrivial ini berulang kali melintasi \\(v=0\\), ia mengambil nilai negatif. Kepadatan populasi harus nonnegatif, sehingga profil gelombang berjalan untuk \\(c=1\\) tidak dapat diterima sebagai profil kepadatan.",
+        "quick_check": "Diskriminan harus \\(1-4=-3<0\\). Sketsa harus berawal mendekati \\(1\\), menuju nol dengan osilasi teredam, dan memperlihatkan paling sedikit satu lintasan ke wilayah \\(v<0\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Gunakan titik ujung orbit heteroklinik untuk menetapkan batas profil.",
+            "formula": "(v,w):(1,0)\\longrightarrow(0,0)\\quad\\Longrightarrow\\quad v(-\\infty)=1,\\ v(+\\infty)=0"
+          },
+          {
+            "explanation": "Linearisasi di titik asal untuk \\(c=1\\).",
+            "formula": "J_0=\\begin{pmatrix}0&1\\\\-1&-1\\end{pmatrix},\\qquad\\lambda^2+\\lambda+1=0"
+          },
+          {
+            "explanation": "Akar kompleks dengan bagian real negatif menghasilkan spiral stabil.",
+            "formula": "\\lambda_{\\pm}=\\frac{-1\\pm i\\sqrt3}{2}"
+          },
+          {
+            "explanation": "Komponen \\(v\\) karena itu memiliki ekor osilatori teredam.",
+            "formula": "v(\\xi)\\sim e^{-\\xi/2}\\left[A\\cos\\left(\\frac{\\sqrt3}{2}\\xi\\right)+B\\sin\\left(\\frac{\\sqrt3}{2}\\xi\\right)\\right]"
+          },
+          {
+            "explanation": "Osilasi nontrivial di sekitar nol memaksa perubahan tanda.",
+            "formula": "\\exists\\,\\xi:\\quad v(\\xi)<0"
+          }
+        ],
+        "conclusion": "Orbit bidang fase memang merupakan koneksi heteroklinik matematis, tetapi ekornya yang negatif melanggar syarat dasar \\(v\\ge0\\) bagi kepadatan populasi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH09-P07",
+      "ordinal": 7,
+      "problem_summary": "Untuk lintasan heteroklinik pada Gambar 9.3 dengan \\(c=3\\), sketsakan profil \\(v(\\xi)\\).",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH09-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d}{d \\xi} \\left(\\begin{array}{c}v \\\\ w\\end{array} \\right) = \\left( \\begin{array}{c} w \\\\ - c w - v (1 - v) \\end{array} \\right). \\qquad (9.10)",
+        "c=3"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-09-open-diffusion.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Gunakan \\(w=dv/d\\xi\\), nilai eigen real di titik asal, dan posisi orbit heteroklinik pada setengah bidang \\(w<0\\). Periksa juga apa yang terjadi pada \\(w'\\) jika lintasan menyentuh \\(w=0\\) dengan \\(0<v<1\\)."
+      },
+      "check": {
+        "type": "fisher_c3_monotone_nonnegative_front",
+        "final_answer": "Untuk \\(c=3\\), nilai eigen titik asal adalah \\(\\lambda_{\\pm}=(-3\\pm\\sqrt5)/2<0\\), sehingga titik asal merupakan simpul stabil. Orbit heteroklinik yang relevan memenuhi \\(v(-\\infty)=1\\), \\(v(+\\infty)=0\\), \\(0<v<1\\), dan \\(w=v'<0\\); jadi sketsanya berupa muka gelombang halus yang menurun monoton dari \\(1\\) ke \\(0\\) tanpa osilasi atau nilai negatif. Di ekor muka gelombang, peluruhan generiknya mengikuti arah lambat \\(v(\\xi)\\sim C\\exp[(-3+\\sqrt5)\\xi/2]\\) dengan \\(C>0\\).",
+        "quick_check": "Diskriminan harus \\(9-4=5>0\\), kedua nilai eigen harus negatif, dan sketsa tidak boleh melampaui \\(v=0\\) atau berosilasi."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Baca kondisi ujung dari orientasi orbit heteroklinik.",
+            "formula": "(v,w):(1,0)\\longrightarrow(0,0)\\quad\\Longrightarrow\\quad v(-\\infty)=1,\\ v(+\\infty)=0"
+          },
+          {
+            "explanation": "Linearisasi di titik asal untuk \\(c=3\\).",
+            "formula": "J_0=\\begin{pmatrix}0&1\\\\-1&-3\\end{pmatrix},\\qquad\\lambda^2+3\\lambda+1=0"
+          },
+          {
+            "explanation": "Dua akar real negatif mengklasifikasikan titik asal sebagai simpul stabil.",
+            "formula": "\\lambda_{\\pm}=\\frac{-3\\pm\\sqrt5}{2}<0"
+          },
+          {
+            "explanation": "Cabang heteroklinik yang relevan meninggalkan \\((1,0)\\) dengan \\(w<0\\). Jika menyentuh \\(w=0\\) ketika \\(0<v<1\\), medan vektor menunjuk kembali ke \\(w<0\\), sehingga cabang tidak dapat menyeberang dari \\(w<0\\) ke \\(w>0\\).",
+            "formula": "w=0,\\ 0<v<1\\quad\\Longrightarrow\\quad w'=-v(1-v)<0"
+          },
+          {
+            "explanation": "Karena \\(v'=w<0\\), profil menurun tanpa pembalikan dan tetap berada pada rentang fisik.",
+            "formula": "1>v(\\xi)>0,\\qquad v'(\\xi)<0"
+          }
+        ],
+        "conclusion": "Untuk \\(c=3>2\\), koneksi heteroklinik menghasilkan muka gelombang populasi yang monoton dan nonnegatif, berbeda dari ekor osilatori tak fisik pada \\(c=1\\)."
+      }
+    }
+  ]
+}
