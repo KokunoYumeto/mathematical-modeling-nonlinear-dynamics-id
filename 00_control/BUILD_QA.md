@@ -592,3 +592,20 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
 - Every earlier completed unit (CH01, CH02, PT02, CH03, CH04, PT03, CH05,
   CH06, CH07, and PT04) passed a fresh deterministic structure/backend/locality/
   accessibility/package regression after the Chapter 8 pipeline additions.
+
+## Public readback — Chapter 8 and Chapter 9 authority — 2026-08-22
+
+- Production commit: `a3a1e1412a45b199b4b8e5dd22da352486991037`.
+- `git push origin main` advanced the public branch from `57e9565` to
+  `a3a1e14`; `git ls-remote origin refs/heads/main` returned the exact local
+  40-character commit.
+- All 43 changed files were fetched anonymously from immutable GitHub raw URLs
+  and compared with committed local counterparts: 2,369,575 local bytes,
+  2,369,575 public bytes, zero byte-count mismatches, and zero SHA-256
+  mismatches.
+- The ordered `path<TAB>bytes<TAB>sha256` public inventory has SHA-256
+  `a1b5285726f9fa6325432afe7363de65b2e9f621d678619d44418e4c5e561c77`.
+  Coverage includes the complete Chapter 8 translation, assets, notebook,
+  mastery/backend, reader package, correction/terminology records, pipeline,
+  reader-facing status and recovery controls, plus the complete frozen Chapter
+  9 authority record and its three source rasters.

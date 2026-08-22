@@ -448,7 +448,14 @@ item is Chapter 10, record 194, *Pattern Formation*.
   opaque white canvases, all 45 IDs were unique, every fragment resolved, all
   39 disclosure widgets rendered, and the Problem 13 target landed at 80.08 px
   below the 45.05 px sticky navigation. External-link reachability was not
-  tested; no audio/live widget exists.
+  tested; no audio/live widget exists. The final warning/error console log was
+  empty.
+- Published production commit:
+  `a3a1e1412a45b199b4b8e5dd22da352486991037` on `origin/main`. Remote-head
+  equality passed. Anonymous immutable-commit readback covered all 43 changed
+  files / 2,369,575 bytes with zero byte-count or SHA-256 mismatches; the
+  ordered inventory SHA-256 is
+  `a1b5285726f9fa6325432afe7363de65b2e9f621d678619d44418e4c5e561c77`.
 
 ## Frozen Chapter 9 boundary
 
