@@ -395,3 +395,26 @@ The structure/backend/locality QA command returned exit 0 for all seven
 earlier units after propagation. Chapter 6 then passed a fresh complete
 notebook-executing deterministic double build. Its desktop/mobile browser pass
 validated the visible anchor behavior on the final stylesheet bytes.
+
+## Public readback — Chapter 6 and anchor-offset propagation — 2026-08-22
+
+- Production commit: `b6155217be51f0bbe6acd67ba1cbafacbe657260`.
+- `git push origin main` advanced the public branch from `77154cb` to
+  `b615521`; `git ls-remote origin refs/heads/main` returned the exact local
+  40-character commit.
+- Eleven files were fetched anonymously from the immutable GitHub raw URL and
+  compared in memory with their committed local counterparts. Every byte count
+  and SHA-256 matched: Chapter 6 source HTML; reader HTML; package manifest;
+  notebook; a source figure; mastery JSON; unit JSON; segment JSONL; shared
+  reader CSS; the frozen Chapter 7 authority manifest; and Chapter 5's updated
+  package manifest.
+- Key public hashes: source HTML
+  `67e09680f3a67626a2a6761dd4376202985d87a06bdea72dbbd59978b9b08564`;
+  reader HTML
+  `af00599bb9b30e09795640c243274bada010481fadbb8ead284d32c12851473d`;
+  package manifest
+  `7a5b5b3d80871ba4f1411fd693a2cb351befa7bab8c0cda11c55999585605b44`;
+  notebook
+  `2bb805326ad45bfb90a914dbd2eb12b5a579e63d0cb60cdce8f4f6c8928eb33a`;
+  and shared CSS
+  `855b0177868a8c3d32ceffee55adfa8f738f8b2116581ca460acaa3e734789ee`.

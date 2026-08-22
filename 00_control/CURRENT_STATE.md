@@ -325,6 +325,12 @@ Effects*.
   overflow was zero, all four images loaded without enlargement, all 34 IDs
   were unique, every fragment resolved, and a fresh load had no console warning
   or error. Figure-return links land below the sticky navigation.
+- Published production commit:
+  `b6155217be51f0bbe6acd67ba1cbafacbe657260` on `origin/main`. Remote-head
+  equality passed. Eleven anonymous immutable-commit GitHub raw-byte
+  comparisons matched local byte counts and SHA-256 hashes for the target,
+  reader, manifest, notebook, source figure, mastery, unit/segment backend,
+  shared CSS, Chapter 7 authority, and representative Chapter 5 reflow.
 
 ## Next action
 
