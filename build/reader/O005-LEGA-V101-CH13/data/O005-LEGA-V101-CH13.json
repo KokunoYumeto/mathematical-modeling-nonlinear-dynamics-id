@@ -25,7 +25,7 @@
   "segments": {
     "count": 546,
     "path": "backend/segments/O005-LEGA-V101-CH13.segments.jsonl",
-    "sha256": "d824d63da00be5f49f1d45f0cc6465c80b7e09efb2c106cb546b580a0120acbb"
+    "sha256": "1c99087627709c1c241026810835d2367b4939ddc9c14e583b172569be20bad8"
   },
   "source": {
     "author": "Joceline Lega",
@@ -39,7 +39,7 @@
   "source_language": "en",
   "target": {
     "content_path": "source/id-ID/O005-LEGA-V101-CH13/content.html",
-    "content_sha256": "90e45dbcb0e3c95a5f9ca07a1533886c4bee99b71530fe18f7b245a128bcc46b",
+    "content_sha256": "30613acec8b5e75260848c0159aac20b7ed531f407b8e6f59fa3a36910f88fc9",
     "figures": [
       {
         "path": "source/id-ID/O005-LEGA-V101-CH13/assets/phase-stable-node-source.png",

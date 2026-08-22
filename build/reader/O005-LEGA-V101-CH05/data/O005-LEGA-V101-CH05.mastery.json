@@ -699,11 +699,11 @@
         "solution_or_rubric": "new_original"
       },
       "hint": {
-        "text": "Tulis \\(s_J=1-d_J\\), \\(s_A=1-d_A\\), dan \\(\\mathcal R_0=bs_J/d_A\\). Pada titik tetap positif, persamaan kedua memberi \\(J^*=d_AA^*/s_J\\). Untuk kestabilan diskret, gunakan kriteria Jury pada polinom karakteristik Jacobian."
+        "text": "Tulis \\(s_J=1-d_J\\), \\(s_A=1-d_A\\), dan \\(\\mathcal R_0=bs_J/d_A\\). Pada titik tetap positif, persamaan kedua memberi \\(J^*=d_AA^*/s_J\\). Untuk kestabilan diskret, gunakan kriteria Jury pada polinom karakteristik matriks Jacobi."
       },
       "check": {
         "type": "exact_fixed_points_and_discrete_stability",
-        "final_answer": "Model menggambarkan dewasa yang menghasilkan juvenil dengan kelangsungan hidup telur \\(e^{-cA}\\), juvenil yang bertahan/matang dengan peluang \\(1-d_J\\), dan dewasa yang bertahan dengan peluang \\(1-d_A\\). Untuk \\(b,c>0\\), \\(0<d_A\\le1\\), dan \\(0\\le d_J<1\\), tetapkan \\(\\mathcal R_0=b(1-d_J)/d_A\\). Titik nol stabil jika \\(\\mathcal R_0<1\\), nonhiperbolik pada \\(\\mathcal R_0=1\\), dan takstabil jika \\(\\mathcal R_0>1\\). Titik positif ada tepat ketika \\(\\mathcal R_0>1\\), dengan \\(A^*=c^{-1}\\ln\\mathcal R_0\\) dan \\(J^*=d_AA^*/(1-d_J)\\). Titik positif stabil jika \\(0<\\ln\\mathcal R_0<1+1/d_A\\). Pada kesamaan, determinan Jacobian bernilai 1 dan sepasang nilai eigen kompleks mencapai lingkaran satuan; untuk nilai lebih besar titik itu takstabil. Penyebutan bifurkasi Neimark–Sacker memerlukan syarat nondegenerasi tambahan.",
+        "final_answer": "Model menggambarkan dewasa yang menghasilkan juvenil dengan kelangsungan hidup telur \\(e^{-cA}\\), juvenil yang bertahan/matang dengan peluang \\(1-d_J\\), dan dewasa yang bertahan dengan peluang \\(1-d_A\\). Untuk \\(b,c>0\\), \\(0<d_A\\le1\\), dan \\(0\\le d_J<1\\), tetapkan \\(\\mathcal R_0=b(1-d_J)/d_A\\). Titik nol stabil jika \\(\\mathcal R_0<1\\), nonhiperbolik pada \\(\\mathcal R_0=1\\), dan takstabil jika \\(\\mathcal R_0>1\\). Titik positif ada tepat ketika \\(\\mathcal R_0>1\\), dengan \\(A^*=c^{-1}\\ln\\mathcal R_0\\) dan \\(J^*=d_AA^*/(1-d_J)\\). Titik positif stabil jika \\(0<\\ln\\mathcal R_0<1+1/d_A\\). Pada kesamaan, determinan matriks Jacobi bernilai 1 dan sepasang nilai eigen kompleks mencapai lingkaran satuan; untuk nilai lebih besar titik itu takstabil. Penyebutan bifurkasi Neimark–Sacker memerlukan syarat nondegenerasi tambahan.",
         "quick_check": "Substitusi titik positif harus memberi \\(b(1-d_J)e^{-cA^*}=d_A\\). Syarat kestabilan tidak boleh diterapkan sebagai uji ODE; ini pemetaan diskret dan memerlukan semua nilai eigen di dalam lingkaran satuan."
       },
       "solution_or_rubric": {
@@ -722,7 +722,7 @@
             "formula": "bs_Je^{-cA^*}=d_A\\quad\\Longrightarrow\\quad A^*=\\frac1c\\ln\\mathcal R_0"
           },
           {
-            "explanation": "Jacobian di titik nol mempunyai polinom karakteristik yang lulus kriteria Jury tepat di bawah ambang reproduksi.",
+            "explanation": "matriks Jacobi di titik nol mempunyai polinom karakteristik yang lulus kriteria Jury tepat di bawah ambang reproduksi.",
             "formula": "p_0(\\lambda)=\\lambda^2-s_A\\lambda-bs_J,\\qquad \\rho(D F(0,0))<1\\iff bs_J<d_A"
           },
           {

@@ -6,7 +6,7 @@
   "course_id": "C120",
   "language": "id-ID",
   "mastery_path": "backend/mastery/O005-LEGA-V101-CH06.mastery.json",
-  "mastery_sha256": "898e4b224ca73073a20a8fb87021d305d00be53f43729eb10d9717cc39dba1b4",
+  "mastery_sha256": "37b40bcc2e3e6b796fbc20fbe290aeeefdfe0a2c428d16347c5b19608b94b388",
   "notebook_path": "source/id-ID/O005-LEGA-V101-CH06/notebooks/chapter-06-open-two-species-models.ipynb",
   "notebook_sha256": "2bb805326ad45bfb90a914dbd2eb12b5a579e63d0cb60cdce8f4f6c8928eb33a",
   "problems": [
@@ -22,7 +22,7 @@
   "segments": {
     "count": 211,
     "path": "backend/segments/O005-LEGA-V101-CH06.segments.jsonl",
-    "sha256": "f6e18702e5d7c5ed521a487b5439d888f942b052fda194cbc16217feacc0eecf"
+    "sha256": "fae53a83ef41ebc3bb6b7d2f0757ad6d227ef9cc44274b06c8d1f8a57721ecaf"
   },
   "source": {
     "author": "Joceline Lega",
@@ -36,7 +36,7 @@
   "source_language": "en",
   "target": {
     "content_path": "source/id-ID/O005-LEGA-V101-CH06/content.html",
-    "content_sha256": "67e09680f3a67626a2a6761dd4376202985d87a06bdea72dbbd59978b9b08564",
+    "content_sha256": "7d983a2e265c7a0201f62b5fd1d4643de0bf899585175bab8a19a0ff28b9be25",
     "figures": [
       {
         "path": "source/id-ID/O005-LEGA-V101-CH06/assets/predator-prey-damped-source.png",

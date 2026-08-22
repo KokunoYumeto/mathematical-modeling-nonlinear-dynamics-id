@@ -104,7 +104,7 @@
         "solution_or_rubric": "new_original"
       },
       "hint": {
-        "text": "Dari \\(v'=0\\), gunakan \\(y=\\mu v\\). Persamaan \\(y'=0\\) lalu memfaktorkan \\(v(x-\\eta\\mu)=0\\). Pada titik bebas infeksi, Jacobian mempunyai satu nilai eigen \\(-1\\) dan satu blok \\(2\\times2\\)."
+        "text": "Dari \\(v'=0\\), gunakan \\(y=\\mu v\\). Persamaan \\(y'=0\\) lalu memfaktorkan \\(v(x-\\eta\\mu)=0\\). Pada titik bebas infeksi, matriks Jacobi mempunyai satu nilai eigen \\(-1\\) dan satu blok \\(2\\times2\\)."
       },
       "check": {
         "type": "exact_viral_equilibria_and_threshold",
@@ -131,7 +131,7 @@
             "formula": "v=\\frac{\\zeta}{\\eta\\mu}-1,\\qquad y=\\mu v=\\frac{\\zeta-\\eta\\mu}{\\eta}"
           },
           {
-            "explanation": "Evaluasi Jacobian pada titik bebas infeksi dan pisahkan arah \\(x\\).",
+            "explanation": "Evaluasi matriks Jacobi pada titik bebas infeksi dan pisahkan arah \\(x\\).",
             "formula": "J(E_0)=\\begin{pmatrix}-1&0&-\\zeta\\\\0&-\\eta&\\zeta\\\\0&1&-\\mu\\end{pmatrix}"
           },
           {
@@ -224,7 +224,7 @@
             "formula": "q=\\eta+\\delta,\\qquad 0<q<1"
           },
           {
-            "explanation": "Baca jejak dan determinan dari Jacobian yang tercetak.",
+            "explanation": "Baca jejak dan determinan dari matriks Jacobi yang tercetak.",
             "formula": "T=-\\frac\\eta q<0,\\qquad D=\\eta(1-q)>0"
           },
           {

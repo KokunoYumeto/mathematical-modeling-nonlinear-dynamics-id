@@ -13,9 +13,9 @@
   ],
   "language": "id-ID",
   "mastery_path": "backend/mastery/O005-LEGA-V101-CH10.mastery.json",
-  "mastery_sha256": "3130aaa0d8efd70f2fc90c4c0568268579cbe05634b8a3abbc29d90b158fb257",
+  "mastery_sha256": "c631df78ec27e473da5c31eb7fbb6d0d833218e593b5678cadaab8722a12ecd7",
   "notebook_path": "source/id-ID/O005-LEGA-V101-CH10/notebooks/chapter-10-open-pattern-formation.ipynb",
-  "notebook_sha256": "95a6aadcb565f6b78542065520e6bc5ee775387dd21b1a31b3de2b5cfc0dab50",
+  "notebook_sha256": "ccf2331e60f7f76d33785820727cfad072d34e3e92f12d778747ab351f1188df",
   "problems": [
     "O005-LEGA-V101-CH10-P01",
     "O005-LEGA-V101-CH10-P02",

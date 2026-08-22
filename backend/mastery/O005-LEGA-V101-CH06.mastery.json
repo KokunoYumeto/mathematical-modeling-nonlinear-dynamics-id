@@ -171,7 +171,7 @@
             "formula": "ab<1:\\ y_3<0;\\qquad ab>1:\\ x_3<0;\\qquad ab=1:\\ P_3\\text{ tidak ada}"
           },
           {
-            "explanation": "Evaluasi Jacobian pada tiga titik tetap biologis.",
+            "explanation": "Evaluasi matriks Jacobi pada tiga titik tetap biologis.",
             "formula": "\\sigma(J(P_0))=\\{1,c\\},\\quad \\sigma(J(P_1))=\\{-1,c(1-b)\\},\\quad \\sigma(J(P_2))=\\{1-a,-c\\}"
           },
           {
@@ -211,7 +211,7 @@
       },
       "check": {
         "type": "exact_fixed_points_eigenvalues_and_biological_audit",
-        "final_answer": "Dalam kuadran nonnegatif terdapat dua titik tetap: \\((4,0)\\) dan \\((2,1)\\). Jacobian ialah \\(J(x,y)=\\begin{pmatrix}-1-y&-x\\\\-y&-x+1+2y\\end{pmatrix}\\). Di \\((4,0)\\), nilai eigennya \\(-1,-3\\), sehingga titik itu simpul stabil. Di \\((2,1)\\), nilai eigennya \\((-1-\\sqrt{17})/2\\) dan \\((-1+\\sqrt{17})/2\\), sehingga titik itu pelana. Kuadran nonnegatif invarian, tetapi model tidak terumuskan baik secara global untuk semua keadaan biologis: \\(x(t)\\le\\max\\{x_0,4\\}\\), sedangkan untuk \\(y\\) cukup besar berlaku \\(\\dot y\\ge y^2/2\\), sehingga beberapa solusi meledak dalam waktu hingga. Karena itu model hanya mungkin menjadi pendekatan lokal; suku \\(+y^2\\) memerlukan mekanisme pembatas untuk model populasi global.",
+        "final_answer": "Dalam kuadran nonnegatif terdapat dua titik tetap: \\((4,0)\\) dan \\((2,1)\\). matriks Jacobi ialah \\(J(x,y)=\\begin{pmatrix}-1-y&-x\\\\-y&-x+1+2y\\end{pmatrix}\\). Di \\((4,0)\\), nilai eigennya \\(-1,-3\\), sehingga titik itu simpul stabil. Di \\((2,1)\\), nilai eigennya \\((-1-\\sqrt{17})/2\\) dan \\((-1+\\sqrt{17})/2\\), sehingga titik itu pelana. Kuadran nonnegatif invarian, tetapi model tidak terumuskan baik secara global untuk semua keadaan biologis: \\(x(t)\\le\\max\\{x_0,4\\}\\), sedangkan untuk \\(y\\) cukup besar berlaku \\(\\dot y\\ge y^2/2\\), sehingga beberapa solusi meledak dalam waktu hingga. Karena itu model hanya mungkin menjadi pendekatan lokal; suku \\(+y^2\\) memerlukan mekanisme pembatas untuk model populasi global.",
         "quick_check": "Jejak dan determinan harus \\((-4,3)\\) di \\((4,0)\\) dan \\((-1,-4)\\) di \\((2,1)\\). Pada batas \\(x=0\\), \\(\\dot x=4>0\\); pada batas \\(y=0\\), \\(\\dot y=0\\)."
       },
       "solution_or_rubric": {

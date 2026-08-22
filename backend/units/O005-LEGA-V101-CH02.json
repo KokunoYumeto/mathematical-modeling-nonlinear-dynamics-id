@@ -6,7 +6,7 @@
   "course_id": "C120",
   "language": "id-ID",
   "mastery_path": "backend/mastery/O005-LEGA-V101-CH02.mastery.json",
-  "mastery_sha256": "46c7f337c6fe93a0adfce03d65df4f35c9f0341b5c4c0f486bc14145f85b6296",
+  "mastery_sha256": "1019fa30ac69bb4fb165000254dfd66ce80e97c501c1d636b3f853d9b3269b53",
   "notebook_path": "source/id-ID/O005-LEGA-V101-CH02/notebooks/chapter-02-open-wave-simulation.ipynb",
   "notebook_sha256": "8e31dc2dfaa61b3e0f76dd04b29867fcadd303490622a8ea0e1f5ad77f2ce517",
   "problems": [

@@ -1,0 +1,68 @@
+{
+  "schema": "o005-figshare-publication-receipt-v2",
+  "verified_at": "2026-08-22T21:54:49+02:00",
+  "boundary": "O005-LEGA-V101-CH14",
+  "status": "published_metadata_link_and_anonymously_verified",
+  "license_decision": {
+    "account_license_count": 7,
+    "exact_cc_by_nc_sa_4_0_available": false,
+    "figshare_license": "CC0",
+    "figshare_license_id": 2,
+    "scope": "metadata_only",
+    "linked_work_license": "CC BY-NC-SA 4.0",
+    "release_bytes_uploaded": false,
+    "reason": "Figshare applies one item-level license to its files, and the account's complete available-license list does not include CC BY-NC-SA 4.0. Uploading the reader under a substitute license would be false."
+  },
+  "article": {
+    "id": 33314769,
+    "version": 2,
+    "doi": "10.6084/m9.figshare.33314769.v2",
+    "doi_url": "https://doi.org/10.6084/m9.figshare.33314769.v2",
+    "public_url": "https://figshare.com/articles/online_resource/Pengantar_Pemodelan_Matematika_Edisi_Bahasa_Indonesia_metadata_/33314769/2",
+    "title": "Pengantar Pemodelan Matematika — Edisi Bahasa Indonesia",
+    "defined_type": "online resource",
+    "authors": ["Kokuno Yumeto", "Joceline Lega"],
+    "categories": [
+      "Dynamical systems in applications",
+      "Mathematics and numeracy curriculum and pedagogy"
+    ],
+    "references": [
+      "https://doi.org/10.5281/zenodo.22061640",
+      "https://doi.org/10.5281/zenodo.22059939",
+      "https://opentextbooks.library.arizona.edu/mathematicalmodeling/"
+    ],
+    "public_files": 0,
+    "is_metadata_record": true,
+    "standalone_ttp_occurrences_in_title_and_description": 0,
+    "incomplete_status_disclosed": true,
+    "cc0_metadata_only_disclosed": true,
+    "linked_work_license_disclosed": true,
+    "model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
+    "model_identification_anonymously_verified": true,
+    "doi_redirect_verified": true
+  },
+  "project": {
+    "id": 280296,
+    "url": "https://figshare.com/projects/Open_and_Share-Alike_Educational_Materials_Translations/280296",
+    "anonymous_membership_verified": true,
+    "public_article_count_at_verification": 25,
+    "public_files_at_size_gate": 73,
+    "public_bytes_at_size_gate": 212175199,
+    "project_cap_bytes": 20000000000,
+    "cap_passed": true
+  },
+  "collection": {
+    "id": 8668413,
+    "title": "Indonesian Mathematics — Reader PDFs",
+    "verified_version": 37,
+    "doi": "10.6084/m9.figshare.c.8668413.v37",
+    "doi_url": "https://doi.org/10.6084/m9.figshare.c.8668413.v37",
+    "public_article_count": 21,
+    "anonymous_membership_verified": true,
+    "membership_was_additive": true,
+    "target_article_doi": "10.6084/m9.figshare.33314769.v2",
+    "doi_redirect_verified": true,
+    "description_discloses_link_only_license_fallback": true
+  },
+  "credential_material_recorded": false
+}

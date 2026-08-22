@@ -23,7 +23,7 @@
   "segments": {
     "count": 125,
     "path": "backend/segments/O005-LEGA-V101-CH01.segments.jsonl",
-    "sha256": "5fdfc7baca4367ceab409b6e55cc6a8144fd9fe39161d1b5174731420f7c9e7a"
+    "sha256": "7ee9ceeaa4117c165a4f26b13aca32405ccef8372c10a5e6a4299e2119a63944"
   },
   "source": {
     "author": "Joceline Lega",
@@ -37,7 +37,7 @@
   "source_language": "en",
   "target": {
     "content_path": "source/id-ID/O005-LEGA-V101-CH01/content.html",
-    "content_sha256": "4525a8ff80cc1d05c4d86cc11b00b53ec2d0430b9e404715625f248a7758fee3",
+    "content_sha256": "1a3d10b39dbb67b017c411e888803f2a0ac3efbfcfe6530d29fe46d2f6ef9643",
     "figure_path": "source/id-ID/O005-LEGA-V101-CH01/assets/modeling-cycle-id.svg",
     "figure_sha256": "d7183e2bfe20bb2bc72da3a39943c34feb66d60522792bbe967b2a8c89ac1d2a",
     "title": "Tentang Hakikat Pemodelan Matematika"

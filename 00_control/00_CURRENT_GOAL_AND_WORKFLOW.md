@@ -28,14 +28,19 @@ applicable, and deterministically verified. Their complete topology,
 identifiers, protected mathematics, links, figures, all 113 stable problem IDs
 and mastery records, ten open chapter notebooks, twelve open project notebooks
 and packets, and 3,400 paired segments are bound in the current state, cursor,
-and QA log. The Chapter 14 progress release is published and anonymously
-byte-verified as Zenodo DOI `10.5281/zenodo.22059940`, within concept DOI
+ and QA log. The Chapter 14 reader-first progress release is published and
+ anonymously byte-verified as Zenodo DOI `10.5281/zenodo.22061640`, within concept DOI
 `10.5281/zenodo.22059939`; future substantial boundaries must use the same
-version lineage. The immediate source-production unit is front-matter record
-22, *Preface*, as `O005-LEGA-V101-FM01`, *Prakata*, followed by Part 1 record 23
-and back-matter records 767 and 771 before the four original bridge modules.
-GitHub publication remains paused until Floris reports that the suspended
-account has been restored; preserve the unchanged local commit chain.
+version lineage. Because Figshare does not offer the work's exact
+CC BY-NC-SA 4.0 license, its public companion is a fileless CC0 metadata/link
+ item, DOI `10.6084/m9.figshare.33314769.v2`, in project `280296` and verified
+ collection version `10.6084/m9.figshare.c.8668413.v37`; CC0 applies only to the
+metadata. Later substantial boundaries update this same Figshare item rather
+than creating a competing work record. The immediate source-production unit is
+front-matter record 22, *Preface*, as `O005-LEGA-V101-FM01`, *Prakata*, followed
+by Part 1 record 23 and back-matter records 767 and 771 before the four original
+ bridge modules. GitHub publication remains paused until the user reports that the
+suspended account has been restored; preserve the unchanged local commit chain.
 
 Continue in exact frozen TOC order through all front/back matter and
 fourteen chapters: 54,932 source words, 113 exercises, twelve projects, eleven
@@ -83,5 +88,8 @@ must remain invariant across later languages.
   one separately authorized, concise, deduplicated, high-confidence issue may
   be sent, signed exactly `Codex, on instructions of the user.`
 - Public DOI/reader publication occurs at each substantial verified corpus
-  boundary as a new version of the single Zenodo concept lineage. Ordinary
-  verified production is committed locally and pushed when GitHub is available.
+  boundary as a new version of the single Zenodo concept lineage. Update the
+  single Figshare metadata/link item and republish the Indonesian collection at
+  the same boundaries; never upload work bytes there under a substitute
+  license. Ordinary verified production is committed locally and pushed when
+  GitHub is available.

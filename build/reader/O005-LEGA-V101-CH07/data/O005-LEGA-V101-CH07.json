@@ -6,7 +6,7 @@
   "course_id": "C120",
   "language": "id-ID",
   "mastery_path": "backend/mastery/O005-LEGA-V101-CH07.mastery.json",
-  "mastery_sha256": "d4e6d41a84fd2615af02e599df9ebcca1fd40a7b47152159ac501a5064785eed",
+  "mastery_sha256": "96b941b74965c44edc3529e940cdad77e1b1eb0b9065624dfbe3723204b03788",
   "notebook_path": "source/id-ID/O005-LEGA-V101-CH07/notebooks/chapter-07-open-epidemiology.ipynb",
   "notebook_sha256": "92a9cf27d48d5e7766881592095f1232cc4d2357ee5d0a46bdb871591afafce4",
   "problems": [
@@ -21,7 +21,7 @@
   "segments": {
     "count": 162,
     "path": "backend/segments/O005-LEGA-V101-CH07.segments.jsonl",
-    "sha256": "57e00551fd14bc85e072def42da47c12ad7ade11a3445578a16a303d96903e7f"
+    "sha256": "92a26ba1160e96a59eca8d54dd7d8758e95ed66b2231a2a5697ac3d6e8d2ca87"
   },
   "source": {
     "author": "Joceline Lega",
@@ -35,7 +35,7 @@
   "source_language": "en",
   "target": {
     "content_path": "source/id-ID/O005-LEGA-V101-CH07/content.html",
-    "content_sha256": "a7ea1f78c96dbdc24694bd376413e8d675e96899849f4ff2887c3c7a825918c1",
+    "content_sha256": "092c0eaeb8641895c19adb81d5688b67c2814efa37eea3c7c0d487668b37394f",
     "figures": [
       {
         "path": "source/id-ID/O005-LEGA-V101-CH07/assets/sir-phase-source.png",

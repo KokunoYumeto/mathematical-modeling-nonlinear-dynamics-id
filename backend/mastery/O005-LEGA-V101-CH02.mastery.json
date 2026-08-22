@@ -278,7 +278,7 @@
           },
           {
             "criterion": "Konsistensi",
-            "full_credit": "Menunjukkan bahwa \\(o_i=1\\), jarak seragam, dan \\(B_{ij}=1\\) menghasilkan kembali model semula; kondisi batas periodik stadion tetap ditangani dengan jelas.",
+            "full_credit": "Menunjukkan bahwa \\(o_i=1\\), jarak seragam, dan \\(B_{ij}=1\\) menghasilkan kembali model semula; syarat batas periodik stadion tetap ditangani dengan jelas.",
             "partial_credit": "Modifikasi tidak mempunyai hubungan yang dapat diperiksa dengan model semula."
           },
           {
@@ -377,11 +377,11 @@
         "solution_or_rubric": "new_original"
       },
       "hint": {
-        "text": "Buat tabel dengan baris: geometri dan kondisi batas, keadaan seorang penonton, aturan eksitasi, perjalanan waktu setelah terpicu, bobot tetangga dan arah, heterogenitas ambang, parameter, serta keluaran yang dibandingkan dengan data. Bandingkan fungsi setiap unsur, bukan hanya nama simbolnya."
+        "text": "Buat tabel dengan baris: geometri dan syarat batas, keadaan seorang penonton, aturan eksitasi, perjalanan waktu setelah terpicu, bobot tetangga dan arah, heterogenitas ambang, parameter, serta keluaran yang dibandingkan dengan data. Bandingkan fungsi setiap unsur, bukan hanya nama simbolnya."
       },
       "check": {
         "type": "qualitative_model_comparison",
-        "final_answer": "Persamaan minimum yang harus dikenali ialah bahwa kedua model memperlakukan gelombang sebagai rambatan eksitasi antarpelaku lokal, sedangkan perbedaan eksplisit utamanya terletak pada representasi keadaan: model bab memakai tingkat aktivitas kontinu yang mengikuti pulsa waktu setelah terpicu, sementara model rinci memakai \\(n\\) keadaan diskret. Jawaban penuh harus memeriksa, dari artikel, apakah geometri, kondisi batas, ambang, kernel tetangga, waktu reaksi/pemulihan, dan kalibrasinya benar-benar sama atau berbeda.",
+        "final_answer": "Persamaan minimum yang harus dikenali ialah bahwa kedua model memperlakukan gelombang sebagai rambatan eksitasi antarpelaku lokal, sedangkan perbedaan eksplisit utamanya terletak pada representasi keadaan: model bab memakai tingkat aktivitas kontinu yang mengikuti pulsa waktu setelah terpicu, sementara model rinci memakai \\(n\\) keadaan diskret. Jawaban penuh harus memeriksa, dari artikel, apakah geometri, syarat batas, ambang, kernel tetangga, waktu reaksi/pemulihan, dan kalibrasinya benar-benar sama atau berbeda.",
         "required_evidence": [
           "Sedikitnya tiga persamaan dan tiga perbedaan substantif dibandingkan pada tingkat aturan atau parameter.",
           "Perbedaan representasi waktu/keadaan kontinu-pulsa versus \\(n\\)-keadaan dijelaskan beserta akibat numeriknya.",
@@ -409,7 +409,7 @@
           },
           {
             "criterion": "Heterogenitas, geometri, dan batas",
-            "full_credit": "Membandingkan distribusi ambang, kondisi hunian, kondisi batas periodik, susunan satu dimensi, kondisi awal, dan penyederhanaan lain; menjelaskan mana yang benar-benar sama setelah model rinci direduksi ke satu dimensi.",
+            "full_credit": "Membandingkan distribusi ambang, kondisi hunian, syarat batas periodik, susunan satu dimensi, kondisi awal, dan penyederhanaan lain; menjelaskan mana yang benar-benar sama setelah model rinci direduksi ke satu dimensi.",
             "partial_credit": "Mencampurkan perbedaan akibat reduksi dimensi dengan perbedaan aturan model."
           },
           {

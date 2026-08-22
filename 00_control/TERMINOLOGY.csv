@@ -1,5 +1,5 @@
 term_id,source_term,id_ID_preferred,status,note
-O005-TERM-0001,mathematical modeling,pemodelan matematika,admitted,Use for the discipline and process.
+O005-TERM-0001,mathematical modeling,pemodelan matematika,admitted,Use for the discipline and process; independently attested as Pemodelan Matematika in arXiv:2001.05854v1 Indonesian TeX.
 O005-TERM-0002,model,model,admitted,Established Indonesian technical loanword.
 O005-TERM-0003,modeler,pemodel,admitted,Person who constructs or analyzes models.
 O005-TERM-0004,dependent variable,variabel terikat,admitted,
@@ -8,7 +8,7 @@ O005-TERM-0006,parameter,parameter,admitted,
 O005-TERM-0007,modeling cycle,siklus pemodelan,admitted,
 O005-TERM-0008,hypothesis,hipotesis,admitted,
 O005-TERM-0009,validation,validasi,admitted,Use carefully; distinguish validating implementation from evidential support for a model.
-O005-TERM-0010,assumption,asumsi,admitted,
+O005-TERM-0010,assumption,asumsi,admitted,Attested repeatedly in arXiv:2001.05854v1 Indonesian TeX; anggapan dasar is acceptable as a section label but not the default running-text term.
 O005-TERM-0011,prediction,prediksi,admitted,
 O005-TERM-0012,curve fitting,pencocokan kurva,admitted,
 O005-TERM-0013,least squares,kuadrat terkecil,admitted,
@@ -44,8 +44,8 @@ O005-TERM-0042,phase portrait,potret fase,admitted,Distinguish the plotted famil
 O005-TERM-0043,direction field,medan arah,admitted,
 O005-TERM-0044,fixed point,titik tetap,admitted,
 O005-TERM-0045,saddle point,titik pelana,admitted,
-O005-TERM-0046,linearization,linearisasi,admitted,
-O005-TERM-0047,Jacobian matrix,matriks Jacobi,admitted,
+O005-TERM-0046,linearization,linearisasi,admitted,Attested as proses linearisasi in arXiv:2001.05854v1 Indonesian TeX.
+O005-TERM-0047,Jacobian matrix,matriks Jacobi,admitted,Use matriks Jacobi in reader-facing prose; lowercase jacobian may remain only as a code identifier.
 O005-TERM-0048,separatrix,separatriks,admitted,
 O005-TERM-0049,stable manifold,manifold stabil,admitted,
 O005-TERM-0050,unstable manifold,manifold tak stabil,admitted,
@@ -121,7 +121,7 @@ O005-TERM-0119,oscillatory chemical reaction,reaksi kimia osilatori,admitted,Rea
 O005-TERM-0120,local model,model lokal,admitted,Means spatial interactions depend on local state rather than a spatial average.
 O005-TERM-0121,diffusion,difusi,admitted,
 O005-TERM-0122,reaction-diffusion equation,persamaan reaksi-difusi,admitted,
-O005-TERM-0123,partial differential equation,persamaan diferensial parsial,admitted,
+O005-TERM-0123,partial differential equation,persamaan diferensial parsial,admitted,Exact field form attested in arXiv:2001.05854v1 Indonesian TeX.
 O005-TERM-0124,transport term,suku transpor,admitted,
 O005-TERM-0125,surface chemical reaction,reaksi kimia pada permukaan,admitted,
 O005-TERM-0126,chemical wave,gelombang kimia,admitted,
@@ -141,7 +141,7 @@ O005-TERM-0139,spiral wave,gelombang spiral,admitted,
 O005-TERM-0140,phase shift,pergeseran fase,admitted,
 O005-TERM-0141,stiff problem,masalah kaku,admitted,Explain this as the coexistence of very short and very long characteristic time scales on first use.
 O005-TERM-0142,reversible reaction,reaksi reversibel,admitted,
-O005-TERM-0143,continuity equation,persamaan kontinuitas,admitted,Use hukum neraca lokal when explaining the equation with a nonzero source term.
+O005-TERM-0143,continuity equation,persamaan kontinuitas,admitted,Exact field form attested in arXiv:2001.05854v1 Indonesian TeX; use hukum neraca lokal when explaining the equation with a nonzero source term.
 O005-TERM-0144,flux,fluks,admitted,Use rapat fluks when the vector denotes transported amount per area per time.
 O005-TERM-0145,Fick's law,hukum Fick,admitted,
 O005-TERM-0146,diffusion tensor,tensor difusi,admitted,
@@ -216,8 +216,8 @@ O005-TERM-0214,star-shaped domain,domain berbentuk bintang,admitted,
 O005-TERM-0215,continuity equation,persamaan kontinuitas,admitted,
 O005-TERM-0216,piecewise smooth,mulus sepotong demi sepotong,admitted,
 O005-TERM-0217,ordinary differential equation,persamaan diferensial biasa (PDB),admitted,Introduce the abbreviation PDB at first substantive use.
-O005-TERM-0218,initial condition,syarat awal,admitted,
-O005-TERM-0219,boundary condition,syarat batas,admitted,
+O005-TERM-0218,initial condition,kondisi awal,admitted,Preferred in continuous reader prose and already dominant in this edition; syarat awal remains acceptable when the sentence emphasizes a mathematical constraint. Keep masalah nilai awal for initial-value problem.
+O005-TERM-0219,boundary condition,syarat batas,admitted,Strongly attested throughout arXiv:2001.05854v1 Indonesian TeX; use consistently for mathematical boundary conditions rather than kondisi batas.
 O005-TERM-0220,integrating factor,faktor integrasi,admitted,
 O005-TERM-0221,separable equation,persamaan terpisahkan,admitted,
 O005-TERM-0222,exact differential equation,persamaan diferensial eksak,admitted,
@@ -249,4 +249,12 @@ O005-TERM-0247,seasonal forcing,pemaksaan musiman,admitted,
 O005-TERM-0248,health-care system,sistem layanan kesehatan,admitted,
 O005-TERM-0249,melt pond,kolam lelehan,admitted,Arctic sea-ice context.
 O005-TERM-0250,project packet,paket proyek,admitted,Independent executable companion bundle rather than source-provided material.
-O005-TERM-0251,dynamical system,sistem dinamik,admitted,Use consistently for the mathematical field and system class.
+O005-TERM-0251,dynamical system,sistem dinamik,admitted,Use consistently for the mathematical field and system class; do not alternate with sistem dinamis or sistem dinamika in reader-facing prose.
+O005-TERM-0252,governing differential equation,persamaan diferensial pengatur,admitted,Exact field form attested in arXiv:2001.05854v1 Indonesian TeX.
+O005-TERM-0253,boundary-value problem,masalah nilai batas,admitted,Exact field form attested in arXiv:2001.05854v1 Indonesian TeX and already used in Chapter 13.
+O005-TERM-0254,numerical method,metode numerik,admitted,Exact field form attested in arXiv:2001.05854v1 Indonesian TeX.
+O005-TERM-0255,initial guess,tebakan awal,admitted,Exact field form attested in arXiv:2001.05854v1 Indonesian TeX and already used in the Chapter 1 notebook.
+O005-TERM-0256,numerical error,galat numerik,admitted,The headword galat is attested repeatedly in arXiv:2001.05854v1 Indonesian TeX; qualify it where needed to distinguish numerical error from model discrepancy.
+O005-TERM-0257,convergence,konvergensi,admitted,Retain the modern established form; arXiv:2001.05854v1 uses the older derivative kekonvergenan once and does not justify replacing current usage.
+O005-TERM-0258,dispersion relation,relasi dispersi,admitted,Exact field form attested repeatedly in arXiv:2001.05854v1 Indonesian TeX and already used in Chapter 10.
+O005-TERM-0259,equilibrium,keadaan kesetimbangan,admitted,Use for a physical or epidemiological equilibrium state; use titik kesetimbangan when the state is represented as a point and titik tetap for the fixed point of a map or flow. These are related concepts rather than mechanically interchangeable labels.

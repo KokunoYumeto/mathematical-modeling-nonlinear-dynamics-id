@@ -12,6 +12,13 @@ retain attribution, identify modifications/translation, remain noncommercial,
 use the same license, impose no additional restrictions, and avoid suggesting
 endorsement by the author or University of Arizona.
 
+## Model provenance
+
+OpenAI Codex gpt-5.6-sol, Ultra. was used for translation, technical
+adaptation, and QA. This model-identification note supplements rather than
+replaces the preserved credits for Joceline Lega, University of Arizona, and
+recorded human contributors.
+
 ## Frozen witnesses
 
 The exact PDF, EPUB, canonical REST records, semantic and asset manifests, and
@@ -19,6 +26,12 @@ coordinator audit are under `authority/`. Their hashes and counts are recorded
 in `CURRENT_STATE.md`, the unit authority manifest, and the coordinator
 snapshot manifests. Local coordination transcripts are deliberately excluded
 from the public repository.
+
+The separate terminology-QA witness under
+`authority/terminology/arxiv-2001.05854v1/` is Natanael Karjanto's
+arXiv:2001.05854v1 source package under CC BY-SA 4.0. It is preserved
+unmodified, separately attributed, and used only as Indonesian field-usage
+evidence. It is not relicensed as part of the CC BY-NC-SA 4.0 Lega adaptation.
 
 ## Component boundary
 

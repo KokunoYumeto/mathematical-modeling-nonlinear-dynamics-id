@@ -7,36 +7,49 @@ Pressbooks v1.01 (Maret 2026). Sumber dan terjemahan berada di bawah lisensi
 Edisi ini tidak disokong atau disahkan oleh penulis maupun University of
 Arizona.
 
+Provenance model untuk penerjemahan, adaptasi teknis, dan QA: OpenAI Codex gpt-5.6-sol, Ultra.
+Pernyataan ini tidak menggantikan kredit kepada Joceline
+Lega, University of Arizona, atau kontributor manusia yang tercatat.
+
 Status saat ini: **Bab 1–14 serta pengantar Bagian 2–5 telah diterjemahkan,
 dibangun, dan lolos QA.** Pengantar Bagian 1, materi awal/akhir, dan empat
 modul jembatan asli masih dikerjakan; repositori ini belum merupakan edisi
 lengkap atau terbitan final.
 
 Versi kemajuan terverifikasi ini dipertahankan di Zenodo:
-[10.5281/zenodo.22059940](https://doi.org/10.5281/zenodo.22059940).
+[10.5281/zenodo.22061640](https://doi.org/10.5281/zenodo.22061640).
 Pembaruan substansial berikutnya akan diterbitkan dalam garis versi konsep yang
 sama: [10.5281/zenodo.22059939](https://doi.org/10.5281/zenodo.22059939).
+Figshare menyimpan catatan metadata CC0 tanpa salinan berkas—lisensi karya yang
+ditautkan tetap CC BY-NC-SA 4.0—di
+[10.6084/m9.figshare.33314769.v2](https://doi.org/10.6084/m9.figshare.33314769.v2),
+dan catatan tersebut termasuk dalam koleksi
+[Indonesian Mathematics — Reader PDFs](https://doi.org/10.6084/m9.figshare.c.8668413.v37).
 
 ## Baca unit yang selesai
 
-- Bab 1 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH01/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH01/index.html); [notebook pencocokan kurva](source/id-ID/O005-LEGA-V101-CH01/notebooks/problem-07-open-curve-fitting.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH01.mastery.json).
-- Bab 2 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH02/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH02/index.html); [notebook simulasi gelombang](source/id-ID/O005-LEGA-V101-CH02/notebooks/chapter-02-open-wave-simulation.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH02.mastery.json).
-- Pengantar Bagian 2 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT02/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT02/index.html).
-- Bab 3 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH03/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH03/index.html); [notebook bidang fase](source/id-ID/O005-LEGA-V101-CH03/notebooks/chapter-03-open-phase-plane.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH03.mastery.json).
-- Bab 4 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH04/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH04/index.html); [notebook pemantulan batu](source/id-ID/O005-LEGA-V101-CH04/notebooks/chapter-04-open-stone-skipping.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH04.mastery.json).
-- Pengantar Bagian 3 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT03/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT03/index.html).
-- Bab 5 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH05/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH05/index.html); [notebook dinamika populasi satu spesies](source/id-ID/O005-LEGA-V101-CH05/notebooks/chapter-05-open-single-species-models.ipynb); [data Sensus resmi](source/id-ID/O005-LEGA-V101-CH05/data/popclockest.txt); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH05.mastery.json).
-- Bab 6 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH06/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH06/index.html); [notebook model dua spesies](source/id-ID/O005-LEGA-V101-CH06/notebooks/chapter-06-open-two-species-models.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH06.mastery.json).
-- Bab 7 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH07/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH07/index.html); [notebook epidemiologi terbuka](source/id-ID/O005-LEGA-V101-CH07/notebooks/chapter-07-open-epidemiology.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH07.mastery.json).
-- Pengantar Bagian 4 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT04/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT04/index.html).
-- Bab 8 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH08/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH08/index.html); [notebook reaksi kimia terbuka](source/id-ID/O005-LEGA-V101-CH08/notebooks/chapter-08-open-chemical-reactions.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH08.mastery.json).
-- Bab 9 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH09/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH09/index.html); [notebook difusi terbuka](source/id-ID/O005-LEGA-V101-CH09/notebooks/chapter-09-open-diffusion.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH09.mastery.json).
-- Bab 10 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH10/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH10/index.html); [notebook pembentukan pola terbuka](source/id-ID/O005-LEGA-V101-CH10/notebooks/chapter-10-open-pattern-formation.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH10.mastery.json).
-- Pengantar Bagian 5 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT05/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT05/index.html).
-- Bab 11 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH11/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH11/index.html); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH11.mastery.json).
-- Bab 12 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH12/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH12/index.html).
-- Bab 13 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH13/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH13/index.html); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH13.mastery.json).
-- Bab 14 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH14/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH14/index.html); [katalog 12 proyek](backend/projects/O005-LEGA-V101-CH14.projects.json); [paket proyek](source/id-ID/O005-LEGA-V101-CH14/project_archives/).
+Direktori `build/reader/` dan arsip proyek adalah keluaran yang dapat dibuat
+ulang, sehingga paket sumber ringkas tidak menggandakannya. Tautan berikut
+menunjuk pada sumber kanonis, notebook, backend dukungan, dan katalog proyek.
+
+- Bab 1 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH01/content.html); [notebook pencocokan kurva](source/id-ID/O005-LEGA-V101-CH01/notebooks/problem-07-open-curve-fitting.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH01.mastery.json).
+- Bab 2 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH02/content.html); [notebook simulasi gelombang](source/id-ID/O005-LEGA-V101-CH02/notebooks/chapter-02-open-wave-simulation.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH02.mastery.json).
+- Pengantar Bagian 2 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT02/content.html).
+- Bab 3 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH03/content.html); [notebook bidang fase](source/id-ID/O005-LEGA-V101-CH03/notebooks/chapter-03-open-phase-plane.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH03.mastery.json).
+- Bab 4 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH04/content.html); [notebook pemantulan batu](source/id-ID/O005-LEGA-V101-CH04/notebooks/chapter-04-open-stone-skipping.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH04.mastery.json).
+- Pengantar Bagian 3 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT03/content.html).
+- Bab 5 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH05/content.html); [notebook dinamika populasi satu spesies](source/id-ID/O005-LEGA-V101-CH05/notebooks/chapter-05-open-single-species-models.ipynb); [data Sensus resmi](source/id-ID/O005-LEGA-V101-CH05/data/popclockest.txt); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH05.mastery.json).
+- Bab 6 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH06/content.html); [notebook model dua spesies](source/id-ID/O005-LEGA-V101-CH06/notebooks/chapter-06-open-two-species-models.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH06.mastery.json).
+- Bab 7 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH07/content.html); [notebook epidemiologi terbuka](source/id-ID/O005-LEGA-V101-CH07/notebooks/chapter-07-open-epidemiology.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH07.mastery.json).
+- Pengantar Bagian 4 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT04/content.html).
+- Bab 8 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH08/content.html); [notebook reaksi kimia terbuka](source/id-ID/O005-LEGA-V101-CH08/notebooks/chapter-08-open-chemical-reactions.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH08.mastery.json).
+- Bab 9 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH09/content.html); [notebook difusi terbuka](source/id-ID/O005-LEGA-V101-CH09/notebooks/chapter-09-open-diffusion.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH09.mastery.json).
+- Bab 10 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH10/content.html); [notebook pembentukan pola terbuka](source/id-ID/O005-LEGA-V101-CH10/notebooks/chapter-10-open-pattern-formation.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH10.mastery.json).
+- Pengantar Bagian 5 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT05/content.html).
+- Bab 11 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH11/content.html); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH11.mastery.json).
+- Bab 12 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH12/content.html).
+- Bab 13 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH13/content.html); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH13.mastery.json).
+- Bab 14 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH14/content.html); [katalog 12 proyek](backend/projects/O005-LEGA-V101-CH14.projects.json); sumber dua belas paket berada di [`projects/`](source/id-ID/O005-LEGA-V101-CH14/projects/).
 
 ## Backend modular
 
@@ -51,8 +64,10 @@ struktur.
 
 ## Bangun dan periksa
 
-Build memerlukan Python, Beautiful Soup 4, dan Pandoc 3.9.0.2. Notebook memakai
-versi NumPy/SciPy/Matplotlib yang tercantum dalam `requirements.lock` masing-masing.
+Build HTML memerlukan Python, Beautiful Soup 4, dan Pandoc 3.9.0.2. PDF gabungan
+memerlukan pypdf, ReportLab, Chromium atau Edge, MuPDF `mutool`, dan Poppler
+untuk QA visual. Notebook memakai versi NumPy/SciPy/Matplotlib yang tercantum
+dalam `requirements.lock` masing-masing.
 
 ```powershell
 python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH01
@@ -92,6 +107,7 @@ python scripts/qa_unit.py --unit O005-LEGA-V101-CH13 --deterministic-build
 python scripts/build_ch14_project_packets.py
 python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH14
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH14 --execute-notebook --deterministic-build
+python scripts/build_progress_pdf.py
 ```
 
 QA memeriksa kesetaraan struktur sumber–target, rumus dan tautan yang

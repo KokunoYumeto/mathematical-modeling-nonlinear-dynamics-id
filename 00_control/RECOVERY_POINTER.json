@@ -33,28 +33,66 @@
     "all_bytes_and_sha256_equal": true
   },
   "pending_publication": {
-    "commit": "a8f3357043a5483efcacca76cf886ad75269a58d",
-    "parent_pending_commit": "d3363f6b3612b3beef9b235f9b6c134fa0593fc1",
-    "files": 42,
-    "bytes": 2353854,
-    "inventory_sha256": "615af518c8dd7ed052165cf6545dd369af8385e1fc20964bd3f89238d1af8154",
-    "attempted_at": "2026-08-22T18:16:05+02:00",
-    "status": "blocked_external",
-    "reason": "GitHub rejected the configured valid credential with HTTP 403 because the account is suspended; Floris reports that the suspension followed VPN use and that a support ticket is open. The complete local commit chain remains intact.",
-    "next_action": "Do not retry GitHub until Floris reports that account access is restored. Then push the unchanged complete local chain to origin/main; do not create a duplicate repository or rewrite the commits. Maintain verified substantial boundaries through the single Zenodo concept lineage while GitHub is unavailable."
+    "commit": "555062f9ef9942c2c3167a15e59e81b5f87ab0ea",
+    "parent_pending_commit": "a8f3357043a5483efcacca76cf886ad75269a58d",
+    "pending_chain_base_commit": "d3363f6b3612b3beef9b235f9b6c134fa0593fc1",
+    "files": 132,
+    "bytes": 1323634,
+    "inventory_sha256": "73cc49bba0c35598002408d0b30ece20fe7bcfc98d8221ae54afe400c1ba73a6",
+    "inventory_algorithm": "SHA-256 of UTF-8 no-BOM, LF-terminated, headerless, ordinal-path-sorted path<TAB>bytes<TAB>sha256 rows",
+    "last_attempted_at": "2026-08-22T18:16:05+02:00",
+    "current_commit_attempted": false,
+    "status": "blocked_external_not_retried",
+    "reason": "GitHub rejected the previous pending head with HTTP 403 because the account is suspended; the user reports that the suspension followed VPN use and that a support ticket is open. The admitted Chapter 14 and sanitized preservation receipt are sealed in the new local commit without another futile remote attempt. The complete local commit chain remains intact.",
+    "next_action": "Do not retry GitHub until the user reports that account access is restored. Then push the unchanged complete local chain to origin/main; do not create a duplicate repository or rewrite the commits. Maintain verified substantial boundaries through the single Zenodo concept lineage while GitHub is unavailable."
   },
   "zenodo_publication": {
     "status": "published_and_anonymously_verified",
-    "record_id": 22059940,
+    "record_id": 22061640,
     "concept_record_id": 22059939,
-    "doi": "10.5281/zenodo.22059940",
+    "doi": "10.5281/zenodo.22061640",
     "concept_doi": "10.5281/zenodo.22059939",
-    "record_url": "https://zenodo.org/records/22059940",
-    "version": "v1.01-id-progress-CH14-20260822",
-    "files": 3,
-    "public_inventory_sha256": "4d8b2b825076cdb91ce28032a4d836554e2ddb53751bba485078dbd6add7445f",
+    "record_url": "https://zenodo.org/records/22061640",
+    "version": "v1.01-id-progress-CH14-reader-20260822",
+    "files": 5,
+    "bytes": 48468743,
+    "public_inventory_sha256": "444ff63bc66e3c2bff051f8a439c766f315a75e452a60e0286974728708928ff",
     "receipt": "00_control/ZENODO_PUBLICATION_RECEIPT_CH14_20260822.json",
-    "next_action": "Use Zenodo's new-version action on record 22059940 for the next substantial verified boundary; never create a duplicate concept lineage."
+    "model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
+    "next_action": "Use Zenodo's new-version action on record 22061640 for the next substantial verified boundary; never create a duplicate concept lineage."
+  },
+  "figshare_publication": {
+    "status": "published_metadata_link_and_anonymously_verified",
+    "article_id": 33314769,
+    "doi": "10.6084/m9.figshare.33314769.v2",
+    "record_url": "https://figshare.com/articles/online_resource/Pengantar_Pemodelan_Matematika_Edisi_Bahasa_Indonesia_metadata_/33314769/2",
+    "project_id": 280296,
+    "project_url": "https://figshare.com/projects/Open_and_Share-Alike_Educational_Materials_Translations/280296",
+    "collection_id": 8668413,
+    "verified_collection_version": 37,
+    "verified_collection_doi": "10.6084/m9.figshare.c.8668413.v37",
+    "license": "CC0 metadata only; linked work remains CC BY-NC-SA 4.0",
+    "public_files": 0,
+    "model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
+    "receipt": "00_control/FIGSHARE_PUBLICATION_RECEIPT_CH14_20260822.json",
+    "next_action": "At the next substantial verified boundary, update and publish a new version of article 33314769, then add/retain it in collection 8668413 and publish the next collection version. Never create a competing article for this work or upload work files under a substitute license."
+  },
+  "terminology_qa": {
+    "status": "completed_and_propagated",
+    "witness": "arXiv:2001.05854v1",
+    "source_archive_sha256": "520cd160b47664dda32e57df87a6eb028348154e4d7a7494d230e8e517891d53",
+    "indonesian_tex_sha256": "03f7e68801badc84255df3323078ae00eee7ecff8a9f118cba064ce5d46ff2f2",
+    "affected_units": [
+      "O005-LEGA-V101-CH01",
+      "O005-LEGA-V101-CH02",
+      "O005-LEGA-V101-CH04",
+      "O005-LEGA-V101-CH05",
+      "O005-LEGA-V101-CH06",
+      "O005-LEGA-V101-CH07",
+      "O005-LEGA-V101-CH10",
+      "O005-LEGA-V101-CH13"
+    ],
+    "decision_record": "00_control/TERMINOLOGY_QA_INDONESIAN_FIELD_SOURCE_20260822.md"
   },
   "last_completed_unit": {
     "unit_id": "O005-LEGA-V101-CH14",
@@ -70,5 +108,5 @@
     "qa_tree_sha256": "da7aa599e38559f33553872f7e1663de6d555ebc478b6b598dc7aa1d4bf6c347"
   },
   "current_unit": "O005-LEGA-V101-FM01",
-  "next_action": "Freeze front-matter record 22, Preface, and translate it naturally as Prakata. Maintain future substantial boundaries as new versions of Zenodo concept DOI 10.5281/zenodo.22059939. Do not retry GitHub until Floris reports account restoration."
+  "next_action": "Freeze front-matter record 22, Preface, and translate it naturally as Prakata. Maintain future substantial boundaries as new versions of Zenodo concept DOI 10.5281/zenodo.22059939. Do not retry GitHub until the user reports account restoration."
 }

@@ -1,55 +1,76 @@
 {
-  "schema": "o005-zenodo-publication-receipt-v1",
-  "verified_at": "2026-08-22T19:36:13.7114876+02:00",
+  "schema": "o005-zenodo-reader-first-publication-receipt-v2",
+  "verified_at": "2026-08-22T21:54:49+02:00",
   "boundary": "O005-LEGA-V101-CH14",
-  "status": "published_and_anonymously_verified",
-  "record_id": 22059940,
+  "status": "published_reader_first_and_anonymously_verified",
+  "record_id": 22061640,
+  "predecessor_record_id": 22059940,
   "concept_record_id": 22059939,
-  "doi": "10.5281/zenodo.22059940",
+  "doi": "10.5281/zenodo.22061640",
   "concept_doi": "10.5281/zenodo.22059939",
-  "record_url": "https://zenodo.org/records/22059940",
-  "doi_url": "https://doi.org/10.5281/zenodo.22059940",
+  "record_url": "https://zenodo.org/records/22061640",
+  "doi_url": "https://doi.org/10.5281/zenodo.22061640",
   "concept_doi_url": "https://doi.org/10.5281/zenodo.22059939",
   "metadata": {
     "title": "Pengantar Pemodelan Matematika — Edisi Bahasa Indonesia",
-    "version": "v1.01-id-progress-CH14-20260822",
+    "version": "v1.01-id-progress-CH14-reader-20260822",
     "publication_date": "2026-08-22",
     "language": "ind",
     "license": "cc-by-nc-sa-4.0",
     "access_right": "open",
-    "creators": [
-      "Lega, Joceline"
-    ],
-    "contributors": [
-      "OpenAI Codex|Other",
-      "TTP|Other"
-    ],
+    "creators": ["Lega, Joceline"],
+    "contributors": ["OpenAI Codex|Other", "TTP|Other"],
     "ttp_contributor_count": 1,
     "ttp_in_title": false,
     "ttp_in_description": false,
     "incomplete_status_disclosed": true,
-    "source_relation": "isDerivedFrom|https://opentextbooks.library.arizona.edu/mathematicalmodeling/"
+    "source_relation": "isDerivedFrom|https://opentextbooks.library.arizona.edu/mathematicalmodeling/",
+    "model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
+    "model_identification_anonymously_verified": true
+  },
+  "release": {
+    "files": 5,
+    "bytes": 48468743,
+    "ordered_inventory_sha256": "444ff63bc66e3c2bff051f8a439c766f315a75e452a60e0286974728708928ff",
+    "reader_first_public_html_verified": true,
+    "pdf_pages": 297,
+    "pdf_tagged": true,
+    "pdf_language": "id",
+    "pdf_bookmarks": 20,
+    "compact_source_zip_members": 387,
+    "compact_source_zip_crc_ok": true
   },
   "files": [
     {
-      "name": "O005_LEGA_v1.01_id_progress_CH14_repository.zip",
-      "bytes": 34564770,
-      "sha256": "31e8cc53b0c03779d8c723b426f049dec1ebde8f3963ad1268a2042c9c61c2ca"
+      "name": "01_Pengantar_Pemodelan_Matematika_Edisi_Bahasa_Indonesia_CH14.pdf",
+      "bytes": 37755120,
+      "sha256": "c96af7e139561e53d0c0652256852e31cb1b3819f83e82313d5a9acd5d7afbad"
     },
     {
-      "name": "O005_LEGA_v1.01_id_progress_CH14_readers.zip",
-      "bytes": 5459760,
-      "sha256": "4073140a876520b716c7681368ac5ddb140e616451fdae40792d0038fcaba7a1"
+      "name": "02_O005_LEGA_v1.01_id_progress_CH14_compact_source.zip",
+      "bytes": 10709447,
+      "sha256": "54429e1498482ab80b4e6ba7d7a47574788bd3c1861a1885617806927cb4e4e8"
     },
     {
-      "name": "O005_LEGA_v1.01_id_progress_CH14_RELEASE_MANIFEST.json",
-      "bytes": 1306,
-      "sha256": "368cf03b5ded8cbd3efd0a4ec472764bac17f50232d52980b6c1d68aaf3d96b7"
+      "name": "LICENSE.md",
+      "bytes": 1229,
+      "sha256": "df09d1b94e42fd7ef903d8ab50070e363b8c3c456b414773ca5e4a0010d74a53"
+    },
+    {
+      "name": "RELEASE_MANIFEST.json",
+      "bytes": 2529,
+      "sha256": "6c5917ef08fc91f4923096adfbc617550939726b9f46c7467ae61d7f22d768ed"
+    },
+    {
+      "name": "CHECKSUMS.sha256",
+      "bytes": 418,
+      "sha256": "5e6f4db861325049d87555eae9d723e8e09760490eb94c083d6def140b5b5a6f"
     }
   ],
-  "public_file_count": 3,
-  "public_inventory_sha256": "4d8b2b825076cdb91ce28032a4d836554e2ddb53751bba485078dbd6add7445f",
-  "all_public_bytes_and_sha256_equal_local_release": true,
+  "all_public_filenames_bytes_and_sha256_equal_local_release": true,
   "anonymous_public_api_readback": true,
-  "temporary_readback_removed": true
+  "anonymous_pdf_parse_verified": true,
+  "temporary_readback_removed": true,
+  "credential_material_recorded": false,
+  "post_publication_note": "The later local terminology-QA edits and README model note are not claimed to be inside these already published bytes; the exact model identification is present in the public record metadata."
 }

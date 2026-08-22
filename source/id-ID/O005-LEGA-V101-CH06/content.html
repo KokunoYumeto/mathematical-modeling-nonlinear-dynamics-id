@@ -83,7 +83,7 @@ Seperti biasa, titik-titik tetap diperoleh dengan menyelesaikan $latex x(1 - x -
 <p style="text-align: center">$latex P_0 = (0,0), \quad P_1 = (1, 0), \quad P_2 = (0, 1), \quad P_3 = \displaystyle \left(\frac{1 - a}{1 - a b},\frac{1 - b}{1 - a b}\right).$</p>
 <p style="text-align: justify">Titik tetap terakhir, $latex P_3$, terletak di kuadran pertama hanya jika $latex 1-a$, $latex 1 - b$, dan $latex 1 - a b$ semuanya bertanda sama, serta $latex a b \ne 1$. Selanjutnya, kita mengasumsikan bahwa syarat-syarat ini dipenuhi dan menggunakan $latex \epsilon = \pm 1$ untuk menyatakan tanda ketiga besaran tersebut, yaitu</p>
 <p style="text-align: center">$latex \epsilon = \text{sign}(1 - a) = \text{sign}(1 - b) = \text{sign}(1 - a b).$</p>
-Jacobian dari (<a href="#CCS">6.4</a>) adalah
+Matriks Jacobi dari (<a href="#CCS">6.4</a>) adalah
 <p style="text-align: center">$latex J(x,y) = \displaystyle \left(\begin{array}{cc} 1 - 2 x - a y &amp; - a x \\ - b \, c \, y &amp; c (1 - 2 y - b x)\end{array} \right).$</p>
 Sekarang kita dapat menghitung nilai-nilai eigen $latex J(x,y)$ yang dievaluasi pada setiap titik tetap.
 <h4 style="text-align: left">Analisis di sekitar titik asal, $latex P_0$</h4>
@@ -96,7 +96,7 @@ Sekarang kita dapat menghitung nilai-nilai eigen $latex J(x,y)$ yang dievaluasi 
 <p style="text-align: justify">Untuk $latex P_2,$ matriks $latex J(0,1)$ berbentuk segitiga bawah dan nilai-nilai eigennya adalah $latex 1 - a$ dan $latex -c$. Dengan demikian, $latex P_2$ merupakan titik pelana jika $latex \epsilon = 1$, dan simpul stabil jika $latex \epsilon = -1$.</p>
 
 <h4 style="text-align: left">Analisis di sekitar $latex P_3$</h4>
-<p style="text-align: justify">Untuk $latex P_3$, Jacobiannya adalah</p>
+<p style="text-align: justify">Untuk $latex P_3$, matriks Jacobi yang bersesuaian adalah</p>
 <p style="text-align: center">$latex \displaystyle J \left( \frac{1 - a}{1 - a b}, \frac{1 - b}{1 - a b} \right) = \displaystyle \frac{1}{1 - a b} \left(\begin{array}{cc} a-1 &amp; a\, (a-1) \\ b\,c\,(b-1) &amp; c\,(b-1)\end{array} \right).$</p>
 <p style="text-align: justify">Karena jejaknya $latex T$ dan determinannya $latex D$ diberikan oleh</p>
 <p style="text-align: center">$latex \displaystyle T = \frac{1}{1 - a b} \left(a - 1 + c (b -1)\right), \quad D = \frac{(a - 1) c (b - 1)}{1 - a b},$</p>

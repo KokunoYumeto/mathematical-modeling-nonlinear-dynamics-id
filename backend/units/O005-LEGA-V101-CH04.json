@@ -8,7 +8,7 @@
   "mastery_path": "backend/mastery/O005-LEGA-V101-CH04.mastery.json",
   "mastery_sha256": "799c9ad13c683b2575c7192c95e81dc3144d88061aef57ea173c918a687e9395",
   "notebook_path": "source/id-ID/O005-LEGA-V101-CH04/notebooks/chapter-04-open-stone-skipping.ipynb",
-  "notebook_sha256": "49e68c250f6c4e9d6b612b11be86ed8030ce1aa483081cafb08c6ca535418b5e",
+  "notebook_sha256": "3c77116a1ff709c1609782604da1fe592fe95dc0053fcd0e9728bdef02cb5d90",
   "problems": [
     "O005-LEGA-V101-CH04-P01",
     "O005-LEGA-V101-CH04-P02",
@@ -20,7 +20,7 @@
   "segments": {
     "count": 196,
     "path": "backend/segments/O005-LEGA-V101-CH04.segments.jsonl",
-    "sha256": "c89f5eed3bcca294e546447010551abcc2087e1c31b7d3d98ae7f55498c4a295"
+    "sha256": "9c0d412995821b9b69542bbb227948143805b5b21be7bdb8481fcde02ee85c27"
   },
   "source": {
     "author": "Joceline Lega",
@@ -34,7 +34,7 @@
   "source_language": "en",
   "target": {
     "content_path": "source/id-ID/O005-LEGA-V101-CH04/content.html",
-    "content_sha256": "4d19140e14d182466a049ce376ce3168b6d6230adcec80fd136d24c0cc05010b",
+    "content_sha256": "a860a2ae31e1e04dd9af75d09d850ca22e5e13cf83326e9125d510edb56b742f",
     "figures": [
       {
         "path": "source/id-ID/O005-LEGA-V101-CH04/assets/stone-collision-id.svg",

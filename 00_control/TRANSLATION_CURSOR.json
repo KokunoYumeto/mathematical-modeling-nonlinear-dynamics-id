@@ -9,6 +9,11 @@
   "source_title": "Preface",
   "target_title": "Prakata",
   "authority_frozen": false,
+  "indonesian_field_terminology_qa": {
+    "status": "completed_and_propagated",
+    "witness": "arXiv:2001.05854v1",
+    "decision_record": "00_control/TERMINOLOGY_QA_INDONESIAN_FIELD_SOURCE_20260822.md"
+  },
   "source_modified_gmt": "2024-06-29T02:46:15Z",
   "coordinator_snapshot_canonical_bytes": 11380,
   "coordinator_snapshot_canonical_sha256": "b8ab499c797f89f734b9179f8a82e3afe508cadabd62cd485f281348ade1f383",
@@ -55,5 +60,5 @@
     "O005-LEGA-V101-BM01",
     "O005-LEGA-V101-BM02"
   ],
-  "next_action": "Freeze front-matter record 22 and translate Preface naturally as Prakata. Maintain the next substantial verified boundary as a new version of Zenodo concept DOI 10.5281/zenodo.22059939. Do not retry GitHub until Floris reports account restoration."
+  "next_action": "Freeze front-matter record 22 and translate Preface naturally as Prakata. Maintain the next substantial verified boundary as a new version of Zenodo concept DOI 10.5281/zenodo.22059939. Do not retry GitHub until the user reports account restoration."
 }

@@ -1029,7 +1029,7 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   by 34.89 px desktop / 35.92 px mobile. The warning/error console log was
   empty. External-link reachability was not tested; no audio/live widget exists.
 
-## Zenodo publication and public-byte readback — 2026-08-22
+## Superseded first Zenodo checkpoint and public-byte readback — 2026-08-22
 
 - Authenticated owned-deposition searches for Lega and the exact English and
   Indonesian work titles returned no draft or record; public searches likewise
@@ -1059,5 +1059,129 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   filename, byte count, and SHA-256 matched the local release; ordered public
   inventory SHA-256
   `4d8b2b825076cdb91ce28032a4d836554e2ddb53751bba485078dbd6add7445f`.
-  Sanitized receipt:
-  `00_control/ZENODO_PUBLICATION_RECEIPT_CH14_20260822.json`.
+  These rows preserve the immutable first-version identities. The live
+  `ZENODO_PUBLICATION_RECEIPT_CH14_20260822.json` filename now records the later
+  reader-first version described below; it is not evidence for this superseded
+  record.
+
+## Local checkpoint and independent Zenodo revalidation — 2026-08-22
+
+- A fresh bounded final gate, `scripts/qa_unit.py --unit
+  O005-LEGA-V101-CH14 --execute-notebook --deterministic-build`, exited 0.
+  It replayed all twelve project notebooks / 120 cells / 48 code cells and
+  reproduced the eighteen-file tree SHA-256
+  `da7aa599e38559f33553872f7e1663de6d555ebc478b6b598dc7aa1d4bf6c347`.
+  The twelve expected non-interactive Matplotlib backend warnings do not
+  indicate a failed assertion or missing output.
+- Anonymous public API metadata and full file downloads independently
+  revalidated record `22059940`. All three byte counts and SHA-256 identities
+  still equal the local release. The repository ZIP has 620 safe unique
+  members and the readers ZIP has 183 safe unique members; neither contains a
+  private-control filename, unsafe path, duplicate path, or symlink member.
+- Local production commit:
+  `555062f9ef9942c2c3167a15e59e81b5f87ab0ea`; parent
+  `a8f3357043a5483efcacca76cf886ad75269a58d`; 132 files / 1,323,634 bytes.
+  The inventory SHA-256 is
+  `73cc49bba0c35598002408d0b30ece20fe7bcfc98d8221ae54afe400c1ba73a6`
+  over UTF-8, no-BOM, LF-terminated, headerless, ordinal-path-sorted
+  `path<TAB>bytes<TAB>sha256` rows. No GitHub request was made for this commit;
+  the account remains externally suspended and the exact local chain is
+  preserved unchanged.
+
+## Superseded initial Figshare metadata publication and readback — 2026-08-22
+
+- Authenticated deduplication found no existing project item for the exact
+  Indonesian/English work title or Joceline Lega. The complete account license
+  response contained seven options and no CC BY-NC-SA 4.0 option.
+- Figshare rejected the documented legacy `metadata` type with an explicit
+  current-type list; the fileless record was therefore correctly created as
+  the platform's `online resource` type, matching the existing project
+  convention, with CC0 license ID 2. No file-upload call was made.
+- Published article `33314769`, DOI `10.6084/m9.figshare.33314769.v1`, has the
+  exact clean work title plus `(metadata)`, explicit active-partial scope,
+  explicit CC0-metadata-only language, the linked work's CC BY-NC-SA 4.0
+  license, non-endorsement, and exact Zenodo version/concept and official-source
+  references. Anonymous API and rendered-page checks found zero files, zero
+  standalone TTP occurrences, no download surface, and no metadata mismatch.
+- The additive collection call used `POST` with only article ID `33314769`; no
+  existing membership was replaced. The collection was republished and
+  anonymous readback found the item in both public project `280296` and the
+  fourteen-item collection DOI `10.6084/m9.figshare.c.8668413.v13`. The item
+  and collection DOI redirects resolve to their expected immutable version
+  pages. These rows preserve the initial public-version identities. The live
+  `FIGSHARE_PUBLICATION_RECEIPT_CH14_20260822.json` filename now records the
+  later version-2/article and version-37/collection state described below; it
+  is not evidence for this superseded version.
+
+## Reader-first preservation, public metadata, and anonymous readback — 2026-08-22
+
+- Published Zenodo record `22061640` in concept lineage `22059939` with five
+  files / 48,468,743 bytes. The primary visible file is the 37,755,120-byte,
+  297-page tagged Indonesian PDF, SHA-256
+  `c96af7e139561e53d0c0652256852e31cb1b3819f83e82313d5a9acd5d7afbad`.
+- The compact source ZIP is 10,709,447 bytes, SHA-256
+  `54429e1498482ab80b4e6ba7d7a47574788bd3c1861a1885617806927cb4e4e8`,
+  contains 387 safe unique members, and passes full CRC verification.
+  LICENSE, manifest, and checksum identities are recorded in the sanitized
+  receipt. All five public files were anonymously redownloaded and matched
+  local filenames, byte counts, and SHA-256 values exactly.
+- The public PDF readback retains 297 pages, tagged structure, `/Lang id`, and
+  twenty bookmarks. The rendered public page places the PDF first and states
+  the exact incomplete scope and CC BY-NC-SA 4.0 license.
+- Figshare article `33314769` is public as clean-title version 2 and remains
+  fileless because the platform's seven-license account list has no exact
+  CC BY-NC-SA 4.0 option. Anonymous readback confirms the CC0-metadata-only
+  limitation, exact Zenodo links, source attribution, incomplete status, zero
+  files, project membership, and membership in collection version 37.
+- The exact model identification `OpenAI Codex gpt-5.6-sol, Ultra.` is present
+  in both public metadata records. Existing creator, source, and human credits
+  remain intact. No credential material appears in either receipt.
+
+## Indonesian field-terminology QA and deterministic regression — 2026-08-22
+
+- Official arXiv source `2001.05854v1` was downloaded and safely unpacked into
+  the bounded terminology authority directory. Archive identity: 144,585
+  bytes, SHA-256
+  `520cd160b47664dda32e57df87a6eb028348154e4d7a7494d230e8e517891d53`;
+  Indonesian TeX identity: 91,655 bytes / 2,076 lines / SHA-256
+  `03f7e68801badc84255df3323078ae00eee7ecff8a9f118cba064ce5d46ff2f2`.
+- Direct TeX inspection verified the witness is a complete Indonesian
+  mathematical wave-modeling thesis, not merely an abstract. It attests
+  modeling, PDE, boundary-value, linearization, dispersion, and numerical
+  vocabulary. The exact decision record is
+  `00_control/TERMINOLOGY_QA_INDONESIAN_FIELD_SOURCE_20260822.md`.
+- Reader-facing residual scan after propagation found zero occurrences of
+  `kondisi batas`, uppercase `Jacobian`, `sistem dinamis`, or `sistem
+  dinamika` in canonical content, mastery records, or notebooks. Three
+  lowercase `jacobian` occurrences remain intentionally as one Python function
+  identifier and its calls.
+- CH01, CH02, CH04, CH05, CH06, CH07, CH10, and CH13 all passed source-target
+  topology, formula/link/problem census, local-dependency, backend-binding, and
+  deterministic double-build checks. Their respective deterministic tree
+  SHA-256 values are `b846f4aa5e42610b740bbfc61cab374ef62a69a9ea93976dc2cfc8f9dc9b7dc7`,
+  `f6f50a235a5dca62cebd5e18d9fe8ee1c5285933620454d720ffbca3195c87d9`,
+  `54290028a7e86ca0d4e12614d4d82d757c8b9ca89d530e5a4b3c8f42ff4c5ca3`,
+  `63e643c8e9307d62f914bd073eadc94b407e81f0fce77bd1a466a9425d9001ed`,
+  `4bbc34547434cd3fd27d31d8c8fd2dd6737e75fe556ae4276d41633e4bbd2306`,
+  `2ba1b2952d7738db5b52dc095847e4c026c838a1d10853fac0ed5d2871d38097`,
+  `aad8611f1b58f3ce1d6191c7646b61ee2a180b1491c51c14e57466133ea280a5`,
+  and `b5f6903b1a08b80d0e0e154c22f41c2dce59f0270e39f6ca312789be862b684e`.
+
+## Published-checkpoint consistency closure — 2026-08-22
+
+- The first Zenodo and Figshare QA sections are now explicitly labeled as
+  superseded historical versions; they no longer cite the live receipt
+  filenames that correctly describe the later reader-first public state.
+- The raw README contains the exact one-line model identification
+  `OpenAI Codex gpt-5.6-sol, Ultra.` and the current private controls use the
+  role label `the user` rather than a personal name.
+- `scripts/build_reader_first_release.py` refuses the already-published CH14
+  output directory and version label, refuses any existing output, and requires
+  a new bounded output, version, and safe release label for every future run.
+  Future compact source packages also include the terminology decision plus
+  the arXiv witness manifest and separate-license notice.
+- A fresh isolated smoke build produced five files / 48,476,922 bytes and a
+  390-member CRC-valid source ZIP. The three newly required terminology-witness
+  records were present, and the builder separately rejected an attempted write
+  to the protected published directory before mutation. The disposable smoke
+  directory was then removed; the published byte replica was unchanged.

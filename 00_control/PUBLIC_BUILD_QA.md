@@ -100,9 +100,30 @@ sebagai sitasi dan tidak diperlukan untuk pembaca luring.
 ## Preservasi publik
 
 Batas ini diterbitkan sebagai
-[Zenodo 10.5281/zenodo.22059940](https://doi.org/10.5281/zenodo.22059940)
+[Zenodo 10.5281/zenodo.22061640](https://doi.org/10.5281/zenodo.22061640)
 dalam garis versi konsep
 [10.5281/zenodo.22059939](https://doi.org/10.5281/zenodo.22059939).
-Ketiga berkas publik diunduh kembali secara anonim; nama, jumlah byte, dan
+Kelima berkas publik diunduh kembali secara anonim; nama, jumlah byte, dan
 SHA-256 seluruhnya sama dengan artefak lokal. SHA-256 inventaris publik:
-`4d8b2b825076cdb91ce28032a4d836554e2ddb53751bba485078dbd6add7445f`.
+`444ff63bc66e3c2bff051f8a439c766f315a75e452a60e0286974728708928ff`.
+PDF bertag 297 halaman merupakan berkas utama; paket sumber ringkas memiliki
+387 anggota dan lulus pemeriksaan CRC lengkap.
+
+## Pembaca PDF gabungan
+
+- Pembaca kemajuan menggabungkan 14 bab dan pengantar Bagian 2–5 dalam urutan
+  sumber menjadi 297 halaman A4. Soal, 113 catatan dukungan belajar, semua
+  bagian proyek, 44 gambar lokal, dan 5.486 simpul MathML dari pembaca HTML
+  terverifikasi dipertahankan; panel petunjuk, pemeriksaan, dan pembahasan
+  dibuka untuk cetak.
+- PDF bertag, menetapkan bahasa dokumen `id`, memuat 20 markah navigasi, tidak
+  memiliki halaman kosong, dan tidak mengandung URI `file:`, jalur pengguna,
+  kredensial, atau nama privat. Seluruh 44 rujukan gambar terselesaikan ke aset
+  lokal dan semua 18 ID unit muncul tepat sekali.
+- Seluruh 297 halaman dirender ulang dengan Poppler dan diperiksa dalam delapan
+  lembar kontak; pemeriksaan terperinci mencakup sampul, status/lisensi, daftar
+  isi, setiap batas unit, halaman bergambar, halaman padat rumus, dukungan
+  belajar, proyek, dan halaman penutup. Tidak ditemukan teks terpotong,
+  tumpang-tindih, latar gelap tak disengaja, atau transisi unit rusak.
+- Dua build bersih terakhir identik byte demi byte: 37.755.120 byte, SHA-256
+  `c96af7e139561e53d0c0652256852e31cb1b3819f83e82313d5a9acd5d7afbad`.

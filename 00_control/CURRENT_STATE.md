@@ -15,19 +15,21 @@ source-derived units are the Preface, Part 1 introduction, Accessibility
 Statement, and Version History; four declared original bridge modules then
 complete the edition.
 
-The complete Chapter 13 boundary is preserved in local commit
-`a8f3357043a5483efcacca76cf886ad75269a58d` (42 files / 2,353,854 bytes;
-ordered inventory SHA-256
-`615af518c8dd7ed052165cf6545dd369af8385e1fc20964bd3f89238d1af8154`).
-Its parent is the already push-ready Chapter 12/Chapter 13-authority commit
-`d3363f6b3612b3beef9b235f9b6c134fa0593fc1`. Immediate push of the complete
-chain was retried at `2026-08-22T18:16:05+02:00`; GitHub again returned its
-explicit HTTP 403 account-suspended response. The exact chain remains
-push-ready and must be retried without rewriting or creating a duplicate
-repository only after Floris reports that GitHub has restored access. Floris
-reports that the suspension followed VPN use and that a support ticket is
-open. Zenodo is therefore the active versioned preservation surface while the
-GitHub lineage remains temporarily unavailable.
+The complete Chapter 14 boundary and sanitized Zenodo preservation receipt are
+sealed in local commit `555062f9ef9942c2c3167a15e59e81b5f87ab0ea`
+(132 files / 1,323,634 bytes). Its reproducible inventory SHA-256 is
+`73cc49bba0c35598002408d0b30ece20fe7bcfc98d8221ae54afe400c1ba73a6`,
+computed from UTF-8, no-BOM, LF-terminated, headerless, ordinal-path-sorted
+`path<TAB>bytes<TAB>sha256` rows. Its parent is the complete Chapter 13 commit
+`a8f3357043a5483efcacca76cf886ad75269a58d`, whose parent is the Chapter 12 and
+Chapter 13-authority commit `d3363f6b3612b3beef9b235f9b6c134fa0593fc1`.
+The last remote attempt, against the previous pending head, was at
+`2026-08-22T18:16:05+02:00` and returned GitHub's explicit HTTP 403
+account-suspended response. The Chapter 14 commit was deliberately not retried:
+The user reports that the suspension followed VPN use and that a support ticket
+is open. The exact chain remains push-ready and must be sent unchanged only
+after the user reports restored access. Zenodo is the active versioned
+preservation surface while the GitHub lineage is temporarily unavailable.
 
 ## Frozen Chapter 10 authority
 
@@ -816,33 +818,91 @@ GitHub lineage remains temporarily unavailable.
   unique IDs, complete fragments, twelve visible downloads, correct sticky-nav
   clearance, and no warning or error.
 
-## Zenodo preservation — Chapter 14 progress boundary
+## Reader-first Zenodo preservation — Chapter 14 progress boundary
 
-- Published record: <https://zenodo.org/records/22059940>; version DOI
-  `10.5281/zenodo.22059940`; concept DOI `10.5281/zenodo.22059939`; version
-  `v1.01-id-progress-CH14-20260822`.
+- Published record: <https://zenodo.org/records/22061640>; version DOI
+  `10.5281/zenodo.22061640`; concept DOI `10.5281/zenodo.22059939`; version
+  `v1.01-id-progress-CH14-reader-20260822`.
 - Metadata is explicitly in progress, names Joceline Lega as creator, uses
   `ind`, open access, and `cc-by-nc-sa-4.0`, preserves the official source as
   `isDerivedFrom`, and states the change/non-endorsement boundary. TTP occurs
   exactly once as an `Other` contributor and nowhere in the title or
-  description.
-- Public repository snapshot: 34,564,770 bytes, SHA-256
-  `31e8cc53b0c03779d8c723b426f049dec1ebde8f3963ad1268a2042c9c61c2ca`;
-  readers: 5,459,760 bytes, SHA-256
-  `4073140a876520b716c7681368ac5ddb140e616451fdae40792d0038fcaba7a1`;
-  release manifest: 1,306 bytes, SHA-256
-  `368cf03b5ded8cbd3efd0a4ec472764bac17f50232d52980b6c1d68aaf3d96b7`.
-- All three artifacts were downloaded anonymously from the public record and
-  matched local filename, byte count, and SHA-256. Ordered public inventory
-  SHA-256:
-  `4d8b2b825076cdb91ce28032a4d836554e2ddb53751bba485078dbd6add7445f`.
+  description. The public description also identifies the production model
+  exactly as `OpenAI Codex gpt-5.6-sol, Ultra.` without displacing the creator
+  or human-contributor credits.
+- The five-file, 48,468,743-byte release begins with a 297-page tagged PDF
+  reader, followed by one 387-member compact resumable source ZIP, license,
+  release manifest, and checksums. Ordered local/public inventory SHA-256 is
+  `444ff63bc66e3c2bff051f8a439c766f315a75e452a60e0286974728708928ff`.
+- All five artifacts were downloaded anonymously from the public record and
+  matched local filename, byte count, and SHA-256. The PDF readback retained
+  297 pages, `/Lang id`, tagged structure, and twenty bookmarks; the ZIP passed
+  full CRC and member-count verification.
   The credential-free receipt is
   `00_control/ZENODO_PUBLICATION_RECEIPT_CH14_20260822.json`.
+
+## Figshare metadata preservation — Chapter 14 progress boundary
+
+- The account's complete seven-license list does not contain CC BY-NC-SA 4.0.
+  No release byte was therefore uploaded under a false substitute license.
+- A fileless CC0 metadata/link item was published as article `33314769`, DOI
+  `10.6084/m9.figshare.33314769.v2`, at
+  <https://figshare.com/articles/online_resource/Pengantar_Pemodelan_Matematika_Edisi_Bahasa_Indonesia_metadata_/33314769/2>.
+  Its description states that CC0 applies only to the metadata, the linked work
+  remains CC BY-NC-SA 4.0, and this is an incomplete CH14 checkpoint.
+- Anonymous readback found the exact title, Joceline Lega plus the account
+  owner as authors, two relevant categories, eight status/subject/license
+  keywords, the Zenodo version/concept and official-source references, zero
+  files, and zero standalone TTP occurrences. The rendered public page exposes
+  no file-download surface. Its metadata contains the exact model identification
+  `OpenAI Codex gpt-5.6-sol, Ultra.` and preserves the source and human credits.
+- The item is publicly present in project `280296` and in the 21-item
+  collection version `10.6084/m9.figshare.c.8668413.v37`. Both DOI redirects
+  resolve to the expected immutable version pages. Sanitized receipt:
+  `00_control/FIGSHARE_PUBLICATION_RECEIPT_CH14_20260822.json`. The collection
+  description explicitly permits truthful link-only records when its platform
+  cannot represent the work's exact license.
+
+## Indonesian field-terminology QA — 2026-08-22
+
+- A genuine Indonesian mathematical-modeling witness was frozen from
+  arXiv:2001.05854v1: Natanael Karjanto's 94-page bilingual upload contains the
+  complete original 47-page Indonesian thesis and downloadable TeX.
+- The 144,585-byte official source archive has SHA-256
+  `520cd160b47664dda32e57df87a6eb028348154e4d7a7494d230e8e517891d53`;
+  the 91,655-byte, 2,076-line Indonesian TeX has SHA-256
+  `03f7e68801badc84255df3323078ae00eee7ecff8a9f118cba064ce5d46ff2f2`.
+- Direct TeX comparison justified normalization to `syarat batas`, `sistem
+  dinamik`, and `matriks Jacobi`; added evidence-backed glossary entries for
+  governing equations, boundary-value problems, numerical methods, initial
+  guesses, numerical error, convergence, and dispersion relations; retained
+  modern `konvergensi` rather than the witness's single dated
+  `kekonvergenan`; and documented rather than collapsed the equilibrium/fixed
+  point and initial-condition distinctions.
+- CH01, CH02, CH04, CH05, CH06, CH07, CH10, and CH13 were regenerated. All
+  eight passed structural, backend-binding, local-dependency, and repeated
+  byte-identical build QA. No formula, ID, link, problem, or executable code
+  topology changed. Full evidence is in
+  `00_control/TERMINOLOGY_QA_INDONESIAN_FIELD_SOURCE_20260822.md`.
+
+## Published-checkpoint consistency closure — 2026-08-22
+
+- Historical Zenodo/Figshare QA sections are explicitly marked superseded and
+  no longer point to live receipts for later versions.
+- The current public builder protects the published CH14 directory and version
+  label against mutation, requires a fresh no-overwrite destination, and adds
+  the terminology decision plus its bounded witness manifest/license notice to
+  future resumable packages. An isolated five-file smoke build passed privacy,
+  390-member ZIP closure/CRC, and protected-output refusal checks.
+- The exact model identification is one raw README line. Current private
+  controls use only the role label `the user`; verbatim historical directives
+  and source-author credits remain untouched.
 
 ## Next action
 
 Freeze and translate the first remaining source-order unit: front-matter
 record 22, *Preface*, as `O005-LEGA-V101-FM01`, *Prakata*. Future substantial
 verified boundaries must use Zenodo's new-version action on concept DOI
-`10.5281/zenodo.22059939`. Do not retry GitHub until Floris reports that account
+`10.5281/zenodo.22059939`, update Figshare article `33314769`, and republish
+collection `8668413`. Do not retry GitHub until the user reports that account
 access is restored.
