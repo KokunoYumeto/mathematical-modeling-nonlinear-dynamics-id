@@ -33,17 +33,22 @@
     "all_bytes_and_sha256_equal": true
   },
   "pending_publication": {
-    "commit": "555062f9ef9942c2c3167a15e59e81b5f87ab0ea",
-    "parent_pending_commit": "a8f3357043a5483efcacca76cf886ad75269a58d",
+    "commit": "cc404bd113f5e7af294205c4ad32f59cc0edabba",
+    "parent_pending_commit": "2574d58777412210f6394b2920508765c1f1dd7f",
     "pending_chain_base_commit": "d3363f6b3612b3beef9b235f9b6c134fa0593fc1",
-    "files": 132,
-    "bytes": 1323634,
-    "inventory_sha256": "73cc49bba0c35598002408d0b30ece20fe7bcfc98d8221ae54afe400c1ba73a6",
+    "source_closure_base_commit": "2574d58777412210f6394b2920508765c1f1dd7f",
+    "source_closure_base_files": 58,
+    "source_closure_base_bytes": 541894,
+    "source_closure_base_inventory_sha256": "b350fc8e44acead9803e417e9d5fbf6681373f7be1031dd24ac78c91b8194d54",
+    "files": 20,
+    "bytes": 253900,
+    "inventory_sha256": "7624a19694ea44dba5e02e48656bab04782626c7bf5e15a1b146b2c94098f30d",
+    "inventory_scope": "current head commit changed paths",
     "inventory_algorithm": "SHA-256 of UTF-8 no-BOM, LF-terminated, headerless, ordinal-path-sorted path<TAB>bytes<TAB>sha256 rows",
     "last_attempted_at": "2026-08-22T18:16:05+02:00",
     "current_commit_attempted": false,
     "status": "blocked_external_not_retried",
-    "reason": "GitHub rejected the previous pending head with HTTP 403 because the account is suspended; the user reports that the suspension followed VPN use and that a support ticket is open. The admitted Chapter 14 and sanitized preservation receipt are sealed in the new local commit without another futile remote attempt. The complete local commit chain remains intact.",
+    "reason": "GitHub rejected the previous pending head with HTTP 403 because the account is suspended; the user reports that the suspension followed VPN use and that a support ticket is open. The complete 22-record source translation and its final fidelity refinements are sealed in the two recorded local commits without another futile remote attempt. The complete local commit chain remains intact.",
     "next_action": "Do not retry GitHub until the user reports that account access is restored. Then push the unchanged complete local chain to origin/main; do not create a duplicate repository or rewrite the commits. Maintain verified substantial boundaries through the single Zenodo concept lineage while GitHub is unavailable."
   },
   "zenodo_publication": {
