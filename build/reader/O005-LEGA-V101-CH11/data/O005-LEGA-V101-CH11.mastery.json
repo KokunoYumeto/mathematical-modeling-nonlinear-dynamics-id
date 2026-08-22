@@ -1,0 +1,362 @@
+{
+  "schema": "o005-mastery-v1",
+  "schema_version": "1.0.0",
+  "unit_id": "O005-LEGA-V101-CH11",
+  "language": "id-ID",
+  "source": {
+    "resource": "Joceline Lega, Introduction to Mathematical Modeling",
+    "edition": "University of Arizona Pressbooks v1.01 (Maret 2026)",
+    "record": "Pressbooks chapter 410",
+    "record_id": 410,
+    "source_title": "Refresher: Linear Algebra",
+    "target_title": "Penyegaran: Aljabar Linear",
+    "modified_utc": "2026-03-19T20:11:37Z",
+    "source_file": "authority/units/O005-LEGA-V101-CH11/content.raw.en.html",
+    "source_locator": "exact frozen Pressbooks record 410 content.raw, problems on lines 106–163",
+    "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/linear-algebra/",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "provenance_policy": {
+    "source_derived": "Ringkasan masalah merupakan adaptasi/terjemahan dari soal sumber dan tetap berada di bawah CC BY-NC-SA 4.0.",
+    "new_original": "Petunjuk, rekaman pemeriksaan/jawaban, dan solusi ditulis baru untuk edisi Bahasa Indonesia dan ditandai terpisah dari materi sumber. Sumber tidak menyediakan himpunan solusi. Pembuktian kebebasan linear, determinan, ruang eigen, matriks transformasi, reduksi baris, basis ruang kolom dan ruang nol, koordinat polinom, serta relasi kebergantungan dihitung dan diperiksa secara independen."
+  },
+  "article_link_catalog": [],
+  "problems": [
+    {
+      "problem_id": "O005-LEGA-V101-CH11-P01",
+      "ordinal": 1,
+      "problem_summary": "Buktikan bahwa dua vektor eigen \\(u\\) dan \\(v\\) dari matriks \\(A\\) yang bersesuaian dengan nilai eigen berbeda adalah bebas linear.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "u",
+        "v",
+        "A"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Namai nilai eigen yang bersesuaian dengan \\(u\\) dan \\(v\\) sebagai \\(\\lambda\\) dan \\(\\mu\\), dengan \\(\\lambda\\ne\\mu\\). Mulailah dari relasi \\(c u+d v=0\\), terapkan \\(A\\), lalu eliminasi salah satu vektor."
+      },
+      "check": {
+        "type": "proof_distinct_eigenvalue_eigenvectors_independent",
+        "final_answer": "Misalkan \\(Au=\\lambda u\\), \\(Av=\\mu v\\), \\(u,v\\ne0\\), dan \\(\\lambda\\ne\\mu\\). Jika \\(cu+dv=0\\), maka penerapan \\(A\\) memberi \\(c\\lambda u+d\\mu v=0\\). Kurangi persamaan kedua dengan \\(\\mu(cu+dv)=0\\); diperoleh \\(c(\\lambda-\\mu)u=0\\), sehingga \\(c=0\\). Relasi awal lalu memberi \\(d=0\\). Jadi, satu-satunya kombinasi linear yang menghasilkan nol adalah kombinasi trivial, sehingga \\(u\\) dan \\(v\\) bebas linear.",
+        "quick_check": "Argumen harus menggunakan tiga fakta: vektor eigen tidak nol, \\(\\lambda-\\mu\\ne0\\), dan kedua koefisien akhirnya nol. Menunjukkan bahwa \\(u\\) dan \\(v\\) sekadar berbeda belum membuktikan kebebasan linear."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Tuliskan persamaan nilai eigen dengan nilai eigen yang berbeda.",
+            "formula": "Au=\\lambda u,\\qquad Av=\\mu v,\\qquad \\lambda\\ne\\mu"
+          },
+          {
+            "explanation": "Andaikan terdapat kombinasi linear yang sama dengan nol.",
+            "formula": "cu+dv=0"
+          },
+          {
+            "explanation": "Terapkan \\(A\\) dan gunakan kedua persamaan nilai eigen.",
+            "formula": "cAu+dAv=0\\quad\\Longrightarrow\\quad c\\lambda u+d\\mu v=0"
+          },
+          {
+            "explanation": "Eliminasi suku yang mengandung \\(v\\).",
+            "formula": "(c\\lambda u+d\\mu v)-\\mu(cu+dv)=c(\\lambda-\\mu)u=0"
+          },
+          {
+            "explanation": "Karena \\(u\\ne0\\) dan \\(\\lambda\\ne\\mu\\), maka \\(c=0\\); relasi semula dan \\(v\\ne0\\) kemudian memberi \\(d=0\\).",
+            "formula": "c=0,\\qquad dv=0\\Longrightarrow d=0"
+          }
+        ],
+        "conclusion": "Setiap relasi linear antara \\(u\\) dan \\(v\\) bersifat trivial; oleh karena itu keduanya bebas linear."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH11-P02",
+      "ordinal": 2,
+      "problem_summary": "Tentukan determinan matriks \\(C=\\begin{pmatrix}2&2&6\\\\4&3&12\\\\6&4&16\\end{pmatrix}\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "C = \\left[\\begin{array}{ccc} 2 & 2 & 6 \\\\ 4 & 3 & 12 \\\\ 6 & 4 & 16 \\end{array} \\right]."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Gunakan operasi penggantian baris yang tidak mengubah determinan: kurangi baris kedua dengan dua kali baris pertama dan baris ketiga dengan tiga kali baris pertama. Matriks yang tersisa hampir berbentuk segitiga."
+      },
+      "check": {
+        "type": "exact_three_by_three_determinant",
+        "final_answer": "Operasi \\(R_2\\leftarrow R_2-2R_1\\) dan \\(R_3\\leftarrow R_3-3R_1\\) tidak mengubah determinan dan menghasilkan \\(\\begin{pmatrix}2&2&6\\\\0&-1&0\\\\0&-2&-2\\end{pmatrix}\\). Ekspansi terhadap kolom pertama memberi \\(2\\det\\begin{pmatrix}-1&0\\\\-2&-2\\end{pmatrix}=2(-1)(-2)=4\\). Jadi, \\(\\det C=4\\).",
+        "quick_check": "Ekspansi kofaktor baris pertama memberi \\(2(48-48)-2(64-72)+6(16-18)=0+16-12=4\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Mulailah dari matriks yang diberikan.",
+            "formula": "C=\\begin{pmatrix}2&2&6\\\\4&3&12\\\\6&4&16\\end{pmatrix}"
+          },
+          {
+            "explanation": "Hilangkan entri pertama pada baris kedua tanpa mengubah determinan.",
+            "formula": "R_2\\leftarrow R_2-2R_1\\quad\\Longrightarrow\\quad R_2=(0,-1,0)"
+          },
+          {
+            "explanation": "Hilangkan entri pertama pada baris ketiga dengan jenis operasi yang sama.",
+            "formula": "R_3\\leftarrow R_3-3R_1\\quad\\Longrightarrow\\quad R_3=(0,-2,-2)"
+          },
+          {
+            "explanation": "Ekspansikan terhadap kolom pertama; minor \\(2\\times2\\) yang tersisa berbentuk segitiga.",
+            "formula": "\\det C=\\det\\begin{pmatrix}2&2&6\\\\0&-1&0\\\\0&-2&-2\\end{pmatrix}=2(-1)(-2)=4"
+          }
+        ],
+        "conclusion": "Determinan matriks tersebut adalah \\(4\\), sehingga \\(C\\) invertibel."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH11-P03",
+      "ordinal": 3,
+      "problem_summary": "Tentukan semua nilai eigen dan vektor eigen matriks \\(B=\\begin{pmatrix}4&-1&1\\\\-1&4&-1\\\\-1&1&2\\end{pmatrix}\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "B = \\left[\\begin{array}{ccc}4 & -1 & 1 \\\\ -1 & 4 & -1 \\\\ -1 & 1 & 2 \\end{array}\\right]."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Faktorkan \\(\\det(\\lambda I-B)\\), lalu cari ruang nol \\(B-3I\\) dan \\(B-4I\\). Ingat bahwa jawaban untuk vektor eigen adalah semua vektor tak nol dalam setiap ruang eigen, bukan hanya satu vektor contoh."
+      },
+      "check": {
+        "type": "exact_eigenvalues_and_eigenspaces",
+        "final_answer": "Polinom karakteristik dengan konvensi \\(\\det(\\lambda I-B)\\) adalah \\((\\lambda-4)(\\lambda-3)^2\\). Jadi nilai eigennya ialah \\(3\\) dengan multiplisitas aljabar dua dan \\(4\\) dengan multiplisitas aljabar satu. Ruang eigennya adalah \\(E_3=\\ker(B-3I)=\\operatorname{span}\\{(1,1,0)^T,(-1,0,1)^T\\}\\) dan \\(E_4=\\ker(B-4I)=\\operatorname{span}\\{(-1,1,1)^T\\}\\). Semua vektor eigen adalah vektor tak nol dalam kedua ruang tersebut.",
+        "quick_check": "Jumlah nilai eigen dengan multiplisitas adalah \\(3+3+4=10=\\operatorname{tr}B\\), dan hasil kalinya \\(3\\cdot3\\cdot4=36=\\det B\\). Substitusi setiap vektor basis harus menghasilkan \\(Bv=3v\\) atau \\(Bv=4v\\) sesuai ruangnya."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Hitung dan faktorkan polinom karakteristik. Dengan konvensi sumber, \\(\\det(B-\\lambda I)\\) berbeda tanda karena ukurannya ganjil, tetapi mempunyai akar yang sama.",
+            "formula": "\\det(\\lambda I-B)=\\lambda^3-10\\lambda^2+33\\lambda-36=(\\lambda-4)(\\lambda-3)^2"
+          },
+          {
+            "explanation": "Untuk \\(\\lambda=3\\), reduksi sistem \\((B-3I)x=0\\) menyisakan satu persamaan.",
+            "formula": "B-3I=\\begin{pmatrix}1&-1&1\\\\-1&1&-1\\\\-1&1&-1\\end{pmatrix},\\qquad x_1-x_2+x_3=0"
+          },
+          {
+            "explanation": "Gunakan \\(x_2\\) dan \\(x_3\\) sebagai variabel bebas untuk membentuk basis ruang eigen berdimensi dua.",
+            "formula": "E_3=\\{(s-t,s,t)^T:s,t\\in\\mathbb R\\}=\\operatorname{span}\\{(1,1,0)^T,(-1,0,1)^T\\}"
+          },
+          {
+            "explanation": "Untuk \\(\\lambda=4\\), persamaan memberi \\(x_2=x_3\\) dan \\(x_1=-x_3\\).",
+            "formula": "B-4I=\\begin{pmatrix}0&-1&1\\\\-1&0&-1\\\\-1&1&-2\\end{pmatrix},\\qquad E_4=\\operatorname{span}\\{(-1,1,1)^T\\}"
+          }
+        ],
+        "conclusion": "Matriks \\(B\\) mempunyai ruang eigen berdimensi dua untuk \\(\\lambda=3\\) dan ruang eigen berdimensi satu untuk \\(\\lambda=4\\); ketiga vektor basis itu juga menunjukkan bahwa \\(B\\) dapat didiagonalkan."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH11-P04",
+      "ordinal": 4,
+      "problem_summary": "Untuk pemetaan \\(\\mathcal T:\\mathbb R^5\\to\\mathbb R^3\\) yang diberikan, tentukan apakah \\(\\mathcal T\\) linear dan temukan matriksnya relatif terhadap basis standar.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\mathbb{R}^5",
+        "\\mathbb{R}^3",
+        "{\\mathcal T}(\\vec x) = \\left[\\begin{array}{c} 0 \\\\ 2 x_1 - 4 x_2 + x_5 \\\\ x_2 + x_3 + x_5 \\end{array}\\right], \\qquad \\text{where} \\qquad \\vec x = \\left[\\begin{array}{c}x_1 \\\\ x_2 \\\\ x_3 \\\\ x_4 \\\\ x_5 \\end{array}\\right]."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Hitung \\(\\mathcal T(e_j)\\) untuk kelima vektor basis standar \\(e_j\\) di \\(\\mathbb R^5\\). Susun kelima hasil tersebut sebagai kolom sebuah matriks \\(3\\times5\\), lalu periksa bahwa perkaliannya dengan \\(x\\) mengembalikan rumus sumber."
+      },
+      "check": {
+        "type": "exact_linearity_and_standard_matrix",
+        "final_answer": "Pemetaan tersebut linear karena setiap komponennya merupakan kombinasi linear homogen dari \\(x_1,\\ldots,x_5\\). Matriks relatif terhadap basis standar adalah \\(M=\\begin{pmatrix}0&0&0&0&0\\\\2&-4&0&0&1\\\\0&1&1&0&1\\end{pmatrix}\\), dan \\(Mx=(0,\\,2x_1-4x_2+x_5,\\,x_2+x_3+x_5)^T=\\mathcal T(x)\\).",
+        "quick_check": "Matriks harus berukuran \\(3\\times5\\). Kolom keempat harus nol karena \\(x_4\\) tidak muncul, sedangkan kolom kelima harus \\((0,1,1)^T\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Evaluasi pemetaan pada basis standar domain.",
+            "formula": "\\mathcal T(e_1)=(0,2,0)^T,\\quad\\mathcal T(e_2)=(0,-4,1)^T,\\quad\\mathcal T(e_3)=(0,0,1)^T"
+          },
+          {
+            "explanation": "Dua kolom terakhir berasal dari koefisien \\(x_4\\) dan \\(x_5\\).",
+            "formula": "\\mathcal T(e_4)=(0,0,0)^T,\\qquad\\mathcal T(e_5)=(0,1,1)^T"
+          },
+          {
+            "explanation": "Susun citra vektor basis sebagai kolom matriks standar.",
+            "formula": "M=[\\mathcal T(e_1)\\ \\mathcal T(e_2)\\ \\mathcal T(e_3)\\ \\mathcal T(e_4)\\ \\mathcal T(e_5)]=\\begin{pmatrix}0&0&0&0&0\\\\2&-4&0&0&1\\\\0&1&1&0&1\\end{pmatrix}"
+          },
+          {
+            "explanation": "Representasi matriks langsung membuktikan sifat linear.",
+            "formula": "\\mathcal T(\\alpha x+\\beta y)=M(\\alpha x+\\beta y)=\\alpha\\mathcal T(x)+\\beta\\mathcal T(y)"
+          }
+        ],
+        "conclusion": "Jadi \\(\\mathcal T\\) merupakan transformasi linear dan matriks standarnya adalah matriks \\(3\\times5\\) di atas."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH11-P05",
+      "ordinal": 5,
+      "problem_summary": "Untuk matriks \\(A\\) berukuran \\(3\\times5\\) yang diberikan, tentukan basis ruang kolom, basis ruang nol, dan rank \\(A\\), serta berikan pembenarannya.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "A = \\left[\\begin{array}{ccccc} 1 & 2 & 2 & 4 & 4 \\\\ 2 & 4 & 3 & 4 & 2 \\\\ 1 & 1 & 3 & 2 & 3 \\end{array}\\right]."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Reduksi \\(A\\) ke bentuk eselon baris tereduksi. Gunakan indeks kolom pivot untuk memilih kolom dari matriks asli sebagai basis ruang kolom; jangan mengambil kolom dari hasil reduksi. Untuk ruang nol, jadikan \\(x_4\\) dan \\(x_5\\) variabel bebas."
+      },
+      "check": {
+        "type": "exact_column_space_nullspace_and_rank",
+        "final_answer": "Bentuk eselon baris tereduksi adalah \\(\\operatorname{rref}(A)=\\begin{pmatrix}1&0&0&-16&-22\\\\0&1&0&6&7\\\\0&0&1&4&6\\end{pmatrix}\\), sehingga kolom pivotnya adalah kolom \\(1,2,3\\). Basis ruang kolom harus diambil dari \\(A\\) asli: \\(\\{(1,2,1)^T,(2,4,1)^T,(2,3,3)^T\\}\\). Basis ruang nol adalah \\(\\{(16,-6,-4,1,0)^T,(22,-7,-6,0,1)^T\\}\\). Terdapat tiga pivot, jadi \\(\\operatorname{rank}A=3\\).",
+        "quick_check": "Determinan tiga kolom pivot asli adalah \\(-1\\), kedua vektor basis ruang nol harus dipetakan ke nol oleh \\(A\\), dan teorema rank–nullitas memberi \\(3+2=5\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Lakukan eliminasi Gauss–Jordan pada matriks.",
+            "formula": "A\\sim\\begin{pmatrix}1&0&0&-16&-22\\\\0&1&0&6&7\\\\0&0&1&4&6\\end{pmatrix}"
+          },
+          {
+            "explanation": "Kolom pivot bernomor \\(1,2,3\\); pilih kolom-kolom dengan nomor tersebut dari matriks asli.",
+            "formula": "\\mathcal B_{\\operatorname{Col}A}=\\{(1,2,1)^T,(2,4,1)^T,(2,3,3)^T\\}"
+          },
+          {
+            "explanation": "Persamaan homogen dari bentuk tereduksi menyatakan variabel pivot melalui dua variabel bebas.",
+            "formula": "x_1=16x_4+22x_5,\\qquad x_2=-6x_4-7x_5,\\qquad x_3=-4x_4-6x_5"
+          },
+          {
+            "explanation": "Tetapkan \\(x_4=s\\) dan \\(x_5=t\\), lalu pisahkan kedua parameter.",
+            "formula": "x=s(16,-6,-4,1,0)^T+t(22,-7,-6,0,1)^T"
+          },
+          {
+            "explanation": "Jumlah pivot menentukan rank, sedangkan dua parameter bebas menentukan dimensi ruang nol.",
+            "formula": "\\operatorname{rank}A=3,\\qquad\\dim\\ker A=2"
+          }
+        ],
+        "conclusion": "Ruang kolom berdimensi tiga dan sama dengan \\(\\mathbb R^3\\); ruang nol berdimensi dua dengan basis yang diberikan, sesuai teorema rank–nullitas."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH11-P06",
+      "ordinal": 6,
+      "problem_summary": "Untuk lima polinom \\(q_0,\\ldots,q_4\\) di \\(\\mathbb P_2\\), tentukan koordinat standar \\(Q(t)=4t^2-2t+10\\), pilih basis \\(\\mathbb P_2\\) dari himpunan tersebut, lalu tentukan koordinat \\(Q\\) relatif terhadap basis pilihan.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\mathbb{P}_2",
+        "{\\mathcal S} = \\left\\{q_0,\\, q_1,\\, q_2,\\, q_3,\\, q_4\\right\\}",
+        "\\begin{eqnarray*} && q_0(t) = 6 t - t^2, \\qquad q_1(t) = 1 - t, \\qquad q_2(t)= t + 1 \\\\ && q_3(t) = 4, \\qquad \\qquad \\ q_4(t) = 2 - 2 t + t^2. \\end{eqnarray*}",
+        "Q(t)= 4 t^2 - 2 t + 10"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Gunakan basis standar terurut \\(\\mathcal E=(1,t,t^2)\\). Tulis setiap \\(q_j\\) sebagai kolom koefisien, pilih tiga kolom dengan determinan tak nol, lalu selesaikan sistem koordinat untuk \\(Q\\)."
+      },
+      "check": {
+        "type": "exact_polynomial_basis_and_coordinates",
+        "final_answer": "Dalam basis standar terurut \\(\\mathcal E=(1,t,t^2)\\), \\([Q]_{\\mathcal E}=(10,-2,4)^T\\). Salah satu basis yang seluruh anggotanya berasal dari \\(\\mathcal S\\) adalah basis terurut \\(\\mathcal B=(q_0,q_1,q_2)\\), karena matriks kolom koordinatnya \\(M=\\begin{pmatrix}0&1&1\\\\6&-1&1\\\\-1&0&0\\end{pmatrix}\\) mempunyai determinan \\(-2\\ne0\\). Penyelesaian \\(M[Q]_{\\mathcal B}=[Q]_{\\mathcal E}\\) memberi \\([Q]_{\\mathcal B}=(-4,-6,16)^T\\).",
+        "quick_check": "Verifikasi langsung harus memberi \\(-4q_0-6q_1+16q_2=4t^2-2t+10\\). Urutan komponen koordinat harus mengikuti urutan basis yang dinyatakan."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Baca koefisien konstanta, \\(t\\), dan \\(t^2\\) dari \\(Q\\).",
+            "formula": "[Q]_{\\mathcal E}=(10,-2,4)^T,\\qquad\\mathcal E=(1,t,t^2)"
+          },
+          {
+            "explanation": "Tuliskan koordinat tiga kandidat basis sebagai kolom.",
+            "formula": "[q_0]_{\\mathcal E}=(0,6,-1)^T,\\quad[q_1]_{\\mathcal E}=(1,-1,0)^T,\\quad[q_2]_{\\mathcal E}=(1,1,0)^T"
+          },
+          {
+            "explanation": "Determinan tak nol membuktikan bahwa ketiganya bebas linear; karena \\(\\dim\\mathbb P_2=3\\), ketiganya membentuk basis.",
+            "formula": "\\det\\begin{pmatrix}0&1&1\\\\6&-1&1\\\\-1&0&0\\end{pmatrix}=-2\\ne0"
+          },
+          {
+            "explanation": "Selesaikan sistem yang menyatakan \\(Q\\) sebagai kombinasi ketiga polinom.",
+            "formula": "M\\begin{pmatrix}c_0\\\\c_1\\\\c_2\\end{pmatrix}=\\begin{pmatrix}10\\\\-2\\\\4\\end{pmatrix}\\quad\\Longrightarrow\\quad(c_0,c_1,c_2)=(-4,-6,16)"
+          },
+          {
+            "explanation": "Periksa kombinasi tersebut langsung sebagai polinom.",
+            "formula": "-4(6t-t^2)-6(1-t)+16(t+1)=4t^2-2t+10"
+          }
+        ],
+        "conclusion": "Dengan urutan basis \\((q_0,q_1,q_2)\\), koordinat polinom \\(Q\\) adalah \\((-4,-6,16)^T\\)."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH11-P07",
+      "ordinal": 7,
+      "problem_summary": "Buktikan bahwa lima vektor \\(v_1,\\ldots,v_5\\) yang diberikan di \\(\\mathbb R^4\\) membentuk himpunan yang bergantung linear.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\mathbb{R}^4",
+        "\\begin{align*} &\\vec v_1 = \\left[\\begin{array}{cccc} 1 \\\\ 2 \\\\ 3 \\\\ 4\\end{array}\\right],\\qquad \\vec v_2 = \\left[\\begin{array}{cccc} 0 \\\\ 1 \\\\ 0 \\\\ -1\\end{array}\\right],\\qquad \\vec v_3 = \\left[\\begin{array}{cccc} 1 \\\\ 0 \\\\ 1 \\\\ 0\\end{array}\\right],\\\\ & \\vec v_4 = \\left[\\begin{array}{cccc} 1 \\\\ 1 \\\\ 1 \\\\ -2\\end{array}\\right],\\qquad \\vec v_5 = \\left[\\begin{array}{cccc} 1 \\\\ 1 \\\\ 1 \\\\ 1\\end{array}\\right]. \\end{align*}",
+        "\\displaystyle \\left\\{\\vec v_1,\\,\\vec v_2,\\,\\vec v_3,\\,\\vec v_4,\\,\\vec v_5\\right\\}"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Lima vektor di ruang berdimensi empat pasti bergantung linear. Untuk bukti yang dapat diperiksa langsung, cari koefisien tak semuanya nol dalam \\(c_1v_1+\\cdots+c_5v_5=0\\); ada relasi sederhana dengan \\(c_1=0\\)."
+      },
+      "check": {
+        "type": "explicit_linear_dependence_relation",
+        "final_answer": "Relasi nontrivial \\(0v_1-3v_2-3v_3+2v_4+v_5=0\\) berlaku. Vektor koefisiennya \\((0,-3,-3,2,1)\\) tidak nol, sehingga definisi kebergantungan linear langsung terpenuhi. Secara dimensi, hasil ini juga pasti karena terdapat lima vektor di \\(\\mathbb R^4\\).",
+        "quick_check": "Jumlah per komponen adalah \\((0-3+2+1,\\,-3+0+2+1,\\,0-3+2+1,\\,3+0-4+1)=(0,0,0,0)\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Bentuk matriks yang kolom-kolomnya adalah kelima vektor. Karena matriks berukuran \\(4\\times5\\), ruang nolnya tidak trivial.",
+            "formula": "V=[v_1\\ v_2\\ v_3\\ v_4\\ v_5],\\qquad\\operatorname{nullity}(V)\\ge5-4=1"
+          },
+          {
+            "explanation": "Salah satu vektor koefisien tak nol di ruang nol matriks tersebut adalah",
+            "formula": "c=(0,-3,-3,2,1)^T"
+          },
+          {
+            "explanation": "Terjemahkan persamaan \\(Vc=0\\) menjadi relasi antarvektor.",
+            "formula": "-3v_2-3v_3+2v_4+v_5=0"
+          },
+          {
+            "explanation": "Periksa relasi tersebut langsung per komponen.",
+            "formula": "-3\\begin{pmatrix}0\\\\1\\\\0\\\\-1\\end{pmatrix}-3\\begin{pmatrix}1\\\\0\\\\1\\\\0\\end{pmatrix}+2\\begin{pmatrix}1\\\\1\\\\1\\\\-2\\end{pmatrix}+\\begin{pmatrix}1\\\\1\\\\1\\\\1\\end{pmatrix}=\\begin{pmatrix}0\\\\0\\\\0\\\\0\\end{pmatrix}"
+          }
+        ],
+        "conclusion": "Karena terdapat kombinasi linear nol dengan koefisien yang tidak semuanya nol, kelima vektor tersebut bergantung linear."
+      }
+    }
+  ]
+}

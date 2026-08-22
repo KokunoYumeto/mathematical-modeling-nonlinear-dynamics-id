@@ -231,7 +231,7 @@ equations and scaling are supplied as mathematical facts with an exact DOI
 citation so Problems 4–6 can be studied offline; all new hints, checks, worked
 solutions, and code remain explicitly separate from source-provided content.
 
-## Part 5 introduction and Chapter 11 authority record
+## Part 5 introduction and Chapters 11–12
 
 Visible Part 5 record 409 is a source-derived two-paragraph prose unit with no
 asset, problem, formula, footnote, notebook, or mastery component. Its natural
@@ -240,7 +240,16 @@ CC BY-NC-SA 4.0 boundary with the standard change and non-endorsement notice.
 
 Chapter 11 record 410 likewise references no component asset. Its frozen
 canonical/raw/rendered bytes inherit the book license because the record-level
-license override is empty. Translation, formula corrections if any, seven
-exercise adaptations, and newly authored mastery support must retain separate
-source/new-original provenance; no notebook or external artifact is part of
-the admitted source closure.
+license override is empty. The complete translation and seven source-derived
+exercise summaries remain in the CC BY-NC-SA 4.0 adaptation; the seven hints,
+checks, and worked solutions are identified as newly authored support. The
+thirteen mathematical/notation corrections are declared in the correction
+ledger. No notebook or external artifact was attributed to the source or added
+to this unit.
+
+Chapter 12 record 413 has an empty record-level license override and references
+no component asset, link, exercise, or computational surface. Its frozen
+canonical/raw/rendered bytes therefore inherit the book's CC BY-NC-SA 4.0
+license. The forthcoming translation remains an adaptation under that license;
+no mastery, notebook, or asset component may be fabricated merely to populate
+an otherwise inapplicable backend field.

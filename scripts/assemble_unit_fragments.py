@@ -576,6 +576,90 @@ SPECS = {
         ],
         "replacements": [],
     },
+    "O005-LEGA-V101-CH11": {
+        "source_lines": 166,
+        "problem_count": 7,
+        "fragments": [
+            "01-vector-spaces-and-linear-mappings.html",
+            "02-matrices.html",
+            "03-eigenvalues-and-eigenvectors.html",
+            "04-exercises.html",
+        ],
+        "replacements": [
+            (
+                "$latex \\mathcal S$ adalah <em>ruang vektor</em> real (atau kompleks) jika dan hanya jika tertutup terhadap penjumlahan dan perkalian dengan skalar. Dengan kata lain,",
+                "Himpunan bagian tak kosong $latex \\mathcal S$ dari suatu ruang vektor real (atau kompleks) merupakan <em>ruang vektor</em> jika dan hanya jika tertutup terhadap penjumlahan dan perkalian dengan skalar. Dengan kata lain,",
+                1,
+            ),
+            (r"\text{ (resp. }", r"\text{ (atau }", 1),
+            (
+                r"\{u_i \in S, i=1 \dots n\}",
+                r"\{u_i\in\mathcal S\mid i=1,\dots,n\}",
+                1,
+            ),
+            (
+                r"\begin{align*} \forall &amp;\{\alpha_i, i=1, \dots n \} \subset \mathbb{R} \text { (or } \mathbb{C}),\\ &amp;\sum_{i=1}^n \alpha_i\,u_i = 0 \Longrightarrow \alpha_i = 0, \forall i=1, \dots n. \end{align*}",
+                r"\begin{align*} &amp;\forall\,\alpha_1,\dots,\alpha_n \in \mathbb{R} \text{ (atau } \mathbb{C}),\\ &amp;\sum_{i=1}^n \alpha_i\,u_i = 0 \Longrightarrow \alpha_i = 0,\ \forall i=1,\dots,n. \end{align*}",
+                1,
+            ),
+            (r"i^{\hbox{th}}", "i", 1),
+            (r"j^{\hbox{th}}", "j", 1),
+            (
+                "<span style=\"text-align: initial;font-size: 1em\">Perhatikan bahwa setelah suatu basis dipilih, setiap </span>ruang vektor berdimensi $latex n$ isomorfik dengan $latex \\mathbb{R}^n$.",
+                "<span style=\"text-align: initial;font-size: 1em\">Perhatikan bahwa setelah suatu basis dipilih, setiap </span>ruang vektor real berdimensi $latex n$ isomorfik dengan $latex \\mathbb{R}^n$.",
+                1,
+            ),
+            (r"(A^T_{ij}) = (A_{ji})", r"(A^T)_{ij}=A_{ji}", 1),
+            (
+                "$latex i$ adalah satu baris dari $latex A$",
+                "$latex i$ adalah indeks baris tetap pada $latex A$",
+                1,
+            ),
+            (
+                "Persamaan $latex A X = b$ memiliki tepat satu solusi.",
+                "Persamaan $latex A x = b$ memiliki tepat satu solusi untuk setiap ruas kanan.",
+                1,
+            ),
+            (
+                "Misalkan $latex A$ adalah matriks real berukuran $latex n \\times n$.",
+                "Misalkan $latex A$ adalah matriks real berukuran $latex n \\times n$. Untuk nilai eigen tak real, pembahasan dilakukan dalam ruang vektor kompleks yang diperoleh dengan memperluas skalar.",
+                1,
+            ),
+            (
+                "merupakan <em>vektor eigen tergeneralisasi</em> dari $latex A$ dengan <em>nilai eigen</em> $latex a$ jika, untuk suatu bilangan bulat positif $latex m \\ne 1$, berlaku",
+                "merupakan <em>vektor eigen tergeneralisasi</em> dari $latex A$ dengan <em>nilai eigen</em> $latex a$ jika, untuk suatu bilangan bulat positif $latex m \\ge 1$, vektor tersebut berperingkat tepat m dalam arti bahwa",
+                1,
+            ),
+            (
+                r"(A - a I_n) f \ne 0, \qquad (A - a I_n)^m f = 0, \qquad f \ne 0.",
+                r"(A - a I_n)^{m-1} f \ne 0, \qquad (A - a I_n)^m f = 0, \qquad f \ne 0.",
+                1,
+            ),
+            (r"\det (A - a I)= 0", r"\det (A - a I_n)= 0", 1),
+            (
+                "Polinom karakteristik $latex A$ memiliki $latex n$ akar kompleks, yang merupakan nilai-nilai eigen $latex A$.",
+                "Polinom karakteristik $latex A$ memiliki $latex n$ akar kompleks jika dihitung dengan multiplisitas aljabarnya; akar-akar tersebut merupakan nilai-nilai eigen $latex A$.",
+                1,
+            ),
+            (
+                "Jejak $latex A$ adalah jumlah nilai-nilai eigen $latex A$.",
+                "Jejak $latex A$ adalah jumlah nilai-nilai eigen $latex A$, dengan memperhitungkan multiplisitas aljabar.",
+                1,
+            ),
+            (
+                "Determinan $latex A$ adalah hasil kali nilai-nilai eigen $latex A$.",
+                "Determinan $latex A$ adalah hasil kali nilai-nilai eigen $latex A$, dengan memperhitungkan multiplisitas aljabar.",
+                1,
+            ),
+            (
+                "Setelah suatu nilai eigen ditemukan, persamaan (A1.1) perlu diselesaikan untuk memperoleh vektor eigen yang bersesuaian. Vektor eigen semacam itu tidak hanya satu, melainkan membentuk suatu subruang linear. Masing-masing ruang eigen ini merupakan subruang invarian dari transformasi linear $latex \\mathcal T$ yang berkaitan dengan matriks $latex A$. Ruang vektor $latex \\mathcal S$, atau secara ekuivalen $latex \\mathbb{R}^n$, dengan demikian dapat dipandang sebagai jumlah ruang-ruang eigen dari $latex A$, dan dekomposisi ini memberikan gambaran geometris tentang cara $latex \\mathcal T$ bekerja pada $latex \\mathcal S$.",
+                "Setelah suatu nilai eigen ditemukan, persamaan (A1.1) perlu diselesaikan untuk memperoleh vektor eigen yang bersesuaian. Himpunan semua solusinya, termasuk vektor nol, membentuk ruang eigen; anggota tak nol ruang ini adalah vektor-vektor eigen. Setiap ruang eigen merupakan subruang invarian dari transformasi linear $latex \\mathcal T$ yang berkaitan dengan matriks $latex A$. Jika matriks tersebut dapat didiagonalkan atas medan skalar yang digunakan, ruang vektor $latex \\mathcal S$, atau $latex \\mathbb{R}^n$ dalam kasus real, merupakan jumlah langsung ruang-ruang eigen $latex A$. Secara umum, dekomposisi memerlukan ruang eigen tergeneralisasi pada kompleksifikasi atau blok invarian real; keduanya memberikan gambaran geometris tentang cara $latex \\mathcal T$ bekerja pada $latex \\mathcal S$.",
+                1,
+            ),
+            (r"\text{where}", r"\text{dengan}", 1),
+            (r"\begin{array}{cccc}", r"\begin{array}{c}", 5),
+        ],
+    },
 }
 
 

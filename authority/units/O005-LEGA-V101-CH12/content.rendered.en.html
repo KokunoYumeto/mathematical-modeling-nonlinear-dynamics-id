@@ -1,0 +1,106 @@
+<p>The information below is an elementary overview of the basic properties of the gradient of a function and of the divergence and curl of a vector field. These topics are typically covered in a third semester calculus course.</p>
+<h2>The gradient</h2>
+<p>The gradient of a differentiable function of three variables [latex]f(x,y,z)[/latex] is defined by</p>
+<p style="text-align: center">[latex]\hbox{grad}f=\vec \nabla f = \displaystyle \frac{\partial f}{\partial x} \vec \imath + \frac{\partial f}{\partial y} \vec \jmath + \frac{\partial f}{\partial z} \vec k[/latex]</p>
+<p>and has the following properties.</p>
+<ul>
+<li>[latex]\vec \nabla f[/latex] points in the direction where [latex]f[/latex] is increasing the fastest.</li>
+<li>The rate of change of [latex]f[/latex] in that direction is equal to [latex]||\vec \nabla f||[/latex].</li>
+<li>[latex]\vec \nabla f[/latex] is perpendicular to the level surfaces of [latex]f[/latex] (i.e. to surfaces of equation [latex]f=C[/latex] = constant).</li>
+<li>The directional derivative of [latex]f[/latex] in the direction of the <span style="text-decoration: underline">unit vector</span> [latex]\vec u[/latex] is equal to [latex]\vec \nabla f \cdot \vec u[/latex].</li>
+<li>Critical points of [latex]f[/latex] are such that [latex]\vec \nabla f = \vec 0[/latex] at these points. Generic critical points are minima, maxima and saddle points of the function [latex]f[/latex].</li>
+<li>The extrema of [latex]f[/latex] subject to the constraint [latex]g(x,y,z)=C[/latex] are points on the curve of equation [latex]g(x,y,z)=C[/latex] where the gradient of [latex]f[/latex] is parallel to the gradient of [latex]g.[/latex] The constant of proportionality is called a <em>Lagrange multiplier</em>.</li>
+</ul>
+<h2>Line integrals and gradient fields</h2>
+<h3>Line integrals</h3>
+<p>The line integral of a continuous vector field [latex]\vec F[/latex] along the oriented path [latex]\mathcal C[/latex] is written</p>
+<p style="text-align: center">[latex]\displaystyle \int_{\mathcal C} \vec F(\vec r) \cdot d\vec r,[/latex]</p>
+<p>where [latex]\vec r[/latex] is the position vector and [latex]d\vec r[/latex] is tangent to the path [latex]\mathcal C[/latex]. If we know a parametrization of [latex]\mathcal C[/latex], i.e. if [latex]\mathcal C[/latex] is drawn by [latex]\vec r(t)[/latex] when [latex]t[/latex] varies between [latex]t_0[/latex] and [latex]t_1[/latex], the above line integral reads</p>
+<p style="text-align: center">[latex]\displaystyle \int_{\mathcal C} \vec F \cdot d\vec r = \int_{t_0}^{t_1} \vec F(\vec r(t)) \cdot \frac{d \vec r}{d t}\ dt,[/latex]</p>
+<p>and can thus be computed.</p>
+<h4>Example 1</h4>
+<p>Consider the vector field [latex]\vec F(x,y) = e^x \vec \imath + e^y \vec \jmath[/latex]. Let [latex]\mathcal C[/latex] be the part of the ellipse [latex]x^2+4 y^2 = 4[/latex], joining [latex](0,1)[/latex] to [latex](2,0)[/latex] in the clockwise direction. A parametrization of [latex]\mathcal C[/latex] is [latex]x = 2 \sin(t)[/latex], [latex]y=\cos(t)[/latex], with [latex]t[/latex] varying between 0 and [latex]\pi/2[/latex]. Therefore,</p>
+<p style="text-align: center">[latex]\begin{align*} \int_{\mathcal C} \vec F \cdot d\vec r & = \int_0^{\pi/2} \left[e^{2 \sin(t)} \vec \imath + e^{\cos(t)} \vec \jmath \right] \cdot \left[2 \cos(t) \vec \imath - \sin(t) \vec \jmath \right] dt \\ & = \int_0^{\pi/2} \left[2 \cos(t) e^{2 \sin(t)} - \sin(t) e^{\cos(t)} \right]\ dt \\ & = \left[ e^{2 \sin(t)} + e^{\cos(t)} \right]_0^{\pi/2} = e (e -1).\end{align*}[/latex]</p>
+<h4>Example 2</h4>
+<p>The work done by a force [latex]\vec F[/latex] along the path [latex]\mathcal C[/latex] is given by [latex]W = \int_{\mathcal C} \vec F \cdot d\vec r[/latex]. If [latex]\vec r[/latex] moves according to Newton&#8217;s law, [latex]\vec F = m \ d^2 \vec r / d t^2[/latex], so that</p>
+<p style="text-align: center">[latex]\displaystyle W = \int_{t_0}^{t_1} m\ \frac{d^2 \vec r}{d t^2} \cdot \frac{d \vec r}{d t}\ dt = \left[\frac{1}{2} m \left(\frac{d \vec r}{d t}\right)^2 \right]_{t_0}^{t_1} = \left[ \frac{1}{2} m v^2 \right]_{t_0}^{t_1},[/latex]</p>
+<p>i.e. the work done by [latex]\vec F[/latex] as a point mass moves along the path [latex]\mathcal C[/latex] is equal to the difference in kinetic energy of the point mass between the end points of [latex]\mathcal C[/latex].</p>
+<h3>Gradient fields</h3>
+<p>A vector field [latex]\vec F[/latex] is a <em>gradient field</em> if there is a function [latex]f(x,y,z)[/latex] such that [latex]\vec F = \vec \nabla f[/latex]. The vector field [latex]\vec F[/latex] is then <em>conservative</em>, <em>path-independent</em>, and <em>circulation free</em>.</p>
+<ul>
+<li>A <em>path-independent</em> vector field [latex]\vec F[/latex] is such that the line integral of [latex]\vec F[/latex] along any path in the domain of [latex]\vec F[/latex] only depends on the end points of the path.</li>
+<li>A <em>circulation free</em> vector field is such that its circulation (i.e. its line integral along any closed curve) is zero everywhere in the domain of [latex]\vec F[/latex].</li>
+</ul>
+<p>The <span style="text-decoration: underline">fundamental theorem of calculus for line integrals</span> tells us that a gradient field is path-independent, i.e.</p>
+<p style="text-align: center">[latex]\displaystyle \int_{\mathcal C} \vec \nabla f \cdot d \vec r = f(Q) - f(P),[/latex]</p>
+<p>where [latex]\mathcal C[/latex] is a (piecewise) smooth path joining [latex]P[/latex] to [latex]Q[/latex] and [latex]\vec \nabla f[/latex] is continuous on [latex]\mathcal C[/latex]. Conversely, any path-independent vector field is a gradient field.</p>
+<h4>Example</h4>
+<p>Consider the force [latex]\vec F = m \frac{d^2 \vec r}{d t^2}[/latex] discussed above. If [latex]\vec F[/latex] has a potential function, i.e. if there exists a function [latex]V(r)[/latex] such that [latex]\vec F = - \vec \nabla V[/latex], we have</p>
+<p style="text-align: center">[latex]\begin{align*} W & = \int_{\mathcal C} \vec F \cdot d\vec r = - \int_{\mathcal C} \vec \nabla V \cdot d\vec r = V(\vec r(t_0)) - V(\vec r(t_1)) \\ & = \left[ \frac{1}{2} m v^2 \right]_{t_0}^{t_1}. \end{align*}[/latex]</p>
+<p>Thus, [latex]\displaystyle \frac{1}{2} m v^2(t_0) + V \left(\vec r(t_0) \right) = \frac{1}{2} m v^2(t_1) + V \left(\vec r(t_1) \right),[/latex] i.e. the total energy, which is the sum of the kinetic and potential energies, is conserved.</p>
+<ul>
+<li>If [latex]\vec F = F_1 \vec \imath+ F_2 \vec \jmath + F_3 \vec k[/latex] is a gradient field with continuous partial derivatives, then</li>
+</ul>
+<p style="text-align: center">[latex]\displaystyle \frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x}, \qquad \frac{\partial F_2}{\partial z} = \frac{\partial F_3}{\partial y}, \qquad \frac{\partial F_3}{\partial x} = \frac{\partial F_1}{\partial z},[/latex]</p>
+<p>i.e. [latex]\text{curl} \vec F = \vec 0[/latex].</p>
+<h2>The curl</h2>
+<p>The curl of a vector field [latex]\vec F = F_1 \vec \imath+ F_2 \vec \jmath + F_3 \vec k[/latex] with continuous partial derivatives is a vector given by</p>
+<p style="text-align: center">[latex]\begin{align*} \text{curl} \vec F & = \vec \nabla \times \vec F = \left \vert \begin{array}{ccc} \vec \imath & \vec \jmath & \vec k \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ F_1 & F_2 & F_3 \end{array} \right \vert \\ & = \left( \frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z} \right) \vec \imath+ \left( \frac{\partial F_1}{\partial z} - \frac{\partial F_3} {\partial x}\right) \vec \jmath + \left( \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}\right) \vec k. \end{align*}[/latex]</p>
+<p>It has the following properties.</p>
+<ul>
+<li>The direction of [latex]\text{curl}\vec F[/latex] at a point [latex]P[/latex] is the direction around which the circulation density of [latex]\vec F[/latex] is the greatest.</li>
+<li>The magnitude of [latex]\text{curl} \vec F[/latex] is the circulation density around that direction.</li>
+<li>The circulation density of [latex]\vec F[/latex] around any unit vector [latex]\vec n[/latex] is equal to [latex]\text{curl}\vec F\cdot\vec n[/latex].</li>
+<li>For any function [latex]f[/latex] with continuous second partial derivatives,</li>
+</ul>
+<p style="text-align: center">[latex]\text{curl grad} f = \vec \nabla \times \vec \nabla f = \vec 0.[/latex]</p>
+<ul>
+<li><span style="text-align: initial;font-size: 1em">Conversely, any smooth vector field defined on a domain with no </span>codimension-one holes and whose curl is zero everywhere is a gradient field (this is the <em>curl test</em>).</li>
+</ul>
+<h2>Stokes&#8217;s and Green&#8217;s theorems</h2>
+<p>The flux of a vector field [latex]\vec F[/latex] through an oriented surface [latex]S[/latex] is [latex]\iint_S \vec F \cdot d\vec S[/latex].</p>
+<ul>
+<li>If the surface [latex]S[/latex] is the graph of a function [latex]f(x,y)[/latex], then, if [latex]R[/latex] is the domain of [latex]f(x,y)[/latex], we may write</li>
+</ul>
+<p style="text-align: center">[latex]\displaystyle \iint_S \vec F \cdot d\vec S = \iint_R \vec F\left(x,y,z(x,y)\right)\cdot \left[-\frac{\partial f}{\partial x} \vec \imath - \frac{\partial f}{\partial y} \vec \jmath + \vec k \right] dx dy,[/latex]</p>
+<ul>
+<li>If [latex]S[/latex] is a parametric surface parametrized by [latex]\vec r = \vec r(s,t)[/latex] where [latex]s[/latex] and [latex]t[/latex] vary in a region [latex]R[/latex], and if we assume that [latex]\displaystyle \frac{\partial \vec r}{\partial s} \times \frac{\partial \vec r} {\partial t}[/latex] points in the direction of the normal [latex]\vec n[/latex] to the surface [latex]S[/latex] everywhere, then we may write</li>
+</ul>
+<p style="text-align: center">[latex]\displaystyle \int_S \vec F \cdot d\vec S = \int_R \vec F\left(\vec r(s,t)\right) \cdot \left(\frac{\partial \vec r}{\partial s} \times \frac{\partial \vec r} {\partial t} \right) ds dt.[/latex]</p>
+<h3>Stokes&#8217;s theorem</h3>
+<p>Stokes&#8217;s theorem links the circulation of a smooth vector field around a (piecewise) smooth closed curve [latex]\mathcal C[/latex] to the flux of [latex]\text{curl} \vec F[/latex] through any smooth surface [latex]S[/latex] whose boundary is equal to [latex]\mathcal C[/latex]. It reads:</p>
+<p style="text-align: center">[latex]\displaystyle \int_{\mathcal C} \vec F \cdot d\vec r = \int_S \text{curl}\vec F \cdot d\vec A,[/latex]</p>
+<p>where the orientation of [latex]\mathcal C[/latex] is determined from the orientation of [latex]S[/latex] (or vice-versa) by <em>the right hand-rule</em>. Note that Stokes&#8217;s theorem is valid only if [latex]\vec F[/latex] <span style="text-decoration: underline">is defined everywhere</span> on [latex]S[/latex] and [latex]\mathcal C[/latex].</p>
+<h3>Green&#8217;s theorem</h3>
+<p>Green&#8217;s theorem is a planar version of Stokes&#8217;s theorem and reads</p>
+<p style="text-align: center">[latex]\displaystyle \int_{\mathcal C} \vec F \cdot d\vec r = \int_R \left(\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y} \right) \ dx\ dy,[/latex]</p>
+<p>where [latex]\vec F(x,y) = F_1(x,y) \vec \imath + F_2(x,y) \vec \jmath[/latex] is a smooth vector field defined at every point of [latex]\mathcal C[/latex] as well as inside [latex]\mathcal C[/latex], and [latex]\mathcal C[/latex] is a (simple) closed curve oriented such that its interior [latex]R[/latex] is on the left as one moves along [latex]\mathcal C[/latex].</p>
+<h2>The divergence theorem</h2>
+<p>The divergence of a vector field [latex]\vec F = F_1 \vec \imath+ F_2 \vec \jmath + F_3 \vec k[/latex] with continuous partial derivatives is given by</p>
+<p style="text-align: center">[latex]\text{div} \vec F = \vec \nabla \cdot \vec F = \frac{\partial F_1}{\partial x} + \frac{\partial F_2} {\partial y} + \frac{\partial F_3}{\partial z}.[/latex]</p>
+<p>Note that it is a <span style="text-decoration: underline">scalar</span> quantity. It has the following properties.</p>
+<ul>
+<li>[latex]\displaystyle \text{div}(\vec \nabla f)= {\vec \nabla}^2 f = \Delta f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2}[/latex].</li>
+<li>[latex]\displaystyle \text{div}(f \vec \nabla g) = f {\vec \nabla}^2 g + \vec \nabla f \cdot \vec \nabla g.[/latex]</li>
+<li>[latex]\displaystyle \hbox{div}(f \vec g)= f \hbox{div}(\vec g) + \vec \nabla f \cdot \vec g[/latex].</li>
+<li>The divergence of [latex]\vec F[/latex] at a point [latex]P[/latex] is equal to the limit, when the surface [latex]S[/latex] surrounding [latex]P[/latex] is shrunk to zero, of the flux of [latex]\vec F[/latex] through [latex]S[/latex] (oriented outward) divided by the volume of the region [latex]W[/latex] bounded by [latex]S[/latex]. In other words,</li>
+</ul>
+<p style="text-align: center">[latex]\text{div} \vec F = \displaystyle \lim_{W \rightarrow 0} \frac{\int_S \vec F \cdot d \vec A} {\hbox{volume of }W}.[/latex]</p>
+<ul>
+<li><span style="text-align: initial;font-size: 1em">For any vector field [latex]\vec F[/latex] with continuous second partial </span>derivatives,</li>
+</ul>
+<p style="text-align: center">[latex]\text{div curl} \vec F = \vec \nabla \cdot (\vec \nabla \times \vec F) = 0.[/latex]</p>
+<ul>
+<li>Conversely, any smooth vector field [latex]\vec F[/latex] whose domain is closed and has no holes, and whose divergence is zero everywhere is a <em>curl field</em>, i.e. there exists a vector field [latex]\vec G[/latex] such that [latex]\vec F = \text{curl} \vec G[/latex] (this is the <em>divergence test</em>).</li>
+</ul>
+<p>The <span style="text-decoration: underline">divergence theorem</span> relates the flux of a smooth vector field through a (piecewise) smooth closed surface [latex]S[/latex] oriented outward to the volume integral of its divergence over the region [latex]W[/latex] bounded by [latex]S[/latex], and reads</p>
+<p style="text-align: center">[latex]\displaystyle \int_S \vec F \cdot d \vec A \ = \int_W \hbox{div}\vec F \ dV,[/latex]</p>
+<p>assuming that [latex]\vec F[/latex] <em>is defined at every point</em> in [latex]W[/latex] and on [latex]S[/latex].</p>
+<h3>Example: the continuity equation</h3>
+<p>Consider the flow [latex]\vec v(\vec r)[/latex] of a fluid of density [latex]\rho(\vec r,t)[/latex]. Call [latex]V[/latex] a fixed region of the fluid domain. The mass of fluid in [latex]V[/latex] is given by [latex]\displaystyle m = \int_V \rho dV[/latex], and its rate of change is</p>
+<p style="text-align: center">[latex]\displaystyle \frac{d m}{d t} = \int_V \frac{\partial \rho}{\partial t}\ dV,[/latex]</p>
+<p>if one assumes that [latex]\rho[/latex] is smooth. On the other hand, this rate of change is given by the negative of the flux of matter [latex]\rho \vec v[/latex] through the boundary [latex]S[/latex] of [latex]V[/latex], and by virtue of the divergence theorem,</p>
+<p style="text-align: center">[latex]\displaystyle \frac{d m}{d t} = - \int_S \rho\ \vec v \cdot d\vec A = - \int_V \text{div}(\rho\ \vec v)\ dV.[/latex]</p>
+<p>By comparison of the two expressions of [latex]dm/dt,[/latex] which are equal for every region [latex]V[/latex], we get the continuity equation, which reads</p>
+<p style="text-align: center">[latex]\displaystyle \frac{\partial \rho}{\partial t} + \hbox{div}(\rho\ \vec v) = 0.[/latex]</p>
+<p>&nbsp;</p>

@@ -33,17 +33,18 @@
     "all_bytes_and_sha256_equal": true
   },
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-PT05",
-    "source_record_type": "parts",
-    "source_record_id": 409,
-    "source_slug": "appendices",
-    "source_canonical_sha256": "ccc3b6a575bf84e7ae94d3b3f5320e59279b088bede008e0e99bb423821a05c8",
-    "source_content_sha256": "657289c8fa8b8aeb613fff2d842330b3b769024a17c9609abc0fefab547419c0",
-    "target_content_sha256": "00fb30fb29d5cbedc669ed8aea8931a455f90e426e51b7ca4191094f33221d65",
-    "segment_sha256": "70d92d69ccb1e53fb1a1a1ad22a6c41d0c036a5bb652e3af52de0193856a97dd",
-    "reader_manifest_sha256": "66ba9c2060abefc13a1bb12406ce978fc3d7dcf49b917916928521aa59f6b1f3",
-    "qa_tree_sha256": "4478e3e6a68aa854c5dbfaaf9011b3326b34bc15e59ea792300dff72f2a8bd17"
+    "unit_id": "O005-LEGA-V101-CH11",
+    "source_record_type": "chapters",
+    "source_record_id": 410,
+    "source_slug": "linear-algebra",
+    "source_canonical_sha256": "762b7d0825a0669bc603f74b7d9b4c183a5e862dc594d3f9d467788397be31ce",
+    "source_content_sha256": "e851d0cc9f84fd0636fe3057cf7777cce2969e5fa96e4a6074860e79cf6ffe17",
+    "target_content_sha256": "f62354eb267c5788bd0ea8a70d6b7de64f8059c1656eedbffa40898da4c9606d",
+    "segment_sha256": "0ee5d83a3cd0f9096019e0d7ced962ff8f44b4938a49caea207293dc7dcee289",
+    "mastery_sha256": "76acebcc58ce8f81d35b933a08e47a5a0eee5a717caa168975ada561f091f56e",
+    "reader_manifest_sha256": "4c2f860ed701af4682ebd7202c9f5a01b6daba8a0e4d8015f97ca450d54c0153",
+    "qa_tree_sha256": "4711a2d39c2ce08eb9f7f760ca7b0346451d60496583e09fa72213150ff14da1"
   },
-  "current_unit": "O005-LEGA-V101-CH11",
-  "next_action": "Use authority/units/O005-LEGA-V101-CH11/AUTHORITY_MANIFEST.json and content.raw.en.html to compute the exact structural census, then translate the full Refresher: Linear Algebra unit in source order and add seven stable mastery records."
+  "current_unit": "O005-LEGA-V101-CH12",
+  "next_action": "Use authority/units/O005-LEGA-V101-CH12/AUTHORITY_MANIFEST.json and content.raw.en.html to translate the full 112-line Refresher: Vector Calculus unit as Penyegaran: Kalkulus Vektor, preserving 85 elements and 161 TeX slots; no problems, mastery, notebook, links, or assets are present."
 }

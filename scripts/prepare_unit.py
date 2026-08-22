@@ -352,6 +352,13 @@ UNIT_SPECS = {
         "record_sha256": "762b7d0825a0669bc603f74b7d9b4c183a5e862dc594d3f9d467788397be31ce",
         "assets": [],
     },
+    "O005-LEGA-V101-CH12": {
+        "record_id": 413,
+        "modified_gmt": "2026-03-19T19:53:52",
+        "record_bytes": 31922,
+        "record_sha256": "fa1364a307b033035bce94975db0667edf3b8d208e73b4e07882b090cafab377",
+        "assets": [],
+    },
 }
 
 

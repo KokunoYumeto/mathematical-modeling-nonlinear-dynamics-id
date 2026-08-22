@@ -295,6 +295,21 @@ UNIT_SPECS = {
         ],
         "change_note": "penerjemahan, koreksi dan klarifikasi terdokumentasi, pengindeksan modular, penggantian kolase foto dengan ilustrasi vektor independen, dukungan ketuntasan, serta pendamping pembentukan pola dengan Python terbuka tanpa ketergantungan MATLAB",
     },
+    "O005-LEGA-V101-CH11": {
+        "unit_type": "chapter",
+        "unit_number": 11,
+        "chapter_number": 11,
+        "source_title": "Refresher: Linear Algebra",
+        "target_title": "Penyegaran: Aljabar Linear",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/linear-algebra/",
+        "target_assets": [],
+        "caption_count": 0,
+        "footnote_count": 0,
+        "notebook": None,
+        "problem_count": 7,
+        "plain_paragraphs": False,
+        "change_note": "penerjemahan, koreksi dan klarifikasi matematika terdokumentasi, pengindeksan modular, serta dukungan ketuntasan",
+    },
 }
 
 

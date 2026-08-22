@@ -1,0 +1,34 @@
+Dalam lampiran ini, kita menyajikan fakta-fakta dasar aljabar linear mengenai matriks, nilai eigen, dan vektor eigen. Bukti tidak disertakan, dan pembaca sebaiknya merujuk pada buku-buku aljabar linear untuk memperoleh rincian lebih lanjut. Walaupun jauh dari lengkap, tinjauan singkat berikut diharapkan memberikan informasi yang cukup agar pembaca dapat mengikuti sebagian besar argumen kestabilan linear yang dikemukakan dalam bab-bab sebelumnya.
+<h2>Ruang vektor</h2>
+<h3>Definisi</h3>
+<ul>
+ 	<li>$latex \mathcal S$ adalah <em>ruang vektor</em> real (atau kompleks) jika dan hanya jika tertutup terhadap penjumlahan dan perkalian dengan skalar. Dengan kata lain,</li>
+</ul>
+<p style="text-align: center">$latex \begin{align*} &amp; \forall x, y \in {\mathcal S}, x+y \in {\mathcal S} \\ &amp; \forall x \in {\mathcal S}, \forall \alpha \in \mathbb{R} \text{ (resp. }\mathbb{C}), \alpha x \in {\mathcal S}. \end{align*}$</p>
+
+<ul>
+ 	<li>Vektor-vektor dalam $latex \{u_i \in S, i=1 \dots n\}$ disebut <em>bebas linear</em> jika dan hanya jika setiap kombinasi linear yang sama dengan nol memiliki semua koefisien sama dengan nol. Dengan kata lain,</li>
+</ul>
+<p style="text-align: center">$latex \begin{align*} \forall &amp;\{\alpha_i, i=1, \dots n \} \subset \mathbb{R} \text { (or } \mathbb{C}),\\ &amp;\sum_{i=1}^n \alpha_i\,u_i = 0 \Longrightarrow \alpha_i = 0, \forall i=1, \dots n. \end{align*}$</p>
+
+<ul>
+ 	<li>$latex \mathcal S$ disebut <em>berdimensi hingga</em> jika terdapat suatu himpunan berhingga yang terdiri atas vektor-vektor bebas linear dan <em>merentang</em> $latex \mathcal S$.</li>
+ 	<li>Himpunan seperti itu disebut <em>basis</em> bagi $latex \mathcal S$. Selanjutnya, kita hanya membahas ruang vektor <span style="text-decoration: underline">berdimensi hingga</span>.</li>
+	<li>Nilai <em>dimensi</em> ruang vektor berdimensi hingga $latex \mathcal S$ adalah banyaknya vektor dalam sebarang basis bagi $latex \mathcal S$.</li>
+</ul>
+<h2>Pemetaan linear</h2>
+Pemetaan $latex {\mathcal T}: {\mathcal S} \rightarrow {\mathcal U}$ dari ruang vektor $latex \mathcal S$ ke ruang vektor $latex \mathcal U$ disebut <em>linear</em> jika untuk setiap $latex x,y \in {\mathcal S}$,
+<p style="text-align: center">$latex \begin{align*} &amp; {\mathcal T}(x+y)={\mathcal T}(x)+{\mathcal T}(y) \\ &amp; {\mathcal T}(\alpha x) = \alpha {\mathcal T}(x), \end{align*}$</p>
+di mana $latex \alpha \in \mathbb{R}$ (atau $latex \alpha \in \mathbb{C}$) apabila $latex \mathcal S$ dan $latex \mathcal U$ merupakan ruang vektor atas $latex \mathbb{R}$ (atau $latex \mathbb{C}$).
+<h3>Sifat-sifat pemetaan linear</h3>
+<ul>
+	<li>Adapun <em>ruang hasil</em> $latex {\mathcal R}_{\mathcal T}$ dari $latex \mathcal T$, yaitu citra $latex \mathcal S$ di bawah $latex \mathcal T$, merupakan subruang linear dari $latex \mathcal U$.</li>
+	<li>Adapun <em>ruang nol</em> atau <em>kernel</em> dari $latex \mathcal T$ merupakan subruang linear dari $latex \mathcal S$. Ruang ini didefinisikan sebagai himpunan $latex {\mathcal N}_{\mathcal T}$ yang terdiri atas vektor-vektor dalam $latex \mathcal S$ yang dipetakan oleh $latex \mathcal T$ ke nol,</li>
+</ul>
+<p style="text-align: center">$latex {\mathcal N}_{\mathcal T} = \left\{x \in {\mathcal S} \vert {\mathcal T}(x)=0 \right\}.$</p>
+
+<ul>
+ 	<li>Dimensi $latex {\mathcal R}_{\mathcal T}$ dan $latex {\mathcal N}_{\mathcal T}$ memenuhi</li>
+</ul>
+
+<p style="text-align: center">$latex \text{dim}({\mathcal R}_{\mathcal T})+\text{dim}({\mathcal N}_{\mathcal T})=\text{dim}({\mathcal S}).$</p>

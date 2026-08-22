@@ -22,18 +22,18 @@ notice, and non-endorsement. Maintain component-level rights. Redraw Figure
 statement; never represent the Pressbooks theme as part of the independently
 reproducible source closure.
 
-Chapter boundaries `O005-LEGA-V101-CH01` through `CH09` (records 25, 27, 38,
-39, 48, 53, 57, 62, and 196) and the visible Part 2–4 introductions (records
-28, 40, and 58) are translated, built, independently rereviewed where
+Chapter boundaries `O005-LEGA-V101-CH01` through `CH11` and the visible Part
+2–5 introductions are translated, built, independently rereviewed where
 applicable, and deterministically verified. Their complete topology,
-identifiers, protected mathematics, links, figures, 89 stable problem IDs and
-mastery records, nine open Python notebooks, and 2,193 paired segments are
-bound in the current state, cursor, and QA log. The immediate boundary is
-Chapter 10, Pressbooks record 194, *Pattern Formation*, as
-`O005-LEGA-V101-CH10`: first freeze its exact canonical/raw/rendered authority,
-asset closure, census, and hashes, then translate the complete unit in source
-order and add only the independently authored open computation and mastery
-surfaces required by its verified source scope.
+identifiers, protected mathematics, links, figures, 102 stable problem IDs and
+mastery records, ten open Python notebooks, and 2,486 paired segments are bound
+in the current state, cursor, and QA log. The immediate boundary is Chapter 12,
+Pressbooks record 413, *Refresher: Vector Calculus*, as
+`O005-LEGA-V101-CH12`: its exact canonical/raw/rendered authority and empty
+asset closure are frozen. Translate the complete 112-line unit in source order
+as *Penyegaran: Kalkulus Vektor*, preserving 85 elements and 161 TeX slots;
+do not manufacture mastery, notebook, or asset components where the source and
+admitted scope contain none.
 
 Continue in exact frozen TOC order through all front/back matter and
 fourteen chapters: 54,932 source words, 113 exercises, twelve projects, eleven

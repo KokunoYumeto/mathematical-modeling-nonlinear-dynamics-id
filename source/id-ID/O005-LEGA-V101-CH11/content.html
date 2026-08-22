@@ -1,0 +1,166 @@
+Dalam lampiran ini, kita menyajikan fakta-fakta dasar aljabar linear mengenai matriks, nilai eigen, dan vektor eigen. Bukti tidak disertakan, dan pembaca sebaiknya merujuk pada buku-buku aljabar linear untuk memperoleh rincian lebih lanjut. Walaupun jauh dari lengkap, tinjauan singkat berikut diharapkan memberikan informasi yang cukup agar pembaca dapat mengikuti sebagian besar argumen kestabilan linear yang dikemukakan dalam bab-bab sebelumnya.
+<h2>Ruang vektor</h2>
+<h3>Definisi</h3>
+<ul>
+ 	<li>Himpunan bagian tak kosong $latex \mathcal S$ dari suatu ruang vektor real (atau kompleks) merupakan <em>ruang vektor</em> jika dan hanya jika tertutup terhadap penjumlahan dan perkalian dengan skalar. Dengan kata lain,</li>
+</ul>
+<p style="text-align: center">$latex \begin{align*} &amp; \forall x, y \in {\mathcal S}, x+y \in {\mathcal S} \\ &amp; \forall x \in {\mathcal S}, \forall \alpha \in \mathbb{R} \text{ (atau }\mathbb{C}), \alpha x \in {\mathcal S}. \end{align*}$</p>
+
+<ul>
+ 	<li>Vektor-vektor dalam $latex \{u_i\in\mathcal S\mid i=1,\dots,n\}$ disebut <em>bebas linear</em> jika dan hanya jika setiap kombinasi linear yang sama dengan nol memiliki semua koefisien sama dengan nol. Dengan kata lain,</li>
+</ul>
+<p style="text-align: center">$latex \begin{align*} &amp;\forall\,\alpha_1,\dots,\alpha_n \in \mathbb{R} \text{ (atau } \mathbb{C}),\\ &amp;\sum_{i=1}^n \alpha_i\,u_i = 0 \Longrightarrow \alpha_i = 0,\ \forall i=1,\dots,n. \end{align*}$</p>
+
+<ul>
+ 	<li>$latex \mathcal S$ disebut <em>berdimensi hingga</em> jika terdapat suatu himpunan berhingga yang terdiri atas vektor-vektor bebas linear dan <em>merentang</em> $latex \mathcal S$.</li>
+ 	<li>Himpunan seperti itu disebut <em>basis</em> bagi $latex \mathcal S$. Selanjutnya, kita hanya membahas ruang vektor <span style="text-decoration: underline">berdimensi hingga</span>.</li>
+	<li>Nilai <em>dimensi</em> ruang vektor berdimensi hingga $latex \mathcal S$ adalah banyaknya vektor dalam sebarang basis bagi $latex \mathcal S$.</li>
+</ul>
+<h2>Pemetaan linear</h2>
+Pemetaan $latex {\mathcal T}: {\mathcal S} \rightarrow {\mathcal U}$ dari ruang vektor $latex \mathcal S$ ke ruang vektor $latex \mathcal U$ disebut <em>linear</em> jika untuk setiap $latex x,y \in {\mathcal S}$,
+<p style="text-align: center">$latex \begin{align*} &amp; {\mathcal T}(x+y)={\mathcal T}(x)+{\mathcal T}(y) \\ &amp; {\mathcal T}(\alpha x) = \alpha {\mathcal T}(x), \end{align*}$</p>
+di mana $latex \alpha \in \mathbb{R}$ (atau $latex \alpha \in \mathbb{C}$) apabila $latex \mathcal S$ dan $latex \mathcal U$ merupakan ruang vektor atas $latex \mathbb{R}$ (atau $latex \mathbb{C}$).
+<h3>Sifat-sifat pemetaan linear</h3>
+<ul>
+	<li>Adapun <em>ruang hasil</em> $latex {\mathcal R}_{\mathcal T}$ dari $latex \mathcal T$, yaitu citra $latex \mathcal S$ di bawah $latex \mathcal T$, merupakan subruang linear dari $latex \mathcal U$.</li>
+	<li>Adapun <em>ruang nol</em> atau <em>kernel</em> dari $latex \mathcal T$ merupakan subruang linear dari $latex \mathcal S$. Ruang ini didefinisikan sebagai himpunan $latex {\mathcal N}_{\mathcal T}$ yang terdiri atas vektor-vektor dalam $latex \mathcal S$ yang dipetakan oleh $latex \mathcal T$ ke nol,</li>
+</ul>
+<p style="text-align: center">$latex {\mathcal N}_{\mathcal T} = \left\{x \in {\mathcal S} \vert {\mathcal T}(x)=0 \right\}.$</p>
+
+<ul>
+ 	<li>Dimensi $latex {\mathcal R}_{\mathcal T}$ dan $latex {\mathcal N}_{\mathcal T}$ memenuhi</li>
+</ul>
+
+<p style="text-align: center">$latex \text{dim}({\mathcal R}_{\mathcal T})+\text{dim}({\mathcal N}_{\mathcal T})=\text{dim}({\mathcal S}).$</p>
+<h2>Matriks</h2>
+Setiap pemetaan linear
+<p style="text-align: center">$latex \begin{array}{llll} {\mathcal T} : &amp; \mathbb{R}^n &amp; \rightarrow &amp; \mathbb{R}^m \\ &amp; x &amp;\mapsto &amp; u \end{array}$</p>
+dapat ditulis sebagai
+<p style="text-align: center">$latex u_i = \sum_{j=1}^n A_{ij} x_j \quad i=1,\dots,m; \qquad u=\left( \begin{array}{c}u_1 \\u_2\\ \vdots \\u_m\end{array}\right);\quad x=\left(\begin{array}{c}x_1 \\x_2\\ \vdots \\x_n\end{array}\right),$</p>
+di mana $latex A \equiv (A_{ij})$ adalah matriks $latex m \times n$ ($latex m$ baris, $latex n$ kolom) dengan entri-entri real. Menurut konvensi, $latex A_{ij}$ adalah entri pada perpotongan baris ke-$latex i$ dan kolom ke-$latex j$ dari $latex A$.
+
+<span style="text-align: initial;font-size: 1em">Perhatikan bahwa setelah suatu basis dipilih, setiap </span>ruang vektor real berdimensi $latex n$ isomorfik dengan $latex \mathbb{R}^n$. Dengan demikian, kita dapat merepresentasikan setiap pemetaan linear antara dua ruang vektor berdimensi hingga dengan sebuah matriks. Selanjutnya, kita hanya akan mempertimbangkan matriks dengan koefisien real.
+<h3>Definisi</h3>
+<ul>
+	<li>Matriks <em>transpos</em> dari $latex A$ adalah $latex A^T$ sedemikian sehingga $latex (A^T)_{ij}=A_{ji}$.</li>
+	<li>Besaran <em>rank</em> matriks $latex A$ yang terkait dengan transformasi linear $latex \mathcal T$ adalah dimensi $latex {\mathcal R}_{\mathcal T}$. Rank tersebut juga sama dengan rank $latex A^T$.</li>
+	<li>Nilai <em>determinan</em> matriks $latex 2 \times 2$, $latex A = \left(\begin{array}{cc} a &amp; b \\ c &amp; d \end{array} \right)$ adalah</li>
+</ul>
+<p style="text-align: center">$latex \det A = \left|\begin{array}{cc} a &amp; b \\ c &amp; d \end{array} \right| = a d - b c.$</p>
+
+<ul>
+	<li><span style="text-align: initial;font-size: 1em">Nilai <em>determinan</em> matriks $latex n \times n$, $latex A = (A_{ij})$, dapat</span> dihitung dengan rumus di bawah ini, di mana $latex i$ adalah indeks baris tetap pada $latex A$ dan $latex M_{ij}$ adalah matriks yang diperoleh dari $latex A$ dengan menghapus baris $latex i$ dan kolom $latex j$:</li>
+</ul>
+<p style="text-align: center">$latex \det A = \sum_{j=1}^n (-1)^{i + j} A_{i j} \det M_{ij}.$</p>
+
+<ul>
+ 	<li>Terdapat rumus serupa untuk mengembangkan $latex \det A$ terhadap salah satu kolom $latex A$.</li>
+	<li>Nilai <em>jejak</em> Tr($latex A$) dari matriks persegi $latex A$ adalah jumlah entri diagonal $latex A$.</li>
+</ul>
+<h3>Sifat-sifat</h3>
+<ul>
+ 	<li>Jika $latex A$ adalah matriks $latex m \times n$, sistem $latex A x = b$ memiliki <span style="text-decoration: underline">setidaknya</span> satu solusi untuk setiap $latex b$ jika dan hanya jika kolom-kolom $latex A$ merentang $latex \mathbb{R}^m$. Dalam hal ini rank $latex A$, yaitu $latex r$, memenuhi $latex r = m$, yang mengakibatkan $latex m \le n$.</li>
+ 	<li>Sistem $latex A x = b$ memiliki <span style="text-decoration: underline">paling banyak</span> satu solusi untuk setiap $latex b$ jika dan hanya jika kolom-kolom $latex A$ bebas linear, yaitu jika dan hanya jika ruang nol $latex A$ trivial. Dalam hal ini, $latex r=n$, yang mengakibatkan $latex n \le m$.</li>
+ 	<li>Misalkan $latex A$ adalah matriks $latex n \times n$. Maka, pernyataan-pernyataan berikut ekuivalen.
+<ul>
+ 	<li>Persamaan $latex A x = b$ memiliki tepat satu solusi untuk setiap ruas kanan.</li>
+ 	<li>Ruang hasil $latex A$ adalah $latex \mathbb{R}^n$.</li>
+ 	<li>Ruang nol $latex A$ trivial.</li>
+ 	<li>Matriks $latex A$ invertibel.</li>
+ 	<li>Determinan $latex A$, yaitu $latex \det A$, tak nol.</li>
+</ul>
+</li>
+</ul>
+<h2>Nilai eigen dan vektor eigen</h2>
+<h3>Definisi</h3>
+Misalkan $latex A$ adalah matriks real berukuran $latex n \times n$. Untuk nilai eigen tak real, pembahasan dilakukan dalam ruang vektor kompleks yang diperoleh dengan memperluas skalar.
+<ul>
+ 	<li>Vektor $latex h \in {\mathcal S}$ merupakan <em>vektor eigen</em> dari $latex A$ dengan <em>nilai eigen</em> $latex a \in \mathbb{C}$ jika</li>
+</ul>
+<p style="text-align: center">$latex A h = a h, \qquad h\ne 0.$</p>
+
+<ul>
+ 	<li>Vektor $latex f \in {\mathcal S}$ merupakan <em>vektor eigen tergeneralisasi</em> dari $latex A$ dengan <em>nilai eigen</em> $latex a$ jika, untuk suatu bilangan bulat positif $latex m \ge 1$, vektor tersebut berperingkat tepat m dalam arti bahwa</li>
+</ul>
+<p style="text-align: center">$latex (A - a I_n)^{m-1} f \ne 0, \qquad (A - a I_n)^m f = 0, \qquad f \ne 0.$</p>
+Pada persamaan di atas, $latex I_n$ adalah matriks identitas berukuran $latex n \times n$. Untuk mencari nilai eigen dan vektor eigen suatu matriks, pertama-tama perhatikan bahwa jika $latex u$ adalah vektor eigen dari matriks $latex A$ dengan nilai eigen $latex a$, maka persamaan
+<p style="text-align: center"><a id="Evec"></a>$latex (A - a\, I_n) u = 0, \qquad (A1.1)$</p>
+memiliki solusi taktrivial. Hal ini menyiratkan bahwa
+<p style="text-align: center"><a id="Eval"></a>$latex \det (A - a I_n)= 0, \qquad (A1.2)$</p>
+sehingga nilai-nilai eigen $latex A$ dapat dicari dengan menyelesaikan persamaan ini.
+<h3>Sifat-sifat</h3>
+<ul>
+ 	<li>Ruas kiri (A1.2) adalah polinom berderajat $latex n$ dalam $latex a$, yang disebut <em>polinom karakteristik</em> dari $latex A$.</li>
+ 	<li>Polinom karakteristik $latex A$ memiliki $latex n$ akar kompleks jika dihitung dengan multiplisitas aljabarnya; akar-akar tersebut merupakan nilai-nilai eigen $latex A$.</li>
+ 	<li>Karena $latex A$ memiliki entri-entri real, jika $latex a$ merupakan nilai eigen dari $latex A$, konjugat kompleksnya $latex a^*$ juga merupakan nilai eigen. Akibatnya, nilai-nilai eigen $latex A$ adalah real atau muncul dalam pasangan konjugat kompleks.</li>
+ 	<li>Jejak $latex A$ adalah jumlah nilai-nilai eigen $latex A$, dengan memperhitungkan multiplisitas aljabar.</li>
+ 	<li>Determinan $latex A$ adalah hasil kali nilai-nilai eigen $latex A$, dengan memperhitungkan multiplisitas aljabar.</li>
+</ul>
+Setelah suatu nilai eigen ditemukan, persamaan (A1.1) perlu diselesaikan untuk memperoleh vektor eigen yang bersesuaian. Himpunan semua solusinya, termasuk vektor nol, membentuk ruang eigen; anggota tak nol ruang ini adalah vektor-vektor eigen. Setiap ruang eigen merupakan subruang invarian dari transformasi linear $latex \mathcal T$ yang berkaitan dengan matriks $latex A$. Jika matriks tersebut dapat didiagonalkan atas medan skalar yang digunakan, ruang vektor $latex \mathcal S$, atau $latex \mathbb{R}^n$ dalam kasus real, merupakan jumlah langsung ruang-ruang eigen $latex A$. Secara umum, dekomposisi memerlukan ruang eigen tergeneralisasi pada kompleksifikasi atau blok invarian real; keduanya memberikan gambaran geometris tentang cara $latex \mathcal T$ bekerja pada $latex \mathcal S$.
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2 class="textbox__title">Bahan Renungan</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center" id="O005-LEGA-V101-CH11-P01">Soal 1</h3>
+Tunjukkan bahwa vektor-vektor eigen $latex u$ dan $latex v$ dari suatu matriks $latex A$ yang bersesuaian dengan nilai eigen berbeda bersifat bebas linear.
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH11-P02">Soal 2</h3>
+Hitung determinan matriks berikut.
+<p style="text-align: center">$latex C = \left[\begin{array}{ccc} 2 &amp; 2 &amp; 6 \\ 4 &amp; 3 &amp; 12 \\ 6 &amp; 4 &amp; 16 \end{array} \right].$</p>
+
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH11-P03">Soal 3</h3>
+Tentukan nilai-nilai eigen dan vektor-vektor eigen matriks berikut.
+<p style="text-align: center">$latex B = \left[\begin{array}{ccc}4 &amp; -1 &amp; 1 \\ -1 &amp; 4 &amp; -1 \\ -1 &amp; 1 &amp; 2 \end{array}\right].$</p>
+
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH11-P04">Soal 4</h3>
+Perhatikan transformasi dari $latex \mathbb{R}^5$ ke $latex \mathbb{R}^3$ yang didefinisikan oleh
+<p style="text-align: center">$latex {\mathcal T}(\vec x) = \left[\begin{array}{c} 0 \\ 2 x_1 - 4 x_2 + x_5 \\ x_2 + x_3 + x_5 \end{array}\right], \qquad \text{dengan} \qquad \vec x = \left[\begin{array}{c}x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{array}\right].$</p>
+
+<ol>
+ 	<li><span style="font-size: 1rem;text-align: initial">Apakah $latex \mathcal T$ merupakan transformasi linear? Mengapa atau mengapa tidak?</span></li>
+ 	<li>Tentukan matriks $latex \mathcal T$ relatif terhadap basis standar $latex \mathbb{R}^5$ dan $latex \mathbb{R}^3$.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH11-P05">Soal 5</h3>
+Perhatikan matriks
+<p style="text-align: center">$latex A = \left[\begin{array}{ccccc} 1 &amp; 2 &amp; 2 &amp; 4 &amp; 4 \\ 2 &amp; 4 &amp; 3 &amp; 4 &amp; 2 \\ 1 &amp; 1 &amp; 3 &amp; 2 &amp; 3 \end{array}\right].$</p>
+
+<ol>
+ 	<li>Tentukan basis ruang kolom (atau ruang hasil) $latex A$. Berikan alasan atas jawaban Anda.</li>
+ 	<li>Tentukan basis ruang nol $latex A$. Berikan alasan atas jawaban Anda.</li>
+ 	<li>Berapakah rank $latex A$?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH11-P06">Soal 6</h3>
+Perhatikan ruang $latex \mathbb{P}_2$ yang terdiri atas polinom berderajat paling tinggi 2, dan misalkan $latex {\mathcal S} = \left\{q_0,\, q_1,\, q_2,\, q_3,\, q_4\right\}$ adalah himpunan polinom dalam $latex \mathbb{P}_2$, dengan
+<p style="text-align: center">$latex \begin{eqnarray*} &amp;&amp; q_0(t) = 6 t - t^2, \qquad q_1(t) = 1 - t, \qquad q_2(t)= t + 1 \\ &amp;&amp; q_3(t) = 4, \qquad \qquad \ q_4(t) = 2 - 2 t + t^2. \end{eqnarray*}$</p>
+
+<ol>
+ 	<li>Tentukan koordinat polinom $latex Q$ relatif terhadap basis standar $latex \mathbb{P}_2$, dengan $latex Q(t)= 4 t^2 - 2 t + 10$.</li>
+ 	<li>Berikan sebuah basis $latex \mathbb{P}_2$ yang terdiri atas vektor-vektor dalam $latex \mathcal S$. Jelaskan cara Anda memilih vektor-vektor tersebut.</li>
+ 	<li>Tentukan koordinat polinom $latex Q$ yang didefinisikan pada butir 1 relatif terhadap basis yang Anda peroleh pada butir 2.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH11-P07">Soal 7</h3>
+Perhatikan vektor-vektor berikut dalam $latex \mathbb{R}^4$.
+<p style="text-align: center">$latex \begin{align*} &amp;\vec v_1 = \left[\begin{array}{c} 1 \\ 2 \\ 3 \\ 4\end{array}\right],\qquad \vec v_2 = \left[\begin{array}{c} 0 \\ 1 \\ 0 \\ -1\end{array}\right],\qquad \vec v_3 = \left[\begin{array}{c} 1 \\ 0 \\ 1 \\ 0\end{array}\right],\\ &amp; \vec v_4 = \left[\begin{array}{c} 1 \\ 1 \\ 1 \\ -2\end{array}\right],\qquad \vec v_5 = \left[\begin{array}{c} 1 \\ 1 \\ 1 \\ 1\end{array}\right]. \end{align*}$</p>
+Tunjukkan bahwa $latex \displaystyle \left\{\vec v_1,\,\vec v_2,\,\vec v_3,\,\vec v_4,\,\vec v_5\right\}$ merupakan himpunan yang bergantung linear.
+
+</div>
+</div>

@@ -7,12 +7,12 @@ Updated: 2026-08-22 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–10 and the visible Part 2–5 introductions are
-translated, built, and verified. Production is active on Chapter 11,
-Pressbooks record 410, *Refresher: Linear Algebra*, as
-`O005-LEGA-V101-CH11`. Its exact canonical/raw/rendered authority and empty
-asset closure are frozen; source-order structural census and natural id-ID
-translation are now the executable action.
+into this lane. Chapters 1–11 and the visible Part 2–5 introductions are
+translated, built, independently reviewed, and verified. Production is active
+on Chapter 12, Pressbooks record 413, *Refresher: Vector Calculus*, as
+`O005-LEGA-V101-CH12`. Its exact canonical/raw/rendered authority and empty
+asset closure are frozen; complete source-order natural id-ID translation is
+now the executable action.
 
 ## Frozen Chapter 10 authority
 
@@ -608,22 +608,61 @@ translation are now the executable action.
   ordered inventory SHA-256
   `c8c095a643dae69fc354c031b30812ef799fb5c874b1a73fb0fe84c0f57821dc`.
 
-## Frozen Chapter 11 authority
+## Admitted Chapter 11 boundary
 
 - Pressbooks chapter 410, slug `linear-algebra`, *Refresher: Linear Algebra*,
-  modified `2026-03-19T20:11:37Z`; no component asset is referenced.
-- Canonical record: 29,468 bytes, SHA-256
-  `762b7d0825a0669bc603f74b7d9b4c183a5e862dc594d3f9d467788397be31ce`;
-  raw content: 13,223 bytes, SHA-256
-  `e851d0cc9f84fd0636fe3057cf7777cce2969e5fa96e4a6074860e79cf6ffe17`;
-  rendered content: 14,077 bytes, SHA-256
-  `577606c2e102366dec0676168001211a22ed658178f0960b9d2c4aa0b720befb`.
+  modified `2026-03-19T20:11:37Z`; canonical/raw/rendered identities remain
+  bound by the frozen authority and no component asset is referenced.
+- Complete natural id-ID target *Penyegaran: Aljabar Linear*: 14,293 bytes,
+  SHA-256
+  `f62354eb267c5788bd0ea8a70d6b7de64f8059c1656eedbffa40898da4c9606d`.
+  Exact replay preserves 127 / 127 ordered elements, zero / zero links,
+  165 / 165 TeX occurrences, both source equation anchors, and seven / seven
+  stable problems across all 166 physical source-order lines.
+- Thirteen explicit source corrections, `O005-CORR-0118` through
+  `O005-CORR-0130`, repair the vector-space criterion, scalar-field
+  qualifications, transpose and cofactor notation, invertibility quantifier,
+  generalized-eigenvector definition, algebraic multiplicity statements,
+  eigenspace decomposition, localized TeX text, and Problem 7 column arrays.
+  Frozen English bytes remain immutable.
+- Backend: 142 paired segments / 84,119 bytes, SHA-256
+  `0ee5d83a3cd0f9096019e0d7ced962ff8f44b4938a49caea207293dc7dcee289`.
+  Seven independently authored mastery records: 22,086 bytes, SHA-256
+  `76acebcc58ce8f81d35b933a08e47a5a0eee5a717caa168975ada561f091f56e`;
+  all seven exact calculations and proofs passed independent recomputation and
+  review. No notebook or asset is applicable.
+- Reader: five payload files / 300,247 bytes excluding its 509-byte manifest;
+  manifest SHA-256
+  `4c2f860ed701af4682ebd7202c9f5a01b6daba8a0e4d8015f97ca450d54c0153`.
+  Repeated builds were byte-identical across six files, canonical tree SHA-256
+  `4711a2d39c2ce08eb9f7f760ca7b0346451d60496583e09fa72213150ff14da1`.
+- Independent translation review and independent mastery review both passed.
+  Browser QA found a centered 1,152 px shell and 768 px article at 1280×900;
+  at 390×844 the 357.5 px shell/article filled the usable 375 px client width
+  and remained centered. Page scroll width equaled client width. All 31
+  overwide formula nodes had bounded horizontal-scroll hosts; all 20 reader
+  IDs and ten fragment links were intact; 21 disclosures rendered; the final
+  problem target cleared the sticky navigation by 35.97 px; and the final
+  local page emitted no warning or error. External-link reachability was
+  inapplicable, and no audio or live widget exists.
+
+## Frozen Chapter 12 authority
+
+- Pressbooks chapter 413, slug `appendix-vector-calculus`, *Refresher: Vector
+  Calculus*, modified `2026-03-19T19:53:52Z`; the empty record-level license
+  override inherits CC BY-NC-SA 4.0 and no component asset is referenced.
+- Canonical record: 31,922 bytes, SHA-256
+  `fa1364a307b033035bce94975db0667edf3b8d208e73b4e07882b090cafab377`;
+  raw content: 14,175 bytes, SHA-256
+  `165e0b7a0b489dd9be7ae396ac9a3c0430c89599c23a444fcaadffb2a07a3ccc`;
+  rendered content: 15,354 bytes, SHA-256
+  `1e6590dd97823f1dc009947eee63585b1e2afcda8dee91b66587e9cded4e0303`.
+- Exact frozen census: 112 physical lines, 85 ordered elements, 161 TeX
+  occurrences, and zero links, assets, footnotes, or problems.
 
 ## Next action
 
-Compute Chapter 11's exact topology/math/problem census from the frozen bytes,
-then immediately translate the complete unit as *Penyegaran: Aljabar Linear*
-in source order and add seven stable mastery records. Preserve formulas,
-identifiers, the two source equation anchors, and the nested exercise topology;
-do not manufacture a notebook or asset where the source and admitted scope do
-not require one.
+Translate the complete Chapter 12 source in order as *Penyegaran: Kalkulus
+Vektor*. Preserve all 85 elements and 161 protected TeX slots while correcting
+only high-confidence source defects through the ledger. Do not manufacture
+mastery, notebook, link, or asset components where none is present.

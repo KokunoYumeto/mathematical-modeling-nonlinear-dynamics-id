@@ -7,8 +7,8 @@ Pressbooks v1.01 (Maret 2026). Sumber dan terjemahan berada di bawah lisensi
 Edisi ini tidak disokong atau disahkan oleh penulis maupun University of
 Arizona.
 
-Status saat ini: **Bab 1–9 dari 14 serta pengantar Bagian 2–4 telah diterjemahkan,
-dibangun, dan lolos QA.**
+Status saat ini: **Bab 1–11 dari 14 serta pengantar Bagian 2–5 telah
+diterjemahkan, dibangun, dan lolos QA.**
 Pekerjaan berlanjut secara berurutan; repositori ini belum merupakan edisi
 lengkap atau terbitan final.
 
@@ -26,12 +26,15 @@ lengkap atau terbitan final.
 - Pengantar Bagian 4 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT04/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT04/index.html).
 - Bab 8 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH08/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH08/index.html); [notebook reaksi kimia terbuka](source/id-ID/O005-LEGA-V101-CH08/notebooks/chapter-08-open-chemical-reactions.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH08.mastery.json).
 - Bab 9 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH09/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH09/index.html); [notebook difusi terbuka](source/id-ID/O005-LEGA-V101-CH09/notebooks/chapter-09-open-diffusion.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH09.mastery.json).
+- Bab 10 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH10/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH10/index.html); [notebook pembentukan pola terbuka](source/id-ID/O005-LEGA-V101-CH10/notebooks/chapter-10-open-pattern-formation.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH10.mastery.json).
+- Pengantar Bagian 5 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT05/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT05/index.html).
+- Bab 11 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH11/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH11/index.html); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH11.mastery.json).
 
 ## Backend modular
 
-Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Sembilan bab dan
-tiga pengantar bagian yang selesai memiliki 2.193 segmen Inggris–Indonesia yang
-berpasangan, 89 ID soal tetap, sembilan notebook terbuka, catatan unit berhash,
+Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Sebelas bab dan
+empat pengantar bagian yang selesai memiliki 2.486 segmen Inggris–Indonesia yang
+berpasangan, 102 ID soal tetap, sepuluh notebook terbuka, catatan unit berhash,
 serta jalur eksplisit menuju aset, notebook, dan
 dukungan belajar. Lapisan ini dimaksudkan untuk memungkinkan pemindahan unit
 yang sama ke bahasa lain tanpa menjadikan Bahasa Indonesia sebagai kunci
@@ -67,6 +70,12 @@ python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH08
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH08 --execute-notebook --deterministic-build
 python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH09
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH09 --execute-notebook --deterministic-build
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH10
+python scripts/qa_unit.py --unit O005-LEGA-V101-CH10 --execute-notebook --deterministic-build
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-PT05
+python scripts/qa_unit.py --unit O005-LEGA-V101-PT05 --deterministic-build
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH11
+python scripts/qa_unit.py --unit O005-LEGA-V101-CH11 --deterministic-build
 ```
 
 QA memeriksa kesetaraan struktur sumber–target, rumus dan tautan yang
@@ -105,3 +114,12 @@ Bab 9 mempertahankan tiga gambar sumber, memperbaiki derivasi kontinuitas,
 argumen gerak acak, ambang laju Fisher–KPP, fluks kemotaksis, markup catatan,
 dan aksesibilitas sitasi secara berjejak, serta menambahkan notebook difusi
 NumPy/SciPy/Matplotlib dan tujuh paket dukungan belajar lengkap.
+Bab 10 mempertahankan dua raster ilmiah sumber, mengganti kolase foto yang
+tidak memiliki kredit komponen dengan SVG aksesibel yang dibuat independen,
+mencatat koreksi matematis secara eksplisit, serta menambahkan notebook
+pembentukan pola terbuka dan enam paket dukungan belajar lengkap. Pengantar
+Bagian 5 mempertahankan kedua paragraf sumber tanpa komponen tambahan yang
+tidak berlaku. Bab 11 mempertahankan seluruh struktur dan 165 rumus sumber,
+mencatat tiga belas koreksi aljabar linear secara berjejak, serta menambahkan
+tujuh paket petunjuk, pemeriksaan, dan pembahasan yang dihitung secara
+independen; bab ini tidak memerlukan notebook atau aset.

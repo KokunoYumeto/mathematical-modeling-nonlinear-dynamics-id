@@ -30,7 +30,7 @@ QA_SPECS = {
         "notebook": "notebooks/problem-07-open-curve-fitting.ipynb",
         "notebook_cells": 12,
         "code_cells": 7,
-        "mastery_math": None,
+        "mastery_math": 46,
         "lock": "numpy==2.4.4\nscipy==1.17.1\nmatplotlib==3.10.9\n",
     },
     "O005-LEGA-V101-CH02": {
@@ -614,6 +614,57 @@ QA_SPECS = {
         ],
         "lock": None,
         "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",
+    },
+    "O005-LEGA-V101-CH11": {
+        "unit_type": "chapter",
+        "elements": 127,
+        "links": 0,
+        "math": 165,
+        "target_math": 165,
+        "reader_math": 165,
+        "math_replacements": {
+            1: (
+                r"\begin{align*} &amp; \forall x, y \in {\mathcal S}, x+y \in {\mathcal S} \\ &amp; \forall x \in {\mathcal S}, \forall \alpha \in \mathbb{R} \text{ (resp. }\mathbb{C}), \alpha x \in {\mathcal S}. \end{align*}",
+                r"\begin{align*} &amp; \forall x, y \in {\mathcal S}, x+y \in {\mathcal S} \\ &amp; \forall x \in {\mathcal S}, \forall \alpha \in \mathbb{R} \text{ (atau }\mathbb{C}), \alpha x \in {\mathcal S}. \end{align*}",
+            ),
+            2: (
+                r"\{u_i \in S, i=1 \dots n\}",
+                r"\{u_i\in\mathcal S\mid i=1,\dots,n\}",
+            ),
+            3: (
+                r"\begin{align*} \forall &amp;\{\alpha_i, i=1, \dots n \} \subset \mathbb{R} \text { (or } \mathbb{C}),\\ &amp;\sum_{i=1}^n \alpha_i\,u_i = 0 \Longrightarrow \alpha_i = 0, \forall i=1, \dots n. \end{align*}",
+                r"\begin{align*} &amp;\forall\,\alpha_1,\dots,\alpha_n \in \mathbb{R} \text{ (atau } \mathbb{C}),\\ &amp;\sum_{i=1}^n \alpha_i\,u_i = 0 \Longrightarrow \alpha_i = 0,\ \forall i=1,\dots,n. \end{align*}",
+            ),
+            41: (r"i^{\hbox{th}}", "i"),
+            42: (r"j^{\hbox{th}}", "j"),
+            48: (r"(A^T_{ij}) = (A_{ji})", r"(A^T)_{ij}=A_{ji}"),
+            88: ("A X = b", "A x = b"),
+            104: (r"m \ne 1", r"m \ge 1"),
+            105: (
+                r"(A - a I_n) f \ne 0, \qquad (A - a I_n)^m f = 0, \qquad f \ne 0.",
+                r"(A - a I_n)^{m-1} f \ne 0, \qquad (A - a I_n)^m f = 0, \qquad f \ne 0.",
+            ),
+            112: (
+                r"\det (A - a I)= 0, \qquad (A1.2)",
+                r"\det (A - a I_n)= 0, \qquad (A1.2)",
+            ),
+            143: (
+                r"{\mathcal T}(\vec x) = \left[\begin{array}{c} 0 \\ 2 x_1 - 4 x_2 + x_5 \\ x_2 + x_3 + x_5 \end{array}\right], \qquad \text{where} \qquad \vec x = \left[\begin{array}{c}x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{array}\right].",
+                r"{\mathcal T}(\vec x) = \left[\begin{array}{c} 0 \\ 2 x_1 - 4 x_2 + x_5 \\ x_2 + x_3 + x_5 \end{array}\right], \qquad \text{dengan} \qquad \vec x = \left[\begin{array}{c}x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{array}\right].",
+            ),
+            163: (
+                r"\begin{align*} &amp;\vec v_1 = \left[\begin{array}{cccc} 1 \\ 2 \\ 3 \\ 4\end{array}\right],\qquad \vec v_2 = \left[\begin{array}{cccc} 0 \\ 1 \\ 0 \\ -1\end{array}\right],\qquad \vec v_3 = \left[\begin{array}{cccc} 1 \\ 0 \\ 1 \\ 0\end{array}\right],\\ &amp; \vec v_4 = \left[\begin{array}{cccc} 1 \\ 1 \\ 1 \\ -2\end{array}\right],\qquad \vec v_5 = \left[\begin{array}{cccc} 1 \\ 1 \\ 1 \\ 1\end{array}\right]. \end{align*}",
+                r"\begin{align*} &amp;\vec v_1 = \left[\begin{array}{c} 1 \\ 2 \\ 3 \\ 4\end{array}\right],\qquad \vec v_2 = \left[\begin{array}{c} 0 \\ 1 \\ 0 \\ -1\end{array}\right],\qquad \vec v_3 = \left[\begin{array}{c} 1 \\ 0 \\ 1 \\ 0\end{array}\right],\\ &amp; \vec v_4 = \left[\begin{array}{c} 1 \\ 1 \\ 1 \\ -2\end{array}\right],\qquad \vec v_5 = \left[\begin{array}{c} 1 \\ 1 \\ 1 \\ 1\end{array}\right]. \end{align*}",
+            ),
+        },
+        "problems": 7,
+        "footnotes": 0,
+        "assets": [],
+        "notebook": None,
+        "notebook_cells": 0,
+        "code_cells": 0,
+        "mastery_math": 156,
+        "lock": None,
     },
 }
 BUILDER = ROOT / "scripts" / "build_unit_reader.py"

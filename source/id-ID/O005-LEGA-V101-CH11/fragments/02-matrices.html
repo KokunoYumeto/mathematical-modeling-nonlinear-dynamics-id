@@ -1,0 +1,39 @@
+<h2>Matriks</h2>
+Setiap pemetaan linear
+<p style="text-align: center">$latex \begin{array}{llll} {\mathcal T} : &amp; \mathbb{R}^n &amp; \rightarrow &amp; \mathbb{R}^m \\ &amp; x &amp;\mapsto &amp; u \end{array}$</p>
+dapat ditulis sebagai
+<p style="text-align: center">$latex u_i = \sum_{j=1}^n A_{ij} x_j \quad i=1,\dots,m; \qquad u=\left( \begin{array}{c}u_1 \\u_2\\ \vdots \\u_m\end{array}\right);\quad x=\left(\begin{array}{c}x_1 \\x_2\\ \vdots \\x_n\end{array}\right),$</p>
+di mana $latex A \equiv (A_{ij})$ adalah matriks $latex m \times n$ ($latex m$ baris, $latex n$ kolom) dengan entri-entri real. Menurut konvensi, $latex A_{ij}$ adalah entri pada perpotongan baris ke-$latex i^{\hbox{th}}$ dan kolom ke-$latex j^{\hbox{th}}$ dari $latex A$.
+
+<span style="text-align: initial;font-size: 1em">Perhatikan bahwa setelah suatu basis dipilih, setiap </span>ruang vektor berdimensi $latex n$ isomorfik dengan $latex \mathbb{R}^n$. Dengan demikian, kita dapat merepresentasikan setiap pemetaan linear antara dua ruang vektor berdimensi hingga dengan sebuah matriks. Selanjutnya, kita hanya akan mempertimbangkan matriks dengan koefisien real.
+<h3>Definisi</h3>
+<ul>
+	<li>Matriks <em>transpos</em> dari $latex A$ adalah $latex A^T$ sedemikian sehingga $latex (A^T_{ij}) = (A_{ji})$.</li>
+	<li>Besaran <em>rank</em> matriks $latex A$ yang terkait dengan transformasi linear $latex \mathcal T$ adalah dimensi $latex {\mathcal R}_{\mathcal T}$. Rank tersebut juga sama dengan rank $latex A^T$.</li>
+	<li>Nilai <em>determinan</em> matriks $latex 2 \times 2$, $latex A = \left(\begin{array}{cc} a &amp; b \\ c &amp; d \end{array} \right)$ adalah</li>
+</ul>
+<p style="text-align: center">$latex \det A = \left|\begin{array}{cc} a &amp; b \\ c &amp; d \end{array} \right| = a d - b c.$</p>
+
+<ul>
+	<li><span style="text-align: initial;font-size: 1em">Nilai <em>determinan</em> matriks $latex n \times n$, $latex A = (A_{ij})$, dapat</span> dihitung dengan rumus di bawah ini, di mana $latex i$ adalah satu baris dari $latex A$ dan $latex M_{ij}$ adalah matriks yang diperoleh dari $latex A$ dengan menghapus baris $latex i$ dan kolom $latex j$:</li>
+</ul>
+<p style="text-align: center">$latex \det A = \sum_{j=1}^n (-1)^{i + j} A_{i j} \det M_{ij}.$</p>
+
+<ul>
+ 	<li>Terdapat rumus serupa untuk mengembangkan $latex \det A$ terhadap salah satu kolom $latex A$.</li>
+	<li>Nilai <em>jejak</em> Tr($latex A$) dari matriks persegi $latex A$ adalah jumlah entri diagonal $latex A$.</li>
+</ul>
+<h3>Sifat-sifat</h3>
+<ul>
+ 	<li>Jika $latex A$ adalah matriks $latex m \times n$, sistem $latex A x = b$ memiliki <span style="text-decoration: underline">setidaknya</span> satu solusi untuk setiap $latex b$ jika dan hanya jika kolom-kolom $latex A$ merentang $latex \mathbb{R}^m$. Dalam hal ini rank $latex A$, yaitu $latex r$, memenuhi $latex r = m$, yang mengakibatkan $latex m \le n$.</li>
+ 	<li>Sistem $latex A x = b$ memiliki <span style="text-decoration: underline">paling banyak</span> satu solusi untuk setiap $latex b$ jika dan hanya jika kolom-kolom $latex A$ bebas linear, yaitu jika dan hanya jika ruang nol $latex A$ trivial. Dalam hal ini, $latex r=n$, yang mengakibatkan $latex n \le m$.</li>
+ 	<li>Misalkan $latex A$ adalah matriks $latex n \times n$. Maka, pernyataan-pernyataan berikut ekuivalen.
+<ul>
+ 	<li>Persamaan $latex A X = b$ memiliki tepat satu solusi.</li>
+ 	<li>Ruang hasil $latex A$ adalah $latex \mathbb{R}^n$.</li>
+ 	<li>Ruang nol $latex A$ trivial.</li>
+ 	<li>Matriks $latex A$ invertibel.</li>
+ 	<li>Determinan $latex A$, yaitu $latex \det A$, tak nol.</li>
+</ul>
+</li>
+</ul>

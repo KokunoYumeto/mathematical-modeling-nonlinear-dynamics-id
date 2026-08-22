@@ -1,0 +1,28 @@
+<h2>Nilai eigen dan vektor eigen</h2>
+<h3>Definisi</h3>
+Misalkan $latex A$ adalah matriks real berukuran $latex n \times n$.
+<ul>
+ 	<li>Vektor $latex h \in {\mathcal S}$ merupakan <em>vektor eigen</em> dari $latex A$ dengan <em>nilai eigen</em> $latex a \in \mathbb{C}$ jika</li>
+</ul>
+<p style="text-align: center">$latex A h = a h, \qquad h\ne 0.$</p>
+
+<ul>
+ 	<li>Vektor $latex f \in {\mathcal S}$ merupakan <em>vektor eigen tergeneralisasi</em> dari $latex A$ dengan <em>nilai eigen</em> $latex a$ jika, untuk suatu bilangan bulat positif $latex m \ne 1$, berlaku</li>
+</ul>
+<p style="text-align: center">$latex (A - a I_n) f \ne 0, \qquad (A - a I_n)^m f = 0, \qquad f \ne 0.$</p>
+Pada persamaan di atas, $latex I_n$ adalah matriks identitas berukuran $latex n \times n$. Untuk mencari nilai eigen dan vektor eigen suatu matriks, pertama-tama perhatikan bahwa jika $latex u$ adalah vektor eigen dari matriks $latex A$ dengan nilai eigen $latex a$, maka persamaan
+<p style="text-align: center"><a id="Evec"></a>$latex (A - a\, I_n) u = 0, \qquad (A1.1)$</p>
+memiliki solusi taktrivial. Hal ini menyiratkan bahwa
+<p style="text-align: center"><a id="Eval"></a>$latex \det (A - a I)= 0, \qquad (A1.2)$</p>
+sehingga nilai-nilai eigen $latex A$ dapat dicari dengan menyelesaikan persamaan ini.
+<h3>Sifat-sifat</h3>
+<ul>
+ 	<li>Ruas kiri (A1.2) adalah polinom berderajat $latex n$ dalam $latex a$, yang disebut <em>polinom karakteristik</em> dari $latex A$.</li>
+ 	<li>Polinom karakteristik $latex A$ memiliki $latex n$ akar kompleks, yang merupakan nilai-nilai eigen $latex A$.</li>
+ 	<li>Karena $latex A$ memiliki entri-entri real, jika $latex a$ merupakan nilai eigen dari $latex A$, konjugat kompleksnya $latex a^*$ juga merupakan nilai eigen. Akibatnya, nilai-nilai eigen $latex A$ adalah real atau muncul dalam pasangan konjugat kompleks.</li>
+ 	<li>Jejak $latex A$ adalah jumlah nilai-nilai eigen $latex A$.</li>
+ 	<li>Determinan $latex A$ adalah hasil kali nilai-nilai eigen $latex A$.</li>
+</ul>
+Setelah suatu nilai eigen ditemukan, persamaan (A1.1) perlu diselesaikan untuk memperoleh vektor eigen yang bersesuaian. Vektor eigen semacam itu tidak hanya satu, melainkan membentuk suatu subruang linear. Masing-masing ruang eigen ini merupakan subruang invarian dari transformasi linear $latex \mathcal T$ yang berkaitan dengan matriks $latex A$. Ruang vektor $latex \mathcal S$, atau secara ekuivalen $latex \mathbb{R}^n$, dengan demikian dapat dipandang sebagai jumlah ruang-ruang eigen dari $latex A$, dan dekomposisi ini memberikan gambaran geometris tentang cara $latex \mathcal T$ bekerja pada $latex \mathcal S$.
+
+&nbsp;

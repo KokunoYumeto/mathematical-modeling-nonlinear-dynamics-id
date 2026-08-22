@@ -742,3 +742,55 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   mastery/notebook/backend/reader, the complete Part 5 authority/translation/
   backend/reader, Chapter 11's frozen canonical/raw/rendered authority, and all
   changed pipeline and durable control files.
+
+## Admitted build — O005-LEGA-V101-CH11 — 2026-08-22
+
+- Final gate: `scripts/qa_unit.py --unit O005-LEGA-V101-CH11
+  --deterministic-build`, exit 0. Exact replay covers 127 / 127 ordered
+  elements, zero / zero links, 165 / 165 declared source-to-target TeX
+  occurrences, zero footnotes/assets, both equation anchors, and seven / seven
+  stable problems across 166 source-order physical lines.
+- Target: 14,293 bytes, SHA-256
+  `f62354eb267c5788bd0ea8a70d6b7de64f8059c1656eedbffa40898da4c9606d`;
+  backend: 142 paired segments / 84,119 bytes, SHA-256
+  `0ee5d83a3cd0f9096019e0d7ced962ff8f44b4938a49caea207293dc7dcee289`;
+  unit record: 1,470 bytes, SHA-256
+  `e43b6fac52f2f8dc6c84dfb9ae90935cb0361cbf12eeb8a8a0f0e4f8a8b6cb7f`.
+- Mastery: seven records / 22,086 bytes, SHA-256
+  `76acebcc58ce8f81d35b933a08e47a5a0eee5a717caa168975ada561f091f56e`;
+  156 rendered MathML nodes. Independent recomputation and independent file
+  review passed every proof, determinant, eigenspace, matrix, RREF, basis,
+  coordinate, and dependence-relation result. No notebook is applicable.
+- Reader: five payload files / 300,247 bytes excluding the 509-byte manifest;
+  165 chapter and 156 mastery MathML nodes; one local CSS dependency. Manifest
+  SHA-256
+  `4c2f860ed701af4682ebd7202c9f5a01b6daba8a0e4d8015f97ca450d54c0153`.
+  Deterministic double build: six files, byte-identical, canonical tree
+  SHA-256 `4711a2d39c2ce08eb9f7f760ca7b0346451d60496583e09fa72213150ff14da1`.
+- Independent translation review passed after the established `Bahan Renungan`
+  heading and exact-rank generalized-eigenvector wording were verified. The
+  thirteen declared corrections are the only source-to-target mathematical
+  changes; the frozen source remains unchanged.
+- Browser QA against final bytes: at 1280×900 the main shell/article widths
+  were 1,152 / 768 px and centered; at 390×844 the shell/article width was
+  357.5 px and centered inside a 375 px client. Document scroll width equaled
+  client width. All 31 formula nodes wider than the mobile viewport had a
+  bounded horizontal-scroll host; all 20 reader IDs were unique; all ten
+  fragment links resolved; 21 disclosures rendered; and the Problem 7 target
+  landed at 80.12 px below a 44.15 px sticky navigation. The final local page
+  had no warning or error. External-link reachability was inapplicable; no
+  audio or live widget exists.
+
+## Frozen authority — O005-LEGA-V101-CH12 — 2026-08-22
+
+- Official Pressbooks record 413, slug `appendix-vector-calculus`, modified
+  `2026-03-19T19:53:52Z`; canonical 31,922 bytes / SHA-256
+  `fa1364a307b033035bce94975db0667edf3b8d208e73b4e07882b090cafab377`.
+- Raw content 14,175 bytes / SHA-256
+  `165e0b7a0b489dd9be7ae396ac9a3c0430c89599c23a444fcaadffb2a07a3ccc`;
+  rendered content 15,354 bytes / SHA-256
+  `1e6590dd97823f1dc009947eee63585b1e2afcda8dee91b66587e9cded4e0303`.
+- Exact frozen census: 112 physical lines, 85 ordered elements, 161 TeX
+  occurrences, and zero links, assets, footnotes, or problems. The next
+  production action is complete source-order Indonesian translation without
+  fabricated mastery, notebook, or asset surfaces.
