@@ -21,15 +21,15 @@
     "bytes": 14504,
     "sha256": "6bdfc501e3134de338fc9862feb4abbbd503037295ab8c701a627cb33550c740"
   },
-  "last_verified_public_commit": "0302eef818b06dafa372b2ab5cd5ff784b6eb184",
+  "last_verified_public_commit": "8ff7758f0afdf66881a7a0552581e1c1668a6860",
   "public_repository": "https://github.com/KokunoYumeto/mathematical-modeling-nonlinear-dynamics-id",
   "last_public_readback": {
-    "verified_at": "2026-08-22T07:49:06+02:00",
-    "commit": "0302eef818b06dafa372b2ab5cd5ff784b6eb184",
+    "verified_at": "2026-08-22T08:29:57+02:00",
+    "commit": "8ff7758f0afdf66881a7a0552581e1c1668a6860",
     "remote_head_equal": true,
-    "raw_files_compared": 61,
-    "raw_bytes_compared": 1366211,
-    "inventory_receipt_sha256": "c8c095a643dae69fc354c031b30812ef799fb5c874b1a73fb0fe84c0f57821dc",
+    "raw_files_compared": 32,
+    "raw_bytes_compared": 866260,
+    "inventory_receipt_sha256": "121edbad5bde443b6d01f41c24ed66f3e6d223db21722bdd472f9266801959a8",
     "all_bytes_and_sha256_equal": true
   },
   "last_completed_unit": {

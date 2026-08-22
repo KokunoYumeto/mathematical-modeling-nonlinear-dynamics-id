@@ -645,6 +645,11 @@ now the executable action.
   problem target cleared the sticky navigation by 35.97 px; and the final
   local page emitted no warning or error. External-link reachability was
   inapplicable, and no audio or live widget exists.
+- Published in production commit
+  `8ff7758f0afdf66881a7a0552581e1c1668a6860` on `origin/main`. Remote-head
+  equality passed, and anonymous immutable-commit readback matched all 32
+  changed files / 866,260 bytes with zero mismatch; ordered inventory SHA-256
+  `121edbad5bde443b6d01f41c24ed66f3e6d223db21722bdd472f9266801959a8`.
 
 ## Frozen Chapter 12 authority
 

@@ -781,6 +781,22 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   had no warning or error. External-link reachability was inapplicable; no
   audio or live widget exists.
 
+## Public readback — Chapter 11 and Chapter 12 authority — 2026-08-22
+
+- Production commit: `8ff7758f0afdf66881a7a0552581e1c1668a6860`.
+- `git push origin main` advanced the public branch from `45a1c4d` to
+  `8ff7758`; `git ls-remote origin refs/heads/main` returned the exact local
+  40-character commit.
+- Every one of the 32 files changed by the production commit was fetched as
+  anonymous bytes from its immutable GitHub raw URL and compared with the
+  committed local counterpart: 866,260 local bytes, 866,260 public bytes,
+  zero byte-count mismatches, and zero SHA-256 mismatches.
+- The ordered `path<TAB>bytes<TAB>sha256` inventory has SHA-256
+  `121edbad5bde443b6d01f41c24ed66f3e6d223db21722bdd472f9266801959a8`.
+  Coverage includes the complete Chapter 11 translation, mastery, backend,
+  reader, pipeline and control changes, plus Chapter 12's exact frozen
+  canonical/raw/rendered authority closure.
+
 ## Frozen authority — O005-LEGA-V101-CH12 — 2026-08-22
 
 - Official Pressbooks record 413, slug `appendix-vector-calculus`, modified
