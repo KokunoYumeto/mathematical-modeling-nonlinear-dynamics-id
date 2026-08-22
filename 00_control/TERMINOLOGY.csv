@@ -236,3 +236,17 @@ O005-TERM-0234,saddle point,titik pelana,admitted,
 O005-TERM-0235,linear center,pusat linear,admitted,
 O005-TERM-0236,marginally stable,stabil marginal,admitted,
 O005-TERM-0237,Wronskian,Wronskian,admitted,
+O005-TERM-0238,modeling project,proyek pemodelan,admitted,Use as the Chapter 14 display title and generic project type.
+O005-TERM-0239,project expectations,capaian proyek,admitted,Use for the actionable outcome list rather than the literal loanword ekspektasi.
+O005-TERM-0240,agent-based model,model berbasis agen,admitted,
+O005-TERM-0241,individual-based model,model berbasis individu,admitted,Distinguish from a generic agent-based model when the source does.
+O005-TERM-0242,collective intelligence,kecerdasan kolektif,admitted,
+O005-TERM-0243,non-pharmaceutical intervention,intervensi nonfarmasi,admitted,
+O005-TERM-0244,zoonotic transmission,penularan zoonotik,admitted,
+O005-TERM-0245,trade-off,kompromi,admitted,Use when one modeling objective improves only at the cost of another.
+O005-TERM-0246,parameter identification,identifikasi parameter,admitted,Use estimasi parameter only for the numerical estimation procedure itself.
+O005-TERM-0247,seasonal forcing,pemaksaan musiman,admitted,
+O005-TERM-0248,health-care system,sistem layanan kesehatan,admitted,
+O005-TERM-0249,melt pond,kolam lelehan,admitted,Arctic sea-ice context.
+O005-TERM-0250,project packet,paket proyek,admitted,Independent executable companion bundle rather than source-provided material.
+O005-TERM-0251,dynamical system,sistem dinamik,admitted,Use consistently for the mathematical field and system class.

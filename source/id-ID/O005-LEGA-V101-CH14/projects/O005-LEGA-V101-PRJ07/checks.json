@@ -1,0 +1,52 @@
+{
+  "assertions": [
+    {
+      "check_id": "O005-LEGA-V101-PRJ07-CHK01",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Massa manusia dan vektor terjaga pada simulasi sumber."
+        }
+      },
+      "required": true
+    },
+    {
+      "check_id": "O005-LEGA-V101-PRJ07-CHK02",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Pencarian kisi menemukan beberapa pasangan laju yang berbeda dengan galat rendah."
+        }
+      },
+      "required": true
+    },
+    {
+      "check_id": "O005-LEGA-V101-PRJ07-CHK03",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Model sederhana dan vektor–inang menghasilkan prediksi hingga dan nonnegatif."
+        }
+      },
+      "required": true
+    }
+  ],
+  "execution": {
+    "fixed_seed": 2026082207,
+    "mode": "sequential-code-cells-single-clean-namespace",
+    "network_required": false,
+    "saved_outputs_required": false
+  },
+  "notebook": "O005-LEGA-V101-PRJ07-starter.ipynb",
+  "project_id": "O005-LEGA-V101-PRJ07",
+  "required_reader_prompts": [
+    "observability-and-measurement-error",
+    "identifiability-or-sensitivity",
+    "resolution-or-seed-robustness",
+    "model-failure-and-alternative"
+  ],
+  "schema_version": "o005.project-checks.v1"
+}

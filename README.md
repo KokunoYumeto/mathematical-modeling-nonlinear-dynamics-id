@@ -1,4 +1,4 @@
-# Pemodelan Matematika dan Dinamika Nonlinear — Bahasa Indonesia
+# Pengantar Pemodelan Matematika — Edisi Bahasa Indonesia
 
 Repositori kerja ini memuat edisi Bahasa Indonesia independen dari Joceline
 Lega, *Introduction to Mathematical Modeling*, University of Arizona
@@ -7,10 +7,15 @@ Pressbooks v1.01 (Maret 2026). Sumber dan terjemahan berada di bawah lisensi
 Edisi ini tidak disokong atau disahkan oleh penulis maupun University of
 Arizona.
 
-Status saat ini: **Bab 1–12 dari 14 serta pengantar Bagian 2–5 telah
-diterjemahkan, dibangun, dan lolos QA.**
-Pekerjaan berlanjut secara berurutan; repositori ini belum merupakan edisi
+Status saat ini: **Bab 1–14 serta pengantar Bagian 2–5 telah diterjemahkan,
+dibangun, dan lolos QA.** Pengantar Bagian 1, materi awal/akhir, dan empat
+modul jembatan asli masih dikerjakan; repositori ini belum merupakan edisi
 lengkap atau terbitan final.
+
+Versi kemajuan terverifikasi ini dipertahankan di Zenodo:
+[10.5281/zenodo.22059940](https://doi.org/10.5281/zenodo.22059940).
+Pembaruan substansial berikutnya akan diterbitkan dalam garis versi konsep yang
+sama: [10.5281/zenodo.22059939](https://doi.org/10.5281/zenodo.22059939).
 
 ## Baca unit yang selesai
 
@@ -31,14 +36,16 @@ lengkap atau terbitan final.
 - Bab 11 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH11/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH11/index.html); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH11.mastery.json).
 - Bab 12 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH12/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH12/index.html).
 - Bab 13 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH13/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH13/index.html); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH13.mastery.json).
+- Bab 14 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH14/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH14/index.html); [katalog 12 proyek](backend/projects/O005-LEGA-V101-CH14.projects.json); [paket proyek](source/id-ID/O005-LEGA-V101-CH14/project_archives/).
 
 ## Backend modular
 
-Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Tiga belas bab dan
-empat pengantar bagian yang selesai memiliki 3.153 segmen Inggris–Indonesia yang
-berpasangan, 113 ID soal tetap, sepuluh notebook terbuka, catatan unit berhash,
-serta jalur eksplisit menuju aset, notebook, dan
-dukungan belajar. Lapisan ini dimaksudkan untuk memungkinkan pemindahan unit
+Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Empat belas bab
+dan empat pengantar bagian yang selesai memiliki 3.400 segmen Inggris–Indonesia
+yang berpasangan, 113 ID soal tetap, sepuluh notebook bab terbuka, dua belas
+notebook proyek dalam dua belas paket mandiri, catatan unit berhash, serta jalur
+eksplisit menuju aset, notebook, proyek, dan dukungan belajar. Lapisan ini
+dimaksudkan untuk memungkinkan pemindahan unit
 yang sama ke bahasa lain tanpa menjadikan Bahasa Indonesia sebagai kunci
 struktur.
 
@@ -82,6 +89,9 @@ python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH12
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH12 --deterministic-build
 python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH13
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH13 --deterministic-build
+python scripts/build_ch14_project_packets.py
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH14
+python scripts/qa_unit.py --unit O005-LEGA-V101-CH14 --execute-notebook --deterministic-build
 ```
 
 QA memeriksa kesetaraan struktur sumber–target, rumus dan tautan yang
@@ -139,3 +149,9 @@ ke 528 rumus sasaran melalui koreksi yang seluruhnya dinyatakan dalam ledger.
 Sebelas kelompok jawaban tercetak tetap dibedakan dari sebelas paket petunjuk,
 pemeriksaan, dan pembahasan yang dihitung serta ditulis baru; bab penyegaran ini
 tidak memiliki permukaan komputasi yang perlu diganti dengan notebook.
+Bab 14 mempertahankan seluruh direktori dua belas proyek dan keenam belas
+tautan rujukan tanpa menyalin artikel, kode, atau data yang dirujuk. Dua belas
+paket Python yang ditulis secara independen menyediakan notebook tanpa keluaran
+tersimpan, pemeriksaan deterministik, rubrik, provenance, lingkungan terpaku,
+serta data sintetis atau yang dihasilkan model; paket-paket tersebut tidak
+mengklaim mereproduksi hasil artikel sumber.

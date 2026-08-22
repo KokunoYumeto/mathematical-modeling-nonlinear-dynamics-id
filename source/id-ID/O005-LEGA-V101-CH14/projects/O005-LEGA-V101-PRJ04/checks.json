@@ -1,0 +1,52 @@
+{
+  "assertions": [
+    {
+      "check_id": "O005-LEGA-V101-PRJ04-CHK01",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Massa SIR dan nonnegativitas terjaga."
+        }
+      },
+      "required": true
+    },
+    {
+      "check_id": "O005-LEGA-V101-PRJ04-CHK02",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Puncak beban layanan turun monoton saat cakupan naik."
+        }
+      },
+      "required": true
+    },
+    {
+      "check_id": "O005-LEGA-V101-PRJ04-CHK03",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Semua skenario memakai parameter penyakit yang sama."
+        }
+      },
+      "required": true
+    }
+  ],
+  "execution": {
+    "fixed_seed": 2026082204,
+    "mode": "sequential-code-cells-single-clean-namespace",
+    "network_required": false,
+    "saved_outputs_required": false
+  },
+  "notebook": "O005-LEGA-V101-PRJ04-starter.ipynb",
+  "project_id": "O005-LEGA-V101-PRJ04",
+  "required_reader_prompts": [
+    "observability-and-measurement-error",
+    "identifiability-or-sensitivity",
+    "resolution-or-seed-robustness",
+    "model-failure-and-alternative"
+  ],
+  "schema_version": "o005.project-checks.v1"
+}

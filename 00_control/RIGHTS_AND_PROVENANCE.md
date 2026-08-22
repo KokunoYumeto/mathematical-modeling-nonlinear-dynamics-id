@@ -267,3 +267,13 @@ eleven printed answer groups remain labeled source-derived; the eleven hints,
 checks, and worked solutions are newly authored, distinctly provenanced, and
 distributed compatibly with ShareAlike. No notebook or proprietary program
 surface is attributed to or manufactured for this refresher chapter.
+
+Chapter 14 record 555, *Modeling Projects*, has an empty record-level license
+override and no embedded asset, formula, footnote, or source answer surface. Its
+translated twelve-project directory remains an adaptation of the book under CC
+BY-NC-SA 4.0. The linked research articles and supplemental resources are
+citations only and are not redistributed or claimed under the book license.
+Each executable project packet, notebook, synthetic/open dataset, check, and
+rubric is independently authored for this edition, separately provenanced, and
+must not import proprietary code or imply reproduction of an article result
+unless the packet actually verifies that result from lawfully available data.

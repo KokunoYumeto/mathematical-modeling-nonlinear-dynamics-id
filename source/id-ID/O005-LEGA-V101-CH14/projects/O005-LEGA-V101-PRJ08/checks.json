@@ -1,0 +1,52 @@
+{
+  "assertions": [
+    {
+      "check_id": "O005-LEGA-V101-PRJ08-CHK01",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Lintasan numerik tetap positif dan hingga."
+        }
+      },
+      "required": true
+    },
+    {
+      "check_id": "O005-LEGA-V101-PRJ08-CHK02",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Kesetimbangan predator analitik naik ketika imigrasi positif."
+        }
+      },
+      "required": true
+    },
+    {
+      "check_id": "O005-LEGA-V101-PRJ08-CHK03",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Kondisi kesetimbangan memenuhi ruas kanan ODE."
+        }
+      },
+      "required": true
+    }
+  ],
+  "execution": {
+    "fixed_seed": 2026082208,
+    "mode": "sequential-code-cells-single-clean-namespace",
+    "network_required": false,
+    "saved_outputs_required": false
+  },
+  "notebook": "O005-LEGA-V101-PRJ08-starter.ipynb",
+  "project_id": "O005-LEGA-V101-PRJ08",
+  "required_reader_prompts": [
+    "observability-and-measurement-error",
+    "identifiability-or-sensitivity",
+    "resolution-or-seed-robustness",
+    "model-failure-and-alternative"
+  ],
+  "schema_version": "o005.project-checks.v1"
+}

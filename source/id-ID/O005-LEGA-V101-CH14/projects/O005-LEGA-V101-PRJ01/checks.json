@@ -1,0 +1,52 @@
+{
+  "assertions": [
+    {
+      "check_id": "O005-LEGA-V101-PRJ01-CHK01",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Ragam pendapat turun setelah pembaruan sosial."
+        }
+      },
+      "required": true
+    },
+    {
+      "check_id": "O005-LEGA-V101-PRJ01-CHK02",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Perkiraan kolektif tetap hingga 0,20 dari sinyal sintetis."
+        }
+      },
+      "required": true
+    },
+    {
+      "check_id": "O005-LEGA-V101-PRJ01-CHK03",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Semua bobot dan keadaan bernilai hingga."
+        }
+      },
+      "required": true
+    }
+  ],
+  "execution": {
+    "fixed_seed": 2026082201,
+    "mode": "sequential-code-cells-single-clean-namespace",
+    "network_required": false,
+    "saved_outputs_required": false
+  },
+  "notebook": "O005-LEGA-V101-PRJ01-starter.ipynb",
+  "project_id": "O005-LEGA-V101-PRJ01",
+  "required_reader_prompts": [
+    "observability-and-measurement-error",
+    "identifiability-or-sensitivity",
+    "resolution-or-seed-robustness",
+    "model-failure-and-alternative"
+  ],
+  "schema_version": "o005.project-checks.v1"
+}

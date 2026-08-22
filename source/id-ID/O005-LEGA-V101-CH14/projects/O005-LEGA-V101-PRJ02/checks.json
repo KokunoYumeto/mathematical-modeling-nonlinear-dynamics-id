@@ -1,0 +1,52 @@
+{
+  "assertions": [
+    {
+      "check_id": "O005-LEGA-V101-PRJ02-CHK01",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Jumlah fraksi SEIR terjaga hingga toleransi numerik."
+        }
+      },
+      "required": true
+    },
+    {
+      "check_id": "O005-LEGA-V101-PRJ02-CHK02",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Semua kompartemen tetap nonnegatif."
+        }
+      },
+      "required": true
+    },
+    {
+      "check_id": "O005-LEGA-V101-PRJ02-CHK03",
+      "expected": "pass",
+      "kind": "in-notebook-numeric-assertion",
+      "locale": {
+        "id-ID": {
+          "description": "Puncak infeksi terjadi setelah kondisi awal untuk R0 lebih besar dari satu."
+        }
+      },
+      "required": true
+    }
+  ],
+  "execution": {
+    "fixed_seed": 2026082202,
+    "mode": "sequential-code-cells-single-clean-namespace",
+    "network_required": false,
+    "saved_outputs_required": false
+  },
+  "notebook": "O005-LEGA-V101-PRJ02-starter.ipynb",
+  "project_id": "O005-LEGA-V101-PRJ02",
+  "required_reader_prompts": [
+    "observability-and-measurement-error",
+    "identifiability-or-sensitivity",
+    "resolution-or-seed-robustness",
+    "model-failure-and-alternative"
+  ],
+  "schema_version": "o005.project-checks.v1"
+}

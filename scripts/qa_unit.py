@@ -11,6 +11,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import zipfile
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -807,6 +808,47 @@ QA_SPECS = {
         "mastery_math": None,
         "lock": None,
     },
+    "O005-LEGA-V101-CH14": {
+        "unit_type": "chapter",
+        "elements": 252,
+        "links": 16,
+        "math": 0,
+        "target_math": 0,
+        "reader_math": 0,
+        "math_replacements": {},
+        "math_insertions_before": {},
+        "problems": 0,
+        "footnotes": 0,
+        "assets": [],
+        "notebook": None,
+        "notebook_cells": 0,
+        "code_cells": 0,
+        "mastery_math": 0,
+        "lock": None,
+        "project_headings": 12,
+        "project_id_prefix": "O005-LEGA-V101-PRJ",
+        "project_catalog": "backend/projects/O005-LEGA-V101-CH14.projects.json",
+        "project_archives": [
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ01.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ02.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ03.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ04.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ05.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ06.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ07.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ08.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ09.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ10.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ11.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ12.zip",
+        ],
+        "attribute_replacements": {
+            164: {"class": (None, ["uacm-text-center"])},
+            184: {"class": (None, ["uacm-text-center"])},
+            208: {"class": (None, ["uacm-text-center"])},
+            228: {"class": (None, ["uacm-text-center"])},
+        },
+    },
 }
 BUILDER = ROOT / "scripts" / "build_unit_reader.py"
 LATEX_RE = re.compile(r"\$latex\s+(.+?)\$", re.DOTALL)
@@ -814,7 +856,7 @@ LATEX_RE = re.compile(r"\$latex\s+(.+?)\$", re.DOTALL)
 
 def configure(unit_id: str) -> None:
     global UNIT_ID, SPEC, SOURCE, TARGET, ASSETS, DATA_FILES, NOTEBOOK, LOCK, MASTERY
-    global SEGMENTS, UNIT, BUILD
+    global SEGMENTS, UNIT, BUILD, PROJECT_CATALOG, PROJECT_ARCHIVES, PROJECT_NOTEBOOKS
     UNIT_ID = unit_id
     SPEC = QA_SPECS[unit_id]
     SOURCE = ROOT / "authority" / "units" / UNIT_ID / "content.raw.en.html"
@@ -830,6 +872,13 @@ def configure(unit_id: str) -> None:
     SEGMENTS = ROOT / "backend" / "segments" / f"{UNIT_ID}.segments.jsonl"
     UNIT = ROOT / "backend" / "units" / f"{UNIT_ID}.json"
     BUILD = ROOT / "build" / "reader" / UNIT_ID
+    project_catalog = SPEC.get("project_catalog")
+    PROJECT_CATALOG = ROOT / project_catalog if project_catalog else None
+    PROJECT_ARCHIVES = [ROOT / path for path in SPEC.get("project_archives", [])]
+    PROJECT_NOTEBOOKS = []
+    if PROJECT_CATALOG and PROJECT_CATALOG.is_file():
+        catalog = json.loads(PROJECT_CATALOG.read_text(encoding="utf-8"))
+        PROJECT_NOTEBOOKS = [ROOT / row["notebook_path"] for row in catalog["projects"]]
 
 
 configure("O005-LEGA-V101-CH01")
@@ -870,6 +919,8 @@ def structural_replay() -> dict:
                 left_attrs.pop("width", None); right_attrs.pop("width", None)
                 left_attrs.pop("height", None); right_attrs.pop("height", None)
         if left.name == "h3" and right.get("id", "").startswith((f"{UNIT_ID}-P", f"{UNIT_ID}-A")):
+            right_attrs.pop("id", None)
+        if left.name == "h2" and right.get("id", "").startswith(SPEC.get("project_id_prefix", f"{UNIT_ID}-PRJ")):
             right_attrs.pop("id", None)
         if left.name == "a":
             left_attrs.pop("href", None); right_attrs.pop("href", None)
@@ -941,6 +992,14 @@ def structural_replay() -> dict:
         == expected + expected_answer_ids,
         "Problem/answer heading IDs differ",
     )
+    project_count = int(SPEC.get("project_headings", 0))
+    if project_count:
+        project_prefix = SPEC.get("project_id_prefix", f"{UNIT_ID}-PRJ")
+        require(
+            [tag["id"] for tag in target_tags if tag.name == "h2" and tag.has_attr("id")]
+            == [f"{project_prefix}{i:02d}" for i in range(1, project_count + 1)],
+            "Project heading IDs differ",
+        )
     result = {
         "elements": len(source_tags),
         "links": len(source_links),
@@ -1002,7 +1061,35 @@ def backend_replay() -> dict:
         for path in DATA_FILES
     ]
     require(unit.get("data", []) == expected_data, "Unit data closure differs")
-    return {"segments": len(records), "mastery": len(problems)}
+    project_count = int(SPEC.get("project_headings", 0))
+    if project_count:
+        require(PROJECT_CATALOG and PROJECT_CATALOG.is_file(), "Project catalog is missing")
+        require(len(PROJECT_ARCHIVES) == project_count, "Project archive count differs")
+        catalog = json.loads(PROJECT_CATALOG.read_text(encoding="utf-8"))
+        expected_ids = [f"O005-LEGA-V101-PRJ{i:02d}" for i in range(1, project_count + 1)]
+        require(catalog.get("schema_version") == "o005.project-catalog.v1", "Project catalog schema differs")
+        require(catalog.get("unit_id") == UNIT_ID, "Project catalog unit differs")
+        require(catalog.get("project_count") == project_count, "Project catalog count differs")
+        require(catalog.get("project_order") == expected_ids, "Project catalog order differs")
+        require([row["project_id"] for row in catalog["projects"]] == expected_ids, "Project catalog ID sequence differs")
+        expected_projects = {
+            "count": project_count,
+            "catalog_path": PROJECT_CATALOG.relative_to(ROOT).as_posix(),
+            "catalog_sha256": sha(PROJECT_CATALOG),
+            "archives": [
+                {
+                    "project_id": project_id,
+                    "path": archive.relative_to(ROOT).as_posix(),
+                    "bytes": archive.stat().st_size,
+                    "sha256": sha(archive),
+                }
+                for project_id, archive in zip(expected_ids, PROJECT_ARCHIVES)
+            ],
+        }
+        require(unit.get("projects") == expected_projects, "Unit project closure differs")
+    else:
+        require("projects" not in unit, "Unit unexpectedly binds projects")
+    return {"segments": len(records), "mastery": len(problems), "projects": project_count}
 
 
 def reader_replay(root: Path) -> dict:
@@ -1062,6 +1149,18 @@ def reader_replay(root: Path) -> dict:
             expected_data_file in local_files,
             f"Reader does not expose admitted data file: {data_file.name}",
         )
+    if PROJECT_CATALOG:
+        expected_catalog = (root / "data" / PROJECT_CATALOG.name).resolve()
+        require(expected_catalog in local_files, "Reader does not expose project catalog")
+        packet_links = soup.select("#paket-proyek a[download]")
+        require(len(packet_links) == len(PROJECT_ARCHIVES), "Reader project-download count differs")
+        expected_hrefs = [
+            f"downloads/projects/{archive.name}" for archive in PROJECT_ARCHIVES
+        ]
+        require([link.get("href") for link in packet_links] == expected_hrefs, "Reader project-download order differs")
+        for archive in PROJECT_ARCHIVES:
+            packaged = (root / "downloads" / "projects" / archive.name).resolve()
+            require(packaged in local_files, f"Reader does not expose project archive: {archive.name}")
 
     manifest_path = root / "PACKAGE_MANIFEST.tsv"
     rows = manifest_path.read_text(encoding="utf-8").splitlines()
@@ -1099,6 +1198,74 @@ def reader_replay(root: Path) -> dict:
 
 
 def notebook_replay(execute: bool) -> dict:
+    if PROJECT_NOTEBOOKS:
+        require(len(PROJECT_NOTEBOOKS) == len(PROJECT_ARCHIVES) == 12, "Project notebook/archive count differs")
+        catalog = json.loads(PROJECT_CATALOG.read_text(encoding="utf-8"))
+        total_cells = 0
+        total_code = 0
+        lock_payloads: list[bytes] = []
+        runner = "import json,sys; n=json.load(open(sys.argv[1],encoding='utf-8')); g={}; [exec(compile(''.join(c['source']), c.get('id','cell'), 'exec'),g) for c in n['cells'] if c.get('cell_type')=='code']"
+        env = dict(os.environ)
+        env["MPLBACKEND"] = "Agg"
+        for ordinal, (row, notebook, archive) in enumerate(
+            zip(catalog["projects"], PROJECT_NOTEBOOKS, PROJECT_ARCHIVES), 1
+        ):
+            project_id = f"O005-LEGA-V101-PRJ{ordinal:02d}"
+            require(row["project_id"] == project_id, f"Project {ordinal} identity differs")
+            require(row["title_id"] == f"{project_id}-TITLE", f"Project {ordinal} title identity differs")
+            require(notebook.is_file() and archive.is_file(), f"Project {ordinal} executable closure is missing")
+            require(row["notebook_path"] == notebook.relative_to(ROOT).as_posix(), f"Project {ordinal} notebook path differs")
+            require(row["notebook_bytes"] == notebook.stat().st_size and row["notebook_sha256"] == sha(notebook), f"Project {ordinal} notebook identity differs")
+            require(row["archive_path"] == archive.relative_to(ROOT).as_posix(), f"Project {ordinal} archive path differs")
+            require(row["archive_bytes"] == archive.stat().st_size and row["archive_sha256"] == sha(archive), f"Project {ordinal} archive identity differs")
+            payload = json.loads(notebook.read_text(encoding="utf-8"))
+            cells = payload.get("cells", [])
+            code = [cell for cell in cells if cell.get("cell_type") == "code"]
+            require(cells and code, f"Project {ordinal} notebook has no executable closure")
+            require(len({cell.get("id") for cell in cells}) == len(cells), f"Project {ordinal} notebook cell IDs differ")
+            require(all(not cell.get("outputs") and cell.get("execution_count") is None for cell in code), f"Project {ordinal} notebook is not output-clean")
+            lock = notebook.parent / "requirements.lock"
+            require(lock.is_file(), f"Project {ordinal} lock is missing")
+            lock_payloads.append(lock.read_bytes())
+            declared_files = row.get("files", [])
+            require(len(declared_files) == 6, f"Project {ordinal} loose-file closure differs")
+            declared_names: list[str] = []
+            for declared in declared_files:
+                loose = ROOT / declared["path"]
+                require(loose.parent == notebook.parent and loose.is_file(), f"Project {ordinal} loose path differs")
+                require(
+                    declared["bytes"] == loose.stat().st_size and declared["sha256"] == sha(loose),
+                    f"Project {ordinal} loose-file identity differs",
+                )
+                declared_names.append(loose.name)
+            require(len(set(declared_names)) == 6, f"Project {ordinal} loose-file names differ")
+            with zipfile.ZipFile(archive) as packet:
+                require(packet.testzip() is None, f"Project {ordinal} archive CRC failure")
+                names = packet.namelist()
+                require(names == sorted(names), f"Project {ordinal} archive order is not deterministic")
+                require(all(not name.startswith(("/", "\\")) and ".." not in Path(name).parts for name in names), f"Project {ordinal} archive path is unsafe")
+                required_names = {"README.md", "checks.json", "rubric.md", "provenance.json", "requirements.lock", notebook.name}
+                require(set(names) == required_names == set(declared_names), f"Project {ordinal} archive closure is incomplete")
+                for info in packet.infolist():
+                    require(info.date_time == (1980, 1, 1, 0, 0, 0), f"Project {ordinal} ZIP timestamp differs")
+                    require(((info.external_attr >> 16) & 0o777) == 0o644, f"Project {ordinal} ZIP mode differs")
+                    loose = notebook.parent / info.filename
+                    require(packet.read(info.filename) == loose.read_bytes(), f"Project {ordinal} archived bytes differ")
+            if execute:
+                subprocess.run([sys.executable, "-c", runner, str(notebook)], check=True, env=env, timeout=120)
+            total_cells += len(cells)
+            total_code += len(code)
+        require(len(set(lock_payloads)) == 1, "Project requirement locks differ")
+        lock_text = lock_payloads[0].decode("utf-8")
+        for pinned in ("numpy==2.4.4", "scipy==1.17.1", "matplotlib==3.10.9"):
+            require(pinned in lock_text, f"Project lock omits {pinned}")
+        return {
+            "applicable": True,
+            "projects": len(PROJECT_NOTEBOOKS),
+            "cells": total_cells,
+            "code_cells": total_code,
+            "executed": execute,
+        }
     if NOTEBOOK is None:
         return {"cells": 0, "code_cells": 0, "executed": False, "applicable": False}
     notebook = json.loads(NOTEBOOK.read_text(encoding="utf-8"))

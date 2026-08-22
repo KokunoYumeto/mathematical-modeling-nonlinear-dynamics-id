@@ -1,0 +1,111 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "problems": [],
+  "projects": {
+    "archives": [
+      {
+        "bytes": 5944,
+        "path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ01.zip",
+        "project_id": "O005-LEGA-V101-PRJ01",
+        "sha256": "88064e4ffb49d67e5589acff2262897a0b999f6141c57639f36d2993cacb529b"
+      },
+      {
+        "bytes": 5952,
+        "path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ02.zip",
+        "project_id": "O005-LEGA-V101-PRJ02",
+        "sha256": "51f0c592655b11c53460b9ca6ba223d07709b5b926e67d445005202eefe0c81a"
+      },
+      {
+        "bytes": 5840,
+        "path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ03.zip",
+        "project_id": "O005-LEGA-V101-PRJ03",
+        "sha256": "206f297421a8622f47fe5b440f21c4c75abc1340bd22ab94c7a185c8ddebbafb"
+      },
+      {
+        "bytes": 6034,
+        "path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ04.zip",
+        "project_id": "O005-LEGA-V101-PRJ04",
+        "sha256": "c562aa8f0016b3ebb40e04792a3325d9c63cb29fa3f054189cb97b0b2dbd537c"
+      },
+      {
+        "bytes": 5980,
+        "path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ05.zip",
+        "project_id": "O005-LEGA-V101-PRJ05",
+        "sha256": "24b98b9ccd7f798789883af0d02cea44f6c6123c090b96dbdac53a9a5752f1f7"
+      },
+      {
+        "bytes": 6058,
+        "path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ06.zip",
+        "project_id": "O005-LEGA-V101-PRJ06",
+        "sha256": "897e1ee4e9dbc2ce59ab187f084bba6d9b713e40cefea2dd72efc4a76afb7690"
+      },
+      {
+        "bytes": 6654,
+        "path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ07.zip",
+        "project_id": "O005-LEGA-V101-PRJ07",
+        "sha256": "fee26bc77e902d80f655f6534a007eebc095d60813ec7f6b86692b1bc1ec322c"
+      },
+      {
+        "bytes": 5900,
+        "path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ08.zip",
+        "project_id": "O005-LEGA-V101-PRJ08",
+        "sha256": "ea78602c0f7300688f688188308b2456b9adb5dfaadb973a83852f33763f312f"
+      },
+      {
+        "bytes": 6042,
+        "path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ09.zip",
+        "project_id": "O005-LEGA-V101-PRJ09",
+        "sha256": "9c897e2b1f53a09c109ad6760e6d484bdf4238949d9c38cc7895a712ef99435d"
+      },
+      {
+        "bytes": 6139,
+        "path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ10.zip",
+        "project_id": "O005-LEGA-V101-PRJ10",
+        "sha256": "fcc140fe2c7039af51a64848c21f447c55a5251ba9d67ebeb54f54b506a85946"
+      },
+      {
+        "bytes": 6087,
+        "path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ11.zip",
+        "project_id": "O005-LEGA-V101-PRJ11",
+        "sha256": "4f9d4d146b88708bc3ee65fa9b24b5cb4ee9a37498944bf4ed92973d69c73199"
+      },
+      {
+        "bytes": 6185,
+        "path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ12.zip",
+        "project_id": "O005-LEGA-V101-PRJ12",
+        "sha256": "37b2d8f5749bcfdb4758202774a0a341264b0bc27c77d8f51aff4ec73839b2cf"
+      }
+    ],
+    "catalog_path": "backend/projects/O005-LEGA-V101-CH14.projects.json",
+    "catalog_sha256": "9107863aee7cc9013b024e10d0091e227fdd3135b8913f5e103cc1157ce92e56",
+    "count": 12
+  },
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 247,
+    "path": "backend/segments/O005-LEGA-V101-CH14.segments.jsonl",
+    "sha256": "8074b66de970f9381056a7c5c71d9bff2806337813606b7a68bf244305d7ad7f"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "chapter": "Modeling Projects",
+    "content_sha256": "337ce752f17b70d3677216b114792685a84acded115dfdc06213bb469dd5761a",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/examples-of-project-topics/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-CH14/content.html",
+    "content_sha256": "9a08e5a663685a52c4551a560ee68ea4f4dad9675b3aea04702dfa8416d719b4",
+    "title": "Proyek Pemodelan"
+  },
+  "unit_id": "O005-LEGA-V101-CH14"
+}

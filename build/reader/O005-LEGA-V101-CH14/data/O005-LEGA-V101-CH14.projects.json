@@ -1,0 +1,607 @@
+{
+  "closure": {
+    "cited_paper_code_or_data_included": false,
+    "data_policy": "synthetic-or-model-generated-only",
+    "offline": true,
+    "requirements_lock_sha256": "a94e5199dcdca4a281c185b122ac7ca3fdc556e84d6ba80d72e618a0ab704fd1",
+    "result_reproduction_claim": false,
+    "zip_member_order": "lexicographic-filename",
+    "zip_mode": "100644",
+    "zip_timestamp": "1980-01-01T00:00:00"
+  },
+  "project_count": 12,
+  "project_order": [
+    "O005-LEGA-V101-PRJ01",
+    "O005-LEGA-V101-PRJ02",
+    "O005-LEGA-V101-PRJ03",
+    "O005-LEGA-V101-PRJ04",
+    "O005-LEGA-V101-PRJ05",
+    "O005-LEGA-V101-PRJ06",
+    "O005-LEGA-V101-PRJ07",
+    "O005-LEGA-V101-PRJ08",
+    "O005-LEGA-V101-PRJ09",
+    "O005-LEGA-V101-PRJ10",
+    "O005-LEGA-V101-PRJ11",
+    "O005-LEGA-V101-PRJ12"
+  ],
+  "projects": [
+    {
+      "archive_bytes": 5944,
+      "archive_path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ01.zip",
+      "archive_sha256": "88064e4ffb49d67e5589acff2262897a0b999f6141c57639f36d2993cacb529b",
+      "files": [
+        {
+          "bytes": 6999,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ01/O005-LEGA-V101-PRJ01-starter.ipynb",
+          "sha256": "c345f86faec1526c20b46d2b5e5a443b65a5c330c40953cc68fd197ba35a8e56"
+        },
+        {
+          "bytes": 1495,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ01/README.md",
+          "sha256": "a2d0e8566354e64069515e3f962e23d4720a839028ad8f695274bf22c384afc9"
+        },
+        {
+          "bytes": 1399,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ01/checks.json",
+          "sha256": "16a04df90bf73fda63aa8b5263b8debb01e378036c2b1a4c4ed8def37989b722"
+        },
+        {
+          "bytes": 1160,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ01/provenance.json",
+          "sha256": "ff0d8ead795a5502e87345dea0cc60c7d85c3e69e488883cb3b3d41f241ab1fe"
+        },
+        {
+          "bytes": 120,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ01/requirements.lock",
+          "sha256": "a94e5199dcdca4a281c185b122ac7ca3fdc556e84d6ba80d72e618a0ab704fd1"
+        },
+        {
+          "bytes": 1493,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ01/rubric.md",
+          "sha256": "fb67b0d8ab912ed7fa9314d4fdb73b811437f7f5462db0674dfa29c40c4f3cac"
+        }
+      ],
+      "locale": {
+        "id-ID": {
+          "title": "Kecerdasan Kolektif dan Agregasi Pendapat"
+        }
+      },
+      "mathematical_core_id": "collective-intelligence",
+      "notebook_bytes": 6999,
+      "notebook_path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ01/O005-LEGA-V101-PRJ01-starter.ipynb",
+      "notebook_sha256": "c345f86faec1526c20b46d2b5e5a443b65a5c330c40953cc68fd197ba35a8e56",
+      "project_id": "O005-LEGA-V101-PRJ01",
+      "title_id": "O005-LEGA-V101-PRJ01-TITLE"
+    },
+    {
+      "archive_bytes": 5952,
+      "archive_path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ02.zip",
+      "archive_sha256": "51f0c592655b11c53460b9ca6ba223d07709b5b926e67d445005202eefe0c81a",
+      "files": [
+        {
+          "bytes": 6658,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ02/O005-LEGA-V101-PRJ02-starter.ipynb",
+          "sha256": "dc23d9a88352b150647f3f57e5a8d1f6983ccebc39437dd0df5efa8834654a0f"
+        },
+        {
+          "bytes": 1481,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ02/README.md",
+          "sha256": "942b7960d1a6c30c559ed06ee536b9f0690d7e47808dc64e30a6fcbb638a4392"
+        },
+        {
+          "bytes": 1417,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ02/checks.json",
+          "sha256": "0df7c686a64b713d6c0f21ce2c2c624c1dcc77dae768f5cedac70faabca5950c"
+        },
+        {
+          "bytes": 1153,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ02/provenance.json",
+          "sha256": "366590a1cc1596c582ffee5ea11eb0e216e635f084fc9586cbcb6d997ae6db93"
+        },
+        {
+          "bytes": 120,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ02/requirements.lock",
+          "sha256": "a94e5199dcdca4a281c185b122ac7ca3fdc556e84d6ba80d72e618a0ab704fd1"
+        },
+        {
+          "bytes": 1490,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ02/rubric.md",
+          "sha256": "de04cc671d1938358c15053cd08e9e14460c82c3f82fb869919a6cd8f6561f86"
+        }
+      ],
+      "locale": {
+        "id-ID": {
+          "title": "Sinyal Dini Zoonosis dengan Model SEIR"
+        }
+      },
+      "mathematical_core_id": "early-zoonotic-seir",
+      "notebook_bytes": 6658,
+      "notebook_path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ02/O005-LEGA-V101-PRJ02-starter.ipynb",
+      "notebook_sha256": "dc23d9a88352b150647f3f57e5a8d1f6983ccebc39437dd0df5efa8834654a0f",
+      "project_id": "O005-LEGA-V101-PRJ02",
+      "title_id": "O005-LEGA-V101-PRJ02-TITLE"
+    },
+    {
+      "archive_bytes": 5840,
+      "archive_path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ03.zip",
+      "archive_sha256": "206f297421a8622f47fe5b440f21c4c75abc1340bd22ab94c7a185c8ddebbafb",
+      "files": [
+        {
+          "bytes": 6694,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ03/O005-LEGA-V101-PRJ03-starter.ipynb",
+          "sha256": "f61c238aaeb5c2b07862d459296b2d39ad38ebaec6d840a2bf4aacdb085c6a6c"
+        },
+        {
+          "bytes": 1466,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ03/README.md",
+          "sha256": "6c85b8ec98947c34c7d801a9a831512c127bc6af7bb57825c50568d20846c494"
+        },
+        {
+          "bytes": 1444,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ03/checks.json",
+          "sha256": "0b199821d6a7d60ebf6034fe2e9326a4d01b1f5a5725d4fa1430b09202450491"
+        },
+        {
+          "bytes": 1133,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ03/provenance.json",
+          "sha256": "0d5de75f66456684031b1ce15bd4ef24fef4ab76c0ca135e884b76784b2a75c5"
+        },
+        {
+          "bytes": 120,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ03/requirements.lock",
+          "sha256": "a94e5199dcdca4a281c185b122ac7ca3fdc556e84d6ba80d72e618a0ab704fd1"
+        },
+        {
+          "bytes": 1479,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ03/rubric.md",
+          "sha256": "009a69edfe99866583f4342f4e790d6446d111815d6d223588424d6b7df4cd44"
+        }
+      ],
+      "locale": {
+        "id-ID": {
+          "title": "Waktu Intervensi Nonfarmasi"
+        }
+      },
+      "mathematical_core_id": "npi-timing",
+      "notebook_bytes": 6694,
+      "notebook_path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ03/O005-LEGA-V101-PRJ03-starter.ipynb",
+      "notebook_sha256": "f61c238aaeb5c2b07862d459296b2d39ad38ebaec6d840a2bf4aacdb085c6a6c",
+      "project_id": "O005-LEGA-V101-PRJ03",
+      "title_id": "O005-LEGA-V101-PRJ03-TITLE"
+    },
+    {
+      "archive_bytes": 6034,
+      "archive_path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ04.zip",
+      "archive_sha256": "c562aa8f0016b3ebb40e04792a3325d9c63cb29fa3f054189cb97b0b2dbd537c",
+      "files": [
+        {
+          "bytes": 7072,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ04/O005-LEGA-V101-PRJ04-starter.ipynb",
+          "sha256": "3db9c4b22a9ae09ec522e7be19256b86f4b68cbd6752100c625f135182f755a7"
+        },
+        {
+          "bytes": 1493,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ04/README.md",
+          "sha256": "d1935c1db95dd0f7fad481830f8d68bc7a7511914e13152f082ff8dd7cd18d0d"
+        },
+        {
+          "bytes": 1397,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ04/checks.json",
+          "sha256": "9da69f2e6925a589a2d75e510c82e173ad37495537c0a682beab2ec37b9445a8"
+        },
+        {
+          "bytes": 1162,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ04/provenance.json",
+          "sha256": "726f5ca5807ea73389e105f9390db1c8e940d6435a312b9ba2b45f07de780532"
+        },
+        {
+          "bytes": 120,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ04/requirements.lock",
+          "sha256": "a94e5199dcdca4a281c185b122ac7ca3fdc556e84d6ba80d72e618a0ab704fd1"
+        },
+        {
+          "bytes": 1489,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ04/rubric.md",
+          "sha256": "0c4d3b6ce7ad4eb6e4b9d0a8d49901acb5a275fb69ff8e6a85d0f8d930a15c14"
+        }
+      ],
+      "locale": {
+        "id-ID": {
+          "title": "Vaksinasi dan Beban Layanan Kesehatan"
+        }
+      },
+      "mathematical_core_id": "vaccination-healthcare-burden",
+      "notebook_bytes": 7072,
+      "notebook_path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ04/O005-LEGA-V101-PRJ04-starter.ipynb",
+      "notebook_sha256": "3db9c4b22a9ae09ec522e7be19256b86f4b68cbd6752100c625f135182f755a7",
+      "project_id": "O005-LEGA-V101-PRJ04",
+      "title_id": "O005-LEGA-V101-PRJ04-TITLE"
+    },
+    {
+      "archive_bytes": 5980,
+      "archive_path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ05.zip",
+      "archive_sha256": "24b98b9ccd7f798789883af0d02cea44f6c6123c090b96dbdac53a9a5752f1f7",
+      "files": [
+        {
+          "bytes": 7093,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ05/O005-LEGA-V101-PRJ05-starter.ipynb",
+          "sha256": "a424ff3a77a56fd93392e3efb270c0c9d00cf4e220b47dc9ffd038889dbd1e11"
+        },
+        {
+          "bytes": 1440,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ05/README.md",
+          "sha256": "649583d6e5cf52e062238e5c07b487f0badda17a2e7eb43c485cc1dc7a752e3c"
+        },
+        {
+          "bytes": 1407,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ05/checks.json",
+          "sha256": "645a426dbb2773f6f3fb124dc08140bc75a73897f3c4a111a2b7fa92a81ee356"
+        },
+        {
+          "bytes": 1141,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ05/provenance.json",
+          "sha256": "613d58e31fc8eb3b104f7b6717cfb463177e50f7d447199a499188e1e53a5f7a"
+        },
+        {
+          "bytes": 120,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ05/requirements.lock",
+          "sha256": "a94e5199dcdca4a281c185b122ac7ca3fdc556e84d6ba80d72e618a0ab704fd1"
+        },
+        {
+          "bytes": 1478,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ05/rubric.md",
+          "sha256": "7cece2e1006324a55dc5cb37226d5976b37417a382678718f301752a9eb28e7b"
+        }
+      ],
+      "locale": {
+        "id-ID": {
+          "title": "Dinamika Glukosa–Insulin"
+        }
+      },
+      "mathematical_core_id": "glucose-insulin-ode",
+      "notebook_bytes": 7093,
+      "notebook_path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ05/O005-LEGA-V101-PRJ05-starter.ipynb",
+      "notebook_sha256": "a424ff3a77a56fd93392e3efb270c0c9d00cf4e220b47dc9ffd038889dbd1e11",
+      "project_id": "O005-LEGA-V101-PRJ05",
+      "title_id": "O005-LEGA-V101-PRJ05-TITLE"
+    },
+    {
+      "archive_bytes": 6058,
+      "archive_path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ06.zip",
+      "archive_sha256": "897e1ee4e9dbc2ce59ab187f084bba6d9b713e40cefea2dd72efc4a76afb7690",
+      "files": [
+        {
+          "bytes": 7760,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ06/O005-LEGA-V101-PRJ06-starter.ipynb",
+          "sha256": "c072094caa7f4392658456f5ccc408605f764bd99b0a98bfd5fb124ebab10d74"
+        },
+        {
+          "bytes": 1476,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ06/README.md",
+          "sha256": "2f452a0e5a31903983fe36c16576b9789c70c1da562d760d2a30d32a8701dd4f"
+        },
+        {
+          "bytes": 1410,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ06/checks.json",
+          "sha256": "9dec995866575ba1dab3ba78bbba7b4ec72ae87703e3c0e8c51403591027b0c0"
+        },
+        {
+          "bytes": 1153,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ06/provenance.json",
+          "sha256": "3bc0ddea4de664ae4fb35fa02d7386f9bad85e9a415e722f8b88b353a2c63638"
+        },
+        {
+          "bytes": 120,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ06/requirements.lock",
+          "sha256": "a94e5199dcdca4a281c185b122ac7ca3fdc556e84d6ba80d72e618a0ab704fd1"
+        },
+        {
+          "bytes": 1487,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ06/rubric.md",
+          "sha256": "afc4406d45aebde9015d7bea6e2b4919c879a4d270e299780b4f25416d176517"
+        }
+      ],
+      "locale": {
+        "id-ID": {
+          "title": "Penyelarasan Visual dalam Kerumunan"
+        }
+      },
+      "mathematical_core_id": "crowd-visual-alignment",
+      "notebook_bytes": 7760,
+      "notebook_path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ06/O005-LEGA-V101-PRJ06-starter.ipynb",
+      "notebook_sha256": "c072094caa7f4392658456f5ccc408605f764bd99b0a98bfd5fb124ebab10d74",
+      "project_id": "O005-LEGA-V101-PRJ06",
+      "title_id": "O005-LEGA-V101-PRJ06-TITLE"
+    },
+    {
+      "archive_bytes": 6654,
+      "archive_path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ07.zip",
+      "archive_sha256": "fee26bc77e902d80f655f6534a007eebc095d60813ec7f6b86692b1bc1ec322c",
+      "files": [
+        {
+          "bytes": 8958,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ07/O005-LEGA-V101-PRJ07-starter.ipynb",
+          "sha256": "9e5cb689029183118e8263d52f0d6bd40c620e04ba8df36dfae5f869e6105b5e"
+        },
+        {
+          "bytes": 1589,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ07/README.md",
+          "sha256": "1f56b3cf3cd7323e250cb4ab22c22eeb8a8161884d6f1ef10ed594cbd065e268"
+        },
+        {
+          "bytes": 1469,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ07/checks.json",
+          "sha256": "b22dbc1e14011037fda095f900bc506663f6e403c0741b662c141cd144d52c79"
+        },
+        {
+          "bytes": 1201,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ07/provenance.json",
+          "sha256": "d54d6c3337fce745367884c79cc699aa5e025b4e11c9cc74ac94a6840b425c5d"
+        },
+        {
+          "bytes": 120,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ07/requirements.lock",
+          "sha256": "a94e5199dcdca4a281c185b122ac7ca3fdc556e84d6ba80d72e618a0ab704fd1"
+        },
+        {
+          "bytes": 1516,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ07/rubric.md",
+          "sha256": "8730e885117c98fb3db4ace9dcae54faa6e14c9a6a8eb7ce3a9b03fe5b0ee4e0"
+        }
+      ],
+      "locale": {
+        "id-ID": {
+          "title": "Dengue: Model Sederhana, Vektor–Inang, dan Keteridentifikasian"
+        }
+      },
+      "mathematical_core_id": "dengue-simple-vector-host-identifiability",
+      "notebook_bytes": 8958,
+      "notebook_path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ07/O005-LEGA-V101-PRJ07-starter.ipynb",
+      "notebook_sha256": "9e5cb689029183118e8263d52f0d6bd40c620e04ba8df36dfae5f869e6105b5e",
+      "project_id": "O005-LEGA-V101-PRJ07",
+      "title_id": "O005-LEGA-V101-PRJ07-TITLE"
+    },
+    {
+      "archive_bytes": 5900,
+      "archive_path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ08.zip",
+      "archive_sha256": "ea78602c0f7300688f688188308b2456b9adb5dfaadb973a83852f33763f312f",
+      "files": [
+        {
+          "bytes": 7137,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ08/O005-LEGA-V101-PRJ08-starter.ipynb",
+          "sha256": "2cef6efa832fe5ffc62b257b098420e64f2fccbd66008e1b2b0e01438bd42b23"
+        },
+        {
+          "bytes": 1424,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ08/README.md",
+          "sha256": "02d53bf0fa1a84f68a4e24a634c9356c6c42d48030acc423a35d285bfa4b9e9b"
+        },
+        {
+          "bytes": 1404,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ08/checks.json",
+          "sha256": "00aeb06eff501316a7dbb861aaf9fd7cf08dd20d30ad25c8d8caed37272e4061"
+        },
+        {
+          "bytes": 1154,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ08/provenance.json",
+          "sha256": "51e16ae2d546152c101938b0a6887f8cd05c15bfbb091f0ebd554e74afe42b34"
+        },
+        {
+          "bytes": 120,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ08/requirements.lock",
+          "sha256": "a94e5199dcdca4a281c185b122ac7ca3fdc556e84d6ba80d72e618a0ab704fd1"
+        },
+        {
+          "bytes": 1485,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ08/rubric.md",
+          "sha256": "acb3dbd6076fb73a9867673a5c164a375548125392e8b8007df16b673c4ec19a"
+        }
+      ],
+      "locale": {
+        "id-ID": {
+          "title": "Predator–Mangsa dengan Imigrasi"
+        }
+      },
+      "mathematical_core_id": "predator-prey-immigration",
+      "notebook_bytes": 7137,
+      "notebook_path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ08/O005-LEGA-V101-PRJ08-starter.ipynb",
+      "notebook_sha256": "2cef6efa832fe5ffc62b257b098420e64f2fccbd66008e1b2b0e01438bd42b23",
+      "project_id": "O005-LEGA-V101-PRJ08",
+      "title_id": "O005-LEGA-V101-PRJ08-TITLE"
+    },
+    {
+      "archive_bytes": 6042,
+      "archive_path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ09.zip",
+      "archive_sha256": "9c897e2b1f53a09c109ad6760e6d484bdf4238949d9c38cc7895a712ef99435d",
+      "files": [
+        {
+          "bytes": 7112,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ09/O005-LEGA-V101-PRJ09-starter.ipynb",
+          "sha256": "64cb19788124a88b150d942e978265ac876bfbd5364b4e1dabc96f2a160d7219"
+        },
+        {
+          "bytes": 1491,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ09/README.md",
+          "sha256": "976948ac59d6dc10683ef3269ed117a8a54394cff1379c824b2d1e4ec108b64a"
+        },
+        {
+          "bytes": 1410,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ09/checks.json",
+          "sha256": "c7149c75bbffe299a046ea6b68bea9b3fdacb44accddb2352e6d87a1a5ff779b"
+        },
+        {
+          "bytes": 1172,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ09/provenance.json",
+          "sha256": "5f12795174ceda65bb21dede8186e18886d7b1b13c18c803f2fc402e7b3c4f95"
+        },
+        {
+          "bytes": 120,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ09/requirements.lock",
+          "sha256": "a94e5199dcdca4a281c185b122ac7ca3fdc556e84d6ba80d72e618a0ab704fd1"
+        },
+        {
+          "bytes": 1501,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ09/rubric.md",
+          "sha256": "0704d608a1403564c11c4950cd800c4a7369e8584d8c60f67050dc4934fea326"
+        }
+      ],
+      "locale": {
+        "id-ID": {
+          "title": "Ketakutan dan Musim pada Sistem Predator–Mangsa"
+        }
+      },
+      "mathematical_core_id": "fear-seasonal-predator-prey",
+      "notebook_bytes": 7112,
+      "notebook_path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ09/O005-LEGA-V101-PRJ09-starter.ipynb",
+      "notebook_sha256": "64cb19788124a88b150d942e978265ac876bfbd5364b4e1dabc96f2a160d7219",
+      "project_id": "O005-LEGA-V101-PRJ09",
+      "title_id": "O005-LEGA-V101-PRJ09-TITLE"
+    },
+    {
+      "archive_bytes": 6139,
+      "archive_path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ10.zip",
+      "archive_sha256": "fcc140fe2c7039af51a64848c21f447c55a5251ba9d67ebeb54f54b506a85946",
+      "files": [
+        {
+          "bytes": 7579,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ10/O005-LEGA-V101-PRJ10-starter.ipynb",
+          "sha256": "3ae4c57830991e423a6ade627e5967be397e184798bba5172cdd1dba0153f61d"
+        },
+        {
+          "bytes": 1438,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ10/README.md",
+          "sha256": "5208f08b1b9bdd8b7a6b17227e45a0df50bb480076610471362ca2cffba77a52"
+        },
+        {
+          "bytes": 1377,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ10/checks.json",
+          "sha256": "83051102857531e0039d737b3d2446f8f785e0134c2e51690b13a80279573468"
+        },
+        {
+          "bytes": 1163,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ10/provenance.json",
+          "sha256": "0fb3e2157099ec33b725bfa93ce7abe8bc6638b5c9e22357758a17afc26406cb"
+        },
+        {
+          "bytes": 120,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ10/requirements.lock",
+          "sha256": "a94e5199dcdca4a281c185b122ac7ca3fdc556e84d6ba80d72e618a0ab704fd1"
+        },
+        {
+          "bytes": 1490,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ10/rubric.md",
+          "sha256": "3487b5110131adb298756100ab649667c784a138834b42f9b5a7f1fb52faf748"
+        }
+      ],
+      "locale": {
+        "id-ID": {
+          "title": "Kopling Aroma dan Agen pada Lebah Madu"
+        }
+      },
+      "mathematical_core_id": "honeybee-scent-agent-coupling",
+      "notebook_bytes": 7579,
+      "notebook_path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ10/O005-LEGA-V101-PRJ10-starter.ipynb",
+      "notebook_sha256": "3ae4c57830991e423a6ade627e5967be397e184798bba5172cdd1dba0153f61d",
+      "project_id": "O005-LEGA-V101-PRJ10",
+      "title_id": "O005-LEGA-V101-PRJ10-TITLE"
+    },
+    {
+      "archive_bytes": 6087,
+      "archive_path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ11.zip",
+      "archive_sha256": "4f9d4d146b88708bc3ee65fa9b24b5cb4ee9a37498944bf4ed92973d69c73199",
+      "files": [
+        {
+          "bytes": 7796,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ11/O005-LEGA-V101-PRJ11-starter.ipynb",
+          "sha256": "f14592d9a50295449d19075ef6a041a5748a3a80ecf28cfb07a217838016d0a1"
+        },
+        {
+          "bytes": 1450,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ11/README.md",
+          "sha256": "d4f6b7d2a750eb0963155a1735825a9bf872cdfd776108a0bacf1c2c6432ca78"
+        },
+        {
+          "bytes": 1387,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ11/checks.json",
+          "sha256": "0fbd6bdfb7387e0ce29df361c1b4c959c215826eb33c57f318c33783150fed14"
+        },
+        {
+          "bytes": 1143,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ11/provenance.json",
+          "sha256": "e408284b984d833c369acff05a3ea2266357a3e633a2b77a5f4609ad636748e4"
+        },
+        {
+          "bytes": 120,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ11/requirements.lock",
+          "sha256": "a94e5199dcdca4a281c185b122ac7ca3fdc556e84d6ba80d72e618a0ab704fd1"
+        },
+        {
+          "bytes": 1476,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ11/rubric.md",
+          "sha256": "2e7ebd3b4facfe97d39bb5a2a6a5423a4a6d644b253ab3328391bdb4f726336f"
+        }
+      ],
+      "locale": {
+        "id-ID": {
+          "title": "Habitat dan Migrasi Paus"
+        }
+      },
+      "mathematical_core_id": "whale-habitat-migration",
+      "notebook_bytes": 7796,
+      "notebook_path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ11/O005-LEGA-V101-PRJ11-starter.ipynb",
+      "notebook_sha256": "f14592d9a50295449d19075ef6a041a5748a3a80ecf28cfb07a217838016d0a1",
+      "project_id": "O005-LEGA-V101-PRJ11",
+      "title_id": "O005-LEGA-V101-PRJ11-TITLE"
+    },
+    {
+      "archive_bytes": 6185,
+      "archive_path": "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ12.zip",
+      "archive_sha256": "37b2d8f5749bcfdb4758202774a0a341264b0bc27c77d8f51aff4ec73839b2cf",
+      "files": [
+        {
+          "bytes": 7848,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ12/O005-LEGA-V101-PRJ12-starter.ipynb",
+          "sha256": "b8eaaaea3d933350cd4bdd5174d8813b5fd8b1529f5789d22eca9bca902bd0ca"
+        },
+        {
+          "bytes": 1504,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ12/README.md",
+          "sha256": "a16d4d5a163f8633254bb7e35b534cfbfa9b813a77da49cff64ce00b57cabd78"
+        },
+        {
+          "bytes": 1415,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ12/checks.json",
+          "sha256": "549617dfb7b9b2b91074b8c42f0b3fd8e93840c81cce2cd6fb7b182bae1b97bb"
+        },
+        {
+          "bytes": 1157,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ12/provenance.json",
+          "sha256": "b1bac844db6b9e0a0c76272c4b213001213e0e9dbd347f163c0dbbf7b37d9daa"
+        },
+        {
+          "bytes": 120,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ12/requirements.lock",
+          "sha256": "a94e5199dcdca4a281c185b122ac7ca3fdc556e84d6ba80d72e618a0ab704fd1"
+        },
+        {
+          "bytes": 1491,
+          "path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ12/rubric.md",
+          "sha256": "e892ec16736a16e49ce3702f2ec6762587a6182a3e69eb5fd101f10d69b2d4ad"
+        }
+      ],
+      "locale": {
+        "id-ID": {
+          "title": "Kolam Lelehan Arktik dengan Model Ising"
+        }
+      },
+      "mathematical_core_id": "arctic-melt-pond-ising",
+      "notebook_bytes": 7848,
+      "notebook_path": "source/id-ID/O005-LEGA-V101-CH14/projects/O005-LEGA-V101-PRJ12/O005-LEGA-V101-PRJ12-starter.ipynb",
+      "notebook_sha256": "b8eaaaea3d933350cd4bdd5174d8813b5fd8b1529f5789d22eca9bca902bd0ca",
+      "project_id": "O005-LEGA-V101-PRJ12",
+      "title_id": "O005-LEGA-V101-PRJ12-TITLE"
+    }
+  ],
+  "schema_version": "o005.project-catalog.v1",
+  "unit_id": "O005-LEGA-V101-CH14"
+}

@@ -33,28 +33,42 @@
     "all_bytes_and_sha256_equal": true
   },
   "pending_publication": {
-    "commit": "d3363f6b3612b3beef9b235f9b6c134fa0593fc1",
-    "files": 37,
-    "bytes": 1240861,
-    "inventory_sha256": "8704b2c436b7998e6c2794baa054260c6520ac44ba9002d8a58c065fa5260b2f",
-    "attempted_at": "2026-08-22T16:47:58+02:00",
+    "commit": "a8f3357043a5483efcacca76cf886ad75269a58d",
+    "parent_pending_commit": "d3363f6b3612b3beef9b235f9b6c134fa0593fc1",
+    "files": 42,
+    "bytes": 2353854,
+    "inventory_sha256": "615af518c8dd7ed052165cf6545dd369af8385e1fc20964bd3f89238d1af8154",
+    "attempted_at": "2026-08-22T18:16:05+02:00",
     "status": "blocked_external",
-    "reason": "GitHub rejected the valid saved credential with HTTP 403 because the account is suspended; the second saved credential and keyring credential are invalid, SSH has no authorized key, and anonymous repository/raw reads return 404.",
-    "next_action": "Retry the complete local commit chain to origin/main when GitHub access is restored; do not create a duplicate repository or rewrite the commits."
+    "reason": "GitHub rejected the configured valid credential with HTTP 403 because the account is suspended; Floris reports that the suspension followed VPN use and that a support ticket is open. The complete local commit chain remains intact.",
+    "next_action": "Do not retry GitHub until Floris reports that account access is restored. Then push the unchanged complete local chain to origin/main; do not create a duplicate repository or rewrite the commits. Maintain verified substantial boundaries through the single Zenodo concept lineage while GitHub is unavailable."
+  },
+  "zenodo_publication": {
+    "status": "published_and_anonymously_verified",
+    "record_id": 22059940,
+    "concept_record_id": 22059939,
+    "doi": "10.5281/zenodo.22059940",
+    "concept_doi": "10.5281/zenodo.22059939",
+    "record_url": "https://zenodo.org/records/22059940",
+    "version": "v1.01-id-progress-CH14-20260822",
+    "files": 3,
+    "public_inventory_sha256": "4d8b2b825076cdb91ce28032a4d836554e2ddb53751bba485078dbd6add7445f",
+    "receipt": "00_control/ZENODO_PUBLICATION_RECEIPT_CH14_20260822.json",
+    "next_action": "Use Zenodo's new-version action on record 22059940 for the next substantial verified boundary; never create a duplicate concept lineage."
   },
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-CH13",
+    "unit_id": "O005-LEGA-V101-CH14",
     "source_record_type": "chapters",
-    "source_record_id": 445,
-    "source_slug": "appendix-ordinary-differential-equations",
-    "source_canonical_sha256": "4c1d86fe406cb145189312bc82c7c1572632335b2cab0eb29ee6fbfa1fa9a37c",
-    "source_content_sha256": "4ef96c2d76484ba271a9e94c524d755806064a97eb051944a958f8e664b6b005",
-    "target_content_sha256": "90e45dbcb0e3c95a5f9ca07a1533886c4bee99b71530fe18f7b245a128bcc46b",
-    "segment_sha256": "d824d63da00be5f49f1d45f0cc6465c80b7e09efb2c106cb546b580a0120acbb",
-    "mastery_sha256": "67965dd1d7e64e66de99b060f1c6be4ee526cd5bd66ffae6a8e2b0be94ff115a",
-    "reader_manifest_sha256": "995e0f24de41317590468911dbd729f04484b9441baf4954e58af5dd400f78c3",
-    "qa_tree_sha256": "78ead87f005d1b4d48fa2a731a1c9287b332e7c288ee14fa2fc84c967e46af4d"
+    "source_record_id": 555,
+    "source_slug": "examples-of-project-topics",
+    "source_canonical_sha256": "cb9e10a0a6df089194f2bb90bc335d641230cce00dc47c90b6d1802dd6769013",
+    "source_content_sha256": "337ce752f17b70d3677216b114792685a84acded115dfdc06213bb469dd5761a",
+    "target_content_sha256": "9a08e5a663685a52c4551a560ee68ea4f4dad9675b3aea04702dfa8416d719b4",
+    "segment_sha256": "8074b66de970f9381056a7c5c71d9bff2806337813606b7a68bf244305d7ad7f",
+    "project_catalog_sha256": "9107863aee7cc9013b024e10d0091e227fdd3135b8913f5e103cc1157ce92e56",
+    "reader_manifest_sha256": "1be6f14f57da0ed950fd484c0c7e07291d981e4f4b76b2c8f3be49520507b597",
+    "qa_tree_sha256": "da7aa599e38559f33553872f7e1663de6d555ebc478b6b598dc7aa1d4bf6c347"
   },
-  "current_unit": "O005-LEGA-V101-CH14",
-  "next_action": "Materialize and verify Chapter 14 record 555, Examples of Project Topics, from the exact admitted coordinator snapshot as O005-LEGA-V101-CH14; freeze canonical/raw/rendered and component closure plus rights, census every project/formula/link/asset/description surface, then begin complete natural id-ID translation as Contoh Topik Proyek and add only the declared bounded open project packets."
+  "current_unit": "O005-LEGA-V101-FM01",
+  "next_action": "Freeze front-matter record 22, Preface, and translate it naturally as Prakata. Maintain future substantial boundaries as new versions of Zenodo concept DOI 10.5281/zenodo.22059939. Do not retry GitHub until Floris reports account restoration."
 }

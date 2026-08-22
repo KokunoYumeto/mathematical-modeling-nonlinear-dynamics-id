@@ -349,12 +349,57 @@ UNIT_SPECS = {
         "plain_paragraphs": False,
         "change_note": "penerjemahan, koreksi dan klarifikasi matematika terdokumentasi, pelokalan aset, pengindeksan modular, serta dukungan ketuntasan",
     },
+    "O005-LEGA-V101-CH14": {
+        "unit_type": "chapter",
+        "unit_number": 14,
+        "chapter_number": 14,
+        "source_title": "Modeling Projects",
+        "target_title": "Proyek Pemodelan",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/examples-of-project-topics/",
+        "target_assets": [],
+        "caption_count": 0,
+        "footnote_count": 0,
+        "notebook": None,
+        "problem_count": 0,
+        "plain_paragraphs": False,
+        "project_catalog": "backend/projects/O005-LEGA-V101-CH14.projects.json",
+        "project_archives": [
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ01.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ02.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ03.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ04.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ05.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ06.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ07.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ08.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ09.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ10.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ11.zip",
+            "source/id-ID/O005-LEGA-V101-CH14/project_archives/O005-LEGA-V101-PRJ12.zip",
+        ],
+        "project_titles": [
+            "Kecerdasan Kolektif",
+            "Model Penyebaran Awal COVID-19",
+            "Intervensi Nonfarmasi untuk Mitigasi Penyebaran Penyakit",
+            "Kampanye Vaksinasi, Intervensi Nonfarmasi, dan Beban COVID-19",
+            "Dinamika Glukosa–Insulin",
+            "Perilaku Kolektif dalam Kerumunan",
+            "Kompromi antara Kompleksitas Model dan Identifikasi Parameter",
+            "Model Pemangsa–Mangsa",
+            "Interaksi Pemangsa–Mangsa ketika Mangsa Takut kepada Pemangsa",
+            "Komunikasi dalam Kawanan Lebah Madu",
+            "Migrasi Paus",
+            "Kolam Lelehan di Arktik",
+        ],
+        "change_note": "penerjemahan, koreksi bahasa dan rujukan terdokumentasi, pengindeksan modular, serta dua belas paket proyek Python terbuka yang diprovenienskan secara terpisah",
+    },
 }
 
 
 def configure(unit_id: str) -> None:
     global UNIT_ID, UNIT_SPEC, SOURCE_URL, SOURCE_FRAGMENT, TARGET_FRAGMENT
     global TARGET_ASSETS, DATA_FILES, NOTEBOOK, NOTEBOOK_LOCK, MASTERY, SEGMENTS, UNIT_RECORD
+    global PROJECT_CATALOG, PROJECT_ARCHIVES
     global DEFAULT_OUTPUT, PROBLEM_COUNT
     UNIT_ID = unit_id
     UNIT_SPEC = UNIT_SPECS[unit_id]
@@ -371,6 +416,9 @@ def configure(unit_id: str) -> None:
     ]
     NOTEBOOK = ROOT / "source" / "id-ID" / UNIT_ID / notebook if notebook else None
     NOTEBOOK_LOCK = NOTEBOOK.parent / "requirements.lock" if NOTEBOOK else None
+    project_catalog = UNIT_SPEC.get("project_catalog")
+    PROJECT_CATALOG = ROOT / project_catalog if project_catalog else None
+    PROJECT_ARCHIVES = [ROOT / path for path in UNIT_SPEC.get("project_archives", [])]
     MASTERY = ROOT / "backend" / "mastery" / f"{UNIT_ID}.mastery.json" if PROBLEM_COUNT else None
     SEGMENTS = ROOT / "backend" / "segments" / f"{UNIT_ID}.segments.jsonl"
     UNIT_RECORD = ROOT / "backend" / "units" / f"{UNIT_ID}.json"
@@ -852,6 +900,26 @@ def write_backend(source: str, target: str, mastery: dict | None, pandoc: str) -
             }
             for path in DATA_FILES
         ]
+    if PROJECT_CATALOG:
+        project_catalog = json.loads(PROJECT_CATALOG.read_text(encoding="utf-8"))
+        project_ids = [f"O005-LEGA-V101-PRJ{i:02d}" for i in range(1, 13)]
+        catalog_ids = [row["project_id"] for row in project_catalog["projects"]]
+        if catalog_ids != project_ids or len(PROJECT_ARCHIVES) != len(project_ids):
+            raise RuntimeError("Project catalog/archive identity differs")
+        unit["projects"] = {
+            "count": len(project_ids),
+            "catalog_path": PROJECT_CATALOG.relative_to(ROOT).as_posix(),
+            "catalog_sha256": digest(PROJECT_CATALOG),
+            "archives": [
+                {
+                    "project_id": project_id,
+                    "path": archive.relative_to(ROOT).as_posix(),
+                    "bytes": archive.stat().st_size,
+                    "sha256": digest(archive),
+                }
+                for project_id, archive in zip(project_ids, PROJECT_ARCHIVES)
+            ],
+        }
     UNIT_RECORD.parent.mkdir(parents=True, exist_ok=True)
     UNIT_RECORD.write_text(
         json.dumps(unit, ensure_ascii=False, indent=2, sort_keys=True) + "\n",
@@ -865,6 +933,9 @@ def build_reader(output: Path) -> dict:
     required = [SOURCE_FRAGMENT, TARGET_FRAGMENT, CSS]
     required.extend(TARGET_ASSETS)
     required.extend(DATA_FILES)
+    required.extend(PROJECT_ARCHIVES)
+    if PROJECT_CATALOG:
+        required.append(PROJECT_CATALOG)
     required.extend(path for path in (NOTEBOOK, NOTEBOOK_LOCK, MASTERY) if path is not None)
     missing = [str(path) for path in required if not path.is_file()]
     if missing:
@@ -893,6 +964,9 @@ def build_reader(output: Path) -> dict:
         nav_lines.append(f'    <a href="downloads/{NOTEBOOK.name}">Notebook Python</a>')
     if NOTEBOOK_LOCK:
         nav_lines.append(f'    <a href="downloads/{NOTEBOOK_LOCK.name}">Unduh requirements.lock</a>')
+    if PROJECT_CATALOG:
+        nav_lines.append('    <a href="#paket-proyek">Paket proyek terbuka</a>')
+        nav_lines.append(f'    <a href="data/{PROJECT_CATALOG.name}">Katalog proyek</a>')
     for data_file in DATA_FILES:
         if data_file.suffix == ".txt":
             label = "Data Sensus resmi"
@@ -903,10 +977,30 @@ def build_reader(output: Path) -> dict:
         nav_lines.append(f'    <a href="data/{data_file.name}">{label}</a>')
     navigation = "\n".join(nav_lines)
     mastery_html = mastery_section(mastery) if mastery else ""
+    project_html = ""
+    if PROJECT_CATALOG:
+        project_rows = []
+        for ordinal, (title, archive) in enumerate(
+            zip(UNIT_SPEC["project_titles"], PROJECT_ARCHIVES), 1
+        ):
+            project_id = f"O005-LEGA-V101-PRJ{ordinal:02d}"
+            project_rows.append(
+                f'      <li><a href="downloads/projects/{archive.name}" download>'
+                f'<code>{project_id}</code> — {html.escape(title)}</a></li>'
+            )
+        project_html = f'''<section id="paket-proyek" class="project-packets" aria-labelledby="paket-proyek-title">
+      <h2 id="paket-proyek-title">Paket proyek Python terbuka</h2>
+      <p>Kedua belas paket berikut adalah pendamping pedagogis yang ditulis secara independen untuk edisi ini. Setiap ZIP memuat notebook tanpa keluaran tersimpan, pemeriksaan deterministik, rubrik, proveniens, lingkungan terpaku, dan data sintetis atau terbuka. Paket-paket ini bukan salinan kode atau data artikel yang dirujuk dan tidak mengklaim mereproduksi hasil artikel.</p>
+      <ol>
+{chr(10).join(project_rows)}
+      </ol>
+    </section>'''
     if NOTEBOOK:
         footer_detail = f" · notebook SHA-256 <code>{digest(NOTEBOOK)}</code>"
     else:
         footer_detail = ""
+    if PROJECT_ARCHIVES:
+        footer_detail += f" · {len(PROJECT_ARCHIVES)} paket proyek terbuka"
     page = f'''<!doctype html>
 <html lang="id-ID">
 <head>
@@ -936,6 +1030,7 @@ def build_reader(output: Path) -> dict:
     <article class="{article_class}" aria-label="{unit_label} {unit_number}">
 {str(body)}
     </article>
+    {project_html}
     {mastery_html}
   </main>
   <footer>
@@ -955,8 +1050,14 @@ def build_reader(output: Path) -> dict:
         shutil.copyfile(target_asset, output / "assets" / target_asset.name)
     for data_file in DATA_FILES:
         shutil.copyfile(data_file, output / "data" / data_file.name)
+    if PROJECT_CATALOG:
+        shutil.copyfile(PROJECT_CATALOG, output / "data" / PROJECT_CATALOG.name)
+    if PROJECT_ARCHIVES:
+        (output / "downloads" / "projects").mkdir(parents=True)
+        for archive in PROJECT_ARCHIVES:
+            shutil.copyfile(archive, output / "downloads" / "projects" / archive.name)
     if NOTEBOOK and NOTEBOOK_LOCK:
-        (output / "downloads").mkdir()
+        (output / "downloads").mkdir(exist_ok=True)
         shutil.copyfile(NOTEBOOK, output / "downloads" / NOTEBOOK.name)
         shutil.copyfile(NOTEBOOK_LOCK, output / "downloads" / NOTEBOOK_LOCK.name)
     if MASTERY:

@@ -7,24 +7,27 @@ Updated: 2026-08-22 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–13 and the visible Part 2–5 introductions are
-translated, built, independently reviewed, and verified. Production advances
-to Chapter 14, Pressbooks record 555, *Examples of Project Topics*, as
-`O005-LEGA-V101-CH14`; its exact authority and component closure must now be
-materialized from the admitted coordinator snapshot before source-order natural
-id-ID translation begins as *Contoh Topik Proyek*.
+into this lane. Chapters 1–14 and the visible Part 2–5 introductions are
+translated, built, independently reviewed, and verified. Chapter 14,
+Pressbooks record 555, is admitted as `O005-LEGA-V101-CH14`, *Proyek
+Pemodelan*, with all twelve independent open project packets. The remaining
+source-derived units are the Preface, Part 1 introduction, Accessibility
+Statement, and Version History; four declared original bridge modules then
+complete the edition.
 
-Chapter 12 production and the Chapter 13 freeze are preserved in local commit
-`d3363f6b3612b3beef9b235f9b6c134fa0593fc1` (37 files / 1,240,861 bytes;
+The complete Chapter 13 boundary is preserved in local commit
+`a8f3357043a5483efcacca76cf886ad75269a58d` (42 files / 2,353,854 bytes;
 ordered inventory SHA-256
-`8704b2c436b7998e6c2794baa054260c6520ac44ba9002d8a58c065fa5260b2f`).
-Immediate authenticated push was attempted with both saved credentials, the
-keyring, and SSH. GitHub rejected the valid credential with HTTP 403 because
-the account is suspended; the other routes are invalid or unauthorized, and
-anonymous repository/raw URLs currently return 404. The exact commit remains
+`615af518c8dd7ed052165cf6545dd369af8385e1fc20964bd3f89238d1af8154`).
+Its parent is the already push-ready Chapter 12/Chapter 13-authority commit
+`d3363f6b3612b3beef9b235f9b6c134fa0593fc1`. Immediate push of the complete
+chain was retried at `2026-08-22T18:16:05+02:00`; GitHub again returned its
+explicit HTTP 403 account-suspended response. The exact chain remains
 push-ready and must be retried without rewriting or creating a duplicate
-repository when GitHub restores access. This external publication failure does
-not stop Chapter 13 translation.
+repository only after Floris reports that GitHub has restored access. Floris
+reports that the suspension followed VPN use and that a support ticket is
+open. Zenodo is therefore the active versioned preservation surface while the
+GitHub lineage remains temporarily unavailable.
 
 ## Frozen Chapter 10 authority
 
@@ -750,11 +753,96 @@ not stop Chapter 13 translation.
   figures, 778 labeled MathML nodes, 68 unique IDs, 53 intact fragment links,
   33 working disclosures, and no warning or error.
 
+## Frozen Chapter 14 authority
+
+- Pressbooks chapter 555, slug `examples-of-project-topics`, authoritative
+  display title *Modeling Projects*, modified `2026-03-24T21:46:02Z`; the
+  empty record-level license override inherits CC BY-NC-SA 4.0.
+- Canonical record: 38,887 bytes, SHA-256
+  `cb9e10a0a6df089194f2bb90bc335d641230cce00dc47c90b6d1802dd6769013`;
+  raw content: 18,737 bytes, SHA-256
+  `337ce752f17b70d3677216b114792685a84acded115dfdc06213bb469dd5761a`;
+  rendered content: 18,394 bytes, SHA-256
+  `3487086799c2562006c975c587dcd61f573f80e0b8f71caa6129dc242c57d0f9`;
+  authority manifest: 663 bytes, SHA-256
+  `e680688dce94d1ac0e19b43aae3cb9a16bc37c061a352e74dcc6ccc6a7b4ef5e`.
+- Frozen EPUB chapter witness: 19,070 bytes, SHA-256
+  `e2eb8b494af8fc00d62dc9cbfc73de8f76cf475b9929ff4c570aa838edc41784`;
+  its chapter heading and TOC also say *Modeling Projects*. The Indonesian
+  display title is therefore *Proyek Pemodelan*; the legacy slug is retained
+  only as source identity.
+- Exact raw topology: 240 physical lines; one introductory text node; twelve
+  project blocks, twelve shaded textboxes, 36 headings, 24 lists, 95 list
+  items, 16 unique external links, 52 strong elements, and 17 emphasized
+  elements. There are zero exercises, formulas, footnotes, internal anchors,
+  figures, descriptions, or semantic media assets.
+- Corrections `O005-CORR-0154`–`0160` bind six high-confidence grammar/cross-
+  reference repairs and one heading-alignment normalization. The 16 linked
+  papers/resources remain external citations and are not redistributed or
+  relicensed by this edition.
+
+## Admitted Chapter 14 boundary
+
+- Complete natural id-ID target *Proyek Pemodelan*: 19,110 bytes, SHA-256
+  `9a08e5a663685a52c4551a560ee68ea4f4dad9675b3aea04702dfa8416d719b4`.
+  Exact replay preserves 252 / 252 ordered elements, 16 / 16 links, all twelve
+  project boxes and 95 list items; the unit has no source formula, exercise,
+  image, footnote, or internal anchor.
+- Backend: 247 paired segments / 135,384 bytes, SHA-256
+  `8074b66de970f9381056a7c5c71d9bff2806337813606b7a68bf244305d7ad7f`;
+  project catalog: 26,966 bytes, SHA-256
+  `9107863aee7cc9013b024e10d0091e227fdd3135b8913f5e103cc1157ce92e56`;
+  unit record: 4,492 bytes, SHA-256
+  `e11be3dcf3907d84e6fffc9c9a78c7195ca32b517920e3c62a3c2f99d7d5028a`.
+- The deterministic generator is 47,402 bytes, SHA-256
+  `62eeb904b4c06800f64758454e7a8db78ab89ae4dfb2ff2220e877ca5194f2c5`.
+  It produces twelve packet directories / 72 files / 156,596 bytes and twelve
+  safe deterministic ZIPs / 72,815 bytes. Repeated generation is byte-identical.
+- All twelve output-clean notebooks, 120 cells / 48 code cells, execute with
+  the pinned CPython 3.13.9, NumPy 2.4.4, SciPy 1.17.1, and Matplotlib 3.10.9
+  stack. Independent audit repaired Project 6 to use dynamically recomputed
+  local periodic neighborhoods, verified it over the fixed plus 20 alternate
+  seeds, normalized remaining reader-facing terminology, and closed with no
+  residual finding.
+- Reader: seventeen payload files / 268,890 bytes excluding its 1,878-byte
+  manifest; manifest SHA-256
+  `1be6f14f57da0ed950fd484c0c7e07291d981e4f4b76b2c8f3be49520507b597`.
+  Repeated clean builds are byte-identical across eighteen files, canonical QA
+  tree SHA-256
+  `da7aa599e38559f33553872f7e1663de6d555ebc478b6b598dc7aa1d4bf6c347`.
+- All seventeen earlier units passed deterministic regression; all ten
+  applicable earlier notebooks executed. Final browser QA found centered
+  desktop/mobile articles and packet panels, zero page overflow, seventeen
+  unique IDs, complete fragments, twelve visible downloads, correct sticky-nav
+  clearance, and no warning or error.
+
+## Zenodo preservation — Chapter 14 progress boundary
+
+- Published record: <https://zenodo.org/records/22059940>; version DOI
+  `10.5281/zenodo.22059940`; concept DOI `10.5281/zenodo.22059939`; version
+  `v1.01-id-progress-CH14-20260822`.
+- Metadata is explicitly in progress, names Joceline Lega as creator, uses
+  `ind`, open access, and `cc-by-nc-sa-4.0`, preserves the official source as
+  `isDerivedFrom`, and states the change/non-endorsement boundary. TTP occurs
+  exactly once as an `Other` contributor and nowhere in the title or
+  description.
+- Public repository snapshot: 34,564,770 bytes, SHA-256
+  `31e8cc53b0c03779d8c723b426f049dec1ebde8f3963ad1268a2042c9c61c2ca`;
+  readers: 5,459,760 bytes, SHA-256
+  `4073140a876520b716c7681368ac5ddb140e616451fdae40792d0038fcaba7a1`;
+  release manifest: 1,306 bytes, SHA-256
+  `368cf03b5ded8cbd3efd0a4ec472764bac17f50232d52980b6c1d68aaf3d96b7`.
+- All three artifacts were downloaded anonymously from the public record and
+  matched local filename, byte count, and SHA-256. Ordered public inventory
+  SHA-256:
+  `4d8b2b825076cdb91ce28032a4d836554e2ddb53751bba485078dbd6add7445f`.
+  The credential-free receipt is
+  `00_control/ZENODO_PUBLICATION_RECEIPT_CH14_20260822.json`.
+
 ## Next action
 
-Materialize and verify Chapter 14 record 555, *Examples of Project Topics*, as
-`O005-LEGA-V101-CH14` from the exact admitted coordinator snapshot. Freeze its
-canonical/raw/rendered bytes, hierarchy, component assets and rights, census its
-project/formula/link/description surfaces, then begin complete source-order
-translation as *Contoh Topik Proyek* and add only the bounded open project
-packets required by the durable goal.
+Freeze and translate the first remaining source-order unit: front-matter
+record 22, *Preface*, as `O005-LEGA-V101-FM01`, *Prakata*. Future substantial
+verified boundaries must use Zenodo's new-version action on concept DOI
+`10.5281/zenodo.22059939`. Do not retry GitHub until Floris reports that account
+access is restored.

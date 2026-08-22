@@ -856,6 +856,15 @@ SPECS = {
             ),
         ],
     },
+    "O005-LEGA-V101-CH14": {
+        "source_lines": 240,
+        "problem_count": 0,
+        "fragments": [
+            "01-intro-projects-01-06.html",
+            "02-projects-07-12.html",
+        ],
+        "replacements": [],
+    },
 }
 
 

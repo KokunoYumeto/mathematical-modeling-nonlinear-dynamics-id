@@ -1,0 +1,39 @@
+{
+  "data": {
+    "external_files": [],
+    "kind": "synthetic-or-model-generated-only",
+    "network_access": false
+  },
+  "implementation": {
+    "cited_paper_code_included": false,
+    "cited_paper_data_included": false,
+    "mathematical_core_id": "npi-timing",
+    "origin": "independently-authored",
+    "purpose": "offline-pedagogical-starting-point",
+    "result_reproduction_claim": false
+  },
+  "locale": {
+    "id-ID": {
+      "title": "Waktu Intervensi Nonfarmasi"
+    }
+  },
+  "project_id": "O005-LEGA-V101-PRJ03",
+  "rights": {
+    "attribution_context": "Indonesian derivative reader project packet",
+    "license": "CC BY-NC-SA 4.0",
+    "non_endorsement": true
+  },
+  "runtime": {
+    "lock_file": "requirements.lock",
+    "python": "CPython 3.13.9"
+  },
+  "schema_version": "o005.project-provenance.v1",
+  "source_context": {
+    "creator": "Joceline Lega",
+    "edition": "v1.01 (March 2026)",
+    "unit_relation": "independent-pedagogical-extension-of-project-topic-prompt",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "title_id": "O005-LEGA-V101-PRJ03-TITLE",
+  "unit_id": "O005-LEGA-V101-CH14"
+}

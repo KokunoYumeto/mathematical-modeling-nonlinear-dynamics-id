@@ -1,0 +1,22 @@
+{
+  "assets": [],
+  "content_raw": {
+    "bytes": 18737,
+    "path": "content.raw.en.html",
+    "sha256": "337ce752f17b70d3677216b114792685a84acded115dfdc06213bb469dd5761a"
+  },
+  "content_rendered": {
+    "bytes": 18394,
+    "path": "content.rendered.en.html",
+    "sha256": "3487086799c2562006c975c587dcd61f573f80e0b8f71caa6129dc242c57d0f9"
+  },
+  "record": {
+    "bytes": 38887,
+    "path": "source-record.canonical.json",
+    "sha256": "cb9e10a0a6df089194f2bb90bc335d641230cce00dc47c90b6d1802dd6769013"
+  },
+  "schema": "o005-unit-authority-v1",
+  "source_modified_gmt": "2026-03-24T21:46:02Z",
+  "source_record_id": 555,
+  "unit_id": "O005-LEGA-V101-CH14"
+}

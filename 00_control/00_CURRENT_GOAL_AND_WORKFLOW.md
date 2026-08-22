@@ -22,20 +22,20 @@ notice, and non-endorsement. Maintain component-level rights. Redraw Figure
 statement; never represent the Pressbooks theme as part of the independently
 reproducible source closure.
 
-Chapter boundaries `O005-LEGA-V101-CH01` through `CH13` and the visible Part
+Chapter boundaries `O005-LEGA-V101-CH01` through `CH14` and the visible Part
 2–5 introductions are translated, built, independently rereviewed where
 applicable, and deterministically verified. Their complete topology,
 identifiers, protected mathematics, links, figures, all 113 stable problem IDs
-and mastery records, ten open Python notebooks, and 3,153 paired segments are
-bound in the current state, cursor, and QA log. The immediate source-order
-boundary is Chapter 14, Pressbooks record 555, *Examples of Project Topics*, as
-`O005-LEGA-V101-CH14`: freeze its exact canonical/raw/rendered authority and
-component closure from the admitted coordinator snapshot, then translate the
-complete unit naturally as *Contoh Topik Proyek* while preserving its project
-topology, mathematics, links, assets, descriptions, and rights. Build the
-declared twelve self-contained open/synthetic-data project packets only where
-they add the missing executable and self-study closure, with distinct
-provenance and no proprietary code.
+and mastery records, ten open chapter notebooks, twelve open project notebooks
+and packets, and 3,400 paired segments are bound in the current state, cursor,
+and QA log. The Chapter 14 progress release is published and anonymously
+byte-verified as Zenodo DOI `10.5281/zenodo.22059940`, within concept DOI
+`10.5281/zenodo.22059939`; future substantial boundaries must use the same
+version lineage. The immediate source-production unit is front-matter record
+22, *Preface*, as `O005-LEGA-V101-FM01`, *Prakata*, followed by Part 1 record 23
+and back-matter records 767 and 771 before the four original bridge modules.
+GitHub publication remains paused until Floris reports that the suspended
+account has been restored; preserve the unchanged local commit chain.
 
 Continue in exact frozen TOC order through all front/back matter and
 fourteen chapters: 54,932 source words, 113 exercises, twelve projects, eleven
@@ -82,5 +82,6 @@ must remain invariant across later languages.
 - No upstream contact during production. After the complete corpus, at most
   one separately authorized, concise, deduplicated, high-confidence issue may
   be sent, signed exactly `Codex, on instructions of the user.`
-- Public DOI/reader publication occurs only at a substantial verified corpus
-  boundary. Ordinary verified production is committed and pushed as it grows.
+- Public DOI/reader publication occurs at each substantial verified corpus
+  boundary as a new version of the single Zenodo concept lineage. Ordinary
+  verified production is committed locally and pushed when GitHub is available.

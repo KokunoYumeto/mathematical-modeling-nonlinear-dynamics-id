@@ -14,3 +14,7 @@ authority/extracted/sayama-*
 **/__pycache__/
 *.pyc
 texput.log
+
+# Deterministic Zenodo upload bundles are preserved locally and publicly by
+# DOI; source, manifests, hashes, and the sanitized receipt remain tracked.
+release/zenodo/

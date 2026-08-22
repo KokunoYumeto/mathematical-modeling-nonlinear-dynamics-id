@@ -930,3 +930,134 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   horizontal-scroll hosts; and the support target cleared the sticky navigation
   by 35.75 px. The final warning/error log was empty. External-link reachability
   was not tested; no audio or live widget exists.
+
+## Publication attempt — admitted Chapter 13 — 2026-08-22
+
+- Narrow production commit:
+  `a8f3357043a5483efcacca76cf886ad75269a58d`; parent
+  `d3363f6b3612b3beef9b235f9b6c134fa0593fc1`; 42 files / 2,353,854 bytes;
+  ordered `path<TAB>bytes<TAB>sha256` inventory SHA-256
+  `615af518c8dd7ed052165cf6545dd369af8385e1fc20964bd3f89238d1af8154`.
+- Immediate push of the complete local chain was retried at
+  `2026-08-22T18:16:05+02:00`. GitHub returned HTTP 403 with the explicit
+  account-suspended response. No remote-head or public-byte equality claim is
+  made. The commit chain remains unchanged and push-ready for `origin/main`;
+  Chapter 14 production continues while this external blocker persists.
+
+## Frozen authority — O005-LEGA-V101-CH14 — 2026-08-22
+
+- `scripts/prepare_unit.py O005-LEGA-V101-CH14`, exit 0. Canonical record:
+  38,887 bytes / SHA-256
+  `cb9e10a0a6df089194f2bb90bc335d641230cce00dc47c90b6d1802dd6769013`;
+  raw content: 18,737 bytes / SHA-256
+  `337ce752f17b70d3677216b114792685a84acded115dfdc06213bb469dd5761a`;
+  rendered content: 18,394 bytes / SHA-256
+  `3487086799c2562006c975c587dcd61f573f80e0b8f71caa6129dc242c57d0f9`;
+  manifest: 663 bytes / SHA-256
+  `e680688dce94d1ac0e19b43aae3cb9a16bc37c061a352e74dcc6ccc6a7b4ef5e`.
+- Independent authority audit matched the raw/rendered title, frozen TOC, EPUB
+  h1, and EPUB TOC as *Modeling Projects* and matched rendered text against the
+  19,070-byte EPUB chapter witness, SHA-256
+  `e2eb8b494af8fc00d62dc9cbfc73de8f76cf475b9929ff4c570aa838edc41784`.
+- Exact source census: 240 lines; twelve project-atomic blocks; twelve shaded
+  textboxes; 36 headings; 24 lists; 95 list items; 16 unique external links;
+  zero formulas, exercises, footnotes, figures, descriptions, internal anchors,
+  or semantic assets. All linked articles/resources remain external and no
+  Pressbooks theme asset is required by the independent reader.
+- Complete natural id-ID target *Proyek Pemodelan*: 19,110 bytes, SHA-256
+  `9a08e5a663685a52c4551a560ee68ea4f4dad9675b3aea04702dfa8416d719b4`.
+  Exact replay passes for 252 / 252 ordered elements, 16 / 16 links, twelve /
+  twelve project headings and boxes, all 95 list items, and zero formulas or
+  exercises. Backend baseline: 247 paired segments / 135,384 bytes, SHA-256
+  `8074b66de970f9381056a7c5c71d9bff2806337813606b7a68bf244305d7ad7f`.
+- Independent full translation review aligned all 240 source-order lines, the
+  entire 252-element topology, 16 href/rel pairs, all bibliographic records,
+  and all twelve stable project IDs. Its two finding groups were repaired and
+  independently closed: Projects 9–12 now share the heading-centering class,
+  and the repeated advanced-analysis/stochastic-process terms are consistent.
+  Corrections `O005-CORR-0154`–`0160`, including Project 8's Chapter 6
+  cross-reference, are implemented with no residual semantic finding.
+
+## Admitted build — O005-LEGA-V101-CH14 — 2026-08-22
+
+- Final gate: `scripts/qa_unit.py --unit O005-LEGA-V101-CH14
+  --execute-notebook --deterministic-build`, exit 0. Exact replay covers
+  252 / 252 ordered elements, 16 / 16 links, twelve / twelve project boxes,
+  95 / 95 list items, and zero formulas, exercises, images, footnotes, or
+  mastery records.
+- Target: 19,110 bytes, SHA-256
+  `9a08e5a663685a52c4551a560ee68ea4f4dad9675b3aea04702dfa8416d719b4`;
+  backend: 247 paired segments / 135,384 bytes, SHA-256
+  `8074b66de970f9381056a7c5c71d9bff2806337813606b7a68bf244305d7ad7f`;
+  unit record: 4,492 bytes, SHA-256
+  `e11be3dcf3907d84e6fffc9c9a78c7195ca32b517920e3c62a3c2f99d7d5028a`.
+- Project generator: 47,402 bytes, SHA-256
+  `62eeb904b4c06800f64758454e7a8db78ab89ae4dfb2ff2220e877ca5194f2c5`;
+  catalog: 26,966 bytes, SHA-256
+  `9107863aee7cc9013b024e10d0091e227fdd3135b8913f5e103cc1157ce92e56`.
+  It emits twelve directories / 72 files / 156,596 bytes and twelve ZIPs /
+  72,815 bytes. A repeated generation retained the exact ordered 85-file /
+  256,377-byte inventory SHA-256
+  `31c68c2155b7a2246ea2b50c8a29bbdfd58cd1485abbfc94959de5b495216056`.
+- ZIP CRC, exact six-member closure, lexicographic order, safe flat paths,
+  fixed 1980 timestamp, `0644` mode, catalog file identities, and loose/archive
+  byte equality all pass. All locks are identical and pin NumPy 2.4.4,
+  SciPy 1.17.1, and Matplotlib 3.10.9.
+- All twelve output-clean notebooks, 120 cells / 48 code cells, executed under
+  CPython 3.13.9 and the pinned scientific stack. Independent review found and
+  repaired one substantive issue: Project 6 now computes dynamically changing
+  local neighborhoods on the periodic domain instead of using a global mean.
+  The repaired model passed the fixed seed plus 20 alternate seeds. The same
+  review normalized every flagged reader-facing English fallback and closed
+  with no residual defect.
+- Reader: seventeen payload files / 268,890 bytes excluding its 1,878-byte
+  manifest; manifest SHA-256
+  `1be6f14f57da0ed950fd484c0c7e07291d981e4f4b76b2c8f3be49520507b597`.
+  Repeated clean builds were byte-identical across eighteen files, canonical
+  QA tree SHA-256
+  `da7aa599e38559f33553872f7e1663de6d555ebc478b6b598dc7aa1d4bf6c347`.
+- Every earlier completed unit, CH01–CH13 and PT02–PT05, passed a fresh named
+  deterministic regression after the shared reader change; all ten applicable
+  earlier notebooks executed successfully. Exact per-unit tree hashes are in
+  `00_control/PUBLIC_BUILD_QA.md`.
+- Browser QA against final reader structure: desktop at 1280×900 had a centered
+  1,152 px shell, 768 px article, 960 px edition notice, and 960 px project
+  panel; mobile at 390×844 had a centered 357.5 px shell/article/panel in the
+  375 px client. Document scroll width equaled client width, no element
+  overflowed, all seventeen IDs were unique, all fragments resolved, all
+  twelve downloads were visible, and packet navigation cleared the sticky bar
+  by 34.89 px desktop / 35.92 px mobile. The warning/error console log was
+  empty. External-link reachability was not tested; no audio/live widget exists.
+
+## Zenodo publication and public-byte readback — 2026-08-22
+
+- Authenticated owned-deposition searches for Lega and the exact English and
+  Indonesian work titles returned no draft or record; public searches likewise
+  returned no matching record. A single new concept lineage was therefore
+  non-duplicative.
+- The public repository snapshot was restricted to the Lega v1.01 PDF/EPUB,
+  admitted Pressbooks/unit authority, Indonesian source, modular backend,
+  readers, scripts, public QA, rights, terminology, and correction ledger.
+  Rejected-source comparison archives/extractions and all private recovery,
+  handoff, verbatim-instruction, credential-troubleshooting, and task-state
+  controls were excluded. Text and nested-archive privacy scans passed.
+- Deterministic release artifacts rebuilt byte-identically: repository ZIP
+  34,564,770 bytes / SHA-256
+  `31e8cc53b0c03779d8c723b426f049dec1ebde8f3963ad1268a2042c9c61c2ca`;
+  readers ZIP 5,459,760 bytes / SHA-256
+  `4073140a876520b716c7681368ac5ddb140e616451fdae40792d0038fcaba7a1`;
+  release manifest 1,306 bytes / SHA-256
+  `368cf03b5ded8cbd3efd0a4ec472764bac17f50232d52980b6c1d68aaf3d96b7`.
+- Published record `22059940`, DOI `10.5281/zenodo.22059940`, in concept
+  `22059939`, DOI `10.5281/zenodo.22059939`, with version
+  `v1.01-id-progress-CH14-20260822`. The public API reports state/open metadata,
+  Indonesian language, CC BY-NC-SA 4.0, exact source relation, explicit
+  incomplete status, Joceline Lega as creator, OpenAI Codex as contributor,
+  and exactly one TTP contributor occurrence; TTP is absent from title and
+  description.
+- All three files were downloaded anonymously from the public record. Every
+  filename, byte count, and SHA-256 matched the local release; ordered public
+  inventory SHA-256
+  `4d8b2b825076cdb91ce28032a4d836554e2ddb53751bba485078dbd6add7445f`.
+  Sanitized receipt:
+  `00_control/ZENODO_PUBLICATION_RECEIPT_CH14_20260822.json`.
