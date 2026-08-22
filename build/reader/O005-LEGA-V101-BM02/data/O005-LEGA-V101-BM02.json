@@ -1,0 +1,33 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "problems": [],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 10,
+    "path": "backend/segments/O005-LEGA-V101-BM02.segments.jsonl",
+    "sha256": "1415789dc7e8bb89e6ea88b308235b7be70f2177c1fdd35424ed8f4927f92761"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "back-matter": "Version History",
+    "content_sha256": "45eeb6c4cee068c5273a32c3a60c0777282cdb9a7f8158564fa42b231363d7bc",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/back-matter/versioning-history/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-BM02/content.html",
+    "content_sha256": "7aa3fad37ec153d70335b66eaf81aced827f398d305fd2830af27c84ffc577b3",
+    "title": "Riwayat Versi"
+  },
+  "unit_id": "O005-LEGA-V101-BM02",
+  "unit_type": "back-matter"
+}

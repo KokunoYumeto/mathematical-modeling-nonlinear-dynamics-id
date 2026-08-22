@@ -20,6 +20,71 @@ from bs4 import BeautifulSoup, Tag
 
 ROOT = Path(__file__).resolve().parents[1]
 QA_SPECS = {
+    "O005-LEGA-V101-BM01": {
+        "unit_type": "back-matter",
+        "elements": 24,
+        "links": 6,
+        "href_replacements": {
+            1: (
+                "https://opentextbooks.library.arizona.edu/accessibilityguide/back-matter/accessibility-statement/#footnote-194-1",
+                "#footnote-194-1",
+            ),
+            5: (
+                "https://opentextbooks.library.arizona.edu/accessibilityguide/back-matter/accessibility-statement/#return-footnote-194-1",
+                "#return-footnote-194-1",
+            ),
+        },
+        "attribute_replacements": {
+            1: {"aria-label": ("Footnote 1", "Catatan kaki 1")},
+            23: {
+                "aria-label": (
+                    "Return to footnote 1",
+                    "Kembali ke catatan kaki 1",
+                )
+            },
+        },
+        "math": 0,
+        "problems": 0,
+        "footnotes": 0,
+        "assets": [],
+        "notebook": None,
+        "notebook_cells": 0,
+        "code_cells": 0,
+        "mastery_math": 0,
+        "lock": None,
+    },
+    "O005-LEGA-V101-BM02": {
+        "unit_type": "back-matter",
+        "elements": 14,
+        "links": 0,
+        "math": 0,
+        "problems": 0,
+        "footnotes": 0,
+        "assets": [],
+        "notebook": None,
+        "notebook_cells": 0,
+        "code_cells": 0,
+        "mastery_math": 0,
+        "lock": None,
+        "reader_paragraphs": 2,
+    },
+    "O005-LEGA-V101-FM01": {
+        "unit_type": "front-matter",
+        "elements": 1,
+        "links": 0,
+        "math": 0,
+        "problems": 0,
+        "footnotes": 0,
+        "assets": [],
+        "notebook": None,
+        "notebook_cells": 0,
+        "code_cells": 0,
+        "mastery_math": 0,
+        "lock": None,
+        "plain_paragraphs": 7,
+        "reader_paragraphs": 7,
+        "reader_signature_breaks": 2,
+    },
     "O005-LEGA-V101-CH01": {
         "unit_type": "chapter",
         "elements": 120,
@@ -47,6 +112,21 @@ QA_SPECS = {
         "code_cells": 7,
         "mastery_math": 155,
         "lock": "numpy==2.4.4\nmatplotlib==3.10.9\n",
+    },
+    "O005-LEGA-V101-PT01": {
+        "unit_type": "part",
+        "elements": 0,
+        "links": 0,
+        "math": 0,
+        "problems": 0,
+        "footnotes": 0,
+        "assets": [],
+        "notebook": None,
+        "notebook_cells": 0,
+        "code_cells": 0,
+        "mastery_math": 0,
+        "lock": None,
+        "plain_paragraphs": 3,
     },
     "O005-LEGA-V101-PT02": {
         "unit_type": "part",
@@ -1098,6 +1178,19 @@ def reader_replay(root: Path) -> dict:
     soup = BeautifulSoup(index.read_text(encoding="utf-8"), "html.parser")
     require(soup.html and soup.html.get("lang") == "id-ID", "Reader lang is not id-ID")
     require(len(soup.find_all("h1")) == 1, "Reader requires exactly one h1")
+    article = soup.find("article")
+    require(article is not None, "Reader article is missing")
+    if "reader_paragraphs" in SPEC:
+        require(
+            len(article.find_all("p")) == SPEC["reader_paragraphs"],
+            "Reader paragraph topology differs",
+        )
+    if "reader_signature_breaks" in SPEC:
+        signature = article.find_all("p")[-1]
+        require(
+            len(signature.find_all("br")) == SPEC["reader_signature_breaks"],
+            "Reader signature line-break topology differs",
+        )
     target_math_count = SPEC.get("reader_math", SPEC.get("target_math", SPEC["math"]))
     require(
         len(soup.select(f"article.{SPEC['unit_type']} math")) == target_math_count,

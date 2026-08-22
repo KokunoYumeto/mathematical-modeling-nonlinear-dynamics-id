@@ -7,13 +7,13 @@ Updated: 2026-08-22 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–14 and the visible Part 2–5 introductions are
-translated, built, independently reviewed, and verified. Chapter 14,
+into this lane. All 22 source-derived semantic records—front matter, all five
+visible part introductions, Chapters 1–14, and both back-matter records—are
+translated, built, reviewed, and verified. Chapter 14,
 Pressbooks record 555, is admitted as `O005-LEGA-V101-CH14`, *Proyek
-Pemodelan*, with all twelve independent open project packets. The remaining
-source-derived units are the Preface, Part 1 introduction, Accessibility
-Statement, and Version History; four declared original bridge modules then
-complete the edition.
+Pemodelan*, with all twelve independent open project packets. The
+source-derived translation is therefore closed. Four declared original bridge
+modules now remain before the edition is complete.
 
 The complete Chapter 14 boundary and sanitized Zenodo preservation receipt are
 sealed in local commit `555062f9ef9942c2c3167a15e59e81b5f87ab0ea`
@@ -898,11 +898,51 @@ preservation surface while the GitHub lineage is temporarily unavailable.
   controls use only the role label `the user`; verbatim historical directives
   and source-author credits remain untouched.
 
+## Complete source-record closure — 2026-08-22
+
+- Front-matter record 22 is admitted as `O005-LEGA-V101-FM01`, *Prakata*.
+  The target is 5,576 bytes, SHA-256
+  `a5b4780b2ebecf7f4bb94c8b307d6e70401823434c4b4d2ea5b52b89c9226fe7`;
+  its seven paired segments are 13,778 bytes, SHA-256
+  `9e653da88474abe36c9d083afff0319d6588f26017c2b41636abdb4b32e00bae`.
+  Exact paragraph replay includes the two required signature breaks. The
+  five-file deterministic reader tree is
+  `ce85033264d5d88cf2818b964422fb23644559eacd2faa51674e1a8c211e6ea9`.
+- Part 1 record 23 is admitted as `O005-LEGA-V101-PT01`, *Pendahuluan*. The
+  target is 738 bytes, SHA-256
+  `a61a513013b96a9e5ec9cfd872f9c85300d602fd584820f22182ccd4aaee8aac`;
+  its three paired segments have SHA-256
+  `74168af9ff5b808a2c82acc393a66eaa804e06ae309885ea3b58bf6c4e09757d`.
+  The deterministic reader tree is
+  `1d37b33b2dc2070a85cd57a3cf595f3eb83a709ee70ccb7e1a239f449dff3b6b`.
+- Back-matter record 767 is admitted as `O005-LEGA-V101-BM01`, *Pernyataan
+  Aksesibilitas*. The target is 3,683 bytes, SHA-256
+  `e36f9bbc8b4f2506dae31527290aa1e15a4960ab4051bd56b04d0d69a8659ff5`;
+  its 28 paired segments have SHA-256
+  `230dddbb10c82c99e5782a6010cf72ff3a647a75b3d8ebb02c6f0fa869f289c9`.
+  Six links and the reciprocal local footnote targets replay exactly, with no
+  broken or duplicate identifier. The deterministic reader tree is
+  `733d363f6c1af06623ca4a33bf78be6b2748d5b1e81b2af92f8e7ff3e43ca17c`.
+- Back-matter record 771 is admitted as `O005-LEGA-V101-BM02`, *Riwayat
+  Versi*. The target is 1,703 bytes, SHA-256
+  `7aa3fad37ec153d70335b66eaf81aced827f398d305fd2830af27c84ffc577b3`;
+  its ten paired segments have SHA-256
+  `1415789dc7e8bb89e6ea88b308235b7be70f2177c1fdd35424ed8f4927f92761`.
+  Reader replay has exactly two prose paragraphs, one table, three rows, three
+  scoped column headers, and zero empty generated paragraphs. The deterministic
+  reader tree is
+  `ab0c3fbb16e2a6e9a4a9e7d47211ccd480946407faec337c7d0bb022563439f7`.
+- Final browser regression at 1,440 px and 390 px found every one of these four
+  articles centered (768 px desktop; 357.507 px mobile), with zero document or
+  element overflow and zero runtime console entries. The glossary now contains
+  270 unique stable term IDs through `O005-TERM-0270`.
+
 ## Next action
 
-Freeze and translate the first remaining source-order unit: front-matter
-record 22, *Preface*, as `O005-LEGA-V101-FM01`, *Prakata*. Future substantial
-verified boundaries must use Zenodo's new-version action on concept DOI
-`10.5281/zenodo.22059939`, update Figshare article `33314769`, and republish
-collection `8668413`. Do not retry GitHub until the user reports that account
-access is restored.
+Build `O005-BRIDGE-C1`, the reproducible Python/Jupyter workflow, as a complete
+natural id-ID learning unit with a deterministic notebook and stable modular
+backend. Then continue in order through C2 bifurcations, C3 chaos, and C4 model
+validation and uncertainty. At the next substantial verified reader boundary,
+use Zenodo's new-version action on concept DOI `10.5281/zenodo.22059939`, update
+Figshare article `33314769`, and republish collection `8668413`. Do not retry
+GitHub until the user reports that account access is restored.

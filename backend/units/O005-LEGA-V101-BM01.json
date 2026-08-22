@@ -1,0 +1,33 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "problems": [],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 28,
+    "path": "backend/segments/O005-LEGA-V101-BM01.segments.jsonl",
+    "sha256": "230dddbb10c82c99e5782a6010cf72ff3a647a75b3d8ebb02c6f0fa869f289c9"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "back-matter": "Accessibility Statement",
+    "content_sha256": "78b8416be01959b80d72f96a5fbcf96a9fb12bc906c9adf27696c5c7d6a13389",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/back-matter/accessibility-statement/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-BM01/content.html",
+    "content_sha256": "e36f9bbc8b4f2506dae31527290aa1e15a4960ab4051bd56b04d0d69a8659ff5",
+    "title": "Pernyataan Aksesibilitas"
+  },
+  "unit_id": "O005-LEGA-V101-BM01",
+  "unit_type": "back-matter"
+}

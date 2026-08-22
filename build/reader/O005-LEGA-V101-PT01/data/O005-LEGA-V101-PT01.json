@@ -1,0 +1,33 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "problems": [],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 3,
+    "path": "backend/segments/O005-LEGA-V101-PT01.segments.jsonl",
+    "sha256": "74168af9ff5b808a2c82acc393a66eaa804e06ae309885ea3b58bf6c4e09757d"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "content_sha256": "b7c579017b49262aa18a3899e5ea7bf2a0fd7dcdbedf1bfd48cb7400b9f372c4",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "part": "Introduction",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/part/part-1-what-is-a-model/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-PT01/content.html",
+    "content_sha256": "a61a513013b96a9e5ec9cfd872f9c85300d602fd584820f22182ccd4aaee8aac",
+    "title": "Pendahuluan"
+  },
+  "unit_id": "O005-LEGA-V101-PT01",
+  "unit_type": "part"
+}

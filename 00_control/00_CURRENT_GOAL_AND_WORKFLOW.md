@@ -36,11 +36,13 @@ CC BY-NC-SA 4.0 license, its public companion is a fileless CC0 metadata/link
  item, DOI `10.6084/m9.figshare.33314769.v2`, in project `280296` and verified
  collection version `10.6084/m9.figshare.c.8668413.v37`; CC0 applies only to the
 metadata. Later substantial boundaries update this same Figshare item rather
-than creating a competing work record. The immediate source-production unit is
-front-matter record 22, *Preface*, as `O005-LEGA-V101-FM01`, *Prakata*, followed
-by Part 1 record 23 and back-matter records 767 and 771 before the four original
- bridge modules. GitHub publication remains paused until the user reports that the
-suspended account has been restored; preserve the unchanged local commit chain.
+than creating a competing work record. The complete 22-record source-derived
+reader closure is now translated: the fourteen chapters, all five visible part
+introductions, the Preface, the Accessibility Statement, and the Version
+History. The immediate production unit is original bridge `O005-BRIDGE-C1`,
+the reproducible Python/Jupyter workflow, followed in order by bridges C2-C4.
+GitHub publication remains paused until the user reports that the suspended
+account has been restored; preserve the unchanged local commit chain.
 
 Continue in exact frozen TOC order through all front/back matter and
 fourteen chapters: 54,932 source words, 113 exercises, twelve projects, eleven

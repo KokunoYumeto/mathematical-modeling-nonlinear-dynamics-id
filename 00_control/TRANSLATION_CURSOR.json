@@ -1,23 +1,20 @@
 {
   "schema": "o005-translation-cursor-v1",
-  "status": "boundary_admitted_next_authority_pending",
+  "status": "source_translation_complete_bridge_production",
   "edition_id": "O005-LEGA-V101",
-  "current_unit_id": "O005-LEGA-V101-FM01",
-  "source_record_type": "front-matter",
-  "source_record_id": 22,
-  "source_slug": "introduction-2",
-  "source_title": "Preface",
-  "target_title": "Prakata",
-  "authority_frozen": false,
+  "source_semantic_records_total": 22,
+  "source_semantic_records_completed": 22,
+  "source_translation_complete": true,
+  "current_unit_id": "O005-BRIDGE-C1",
+  "current_unit_type": "original-bridge",
+  "current_unit_title": "Alur Kerja Python/Jupyter yang Reprodusibel",
+  "authority_frozen": "not_applicable_original_addition",
   "indonesian_field_terminology_qa": {
     "status": "completed_and_propagated",
     "witness": "arXiv:2001.05854v1",
     "decision_record": "00_control/TERMINOLOGY_QA_INDONESIAN_FIELD_SOURCE_20260822.md"
   },
-  "source_modified_gmt": "2024-06-29T02:46:15Z",
-  "coordinator_snapshot_canonical_bytes": 11380,
-  "coordinator_snapshot_canonical_sha256": "b8ab499c797f89f734b9179f8a82e3afe508cadabd62cd485f281348ade1f383",
-  "last_completed_unit": {
+  "last_published_complete_unit": {
     "unit_id": "O005-LEGA-V101-CH14",
     "source_record_id": 555,
     "source_slug": "examples-of-project-topics",
@@ -54,11 +51,35 @@
     "qa_complete": true,
     "browser_qa_complete": true
   },
-  "remaining_source_order": [
-    "O005-LEGA-V101-FM01",
-    "O005-LEGA-V101-PT01",
-    "O005-LEGA-V101-BM01",
-    "O005-LEGA-V101-BM02"
+  "final_source_closure": {
+    "completed_units": [
+      "O005-LEGA-V101-FM01",
+      "O005-LEGA-V101-PT01",
+      "O005-LEGA-V101-BM01",
+      "O005-LEGA-V101-BM02"
+    ],
+    "last_completed_source_derived_unit": "O005-LEGA-V101-BM02",
+    "target_sha256": {
+      "O005-LEGA-V101-FM01": "a5b4780b2ebecf7f4bb94c8b307d6e70401823434c4b4d2ea5b52b89c9226fe7",
+      "O005-LEGA-V101-PT01": "a61a513013b96a9e5ec9cfd872f9c85300d602fd584820f22182ccd4aaee8aac",
+      "O005-LEGA-V101-BM01": "e36f9bbc8b4f2506dae31527290aa1e15a4960ab4051bd56b04d0d69a8659ff5",
+      "O005-LEGA-V101-BM02": "7aa3fad37ec153d70335b66eaf81aced827f398d305fd2830af27c84ffc577b3"
+    },
+    "qa_tree_sha256": {
+      "O005-LEGA-V101-FM01": "ce85033264d5d88cf2818b964422fb23644559eacd2faa51674e1a8c211e6ea9",
+      "O005-LEGA-V101-PT01": "1d37b33b2dc2070a85cd57a3cf595f3eb83a709ee70ccb7e1a239f449dff3b6b",
+      "O005-LEGA-V101-BM01": "733d363f6c1af06623ca4a33bf78be6b2748d5b1e81b2af92f8e7ff3e43ca17c",
+      "O005-LEGA-V101-BM02": "ab0c3fbb16e2a6e9a4a9e7d47211ccd480946407faec337c7d0bb022563439f7"
+    },
+    "browser_qa": "desktop_1440_and_mobile_390_centered_zero_overflow",
+    "glossary_unique_term_ids": 270
+  },
+  "remaining_source_order": [],
+  "remaining_bridge_order": [
+    "O005-BRIDGE-C1",
+    "O005-BRIDGE-C2",
+    "O005-BRIDGE-C3",
+    "O005-BRIDGE-C4"
   ],
-  "next_action": "Freeze front-matter record 22 and translate Preface naturally as Prakata. Maintain the next substantial verified boundary as a new version of Zenodo concept DOI 10.5281/zenodo.22059939. Do not retry GitHub until the user reports account restoration."
+  "next_action": "Create the complete natural id-ID O005-BRIDGE-C1 reproducible Python/Jupyter workflow, its deterministic notebook, stable segment/unit metadata, accessible reader, and executable QA. Continue directly through bridges C2-C4. Use the existing Zenodo/Figshare lineages at the next substantial verified boundary; do not retry GitHub until the user reports account restoration."
 }

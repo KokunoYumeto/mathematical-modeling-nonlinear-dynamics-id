@@ -1185,3 +1185,26 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   records were present, and the builder separately rejected an attempted write
   to the protected published directory before mutation. The disposable smoke
   directory was then removed; the published byte replica was unchanged.
+
+## Final source-record QA — FM01, PT01, BM01, BM02 — 2026-08-22
+
+- Fresh deterministic invocations of `scripts/qa_unit.py --unit UNIT
+  --deterministic-build` exited 0 for all four records. Their five-file tree
+  SHA-256 values are FM01
+  `ce85033264d5d88cf2818b964422fb23644559eacd2faa51674e1a8c211e6ea9`,
+  PT01 `1d37b33b2dc2070a85cd57a3cf595f3eb83a709ee70ccb7e1a239f449dff3b6b`,
+  BM01 `733d363f6c1af06623ca4a33bf78be6b2748d5b1e81b2af92f8e7ff3e43ca17c`,
+  and BM02 `ab0c3fbb16e2a6e9a4a9e7d47211ccd480946407faec337c7d0bb022563439f7`.
+- Exact backend counts are seven, three, 28, and ten paired segments. There are
+  no inapplicable exercises, mastery records, notebooks, formulas, or assets.
+  FM01 has seven reader paragraphs and exactly two signature breaks; PT01 has
+  three reader paragraphs. BM01 replays 24 elements and six links, and both
+  local footnote directions resolve to unique in-document targets. BM02 replays
+  14 elements as two prose paragraphs plus a three-row table with three scoped
+  column headers and no empty generated paragraph.
+- At a 1,440 px browser viewport, each article is 768 px wide and centered to
+  within 0.056 px; at a 390 px viewport each article is 357.507 px wide and
+  centered to within 0.053 px. Document scroll width equals client width and
+  no element overflows at either size. The BM02 table is 358 px wide on mobile
+  with equal client and scroll widths. Browser runtime logs are empty. External
+  link reachability and nonexistent audio/live widgets were not exercised.

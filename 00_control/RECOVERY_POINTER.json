@@ -1,7 +1,7 @@
 {
   "schema": "o005-recovery-pointer-v1",
   "lane_root": ".",
-  "status": "active_translation",
+  "status": "active_bridge_production_source_translation_complete",
   "read_first": [
     "00_control/00_CURRENT_GOAL_AND_WORKFLOW.md",
     "00_control/CURRENT_STATE.md",
@@ -94,7 +94,7 @@
     ],
     "decision_record": "00_control/TERMINOLOGY_QA_INDONESIAN_FIELD_SOURCE_20260822.md"
   },
-  "last_completed_unit": {
+  "last_published_complete_unit": {
     "unit_id": "O005-LEGA-V101-CH14",
     "source_record_type": "chapters",
     "source_record_id": 555,
@@ -107,6 +107,28 @@
     "reader_manifest_sha256": "1be6f14f57da0ed950fd484c0c7e07291d981e4f4b76b2c8f3be49520507b597",
     "qa_tree_sha256": "da7aa599e38559f33553872f7e1663de6d555ebc478b6b598dc7aa1d4bf6c347"
   },
-  "current_unit": "O005-LEGA-V101-FM01",
-  "next_action": "Freeze front-matter record 22, Preface, and translate it naturally as Prakata. Maintain future substantial boundaries as new versions of Zenodo concept DOI 10.5281/zenodo.22059939. Do not retry GitHub until the user reports account restoration."
+  "completed_source_closure": {
+    "semantic_records": 22,
+    "last_unit": "O005-LEGA-V101-BM02",
+    "units_added_after_ch14": [
+      "O005-LEGA-V101-FM01",
+      "O005-LEGA-V101-PT01",
+      "O005-LEGA-V101-BM01",
+      "O005-LEGA-V101-BM02"
+    ],
+    "qa_tree_sha256": {
+      "O005-LEGA-V101-FM01": "ce85033264d5d88cf2818b964422fb23644559eacd2faa51674e1a8c211e6ea9",
+      "O005-LEGA-V101-PT01": "1d37b33b2dc2070a85cd57a3cf595f3eb83a709ee70ccb7e1a239f449dff3b6b",
+      "O005-LEGA-V101-BM01": "733d363f6c1af06623ca4a33bf78be6b2748d5b1e81b2af92f8e7ff3e43ca17c",
+      "O005-LEGA-V101-BM02": "ab0c3fbb16e2a6e9a4a9e7d47211ccd480946407faec337c7d0bb022563439f7"
+    }
+  },
+  "current_unit": "O005-BRIDGE-C1",
+  "remaining_bridge_order": [
+    "O005-BRIDGE-C1",
+    "O005-BRIDGE-C2",
+    "O005-BRIDGE-C3",
+    "O005-BRIDGE-C4"
+  ],
+  "next_action": "Build the complete natural id-ID O005-BRIDGE-C1 reproducible Python/Jupyter workflow with deterministic notebook, stable backend, accessible reader, and executable QA, then continue through C2-C4. Maintain future substantial boundaries as new versions of Zenodo concept DOI 10.5281/zenodo.22059939. Do not retry GitHub until the user reports account restoration."
 }

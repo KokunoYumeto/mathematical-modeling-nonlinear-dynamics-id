@@ -21,6 +21,34 @@ RECORDS = SNAPSHOT / "records.canonical.json"
 EPUB = LANE / "authority" / "archives" / "lega-v1.01.epub"
 
 UNIT_SPECS = {
+    "O005-LEGA-V101-FM01": {
+        "record_id": 22,
+        "modified_gmt": "2024-06-29T02:46:15",
+        "record_bytes": 11380,
+        "record_sha256": "b8ab499c797f89f734b9179f8a82e3afe508cadabd62cd485f281348ade1f383",
+        "assets": [],
+    },
+    "O005-LEGA-V101-PT01": {
+        "record_id": 23,
+        "modified_gmt": "2024-06-29T02:56:19",
+        "record_bytes": 2106,
+        "record_sha256": "a5b7d445ca02f514b7b065dde2834ede1959c5eb256a2c6d31342c302276470b",
+        "assets": [],
+    },
+    "O005-LEGA-V101-BM01": {
+        "record_id": 767,
+        "modified_gmt": "2026-04-14T19:55:11",
+        "record_bytes": 8643,
+        "record_sha256": "b83809539e7891f791d94a4b52f260e90b43a9b5f74336cd66e0eb3d61e01e1f",
+        "assets": [],
+    },
+    "O005-LEGA-V101-BM02": {
+        "record_id": 771,
+        "modified_gmt": "2026-03-27T03:58:27",
+        "record_bytes": 4360,
+        "record_sha256": "0052fc28351f4f57432488687643f6cd422fa965621c7cddc364dba4b0bbf53d",
+        "assets": [],
+    },
     "O005-LEGA-V101-CH01": {
         "record_id": 25,
         "modified_gmt": "2026-03-27T02:08:36",

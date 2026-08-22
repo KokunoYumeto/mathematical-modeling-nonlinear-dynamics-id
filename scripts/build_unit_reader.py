@@ -20,6 +20,61 @@ ROOT = Path(__file__).resolve().parents[1]
 CSS = ROOT / "source" / "reader" / "reader.css"
 
 UNIT_SPECS = {
+    "O005-LEGA-V101-FM01": {
+        "unit_type": "front-matter",
+        "unit_number": 1,
+        "source_title": "Preface",
+        "target_title": "Prakata",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/front-matter/introduction-2/",
+        "target_assets": [],
+        "caption_count": 0,
+        "footnote_count": 0,
+        "notebook": None,
+        "problem_count": 0,
+        "plain_paragraphs": True,
+        "display_label": "Prakata",
+        "navigation_label": "Isi prakata",
+        "source_unit_label": "prakata",
+        "article_class": "chapter front-matter",
+        "reader_trailing_signature_lines": 3,
+        "change_note": "penerjemahan dan pengindeksan modular",
+    },
+    "O005-LEGA-V101-BM01": {
+        "unit_type": "back-matter",
+        "unit_number": 1,
+        "source_title": "Accessibility Statement",
+        "target_title": "Pernyataan Aksesibilitas",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/back-matter/accessibility-statement/",
+        "target_assets": [],
+        "caption_count": 0,
+        "footnote_count": 0,
+        "notebook": None,
+        "problem_count": 0,
+        "plain_paragraphs": False,
+        "display_label": "Pernyataan Aksesibilitas",
+        "navigation_label": "Isi pernyataan",
+        "source_unit_label": "pernyataan aksesibilitas",
+        "article_class": "chapter back-matter",
+        "change_note": "penerjemahan, penautan catatan kaki lokal, dan pengindeksan modular",
+    },
+    "O005-LEGA-V101-BM02": {
+        "unit_type": "back-matter",
+        "unit_number": 2,
+        "source_title": "Version History",
+        "target_title": "Riwayat Versi",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/back-matter/versioning-history/",
+        "target_assets": [],
+        "caption_count": 0,
+        "footnote_count": 0,
+        "notebook": None,
+        "problem_count": 0,
+        "plain_paragraphs": False,
+        "display_label": "Riwayat Versi",
+        "navigation_label": "Isi riwayat versi",
+        "source_unit_label": "riwayat versi",
+        "article_class": "chapter back-matter",
+        "change_note": "penerjemahan dan pengindeksan modular",
+    },
     "O005-LEGA-V101-CH01": {
         "unit_type": "chapter",
         "unit_number": 1,
@@ -49,6 +104,20 @@ UNIT_SPECS = {
         "problem_count": 7,
         "plain_paragraphs": False,
         "change_note": "penerjemahan, pengindeksan modular, dan implementasi ulang simulasi dengan Python terbuka",
+    },
+    "O005-LEGA-V101-PT01": {
+        "unit_type": "part",
+        "unit_number": 1,
+        "source_title": "Introduction",
+        "target_title": "Pendahuluan",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/part/part-1-what-is-a-model/",
+        "target_assets": [],
+        "caption_count": 0,
+        "footnote_count": 0,
+        "notebook": None,
+        "problem_count": 0,
+        "plain_paragraphs": True,
+        "change_note": "penerjemahan dan pengindeksan modular",
     },
     "O005-LEGA-V101-PT02": {
         "unit_type": "part",
@@ -441,7 +510,8 @@ FOOTNOTE_SPAN_CLOSE_RE = re.compile(
 )
 BLOCK_LINE_RE = re.compile(
     r"^</?(?:address|article|aside|blockquote|details|div|dl|fieldset|figcaption|figure|"
-    r"footer|form|h[1-6]|header|hr|li|main|nav|ol|p|pre|section|table|ul)\b",
+    r"footer|form|h[1-6]|header|hr|li|main|nav|ol|p|pre|section|table|tbody|td|"
+    r"tfoot|th|thead|tr|ul)\b",
     re.IGNORECASE,
 )
 
@@ -631,6 +701,25 @@ def wrap_inline_runs(fragment: str) -> BeautifulSoup:
         else:
             normalized.append(f"<p>{stripped}</p>")
     return BeautifulSoup("\n".join(normalized), "html.parser")
+
+
+def merge_trailing_signature(soup: BeautifulSoup, line_count: int) -> None:
+    """Render a plain-text signature block like the official Pressbooks HTML."""
+    if not line_count:
+        return
+    paragraphs = soup.find_all("p", recursive=False)
+    if len(paragraphs) < line_count:
+        raise RuntimeError("Reader signature line count exceeds paragraph count")
+    trailing = paragraphs[-line_count:]
+    merged = soup.new_tag("p")
+    for index, paragraph in enumerate(trailing):
+        if index:
+            merged.append(soup.new_tag("br"))
+        for child in list(paragraph.contents):
+            merged.append(child.extract())
+    trailing[0].replace_with(merged)
+    for paragraph in trailing[1:]:
+        paragraph.decompose()
 
 
 def harden_links(soup: BeautifulSoup) -> None:
@@ -951,13 +1040,26 @@ def build_reader(output: Path) -> dict:
     segment_count, segment_sha = write_backend(source, target, mastery, pandoc)
 
     body = wrap_inline_runs(replace_pressbooks_markup(target))
+    merge_trailing_signature(
+        body, int(UNIT_SPEC.get("reader_trailing_signature_lines", 0))
+    )
     rewrite_reader_local_links(body)
     harden_links(body)
     unit_label = "Bab" if UNIT_SPEC["unit_type"] == "chapter" else "Bagian"
-    source_unit_label = "bab" if UNIT_SPEC["unit_type"] == "chapter" else "bagian"
+    source_unit_label = UNIT_SPEC.get(
+        "source_unit_label",
+        "bab" if UNIT_SPEC["unit_type"] == "chapter" else "bagian",
+    )
     unit_number = UNIT_SPEC["unit_number"]
-    article_class = "chapter" if UNIT_SPEC["unit_type"] == "chapter" else "chapter part"
-    nav_lines = ['    <a href="#isi">Isi bab</a>' if unit_label == "Bab" else '    <a href="#isi">Isi bagian</a>']
+    unit_display = UNIT_SPEC.get("display_label", f"{unit_label} {unit_number}")
+    article_class = UNIT_SPEC.get(
+        "article_class",
+        "chapter" if UNIT_SPEC["unit_type"] == "chapter" else "chapter part",
+    )
+    navigation_label = UNIT_SPEC.get(
+        "navigation_label", "Isi bab" if unit_label == "Bab" else "Isi bagian"
+    )
+    nav_lines = [f'    <a href="#isi">{navigation_label}</a>']
     if mastery:
         nav_lines.append('    <a href="#dukungan-belajar">Dukungan belajar</a>')
     if NOTEBOOK:
@@ -1006,7 +1108,7 @@ def build_reader(output: Path) -> dict:
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{unit_label} {unit_number} edisi Bahasa Indonesia Introduction to Mathematical Modeling karya Joceline Lega.">
+  <meta name="description" content="{unit_display} edisi Bahasa Indonesia Introduction to Mathematical Modeling karya Joceline Lega.">
   <title>{UNIT_SPEC['target_title']} — Joceline Lega</title>
   <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
   <link rel="stylesheet" href="assets/reader.css">
@@ -1014,7 +1116,7 @@ def build_reader(output: Path) -> dict:
 <body>
   <a class="skip-link" href="#isi">Lewati ke isi utama</a>
   <header class="reader-header">
-    <p class="eyebrow">O005 · C120 · {unit_label} {unit_number}</p>
+    <p class="eyebrow">O005 · C120 · {unit_display}</p>
     <h1>{UNIT_SPEC['target_title']}</h1>
     <p class="byline">Joceline Lega · Edisi Bahasa Indonesia</p>
   </header>
@@ -1027,7 +1129,7 @@ def build_reader(output: Path) -> dict:
       <p>Terjemahan Bahasa Indonesia independen dari <cite>Introduction to Mathematical Modeling</cite>, v1.01 (Maret 2026), oleh Joceline Lega, University of Arizona. <a href="{SOURCE_URL}" rel="external noopener noreferrer">Baca sumber resmi {source_unit_label} ini</a>.</p>
       <p>Sumber dan terjemahan dilisensikan dengan <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license external noopener noreferrer">CC BY-NC-SA 4.0</a>. Perubahan mencakup {UNIT_SPEC['change_note']}. Edisi ini tidak disokong atau disahkan oleh penulis maupun University of Arizona.</p>
     </aside>
-    <article class="{article_class}" aria-label="{unit_label} {unit_number}">
+    <article class="{article_class}" aria-label="{unit_display}">
 {str(body)}
     </article>
     {project_html}

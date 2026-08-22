@@ -1,0 +1,33 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "problems": [],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 7,
+    "path": "backend/segments/O005-LEGA-V101-FM01.segments.jsonl",
+    "sha256": "9e653da88474abe36c9d083afff0319d6588f26017c2b41636abdb4b32e00bae"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "content_sha256": "b0fd32fe1a78a0a3d7e2478c73eb19bf009ca33f385f302eecd7cfe637b4c941",
+    "edition": "v1.01 (Maret 2026)",
+    "front-matter": "Preface",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/front-matter/introduction-2/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-FM01/content.html",
+    "content_sha256": "a5b4780b2ebecf7f4bb94c8b307d6e70401823434c4b4d2ea5b52b89c9226fe7",
+    "title": "Prakata"
+  },
+  "unit_id": "O005-LEGA-V101-FM01",
+  "unit_type": "front-matter"
+}
