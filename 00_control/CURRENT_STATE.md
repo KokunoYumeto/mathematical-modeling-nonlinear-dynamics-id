@@ -901,20 +901,20 @@ preservation surface while the GitHub lineage is temporarily unavailable.
 ## Complete source-record closure — 2026-08-22
 
 - Front-matter record 22 is admitted as `O005-LEGA-V101-FM01`, *Prakata*.
-  The target is 5,576 bytes, SHA-256
-  `a5b4780b2ebecf7f4bb94c8b307d6e70401823434c4b4d2ea5b52b89c9226fe7`;
-  its seven paired segments are 13,778 bytes, SHA-256
-  `9e653da88474abe36c9d083afff0319d6588f26017c2b41636abdb4b32e00bae`.
+  The target is 5,633 bytes, SHA-256
+  `27f12221c462101e7008cbdd409e7b7fd1bcf99f7aea8d458b2e87efa80c1f56`;
+  its seven paired segments are 13,835 bytes, SHA-256
+  `9e60af834465dfe1ea7d9e6631288fd963addcc437cbedc42f342d5b3b0a5090`.
   Exact paragraph replay includes the two required signature breaks. The
   five-file deterministic reader tree is
-  `ce85033264d5d88cf2818b964422fb23644559eacd2faa51674e1a8c211e6ea9`.
+  `ef0e77cf6c674f6b9a88b89fa8a357120a4249681be8c9e312a6b421e1d5c14c`.
 - Part 1 record 23 is admitted as `O005-LEGA-V101-PT01`, *Pendahuluan*. The
   target is 738 bytes, SHA-256
-  `a61a513013b96a9e5ec9cfd872f9c85300d602fd584820f22182ccd4aaee8aac`;
+  `2922e6de1e5b9287f29283add8cb04be9f469cc67c51b3d42e8b7e365312bcff`;
   its three paired segments have SHA-256
-  `74168af9ff5b808a2c82acc393a66eaa804e06ae309885ea3b58bf6c4e09757d`.
+  `64d41bf505e30ee886ccb0abade535554d7322b9b3da4e1f6c8ec81a84126361`.
   The deterministic reader tree is
-  `1d37b33b2dc2070a85cd57a3cf595f3eb83a709ee70ccb7e1a239f449dff3b6b`.
+  `d9029d36333e9a7596cef6aa44dac77e867b55a199c3af6232deaf67d0a14b0d`.
 - Back-matter record 767 is admitted as `O005-LEGA-V101-BM01`, *Pernyataan
   Aksesibilitas*. The target is 3,683 bytes, SHA-256
   `e36f9bbc8b4f2506dae31527290aa1e15a4960ab4051bd56b04d0d69a8659ff5`;
@@ -936,6 +936,11 @@ preservation surface while the GitHub lineage is temporarily unavailable.
   articles centered (768 px desktop; 357.507 px mobile), with zero document or
   element overflow and zero runtime console entries. The glossary now contains
   270 unique stable term IDs through `O005-TERM-0270`.
+- A final independent fidelity pass then sharpened three bounded renderings:
+  spatial extent is `terbentang secara spasial`, successive refinement is
+  `secara berulang`, and postgraduate mentors are no longer narrowed to
+  postdoctoral mentors. FM01 and PT01 were rebuilt and repeated browser QA
+  retained the same centered, overflow-free geometry.
 
 ## Next action
 

@@ -261,7 +261,7 @@ O005-TERM-0259,equilibrium,keadaan kesetimbangan,admitted,Use for a physical or 
 O005-TERM-0260,mathematical model,model matematika,admitted,Use for an individual model; mathematical modeling remains pemodelan matematika.
 O005-TERM-0261,life sciences,ilmu hayati,admitted,Preferred broad field label in the Preface.
 O005-TERM-0262,chaotic map,pemetaan kacau,admitted,Map in a discrete dynamical-system context.
-O005-TERM-0263,spatially extended system,sistem yang meluas secara spasial,admitted,Use for systems whose state varies over an extended spatial domain.
+O005-TERM-0263,spatially extended system,sistem yang terbentang secara spasial,admitted,Use for systems whose state varies over an extended spatial domain; terbentang describes spatial extent without implying active expansion.
 O005-TERM-0264,fixed-point theory,teori titik tetap,admitted,Keep distinct from physical equilibrium terminology.
 O005-TERM-0265,numerical exploration,eksplorasi numerik,admitted,Exploratory use of numerical computation rather than a specific algorithm.
 O005-TERM-0266,deterministic model,model deterministik,admitted,Contrasted with models involving randomness.

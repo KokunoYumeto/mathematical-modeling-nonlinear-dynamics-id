@@ -1191,8 +1191,8 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
 - Fresh deterministic invocations of `scripts/qa_unit.py --unit UNIT
   --deterministic-build` exited 0 for all four records. Their five-file tree
   SHA-256 values are FM01
-  `ce85033264d5d88cf2818b964422fb23644559eacd2faa51674e1a8c211e6ea9`,
-  PT01 `1d37b33b2dc2070a85cd57a3cf595f3eb83a709ee70ccb7e1a239f449dff3b6b`,
+  `ef0e77cf6c674f6b9a88b89fa8a357120a4249681be8c9e312a6b421e1d5c14c`,
+  PT01 `d9029d36333e9a7596cef6aa44dac77e867b55a199c3af6232deaf67d0a14b0d`,
   BM01 `733d363f6c1af06623ca4a33bf78be6b2748d5b1e81b2af92f8e7ff3e43ca17c`,
   and BM02 `ab0c3fbb16e2a6e9a4a9e7d47211ccd480946407faec337c7d0bb022563439f7`.
 - Exact backend counts are seven, three, 28, and ten paired segments. There are
@@ -1208,3 +1208,8 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   no element overflows at either size. The BM02 table is 358 px wide on mobile
   with equal client and scroll widths. Browser runtime logs are empty. External
   link reachability and nonexistent audio/live widgets were not exercised.
+- A final independent fidelity pass repaired three scope/meaning nuances in
+  FM01/PT01: spatial extent no longer implies expansion, successive refinement
+  is explicitly iterative, and postgraduate mentors are not narrowed to
+  postdoctoral mentors. Both readers were regenerated; the hashes above are
+  the final trees, and repeated 1,440/390 px browser QA remained clean.

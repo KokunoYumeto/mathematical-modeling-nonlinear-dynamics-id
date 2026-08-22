@@ -11,7 +11,7 @@
   "segments": {
     "count": 3,
     "path": "backend/segments/O005-LEGA-V101-PT01.segments.jsonl",
-    "sha256": "74168af9ff5b808a2c82acc393a66eaa804e06ae309885ea3b58bf6c4e09757d"
+    "sha256": "64d41bf505e30ee886ccb0abade535554d7322b9b3da4e1f6c8ec81a84126361"
   },
   "source": {
     "author": "Joceline Lega",
@@ -25,7 +25,7 @@
   "source_language": "en",
   "target": {
     "content_path": "source/id-ID/O005-LEGA-V101-PT01/content.html",
-    "content_sha256": "a61a513013b96a9e5ec9cfd872f9c85300d602fd584820f22182ccd4aaee8aac",
+    "content_sha256": "2922e6de1e5b9287f29283add8cb04be9f469cc67c51b3d42e8b7e365312bcff",
     "title": "Pendahuluan"
   },
   "unit_id": "O005-LEGA-V101-PT01",

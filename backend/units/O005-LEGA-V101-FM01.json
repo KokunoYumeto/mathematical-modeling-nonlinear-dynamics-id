@@ -11,7 +11,7 @@
   "segments": {
     "count": 7,
     "path": "backend/segments/O005-LEGA-V101-FM01.segments.jsonl",
-    "sha256": "9e653da88474abe36c9d083afff0319d6588f26017c2b41636abdb4b32e00bae"
+    "sha256": "9e60af834465dfe1ea7d9e6631288fd963addcc437cbedc42f342d5b3b0a5090"
   },
   "source": {
     "author": "Joceline Lega",
@@ -25,7 +25,7 @@
   "source_language": "en",
   "target": {
     "content_path": "source/id-ID/O005-LEGA-V101-FM01/content.html",
-    "content_sha256": "a5b4780b2ebecf7f4bb94c8b307d6e70401823434c4b4d2ea5b52b89c9226fe7",
+    "content_sha256": "27f12221c462101e7008cbdd409e7b7fd1bcf99f7aea8d458b2e87efa80c1f56",
     "title": "Prakata"
   },
   "unit_id": "O005-LEGA-V101-FM01",
