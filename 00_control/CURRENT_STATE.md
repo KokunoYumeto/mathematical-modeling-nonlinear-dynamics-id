@@ -1,17 +1,18 @@
 # Current State — O005/C120
 
-Updated: 2026-08-21 Europe/Berlin
+Updated: 2026-08-22 Europe/Berlin
 
 ## Status
 
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–5 and the visible Part 2 and Part 3 introductions
-are translated, built, and verified. Production now moves to Chapter 6,
-Pressbooks record 53, *Two-Species Models*, as `O005-LEGA-V101-CH06`. The earlier
-cursor's record 29 / “Dimensional Analysis” pair was invalid and has been
-corrected from the frozen TOC.
+into this lane. Chapters 1–6 and the visible Part 2 and Part 3 introductions
+are translated, built, and verified. Production now moves to Chapter 7,
+Pressbooks record 57, *Epidemiology*, as `O005-LEGA-V101-CH07`. Its exact
+authority record and three-asset closure are already frozen. The next visible
+source item after Chapter 7 is Part 4 record 58, *Chemical Reactions and Spatial
+Effects*.
 
 ## Verified authority
 
@@ -289,10 +290,46 @@ corrected from the frozen TOC.
   notebook, Census data, localized SVG, mastery, unit metadata, shared CSS,
   and representative earlier-reader reflow outputs.
 
+## Admitted Chapter 6 boundary
+
+- Source record: Pressbooks chapter 53, *Two-Species Models*; target title
+  *Model Populasi Dua Spesies*; modified `2026-03-27T02:30:16Z`.
+- Canonical record: 63,377 bytes, SHA-256
+  `cdcc1c12fc5c0245ffbb94c6cfdc706570f50540bb6719d78e1391f282b114de`;
+  raw source fragment: 27,114 bytes, SHA-256
+  `d9e372db30a8afbae16bdc43f03fa486035c87deb5f8db774ae2e671d6594938`.
+- Complete natural id-ID fragment: 29,882 bytes, SHA-256
+  `67e09680f3a67626a2a6761dd4376202985d87a06bdea72dbbd59978b9b08564`.
+- Exact replay: 182 / 182 source-target lines, 185 / 185 ordered elements,
+  31 / 31 links, 227 source TeX occurrences mapped to 237 declared target
+  occurrences, four / four figures, three / three footnotes, and six / six
+  stable problems. Every intervention is enumerated as O005-CORR-0046–0063.
+- Six-record mastery layer: 24,865 bytes, SHA-256
+  `898e4b224ca73073a20a8fb87021d305d00be53f43729eb10d9717cc39dba1b4`;
+  six hints/checks and five worked solutions plus one qualitative rubric.
+- Independent open two-species notebook: 23,030 bytes, SHA-256
+  `2bb805326ad45bfb90a914dbd2eb12b5a579e63d0cb60cdce8f4f6c8928eb33a`;
+  14 cells / six code cells / 49 assertions. Locked execution passed under
+  Python 3.13.9, NumPy 2.4.4, SciPy 1.17.1, and Matplotlib 3.10.9.
+- Four source figures are retained byte-for-byte. Modular segment layer: 211
+  records / 137,097 bytes, SHA-256
+  `f6e18702e5d7c5ed521a487b5439d888f942b052fda194cbc16217feacc0eecf`.
+- Reader package: 11 payload files / 1,460,989 bytes excluding its manifest;
+  manifest SHA-256
+  `7a5b5b3d80871ba4f1411fd693a2cb351befa7bab8c0cda11c55999585605b44`.
+  A final deterministic double build was byte-identical across 12 files,
+  canonical tree SHA-256
+  `f18df68aa2462a496b8cca2eb3c85ddb9e7a421924819cdeff9c1316a635c1cc`.
+- Browser QA: at 1280×900 the main shell was 1,152 px and the chapter 768 px,
+  exactly centered; at 390×844 the chapter was 357.5 px and centered. Page
+  overflow was zero, all four images loaded without enlargement, all 34 IDs
+  were unique, every fragment resolved, and a fresh load had no console warning
+  or error. Figure-return links land below the sticky navigation.
+
 ## Next action
 
-Prepare and translate Chapter 6 record 53, *Two-Species Models*, in full as
-`O005-LEGA-V101-CH06`, preserving the frozen 182-line raw source, 185 opening
-elements, 31 links, 227 TeX occurrences, four figures, three footnotes, and six
-problems. Add complete mastery and the bounded open phase-plane computation
-closure; do not return to source selection.
+Translate Chapter 7 record 57, *Epidemiology*, in full as
+`O005-LEGA-V101-CH07`, preserving the frozen 123-line raw source, 126 opening
+elements, 29 links, 150 TeX occurrences, three figures, one footnote, and five
+problems. Add complete mastery and the bounded open phase-plane/epidemiology
+computation closure; do not return to source selection.

@@ -1,0 +1,354 @@
+{
+  "schema": "o005-mastery-v1",
+  "schema_version": "1.0.0",
+  "unit_id": "O005-LEGA-V101-CH06",
+  "language": "id-ID",
+  "source": {
+    "resource": "Joceline Lega, Introduction to Mathematical Modeling",
+    "edition": "University of Arizona Pressbooks v1.01 (Maret 2026)",
+    "record": "Pressbooks chapter 53",
+    "record_id": 53,
+    "source_title": "Two-Species Models",
+    "target_title": "Model Populasi Dua Spesies",
+    "modified_utc": "2026-03-27T02:30:16Z",
+    "source_file": "authority/units/O005-LEGA-V101-CH06/content.raw.en.html",
+    "source_locator": "exact frozen Pressbooks record 53 content.raw, equations on lines 18–25 and 71–105, problems on lines 130–180",
+    "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/two-species-models/",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "provenance_policy": {
+    "source_derived": "Ringkasan masalah merupakan adaptasi/terjemahan dari soal sumber dan tetap berada di bawah CC BY-NC-SA 4.0.",
+    "new_original": "Petunjuk, rekaman pemeriksaan/jawaban, solusi, rubrik, dan koreksi matematis ditulis baru untuk edisi Bahasa Indonesia dan ditandai terpisah dari materi sumber. Sumber tidak menyediakan himpunan solusi. Fakta model pada Soal 6 diverifikasi terhadap artikel primer Fussmann dkk., Science 290 (2000), hlm. 1358, Persamaan (1)–(4); reduksi tanpa pemisahan demografis ditandai sebagai penutupan penyederhanaan baru, bukan sebagai persamaan artikel."
+  },
+  "article_link_catalog": [
+    {
+      "link_id": "O005-LEGA-V101-CH06-LINK01",
+      "title": "Notebook Python terbuka Bab 6: model dua spesies",
+      "url": "notebooks/chapter-06-open-two-species-models.ipynb"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH06-LINK02",
+      "title": "G.F. Fussmann et al. (2000), Crossing the Hopf Bifurcation in a Live Predator-Prey System",
+      "url": "https://doi.org/10.1126/science.290.5495.1358"
+    }
+  ],
+  "problems": [
+    {
+      "problem_id": "O005-LEGA-V101-CH06-P01",
+      "ordinal": 1,
+      "problem_summary": "Bangun model waktu-kontinu paling sederhana untuk spesies \\(x\\) yang bertahan hidup dengan memakan nutrien \\(n\\), mempunyai laju kematian per kapita \\(d\\), dan menerima nutrien dengan laju pasokan konstan. Nyatakan asumsi aksi-massa serta stoikiometri secara eksplisit.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "x",
+        "n",
+        "d"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Gunakan fluks konsumsi aksi-massa \\(u n x\\). Fluks yang sama mengurangi nutrien, sedangkan pertumbuhan spesies boleh berbeda melalui hasil konversi \\(\\eta\\). Jangan menambahkan pelindian, migrasi, atau kapasitas dukung tanpa menyatakannya sebagai perluasan."
+      },
+      "check": {
+        "type": "valid_mass_action_model",
+        "final_answer": "Dengan sistem tercampur sempurna, pasokan nutrien konstan \\(q>0\\), konsumsi aksi-massa \\(u n x\\), hasil konversi konstan \\(\\eta>0\\), kematian per kapita \\(d>0\\), serta tanpa pelindian nutrien, migrasi, atau pembatasan lain, model minimal yang sah adalah \\(\\dot x=\\eta u n x-dx=x(\\eta u n-d)\\) dan \\(\\dot n=q-u n x\\). Jika \\(x,n\\ge0\\), medan pada \\(x=0\\) memberi \\(\\dot x=0\\) dan pada \\(n=0\\) memberi \\(\\dot n=q>0\\), sehingga kuadran nonnegatif invarian.",
+        "quick_check": "Setiap suku dalam \\(\\dot x\\) harus berdimensi \\([x]T^{-1}\\), setiap suku dalam \\(\\dot n\\) harus berdimensi \\([n]T^{-1}\\), konsumsi harus lenyap bila \\(x=0\\) atau \\(n=0\\), dan kematian harus tetap bekerja ketika nutrien tidak ada."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Tetapkan asumsi minimal: kedua besaran adalah kerapatan rata-rata dalam wadah tercampur sempurna; satu-satunya interaksi adalah perjumpaan spesies–nutrien; pasokan tidak bergantung waktu; semua parameter konstan.",
+            "formula": "x(t),n(t)\\ge0,\\qquad q,u,\\eta,d>0"
+          },
+          {
+            "explanation": "Aksi-massa membuat jumlah perjumpaan per volume dan waktu sebanding dengan hasil kali kedua kerapatan.",
+            "formula": "C(n,x)=u n x"
+          },
+          {
+            "explanation": "Setiap unit konsumsi mengurangi nutrien dengan satu unit pada skala \\(n\\), sedangkan \\(\\eta\\) mengubah konsumsi menjadi produksi bersih spesies; kematian bersifat per kapita.",
+            "formula": "\\dot x=\\eta C-dx,\\qquad \\dot n=q-C"
+          },
+          {
+            "explanation": "Substitusi fluks konsumsi menghasilkan sistem dua variabel tertutup.",
+            "formula": "\\boxed{\\dot x=x(\\eta u n-d),\\qquad \\dot n=q-u n x}"
+          },
+          {
+            "explanation": "Periksa arah medan pada batas biologis.",
+            "formula": "\\dot x\\big|_{x=0}=0,\\qquad \\dot n\\big|_{n=0}=q>0"
+          }
+        ],
+        "conclusion": "Model ini adalah satu jawaban minimal, bukan satu-satunya model yang mungkin. Pelindian nutrien, pemeliharaan, saturasi konsumsi, atau kompetisi intraspesifik memerlukan parameter dan asumsi tambahan."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH06-P02",
+      "ordinal": 2,
+      "problem_summary": "Tentukan apakah model kompetisi \\(\\dot x=x(1-x-a y)\\), \\(\\dot y=c y(1-y-bx)\\) terumuskan baik secara biologis untuk \\(a,b,c>0\\), dan buktikan jawaban melalui invariansi batas serta keterbatasan solusi.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\left\\{\\begin{align*} \\displaystyle \\frac{dx}{d \\tau} &amp; = x\\, (1 - x - a\\, y),\\\\ \\displaystyle \\frac{dy}{d \\tau} &amp; = c\\, y\\, (1 - y - b\\, x), \\end{align*}\\right. \\qquad (6.4)"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Pada setiap sumbu, komponen normal medan mempunyai faktor variabel yang nol. Setelah memperoleh nonnegativitas, bandingkan masing-masing komponen dengan persamaan logistik tanpa kompetitor."
+      },
+      "check": {
+        "type": "exact_positive_invariance_and_bounds",
+        "final_answer": "Ya. Ruas kanan berupa polinom, sehingga solusi lokal unik. Pada \\(x=0\\), \\(\\dot x=0\\); pada \\(y=0\\), \\(\\dot y=0\\). Karena itu kedua sumbu invarian dan, oleh keunikan, lintasan yang berawal di kuadran nonnegatif tidak dapat menyeberanginya. Di dalam kuadran, \\(\\dot x\\le x(1-x)\\) dan \\(\\dot y\\le c y(1-y)\\), sehingga \\(0\\le x(\\tau)\\le\\max\\{x_0,1\\}\\) dan \\(0\\le y(\\tau)\\le\\max\\{y_0,1\\}\\). Solusi karenanya tetap nonnegatif, terbatas, dan ada untuk semua \\(\\tau\\ge0\\).",
+        "quick_check": "Bukti lengkap harus mencakup keunikan, invariansi kedua sumbu, dan batas global; sekadar mengatakan bahwa faktor \\(x\\) dan \\(y\\) 'menjaga tanda' belum membuktikan tidak adanya ledakan waktu hingga."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Medan polinomial bersifat lokal Lipschitz, sehingga melalui setiap keadaan awal terdapat solusi lokal unik.",
+            "formula": "F(x,y)=\\bigl(x(1-x-a y),\\;c y(1-y-bx)\\bigr)"
+          },
+          {
+            "explanation": "Setiap sumbu adalah lintasan invarian.",
+            "formula": "F_1(0,y)=0,\\qquad F_2(x,0)=0"
+          },
+          {
+            "explanation": "Jika lintasan interior mencapai sumbu lalu melintasinya, akan ada dua solusi melalui titik batas yang sama, bertentangan dengan keunikan.",
+            "formula": "(x_0,y_0)\\in[0,\\infty)^2\\Longrightarrow (x(\\tau),y(\\tau))\\in[0,\\infty)^2"
+          },
+          {
+            "explanation": "Suku kompetisi tidak positif, sehingga setiap spesies didominasi oleh persamaan logistik skalar.",
+            "formula": "\\dot x\\le x(1-x),\\qquad \\dot y\\le c y(1-y)"
+          },
+          {
+            "explanation": "Perbandingan logistik memberi kotak pembatas maju dan meniadakan ledakan waktu hingga.",
+            "formula": "0\\le x\\le\\max\\{x_0,1\\},\\qquad 0\\le y\\le\\max\\{y_0,1\\}"
+          }
+        ],
+        "conclusion": "Model (6.4) terumuskan baik secara biologis pada kuadran nonnegatif untuk parameter positif."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH06-P03",
+      "ordinal": 3,
+      "problem_summary": "Untuk model kompetisi (6.4) dengan \\(a<1\\) dan \\(b>1\\), gunakan bidang fase terbuka untuk menentukan dinamika jangka panjang dan makna biologisnya. Gunakan titik tetap yang dikoreksi \\(P_2=(0,1)\\), bukan pengulangan \\(P_1\\) yang tercetak pada sumber.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH06-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\left\\{\\begin{align*} \\displaystyle \\frac{dx}{d \\tau} &amp; = x\\, (1 - x - a\\, y),\\\\ \\displaystyle \\frac{dy}{d \\tau} &amp; = c\\, y\\, (1 - y - b\\, x), \\end{align*}\\right. \\qquad (6.4)",
+        "a \\lt 1",
+        "b &gt; 1"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Hitung nilai eigen pada \\((0,0)\\), \\((1,0)\\), dan \\((0,1)\\). Untuk titik potong dua nullcline, pisahkan kasus \\(ab<1\\), \\(ab>1\\), dan \\(ab=1\\); dalam ketiganya tidak ada titik tetap interior nonnegatif."
+      },
+      "check": {
+        "type": "exact_phase_plane_classification",
+        "final_answer": "Titik tetap nonnegatif adalah \\(P_0=(0,0)\\), \\(P_1=(1,0)\\), dan \\(P_2=(0,1)\\). Kandidat \\(P_3=((1-a)/(1-ab),(1-b)/(1-ab))\\) berada di luar kuadran pertama jika \\(ab\\ne1\\); jika \\(ab=1\\), kedua nullcline interior sejajar dan tidak berpotongan. Nilai eigen berturut-turut adalah \\((1,c)\\) di \\(P_0\\), \\((-1,c(1-b))\\) di \\(P_1\\), dan \\((1-a,-c)\\) di \\(P_2\\). Jadi \\(P_0\\) sumber, \\(P_1\\) simpul stabil, dan \\(P_2\\) pelana. Semua kondisi awal interior \\(x_0,y_0>0\\) menuju \\((1,0)\\): spesies \\(x\\) bertahan pada kapasitas dukung terskalakan, sedangkan spesies \\(y\\) tersingkir.",
+        "quick_check": "Hasil numerik harus menuju \\((1,0)\\) dari beberapa kondisi awal interior dan tidak boleh memakai titik salah \\(P_2=(1,0)\\). Klasifikasi umum: \\(a,b<1\\) memberi koeksistensi stabil; \\(a,b>1\\) memberi dua keadaan eksklusi stabil yang dipisahkan pelana interior; tanda campuran memberi dominasi satu spesies."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Pecahkan faktor pada kedua persamaan. Daftar empat kandidat yang benar memperbaiki salah cetak sumber yang menggandakan \\((1,0)\\).",
+            "formula": "P_0=(0,0),\\quad P_1=(1,0),\\quad P_2=(0,1),\\quad P_3=\\left(\\frac{1-a}{1-ab},\\frac{1-b}{1-ab}\\right)"
+          },
+          {
+            "explanation": "Karena \\(1-a>0\\) dan \\(1-b<0\\), salah satu koordinat \\(P_3\\) negatif untuk setiap tanda \\(1-ab\\). Pada \\(ab=1\\), persamaan nullcline tidak konsisten karena \\(a<1<b\\).",
+            "formula": "ab<1:\\ y_3<0;\\qquad ab>1:\\ x_3<0;\\qquad ab=1:\\ P_3\\text{ tidak ada}"
+          },
+          {
+            "explanation": "Evaluasi Jacobian pada tiga titik tetap biologis.",
+            "formula": "\\sigma(J(P_0))=\\{1,c\\},\\quad \\sigma(J(P_1))=\\{-1,c(1-b)\\},\\quad \\sigma(J(P_2))=\\{1-a,-c\\}"
+          },
+          {
+            "explanation": "Keterbatasan dari Soal 2 dan kriteria Dulac meniadakan atraktor tak terbatas dan orbit periodik interior; manifold stabil \\(P_2\\) berada pada sumbu \\(y\\).",
+            "formula": "\\nabla\\!\\cdot\\!\\left(\\frac{F}{xy}\\right)=-\\frac1y-\\frac{c}{x}<0"
+          },
+          {
+            "explanation": "Dengan demikian setiap lintasan interior hanya dapat berakhir pada simpul stabil \\(P_1\\).",
+            "formula": "(x(\\tau),y(\\tau))\\longrightarrow(1,0)"
+          },
+          {
+            "explanation": "Untuk pemeriksaan umum di titik interior, diskriminan karakteristik yang benar memuat faktor \\((1-ab)\\) di dalam suku determinan.",
+            "formula": "\\Delta=T^2-4D=\\frac{[a-1+c(b-1)]^2-4c(a-1)(b-1)(1-ab)}{(1-ab)^2}"
+          }
+        ],
+        "conclusion": "Spesies \\(x\\) merupakan kompetitor unggul dalam rezim ini. Rumus diskriminan pada sumber, \\([(a-1)-c(b-1)]^2/(1-ab)^2\\), kehilangan suku \\(4abc(a-1)(b-1)/(1-ab)^2\\) dan tidak benar secara umum."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH06-P04",
+      "ordinal": 4,
+      "problem_summary": "Untuk \\(\\dot x=-x+4-xy\\), \\(\\dot y=-xy+y+y^2\\) pada \\(x,y\\ge0\\), tentukan titik tetap, linearisasi dan kestabilannya, sketsa bidang fase dengan perangkat terbuka, lalu nilai kelayakan biologis model.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH06-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\left\\{\\begin{align*} \\displaystyle \\frac{dx}{dt} &amp; = - x + 4 - x y,\\\\ \\displaystyle \\frac{dy}{dt} &amp; = - x y + y + y^2, \\end{align*}\\right."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Nullcline pertama adalah \\(x=4/(1+y)\\). Nullcline kedua adalah \\(y=0\\) atau \\(x=1+y\\). Setelah klasifikasi lokal, perhatikan tanda suku \\(+y^2\\) ketika \\(y\\) besar."
+      },
+      "check": {
+        "type": "exact_fixed_points_eigenvalues_and_biological_audit",
+        "final_answer": "Dalam kuadran nonnegatif terdapat dua titik tetap: \\((4,0)\\) dan \\((2,1)\\). Jacobian ialah \\(J(x,y)=\\begin{pmatrix}-1-y&-x\\\\-y&-x+1+2y\\end{pmatrix}\\). Di \\((4,0)\\), nilai eigennya \\(-1,-3\\), sehingga titik itu simpul stabil. Di \\((2,1)\\), nilai eigennya \\((-1-\\sqrt{17})/2\\) dan \\((-1+\\sqrt{17})/2\\), sehingga titik itu pelana. Kuadran nonnegatif invarian, tetapi model tidak terumuskan baik secara global untuk semua keadaan biologis: \\(x(t)\\le\\max\\{x_0,4\\}\\), sedangkan untuk \\(y\\) cukup besar berlaku \\(\\dot y\\ge y^2/2\\), sehingga beberapa solusi meledak dalam waktu hingga. Karena itu model hanya mungkin menjadi pendekatan lokal; suku \\(+y^2\\) memerlukan mekanisme pembatas untuk model populasi global.",
+        "quick_check": "Jejak dan determinan harus \\((-4,3)\\) di \\((4,0)\\) dan \\((-1,-4)\\) di \\((2,1)\\). Pada batas \\(x=0\\), \\(\\dot x=4>0\\); pada batas \\(y=0\\), \\(\\dot y=0\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Nullcline \\(y=0\\) memberi titik batas, sedangkan cabang \\(x=1+y\\) memberi titik interior.",
+            "formula": "y=0\\Rightarrow x=4;\\qquad x=1+y,\\ x(1+y)=4\\Rightarrow(x,y)=(2,1)"
+          },
+          {
+            "explanation": "Turunkan kedua komponen medan.",
+            "formula": "J(x,y)=\\begin{pmatrix}-1-y&-x\\\\-y&-x+1+2y\\end{pmatrix}"
+          },
+          {
+            "explanation": "Matriks di titik batas berbentuk segitiga.",
+            "formula": "J(4,0)=\\begin{pmatrix}-1&-4\\\\0&-3\\end{pmatrix},\\qquad \\lambda=-1,-3"
+          },
+          {
+            "explanation": "Di titik interior, determinan negatif langsung menunjukkan pelana.",
+            "formula": "J(2,1)=\\begin{pmatrix}-2&-2\\\\-1&1\\end{pmatrix},\\quad \\lambda^2+\\lambda-4=0,\\quad \\lambda_{\\pm}=\\frac{-1\\pm\\sqrt{17}}2"
+          },
+          {
+            "explanation": "Nullcline \\(x=4/(1+y)\\), garis \\(x=1+y\\), dan manifold stabil pelana membagi lintasan yang menuju \\((4,0)\\) dari lintasan dengan \\(y\\) meningkat tak terbatas.",
+            "formula": "\\dot x=0\\iff x=\\frac4{1+y},\\qquad \\dot y=0\\iff y=0\\text{ atau }x=1+y"
+          },
+          {
+            "explanation": "Kuantifikasi cacat biologis. Karena \\(x\\le M=\\max\\{x_0,4\\}\\), bila \\(y\\ge2(M-1)\\), pertumbuhan \\(y\\) mendominasi persamaan Riccati yang meledak.",
+            "formula": "\\dot y=y(1+y-x)\\ge y(y+1-M)\\ge\\frac12y^2"
+          }
+        ],
+        "conclusion": "Model menjaga nonnegativitas, tetapi tidak menjaga keterbatasan atau keberadaan global. Suku kuadrat positif pada \\(y\\) membuatnya tidak memadai sebagai model populasi global tanpa saturasi, mortalitas bergantung kerapatan, atau pembatas lain."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH06-P05",
+      "ordinal": 5,
+      "problem_summary": "Untuk \\(\\dot X=-\\alpha X+\\beta\\), \\(\\dot Y=\\gamma XY-\\delta Y-\\zeta Y^2\\) dengan semua parameter positif, tentukan dimensi setiap parameter dan turunkan satu bentuk tak berdimensi yang sah beserta alasan pemilihan skalanya.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\left\\{\\begin{align*} \\displaystyle \\frac{d X}{d t} &amp; =- \\alpha X + \\beta,\\\\ \\displaystyle \\frac{d Y}{d t} &amp; = \\gamma X Y - \\delta Y - \\zeta Y^2, \\end{align*}\\right. \\qquad \\alpha, \\beta, \\gamma, \\delta, \\zeta &gt; 0."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Biarkan \\([X]=\\mathsf X\\), \\([Y]=\\mathsf Y\\), dan \\([t]=T\\). Gunakan keadaan tunak persamaan pertama \\(X_0=\\beta/\\alpha\\), skala waktu \\(1/\\alpha\\), dan skala \\(Y_0=\\alpha/\\zeta\\), yang selalu positif."
+      },
+      "check": {
+        "type": "exact_dimensions_and_nondimensionalization",
+        "final_answer": "Dengan \\([X]=\\mathsf X\\), \\([Y]=\\mathsf Y\\), dan \\([t]=T\\), dimensinya adalah \\([\\alpha]=T^{-1}\\), \\([\\beta]=\\mathsf XT^{-1}\\), \\([\\gamma]=\\mathsf X^{-1}T^{-1}\\), \\([\\delta]=T^{-1}\\), dan \\([\\zeta]=\\mathsf Y^{-1}T^{-1}\\). Ambil \\(X_0=\\beta/\\alpha\\), \\(Y_0=\\alpha/\\zeta\\), \\(\\tau=\\alpha t\\), \\(x=X/X_0\\), dan \\(y=Y/Y_0\\). Maka \\(dx/d\\tau=1-x\\) dan \\(dy/d\\tau=y(\\rho x-\\mu-y)\\), dengan dua parameter tak berdimensi \\(\\rho=\\gamma\\beta/\\alpha^2\\) dan \\(\\mu=\\delta/\\alpha\\).",
+        "quick_check": "Substitusi balik harus memulihkan kedua persamaan asli. \\(\\rho\\) dan \\(\\mu\\) wajib tak berdimensi, dan semua skala harus positif tanpa memerlukan syarat tambahan seperti \\(\\gamma\\beta>\\alpha\\delta\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Samakan dimensi kedua suku pada persamaan \\(X\\) dengan \\([\\dot X]=\\mathsf XT^{-1}\\).",
+            "formula": "[\\alpha]=T^{-1},\\qquad[\\beta]=\\mathsf XT^{-1}"
+          },
+          {
+            "explanation": "Samakan tiga suku pada persamaan \\(Y\\) dengan \\([\\dot Y]=\\mathsf YT^{-1}\\).",
+            "formula": "[\\gamma]=\\mathsf X^{-1}T^{-1},\\qquad[\\delta]=T^{-1},\\qquad[\\zeta]=\\mathsf Y^{-1}T^{-1}"
+          },
+          {
+            "explanation": "Pilih skala \\(X\\) dari keseimbangan pasokan–peluruhan, skala waktu dari laju peluruhan \\(X\\), dan skala \\(Y\\) agar koefisien kuadrat menjadi satu.",
+            "formula": "X_0=\\frac\\beta\\alpha,\\qquad t_0=\\frac1\\alpha,\\qquad Y_0=\\frac\\alpha\\zeta"
+          },
+          {
+            "explanation": "Masukkan \\(X=X_0x\\), \\(Y=Y_0y\\), dan \\(\\tau=t/t_0=\\alpha t\\).",
+            "formula": "\\frac{dx}{d\\tau}=1-x"
+          },
+          {
+            "explanation": "Kelompokkan dua kombinasi parameter yang tersisa.",
+            "formula": "\\frac{dy}{d\\tau}=y(\\rho x-\\mu-y),\\qquad \\rho=\\frac{\\gamma\\beta}{\\alpha^2},\\quad\\mu=\\frac\\delta\\alpha"
+          }
+        ],
+        "conclusion": "Penskalaan ini selalu terdefinisi untuk parameter positif dan mengurangi lima parameter berdimensi menjadi dua kelompok tak berdimensi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH06-P06",
+      "ordinal": 6,
+      "problem_summary": "Dengan merujuk artikel primer Fussmann dkk., identifikasi predator, mangsa, peran \\(N\\), serta variabel \\(C,R,B\\); kemudian turunkan reduksi tanpa pemisahan Brachionus reproduktif dan nonreproduktif dengan menandai asumsi penutupannya secara eksplisit.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH06-LINK02"
+      ],
+      "source_formula_occurrences": [
+        "N",
+        "Brachionus"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Gunakan definisi tepat pada Fussmann dkk., Science 290 (2000), hlm. 1358, Persamaan (1)–(4): bedakan \\(R\\), yaitu Brachionus reproduktif, dari \\(B\\), yaitu total Brachionus. Agar model tanpa pemisahan demografis tertutup dalam \\(B\\), nyatakan asumsi tambahan \\(R=B\\) sebelum menghapus persamaan \\(R\\)."
+      },
+      "check": {
+        "type": "primary_source_supported_model_reduction",
+        "final_answer": "Menurut Fussmann dkk., Science 290 (2000), hlm. 1358, Persamaan (1)–(4), predator adalah rotifera \\(\\textit{Brachionus calyciflorus}\\) dan mangsa adalah alga \\(\\textit{Chlorella vulgaris}\\). \\(N\\) adalah konsentrasi nitrogen dinamis, yakni sumber daya pembatas pertumbuhan alga; \\(C\\) menyatakan Chlorella, \\(R\\) Brachionus yang bereproduksi, dan \\(B\\) total Brachionus. Satu reduksi tanpa pemisahan demografis menetapkan penutupan tambahan \\(R=B\\), menghapus persamaan \\(R\\) serta parameter transisi \\(\\lambda\\), mempertahankan persamaan \\(N\\) dan \\(C\\), dan mengganti persamaan predator dengan \\(dB/dt=F_B(C)B-(\\delta+m)B\\). Reduksi ini adalah asumsi penyederhanaan baru, bukan identitas yang diturunkan tanpa syarat dari model empat persamaan.",
+        "quick_check": "Jawaban harus memuat Brachionus calyciflorus sebagai predator, Chlorella vulgaris sebagai mangsa, \\(N\\) sebagai konsentrasi nitrogen dinamis/sumber daya pembatas alga, serta arti \\(C,R,B\\). Persamaan tereduksi wajib memakai \\(R=B\\), menghilangkan persamaan \\(R\\) dan \\(\\lambda\\), mempertahankan persamaan \\(N,C\\), serta menandai penutupan itu sebagai asumsi tambahan."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Artikel primer mengidentifikasi rantai trofik eksperimen dan memberi empat variabel keadaan pada hlm. 1358, Persamaan (1)–(4).",
+            "formula": "\\text{predator}=\\textit{Brachionus calyciflorus},\\qquad \\text{mangsa}=\\textit{Chlorella vulgaris}"
+          },
+          {
+            "explanation": "Notasi artikel memisahkan sumber daya lingkungan, mangsa, predator reproduktif, dan predator total.",
+            "formula": "N=\\text{konsentrasi nitrogen dinamis},\\quad C=\\text{Chlorella},\\quad R=\\text{Brachionus reproduktif},\\quad B=\\text{Brachionus total}"
+          },
+          {
+            "explanation": "Nitrogen bukan sekadar parameter: \\(N\\) berubah menurut persamaan dinamis dan menjadi sumber daya pembatas yang memasuki pertumbuhan alga pada persamaan \\(C\\).",
+            "formula": "(N,C)\\text{ tetap dipertahankan sebagai variabel keadaan}"
+          },
+          {
+            "explanation": "Menghapus pembedaan reproduktif/nonreproduktif memerlukan penutupan eksplisit yang menyamakan fraksi reproduktif dengan populasi total.",
+            "formula": "R=B"
+          },
+          {
+            "explanation": "Di bawah penutupan tersebut, hapus persamaan tersendiri untuk \\(R\\) dan parameter perpindahan demografis \\(\\lambda\\); gunakan total \\(B\\) langsung dalam pertumbuhan predator.",
+            "formula": "\\frac{dB}{dt}=F_B(C)B-(\\delta+m)B"
+          },
+          {
+            "explanation": "Persamaan nitrogen dan Chlorella dari model primer dipertahankan, dengan setiap kemunculan predator ditafsirkan melalui variabel total \\(B\\).",
+            "formula": "(N,C,B)\\text{ membentuk model tereduksi tiga variabel}"
+          }
+        ],
+        "conclusion": "Identifikasi organisme dan arti \\(N,C,R,B\\) berasal dari artikel primer Fussmann dkk., Science 290 (2000), hlm. 1358, Persamaan (1)–(4). Langkah \\(R=B\\), penghapusan \\(R\\) dan \\(\\lambda\\), serta persamaan tiga-variabel yang dihasilkan adalah penutupan penyederhanaan yang ditambahkan untuk menjawab soal, sehingga harus dilaporkan sebagai asumsi model."
+      }
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "assets": [
+    {
+      "bytes": 269240,
+      "epub_member": "EPUB/assets/CSIR_PP-1024x760.png",
+      "path": "assets/sir-phase-source.png",
+      "sha256": "6fb4ddda16dc32455db64ec8211e561260118f5a2994aa88b503a179d851c08b"
+    },
+    {
+      "bytes": 307592,
+      "epub_member": "EPUB/assets/CESIR_PP1-1024x759.png",
+      "path": "assets/endemic-phase-1-source.png",
+      "sha256": "20862c9a7ae87d9d6cc5d3c00a5ea855ee7c7a786cd832e40b6aebf8acbb63af"
+    },
+    {
+      "bytes": 288503,
+      "epub_member": "EPUB/assets/CESIR_PP2-1024x759.png",
+      "path": "assets/endemic-phase-2-source.png",
+      "sha256": "e1b4360292dceb3d403cc54cc1b76cf1b45d80a9331acdad6a2f460d77eb9058"
+    }
+  ],
+  "content_raw": {
+    "bytes": 20928,
+    "path": "content.raw.en.html",
+    "sha256": "027493e86a470e8573d48833b41e4bc365910b255bd7324f1d7ae3272d17c38c"
+  },
+  "content_rendered": {
+    "bytes": 25513,
+    "path": "content.rendered.en.html",
+    "sha256": "693f9e8f071b13eda7ff585d506844fc264372d88cbcd12997f93254a3f8dd0e"
+  },
+  "record": {
+    "bytes": 48627,
+    "path": "source-record.canonical.json",
+    "sha256": "dcf828ca5ce0c58ced8eb5203dfd1b5a949bd6af3b9c000017a6dd133bb58d2f"
+  },
+  "schema": "o005-unit-authority-v1",
+  "source_modified_gmt": "2026-03-19T20:23:36Z",
+  "source_record_id": 57,
+  "unit_id": "O005-LEGA-V101-CH07"
+}

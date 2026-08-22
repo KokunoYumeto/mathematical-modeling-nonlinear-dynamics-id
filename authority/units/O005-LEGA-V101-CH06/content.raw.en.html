@@ -1,0 +1,182 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Learning Objectives</h2>
+</header>
+<div class="textbox__content">
+
+At the end of this chapter, you will be able to do the following.
+<ul>
+ 	<li>Create coupled differential equation models for predator-prey and competing species systems.</li>
+ 	<li>Formulate dimensionless versions of two-dimensional models and appraise their dynamics by means of phase plane analysis.</li>
+ 	<li>Translate the results of model analysis into biological terms and discuss their significance in that context.</li>
+</ul>
+</div>
+</div>
+<h2>Predator-prey models: the Lotka-Volterra equations</h2>
+Consider a closed system involving a population of predators (e.g. sharks) and prey (e.g. little fish). Let $latex F$ represent the density of prey and $latex S$ that of the predator. It is clear that if there is abundant prey, predators will proliferate. As a consequence, more prey will be eaten and $latex F$ will decrease, but so will $latex S$ since there will be less food for the predators. However, if $latex S$ decreases, $latex F$ will have a chance to grow again since the prey will not be eaten as much. This reasoning suggests that parameter values may exist for which $latex F$ and $latex S$ oscillate in time[footnote]A.J. Lotka, <em>Elements of Physical Biology</em>, Williams &amp; Wilkins, Baltimore, 1925; Dover, New York, 1956.[/footnote][footnote]V. Volterra, <em>Leçons sur la Théorie Mathématique de la Lutte pour la Vie</em>, Gauthier-Villars, Paris, 1931.[/footnote].
+
+If we neglect migration, and assume that $latex F$ and $latex S$ are the only dependent variables - in particular we assume that there is an ample (but not infinite) supply of nutrients for the prey, we may write
+<p style="text-align: center"><a id="LV"></a>$latex \displaystyle \left\{\begin{align*} \displaystyle \frac{dF}{dt} &amp;=F \left(\alpha - \beta F - \gamma S \right) \equiv g(F,S),\\ \displaystyle \frac{dS}{dt} &amp;= S \left( - \kappa + \delta F \right) \equiv h(F,S), \end{align*}\right. \qquad (6.1)$</p>
+where the constant parameters $latex \alpha$, $latex \beta$, $latex \gamma$, $latex \kappa$ and $latex \delta$ are all non-negative. This model indicates that when $latex S = 0,$ the prey population evolves according to a logistic model, and that when $latex S \ne 0$, prey are eaten proportionally to both their own abundance ($latex F$) and that of the predators ($latex S$). The predators have a growth (birth minus death) rate equal to $latex -\kappa$ if $latex F=0$. Since $latex \kappa$ is positive, this means that in the absence of prey, the predator population would be driven to extinction. The growth rate of $latex S$ is then corrected by a linear term $latex \delta\, F\, S$, proportional to $latex F$.
+
+If $latex \beta = 0$, this model is called the Lotka-Volterra system (see footnotes 1 and 2 for references) and is the simplest continuous model that incorporates the basic factors describing the interaction of a predator and its prey. It should be considered as a starting point for more complicated and more realistic models. The rest of this section is devoted to an analysis of Equations (<a href="#LV">6.1</a>).
+<h3>Scalings</h3>
+Equations (<a href="#LV">6.1</a>) involve three variables, $latex F$, $latex S$ and $latex t$, and five parameters, which we assume are positive (except possibly for $latex \beta$). Scaling all of the variables should allow us to reduce this system to a problem with two (i.e. five minus three) parameters. A typical value for $latex F$ is given by $latex F_0 = \kappa / \delta$ (see the second equation of (<a href="#LV">6.1</a>)), and a typical value for $latex S$ can be chosen as $latex S_0 = \alpha / \gamma$ in a similar fashion. For a characteristic time, we may take $latex \tau = 1 / \kappa$. Then, if we define $latex \displaystyle f = \frac{F}{F_0}, $ $latex \displaystyle s = \frac{S}{S_0},$ and $latex \tau = \kappa t,$ we obtain a dimensionless, canonical model, which reads
+<p style="text-align: center"><a id="CLV"></a>$latex \displaystyle \left\{\begin{align*} \displaystyle \frac{d f}{d \tau} &amp; = a f (1 - b f - s),\\ \displaystyle \frac{d s}{d \tau} &amp; = s (-1 + f), \end{align*}\right. \qquad (6.2)$</p>
+Here, the parameters $latex a$ and $latex b$ are related to the original parameters by $latex \displaystyle a = \frac{\alpha}{\kappa}$, $latex \displaystyle b = \frac{\beta \kappa}{\alpha \delta},$ and are therefore positive.
+<h3>Phase plane analysis</h3>
+A description of the phase plane associated with system (<a href="#CLV">6.2</a>) gives us a qualitative understanding of the predator-prey equations. With this information, we are able to address questions such as those listed below, even if we do not have explicit forms for all of the solutions of (<a href="#CLV">6.2</a>).
+<ul>
+ 	<li>Is it possible for the populations of sharks or little fish to go extinct?</li>
+ 	<li>Does the model make biological sense?</li>
+ 	<li>Can oscillations be observed?</li>
+</ul>
+Before going any further, it is important to check that the model is ``biologically well-posed,'' i.e. that if $latex s$ and $latex f$ are initially non-negative, they will remain so. Assume for instance that $latex s=0$. Then, the second equation of (<a href="#CLV">6.2</a>) indicates that $latex s$ will remain zero. Trajectories in the $latex (f,s)$ plane are therefore along the $latex f$ axis or away from it, but do not cross this axis. Similarly, the first equation of (<a href="#CLV">6.2</a>) shows that trajectories do not cross the $latex s$ axis.
+
+We now turn to a description of the phase portrait of system (<a href="#CLV">6.2</a>). The fixed points of this system are given below in terms of their coordinates in the $latex (f,s)$ plane. They are
+<p style="text-align: center">$latex \displaystyle P_0 = (0, 0), \qquad P_1 = \left(\frac{1}{b}, 0\right), \qquad P_2 = (1, 1 - b),$</p>
+and are all located in the first quadrant provided $latex 0 \lt b \le 1$, which we will assume is true. Linear stability analysis can be used to describe the local dynamics of (<a href="#CLV">6.2</a>) near its three fixed points. The Jacobian of (<a href="#CLV">6.2</a>) is given by
+<p style="text-align: center">$latex J(f,s) = \displaystyle \left(\begin{array}{cc} a (1 - 2 b f - s) &amp; - a f \\ s &amp; -1 + f \end{array} \right).$</p>
+
+<h4 style="text-align: left">Analysis near the origin, $latex P_0$</h4>
+<p style="text-align: justify">For $latex P_0$, $latex s = f = 0$ and the Jacobian $latex J(0,0)$ is diagonal. Its eigenvalues are $latex a$ and $latex -1$, with associated eigenvectors $latex \displaystyle \left(\begin{array}{c}1 \\ 0 \end{array}\right)$ and $latex \displaystyle \left(\begin{array}{c}0 \\ 1 \end{array}\right)$ respectively. The origin is therefore a saddle point.</p>
+
+<h4>Analysis near $latex P_1$</h4>
+<p style="text-align: justify">For $latex P_1$, $latex f = 1/b$ and $latex s = 0.$ The Jacobian $latex J(1/b,0)$ is an upper-triangular matrix and its eigenvalues are therefore its diagonal entries. They are $latex -a$ and $latex -1+1/b$. Since $latex b \le 1$, this fixed point is also a saddle (with possibly a neutral direction if $latex b = 1$). The eigenspace associated with $latex -a$ is spanned by $latex \displaystyle \left(\begin{array}{c}1 \\ 0 \end{array}\right)$, and the eigenspace associated with $latex -1+1/b$ is spanned by $latex \displaystyle \left(\begin{array}{c}1 \\ (-a b + b- 1)/a \end{array}\right)$.</p>
+
+<h4>Analysis near $latex P_2$</h4>
+<p style="text-align: justify">For $latex P_2$,  $latex f = 1$ and $latex s = 1 - b$. The Jacobian $latex J(1,1 - b)$ reads</p>
+<p style="text-align: center">$latex \displaystyle J(1 - b, 1) = \left(\begin{array}{cc} -a b &amp; -a \\ 1 - b &amp; 0 \end{array} \right),$</p>
+<p style="text-align: justify">and its eigenvalues $latex \lambda_1$ and $latex \lambda_2$ are such that</p>
+<p style="text-align: center">$latex \det(J) = \lambda_1 \lambda_2 = \det\left[J(1-b,1)\right] = a (1 - b) &gt; 0,$</p>
+<p style="text-align: justify">and</p>
+<p style="text-align: center">$latex \hbox{Tr}(J) = \lambda_1 + \lambda_2 = \hbox{Tr}\left[J(1-b,1)\right] = - a b \lt 0.$</p>
+<p style="text-align: justify">Therefore $latex P_2$ is either a stable node or a stable spiral.<a id="Fig_6.1"></a></p>
+
+[caption id="attachment_49" align="alignnone" width="800"]<img class="wp-image-49" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CLV_PP1-1024x784.png" alt="Phase portrait. Long description available." width="800" height="612" /> Figure 6.1. Phase plane of model (6.2) with <em>a</em> = 1 and <em>b</em> = 0.5, plotted with the software PPLANE. [<a href="#Fig_6.1_Desc"><em>Image Description</em></a>][/caption]
+<p style="text-align: justify">This analysis thus indicates that if the initial values of $latex f$ and $latex s$ are positive, then the dynamics will converge to the fixed point $latex P_2$, for which both shark and fish populations are of finite size. In other words, no periodic oscillations are observed. Figure 6.1 shows the phase plane of system (<a href="#CLV">6.2</a>) for $latex a=1$ and $latex b=0.5$, obtained with PPLANE. In this case, the fixed point $latex P_2$ is a stable spiral.</p>
+<p style="text-align: justify">As an exercise, the reader should work out the case where $latex b &gt; 1$, for which only two of the fixed points are in the first quadrant. Then, $latex P_1$ is a stable node and all initial conditions with $latex f &gt; 0$ and $latex s &gt; 0$ converge to $latex P_1$. In this situation, the sharks are extinct and the fish have reached the carrying capacity of the environment they live in.<a id="Fig_6.2"></a></p>
+
+[caption id="attachment_50" align="alignnone" width="800"]<img class="wp-image-50" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CLV_PP2-1024x777.png" alt="Phase portrait. Long description available." width="800" height="607" /> Figure 6.2. Phase plane of the Lotka-Volterra model (6.2) with <em>a</em> = 1 and <em>b</em> = 0, plotted with the software PPLANE. [<a href="#Fig_6.2_Desc"><em>Image Description</em></a>][/caption]
+<p style="text-align: justify">It is possible to observe oscillations, provided we set $latex b = 0$. This is indeed a necessary condition if we want $latex P_2$ to be a center, since Tr$latex (J(P_2)) = - a b$ and $latex \det(J(P_2)) = a (1 - b)$. Indeed, setting $latex b =0$ makes the trace of $latex J(P_2)$ vanish, but keeps its determinant positive. In this case, $latex P_1$ disappears (it is in fact sent to infinity as $latex b$ goes to zero), and we are left with two fixed points, $latex P_0 = (0, 0)$ and $latex P_2 = (1, 1)$. The Jacobian $latex J(1,1) = \left(\begin{array}{cc} 0 &amp; -a \\ 1 &amp; 0 \end{array} \right)$ has eigenvalues $latex \pm i \sqrt a$, so $latex P_2$ is now a linear center, as expected. Figure  6.2 shows the corresponding phase plane, with closed trajectories around $latex P_2$. We can prove the existence of close trajectories as follows. Any trajectory in the phase plane is such that</p>
+<p style="text-align: center">$latex \displaystyle \frac{d f}{d s} = \frac{a f (1 - b f - s)}{s (-1 + f)}.$</p>
+<p style="text-align: justify">When $latex b = 0$, an implicit solution to this equation is</p>
+<p style="text-align: center">$latex \displaystyle \left(f \exp(-f) \right) \left(s \exp(-s)\right)^a = \zeta,$</p>
+<p style="text-align: justify">where $latex \zeta$ is a non-negative constant. It is easy to see that there are values of $latex \zeta$ for which this equation defines a closed curve around $latex P_2$. Indeed, the function $latex x \exp(-x)$ is zero at the origin, has a maximum equal to $latex 1/e$ at $latex x=1$, and goes to zero as $latex x \rightarrow \infty$. As a consequence, for given values of $latex s$ and $latex a$, one can find a range of values of $latex \zeta$ such that the equation $latex f \exp(-f) = \displaystyle \frac{\zeta}{\left( s \exp(-s) \right)^a}$ has two solutions, one on each side of $latex f = 1$. A similar reasoning applies to cross-sections parallel to the $latex s$-axis. These closed trajectories are drawn counterclockwise in the first quadrant of the $latex (f,s)$ plane, since</p>
+<p style="text-align: center">$latex \displaystyle \frac{d f}{d \tau} = a f (1 - s) &gt; 0 \Leftrightarrow s \lt 1 \text{ and }\frac{d s}{d \tau} = s (-1 + f) &gt; 0 \Leftrightarrow f &gt; 1.$</p>
+<p style="text-align: justify">The Lotka-Volterra model therefore predicts periodic oscillations of the predator and prey populations.</p>
+<p style="text-align: justify">The ideas developed in this section can be generalized to more complex systems. For instance, it is shown in a 2000 article by G.F. Fussmann <em>et al</em>. entitled <a href="http://dx.doi.org/10.1126/science.290.5495.1358"><em>Crossing the Hopf Bifurcation in a Live Predator-Prey System</em></a>, that the predictions of a predator-prey model involving environmental factors as well as reproductive and non-reproductive fractions of a population compare very well with experimental results.</p>
+
+<h2>Two competing species</h2>
+<p style="text-align: justify">We now turn to the problem of two species competing for the same resources. We will assume that in the absence of the other species, each species grows according to a logistic law. The competition for food makes the growth rate of each species limited by the presence of the other. As a first approximation, this effect is linear. If we denote by $latex X$ and $latex Y$ the average density of each species, we thus have</p>
+<p style="text-align: center"><a id="CS"></a>$latex \displaystyle \left\{\begin{align*} \displaystyle \frac{dX}{dt} &amp; = X (\alpha - \beta X - \gamma Y), \\ \displaystyle \frac{dY}{dt} &amp; = Y (\delta - \kappa Y - \zeta X), \end{align*}\right. \qquad (6.3)$</p>
+<p style="text-align: justify">where $latex \alpha$, $latex \beta$, $latex \gamma$, $latex \delta$, $latex \kappa$ and $latex \zeta$ are positive parameters. As for the Lotka-Volterra model, we first rescale these equations in order to reduce the number of independent parameters. We then perform a phase plane analysis to describe the dynamics of the competing species.</p>
+
+<h3>Scalings</h3>
+<p style="text-align: justify">Characteristic values of $latex X$ and $latex Y$ are $latex X_0 = \alpha/\beta$ and $latex Y_0 = \delta / \kappa$. A characteristic time is for instance $latex t_0 = 1/\alpha$. So we can define dimensionless quantities as</p>
+<p style="text-align: center">$latex \displaystyle x = \frac{X}{X_0}, \qquad y = \frac{Y}{Y_0}, \qquad \tau = \frac{t}{t_0},$</p>
+<p style="text-align: justify">substitute these expressions into Equations (<a href="#CS">6.3</a>), and look for a simplified system for the variables $latex x$ and $latex y$. We obtain</p>
+<p style="text-align: center"><a id="CCS"></a>$latex \displaystyle \left\{\begin{align*} \displaystyle \frac{dx}{d \tau} &amp; = x\, (1 - x - a\, y),\\ \displaystyle \frac{dy}{d \tau} &amp; = c\, y\, (1 - y - b\, x), \end{align*}\right. \qquad (6.4)$</p>
+<p style="text-align: justify">where $latex \displaystyle a = \frac{\gamma \delta}{\alpha \kappa},$ $latex \displaystyle b = \frac{\zeta \alpha}{\beta \delta},$ and $latex \displaystyle c = \frac{\delta}{\alpha}.$ We thus have a three-parameter model. This was to be expected since we initially had a six-parameter nonlinear system, and had the possibility of rescaling three variables, $latex t$, $latex X$ and $latex Y$. We leave the question of biological well-posedness as an exercise and directly move to an analysis of the fixed points of Equations (<a href="#CCS">6.4</a>).</p>
+
+<h3>Phase plane analysis</h3>
+As usual, fixed points are obtained by solving $latex x(1 - x - a y) = 0$ and $latex y (1 - y - b x) = 0.$ This system of equations has four solutions, given by
+<p style="text-align: center">$latex P_0 = (0,0), \quad P_1 = (1, 0), \quad P_2 = (1, 0), \quad P_3 = \displaystyle \left(\frac{1 - a}{1 - a b},\frac{1 - b}{1 - a b}\right).$</p>
+<p style="text-align: justify">The last fixed point $latex P_3$ is in the first quadrant only if $latex 1-a$, $latex 1 - b$ and $latex 1 - a b$ are all of the same sign, and $latex a b \ne 1$. In what follows, we assume that these conditions are satisfied, and denote by $latex \epsilon = \pm 1$, the sign of any of these three quantities, i.e.</p>
+<p style="text-align: center">$latex \epsilon = \text{sign}(1 - a) = \text{sign}(1 - b) = \text{sign}(1 - a b).$</p>
+The Jacobian of (<a href="#CCS">6.4</a>) is
+<p style="text-align: center">$latex J(x,y) = \displaystyle \left(\begin{array}{cc} 1 - 2 x - a y &amp; - a x \\ - b \, c \, y &amp; c (1 - 2 y - b x)\end{array} \right).$</p>
+We can now calculate the eigenvalues of $latex J(x,y)$ evaluated at each of the fixed points.
+<h4 style="text-align: left">Analysis near the origin, $latex P_0$</h4>
+<p style="text-align: justify">For $latex P_0,$ $latex J(0,0)$ is diagonal and its eigenvalues are $latex 1$ and $latex c$. Since they are both positive, the origin is an unstable node.</p>
+
+<h4 style="text-align: left">Analysis near $latex P_1$</h4>
+<p style="text-align: justify">For $latex P_1,$ $latex J(1,0)$ is upper-triangular, and its eigenvalues are $latex -1$ and $latex c (1-b)$. If $latex \epsilon = 1,$ then $latex P_1$ is a saddle. If $latex \epsilon = -1$, it is a stable node.</p>
+
+<h4 style="text-align: left">Analysis near $latex P_2$</h4>
+<p style="text-align: justify">For $latex P_2,$ $latex J(0,1)$ is lower-triangular, and its eigenvalues are $latex 1 - a$ and $latex -c$. Thus $latex P_2$ is a saddle if $latex \epsilon = 1$, and a stable node if $latex \epsilon = -1$.</p>
+
+<h4 style="text-align: left">Analysis near $latex P_3$</h4>
+<p style="text-align: justify">For $latex P_3$, the Jacobian is</p>
+<p style="text-align: center">$latex \displaystyle J \left( \frac{1 - a}{1 - a b}, \frac{1 - b}{1 - a b} \right) = \displaystyle \frac{1}{1 - a b} \left(\begin{array}{cc} a-1 &amp; a\, (a-1) \\ b\,c\,(b-1) &amp; c\,(b-1)\end{array} \right).$</p>
+<p style="text-align: justify">Since its trace $latex T$ and determinant $latex D$ are given by</p>
+<p style="text-align: center">$latex \displaystyle T = \frac{1}{1 - a b} \left(a - 1 + c (b -1)\right), \quad D = \frac{(a - 1) c (b - 1)}{1 - a b},$</p>
+<p style="text-align: justify">we see that $latex \text{sign}(T)=-1$ and $latex \text{sign}(D)=\epsilon.$ If $latex \epsilon = -1$, $latex P_3$ is a saddle. If $latex \epsilon = 1$, $latex P_3$ is a stable node. Indeed, the discriminant of the characteristic polynomial is</p>
+<p style="text-align: center">$latex T^2 - 4 D = \displaystyle \frac{1}{(1- a b)^2} \left[ (a-1) - c (b-1) \right]^2,$</p>
+<p style="text-align: justify">and is therefore positive. Thus, both eigenvalues are real.</p>
+<p style="text-align: justify">Figures 6.3 and 6.4 show phase portraits of system (<a href="#CCS">6.4</a>) for $latex \epsilon = 1$ and $latex \epsilon = -1$ respectively.<a id="Fig_6.3"></a></p>
+
+[caption id="attachment_51" align="alignnone" width="800"]<img class="wp-image-51" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CCS_PP1-1024x769.png" alt="Phase portrait. Long description available." width="800" height="601" /> Figure 6.3. Phase plane of system (6.4), with a = 0.5, b = 0.8, and c = 1 (ε = 1), plotted with the software PPLANE. [<a href="#Fig_6.3_Desc"><em>Image Description</em></a>][/caption][caption id="attachment_52" align="alignnone" width="800"]<img class="wp-image-52" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CCS_PP2-1024x770.png" alt="Phase portrait. Long description available." width="800" height="602" /> Figure 6.4. Phase plane of system (6.4), with a = 1.2, b = 2, and c = 1 (ε = -1), plotted with the software PPLANE. [<a href="#Fig_6.4_Desc"><em>Image Description</em></a>][/caption]
+<p style="text-align: justify"><a id="Fig_6.4"></a>From an ecological point of view, the two species coexist if $latex P_3$ is stable, i.e. if $latex \epsilon = 1$. If not, then one of the species is driven to extinction by the other, since the only fixed points which are stable when $latex \epsilon = -1$ are $latex P_1$ and $latex P_2$, for which one of the populations is zero. From this simple example, we see how relationships between model parameters may be inferred from biological facts. For instance, the above analysis indicates that if the two species coexist, then $latex a \le 1$ and $latex b \le 1,$ with $latex a b \ne 1.$</p>
+
+<h2>Summary</h2>
+<p style="text-align: justify">In this chapter, we introduced two classical population dynamics models, the predator-prey system and a system describing two species competing for the same resources. The main tool we used for the analysis of these two-dimensional models was phase plane analysis. We only discussed elementary continuous models, but discrete analogues as well as more complex models may of course be considered.</p>
+<p style="text-align: justify">From a biological point of view, it is important to remember that predator-prey systems may exhibit temporal oscillations. The latter typically arise from a Hopf bifurcation, as discussed for instance in the paper by Fussmann <em>et al.</em>[footnote]G.F. Fussmann, S.P. Ellner, K.W. Shertzer, N.G. Hairston Jr., <a href="http://dx.doi.org/10.1126/science.290.5495.1358"><em>Crossing the Hopf Bifurcation in a Live Predator-Prey System</em></a>, Science <strong>290</strong>, 1358-1360 (2000).[/footnote] (see exercises), and are not related to the presence of an infinite number of closed orbits, as was the case in the Lotka-Volterra system with $latex a = 1$ and $latex b = 0$.</p>
+<p style="text-align: justify">In the case of competing species, the simple model presented in this section shows that the two species can only coexist if $latex a$ and $latex b$ in system (<a href="#CCS">6.4</a>) are both less than unity. Otherwise, one of the species will drive the other to extinction.</p>
+
+<h2>Figure Descriptions</h2>
+<strong><a id="Fig_6.1_Desc"></a>Figure 6.1</strong>: A phase portrait showing a vector field and several trajectories. The central feature is a stable spiral at an interior equilibrium point. Two other equilibrium points are visible on the horizontal axis: an unstable source at the origin (0,0) and a saddle point further to the right. Trajectories from the top and right all curve inward to settle at the central spiral. [<em><a href="#Fig_6.1">Return to Figure 6.1</a></em>]
+
+<strong><a id="Fig_6.2_Desc"></a>Figure 6.2</strong>: A phase portrait showing a vector field and several concentric, closed orbits around a central equilibrium point. The orbits indicate a periodic, stable system without damping. A second equilibrium point is visible at the origin (0,0), which appears to be a saddle point. [<em><a href="#Fig_6.2">Return to Figure 6.2</a></em>]
+
+<strong><a id="Fig_6.3_Desc"></a>Figure 6.3</strong>: A phase portrait of a competition model showing four equilibrium points. The Origin (0,0) is an unstable node. Two points on the $latex x$ and $latex y$ axes represent "single-species" equilibria where one species is extinct and the other is at its carrying capacity. They are saddles. The central fixed point is a stable node. All trajectories in the interior of the plane curve toward this point. [<em><a href="#Fig_6.3">Return to Figure 6.3</a></em>]
+
+<strong><a id="Fig_6.4_Desc"></a>Figure 6.4</strong>: A phase portrait of a competitive system showing four equilibrium points. Unlike the previous image where species coexist, the trajectories here curve away from the interior and toward the axes. This represents a "winner-take-all" scenario where one species eventually drives the other to extinction depending on initial population sizes. [<em><a href="#Fig_6.4">Return to Figure 6.4</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Food for Thought</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center">Problem 1</h3>
+Write a time-continuous model which describes the following situation. Species $latex x$ survives by eating nutrients $latex n$ and has a per-capita death rate equal to $latex d$. The nutrients $latex n$ are supplied to the system at a constant rate.
+
+<hr />
+
+<h3 style="text-align: center">Problem 2</h3>
+Is model (<a href="#CCS">6.4</a>) biologically well-posed? Why or why not?
+
+<hr />
+
+<h3 style="text-align: center">Problem 3</h3>
+Consider model (<a href="#CCS">6.4</a>) with $latex a \lt 1$ and $latex b &gt; 1$.
+<ol>
+ 	<li>Use phase plane analysis to describe the long-term dynamics of this system. Check your results with the <a href="https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field">Phase Plane App</a> or equivalent software.</li>
+ 	<li>What is the biological significance of what you found out in part (1)?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 4</h3>
+Consider the following model
+<p style="text-align: center">$latex \displaystyle \left\{\begin{align*} \displaystyle \frac{dx}{dt} &amp; = - x + 4 - x y,\\ \displaystyle \frac{dy}{dt} &amp; = - x y + y + y^2, \end{align*}\right.$</p>
+where $latex x$ and $latex y$ are non-negative.
+<ol>
+ 	<li> Find the fixed points of this system.</li>
+ 	<li>Linearize the system about its fixed points and find the stability of each fixed point.</li>
+ 	<li>Use the above information to sketch the phase plane of this system.</li>
+ 	<li>Check your answer with the <a href="https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field">Phase Plane App</a> or equivalent software.</li>
+ 	<li>Could this model describe a biological system? Why or why not?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 5</h3>
+Consider the system
+<p style="text-align: center">$latex \displaystyle \left\{\begin{align*} \displaystyle \frac{d X}{d t} &amp; =- \alpha X + \beta,\\ \displaystyle \frac{d Y}{d t} &amp; = \gamma X Y - \delta Y - \zeta Y^2, \end{align*}\right. \qquad \alpha, \beta, \gamma, \delta, \zeta &gt; 0.$</p>
+
+<ol>
+ 	<li>What is the dimension of each parameter?</li>
+ 	<li>Write this system in dimensionless form. Explain how you choose to scale the variables.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center"><span style="text-indent: 0em">Problem 6</span></h3>
+<span style="text-indent: 0em">Consider the model described in the paper by G.F. </span> Fussmann<em> et al</em>. entitled <em><a href="http://dx.doi.org/10.1126/science.290.5495.1358">Crossing the Hopf Bifurcation in a Live Predator-Prey System</a>.</em>
+<ol>
+ 	<li>Which species is the predator and which is the prey?</li>
+ 	<li>What is the role of $latex N$ in the model?</li>
+ 	<li>How would you modify the model if you did not want to distinguish between reproducing and non-reproducing <em>Brachionus</em>?</li>
+</ol>
+</div>
+</div>

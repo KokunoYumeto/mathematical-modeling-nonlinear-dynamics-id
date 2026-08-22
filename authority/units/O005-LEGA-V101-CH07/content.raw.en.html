@@ -1,0 +1,123 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Learning Objectives</h2>
+</header>
+<div class="textbox__content">
+
+At the end of this chapter, you will be able to do the following.
+<ul>
+ 	<li>Construct compartmental models describing infections and disease outbreaks.</li>
+ 	<li>Formulate dimensionless versions of two-dimensional models and appraise their dynamics by means of phase plane analysis.</li>
+ 	<li>Translate the results of model analysis into biological terms and discuss their significance in that context.</li>
+</ul>
+</div>
+</div>
+<h2>Viral infections</h2>
+We first model the dynamics of a viral infection, such as hepatitis B or C, and are interested in describing how the corresponding virus can spread and multiply in a person's body. Denote by $latex X$ the average number of uninfected cells, which virions will try to infect; let $latex Y$ be the average number of infected cells, and $latex V$ be the average viral load (or the number of free virions in the body). Consider that uninfected cells are produced at a constant rate $latex \lambda$ by the body, die at rate $latex \delta X$, and become infected at rate $latex f(X,V) X$, where $latex f$ is some function of $latex X$ and $latex V$. As a consequence, infected cells $latex Y$ are created at rate $latex f(X,V) X$, and we assume they die at rate $latex a Y$. Finally, free virions are produced at a rate proportional to the number of infected cells $latex k Y$, and are removed or destroyed at rate $latex \kappa V$. If we consider that, as a first approximation, $latex f$ is a linear function of $latex V$, i.e. $latex f(X,V) = b V$, we have the following model.[footnote]M.A. Nowak, S. Bonhoe er, A.M. Hill, R. Boehme, H.C. Thomas, and H. McDade, <em><a href="http://dx.doi.org/10.1073/pnas.93.9.4398">Viral dynamics in hepatitis B virus infection</a></em>, Proc. Natl. Acad. Sci. USA 93, 4398-4402 (1996).[/footnote]
+<p style="text-align: center"><a id="Viral"></a>$latex \left\{\begin{align*} \displaystyle \frac{d X}{d t} &amp; =\lambda - \delta X - b V X, \\ \displaystyle \frac{d Y}{d t} &amp; = b V X - a Y,\\ \displaystyle \frac{d V}{d t} &amp; = k Y - \kappa V, \end{align*}\right. \qquad (7.1)$</p>
+This model has six parameters and four variables. We can rescale time and $latex V$, but it is not a good idea to rescale $latex X$ and $latex Y$ independently since they both count cells and the term in $latex b V X$ transfers cells from the $latex X$ compartment to the $latex Y$ compartment. We can therefore reduce Equations (<a href="#Viral">7.1</a>) to a model with three parameters. More precisely, let
+<p style="text-align: center">$latex \tau = \delta t, \qquad \displaystyle x = \frac{k b}{\delta^2} X, \qquad y = \frac{k b}{\delta^2} Y, \qquad v = \frac{b}{\delta} V.$</p>
+Then, the scaled version of Equations (<a href="#Viral">7.1</a>) is
+<p style="text-align: center"><a id="CViral"></a>$latex \left\{\begin{align*} \displaystyle \frac{d x}{d \tau} &amp; = \zeta - x - v\, x,\\ \displaystyle \frac{d y}{d \tau} &amp; = v\, x - \eta\, y,\\ \displaystyle \frac{d v}{d \tau} &amp; = y - \mu\, v, \end{align*}\right. \qquad (7.2)$</p>
+where $latex \zeta = \displaystyle \frac{\lambda k b}{\delta^3},$ $latex \eta = \displaystyle \frac{a}{\delta},$ and $latex \mu = \displaystyle \frac{\kappa}{\delta}$ are dimensionless parameters.
+
+We scaled time according to the death rate of normal cells. Alternatively, we could have scaled time according to the rate at which normal cells are produced by the body, i.e. we could have defined $latex \tau = \lambda t / X_0$, with $latex X_0 = \delta^2 / (k b)$. We could also have used a combination of these two time scales. In general, there is more than one possible way of defining dimensionless variables. The most convenient choice is often that which gives dimensionless parameters of order one, if at all possible.
+
+We refer the reader to the 1998 article by A.U. Neumann <em>et al.</em>, entitled <a href="http://dx.doi.org/10.1126/science.282.5386.103"><em>Hepatitis C viral dynamics in vivo and the antiviral efficacy of interferon-alpha therapy</em></a>, to see how estimating parameters in model (<a href="#Viral">7.1</a>) may be used to understand the role of interferons in hepatitis C therapy.
+<h2>Modeling infectious diseases</h2>
+There is ample literature on the modeling of infectious diseases (for a review, see for instance the 2000 article by H. Hethcote, entitled <a href="http://dx.doi.org/10.1137/S0036144500371907"><em>The Mathematics of Infectious Diseases</em></a>). The most general basic model is called the MSEIRS model. Each letter in the acronym refers to a particular class or compartment of the population, and the ordering of the letters is such that individuals belonging to one class move to the class on the right under the effect of the disease. The various classes are defined as follows.
+<ul>
+ 	<li>Class M corresponds to <em>infants with passive immunity</em>. Typically, these are newborns whose mothers were infected, and who received antibodies through the placenta before birth.</li>
+ 	<li>Class S is the class of <em>susceptible</em> individuals, who may become infected by the disease. Infants in class M have temporary immunity and eventually move to class S.</li>
+ 	<li>Class E corresponds to <em>exposed</em> individuals, who have been in contact with an infected person.</li>
+ 	<li>Class I is the class of <em>infectious</em> individuals, who can transmit the disease.</li>
+ 	<li>Class R corresponds to individuals who have <em>recovered </em>(or died) from the disease, or who have been <em>removed</em> from the group of people affected by the disease.</li>
+</ul>
+Depending on the type of infectious disease, individuals in class R may have acquired permanent immunity. In this case, the appropriate model is of the MSEIR type. However, if individuals in class R eventually become susceptible again, then an MSEIRS model should be used. Most realistic models couple the classes described above with age groups. Some models consider the age $latex a$ of a person as an independent variable. Other classes, such as symptomatic and asymptomatic groups of individuals, may be considered, and the appropriate number of compartments, as well as their nature, is selected by the modeler. Applications of compartmental models include disease forecasting, as well as predicting the effectiveness of vaccination or of a disease eradication campaign. Below, we only discuss two simple models, namely the classic and endemic SIR models.
+<h3>The SIR model</h3>
+The classic SIR model does not include classes M and E, and reads
+<p style="text-align: center"><a id="SIR"></a>$latex \left\{\begin{align*} \displaystyle \frac{d S}{d t} &amp; = - \alpha S \frac{I}{N},\\ \displaystyle \frac{d I}{d t} &amp; = \alpha S \frac{I}{N} - \beta I,\\ \displaystyle \frac{d R}{d t} &amp; = \beta I, \end{align*}\right. \qquad (7.3)$</p>
+with initial conditions $latex S(0) = S_0 \ge 0,$ $latex I(0)=I_0 \gt 0,$ and $latex R(0) \ge 0.$ Here, $latex S$, $latex I$ and $latex R$ are the expected numbers of individuals in each compartment, and $latex N = S + I + R$ is the total population. Note that births and deaths are not included in the model. This typically works for diseases which evolve over a short period of time, so that changes in the total population are negligible.
+
+In this model, $latex I/N$ represents the fraction of infectious individuals. The product of this quantity with the <em>contact rate</em> $latex \alpha &gt; 0$ measures the average number of positive (i.e. giving rise to transmission of the disease) contacts per susceptible individual per unit of time. Since there are on average $latex S$ susceptible individuals, the rate of change of $latex S$ is $latex - \alpha S I /N$. The number of infected individuals increases by contact with susceptibles, and decreases due to recovery, at rate $latex - \beta I$, with $latex \beta \ge 0$. By adding up the three equations, one easily checks that $latex d N / d t = 0$, as expected since we neglected births and deaths. System (<a href="#SIR">7.3</a>) can thus be reduced to a two-dimensional system of ordinary differential equations, by omitting the last equation for $latex R$. The remaining two equations may be written in dimensionless form by letting
+<p style="text-align: center">$latex s = \displaystyle \frac{S}{N},$ $latex i = \displaystyle \frac{I}{N},$ and $latex \tau = \alpha t.$</p>
+Then, the first two equations of (<a href="#SIR">7.3</a>) become
+<p style="text-align: center"><a id="CSIR"></a>$latex \left\{\begin{align*} \displaystyle \frac{d s}{d \tau} &amp; =- s i,\\ \displaystyle \frac{d i}{d \tau} &amp; = s i - \delta i, \end{align*}\right. \qquad (7.4)$</p>
+where $latex \delta = \beta / \alpha &gt; 0$. The quantity $latex \sigma = 1 /\delta$ is the contact rate $latex \alpha$ multiplied by the characteristic time $latex 1 / \beta$ during which a person remains infectious. It is called the <em>contact number</em> of the disease, and in this case is equal to the <i>basic reproduction number  </i>$latex R_0$ of the infection described by the SIR model.
+
+Since $latex (1 - s - i) N = R \ge 0$, Equations (<a href="#CSIR">7.4</a>) only make biological sense if $latex s$ and $latex i$ remain positive and such that $latex s + i \le 1$, provided initial conditions satisfy these requirements. In other words, trajectories of the dynamical system (<a href="#CSIR">7.4</a>) that start in the triangle
+<p style="text-align: center">$latex {\mathcal T} = \left\{ (s,i) | s \ge 0,\ i \ge 0,\ s + i \le 1\right\}$</p>
+should remain in $latex \mathcal T.$ To check this, consider the dynamics on the boundary of $latex \mathcal T.$ First assume that $latex s = 0$ and $latex i \le 1$. Then $latex d s / d \tau = 0$, i.e. $latex s$ remains equal to zero, and $latex i$ decreases towards zero, but does not become negative. Similarly, if $latex i = 0$, then both $latex s$ and $latex i$ remain constant (what is the biological significance of this fact?). Finally, if $latex s + i = 1$, then $latex \displaystyle \frac{d}{d \tau} (s + i) = - \delta i \le 0,$ so that $latex s+i$ will not increase past the value 1. System (<a href="#CSIR">7.4</a>) has an infinite number of fixed points in $latex {\mathcal T}$, which are such that $latex i = 0$ and $latex s$ is arbitrary.<a id="Fig_7.1"></a>
+
+&nbsp;
+
+[caption id="attachment_54" align="alignnone" width="800"]<img class="wp-image-54" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CSIR_PP-1024x760.png" alt="Phase portrait. Long description available." width="800" height="594" /> Figure 7.1. Phase plane of system (<a href="#CSIR">7.4</a>), with δ = 0.2, plotted with the software PPLANE. Only the dynamics inside <em>T</em> (not shaded) is relevant. [<a href="#Fig_7.1_Desc"><em>Image Description</em></a>][/caption]Figure 7.1 shows the phase portrait of (<a href="#CSIR">7.4</a>), obtained with PPLANE, with $latex \delta = 0.2$. In this case, we see that all trajectories in $latex \mathcal T$ converge towards one of the fixed points, i.e. $latex \displaystyle \lim_{t \rightarrow \infty} i = 0.$ This means that the epidemic eventually dies out, and we are only left with susceptible individuals and/or those who have recovered from the disease.
+<h3>The classic endemic model</h3>
+For an endemic disease, births and deaths need to be taken into account, and the SIR model becomes
+<p style="text-align: center"><a id="ESIR"></a>$latex \left\{\begin{align*} \displaystyle \frac{d S}{d t} &amp; = \nu N - \mu S- \alpha S \frac{I}{N},\\ \displaystyle \frac{d I}{d t} &amp; = - \mu I +\alpha S \frac{I}{N} - \beta I,\\ \displaystyle \frac{d R}{d t} &amp; = - \mu R + \beta I, \end{align*}\right. \qquad (7.5)$</p>
+with initial conditions $latex S(0) = S_0 \ge 0,$ $latex I(0)=I_0 \gt 0,$ and $latex R(0) \ge 0.$ Here the new parameters are the per capita death rate $latex \mu$ and per capita birth rate $latex \nu$ of the population. By choosing $latex \mu = \nu$, the total population $latex N = S + I + R$ is constant. In this case, using the same dimensionless variables as for the classic SIR model, we are left with a two-dimensional dynamical system, which reads, in dimensionless form,
+<p style="text-align: center"><a id="CESIR"></a>$latex \left\{\begin{align*} \displaystyle \frac{d s}{d \tau} &amp; = \eta - \eta s - s i,\\ \displaystyle \frac{d i}{d \tau} &amp; = - (\eta+\delta) i + s i, \end{align*}\right. \qquad (7.6)$</p>
+where $latex \eta = \nu / \alpha = \mu /\alpha$.
+
+As before, it is easy to check that trajectories starting in $latex \mathcal T$ remain in $latex \mathcal T$ (see exercises). The fixed points of (<a href="#CESIR">7.6</a>) in the $latex (s,i)$ plane are
+<p style="text-align: center">$latex P_1 = (1, 0) \qquad \text{and} \qquad P_2 = \left(\eta + \delta, \displaystyle \frac{\eta (1 - \eta - \delta)}{\eta + \delta}\right).$</p>
+The Jacobian of (<a href="#CESIR">7.6</a>) is
+<p style="text-align: center">$latex J(s,i) = \left(\begin{array}{cc} - \eta - i &amp; - s \\ i &amp; s - (\eta + \delta) \end{array} \right)$</p>
+<p style="text-align: left">and</p>
+<p style="text-align: center">$latex J(P_1) = \left(\begin{array}{cc} - \eta &amp; - 1 \\ 0 &amp; 1 - (\eta + \delta) \end{array} \right).$</p>
+Whether $latex P_2$ is in $latex \mathcal T$ depends on the parameters $latex \delta$ and $latex \eta$. More precisely, $latex P_2 \in {\mathcal T} \Leftrightarrow 0 \lt \eta + \delta \le 1.$ Therefore, if $latex \eta + \delta &gt; 1$, $latex P_1$ is the only fixed point in $latex \mathcal T$ and since the eigenvalues of $latex J(P_1)$ are $latex -\eta$ and $latex 1 - (\eta + \delta)$, $latex P_1$ is a stable node. All of the trajectories starting in $latex \mathcal T$ must converge to this fixed point, which means that in the long run there are only susceptible individuals in the population. This is because those who have recovered from the disease eventually die and are replaced by newborns, who are susceptible. This is illustrated in Figure 7.2, which shows the phase portrait of (<a href="#CESIR">7.6</a>), obtained with PPLANE, with $latex \delta = 0.2$ and $latex \eta = 1$.<a id="Fig_7.2"></a>
+
+&nbsp;
+
+[caption id="attachment_55" align="alignnone" width="800"]<img class="wp-image-55" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CESIR_PP1-1024x759.png" alt="Phase portrait. Long description available." width="800" height="593" /> Figure 7.2. Phase plane of system (<a href="#CESIR">7.6</a>), with δ = 0.2 and η = 1, plotted with the software PPLANE. Only the dynamics inside <em>T</em> (not shaded) is relevant. [<a href="#Fig_7.2_Desc"><em>Image Description</em></a>][/caption]If on the other hand $latex \eta + \delta \lt 1$, then $latex P_1$ is a saddle, and
+<p style="text-align: center">$latex J(P_2) = \left(\begin{array}{cc} -\displaystyle \frac{\eta}{\eta+\delta} &amp; -(\eta + \delta) \\ \displaystyle \frac{\eta (1 - \eta - \delta)}{\eta + \delta} &amp; 0 \end{array} \right).$</p>
+The determinant of $latex J(P_2)$ is equal to $latex \eta (1 - \eta - \delta)$ and is positive. The trace of $latex J(P_2)$ is negative, so $latex P_2$ is either a stable spiral or a stable node. Trajectories starting in $latex \mathcal T$ converge to $latex P_2$, which is called the <em>endemic equilibrium</em>. In this case, the disease is always present in the population and there is always a non-zero number of infected individuals. Figure 7.3 shows the phase portrait of (<a href="#CESIR">7.6</a>) with $latex \eta = 0.2$ and $latex \delta=0.1$.<a id="Fig_7.3"></a>
+
+&nbsp;
+
+[caption id="attachment_56" align="alignnone" width="800"]<img class="wp-image-56" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/CESIR_PP2-1024x759.png" alt="Phase portrait. Long description available." width="800" height="593" /> Figure 7.3. Phase plane of system (<a href="#CESIR">7.6</a>), with δ = 0.2 and η = 0.1, plotted with the software PPLANE. Only the dynamics inside <em>T</em> (not shaded) is relevant. [<a href="#Fig_7.3_Desc"><em>Image Description</em></a>][/caption]
+<h2>Summary</h2>
+This chapter illustrates how the modeling concepts discussed in the previous chapters may be applied to the description, in terms of ordinary differential equations, of the dynamics of infectious diseases and the spread of epidemics. Moreover, it provides the reader with a basic introduction to the terminology and applications of compartmental models.
+
+It should be clear by now that models of arbitrary complexity may be built from the simple tools discussed in this text. The modeling process is always the same, no matter how involved the model is. The methods of analysis, in terms of maps or differential equations, are also similar, but become more complicated as the dimension of the model is increased. In particular, three-dimensional continuously differentiable dynamical systems may exhibit chaos, the understanding of which requires more advanced techniques than those discussed here. The section on further reading includes texts on dynamical systems and chaos that the reader may want to consult.
+<h2>Figure Descriptions</h2>
+<a id="Fig_7.1_Desc"></a><strong>Figure 7.1</strong>: A phase portrait in the ($latex s, i$) plane showing a vector field and several trajectories. Both $latex s$ and $latex i$ vary between 0 and 1. Trajectories move from right to left and terminate on the $latex s$-axis. A large, gray shaded triangle covers the upper-right portion of the graph, representing the region of the phase space (where $latex s+i &gt; 1$) that cannot be reached by the dynamics. [<em><a href="#Fig_7.1">Return to Figure 7.1</a></em>]
+
+<a id="Fig_7.2_Desc"></a><strong>Figure 7.2</strong>: A phase portrait in the ($latex s, i$) plane showing a vector field where all trajectories converge toward a single stable equilibrium point (a stable node) in the bottom-right corner, at coordinates (1,0). Both $latex s$ and $latex i$ vary between 0 and 1. A large, gray shaded triangle covers the upper-right portion of the graph, representing the region of the phase space (where $s+i &gt; 1$) that cannot be reached by the dynamics. [<em><a href="#Fig_7.2">Return to Figure 7.2</a></em>]
+
+<a id="Fig_7.3_Desc"></a><strong>Figure 7.3</strong>: A phase portrait in the ($latex s, i$) plane showing a vector field and several trajectories. Both $latex s$ and $latex i$ vary between 0 and 1. A large, gray shaded triangle covers the upper-right portion of the graph, representing the region of the phase space (where $s+i &gt; 1$) that cannot be reached by the dynamics. A prominent black dot, corresponding to a stable fixed point, is located toward the center-bottom of the phase plane. Another fixed point, at (1,0), is a saddle. [<em><a href="#Fig_7.3">Return to Figure 7.3</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Food for Thought</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center">Problem 1</h3>
+Write model (<a href="#Viral">7.1</a>) in dimensionless form by defining $latex \tau = \lambda k b t / \delta^2$ and appropriate variables $latex x$, $latex y$ and $latex v$. Explain what you are doing and check that $latex \tau$ is dimensionless.
+
+<hr />
+
+<h3 style="text-align: center">Problem 2</h3>
+Consider model (<a href="#CViral">7.2</a>).
+<ol>
+ 	<li>Find the fixed points of this system.</li>
+ 	<li>What are the conditions on the parameters for these fixed points to be in the first octant? What is the biological significance of these conditions?</li>
+ 	<li>Discuss the linear stability of the fixed point such that $latex y = v = 0$.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 3</h3>
+Consider model (<a href="#CESIR">7.6</a>). Show that trajectories starting in the triangle $latex \mathcal T$ remain in $latex \mathcal T$.
+
+<hr />
+
+<h3 style="text-align: center"><span style="text-indent: 0em">Problem 4</span></h3>
+<span style="text-indent: 0em">Consider model (</span><a style="text-indent: 0em" href="#CESIR">7.6</a><span style="text-indent: 0em">) with $latex \eta + \delta \lt 1$. </span>Are there values of $latex \eta$ and $latex \delta$ for which $latex P_2$ is a stable node and not a stable spiral?
+
+<hr />
+
+<h3 style="text-align: center"><span style="text-indent: 0em">Problem 5</span></h3>
+<span style="text-indent: 0em">The MSEIR model is suitable for diseases such as rubella </span>or measles, since once individuals are infected, they become immune to the disease. Write a system of equations for the MSEIR model, in a population with per capita birth rate $latex \nu$ and per capita death rate $latex \mu$, with $latex \nu \ne \mu$.
+
+</div>
+</div>

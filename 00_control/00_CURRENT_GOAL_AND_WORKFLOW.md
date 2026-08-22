@@ -22,16 +22,16 @@ notice, and non-endorsement. Maintain component-level rights. Redraw Figure
 statement; never represent the Pressbooks theme as part of the independently
 reproducible source closure.
 
-Chapter boundaries `O005-LEGA-V101-CH01` through `CH05` (records 25, 27, 38,
-39, and 48) and the visible Part 2 and Part 3 introductions (records 28 and
+Chapter boundaries `O005-LEGA-V101-CH01` through `CH06` (records 25, 27, 38,
+39, 48, and 53) and the visible Part 2 and Part 3 introductions (records 28 and
 40) are translated, built, independently rereviewed where applicable, and
 deterministically verified. Their complete topology, identifiers, protected
-mathematics, links, figures, 58 stable problem IDs and mastery records, five
-open Python notebooks, and 1,371 paired segments are bound in the current
-state, cursor, and QA log. The immediate boundary is Chapter 6, Pressbooks
-record 53, *Two-Species Models*, as `O005-LEGA-V101-CH06`; preserve its frozen
-182-line raw source, 185 opening elements, 31 links, 227 TeX occurrences, four
-figures, three footnotes, and six problems, then complete its
+mathematics, links, figures, 64 stable problem IDs and mastery records, six
+open Python notebooks, and 1,582 paired segments are bound in the current
+state, cursor, and QA log. The immediate boundary is Chapter 7, Pressbooks
+record 57, *Epidemiology*, as `O005-LEGA-V101-CH07`; preserve its frozen
+123-line raw source, 126 opening elements, 29 links, 150 TeX occurrences, three
+figures, one footnote, and five problems, then complete its
 mastery/computation closure without returning to source selection.
 
 Continue in exact frozen TOC order through all front/back matter and

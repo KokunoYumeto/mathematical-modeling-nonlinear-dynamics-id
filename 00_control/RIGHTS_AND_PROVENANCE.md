@@ -111,3 +111,27 @@ notebook is a new independent implementation of the mathematical models and
 uses the local Census packet without network access at runtime. The original
 hints, checks, and worked solutions/rubrics are labeled by provenance and are
 distributed compatibly with the reader's ShareAlike boundary.
+
+## Chapter 6 component record
+
+Chapter 6 retains all four frozen Pressbooks raster figures byte-for-byte:
+the damped and closed predator–prey phase portraits and the coexistence and
+exclusion competition phase portraits. Their exact source paths, byte counts,
+SHA-256 hashes, and EPUB-member identities are bound in the unit authority and
+reader manifests. Indonesian captions, long descriptions, and mathematical
+corrections are adaptation content under CC BY-NC-SA 4.0.
+
+Two source links to the proprietary MathWorks Phase Plane App were replaced in
+the translated exercise surface by one local, independently authored
+NumPy/SciPy/Matplotlib notebook. No MathWorks application, source code, or
+other proprietary implementation was copied. The notebook implements only the
+printed model equations, explicit independently chosen numerical conventions,
+and verification checks needed for the chapter's learning activity.
+
+The primary Fussmann et al. *Science* article cited by Problem 6 was consulted
+only to verify the meanings of the state variables and the published model
+equations. No article text, figure, data, or supplemental file is redistributed.
+The mastery record explicitly labels the simplifying closure `R = B` as new to
+this edition rather than source-derived. All six newly authored hints, checks,
+solutions/rubrics, and the notebook remain distributed compatibly with the
+reader's ShareAlike boundary.

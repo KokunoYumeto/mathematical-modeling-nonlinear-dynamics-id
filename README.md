@@ -7,7 +7,7 @@ Pressbooks v1.01 (Maret 2026). Sumber dan terjemahan berada di bawah lisensi
 Edisi ini tidak disokong atau disahkan oleh penulis maupun University of
 Arizona.
 
-Status saat ini: **Bab 1–5 dari 14 serta pengantar Bagian 2–3 telah diterjemahkan,
+Status saat ini: **Bab 1–6 dari 14 serta pengantar Bagian 2–3 telah diterjemahkan,
 dibangun, dan lolos QA.**
 Pekerjaan berlanjut secara berurutan; repositori ini belum merupakan edisi
 lengkap atau terbitan final.
@@ -21,12 +21,13 @@ lengkap atau terbitan final.
 - Bab 4 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH04/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH04/index.html); [notebook pemantulan batu](source/id-ID/O005-LEGA-V101-CH04/notebooks/chapter-04-open-stone-skipping.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH04.mastery.json).
 - Pengantar Bagian 3 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT03/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT03/index.html).
 - Bab 5 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH05/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH05/index.html); [notebook dinamika populasi satu spesies](source/id-ID/O005-LEGA-V101-CH05/notebooks/chapter-05-open-single-species-models.ipynb); [data Sensus resmi](source/id-ID/O005-LEGA-V101-CH05/data/popclockest.txt); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH05.mastery.json).
+- Bab 6 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH06/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH06/index.html); [notebook model dua spesies](source/id-ID/O005-LEGA-V101-CH06/notebooks/chapter-06-open-two-species-models.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH06.mastery.json).
 
 ## Backend modular
 
-Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Lima bab dan
-dua pengantar bagian yang selesai memiliki 1.371 segmen Inggris–Indonesia yang
-berpasangan, 58 ID soal tetap, lima notebook terbuka, catatan unit berhash,
+Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Enam bab dan
+dua pengantar bagian yang selesai memiliki 1.582 segmen Inggris–Indonesia yang
+berpasangan, 64 ID soal tetap, enam notebook terbuka, catatan unit berhash,
 serta jalur eksplisit menuju aset, notebook, dan
 dukungan belajar. Lapisan ini dimaksudkan untuk memungkinkan pemindahan unit
 yang sama ke bahasa lain tanpa menjadikan Bahasa Indonesia sebagai kunci
@@ -52,6 +53,8 @@ python scripts/build_unit_reader.py --unit O005-LEGA-V101-PT03
 python scripts/qa_unit.py --unit O005-LEGA-V101-PT03 --deterministic-build
 python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH05
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH05 --execute-notebook --deterministic-build
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH06
+python scripts/qa_unit.py --unit O005-LEGA-V101-CH06 --execute-notebook --deterministic-build
 ```
 
 QA memeriksa kesetaraan struktur sumber–target, rumus dan tautan yang
@@ -72,4 +75,8 @@ pemantulan batu terbuka. Bab 5 mempertahankan tujuh gambar sumber, menambahkan
 tiga adaptasi label berbahasa Indonesia, paket data Sensus Amerika Serikat
 yang terverifikasi, koreksi matematika tercatat, serta notebook dinamika
 populasi terbuka. Semua notebook ditulis secara independen. Rincian
-sumber, lisensi, keputusan, dan hash berada di `00_control/`.
+sumber, lisensi, keputusan, dan hash berada di `00_control/`. Bab 6
+mempertahankan empat gambar sumber, memperbaiki kekeliruan matematika dan
+aksesibilitas yang tercatat, mengganti dua rujukan aplikasi bidang fase
+proprietari dengan satu notebook Python terbuka, dan menambahkan enam paket
+petunjuk, pemeriksaan jawaban, serta solusi atau rubrik.

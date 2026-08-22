@@ -195,6 +195,64 @@ UNIT_SPECS = {
             },
         ],
     },
+    "O005-LEGA-V101-CH06": {
+        "record_id": 53,
+        "modified_gmt": "2026-03-27T02:30:16",
+        "record_bytes": 63377,
+        "record_sha256": "cdcc1c12fc5c0245ffbb94c6cfdc706570f50540bb6719d78e1391f282b114de",
+        "assets": [
+            {
+                "path": "assets/predator-prey-damped-source.png",
+                "epub_member": "EPUB/assets/CLV_PP1-1024x784.png",
+                "bytes": 261588,
+                "sha256": "5f714f9670a8a634d3f6e41571e4be8423b53a7991f4ce3ea159c54c439a72df",
+            },
+            {
+                "path": "assets/predator-prey-closed-source.png",
+                "epub_member": "EPUB/assets/CLV_PP2-1024x777.png",
+                "bytes": 291998,
+                "sha256": "12c7e47611611ad9bdbf822d0ecac1abd5a54b3302aeff9cd037bd9a0d42f6c3",
+            },
+            {
+                "path": "assets/competition-coexistence-source.png",
+                "epub_member": "EPUB/assets/CCS_PP1-1024x769.png",
+                "bytes": 238694,
+                "sha256": "4eea679f5d3449746b333e429c8be8c2340348f130a705fe2e05597b8c76f765",
+            },
+            {
+                "path": "assets/competition-exclusion-source.png",
+                "epub_member": "EPUB/assets/CCS_PP2-1024x770.png",
+                "bytes": 244184,
+                "sha256": "2675913333eaecef42fbec40ec78f24a3ea555217ade399bb159e2c5c5739c53",
+            },
+        ],
+    },
+    "O005-LEGA-V101-CH07": {
+        "record_id": 57,
+        "modified_gmt": "2026-03-19T20:23:36",
+        "record_bytes": 48627,
+        "record_sha256": "dcf828ca5ce0c58ced8eb5203dfd1b5a949bd6af3b9c000017a6dd133bb58d2f",
+        "assets": [
+            {
+                "path": "assets/sir-phase-source.png",
+                "epub_member": "EPUB/assets/CSIR_PP-1024x760.png",
+                "bytes": 269240,
+                "sha256": "6fb4ddda16dc32455db64ec8211e561260118f5a2994aa88b503a179d851c08b",
+            },
+            {
+                "path": "assets/endemic-phase-1-source.png",
+                "epub_member": "EPUB/assets/CESIR_PP1-1024x759.png",
+                "bytes": 307592,
+                "sha256": "20862c9a7ae87d9d6cc5d3c00a5ea855ee7c7a786cd832e40b6aebf8acbb63af",
+            },
+            {
+                "path": "assets/endemic-phase-2-source.png",
+                "epub_member": "EPUB/assets/CESIR_PP2-1024x759.png",
+                "bytes": 288503,
+                "sha256": "e1b4360292dceb3d403cc54cc1b76cf1b45d80a9331acdad6a2f460d77eb9058",
+            },
+        ],
+    },
 }
 
 

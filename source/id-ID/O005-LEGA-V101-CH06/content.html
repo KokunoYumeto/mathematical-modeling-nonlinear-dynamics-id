@@ -1,0 +1,182 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Tujuan Pembelajaran</h2>
+</header>
+<div class="textbox__content">
+
+Pada akhir bab ini, Anda akan mampu melakukan hal-hal berikut.
+<ul>
+ 	<li>Menyusun model persamaan diferensial terkopel untuk sistem pemangsa–mangsa dan sistem spesies yang bersaing.</li>
+ 	<li>Merumuskan bentuk tak berdimensi dari model dua dimensi dan menilai dinamikanya melalui analisis bidang fase.</li>
+ 	<li>Menerjemahkan hasil analisis model ke dalam istilah biologis dan membahas arti pentingnya dalam konteks tersebut.</li>
+</ul>
+</div>
+</div>
+<h2>Model pemangsa–mangsa: persamaan Lotka–Volterra</h2>
+Perhatikan suatu sistem tertutup yang melibatkan populasi pemangsa (misalnya hiu) dan mangsa (misalnya ikan kecil). Misalkan $latex F$ menyatakan kepadatan populasi mangsa dan $latex S$ menyatakan kepadatan populasi pemangsa. Jelas bahwa ketika mangsa berlimpah, pemangsa akan berkembang biak. Akibatnya, lebih banyak mangsa akan dimakan dan $latex F$ akan berkurang; namun $latex S$ juga akan berkurang karena makanan bagi pemangsa semakin sedikit. Akan tetapi, jika $latex S$ berkurang, $latex F$ berkesempatan tumbuh kembali karena mangsa tidak lagi dimakan sebanyak sebelumnya. Penalaran ini mengisyaratkan bahwa mungkin terdapat nilai-nilai parameter yang membuat $latex F$ dan $latex S$ berosilasi terhadap waktu[footnote]A.J. Lotka, <em>Elements of Physical Biology</em>, Williams &amp; Wilkins, Baltimore, 1925; Dover, New York, 1956.[/footnote][footnote]V. Volterra, <em>Leçons sur la Théorie Mathématique de la Lutte pour la Vie</em>, Gauthier-Villars, Paris, 1931.[/footnote].
+
+Jika migrasi diabaikan dan kita mengasumsikan bahwa $latex F$ dan $latex S$ adalah satu-satunya variabel terikat—khususnya, kita mengasumsikan bahwa tersedia pasokan nutrien yang memadai (tetapi tidak tak terbatas) bagi mangsa—kita dapat menuliskan
+<p style="text-align: center"><a id="LV"></a>$latex \displaystyle \left\{\begin{align*} \displaystyle \frac{dF}{dt} &amp;=F \left(\alpha - \beta F - \gamma S \right) \equiv g(F,S),\\ \displaystyle \frac{dS}{dt} &amp;= S \left( - \kappa + \delta F \right) \equiv h(F,S), \end{align*}\right. \qquad (6.1)$</p>
+dengan parameter konstan $latex \alpha$, $latex \beta$, $latex \gamma$, $latex \kappa$, dan $latex \delta$ yang semuanya taknegatif. Model ini menyatakan bahwa ketika $latex S = 0,$ populasi mangsa berkembang menurut model logistik, sedangkan ketika $latex S \ne 0$, mangsa dimakan dengan laju yang sebanding dengan kelimpahan mangsa itu sendiri ($latex F$) maupun kelimpahan pemangsa ($latex S$). Pemangsa memiliki laju pertumbuhan (kelahiran dikurangi kematian) sebesar $latex -\kappa$ ketika $latex F=0$. Karena $latex \kappa$ positif, tanpa mangsa populasi pemangsa akan terdorong menuju kepunahan. Selanjutnya, laju pertumbuhan $latex S$ memuat suku interaksi bilinear $latex \delta\, F\, S$; dalam laju pertumbuhan per kapita pemangsa, kontribusi interaksi ini linear terhadap kelimpahan mangsa $latex F$.
+
+Jika $latex \beta = 0$, model ini disebut sistem Lotka–Volterra (lihat catatan kaki 1 dan 2 sebagai rujukan) dan merupakan model kontinu paling sederhana yang mencakup faktor-faktor dasar dalam interaksi antara pemangsa dan mangsanya. Model ini sebaiknya dipandang sebagai titik awal untuk model yang lebih rumit dan lebih realistis. Sisa bagian ini dikhususkan untuk menganalisis Persamaan (<a href="#LV">6.1</a>).
+<h3>Penskalaan</h3>
+Persamaan (<a href="#LV">6.1</a>) melibatkan tiga variabel, $latex F$, $latex S$, dan $latex t$, serta lima parameter, yang kita asumsikan positif (kecuali mungkin $latex \beta$). Dengan menskalakan semua variabel, kita semestinya dapat mereduksi sistem ini menjadi masalah dengan dua parameter (yakni lima dikurangi tiga). Nilai khas untuk $latex F$ diberikan oleh $latex F_0 = \kappa / \delta$ (lihat persamaan kedua pada (<a href="#LV">6.1</a>)), dan dengan cara serupa nilai khas untuk $latex S$ dapat dipilih sebagai $latex S_0 = \alpha / \gamma$. Sebagai skala waktu karakteristik, kita dapat memilih $latex t_0 = 1 / \kappa$. Selanjutnya, jika kita mendefinisikan $latex \displaystyle f = \frac{F}{F_0}, $ $latex \displaystyle s = \frac{S}{S_0},$ dan $latex \tau = \kappa t,$ kita memperoleh model kanonik tak berdimensi berikut:
+<p style="text-align: center"><a id="CLV"></a>$latex \displaystyle \left\{\begin{align*} \displaystyle \frac{d f}{d \tau} &amp; = a f (1 - b f - s),\\ \displaystyle \frac{d s}{d \tau} &amp; = s (-1 + f), \end{align*}\right. \qquad (6.2)$</p>
+Di sini, parameter $latex a$ dan $latex b$ berhubungan dengan parameter semula melalui $latex \displaystyle a = \frac{\alpha}{\kappa}$, $latex \displaystyle b = \frac{\beta \kappa}{\alpha \delta},$ sehingga $latex a \gt 0$ dan $latex b \ge 0$.
+<h3>Analisis bidang fase</h3>
+Deskripsi bidang fase yang berkaitan dengan sistem (<a href="#CLV">6.2</a>) memberi kita pemahaman kualitatif tentang persamaan pemangsa–mangsa. Dengan informasi ini, kita dapat menjawab pertanyaan-pertanyaan seperti di bawah ini, meskipun tidak memiliki bentuk eksplisit untuk semua solusi (<a href="#CLV">6.2</a>).
+<ul>
+ 	<li>Mungkinkah populasi hiu atau ikan kecil mengalami kepunahan?</li>
+ 	<li>Apakah model ini masuk akal secara biologis?</li>
+ 	<li>Dapatkah osilasi diamati?</li>
+</ul>
+Sebelum melangkah lebih jauh, penting untuk memeriksa bahwa model ini “dirumuskan dengan baik secara biologis”, yaitu bahwa jika $latex s$ dan $latex f$ pada awalnya taknegatif, keduanya akan tetap taknegatif. Misalkan, sebagai contoh, $latex s=0$. Persamaan kedua pada (<a href="#CLV">6.2</a>) menunjukkan bahwa $latex s$ akan tetap nol. Oleh karena itu, lintasan pada bidang $latex (f,s)$ terletak di sepanjang sumbu $latex f$ atau menjauhinya, tetapi tidak melintasi sumbu tersebut. Demikian pula, persamaan pertama pada (<a href="#CLV">6.2</a>) menunjukkan bahwa lintasan tidak melintasi sumbu $latex s$.
+
+Sekarang kita beralih untuk mendeskripsikan potret fase sistem (<a href="#CLV">6.2</a>). Titik-titik tetap sistem ini diberikan di bawah ini menurut koordinatnya pada bidang $latex (f,s)$, yaitu
+<p style="text-align: center">$latex \displaystyle P_0 = (0, 0), \qquad P_1 = \left(\frac{1}{b}, 0\right), \qquad P_2 = (1, 1 - b),$</p>
+dan semuanya terletak di kuadran pertama asalkan $latex 0 \lt b \le 1$; selanjutnya kita akan mengasumsikan syarat ini terpenuhi. Analisis kestabilan linear dapat digunakan untuk mendeskripsikan dinamika lokal (<a href="#CLV">6.2</a>) di sekitar titik-titik tetap tersebut. Matriks Jacobi (<a href="#CLV">6.2</a>) diberikan oleh
+<p style="text-align: center">$latex J(f,s) = \displaystyle \left(\begin{array}{cc} a (1 - 2 b f - s) &amp; - a f \\ s &amp; -1 + f \end{array} \right).$</p>
+
+<h4 style="text-align: left">Analisis di sekitar titik asal, $latex P_0$</h4>
+<p style="text-align: justify">Untuk $latex P_0$, $latex s = f = 0$ dan matriks Jacobi $latex J(0,0)$ berbentuk diagonal. Nilai-nilai eigennya adalah $latex a$ dan $latex -1$, dengan vektor eigen terkait berturut-turut $latex \displaystyle \left(\begin{array}{c}1 \\ 0 \end{array}\right)$ dan $latex \displaystyle \left(\begin{array}{c}0 \\ 1 \end{array}\right)$. Dengan demikian, titik asal merupakan titik pelana.</p>
+
+<h4>Analisis di sekitar $latex P_1$</h4>
+<p style="text-align: justify">Untuk $latex P_1$, $latex f = 1/b$ dan $latex s = 0.$ Matriks Jacobi $latex J(1/b,0)$ berbentuk segitiga atas sehingga nilai-nilai eigennya merupakan entri-entri diagonalnya, yaitu $latex -a$ dan $latex -1+1/b$. Untuk $latex 0 \lt b \lt 1$, titik tetap ini juga merupakan titik pelana. Jika $latex b = 1$, maka $latex P_1 = P_2 = (1,0)$ dan titik tetap yang berimpit ini bersifat nonhiperbolik karena memiliki satu nilai eigen nol. Ruang eigen yang terkait dengan $latex -a$ direntang oleh $latex \displaystyle \left(\begin{array}{c}1 \\ 0 \end{array}\right)$, sedangkan ruang eigen yang terkait dengan $latex -1+1/b$ direntang oleh $latex \displaystyle \left(\begin{array}{c}1 \\ (-a b + b- 1)/a \end{array}\right)$.</p>
+
+<h4>Analisis di sekitar $latex P_2$</h4>
+<p style="text-align: justify">Untuk $latex P_2$, $latex f = 1$ dan $latex s = 1 - b$. Matriks Jacobi $latex J(1,1 - b)$ adalah</p>
+<p style="text-align: center">$latex \displaystyle J(1, 1 - b) = \left(\begin{array}{cc} -a b &amp; -a \\ 1 - b &amp; 0 \end{array} \right),$</p>
+<p style="text-align: justify">dan nilai-nilai eigennya, $latex \lambda_1$ dan $latex \lambda_2$, memenuhi</p>
+<p style="text-align: center">$latex \det(J) = \lambda_1 \lambda_2 = \det\left[J(1,1-b)\right] = a (1 - b) &gt; 0,$</p>
+<p style="text-align: justify">serta</p>
+<p style="text-align: center">$latex \hbox{Tr}(J) = \lambda_1 + \lambda_2 = \hbox{Tr}\left[J(1,1-b)\right] = - a b \lt 0.$</p>
+<p style="text-align: justify">Karena itu, untuk $latex 0 \lt b \lt 1$, $latex P_2$ merupakan simpul stabil atau spiral stabil.<a id="Fig_6.1"></a></p>
+
+[caption id="attachment_49" align="alignnone" width="800"]<img class="wp-image-49" src="assets/predator-prey-damped-source.png" alt="Potret fase dengan lintasan yang berpilin menuju titik tetap stabil. Deskripsi panjang tersedia." width="800" height="612" /> Gambar 6.1. Potret fase model (6.2) dengan <em>a</em> = 1 dan <em>b</em> = 0.5, diplot menggunakan perangkat lunak PPLANE. [<a href="#Fig_6.1_Desc"><em>Deskripsi Gambar</em></a>][/caption]
+<p style="text-align: justify">Analisis kestabilan linear di atas hanya membuktikan sifat lokal. Namun, dalam rentang parameter tersebut, suatu argumen global tambahan—yang memakai keterbatasan solusi, pengecualian orbit periodik, dan analisis himpunan batas—menunjukkan bahwa jika nilai awal $latex f$ dan $latex s$ positif, dinamika akan konvergen menuju titik tetap $latex P_2$; pada titik ini, kepadatan populasi hiu maupun ikan bernilai berhingga. Dengan kata lain, tidak teramati osilasi periodik. Gambar 6.1 menunjukkan potret fase sistem (<a href="#CLV">6.2</a>) untuk $latex a=1$ dan $latex b=0.5$, yang diperoleh dengan PPLANE. Dalam kasus ini, titik tetap $latex P_2$ merupakan spiral stabil.</p>
+<p style="text-align: justify">Sebagai latihan, pembaca diminta mengerjakan kasus $latex b &gt; 1$, ketika hanya dua titik tetap yang berada di kuadran pertama. Dalam kasus itu, $latex P_1$ merupakan simpul stabil dan semua kondisi awal dengan $latex f &gt; 0$ dan $latex s &gt; 0$ konvergen menuju $latex P_1$. Dalam situasi ini, hiu punah dan ikan telah mencapai daya dukung lingkungan tempat mereka hidup.<a id="Fig_6.2"></a></p>
+
+[caption id="attachment_50" align="alignnone" width="800"]<img class="wp-image-50" src="assets/predator-prey-closed-source.png" alt="Potret fase dengan lintasan-lintasan tertutup yang mengelilingi titik tetap pusat. Deskripsi panjang tersedia." width="800" height="607" /> Gambar 6.2. Potret fase model Lotka–Volterra (6.2) dengan <em>a</em> = 1 dan <em>b</em> = 0, diplot menggunakan perangkat lunak PPLANE. [<a href="#Fig_6.2_Desc"><em>Deskripsi Gambar</em></a>][/caption]
+<p style="text-align: justify">Osilasi dapat diamati asalkan kita menetapkan $latex b = 0$. Ini memang syarat yang diperlukan agar $latex P_2$ menjadi pusat, karena Tr$latex (J(P_2)) = - a b$ dan $latex \det(J(P_2)) = a (1 - b)$. Menetapkan $latex b =0$ membuat jejak $latex J(P_2)$ bernilai nol, tetapi determinannya tetap positif. Dalam kasus ini, $latex P_1$ menghilang (sebenarnya bergeser ke tak hingga ketika $latex b$ mendekati nol), sehingga hanya tersisa dua titik tetap, $latex P_0 = (0, 0)$ dan $latex P_2 = (1, 1)$. Matriks Jacobi $latex J(1,1) = \left(\begin{array}{cc} 0 &amp; -a \\ 1 &amp; 0 \end{array} \right)$ memiliki nilai eigen $latex \pm i \sqrt a$, sehingga $latex P_2$ kini merupakan pusat linear, sebagaimana diperkirakan. Gambar 6.2 menunjukkan potret fase yang bersesuaian, dengan lintasan-lintasan tertutup di sekitar $latex P_2$. Kita dapat membuktikan keberadaan lintasan tertutup sebagai berikut. Setiap lintasan pada bidang fase memenuhi</p>
+<p style="text-align: center">$latex \displaystyle \frac{d f}{d s} = \frac{a f (1 - b f - s)}{s (-1 + f)}.$</p>
+<p style="text-align: justify">Ketika $latex b = 0$, solusi implisit persamaan ini adalah</p>
+<p style="text-align: center">$latex \displaystyle \left(f \exp(-f) \right) \left(s \exp(-s)\right)^a = \zeta,$</p>
+<p style="text-align: justify">dengan $latex \zeta$ sebagai konstanta positif untuk lintasan interior. Nilai nol hanya menghasilkan himpunan batas yang degenerat, bukan orbit tertutup interior. Mudah dilihat bahwa terdapat nilai-nilai $latex \zeta$ yang membuat persamaan ini mendefinisikan kurva tertutup di sekitar $latex P_2$. Memang, fungsi $latex x \exp(-x)$ bernilai nol di titik asal, mencapai maksimum sebesar $latex 1/e$ pada $latex x=1$, dan menuju nol ketika $latex x \rightarrow \infty$. Akibatnya, untuk nilai $latex s$ dan $latex a$ tertentu, dapat ditemukan suatu rentang nilai $latex \zeta$ sehingga persamaan $latex f \exp(-f) = \displaystyle \frac{\zeta}{\left( s \exp(-s) \right)^a}$ memiliki dua solusi, satu di setiap sisi $latex f = 1$. Penalaran serupa berlaku untuk penampang yang sejajar dengan sumbu $latex s$. Lintasan-lintasan tertutup ini ditelusuri berlawanan arah jarum jam di kuadran pertama bidang $latex (f,s)$ karena</p>
+<p style="text-align: center">$latex \displaystyle \frac{d f}{d \tau} = a f (1 - s) &gt; 0 \Leftrightarrow s \lt 1 \text{ dan }\frac{d s}{d \tau} = s (-1 + f) &gt; 0 \Leftrightarrow f &gt; 1.$</p>
+<p style="text-align: justify">Dengan demikian, model Lotka–Volterra memprediksi osilasi periodik populasi pemangsa dan mangsa.</p>
+<p style="text-align: justify">Gagasan yang dikembangkan dalam bagian ini dapat digeneralisasi ke sistem yang lebih kompleks. Sebagai contoh, sebuah artikel tahun 2000 karya G.F. Fussmann <em>et al</em>. berjudul <a href="http://dx.doi.org/10.1126/science.290.5495.1358"><em>Melintasi Bifurkasi Hopf dalam Sistem Pemangsa–Mangsa Hidup</em></a> menunjukkan bahwa prediksi model pemangsa–mangsa yang melibatkan faktor lingkungan serta fraksi reproduktif dan nonreproduktif suatu populasi sangat sesuai dengan hasil eksperimen.</p>
+
+<h2>Dua spesies yang bersaing</h2>
+<p style="text-align: justify">Kini kita beralih ke masalah dua spesies yang bersaing memperebutkan sumber daya yang sama. Kita akan mengasumsikan bahwa tanpa kehadiran spesies lain, setiap spesies tumbuh mengikuti hukum logistik. Persaingan untuk memperoleh makanan membuat laju pertumbuhan setiap spesies dibatasi oleh keberadaan spesies lain. Sebagai hampiran pertama, efek ini bersifat linear. Jika $latex X$ dan $latex Y$ menyatakan kepadatan rata-rata masing-masing spesies, kita memperoleh</p>
+<p style="text-align: center"><a id="CS"></a>$latex \displaystyle \left\{\begin{align*} \displaystyle \frac{dX}{dt} &amp; = X (\alpha - \beta X - \gamma Y), \\ \displaystyle \frac{dY}{dt} &amp; = Y (\delta - \kappa Y - \zeta X), \end{align*}\right. \qquad (6.3)$</p>
+<p style="text-align: justify">dengan $latex \alpha$, $latex \beta$, $latex \gamma$, $latex \delta$, $latex \kappa$, dan $latex \zeta$ merupakan parameter positif. Seperti pada model Lotka-Volterra, mula-mula kita menskalakan ulang persamaan-persamaan ini untuk mengurangi jumlah parameter bebas. Kemudian kita melakukan analisis bidang fase untuk mendeskripsikan dinamika kedua spesies yang bersaing.</p>
+
+<h3>Penskalaan</h3>
+<p style="text-align: justify">Nilai karakteristik bagi $latex X$ dan $latex Y$ adalah $latex X_0 = \alpha/\beta$ dan $latex Y_0 = \delta / \kappa$. Salah satu waktu karakteristik, misalnya, adalah $latex t_0 = 1/\alpha$. Dengan demikian, kita dapat mendefinisikan besaran-besaran tak berdimensi sebagai</p>
+<p style="text-align: center">$latex \displaystyle x = \frac{X}{X_0}, \qquad y = \frac{Y}{Y_0}, \qquad \tau = \frac{t}{t_0},$</p>
+<p style="text-align: justify">mensubstitusikan ungkapan-ungkapan ini ke dalam Persamaan (<a href="#CS">6.3</a>), dan mencari sistem yang disederhanakan untuk variabel $latex x$ dan $latex y$. Kita memperoleh</p>
+<p style="text-align: center"><a id="CCS"></a>$latex \displaystyle \left\{\begin{align*} \displaystyle \frac{dx}{d \tau} &amp; = x\, (1 - x - a\, y),\\ \displaystyle \frac{dy}{d \tau} &amp; = c\, y\, (1 - y - b\, x), \end{align*}\right. \qquad (6.4)$</p>
+<p style="text-align: justify">dengan $latex \displaystyle a = \frac{\gamma \delta}{\alpha \kappa},$ $latex \displaystyle b = \frac{\zeta \alpha}{\beta \delta},$ dan $latex \displaystyle c = \frac{\delta}{\alpha}.$ Dengan demikian, kita memiliki model dengan tiga parameter. Hal ini memang dapat diduga karena pada awalnya kita memiliki sistem nonlinear dengan enam parameter dan dapat menskalakan ulang tiga variabel, yakni $latex t$, $latex X$, dan $latex Y$. Pertanyaan apakah model ini dirumuskan dengan baik secara biologis kita serahkan sebagai latihan, lalu kita langsung beralih ke analisis titik-titik tetap Persamaan (<a href="#CCS">6.4</a>).</p>
+
+<h3>Analisis bidang fase</h3>
+Seperti biasa, titik-titik tetap diperoleh dengan menyelesaikan $latex x(1 - x - a y) = 0$ dan $latex y (1 - y - b x) = 0.$ Sistem persamaan ini memiliki empat solusi, yaitu
+<p style="text-align: center">$latex P_0 = (0,0), \quad P_1 = (1, 0), \quad P_2 = (0, 1), \quad P_3 = \displaystyle \left(\frac{1 - a}{1 - a b},\frac{1 - b}{1 - a b}\right).$</p>
+<p style="text-align: justify">Titik tetap terakhir, $latex P_3$, terletak di kuadran pertama hanya jika $latex 1-a$, $latex 1 - b$, dan $latex 1 - a b$ semuanya bertanda sama, serta $latex a b \ne 1$. Selanjutnya, kita mengasumsikan bahwa syarat-syarat ini dipenuhi dan menggunakan $latex \epsilon = \pm 1$ untuk menyatakan tanda ketiga besaran tersebut, yaitu</p>
+<p style="text-align: center">$latex \epsilon = \text{sign}(1 - a) = \text{sign}(1 - b) = \text{sign}(1 - a b).$</p>
+Jacobian dari (<a href="#CCS">6.4</a>) adalah
+<p style="text-align: center">$latex J(x,y) = \displaystyle \left(\begin{array}{cc} 1 - 2 x - a y &amp; - a x \\ - b \, c \, y &amp; c (1 - 2 y - b x)\end{array} \right).$</p>
+Sekarang kita dapat menghitung nilai-nilai eigen $latex J(x,y)$ yang dievaluasi pada setiap titik tetap.
+<h4 style="text-align: left">Analisis di sekitar titik asal, $latex P_0$</h4>
+<p style="text-align: justify">Untuk $latex P_0,$ matriks $latex J(0,0)$ berbentuk diagonal dan nilai-nilai eigennya adalah $latex 1$ dan $latex c$. Karena keduanya positif, titik asal merupakan simpul tak stabil.</p>
+
+<h4 style="text-align: left">Analisis di sekitar $latex P_1$</h4>
+<p style="text-align: justify">Untuk $latex P_1,$ matriks $latex J(1,0)$ berbentuk segitiga atas dan nilai-nilai eigennya adalah $latex -1$ dan $latex c (1-b)$. Jika $latex \epsilon = 1,$ maka $latex P_1$ merupakan titik pelana. Jika $latex \epsilon = -1$, titik tersebut merupakan simpul stabil.</p>
+
+<h4 style="text-align: left">Analisis di sekitar $latex P_2$</h4>
+<p style="text-align: justify">Untuk $latex P_2,$ matriks $latex J(0,1)$ berbentuk segitiga bawah dan nilai-nilai eigennya adalah $latex 1 - a$ dan $latex -c$. Dengan demikian, $latex P_2$ merupakan titik pelana jika $latex \epsilon = 1$, dan simpul stabil jika $latex \epsilon = -1$.</p>
+
+<h4 style="text-align: left">Analisis di sekitar $latex P_3$</h4>
+<p style="text-align: justify">Untuk $latex P_3$, Jacobiannya adalah</p>
+<p style="text-align: center">$latex \displaystyle J \left( \frac{1 - a}{1 - a b}, \frac{1 - b}{1 - a b} \right) = \displaystyle \frac{1}{1 - a b} \left(\begin{array}{cc} a-1 &amp; a\, (a-1) \\ b\,c\,(b-1) &amp; c\,(b-1)\end{array} \right).$</p>
+<p style="text-align: justify">Karena jejaknya $latex T$ dan determinannya $latex D$ diberikan oleh</p>
+<p style="text-align: center">$latex \displaystyle T = \frac{1}{1 - a b} \left(a - 1 + c (b -1)\right), \quad D = \frac{(a - 1) c (b - 1)}{1 - a b},$</p>
+<p style="text-align: justify">kita melihat bahwa $latex \text{sign}(T)=-1$ dan $latex \text{sign}(D)=\epsilon.$ Jika $latex \epsilon = -1$, $latex P_3$ merupakan titik pelana. Jika $latex \epsilon = 1$, $latex P_3$ merupakan simpul stabil. Memang, diskriminan polinom karakteristiknya adalah</p>
+<p style="text-align: center">$latex T^2-4D = \frac{[(a-1)-c(b-1)]^2+4abc(a-1)(b-1)}{(1-ab)^2},$</p>
+<p style="text-align: justify">dan karena itu positif. Dengan demikian, kedua nilai eigennya riil.</p>
+<p style="text-align: justify">Gambar 6.3 dan 6.4 masing-masing memperlihatkan potret fase sistem (<a href="#CCS">6.4</a>) untuk $latex \epsilon = 1$ dan $latex \epsilon = -1$.<a id="Fig_6.3"></a></p>
+
+[caption id="attachment_51" align="alignnone" width="800"]<img class="wp-image-51" src="assets/competition-coexistence-source.png" alt="Potret fase model persaingan dengan koeksistensi stabil. Deskripsi panjang tersedia." width="800" height="601" /> Gambar 6.3. Bidang fase sistem (6.4), dengan a = 0.5, b = 0.8, dan c = 1 (ε = 1), yang digambar menggunakan perangkat lunak PPLANE. [<a href="#Fig_6.3_Desc"><em>Deskripsi Gambar</em></a>][/caption][caption id="attachment_52" align="alignnone" width="800"]<img id="Fig_6.4" class="wp-image-52" src="assets/competition-exclusion-source.png" alt="Potret fase model persaingan dengan eksklusi salah satu spesies. Deskripsi panjang tersedia." width="800" height="602" /> Gambar 6.4. Bidang fase sistem (6.4), dengan a = 1.2, b = 2, dan c = 1 (ε = -1), yang digambar menggunakan perangkat lunak PPLANE. [<a href="#Fig_6.4_Desc"><em>Deskripsi Gambar</em></a>][/caption]
+<p style="text-align: justify"><a id="Fig_6.4_after"></a>Dari sudut pandang ekologi, kedua spesies hidup berdampingan jika $latex P_3$ stabil, yaitu jika $latex \epsilon = 1$. Jika tidak, untuk kondisi awal interior generik salah satu spesies akan punah akibat spesies lain karena titik tetap yang stabil ketika $latex \epsilon = -1$ hanyalah $latex P_1$ dan $latex P_2$, dan pada kedua titik tersebut salah satu populasi bernilai nol. Pengecualiannya ialah kondisi awal yang tepat berada pada manifold stabil titik pelana $latex P_3$; lintasan demikian menuju $latex P_3$ dan membentuk batas antara kedua daerah tarikan. Contoh sederhana ini memperlihatkan bagaimana hubungan antarparameter model dapat disimpulkan dari fakta biologis. Sebagai contoh, analisis di atas menunjukkan bahwa jika kedua spesies hidup berdampingan pada titik tetap interior positif yang stabil, maka $latex a \lt 1$ dan $latex b \lt 1,$ sehingga $latex a b \ne 1.$ Kasus $latex a = 1$ atau $latex b = 1$ berada pada batas, sehingga titik koeksistensi tidak lagi menjadi titik interior positif yang terisolasi; jika keduanya sama dengan 1 dan $latex a b = 1$, sistem tersebut degenerat.</p>
+
+<h2>Ringkasan</h2>
+<p style="text-align: justify">Dalam bab ini, kita memperkenalkan dua model klasik dinamika populasi, yaitu sistem predator-mangsa dan sistem yang mendeskripsikan dua spesies yang bersaing memperebutkan sumber daya yang sama. Alat utama yang kita gunakan untuk menganalisis kedua model dua dimensi ini adalah analisis bidang fase. Kita hanya membahas model kontinu elementer, tetapi analog diskret maupun model yang lebih kompleks tentu saja juga dapat dipertimbangkan.</p>
+<p style="text-align: justify">Dari sudut pandang biologis, penting untuk mengingat bahwa sistem predator-mangsa dapat memperlihatkan osilasi temporal. Osilasi tersebut biasanya muncul dari bifurkasi Hopf, sebagaimana dibahas, misalnya, dalam artikel Fussmann <em>et al.</em>[footnote]G.F. Fussmann, S.P. Ellner, K.W. Shertzer, N.G. Hairston Jr., <a href="http://dx.doi.org/10.1126/science.290.5495.1358"><em>Crossing the Hopf Bifurcation in a Live Predator-Prey System</em></a>, Science <strong>290</strong>, 1358-1360 (2000).[/footnote] (lihat soal-soal), dan bukan berkaitan dengan adanya orbit tertutup yang jumlahnya tak hingga seperti pada sistem Lotka-Volterra dengan $latex a = 1$ dan $latex b = 0$.</p>
+<p style="text-align: justify">Untuk spesies yang bersaing, model sederhana yang disajikan dalam bagian ini menunjukkan bahwa kedua spesies hanya dapat hidup berdampingan jika $latex a$ dan $latex b$ dalam sistem (<a href="#CCS">6.4</a>) keduanya kurang dari satu. Jika tidak, salah satu spesies akan menyebabkan spesies lain punah.</p>
+
+<h2>Deskripsi Gambar</h2>
+<strong><a id="Fig_6.1_Desc"></a>Gambar 6.1</strong>: Potret fase yang menampilkan medan vektor dan beberapa lintasan. Ciri utamanya adalah spiral stabil pada titik kesetimbangan interior. Dua titik kesetimbangan lain tampak pada sumbu horizontal: titik pelana di titik asal (0,0) dan satu titik pelana lagi di sebelah kanannya. Semua lintasan dari bagian atas dan kanan melengkung ke dalam menuju spiral pusat tersebut. [<em><a href="#Fig_6.1">Kembali ke Gambar 6.1</a></em>]
+
+<strong><a id="Fig_6.2_Desc"></a>Gambar 6.2</strong>: Potret fase yang menampilkan medan vektor dan beberapa orbit tertutup konsentris di sekitar titik kesetimbangan pusat. Orbit-orbit tersebut menunjukkan sistem periodik yang stabil netral tanpa redaman. Titik kesetimbangan kedua tampak di titik asal (0,0) dan merupakan titik pelana. [<em><a href="#Fig_6.2">Kembali ke Gambar 6.2</a></em>]
+
+<strong><a id="Fig_6.3_Desc"></a>Gambar 6.3</strong>: Potret fase model persaingan yang menampilkan empat titik kesetimbangan. Titik asal (0,0) merupakan simpul tak stabil. Dua titik pada sumbu $latex x$ dan $latex y$ merepresentasikan kesetimbangan "spesies tunggal", yakni satu spesies punah sementara spesies lainnya berada pada daya dukungnya. Kedua titik tersebut merupakan titik pelana. Titik tetap di bagian tengah merupakan simpul stabil. Semua lintasan di bagian dalam bidang melengkung menuju titik ini. [<em><a href="#Fig_6.3">Kembali ke Gambar 6.3</a></em>]
+
+<strong><a id="Fig_6.4_Desc"></a>Gambar 6.4</strong>: Potret fase sistem persaingan yang menampilkan empat titik kesetimbangan. Berbeda dari gambar sebelumnya, yang menunjukkan kedua spesies hidup berdampingan secara stabil, lintasan-lintasan generik di sini melengkung menjauhi titik pelana interior dan menuju sumbu-sumbu. Hal ini merepresentasikan skenario "pemenang menguasai semuanya", yakni satu spesies pada akhirnya menyebabkan spesies lain punah, bergantung pada ukuran populasi awal. Manifold stabil titik pelana interior menjadi batas antara kedua daerah tarikan dan merupakan pengecualian terhadap perilaku generik tersebut. [<em><a href="#Fig_6.4">Kembali ke Gambar 6.4</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Bahan Renungan</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center" id="O005-LEGA-V101-CH06-P01">Soal 1</h3>
+Tulislah model waktu-kontinu yang mendeskripsikan situasi berikut. Spesies $latex x$ bertahan hidup dengan memakan nutrien $latex n$ dan memiliki laju kematian per kapita sebesar $latex d$. Nutrien $latex n$ dipasok ke sistem dengan laju konstan. Gunakan asumsi aksi massa paling sederhana: konsumsi nutrien dan pertumbuhan spesies masing-masing sebanding dengan $latex x n$, dengan koefisien positif konstan yang boleh berbeda, dan tidak ada kehilangan nutrien lain selain konsumsi. Nyatakan dengan jelas setiap parameter tambahan yang Anda gunakan.
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH06-P02">Soal 2</h3>
+Apakah model (<a href="#CCS">6.4</a>) dirumuskan dengan baik secara biologis? Mengapa atau mengapa tidak?
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH06-P03">Soal 3</h3>
+Tinjau model (<a href="#CCS">6.4</a>) dengan $latex a \lt 1$ dan $latex b &gt; 1$.
+<ol>
+ 	<li>Gunakan analisis bidang fase untuk mendeskripsikan dinamika jangka panjang sistem ini. Periksa hasil Anda dengan <a href="notebooks/chapter-06-open-two-species-models.ipynb">notebook Python terbuka pendamping yang independen</a> atau perangkat lunak terbuka yang setara.</li>
+ 	<li>Apa makna biologis temuan Anda pada bagian (1)?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH06-P04">Soal 4</h3>
+Tinjau model berikut
+<p style="text-align: center">$latex \displaystyle \left\{\begin{align*} \displaystyle \frac{dx}{dt} &amp; = - x + 4 - x y,\\ \displaystyle \frac{dy}{dt} &amp; = - x y + y + y^2, \end{align*}\right.$</p>
+dengan $latex x$ dan $latex y$ taknegatif.
+<ol>
+ 	<li> Carilah titik-titik tetap sistem ini.</li>
+ 	<li>Linearisasikan sistem di sekitar titik-titik tetapnya dan tentukan kestabilan setiap titik tetap.</li>
+ 	<li>Gunakan informasi di atas untuk membuat sketsa bidang fase sistem ini.</li>
+ 	<li>Periksa jawaban Anda dengan <a href="notebooks/chapter-06-open-two-species-models.ipynb">notebook Python terbuka pendamping yang independen</a> atau perangkat lunak terbuka yang setara.</li>
+ 	<li>Dapatkah model ini mendeskripsikan suatu sistem biologis? Mengapa atau mengapa tidak?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH06-P05">Soal 5</h3>
+Tinjau sistem
+<p style="text-align: center">$latex \displaystyle \left\{\begin{align*} \displaystyle \frac{d X}{d t} &amp; =- \alpha X + \beta,\\ \displaystyle \frac{d Y}{d t} &amp; = \gamma X Y - \delta Y - \zeta Y^2, \end{align*}\right. \qquad \alpha, \beta, \gamma, \delta, \zeta &gt; 0.$</p>
+
+<ol>
+ 	<li>Apa dimensi setiap parameter?</li>
+ 	<li>Tuliskan sistem ini dalam bentuk tak berdimensi. Jelaskan bagaimana Anda memilih skala variabel-variabelnya.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH06-P06"><span style="text-indent: 0em">Soal 6</span></h3>
+<span style="text-indent: 0em">Tinjaulah model yang dideskripsikan dalam artikel karya G.F. </span> Fussmann<em> et al</em>. berjudul <em><a href="http://dx.doi.org/10.1126/science.290.5495.1358">Crossing the Hopf Bifurcation in a Live Predator-Prey System</a>.</em>
+<ol>
+ 	<li>Spesies mana yang menjadi predator dan mana yang menjadi mangsa?</li>
+ 	<li>Apa peran $latex N$ dalam model tersebut?</li>
+ 	<li>Bagaimana Anda akan memodifikasi model jika tidak ingin membedakan <em>Brachionus</em> yang bereproduksi dan yang tidak bereproduksi?</li>
+</ol>
+</div>
+</div>

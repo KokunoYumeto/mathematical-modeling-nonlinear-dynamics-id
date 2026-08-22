@@ -526,6 +526,15 @@ SPECS = {
             ('alt="Stability diagram of a one-dimensional system. Long description available."', 'alt="Diagram kestabilan sistem satu dimensi. Deskripsi panjang tersedia."', 1),
         ],
     },
+    "O005-LEGA-V101-CH06": {
+        "source_lines": 182,
+        "problem_count": 6,
+        "fragments": [
+            "01-predator-prey.html",
+            "02-competition-exercises.html",
+        ],
+        "replacements": [],
+    },
 }
 
 

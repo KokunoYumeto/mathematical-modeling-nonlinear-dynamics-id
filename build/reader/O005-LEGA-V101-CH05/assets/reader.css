@@ -78,6 +78,7 @@ main { padding-block: clamp(1.5rem, 4vw, 3.5rem); }
 .edition-notice h2 { margin-top: 0; font-size: 1.2rem; }
 
 h2, h3 { line-height: 1.25; scroll-margin-top: 5rem; }
+[id] { scroll-margin-top: 5rem; }
 .chapter > h2 { margin-top: 2.7em; font-size: clamp(1.5rem, 3vw, 2.15rem); color: var(--accent-dark); }
 .chapter > h3 { margin-top: 2em; }
 .chapter p { hyphens: auto; }

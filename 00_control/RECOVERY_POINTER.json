@@ -31,19 +31,19 @@
     "all_bytes_and_sha256_equal": true
   },
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-CH05",
+    "unit_id": "O005-LEGA-V101-CH06",
     "source_record_type": "chapters",
-    "source_record_id": 48,
-    "source_slug": "single-species-models",
-    "source_canonical_sha256": "7f276a994f78af2af02d5bdd39b9566a50f5e3b09b25351c70cdff50736c66be",
-    "source_content_sha256": "476153ddf275a4c6d9f52e4268be21c009da3ba5a4e0b5b15fefc73c32d828f2",
-    "target_content_sha256": "8a8a205b1dfac9778c3e8549c036559dae88aff1e5262e9513cc5646d72bff7e",
-    "segment_sha256": "32732105bb934be792de3749e7ede0cf2cdd617126fab6efeddd9468d096dd9f",
-    "mastery_sha256": "d85cda9304f74e5f5d3ff874b37044e18068a9446bf6a3cd4682831bc8c45cc6",
-    "notebook_sha256": "b7a19523b1fedc344a1cda20cca0a8cfb8a46588f05ff7f59417fa59cfd9c7cd",
-    "reader_manifest_sha256": "de862361118699c3c398145bf2424d43a6f39610ad3c409c484aad19c506c30d",
-    "qa_tree_sha256": "16ec1089ec9abccc946cf5970a7d9a51e45855cce4036cea2f05b15329f1fc5e"
+    "source_record_id": 53,
+    "source_slug": "two-species-models",
+    "source_canonical_sha256": "cdcc1c12fc5c0245ffbb94c6cfdc706570f50540bb6719d78e1391f282b114de",
+    "source_content_sha256": "d9e372db30a8afbae16bdc43f03fa486035c87deb5f8db774ae2e671d6594938",
+    "target_content_sha256": "67e09680f3a67626a2a6761dd4376202985d87a06bdea72dbbd59978b9b08564",
+    "segment_sha256": "f6e18702e5d7c5ed521a487b5439d888f942b052fda194cbc16217feacc0eecf",
+    "mastery_sha256": "898e4b224ca73073a20a8fb87021d305d00be53f43729eb10d9717cc39dba1b4",
+    "notebook_sha256": "2bb805326ad45bfb90a914dbd2eb12b5a579e63d0cb60cdce8f4f6c8928eb33a",
+    "reader_manifest_sha256": "7a5b5b3d80871ba4f1411fd693a2cb351befa7bab8c0cda11c55999585605b44",
+    "qa_tree_sha256": "f18df68aa2462a496b8cca2eb3c85ddb9e7a421924819cdeff9c1316a635c1cc"
   },
-  "current_unit": "O005-LEGA-V101-CH06",
-  "next_action": "Prepare and translate Pressbooks chapter record 53, Two-Species Models, as Model Populasi Dua Spesies, preserving 182 raw lines, 185 opening elements, 31 links, 227 TeX occurrences, four figures, three footnotes, and six problems, with complete mastery and an independent open phase-plane computation closure."
+  "current_unit": "O005-LEGA-V101-CH07",
+  "next_action": "Translate Pressbooks chapter record 57, Epidemiology, as Epidemiologi, preserving 123 raw lines, 126 opening elements, 29 links, 150 TeX occurrences, three figures, one footnote, and five problems, with complete mastery and an independent open phase-plane/epidemiology computation closure."
 }

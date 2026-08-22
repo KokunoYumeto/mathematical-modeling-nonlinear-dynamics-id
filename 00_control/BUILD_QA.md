@@ -328,3 +328,70 @@ immediately preceding full QA run.
   `b7a19523b1fedc344a1cda20cca0a8cfb8a46588f05ff7f59417fa59cfd9c7cd`;
   and Census packet
   `f59dbd91b2bf975df7b7fb4af6de52dc3c68a705632e83d60410d98781206f09`.
+
+## Admitted build — O005-LEGA-V101-CH06 — 2026-08-22
+
+- Builder: `scripts/build_unit_reader.py --unit O005-LEGA-V101-CH06`, Pandoc
+  3.9.0.2, native MathML for chapter and mastery mathematics.
+- Final QA: `scripts/qa_unit.py --unit O005-LEGA-V101-CH06
+  --execute-notebook --deterministic-build`, exit 0 after the final shared-CSS
+  anchor-offset change.
+- Structural replay: 182 / 182 source-target lines, 185 / 185 ordered
+  elements, 31 / 31 links, 227 source TeX occurrences mapped to 237 declared
+  target occurrences, four / four figures, three / three footnotes, and six /
+  six stable problems. The declared corrections are O005-CORR-0046–0063.
+- Backend: 211 paired segments / 137,097 bytes, SHA-256
+  `f6e18702e5d7c5ed521a487b5439d888f942b052fda194cbc16217feacc0eecf`;
+  six complete mastery records / 24,865 bytes, SHA-256
+  `898e4b224ca73073a20a8fb87021d305d00be53f43729eb10d9717cc39dba1b4`.
+- Notebook: 14 cells / six code cells / 49 assertions, unique deterministic
+  cell IDs, clean stored outputs, Python 3.13.9, NumPy 2.4.4, SciPy 1.17.1,
+  and Matplotlib 3.10.9. The damped predator–prey convergence error was
+  `9.360e-05`, the Lotka–Volterra invariant drift was `8.260e-14`, and every
+  equilibrium, discriminant, stability, scaling, and exercise assertion
+  passed.
+- Reader: 11 payload files / 1,460,989 bytes excluding the 1,177-byte
+  manifest; 237 chapter and 212 mastery MathML nodes; seven local
+  dependencies; four loaded figures; three localized notes; zero missing
+  dependency, duplicate ID, broken fragment, raw mastery TeX, token-shape,
+  local-path, privacy, or U+FFFD failure. Both source MathWorks links resolve
+  to the packaged open notebook download.
+- Reader manifest SHA-256
+  `7a5b5b3d80871ba4f1411fd693a2cb351befa7bab8c0cda11c55999585605b44`.
+  Final deterministic double build: 12 files including manifest,
+  byte-identical; canonical tree SHA-256
+  `f18df68aa2462a496b8cca2eb3c85ddb9e7a421924819cdeff9c1316a635c1cc`.
+- Browser visual QA against the final bytes: at 1280×900 the 1,152 px main
+  shell and 768 px article were centered; at 390×844 the article was 357.5 px
+  wide and centered. Document scroll width equaled client width at both sizes,
+  all four 1,024 px source images loaded without enlargement, all 34 IDs were
+  unique, every local fragment and notebook path resolved, the corrected
+  Figure 6.4 return target landed below the sticky navigation, and a fresh
+  load reported no console warning or error. External-link reachability was
+  not tested. No audio or live widget exists in this unit.
+
+## Anchor-offset propagation — all completed units — 2026-08-22
+
+The Chapter 6 accessibility pass added `scroll-margin-top: 5rem` to identifier
+targets so internal links remain visible below the sticky reader navigation.
+The final shared stylesheet is 4,740 bytes, SHA-256
+`855b0177868a8c3d32ceffee55adfa8f738f8b2116581ca460acaa3e734789ee`.
+The same 34-byte deterministic stylesheet delta was copied into every earlier
+completed reader and each package manifest was regenerated. Source prose,
+segments, unit metadata, mastery, notebooks, data, and figures did not change.
+
+| Unit | Payload bytes | Package-manifest SHA-256 | Current tree SHA-256 |
+|---|---:|---|---|
+| O005-LEGA-V101-CH01 | 217,554 | `b82e8dae5e73a781b6c40706941f7f80bb514896a82950c14949429f9b96d34b` | `2135e8df21f041d681495ea9a9a98143f8a7b62f4c92d85dcfe3edd5746ba067` |
+| O005-LEGA-V101-CH02 | 358,825 | `4fe0544da0dde86f57949af81ef74911df6bebb624d521a80d3702be58f14ce6` | `492056a253392e7eca9705a1c868cee45a79aea0a2eb4031df46578ff5dcfd1f` |
+| O005-LEGA-V101-PT02 | 11,252 | `a07846e34797e4c67bdc9c53684a3487ee00c587086df57f81d80a65ad4a5201` | `f3247eab331bf1fbb87d784c61e1ecfdb702e5bd47830b22924dace3d1601ee2` |
+| O005-LEGA-V101-CH03 | 2,025,496 | `fc204f5ede1f1115a401dc7045eebd7534fb67fd8c8d5ebb11750a7fae1fbb59` | `1d94c1bb7616fdb1206a190a78cead3c7f4436705e77285dd1c30e1228d34ce0` |
+| O005-LEGA-V101-CH04 | 447,252 | `c4a4885af7751e2bcfdac61e41ba9c57c5f61c21b4b2a311c9037490057a2854` | `4bcb8fea4e833ff0e0fff5a29416ab209a44149c073a082cfee6eeaacd03940b` |
+| O005-LEGA-V101-PT03 | 17,052 | `1132d5446df024c6ff82986f94dcd82dc2b4e2c4f2c149b4d158a48e6423e6fa` | `7843ce0c7a21f0756d825b4eeae21c0c2a2cae25a3d1cfd1a082d30c4db6a4e3` |
+| O005-LEGA-V101-CH05 | 968,531 | `6f925f90dbf7305b1d7f6819eb28708ba1bf12bde9cef9b0cedb97d9582b448e` | `fa35cf796e2a4cda18f8b2c0b9798266c70eabe487be8144461f3b4f872f8f0a` |
+| O005-LEGA-V101-CH06 | 1,460,989 | `7a5b5b3d80871ba4f1411fd693a2cb351befa7bab8c0cda11c55999585605b44` | `f18df68aa2462a496b8cca2eb3c85ddb9e7a421924819cdeff9c1316a635c1cc` |
+
+The structure/backend/locality QA command returned exit 0 for all seven
+earlier units after propagation. Chapter 6 then passed a fresh complete
+notebook-executing deterministic double build. Its desktop/mobile browser pass
+validated the visible anchor behavior on the final stylesheet bytes.

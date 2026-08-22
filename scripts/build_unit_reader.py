@@ -161,6 +161,26 @@ UNIT_SPECS = {
         "plain_paragraphs": False,
         "change_note": "penerjemahan, koreksi matematika terdokumentasi, pelokalan label gambar, pengindeksan modular, dukungan ketuntasan, dan pendamping Python terbuka tanpa ketergantungan perangkat lunak berpemilik",
     },
+    "O005-LEGA-V101-CH06": {
+        "unit_type": "chapter",
+        "unit_number": 6,
+        "chapter_number": 6,
+        "source_title": "Two-Species Models",
+        "target_title": "Model Populasi Dua Spesies",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/two-species-models/",
+        "target_assets": [
+            "assets/predator-prey-damped-source.png",
+            "assets/predator-prey-closed-source.png",
+            "assets/competition-coexistence-source.png",
+            "assets/competition-exclusion-source.png",
+        ],
+        "caption_count": 4,
+        "footnote_count": 3,
+        "notebook": "notebooks/chapter-06-open-two-species-models.ipynb",
+        "problem_count": 6,
+        "plain_paragraphs": False,
+        "change_note": "penerjemahan, koreksi matematika terdokumentasi, pengindeksan modular, dukungan ketuntasan, dan pendamping analisis bidang fase dengan Python terbuka tanpa ketergantungan perangkat lunak berpemilik",
+    },
 }
 
 
@@ -338,6 +358,17 @@ def harden_links(soup: BeautifulSoup) -> None:
         href = str(anchor["href"])
         if href.startswith(("http://", "https://")):
             anchor["rel"] = "external noopener noreferrer"
+
+
+def rewrite_reader_local_links(soup: BeautifulSoup) -> None:
+    """Map source-tree notebook links onto the packaged download directory."""
+    for anchor in soup.find_all("a", href=True):
+        href = str(anchor["href"])
+        if not href.startswith("notebooks/"):
+            continue
+        if NOTEBOOK is None or Path(href).name != NOTEBOOK.name:
+            raise RuntimeError(f"Undeclared notebook dependency in target content: {href}")
+        anchor["href"] = f"downloads/{NOTEBOOK.name}"
 
 
 def append_companion_text(soup: BeautifulSoup, parent: Tag, value: str) -> None:
@@ -615,6 +646,7 @@ def build_reader(output: Path) -> dict:
     segment_count, segment_sha = write_backend(source, target, mastery, pandoc)
 
     body = wrap_inline_runs(replace_pressbooks_markup(target))
+    rewrite_reader_local_links(body)
     harden_links(body)
     unit_label = "Bab" if UNIT_SPEC["unit_type"] == "chapter" else "Bagian"
     source_unit_label = "bab" if UNIT_SPEC["unit_type"] == "chapter" else "bagian"

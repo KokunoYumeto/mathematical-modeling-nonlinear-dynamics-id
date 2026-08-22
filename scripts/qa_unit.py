@@ -305,6 +305,86 @@ QA_SPECS = {
         "lock": None,
         "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",
     },
+    "O005-LEGA-V101-CH06": {
+        "unit_type": "chapter",
+        "elements": 185,
+        "links": 31,
+        "href_replacements": {
+            28: (
+                "https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field",
+                "notebooks/chapter-06-open-two-species-models.ipynb",
+            ),
+            29: (
+                "https://github.com/MathWorks-Teaching-Resources/Phase-Plane-and-Slope-Field",
+                "notebooks/chapter-06-open-two-species-models.ipynb",
+            ),
+        },
+        "attribute_replacements": {
+            111: {"id": (None, "Fig_6.4")},
+            115: {"id": ("Fig_6.4", "Fig_6.4_after")},
+        },
+        "math": 227,
+        "target_math": 237,
+        "reader_math": 237,
+        "math_replacements": {
+            35: (r"\tau = 1 / \kappa", r"t_0 = 1 / \kappa"),
+            70: (r"b \le 1", r"0 \lt b \lt 1"),
+            81: (
+                r"\displaystyle J(1 - b, 1) = \left(\begin{array}{cc} -a b &amp; -a \\ 1 - b &amp; 0 \end{array} \right),",
+                r"\displaystyle J(1, 1 - b) = \left(\begin{array}{cc} -a b &amp; -a \\ 1 - b &amp; 0 \end{array} \right),",
+            ),
+            84: (
+                r"\det(J) = \lambda_1 \lambda_2 = \det\left[J(1-b,1)\right] = a (1 - b) &gt; 0,",
+                r"\det(J) = \lambda_1 \lambda_2 = \det\left[J(1,1-b)\right] = a (1 - b) &gt; 0,",
+            ),
+            85: (
+                r"\hbox{Tr}(J) = \lambda_1 + \lambda_2 = \hbox{Tr}\left[J(1-b,1)\right] = - a b \lt 0.",
+                r"\hbox{Tr}(J) = \lambda_1 + \lambda_2 = \hbox{Tr}\left[J(1,1-b)\right] = - a b \lt 0.",
+            ),
+            129: (
+                r"\displaystyle \frac{d f}{d \tau} = a f (1 - s) &gt; 0 \Leftrightarrow s \lt 1 \text{ and }\frac{d s}{d \tau} = s (-1 + f) &gt; 0 \Leftrightarrow f &gt; 1.",
+                r"\displaystyle \frac{d f}{d \tau} = a f (1 - s) &gt; 0 \Leftrightarrow s \lt 1 \text{ dan }\frac{d s}{d \tau} = s (-1 + f) &gt; 0 \Leftrightarrow f &gt; 1.",
+            ),
+            156: (
+                r"P_0 = (0,0), \quad P_1 = (1, 0), \quad P_2 = (1, 0), \quad P_3 = \displaystyle \left(\frac{1 - a}{1 - a b},\frac{1 - b}{1 - a b}\right).",
+                r"P_0 = (0,0), \quad P_1 = (1, 0), \quad P_2 = (0, 1), \quad P_3 = \displaystyle \left(\frac{1 - a}{1 - a b},\frac{1 - b}{1 - a b}\right).",
+            ),
+            199: (
+                r"T^2 - 4 D = \displaystyle \frac{1}{(1- a b)^2} \left[ (a-1) - c (b-1) \right]^2,",
+                r"T^2-4D = \frac{[(a-1)-c(b-1)]^2+4abc(a-1)(b-1)}{(1-ab)^2},",
+            ),
+            207: (r"a \le 1", r"a \lt 1"),
+            208: (r"b \le 1,", r"b \lt 1,"),
+        },
+        "math_insertions_before": {
+            44: [r"a \gt 0", r"b \ge 0"],
+            72: [r"P_1 = P_2 = (1,0)"],
+            86: [r"0 \lt b \lt 1"],
+            207: [r"P_3", r"P_3"],
+            210: [r"a = 1", r"b = 1", r"a b = 1"],
+            220: [r"x n"],
+        },
+        "problems": 6,
+        "footnotes": 3,
+        "assets": [
+            "assets/predator-prey-damped-source.png",
+            "assets/predator-prey-closed-source.png",
+            "assets/competition-coexistence-source.png",
+            "assets/competition-exclusion-source.png",
+        ],
+        "target_image_dimensions": [
+            ("800", "612"),
+            ("800", "607"),
+            ("800", "601"),
+            ("800", "602"),
+        ],
+        "notebook": "notebooks/chapter-06-open-two-species-models.ipynb",
+        "notebook_cells": 14,
+        "code_cells": 6,
+        "mastery_math": 212,
+        "lock": None,
+        "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",
+    },
 }
 BUILDER = ROOT / "scripts" / "build_unit_reader.py"
 LATEX_RE = re.compile(r"\$latex\s+(.+?)\$", re.DOTALL)
@@ -369,6 +449,12 @@ def structural_replay() -> dict:
                 left_attrs.pop("height", None); right_attrs.pop("height", None)
         if left.name == "h3" and right.get("id", "").startswith(f"{UNIT_ID}-P"):
             right_attrs.pop("id", None)
+        if left.name == "a":
+            left_attrs.pop("href", None); right_attrs.pop("href", None)
+        for attribute, (old, new) in SPEC.get("attribute_replacements", {}).get(index - 1, {}).items():
+            require(left_attrs.get(attribute) == old, f"Declared source attribute correction surface {index - 1}.{attribute} differs")
+            require(right_attrs.get(attribute) == new, f"Declared target attribute correction surface {index - 1}.{attribute} differs")
+            left_attrs.pop(attribute, None); right_attrs.pop(attribute, None)
         require(left_attrs == right_attrs, f"Unapproved attribute drift at element {index}: {left.name}")
     if SPEC.get("target_image_dimensions"):
         dimensions = [
@@ -382,7 +468,18 @@ def structural_replay() -> dict:
         )
     source_links = [tag["href"] for tag in source_tags if tag.name == "a" and tag.has_attr("href")]
     target_links = [tag["href"] for tag in target_tags if tag.name == "a" and tag.has_attr("href")]
-    require(source_links == target_links and len(source_links) == SPEC["links"], "Source/target href sequence differs")
+    expected_target_links: list[str] = []
+    href_replacements = SPEC.get("href_replacements", {})
+    for index, value in enumerate(source_links):
+        if index in href_replacements:
+            old, new = href_replacements[index]
+            require(value == old, f"Declared source href correction surface {index} differs")
+            value = new
+        expected_target_links.append(value)
+    require(
+        target_links == expected_target_links and len(source_links) == SPEC["links"],
+        "Source/target href sequence differs outside declared corrections",
+    )
     source_math = [match.strip() for match in LATEX_RE.findall(source_text)]
     target_math = [match.strip() for match in LATEX_RE.findall(target_text)]
     require(len(source_math) == SPEC["math"], "Frozen source TeX census differs")

@@ -1,0 +1,47 @@
+{
+  "assets": [
+    {
+      "bytes": 261588,
+      "epub_member": "EPUB/assets/CLV_PP1-1024x784.png",
+      "path": "assets/predator-prey-damped-source.png",
+      "sha256": "5f714f9670a8a634d3f6e41571e4be8423b53a7991f4ce3ea159c54c439a72df"
+    },
+    {
+      "bytes": 291998,
+      "epub_member": "EPUB/assets/CLV_PP2-1024x777.png",
+      "path": "assets/predator-prey-closed-source.png",
+      "sha256": "12c7e47611611ad9bdbf822d0ecac1abd5a54b3302aeff9cd037bd9a0d42f6c3"
+    },
+    {
+      "bytes": 238694,
+      "epub_member": "EPUB/assets/CCS_PP1-1024x769.png",
+      "path": "assets/competition-coexistence-source.png",
+      "sha256": "4eea679f5d3449746b333e429c8be8c2340348f130a705fe2e05597b8c76f765"
+    },
+    {
+      "bytes": 244184,
+      "epub_member": "EPUB/assets/CCS_PP2-1024x770.png",
+      "path": "assets/competition-exclusion-source.png",
+      "sha256": "2675913333eaecef42fbec40ec78f24a3ea555217ade399bb159e2c5c5739c53"
+    }
+  ],
+  "content_raw": {
+    "bytes": 27114,
+    "path": "content.raw.en.html",
+    "sha256": "d9e372db30a8afbae16bdc43f03fa486035c87deb5f8db774ae2e671d6594938"
+  },
+  "content_rendered": {
+    "bytes": 33532,
+    "path": "content.rendered.en.html",
+    "sha256": "b842a63487adf8ac043818700dd9148c489dcd473ca390003bb6b69833e1bf12"
+  },
+  "record": {
+    "bytes": 63377,
+    "path": "source-record.canonical.json",
+    "sha256": "cdcc1c12fc5c0245ffbb94c6cfdc706570f50540bb6719d78e1391f282b114de"
+  },
+  "schema": "o005-unit-authority-v1",
+  "source_modified_gmt": "2026-03-27T02:30:16Z",
+  "source_record_id": 53,
+  "unit_id": "O005-LEGA-V101-CH06"
+}

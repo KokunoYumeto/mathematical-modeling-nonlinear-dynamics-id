@@ -87,3 +87,14 @@ O005-TERM-0085,return map,peta balik,admitted,
 O005-TERM-0086,nonhyperbolic,nonhiperbolik,admitted,
 O005-TERM-0087,Lyapunov exponent,eksponen Lyapunov,admitted,
 O005-TERM-0088,two-species model,model populasi dua spesies,admitted,Use the explicit population qualifier in titles and navigation.
+O005-TERM-0089,predator-prey system,sistem pemangsa–mangsa,admitted,Use pemangsa and mangsa consistently in natural reader prose.
+O005-TERM-0090,competing species,spesies yang bersaing,admitted,
+O005-TERM-0091,phase-plane analysis,analisis bidang fase,admitted,Keep consistent with phase plane = bidang fase and phase portrait = potret fase.
+O005-TERM-0092,biologically well-posed,dirumuskan dengan baik secara biologis,admitted,Explain this as invariance of the nonnegative state region on first use.
+O005-TERM-0093,closed orbit,orbit tertutup,admitted,
+O005-TERM-0094,coexistence,hidup berdampingan,admitted,Koeksistensi may be used only in compact technical labels or alt text.
+O005-TERM-0095,competitive exclusion,eksklusi kompetitif,admitted,In natural prose also explain that one species drives the other to extinction.
+O005-TERM-0096,basin of attraction,daerah tarikan,admitted,
+O005-TERM-0097,neutrally stable,stabil netral,admitted,Do not imply asymptotic attraction.
+O005-TERM-0098,bilinear interaction term,suku interaksi bilinear,admitted,
+O005-TERM-0099,nutrient,nutrien,admitted,
