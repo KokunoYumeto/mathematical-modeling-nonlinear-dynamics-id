@@ -7,11 +7,11 @@ Updated: 2026-08-22 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–7 and the visible Part 2–4 introductions are
-translated, built, and verified. Production now moves to Chapter 8,
-Pressbooks record 62, *Chemical Reactions*, as `O005-LEGA-V101-CH08`; its exact
+into this lane. Chapters 1–8 and the visible Part 2–4 introductions are
+translated, built, and verified. Production now moves to Chapter 9,
+Pressbooks record 196, *Diffusion*, as `O005-LEGA-V101-CH09`; its exact
 authority record and three-asset closure are frozen. The next visible source
-item is Chapter 9, record 196, *Diffusion*.
+item is Chapter 10, record 194, *Pattern Formation*.
 
 ## Verified authority
 
@@ -406,7 +406,7 @@ item is Chapter 9, record 196, *Diffusion*.
   equality passed. Anonymous immutable-commit readback covered all 27 changed
   files / 793,229 bytes with zero byte-count or SHA-256 mismatches.
 
-## Frozen Chapter 8 boundary
+## Admitted Chapter 8 boundary
 
 - Pressbooks chapter 62, *Chemical Reactions*; modified
   `2026-03-24T21:29:34Z`. Canonical record: 60,372 bytes, SHA-256
@@ -416,18 +416,62 @@ item is Chapter 9, record 196, *Diffusion*.
 - Scope: 216 raw lines, 179 ordered elements, 28 hrefs, 186 TeX occurrences,
   three figures, six footnotes, and thirteen problems. The three primary source
   rasters are frozen byte-for-byte; exact hashes are in the unit authority.
-- Known source caveats: the internally consistent `Orgonator` anchor misspells
-  Oregonator, Figure 8.2 uses generic phase-portrait alt text despite being a
-  time-series plot, and PPLANE/MAPLE/MATHEMATICA activities require an
-  independent open replacement. Next source item: Chapter 9 record 196,
-  *Diffusion*.
+- Complete natural id-ID target: 26,145 bytes, SHA-256
+  `49a6be865bf34fac62b832b7d2338982595c48e1ff5c1e0389e626b197659e0a`.
+  Exact replay preserves 179 / 179 elements, 28 / 28 links, 186 / 186 TeX
+  occurrences, three / three figures, six / six footnotes, and thirteen /
+  thirteen stable problems across 217 paired segments. The internally
+  consistent source anchor `Orgonator` remains intact.
+- Complete thirteen-record mastery layer: 49,712 bytes, SHA-256
+  `f244ce8bc66e7fd8bb5fb62af32a95bbff0093741148c528a6b5514d1a12c0fa`;
+  twelve records have worked solutions and one has an explicit qualitative
+  rubric. Independent review repaired one provenance leak, removed an
+  inaccurate SymPy dependency claim, and qualified the hyperbolic-cycle return
+  criterion.
+- Independent open chemical-reactions notebook: 33,424 bytes, SHA-256
+  `8cbc3faa8d63683d15ac4498d2c7249763622789988df9e5684250fef1f74a5b`;
+  16 cells / seven code cells / 99 static assertion sites. Fresh locked
+  execution under Python 3.13.9, NumPy 2.4.4, SciPy 1.17.1, and Matplotlib
+  3.10.9 reached 226 successful dynamic assertion evaluations and independently
+  verified conservation laws, Brusselator/Oregonator bifurcation diagnostics,
+  Poincare returns, and the Lotka–Volterra invariant.
+- Reader package: ten payload files / 972,822 bytes excluding its 1,058-byte
+  manifest; manifest SHA-256
+  `1302a06298f3434e5e9f1b503fa602c05ce46b201e4e724f7a4c3fcaeb276275`.
+  It renders 186 chapter and 321 mastery MathML nodes and resolves six local
+  dependencies. Repeated builds were byte-identical across eleven files,
+  canonical tree SHA-256
+  `313c59b2b4dcafd7a5b4336ad8b9f8105afb8eb0641e478350fc43f41fa0591f`.
+- Browser QA: desktop main/article widths were 1,152 / 768 px and centered at
+  1280×900; mobile shell/article width was 357.5 px and centered at 390×844.
+  Document overflow was zero, all three 1,024 px rasters loaded responsively on
+  opaque white canvases, all 45 IDs were unique, every fragment resolved, all
+  39 disclosure widgets rendered, and the Problem 13 target landed at 80.08 px
+  below the 45.05 px sticky navigation. External-link reachability was not
+  tested; no audio/live widget exists.
+
+## Frozen Chapter 9 boundary
+
+- Pressbooks chapter 196, *Diffusion*; modified
+  `2026-03-19T20:10:36Z`. Canonical record: 65,160 bytes, SHA-256
+  `e53b35acf85334d2df48124211843b08b7ca1e9e9ca8c91465f215dfbb219c2a`;
+  raw source: 27,486 bytes, SHA-256
+  `84fe10d60eaacdb18efb97d52035e3f6e923012c7041e7b3d037b866e90af442`.
+- Scope: 172 raw lines, 166 ordered opening/void elements, 27 hrefs, 213 TeX
+  occurrences, three figures, five footnotes, and seven problems. All three
+  frozen rasters match the authority manifest byte-for-byte.
+- The bounded primary-byte audit identifies explicit algebraic, probabilistic,
+  traveling-wave, flux, markup, figure-description, and bibliographic repairs
+  for the correction ledger. The open companion is one deterministic
+  NumPy/SciPy/Matplotlib notebook covering a two-dimensional random walk and
+  Fisher–KPP phase portraits at c=1, 2, and 3. Next source item: Chapter 10
+  record 194, *Pattern Formation*.
 
 ## Next action
 
-Translate Chapter 8 record 62, *Chemical Reactions*, in full as
-`O005-LEGA-V101-CH08`, preserving 216 raw lines, 179 ordered elements, 28 hrefs,
-186 TeX occurrences, three source figures, six footnotes, and thirteen stable
-problems. Add complete mastery and an independent open Brusselator/Oregonator
-notebook for the PPLANE and symbolic-computation activities; preserve source
-anchors in the authority while repairing reader-facing spelling/accessibility
-through explicit ledger entries.
+Complete Chapter 9 record 196, *Diffusion*, in source order as
+`O005-LEGA-V101-CH09`, preserving 172 raw lines, 166 ordered opening/void
+elements, 27 hrefs, 213 TeX occurrences, three source figures, five footnotes,
+and seven stable problems. Add complete mastery and one independently authored
+random-walk/Fisher–KPP notebook, ledger every correction, then build, execute,
+inspect, and publish the verified boundary without a confirmation pause.

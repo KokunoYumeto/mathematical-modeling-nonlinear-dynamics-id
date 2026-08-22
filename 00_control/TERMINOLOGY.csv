@@ -128,3 +128,16 @@ O005-TERM-0126,chemical wave,gelombang kimia,admitted,
 O005-TERM-0127,pattern formation,pembentukan pola,admitted,
 O005-TERM-0128,pattern-forming model,model pembentuk pola,admitted,
 O005-TERM-0129,far from equilibrium,jauh dari kesetimbangan,admitted,
+O005-TERM-0130,rate constant,konstanta laju,admitted,Use konstanta laju reaksi on first use when the chemical context is not yet explicit.
+O005-TERM-0131,reactant,reaktan,admitted,
+O005-TERM-0132,product,produk,admitted,In reaction prose this means the chemical product rather than a multiplication operation.
+O005-TERM-0133,activation energy,energi aktivasi,admitted,
+O005-TERM-0134,stoichiometric factor,faktor stoikiometri,admitted,
+O005-TERM-0135,limit cycle,siklus limit,admitted,Do not use siklus batas; distinguish an attracting limit cycle from a neutrally stable family of periodic orbits.
+O005-TERM-0136,relaxation oscillation,osilasi relaksasi,admitted,
+O005-TERM-0137,excitable system,sistem eksitabel,admitted,
+O005-TERM-0138,wave front,muka gelombang,admitted,
+O005-TERM-0139,spiral wave,gelombang spiral,admitted,
+O005-TERM-0140,phase shift,pergeseran fase,admitted,
+O005-TERM-0141,stiff problem,masalah kaku,admitted,Explain this as the coexistence of very short and very long characteristic time scales on first use.
+O005-TERM-0142,reversible reaction,reaksi reversibel,admitted,

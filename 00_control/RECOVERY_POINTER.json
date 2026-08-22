@@ -33,19 +33,19 @@
     "all_bytes_and_sha256_equal": true
   },
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-PT04",
-    "source_record_type": "parts",
-    "source_record_id": 58,
-    "source_slug": "632-2-2",
-    "source_canonical_sha256": "75d370fb729c39ba436eb1a91f5876291ef4c0487235b968d8a0a0002481f232",
-    "source_content_sha256": "959b11175f0a5a913275f40058ae06a81e757ceab01aa54dbd63712d7d95d320",
-    "target_content_sha256": "79c8943cf558b0d1fe485b0765ef8def9c970703d5f80a7f18c04c66c8f60a25",
-    "segment_sha256": "41d626f76bac4b0087399f82bc9a4b52b0de0322e9147001ddfc5aa6b09a3b88",
-    "mastery_sha256": null,
-    "notebook_sha256": null,
-    "reader_manifest_sha256": "9e58ce41950ccea4c052c223888b27eed3c933deaacf90c4c1f39cc8e1992790",
-    "qa_tree_sha256": "04ea86d82fadf03fe68f476b7284e8b320987ad7a2c908254f520d3fba48284e"
+    "unit_id": "O005-LEGA-V101-CH08",
+    "source_record_type": "chapters",
+    "source_record_id": 62,
+    "source_slug": "chemical-reactions",
+    "source_canonical_sha256": "1c9f5f1ec75756f23720a3ef5d278302de0957347a59dde6f8021d3a970d7656",
+    "source_content_sha256": "d822c7b12a1f859ad3218ab7c6dc5f80f47e0e6f9115ef82544cdb08393e6830",
+    "target_content_sha256": "49a6be865bf34fac62b832b7d2338982595c48e1ff5c1e0389e626b197659e0a",
+    "segment_sha256": "09725f630eb53b477329baf3a4d8c5a08605496e70fae0c113544bd81f146631",
+    "mastery_sha256": "f244ce8bc66e7fd8bb5fb62af32a95bbff0093741148c528a6b5514d1a12c0fa",
+    "notebook_sha256": "8cbc3faa8d63683d15ac4498d2c7249763622789988df9e5684250fef1f74a5b",
+    "reader_manifest_sha256": "1302a06298f3434e5e9f1b503fa602c05ce46b201e4e724f7a4c3fcaeb276275",
+    "qa_tree_sha256": "313c59b2b4dcafd7a5b4336ad8b9f8105afb8eb0641e478350fc43f41fa0591f"
   },
-  "current_unit": "O005-LEGA-V101-CH08",
-  "next_action": "Translate Pressbooks chapter record 62, Chemical Reactions, as Reaksi Kimia, preserving 216 raw lines, 179 ordered elements, 28 hrefs, 186 TeX occurrences, three figures, six footnotes, and thirteen problems; add complete mastery and an independent open Brusselator/Oregonator notebook replacing PPLANE and symbolic-package dependencies."
+  "current_unit": "O005-LEGA-V101-CH09",
+  "next_action": "Complete the source-order Indonesian translation of Pressbooks chapter record 196, Diffusion, preserving 172 raw lines, 166 ordered opening/void elements, 27 hrefs, 213 TeX occurrences, three figures, five footnotes, and seven problems; add complete mastery and one independent open random-walk/Fisher-KPP notebook replacing unavailable MATLAB/PPLANE surfaces."
 }

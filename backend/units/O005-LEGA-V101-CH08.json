@@ -1,0 +1,64 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "mastery_path": "backend/mastery/O005-LEGA-V101-CH08.mastery.json",
+  "mastery_sha256": "f244ce8bc66e7fd8bb5fb62af32a95bbff0093741148c528a6b5514d1a12c0fa",
+  "notebook_path": "source/id-ID/O005-LEGA-V101-CH08/notebooks/chapter-08-open-chemical-reactions.ipynb",
+  "notebook_sha256": "8cbc3faa8d63683d15ac4498d2c7249763622789988df9e5684250fef1f74a5b",
+  "problems": [
+    "O005-LEGA-V101-CH08-P01",
+    "O005-LEGA-V101-CH08-P02",
+    "O005-LEGA-V101-CH08-P03",
+    "O005-LEGA-V101-CH08-P04",
+    "O005-LEGA-V101-CH08-P05",
+    "O005-LEGA-V101-CH08-P06",
+    "O005-LEGA-V101-CH08-P07",
+    "O005-LEGA-V101-CH08-P08",
+    "O005-LEGA-V101-CH08-P09",
+    "O005-LEGA-V101-CH08-P10",
+    "O005-LEGA-V101-CH08-P11",
+    "O005-LEGA-V101-CH08-P12",
+    "O005-LEGA-V101-CH08-P13"
+  ],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 217,
+    "path": "backend/segments/O005-LEGA-V101-CH08.segments.jsonl",
+    "sha256": "09725f630eb53b477329baf3a4d8c5a08605496e70fae0c113544bd81f146631"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "chapter": "Chemical Reactions",
+    "content_sha256": "d822c7b12a1f859ad3218ab7c6dc5f80f47e0e6f9115ef82544cdb08393e6830",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/chemical-reactions/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-CH08/content.html",
+    "content_sha256": "49a6be865bf34fac62b832b7d2338982595c48e1ff5c1e0389e626b197659e0a",
+    "figures": [
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH08/assets/brusselator-phase-source.png",
+        "sha256": "957ba0e2af31820eb0224add944508da2a1ab42135ea43450854880e38d8c9f4"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH08/assets/brusselator-time-series-source.png",
+        "sha256": "0244fe5655d13b710978c4ee42ed84556d4cbc5124d3a60fe7c3d4ca9e2c5e7c"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH08/assets/oregonator-phase-source.png",
+        "sha256": "052645103df598f8feac0be17dfbf64f6525bf6d44f798f9bccfc10c269a548b"
+      }
+    ],
+    "title": "Reaksi Kimia"
+  },
+  "unit_id": "O005-LEGA-V101-CH08"
+}

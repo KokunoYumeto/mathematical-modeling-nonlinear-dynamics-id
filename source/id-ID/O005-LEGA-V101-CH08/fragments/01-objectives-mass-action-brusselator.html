@@ -1,0 +1,62 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Tujuan Pembelajaran</h2>
+</header>
+<div class="textbox__content">
+
+Pada akhir bab ini, Anda akan mampu melakukan hal-hal berikut.
+<ul>
+ 	<li>Menyusun sistem persamaan diferensial biasa nonlinear terkopel yang mendeskripsikan evolusi konsentrasi reaktan kimia terhadap waktu.</li>
+ 	<li>Memprediksi dinamika reaksi kimia dengan menerapkan metode analisis (analisis dimensi, penskalaan, titik tetap, dan stabilitas linearnya) yang dibahas dalam bab-bab sebelumnya.</li>
+ 	<li>Menjelaskan mengapa reaksi kimia osilatori dapat terjadi.</li>
+ 	<li>Menjelaskan bagaimana gelombang kimia dapat diamati pada sistem yang membentang dalam ruang.</li>
+</ul>
+</div>
+</div>
+<h2>Hukum aksi massa</h2>
+Tinjau suatu reaksi kimia
+<p style="text-align: center">$latex \begin{array}{ccc} &amp; k &amp; \\ A + B &amp;\rightarrow&amp; C, \end{array}$</p>
+di mana $latex A$, $latex B$, dan $latex C$ menyatakan zat kimia, $latex A$ dan $latex B$ adalah reaktan, $latex C$ adalah produk, dan $latex k &gt; 0$ adalah <em>konstanta laju</em> reaksi. <em>Hukum aksi massa</em> mendeskripsikan bagaimana konsentrasi $latex A$, $latex B$, dan $latex C$ berubah akibat reaksi ini. Gagasannya adalah bahwa reaksi akan berlangsung jika zat kimia $latex A$ dan $latex B$ bertumbukan, dan jika energinya lebih tinggi daripada energi aktivasi reaksi. Jumlah tumbukan berhasil (yaitu tumbukan yang menghasilkan reaksi) antara $latex A$ dan $latex B$ sebanding dengan hasil kali konsentrasi $latex A$ dan $latex B.$ Konstanta kesebandingannya adalah konstanta $latex k$. Dengan demikian, kita menuliskan persamaan diferensial berikut untuk nilai harapan $latex [A]$, $latex [B]$, dan $latex [C]$ (ingat bahwa kita berada dalam keadaan dengan jumlah molekul reaktan dan produk yang besar)
+<p style="text-align: center">$latex \displaystyle \frac{d [A]}{d t} = \frac{d [B]}{d t} = - k [A]\,[B] = - \frac{d [C]}{d t},$</p>
+di mana $latex [I]$ menyatakan konsentrasi zat kimia $latex I$. Jika $latex A = B$, sehingga reaksi kimianya adalah
+<p style="text-align: center">$latex \begin{array}{ccc} &amp; k &amp; \\ 2 A &amp;\rightarrow&amp; C, \end{array}$</p>
+kita memerlukan dua molekul $latex A$ untuk membentuk satu molekul produk $latex C$, yang menghasilkan
+<p style="text-align: center">$latex \displaystyle \frac{1}{2} \frac{d [A]}{d t} = - k [A]^2 = - \frac{d [C]}{d t}.$</p>
+Jika suatu reaksi bersifat reversibel, misalnya jika
+<p style="text-align: center">$latex \begin{array}{ccc} &amp; k_1 &amp; \\ A + B &amp; \rightleftharpoons &amp; C, \\ &amp; k_2 &amp; \end{array}$</p>
+maka $latex A$ dikonsumsi dengan laju relatif $latex k_1$ dan diproduksi dengan laju relatif $latex k_2$, sehingga
+<p style="text-align: center">$latex \displaystyle \frac{d [A]}{d t} = - k_1 [A]\, [B] + k_2 [C],$</p>
+dan demikian pula untuk $latex [B]$ dan $latex [C]$.
+
+Terakhir, jika suatu proses reaksi melibatkan lebih dari satu reaksi kimia, laju perubahan suatu zat kimia akibat setiap reaksi dijumlahkan untuk memperoleh laju perubahan total zat kimia tersebut. Misalnya, andaikan kita memiliki sistem yang dideskripsikan oleh
+<p style="text-align: center">$latex \begin{array}{ccc} &amp; k_1 &amp; \\ A + B &amp; \rightleftharpoons &amp; C, \\ &amp; k_2 &amp; \end{array}$</p>
+<p style="text-align: center">$latex \begin{array}{ccc} &amp; k_3 &amp; \\ C + A &amp;\rightarrow &amp; D. \end{array}$</p>
+Maka konsentrasi $latex A$ berevolusi menurut
+<p style="text-align: center">$latex \displaystyle \frac{d [A]}{d t} = - k_1 [A]\,[B] + k_2 [C] - k_3 [C]\,[A],$</p>
+dan persamaan laju untuk $latex B$, $latex C$, dan $latex D$ adalah
+<p style="text-align: center">$latex \displaystyle \frac{d [B]}{d t} = - k_1 [A]\,[B] + k_2 [C],$</p>
+<p style="text-align: center">$latex \displaystyle \frac{d [C]}{d t} = k_1 [A]\,[B] - k_2 [C] - k_3 [C]\,[A],$</p>
+<p style="text-align: center">$latex \displaystyle \frac{d [D]}{d t} = k_3 [C]\,[A].$</p>
+Perhatikan bahwa reaksi bersih yang berkaitan dengan proses ini adalah $latex 2 A + B \rightarrow D$. Persamaan laju harus dituliskan untuk setiap tahap yang terlibat dalam reaksi, bukan berdasarkan reaksi bersihnya.
+
+Dengan demikian, reaksi kimia dapat dideskripsikan dalam bentuk persamaan diferensial biasa nonlinear terkopel, sehingga teori sistem dinamik dapat diterapkan pada analisisnya.
+<h2>Model Brusselator dan Oregonator</h2>
+Karena persamaan laju yang mendeskripsikan osilasi kimia bersifat nonlinear, reaksi yang berosilasi terhadap waktu dapat diamati, sebagaimana persamaan Lotka-Volterra dapat mendeskripsikan osilasi dalam sistem pemangsa–mangsa. Reaksi Belousov-Zhabotinsky adalah contoh klasik reaksi kimia osilatori. Ketika ahli biokimia Rusia Boris P. Belousov[footnote]B.P. Belousov, Sb. Ref. Radiats. Med., 1958, Megiz, Moscow, 145 (1950).[/footnote] melaporkan temuannya pada tahun 1951, hasilnya pada awalnya disambut dengan ketidakpercayaan. Baru setelah A.M. Zhabotinsky[footnote]A.M. Zhabotinsky, <em>Oscillatory Processes in Biological and Chemical systems</em>, Science Publ., Moscow, p. 149, 1967. A.N. Zaikin and A.M. Zhabotinsky, Concentration <a href="http://dx.doi.org/10.1038/225535b0"><em>Wave Propagation in Two-dimensional Liquid-phase Self-oscillating System</em></a>, Nature <strong>225</strong>, 535-537 (1970).[/footnote] mereproduksi dan menyempurnakan eksperimen Belousov, keberadaan reaksi osilatori akhirnya diterima. Terdapat dua model klasik untuk reaksi osilatori, yaitu “Brusselator” (diusulkan oleh sebuah kelompok di Brussels[footnote]P. Glansdorff and I. Prigogine, <em>Thermodynamic Theory of Structure, Stability and Fluctuations</em>, Wiley Interscience, London, 1971. Page 233.[/footnote]) dan “Oregonator” (diusulkan oleh para kimiawan di University of Oregon[footnote]R.J. Field and R.M. Noyes, <em><a href="http://dx.doi.org/10.1063/1.1681288">Oscillations in chemical systems. IV. Limit cycle behavior in a model of a real chemical reaction</a></em>, J. Chem. Phys. <strong>60</strong>, 1877-1884 (1974).[/footnote]). Di bawah ini, kita membahas keduanya secara singkat.
+<h3>Brusselator</h3>
+Tinjau proses kimia hipotetis berikut (Glansdorff &amp; Prigogine, 1971).
+<p style="text-align: center"><a id="Brussel_eqn"></a>$latex \begin{array}{ccc} &amp; k_1 &amp; \\ A &amp;\rightarrow&amp; X, \end{array}$</p>
+<p style="text-align: center">$latex \begin{array}{ccc} &amp; k_2 &amp; \\ 2 X + Y &amp;\rightarrow&amp; 3 X, \end{array}$</p>
+<p style="text-align: center">$latex \begin{array}{ccc} &amp; k_3 &amp; \\ B + X &amp;\rightarrow&amp; Y + D, \end{array}$</p>
+<p style="text-align: center">$latex \begin{array}{ccc} &amp; k_4 &amp; \\ X &amp;\rightarrow&amp; E, \end{array}$</p>
+dengan semua konstanta laju $latex k_i$ sama dengan 1. Persamaan laju yang bersesuaian untuk $latex [X]$ dan $latex [Y]$ membentuk model <em>Brusselator</em>, yang berbentuk
+<p style="text-align: center"><a id="BR"></a>$latex \displaystyle \left\{\begin{align*} \displaystyle \frac{d [X]}{d t} &amp; = [A] + [X]^2\,[Y] - [B]\,[X] - [X],\\ \displaystyle \frac{d [Y]}{d t} &amp; = - [Y]\,[X]^2 + [B]\,[X], \end{align*}\right. \qquad (8.1)$</p>
+dengan $latex [A]$ dan $latex [B]$ sebagai parameter. Model ini memiliki sebuah titik tetap tunggal $latex P$, yang diberikan oleh $latex [X]=[A]$ dan $latex [Y]=[B]/[A]$. Dari sudut pandang analisis dimensi, ungkapan-ungkapan ini mungkin tampak aneh, tetapi dimensinya tidak lagi terlacak ketika kita menetapkan semua konstanta laju reaksi (yang memiliki dimensi berbeda) sama dengan satu (lihat soal-soal).<a id="Fig_8.1"></a>
+
+&nbsp;
+
+[caption id="attachment_59" align="alignnone" width="800"]<img class="wp-image-59" src="assets/brusselator-phase-source.png" alt="Potret fase Brusselator dengan siklus limit stabil. Deskripsi panjang tersedia." width="800" height="535" /> Gambar 8.1. Bidang fase sistem (<a href="#BR">8.1</a>), dengan [A]=1 dan [B]=3, yang diplot menggunakan perangkat lunak PPLANE. [<a href="#Fig_8.1_Desc"><em>Deskripsi Gambar</em></a>][/caption]Matriks Jacobi dari (<a href="#BR">8.1</a>) di titik tetap $latex P$ adalah
+<p style="text-align: center">$latex J(P) = \left(\begin{array}{cc} [B] - 1 &amp; [A]^2 \\ -[B] &amp; -[A]^2 \end{array}\right),$</p>
+dan determinannya sama dengan $latex [A]^2 &gt; 0$. Karena itu, stabilitas titik tetap bergantung pada tanda jejak $latex J(P)$, yang sama dengan $latex T = [B]-1-[A]^2$. Mudah dilihat bahwa jika $latex [X]$ atau $latex [Y]$ cukup besar, maka $latex {d[Y]} / {d[X]} \simeq -1,$ dan lintasan hampir berupa garis lurus dengan kemiringan -1. Namun, ketika $latex [Y]$ mendekati 0, lintasan-lintasan ini tidak dapat meninggalkan kuadran pertama karena $latex d[Y]/d t \gt 0$ jika $latex [Y]=0$ dan $latex [X] \gt 0$. Karena pada saat itu kita juga memiliki $latex d[X]/dt \lt 0$ jika $latex [X]$ cukup besar, kita memperkirakan lintasan akan dibawa kembali menuju daerah tempat $latex [X]$ dan $latex [Y]$ sama-sama berorde satu.<a id="Fig_8.2"></a>
+
+&nbsp;
+
+[caption id="attachment_60" align="alignnone" width="800"]<img class="wp-image-60" src="assets/brusselator-time-series-source.png" alt="Grafik [X] dan [Y] terhadap waktu. Deskripsi panjang tersedia." width="800" height="684" /> Gambar 8.2. Kebergantungan [X] dan [Y] terhadap waktu untuk lintasan pada Gambar 8.1, yang diplot menggunakan perangkat lunak PPLANE. [<a href="#Fig_8.2_Desc"><em>Deskripsi Gambar</em></a>][/caption]Jika $latex P$ stabil, yaitu jika $latex T \lt 0$, maka semua lintasan seharusnya berakhir di $latex P$. Namun, jika $latex P$ adalah simpul tak stabil atau spiral tak stabil, lintasan tidak dapat konvergen menuju $latex P$, dan dinamika tersebut harus memiliki atraktor lain. Gambar 8.1 memperlihatkan potret fase (<a href="#BR">8.1</a>) dengan $latex [A]=1$ dan $latex [B]=3$ (sehingga $latex T = 1 &gt; 0$). <span style="text-indent: 0em">Atraktor lain tersebut adalah suatu </span><em style="text-indent: 0em">siklus limit</em><span style="text-indent: 0em">; setiap lintasan dalam daerah tarikannya—kecuali solusi yang dimulai tepat di P—konvergen menuju siklus tersebut. Hanya satu lintasan yang diplot dalam gambar ini. </span><span style="text-indent: 0em">Grafik $latex [X]$ dan $latex [Y]$ sebagai fungsi waktu yang bersesuaian ditampilkan pada Gambar 8.2. Terlihat bahwa pada siklus limit, $latex [X]$ tetap kecil hampir sepanjang waktu, lalu dengan cepat meningkat ke nilai maksimum dan kembali menuju nol secara periodik. Ketika $latex [X]$ meningkat, $latex [Y]$ turun secara mendadak, lalu perlahan meningkat kembali ke nilai maksimumnya sementara $latex [X]$ tetap kecil. </span><em style="text-indent: 0em">Osilasi relaksasi</em><span style="text-indent: 0em"> semacam itu merupakan ciri khas banyak reaksi kimia osilatori.</span>

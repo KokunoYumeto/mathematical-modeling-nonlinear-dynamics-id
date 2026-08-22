@@ -545,6 +545,16 @@ SPECS = {
         ],
         "replacements": [],
     },
+    "O005-LEGA-V101-CH08": {
+        "source_lines": 216,
+        "problem_count": 13,
+        "fragments": [
+            "01-objectives-mass-action-brusselator.html",
+            "02-oregonator-waves-summary-figures.html",
+            "03-exercises.html",
+        ],
+        "replacements": [],
+    },
 }
 
 

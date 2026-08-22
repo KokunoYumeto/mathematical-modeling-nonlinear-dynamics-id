@@ -214,6 +214,25 @@ UNIT_SPECS = {
         "plain_paragraphs": False,
         "change_note": "penerjemahan, koreksi matematika terdokumentasi, pengindeksan modular, dukungan ketuntasan, dan pendamping epidemiologi serta analisis bidang fase dengan Python terbuka tanpa ketergantungan perangkat lunak berpemilik",
     },
+    "O005-LEGA-V101-CH08": {
+        "unit_type": "chapter",
+        "unit_number": 8,
+        "chapter_number": 8,
+        "source_title": "Chemical Reactions",
+        "target_title": "Reaksi Kimia",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/chemical-reactions/",
+        "target_assets": [
+            "assets/brusselator-phase-source.png",
+            "assets/brusselator-time-series-source.png",
+            "assets/oregonator-phase-source.png",
+        ],
+        "caption_count": 3,
+        "footnote_count": 6,
+        "notebook": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "problem_count": 13,
+        "plain_paragraphs": False,
+        "change_note": "penerjemahan, koreksi dan klarifikasi terdokumentasi, pengindeksan modular, dukungan ketuntasan, serta pendamping Brusselator dan Oregonator dengan Python terbuka tanpa ketergantungan PPLANE, MAPLE, atau MATHEMATICA",
+    },
 }
 
 

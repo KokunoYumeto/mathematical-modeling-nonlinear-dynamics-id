@@ -1,0 +1,878 @@
+{
+  "schema": "o005-mastery-v1",
+  "schema_version": "1.0.0",
+  "unit_id": "O005-LEGA-V101-CH08",
+  "language": "id-ID",
+  "source": {
+    "resource": "Joceline Lega, Introduction to Mathematical Modeling",
+    "edition": "University of Arizona Pressbooks v1.01 (Maret 2026)",
+    "record": "Pressbooks chapter 62",
+    "record_id": 62,
+    "source_title": "Chemical Reactions",
+    "target_title": "Reaksi Kimia",
+    "modified_utc": "2026-03-24T21:29:34Z",
+    "source_file": "authority/units/O005-LEGA-V101-CH08/content.raw.en.html",
+    "source_locator": "exact frozen Pressbooks record 62 content.raw, equations on lines 15–83, problems on lines 105–213",
+    "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/chemical-reactions/",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "provenance_policy": {
+    "source_derived": "Ringkasan masalah merupakan adaptasi/terjemahan dari soal sumber dan tetap berada di bawah CC BY-NC-SA 4.0.",
+    "new_original": "Petunjuk, rekaman pemeriksaan/jawaban, solusi, rubrik, dan implementasi komputasi ditulis baru untuk edisi Bahasa Indonesia dan ditandai terpisah dari materi sumber. Sumber tidak menyediakan himpunan solusi. Perhitungan ambang dan klasifikasi dilakukan secara independen; pengamatan siklus limit dari integrasi numerik dinyatakan sebagai diagnosis komputasional, bukan bukti global."
+  },
+  "article_link_catalog": [
+    {
+      "link_id": "O005-LEGA-V101-CH08-LINK01",
+      "title": "Notebook Python terbuka Bab 8: reaksi kimia",
+      "url": "notebooks/chapter-08-open-chemical-reactions.ipynb"
+    }
+  ],
+  "problems": [
+    {
+      "problem_id": "O005-LEGA-V101-CH08-P01",
+      "ordinal": 1,
+      "problem_summary": "Untuk jaringan reaksi reversibel \\(A+B\\rightleftharpoons C\\), reaksi \\(C\\to B+D\\), dan reaksi reversibel \\(B+E\\rightleftharpoons F\\), tuliskan persamaan laju bagi konsentrasi \\(A,B,C,E,F\\), lalu buktikan bahwa \\([B]+[C]+[F]\\) konstan dan jelaskan arti kimianya.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH08-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\begin{array}{ccccc} &amp; k_1 &amp; &amp; k_3 &amp; \\\\ A + B &amp; \\rightleftharpoons &amp; C &amp;\\rightarrow &amp; B + D,\\\\ &amp; k_2 &amp; &amp; &amp; \\end{array}",
+        "\\begin{array}{ccc} &amp; k_4 &amp; \\\\ B + E &amp; \\rightleftharpoons &amp; F. \\\\ &amp; k_5 &amp; \\end{array}",
+        "[B] + [C] + [F]"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Beri satu laju aksi massa pada setiap arah panah. Untuk memeriksa kekekalan, jumlahkan tepat tiga persamaan bagi \\(B,C,F\\); semua fluks yang hanya memindahkan satu unit gugus pembawa \\(B\\) harus saling hapus."
+      },
+      "check": {
+        "type": "exact_mass_action_system_and_conservation",
+        "final_answer": "Dengan \\(a=[A], b=[B], c=[C], e=[E], f=[F]\\), sistemnya adalah \\(a'=-k_1ab+k_2c\\), \\(b'=-k_1ab+(k_2+k_3)c-k_4be+k_5f\\), \\(c'=k_1ab-(k_2+k_3)c\\), \\(e'=-k_4be+k_5f\\), dan \\(f'=k_4be-k_5f\\). Karena \\((b+c+f)'=0\\), maka \\(b(t)+c(t)+f(t)=b(0)+c(0)+f(0)\\). Jumlah ini adalah inventaris total satuan kimia pembawa \\(B\\): setiap reaksi hanya memindahkannya di antara bentuk bebas \\(B\\), kompleks \\(C\\), dan kompleks \\(F\\).",
+        "quick_check": "Suku \\(k_3c\\) harus muncul positif pada \\(b'\\) dan negatif pada \\(c'\\); suku \\(k_4be\\) serta \\(k_5f\\) harus saling hapus dalam jumlah \\(b'+c'+f'\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Reaksi maju pertama mengonsumsi satu \\(A\\) dan satu \\(B\\), sedangkan reaksi balik menghasilkan keduanya.",
+            "formula": "r_1=k_1ab,\\qquad r_2=k_2c"
+          },
+          {
+            "explanation": "Peluruhan \\(C\\) menghasilkan satu \\(B\\), dan pasangan reaksi terakhir memindahkan \\(B\\) serta \\(E\\) ke atau dari \\(F\\).",
+            "formula": "r_3=k_3c,\\qquad r_4=k_4be,\\qquad r_5=k_5f"
+          },
+          {
+            "explanation": "Kalikan setiap laju dengan perubahan stoikiometri spesies terkait.",
+            "formula": "\\begin{aligned}a'&=-r_1+r_2,\\\\b'&=-r_1+r_2+r_3-r_4+r_5,\\\\c'&=r_1-r_2-r_3,\\\\e'&=-r_4+r_5,\\\\f'&=r_4-r_5.\\end{aligned}"
+          },
+          {
+            "explanation": "Jumlahkan tiga persamaan yang mengandung satu unit pembawa \\(B\\).",
+            "formula": "(b+c+f)'=(-r_1+r_2+r_3-r_4+r_5)+(r_1-r_2-r_3)+(r_4-r_5)=0"
+          }
+        ],
+        "conclusion": "Hukum kekekalan ini berasal dari stoikiometri jaringan, bukan dari keadaan tunak; ia berlaku sepanjang setiap solusi selama model reaksi tertutup tersebut berlaku."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH08-P02",
+      "ordinal": 2,
+      "problem_summary": "Untuk reaksi reversibel \\(A+B\\rightleftharpoons C\\), jelaskan persamaan \\(d[A]/dt=-k_1[A][B]+k_2[C]\\), tentukan dimensi \\(k_1,k_2\\), dan tuliskan satu bentuk tak berdimensi yang sah.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH08-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\begin{array}{ccc} &amp; k_1 &amp; \\\\ A + B &amp; \\rightleftharpoons &amp; C. \\\\ &amp; k_2 &amp; \\end{array}",
+        "\\displaystyle \\frac{d [A]}{d t} = - k_1 [A]\\, [B] + k_2 [C]"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Tuliskan dimensi konsentrasi sebagai \\(C\\) dan waktu sebagai \\(T\\). Untuk menghapus kedua konstanta dari persamaan, gunakan skala konsentrasi \\(C_0=k_2/k_1\\) dan waktu \\(T_0=1/k_2\\)."
+      },
+      "check": {
+        "type": "exact_rate_dimensions_and_nondimensionalization",
+        "final_answer": "Laju maju \\(k_1[A][B]\\) mengonsumsi \\(A\\), sedangkan laju balik \\(k_2[C]\\) menghasilkannya, sehingga tandanya masing-masing minus dan plus. Dari kesetaraan dengan dimensi \\(C T^{-1}\\), diperoleh \\([k_1]=C^{-1}T^{-1}\\) dan \\([k_2]=T^{-1}\\). Untuk \\(k_1,k_2>0\\), ambil \\(a=k_1[A]/k_2\\), \\(b=k_1[B]/k_2\\), \\(c=k_1[C]/k_2\\), serta \\(\\tau=k_2t\\); persamaan menjadi \\(da/d\\tau=-ab+c\\).",
+        "quick_check": "Skala \\(k_2/k_1\\) harus berdimensi konsentrasi dan \\(k_2t\\) harus tak berdimensi. Substitusi balik ke persamaan berdimensi harus memulihkan kedua suku dengan koefisien asal."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Aksi massa memberi frekuensi tumbukan maju yang sebanding dengan kedua konsentrasi pereaksi.",
+            "formula": "r_+=k_1[A][B],\\qquad r_-=k_2[C]"
+          },
+          {
+            "explanation": "Satu molekul \\(A\\) hilang pada peristiwa maju dan muncul pada peristiwa balik.",
+            "formula": "\\frac{d[A]}{dt}=-r_++r_-=-k_1[A][B]+k_2[C]"
+          },
+          {
+            "explanation": "Samakan dimensi setiap laju dengan konsentrasi per waktu.",
+            "formula": "[k_1]C^2=CT^{-1},\\quad[k_2]C=CT^{-1}"
+          },
+          {
+            "explanation": "Definisikan skala dan variabel tak berdimensi.",
+            "formula": "C_0=\\frac{k_2}{k_1},\\quad T_0=\\frac1{k_2},\\quad [A]=C_0a,\\ [B]=C_0b,\\ [C]=C_0c,\\ t=T_0\\tau"
+          },
+          {
+            "explanation": "Bagi persamaan hasil substitusi dengan \\(C_0/T_0=k_2C_0\\).",
+            "formula": "\\frac{da}{d\\tau}=-\\frac{k_1C_0}{k_2}ab+c=-ab+c"
+          }
+        ],
+        "conclusion": "Penskalaan ini adalah satu pilihan yang sah; skala konsentrasi umum lain akan menyisakan kelompok tak berdimensi \\(k_1C_0/k_2\\)."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH08-P03",
+      "ordinal": 3,
+      "problem_summary": "Untuk reaksi elementer \\(nA\\to B\\) dengan bilangan bulat positif \\(n\\), turunkan persamaan laju \\([A]\\), selesaikan untuk \\([A](0)=[A]_0\\), dan tentukan selang waktu tempat solusi bermakna.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH08-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\begin{array}{ccc} &amp; k &amp; \\\\ n \\, A &amp;\\rightarrow&amp; B, \\end{array}",
+        "[A](0)=[A]_0"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Laju peristiwa adalah \\(k[A]^n\\), tetapi setiap peristiwa menghabiskan \\(n\\) molekul \\(A\\). Pisahkan kasus \\(n=1\\) sebelum mengintegrasikan pangkat \\([A]^{-n}\\)."
+      },
+      "check": {
+        "type": "exact_nth_order_depletion_solution_and_domain",
+        "final_answer": "Jika \\(a=[A]\\), maka \\(a'=-nk a^n\\). Untuk \\(a_0=[A]_0\\ge0\\), kasus \\(n=1\\) memberi \\(a(t)=a_0e^{-kt}\\). Untuk \\(n>1\\) dan \\(a_0>0\\), \\(a(t)=a_0[1+n(n-1)ka_0^{n-1}t]^{-1/(n-1)}\\); jika \\(a_0=0\\), solusinya identik nol. Semua solusi berkonsentrasi nonnegatif bermakna untuk setiap \\(t\\ge0\\) dan mendekati nol saat \\(t\\to\\infty\\). Untuk \\(n>1,a_0>0\\), perpanjangan matematis ke masa lalu berhenti pada \\(t=-1/[n(n-1)ka_0^{n-1}]\\), ketika rumus menjadi singular; waktu negatif itu bukan prediksi fisik dari masalah nilai awal pada \\(t=0\\).",
+        "quick_check": "Turunan awal rumus harus sama dengan \\(-nka_0^n\\). Faktor stoikiometri \\(n\\) tidak boleh hilang, dan untuk \\(n>1\\) penyebut harus bertambah pada waktu maju."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Kalikan laju peristiwa aksi massa dengan kehilangan \\(n\\) unit \\(A\\) per peristiwa.",
+            "formula": "\\frac{da}{dt}=-nka^n"
+          },
+          {
+            "explanation": "Untuk reaksi orde satu, integrasikan turunan logaritma.",
+            "formula": "n=1:\\quad \\frac{a'}a=-k\\quad\\Longrightarrow\\quad a=a_0e^{-kt}"
+          },
+          {
+            "explanation": "Untuk \\(n>1\\), pisahkan variabel dan gunakan kondisi awal.",
+            "formula": "a^{1-n}=a_0^{1-n}+n(n-1)kt"
+          },
+          {
+            "explanation": "Faktorkan \\(a_0^{1-n}\\) untuk menampilkan domain secara langsung.",
+            "formula": "a(t)=a_0\\left[1+n(n-1)ka_0^{n-1}t\\right]^{-1/(n-1)}"
+          },
+          {
+            "explanation": "Untuk data awal positif, faktor dalam kurung positif tepat setelah singularitas waktu balik.",
+            "formula": "t>-\\frac{1}{n(n-1)ka_0^{n-1}}"
+          }
+        ],
+        "conclusion": "Model tidak menghabiskan konsentrasi hingga nol pada waktu maju yang berhingga; peluruhan eksponensial berlaku untuk \\(n=1\\), sedangkan ekor aljabarnya berlaku untuk \\(n>1\\)."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH08-P04",
+      "ordinal": 4,
+      "problem_summary": "Tentukan dimensi keempat konstanta laju pada jaringan reaksi Brusselator \\(A\\to X\\), \\(2X+Y\\to3X\\), \\(B+X\\to Y+D\\), dan \\(X\\to E\\).",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH08-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\begin{array}{ccc} &amp; k_1 &amp; \\\\ A &amp;\\rightarrow&amp; X, \\end{array}",
+        "\\begin{array}{ccc} &amp; k_2 &amp; \\\\ 2 X + Y &amp;\\rightarrow&amp; 3 X, \\end{array}",
+        "\\begin{array}{ccc} &amp; k_3 &amp; \\\\ B + X &amp;\\rightarrow&amp; Y + D, \\end{array}",
+        "\\begin{array}{ccc} &amp; k_4 &amp; \\\\ X &amp;\\rightarrow&amp; E, \\end{array}"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Setiap laju volumetrik harus berdimensi \\(CT^{-1}\\). Hitung jumlah faktor konsentrasi dalam hukum aksi massa untuk tiap langkah, bukan selisih stoikiometri bersihnya."
+      },
+      "check": {
+        "type": "exact_brusselator_rate_constant_dimensions",
+        "final_answer": "Dengan \\([\\text{konsentrasi}]=C\\) dan \\([t]=T\\), diperoleh \\([k_1]=T^{-1}\\), \\([k_2]=C^{-2}T^{-1}\\), \\([k_3]=C^{-1}T^{-1}\\), dan \\([k_4]=T^{-1}\\).",
+        "quick_check": "Produk \\(k_1[A]\\), \\(k_2[X]^2[Y]\\), \\(k_3[B][X]\\), dan \\(k_4[X]\\) semuanya harus berdimensi \\(CT^{-1}\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Langkah pertama bersifat unimolekuler.",
+            "formula": "[k_1]C=CT^{-1}\\Longrightarrow[k_1]=T^{-1}"
+          },
+          {
+            "explanation": "Langkah autokatalitik memakai tiga faktor konsentrasi dalam laju elementernya.",
+            "formula": "[k_2]C^3=CT^{-1}\\Longrightarrow[k_2]=C^{-2}T^{-1}"
+          },
+          {
+            "explanation": "Langkah ketiga bersifat bimolekuler.",
+            "formula": "[k_3]C^2=CT^{-1}\\Longrightarrow[k_3]=C^{-1}T^{-1}"
+          },
+          {
+            "explanation": "Langkah terakhir kembali unimolekuler.",
+            "formula": "[k_4]C=CT^{-1}\\Longrightarrow[k_4]=T^{-1}"
+          }
+        ],
+        "conclusion": "Menetapkan semua \\(k_i=1\\) sebelum penskalaan menyembunyikan fakta bahwa keempat angka tersebut tidak memiliki dimensi yang sama."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH08-P05",
+      "ordinal": 5,
+      "problem_summary": "Untuk konstanta laju Brusselator \\(k_1,k_2,k_3,k_4\\) yang tidak disetel sama dengan satu, skalakan persamaan laju agar model tak berdimensi tidak lagi memuat konstanta tersebut secara terpisah, dan jelaskan kelompok parameter yang tersisa.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH08-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\left\\{\\begin{align*} \\displaystyle \\frac{d [X]}{d t} &amp; = [A] + [X]^2\\,[Y] - [B]\\,[X] - [X],\\\\ \\displaystyle \\frac{d [Y]}{d t} &amp; = - [Y]\\,[X]^2 + [B]\\,[X], \\end{align*}\\right. \\qquad (8.1)",
+        "k_1",
+        "k_2",
+        "k_3",
+        "k_4"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Mulailah dari \\(\\dot X=k_1[A]+k_2X^2Y-k_3[B]X-k_4X\\) dan \\(\\dot Y=-k_2X^2Y+k_3[B]X\\). Pilih waktu dari peluruhan \\(k_4\\), lalu samakan skala \\(X\\) dan \\(Y\\) agar koefisien suku kubik menjadi satu."
+      },
+      "check": {
+        "type": "exact_general_brusselator_rescaling",
+        "final_answer": "Ambil \\(\\tau=k_4t\\), \\(X=X_0x\\), \\(Y=Y_0y\\), dan \\(X_0=Y_0=\\sqrt{k_4/k_2}\\). Definisikan \\(\\bar A=k_1[A]\\sqrt{k_2}/k_4^{3/2}\\) serta \\(\\bar B=k_3[B]/k_4\\). Maka \\(dx/d\\tau=\\bar A+x^2y-\\bar Bx-x\\) dan \\(dy/d\\tau=-x^2y+\\bar Bx\\). Keempat konstanta laju tidak muncul sendiri, tetapi pengaruhnya tetap tersimpan dalam dua kelompok tak berdimensi \\(\\bar A,\\bar B\\).",
+        "quick_check": "Harus berlaku \\(k_2X_0^2/k_4=1\\), \\([X_0]=[Y_0]=C\\), dan kedua persamaan hasil skala mempunyai bentuk persis (8.1) setelah \\([A],[B]\\) diganti \\(\\bar A,\\bar B\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Tulis model berdimensi dari keempat langkah reaksi dengan \\([A]\\) dan \\([B]\\) dipertahankan sebagai reservoir konstan.",
+            "formula": "\\begin{aligned}\\dot X&=k_1[A]+k_2X^2Y-k_3[B]X-k_4X,\\\\\\dot Y&=-k_2X^2Y+k_3[B]X.\\end{aligned}"
+          },
+          {
+            "explanation": "Gunakan laju unimolekuler \\(k_4\\) sebagai skala waktu.",
+            "formula": "\\tau=k_4t"
+          },
+          {
+            "explanation": "Pilih skala konsentrasi bersama sehingga koefisien autokatalitik menjadi satu.",
+            "formula": "X_0=Y_0=\\sqrt{\\frac{k_4}{k_2}},\\qquad \\frac{k_2X_0Y_0}{k_4}=1"
+          },
+          {
+            "explanation": "Bagi persamaan pertama dengan \\(k_4X_0\\) dan persamaan kedua dengan \\(k_4Y_0\\).",
+            "formula": "\\frac{dx}{d\\tau}=\\frac{k_1[A]}{k_4X_0}+x^2y-\\frac{k_3[B]}{k_4}x-x,\\qquad\\frac{dy}{d\\tau}=-x^2y+\\frac{k_3[B]}{k_4}x"
+          },
+          {
+            "explanation": "Namai dua kombinasi reservoir dan konstanta yang tak dapat dihapus sekaligus.",
+            "formula": "\\bar A=\\frac{k_1[A]\\sqrt{k_2}}{k_4^{3/2}},\\qquad\\bar B=\\frac{k_3[B]}{k_4}"
+          }
+        ],
+        "conclusion": "Penskalaan mengurangi enam besaran berdimensi yang relevan menjadi dua parameter kendali tak berdimensi tanpa mengubah struktur dinamis Brusselator."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH08-P06",
+      "ordinal": 6,
+      "problem_summary": "Simulasikan model Brusselator (8.1) dengan \\([A]=1\\) dan jelaskan perubahan dinamika saat \\([B]\\) dinaikkan dari \\(1{,}5\\) sampai \\(2{,}5\\).",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH08-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\left\\{\\begin{align*} \\displaystyle \\frac{d [X]}{d t} &amp; = [A] + [X]^2\\,[Y] - [B]\\,[X] - [X],\\\\ \\displaystyle \\frac{d [Y]}{d t} &amp; = - [Y]\\,[X]^2 + [B]\\,[X], \\end{align*}\\right. \\qquad (8.1)",
+        "[A]=1",
+        "[B]",
+        "1.5",
+        "2.5"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Gunakan titik tetap \\(P=(A,B/A)\\). Hitung jejak dan determinan matriks Jacobi di \\(P\\), lalu bandingkan prediksi linearisasi dengan lintasan yang dimulai sedikit di luar titik tetap."
+      },
+      "check": {
+        "type": "brusselator_hopf_sweep_with_numerical_diagnostic",
+        "final_answer": "Untuk \\(A=1\\), titik tetapnya \\(P=(1,B)\\), jejaknya \\(T=B-2\\), dan determinannya \\(D=1\\). Pada \\(1{,}5\\le B<2\\), \\(P\\) adalah spiral stabil; pada \\(B=2=1+A^2\\), nilai eigen \\(\\pm i\\) menandai ambang Hopf; dan pada \\(2<B\\le2{,}5\\), \\(P\\) adalah spiral tak stabil yang dikelilingi siklus limit menarik. Jadi ambang kestabilannya adalah \\(B_H=1+A^2=2\\).",
+        "quick_check": "Di seluruh rentang, diskriminan \\((B-2)^2-4\\) negatif, sehingga tipe linearnya memang spiral kecuali tepat di ambang. Integrasi harus cukup lama untuk membedakan transien yang meluruh dari osilasi menetap."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Titik tetap umum model (8.1) diperoleh dengan menjumlahkan kedua persamaan dan menyelesaikan nolklin.",
+            "formula": "P=(A,B/A)\\quad\\Longrightarrow\\quad P=(1,B)"
+          },
+          {
+            "explanation": "Evaluasi matriks Jacobi sumber pada \\(A=1\\).",
+            "formula": "J(P)=\\begin{pmatrix}B-1&1\\\\-B&-1\\end{pmatrix},\\qquad T=B-2,\\quad D=1"
+          },
+          {
+            "explanation": "Tanda jejak menentukan kestabilan karena determinan positif.",
+            "formula": "B<2:\\ T<0;\\qquad B=2:\\ T=0;\\qquad B>2:\\ T>0"
+          },
+          {
+            "explanation": "Dalam rentang yang diminta, diskriminan selalu negatif.",
+            "formula": "\\Delta=T^2-4D=(B-2)^2-4<0\\qquad(1.5\\le B\\le2.5)"
+          },
+          {
+            "explanation": "Notebook mengintegrasikan beberapa kondisi awal di sekitar \\(P\\) dan memeriksa amplitudo setelah transien.",
+            "formula": "B>2:\\quad P\\text{ menolak lintasan dekat, sedangkan amplitudo akhirnya menuju osilasi periodik yang sama}"
+          }
+        ],
+        "conclusion": "Perubahan pada \\(B=2\\) adalah bifurkasi Hopf superkritis Brusselator standar. Potret dan deret waktu notebook mendukung siklus menarik, sedangkan perhitungan jejak menetapkan ambang kestabilan lokal."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH08-P07",
+      "ordinal": 7,
+      "problem_summary": "Simulasikan Brusselator (8.1) dengan \\([A]=1\\): jelaskan perubahan saat \\([B]\\) bergerak dari 3 ke 5 dan kekhususan \\([B]=4\\), lalu plot \\([X](t),[Y](t)\\) untuk \\([B]=6\\) dan uraikan osilasinya.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH08-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\left\\{\\begin{align*} \\displaystyle \\frac{d [X]}{d t} &amp; = [A] + [X]^2\\,[Y] - [B]\\,[X] - [X],\\\\ \\displaystyle \\frac{d [Y]}{d t} &amp; = - [Y]\\,[X]^2 + [B]\\,[X], \\end{align*}\\right. \\qquad (8.1)",
+        "[A]=1",
+        "[B]=4",
+        "[B] = 6"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Kestabilan sudah hilang untuk semua \\(B>2\\). Yang berubah pada \\(B=4\\) adalah apakah dua nilai eigen titik tetap kompleks atau real; gunakan diskriminan, bukan hanya tanda jejak."
+      },
+      "check": {
+        "type": "brusselator_focus_node_boundary_and_relaxation_cycle",
+        "final_answer": "Untuk \\(A=1\\), \\(T=B-2\\), \\(D=1\\), dan \\(\\Delta=(B-2)^2-4=B(B-4)\\). Maka \\(3\\le B<4\\) memberi fokus tak stabil, \\(B=4\\) memberi nilai eigen ganda positif \\(\\lambda=1\\) dengan hanya satu arah eigen (simpul tak wajar), dan \\(4<B\\le5\\) memberi simpul tak stabil. Nilai \\(B=4\\) adalah batas fokus–simpul, bukan ambang Hopf; siklus limit menarik tetap menjadi atraktor di luar titik tetap. Untuk \\(B=6\\), deret waktu menunjukkan osilasi relaksasi: \\(X\\) lama berada pada nilai kecil lalu melonjak dan turun cepat, sedangkan \\(Y\\) tumbuh perlahan ketika \\(X\\) kecil dan jatuh tajam ketika \\(X\\) melonjak.",
+        "quick_check": "Diskriminan harus nol tepat di \\(B=4\\), sedangkan jejak tetap positif di sana. Pada \\(B=6\\), puncak \\(X\\) dan penurunan \\(Y\\) harus berimpit secara temporal setelah transien."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Gunakan kembali matriks Jacobi titik tetap \\(P=(1,B)\\).",
+            "formula": "J(P)=\\begin{pmatrix}B-1&1\\\\-B&-1\\end{pmatrix},\\qquad \\lambda^2-(B-2)\\lambda+1=0"
+          },
+          {
+            "explanation": "Hitung diskriminan polinom karakteristik.",
+            "formula": "\\Delta=(B-2)^2-4=B(B-4)"
+          },
+          {
+            "explanation": "Karena \\(T>0,D>0\\), tanda diskriminan hanya mengubah geometri ketidakstabilan.",
+            "formula": "3\\le B<4:\\text{ fokus tak stabil};\\quad B>4:\\text{ simpul tak stabil}"
+          },
+          {
+            "explanation": "Pada batas, matriks memiliki akar ganda dan satu ruang eigen berdimensi satu.",
+            "formula": "B=4:\\quad (\\lambda-1)^2=0,\\qquad \\operatorname{rank}(J-I)=1"
+          },
+          {
+            "explanation": "Untuk \\(B=6\\), integrasi setelah membuang transien membandingkan puncak dan lembah kedua konsentrasi.",
+            "formula": "X\\uparrow\\text{ tajam}\\Longleftrightarrow Y\\downarrow\\text{ tajam};\\qquad X\\text{ kecil}\\Longleftrightarrow Y\\text{ pulih perlahan}"
+          }
+        ],
+        "conclusion": "Nilai \\(B=4\\) memisahkan fokus dan simpul yang keduanya tak stabil. Nilai \\(B=6\\) menonjolkan pemisahan skala waktu yang menghasilkan bentuk denyut khas osilasi relaksasi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH08-P08",
+      "ordinal": 8,
+      "problem_summary": "Tentukan dimensi \\(k_1,k_2,k_3,k_4,k_5\\) pada jaringan reaksi Oregonator.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH08-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\begin{array}{ccc} &amp; k_1 &amp; \\\\ A + Y &amp;\\rightarrow&amp; X, \\end{array}",
+        "\\begin{array}{ccc} &amp; k_2 &amp; \\\\ X + Y &amp;\\rightarrow&amp; P, \\end{array}",
+        "\\begin{array}{ccc} &amp; k_3 &amp; \\\\ B + X &amp;\\rightarrow&amp; 2 X + Z, \\end{array}",
+        "\\begin{array}{ccc} &amp; k_4 &amp; \\\\ 2 X &amp;\\rightarrow&amp; Q, \\end{array}",
+        "\\begin{array}{ccc} &amp; k_5 &amp; \\\\ Z &amp;\\rightarrow&amp; f Y, \\end{array}"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Empat langkah pertama semuanya melibatkan dua molekul pereaksi dalam hukum aksi massa, termasuk \\(2X\\to Q\\); langkah terakhir hanya melibatkan satu \\(Z\\). Koefisien hasil \\(f\\) menghitung jumlah relatif, bukan satuan baru."
+      },
+      "check": {
+        "type": "exact_oregonator_rate_constant_dimensions",
+        "final_answer": "Dengan dimensi konsentrasi \\(C\\) dan waktu \\(T\\), \\([k_1]=[k_2]=[k_3]=[k_4]=C^{-1}T^{-1}\\), \\([k_5]=T^{-1}\\), dan \\([f]=1\\).",
+        "quick_check": "Suku \\(k_1[A][Y]\\), \\(k_2[X][Y]\\), \\(k_3[B][X]\\), \\(k_4[X]^2\\), dan \\(k_5[Z]\\) semuanya harus berdimensi \\(CT^{-1}\\); faktor 2 dan \\(f\\) tidak membawa dimensi."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Tiga reaksi pertama masing-masing mempunyai dua faktor konsentrasi dalam laju aksi massanya.",
+            "formula": "[k_i]C^2=CT^{-1}\\Longrightarrow[k_i]=C^{-1}T^{-1},\\qquad i=1,2,3"
+          },
+          {
+            "explanation": "Reaksi \\(2X\\to Q\\) juga berorde dua terhadap konsentrasi.",
+            "formula": "[k_4][X]^2=CT^{-1}\\Longrightarrow[k_4]=C^{-1}T^{-1}"
+          },
+          {
+            "explanation": "Peluruhan \\(Z\\) bersifat unimolekuler.",
+            "formula": "[k_5][Z]=CT^{-1}\\Longrightarrow[k_5]=T^{-1}"
+          },
+          {
+            "explanation": "Faktor stoikiometri hanya mengalikan jumlah \\(Y\\) yang dihasilkan per \\(Z\\).",
+            "formula": "[f]=1"
+          }
+        ],
+        "conclusion": "Dimensi ini membuat setiap ruas kanan sistem Oregonator berdimensi konsentrasi per waktu dan menjadi dasar pemeriksaan skala pada soal berikutnya."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH08-P09",
+      "ordinal": 9,
+      "problem_summary": "Buktikan bahwa variabel Oregonator \\(x=[X]/X_0\\), \\(y=[Y]/Y_0\\), \\(z=[Z]/Z_0\\), dan \\(\\tau=t/T_0\\) tak berdimensi dengan memeriksa dimensi keempat skala yang diberikan.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH08-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "x = \\displaystyle \\frac{[X]}{X_0},\\qquad y = \\displaystyle \\frac{[Y]}{Y_0},\\qquad z = \\displaystyle \\frac{[Z]}{Z_0},\\qquad \\tau = \\displaystyle \\frac{t}{T_0}",
+        "X_0 = \\displaystyle \\frac{k_1}{k_2} [A],\\quad Y_0 = \\displaystyle \\frac{k_3}{k_2} [B], \\quad Z_0 = \\displaystyle \\frac{k_1 k_3}{k_2 k_5} [A] [B], \\quad \\displaystyle T_0 = \\frac{1}{\\sqrt{k_1 k_3 [A] [B]}}"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Gunakan hasil \\([k_1]=\\cdots=[k_4]=C^{-1}T^{-1}\\), \\([k_5]=T^{-1}\\), dan \\([A]=[B]=C\\). Periksa setiap skala sebelum membentuk rasionya."
+      },
+      "check": {
+        "type": "exact_oregonator_scale_dimension_proof",
+        "final_answer": "Dimensi skala adalah \\([X_0]=[(k_1/k_2)[A]]=C\\), \\([Y_0]=[(k_3/k_2)[B]]=C\\), \\([Z_0]=[(k_1k_3/(k_2k_5))[A][B]]=C\\), dan \\([T_0]=[k_1k_3[A][B]]^{-1/2}=T\\). Karena pembilang dan penyebut setiap rasio memiliki dimensi sama, \\([x]=[y]=[z]=[\\tau]=1\\).",
+        "quick_check": "Rasio \\(k_1k_3/(k_2k_5)\\) harus berdimensi \\(C^{-1}\\), bukan tak berdimensi, sehingga setelah dikalikan \\([A][B]\\) hasilnya tepat \\(C\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Rasio dua konstanta bimolekuler pertama tidak membawa dimensi.",
+            "formula": "[X_0]=\\frac{C^{-1}T^{-1}}{C^{-1}T^{-1}}C=C"
+          },
+          {
+            "explanation": "Argumen yang sama berlaku untuk skala \\(Y\\).",
+            "formula": "[Y_0]=\\frac{C^{-1}T^{-1}}{C^{-1}T^{-1}}C=C"
+          },
+          {
+            "explanation": "Pada skala \\(Z\\), rasio konstanta menyumbang satu pangkat konsentrasi invers.",
+            "formula": "[Z_0]=\\frac{(C^{-1}T^{-1})^2}{(C^{-1}T^{-1})(T^{-1})}C^2=C^{-1}C^2=C"
+          },
+          {
+            "explanation": "Besaran di bawah akar pada skala waktu adalah laju kuadrat.",
+            "formula": "[k_1k_3[A][B]]=(C^{-1}T^{-1})^2C^2=T^{-2}"
+          },
+          {
+            "explanation": "Bentuk rasio akhirnya tidak membawa satuan.",
+            "formula": "[x]=\\frac CC=[y]=[z]=1,\\qquad[\\tau]=\\frac TT=1"
+          }
+        ],
+        "conclusion": "Keempat definisi merupakan penskalaan yang konsisten. Sebagai pemeriksaan tambahan, kelompok \\(s,q,\\omega\\) pada (8.2) juga tak berdimensi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH08-P10",
+      "ordinal": 10,
+      "problem_summary": "Simulasikan model Oregonator tereduksi (8.3) dengan \\(f=1\\), \\(s=1\\), dan \\(\\omega=2\\), lalu jelaskan perubahan saat \\(q\\) diturunkan dari \\(0{,}1\\) ke \\(0{,}01\\).",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH08-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\left\\{\\begin{align*} \\displaystyle \\frac{d y}{d \\tau} &amp; = \\frac{1}{s} \\left(- y - \\frac{y}{2 q} \\left(1 - y + \\sqrt{(1 - y)^2 + 4 q y}\\right) + f z \\right), \\\\ \\displaystyle \\frac{d z}{d \\tau} &amp; = \\omega \\left(\\frac{1}{2 q} \\left(1 - y + \\sqrt{(1 - y)^2 + 4 q y}\\right) - z \\right). \\end{align*}\\right. \\qquad (8.3)",
+        "f=1",
+        "s=1",
+        "\\omega=2",
+        "q",
+        "0.1",
+        "0.01"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Gunakan cabang positif \\(h(y)=[1-y+\\sqrt{(1-y)^2+4qy}]/(2q)\\). Ikuti titik tetap positif sambil menghitung jejak matriks Jacobi; integrasikan dari gangguan kecil dan dari kondisi awal yang lebih jauh untuk menguji apakah amplitudo akhir sama."
+      },
+      "check": {
+        "type": "oregonator_q_sweep_with_hopf_diagnostic",
+        "final_answer": "Pada \\(q=0{,}1\\), titik tetap positif adalah \\((y_*,z_*)=(0{,}8,4)\\) dan merupakan fokus stabil karena \\(T=-3\\), \\(D=12\\), serta \\(T^2-4D=-39\\). Saat \\(q\\) turun, jejak melewati nol pada \\(q_H=(19-5\\sqrt{13})/18\\approx0{,}0540135\\). Di bawah ambang, titik tetap tidak stabil dan integrasi menunjukkan sebuah siklus limit menarik; pada \\(q=0{,}01\\), osilasinya besar dan bersifat relaksasi. Nilai ambang lokal berasal dari perhitungan matriks Jacobi, sedangkan keberadaan, daya tarik, dan bentuk siklus dalam sapuan ini adalah diagnosis numerik, bukan bukti global keberadaan atau keunikan siklus.",
+        "quick_check": "Gunakan toleransi ketat dan horizon cukup panjang; hasil harus stabil terhadap pengecilan langkah/toleransi, penggandaan horizon, dan beberapa kondisi awal positif. Jangan menyimpulkan siklus hanya dari transien berosilasi."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Tuliskan sistem tereduksi dengan fungsi cabang positif.",
+            "formula": "y'=-y-yh(y)+z,\\qquad z'=2(h(y)-z)"
+          },
+          {
+            "explanation": "Titik tetap positif memenuhi rumus aljabar dari soal berikutnya.",
+            "formula": "y_*=\\frac{4+q-\\sqrt{q(q+8)}}4,\\qquad x_*=z_*=\\frac{y_*}{1-y_*}"
+          },
+          {
+            "explanation": "Untuk \\(s=1,\\omega=2\\), syarat jejak nol dapat ditulis hanya dalam \\(y_*\\).",
+            "formula": "\\frac{2y_*^2+2y_*-3}{3(1-y_*)^2}-2=0"
+          },
+          {
+            "explanation": "Pilih akar fisik dan gunakan relasi titik tetap \\(qy_*=2(1-y_*)^2\\).",
+            "formula": "y_H=\\frac{7-\\sqrt{13}}4,\\qquad q_H=\\frac{2(1-y_H)^2}{y_H}=\\frac{19-5\\sqrt{13}}{18}"
+          },
+          {
+            "explanation": "Sapuan komputasional mencatat ekstrem setelah transien dan mengulang integrasi dari beberapa keadaan awal.",
+            "formula": "q>q_H:\\text{ amplitudo }\\to0;\\qquad q<q_H:\\text{ amplitudo akhir nonnol dan berulang}"
+          }
+        ],
+        "conclusion": "Sapuan bergerak dari fokus stabil menuju osilasi menarik setelah kehilangan kestabilan lokal. Perhitungan analitik menentukan ambangnya; sifat siklus yang tampak harus dilaporkan bersama pemeriksaan konvergensi numerik."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH08-P11",
+      "ordinal": 11,
+      "problem_summary": "Temukan titik tetap model Oregonator tereduksi (8.3) untuk \\(f=1\\), lalu analisis kestabilannya melalui turunan cabang aljabar, jejak, determinan, dan diskriminan matriks Jacobi.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH08-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "x = \\displaystyle \\frac{1}{2 q} \\left(1 - y + \\sqrt{(1 - y)^2 + 4 q y}\\right)",
+        "\\displaystyle \\left\\{\\begin{align*} \\displaystyle \\frac{d y}{d \\tau} &amp; = \\frac{1}{s} \\left(- y - \\frac{y}{2 q} \\left(1 - y + \\sqrt{(1 - y)^2 + 4 q y}\\right) + f z \\right), \\\\ \\displaystyle \\frac{d z}{d \\tau} &amp; = \\omega \\left(\\frac{1}{2 q} \\left(1 - y + \\sqrt{(1 - y)^2 + 4 q y}\\right) - z \\right). \\end{align*}\\right. \\qquad (8.3)",
+        "f=1"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Namai cabang positif sebagai \\(x=h(y)\\). Dari \\(z'=0\\) peroleh \\(z=x\\), dan dari \\(y'=0\\) untuk \\(f=1\\) peroleh \\(x(1-y)=y\\). Turunkan persamaan implisit \\(y-xy+x-qx^2=0\\) untuk memperoleh \\(h'(y)\\) tanpa mendiferensiasikan akar secara langsung."
+      },
+      "check": {
+        "type": "exact_reduced_oregonator_fixed_point_and_linear_classification",
+        "final_answer": "Untuk \\(q,s,\\omega>0\\) dan cabang positif \\(h(y)\\), satu-satunya titik tetap fisik adalah \\((y_*,z_*)\\) dengan \\(y_*=[(4+q)-\\sqrt{q(q+8)}]/4\\) dan \\(x_*=z_*=y_*/(1-y_*)\\). Turunannya ialah \\(h'(y_*)=(x_*-1)/(1-y_*-2qx_*)\\). Matriks Jacobi memiliki jejak \\(T=(-1-x_*-y_*h'(y_*))/s-\\omega\\) dan determinan \\(D=(\\omega/s)[1+x_*+(y_*-1)h'(y_*)]\\). Secara ekuivalen, \\(h'(y_*)=(1-2y_*)/[3(1-y_*)^2]\\), \\(D=2\\omega(1+y_*)/[3s(1-y_*)]>0\\), dan \\(T=[2y_*^2+2y_*-3]/[3s(1-y_*)^2]-\\omega\\). Jadi titik stabil bila \\(T<0\\), tak stabil bila \\(T>0\\), dan nonhiperbolik/Hopf-kandidat bila \\(T=0\\); untuk \\(D>0\\), ia fokus jika \\(T^2-4D<0\\), simpul jika \\(T^2-4D>0\\), dan berakar ganda jika sama dengan nol.",
+        "quick_check": "Akar dengan tanda plus pada rumus kuadrat memberi \\(y>1\\) dan bukan titik tetap berkonsentrasi positif karena \\(x=y/(1-y)<0\\). Determinan cabang fisik harus menyederhana menjadi besaran positif."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Definisikan cabang keadaan tunak cepat yang dipakai oleh model tereduksi.",
+            "formula": "x=h(y)=\\frac{1-y+\\sqrt{(1-y)^2+4qy}}{2q}"
+          },
+          {
+            "explanation": "Pada titik tetap dengan \\(f=1\\), persamaan kedua memberi \\(z=x\\), lalu persamaan pertama memberi relasi positif.",
+            "formula": "z_*=x_*,\\qquad -y_*-y_*x_*+x_*=0\\Longrightarrow x_*=\\frac{y_*}{1-y_*}"
+          },
+          {
+            "explanation": "Substitusikan relasi tersebut ke persamaan implisit cabang cepat.",
+            "formula": "y-xy+x-qx^2=0\\Longrightarrow qy=2(1-y)^2"
+          },
+          {
+            "explanation": "Selesaikan persamaan kuadrat dan pilih akar dalam \\((0,1)\\).",
+            "formula": "2y^2-(4+q)y+2=0,\\qquad y_*=\\frac{4+q-\\sqrt{q(q+8)}}4"
+          },
+          {
+            "explanation": "Diferensiasi implisit cabang memberi turunan yang diperlukan oleh matriks Jacobi.",
+            "formula": "h'(y)=\\frac{x-1}{1-y-2qx}"
+          },
+          {
+            "explanation": "Linearisasi sistem \\(y'=(-y-yh(y)+z)/s\\), \\(z'=\\omega(h(y)-z)\\).",
+            "formula": "J_*=\\begin{pmatrix}(-1-x_*-y_*h')/s&1/s\\\\\\omega h'&-\\omega\\end{pmatrix}"
+          },
+          {
+            "explanation": "Ambil jejak dan determinan.",
+            "formula": "T=\\frac{-1-x_*-y_*h'}s-\\omega,\\qquad D=\\frac\\omega s\\left(1+x_*+(y_*-1)h'\\right)"
+          },
+          {
+            "explanation": "Gunakan \\(qy_*=2(1-y_*)^2\\) untuk menunjukkan determinan positif dan memperoleh bentuk jejak yang ringkas.",
+            "formula": "h'=\\frac{1-2y_*}{3(1-y_*)^2},\\quad D=\\frac{2\\omega(1+y_*)}{3s(1-y_*)}>0,\\quad T=\\frac{2y_*^2+2y_*-3}{3s(1-y_*)^2}-\\omega"
+          }
+        ],
+        "conclusion": "Karena determinan selalu positif pada cabang fisik, titik ini tidak pernah menjadi pelana. Tanda jejak menentukan stabilitas, sedangkan \\(T^2-4D\\) membedakan fokus dari simpul; pembuktian bifurkasi Hopf penuh tetap memerlukan syarat transversalitas dan koefisien nonlinear."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH08-P12",
+      "ordinal": 12,
+      "problem_summary": "Untuk reaksi \\(A+X\\to2X\\), \\(X+Y\\to2Y\\), dan \\(Y\\to P\\), turunkan persamaan laju \\([X],[Y]\\), petakan sistemnya ke model Lotka–Volterra, dan prediksi dinamika di kuadran positif.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH08-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\begin{array}{ccc} &amp; k_1 &amp; \\\\ A + X &amp; \\rightarrow &amp; 2 X, \\end{array}",
+        "\\begin{array}{ccc} &amp; k_2 &amp; \\\\ X + Y &amp; \\rightarrow &amp; 2 Y, \\end{array}",
+        "\\begin{array}{ccc} &amp; k_3 &amp; \\\\ Y &amp; \\rightarrow &amp; P. \\end{array}"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Perlakukan \\([A]\\) sebagai reservoir konstan. Reaksi pertama menambah satu \\(X\\), reaksi kedua mengubah satu \\(X\\) menjadi satu tambahan \\(Y\\), dan reaksi ketiga menghilangkan satu \\(Y\\)."
+      },
+      "check": {
+        "type": "exact_lotka_volterra_mapping_and_dynamics",
+        "final_answer": "Dengan \\(x=[X]\\), \\(y=[Y]\\), dan \\([A]=A_0\\) konstan, persamaannya adalah \\(x'=k_1A_0x-k_2xy=x(\\alpha-\\beta y)\\) dan \\(y'=k_2xy-k_3y=y(\\delta x-\\gamma)\\), yaitu Lotka–Volterra dengan \\(\\alpha=k_1A_0\\), \\(\\beta=k_2\\), \\(\\delta=k_2\\), dan \\(\\gamma=k_3\\). Titik koeksistensi \\((k_3/k_2,k_1A_0/k_2)\\) adalah pusat pada model ideal; setiap keadaan awal interior nonsetimbang berada pada kurva tingkat tertutup dan menghasilkan osilasi netral, bukan siklus limit menarik.",
+        "quick_check": "Tanda pada suku silang harus negatif di \\(x'\\) dan positif di \\(y'\\). Integral pertama \\(H=k_2x-k_3\\ln x+k_2y-k_1A_0\\ln y\\) harus memenuhi \\(dH/dt=0\\) untuk \\(x,y>0\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Tentukan tiga laju aksi massa dengan reservoir \\(A_0\\) dijaga tetap.",
+            "formula": "r_1=k_1A_0x,\\qquad r_2=k_2xy,\\qquad r_3=k_3y"
+          },
+          {
+            "explanation": "Gunakan perubahan stoikiometri bersih pada \\(X\\) dan \\(Y\\).",
+            "formula": "x'=r_1-r_2,\\qquad y'=r_2-r_3"
+          },
+          {
+            "explanation": "Faktorkan konsentrasi untuk mengenali bentuk mangsa–pemangsa.",
+            "formula": "x'=x(k_1A_0-k_2y),\\qquad y'=y(k_2x-k_3)"
+          },
+          {
+            "explanation": "Peta parameter ke notasi Lotka–Volterra standar adalah langsung.",
+            "formula": "(\\alpha,\\beta,\\delta,\\gamma)=(k_1A_0,k_2,k_2,k_3)"
+          },
+          {
+            "explanation": "Titik tetap interior diperoleh dari kedua faktor dalam kurung.",
+            "formula": "(x_*,y_*)=\\left(\\frac{k_3}{k_2},\\frac{k_1A_0}{k_2}\\right)"
+          },
+          {
+            "explanation": "Integral pertama membuktikan bahwa orbit interior tetap pada satu kurva tingkat.",
+            "formula": "H(x,y)=k_2x-k_3\\ln x+k_2y-k_1A_0\\ln y,\\qquad \\dot H=0"
+          }
+        ],
+        "conclusion": "Model memprediksi keluarga kontinu orbit periodik netral di sekitar pusat. Amplitudo ditentukan oleh keadaan awal dan tidak dipilih oleh tarikan menuju satu orbit khusus."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH08-P13",
+      "ordinal": 13,
+      "problem_summary": "Rancang uji eksperimental untuk membedakan osilasi akibat satu siklus limit menarik pada Brusselator atau Oregonator dari keluarga tak hingga orbit periodik netral seperti pada Lotka–Volterra dengan \\(b=0\\).",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH08-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "limit cycle",
+        "Lotka-Volterra equations",
+        "b=0",
+        "an infinite number of periodic solutions"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Jangan hanya mengamati bahwa osilasi bertahan. Siapkan beberapa amplitudo awal atau berikan pulsa kecil ke arah melintang orbit, lalu ukur apakah amplitudo kembali ke gelombang yang sama atau menetap pada nilai baru."
+      },
+      "check": {
+        "type": "qualitative_limit_cycle_versus_neutral_family_experiment",
+        "final_answer": "Lakukan gangguan kecil terkalibrasi ke dalam dan ke luar dari orbit pada beberapa fase, serta ulangi dari beberapa kondisi awal. Siklus limit menarik ditandai oleh kembalinya bentuk gelombang dan amplitudo ke orbit yang sama setelah transien, walaupun fasenya dapat bergeser. Jika siklus itu menarik secara hiperbolik, simpangan melintang meluruh eksponensial dan kemiringan peta balik Poincaré memenuhi \\(|R'(u_*)|<1\\); tarikan nonhiperbolik dapat lebih lambat dengan \\(|R'(u_*)|=1\\) tetapi tetap memperlihatkan pemulihan amplitudo melalui suku orde tinggi. Pada keluarga periodik netral, gangguan melintang memindahkan sistem ke orbit tetangga dengan amplitudo baru yang bertahan; terdapat kontinuum titik tetap peta balik tanpa pemulihan transversal. Ulangi dua arah dan beberapa besar pulsa untuk memisahkan efek ini dari derau atau redaman kecil tak termodelkan.",
+        "quick_check": "Pergeseran fase saja tidak membedakan kedua mekanisme. Bukti diagnostik harus memakai relaksasi amplitudo atau jarak melintang, menunjukkan hasil berulang untuk gangguan masuk dan keluar, serta melaporkan ketidakpastian dan drift eksperimen."
+      },
+      "solution_or_rubric": {
+        "type": "qualitative_rubric",
+        "criteria": [
+          {
+            "criterion": "Rancangan kondisi awal atau gangguan",
+            "full_credit": "Menggunakan beberapa keadaan awal dan pulsa kecil ke dua arah melintang orbit pada beberapa fase, dengan besar pulsa yang diketahui."
+          },
+          {
+            "criterion": "Prediksi untuk siklus limit menarik",
+            "full_credit": "Menyatakan bahwa amplitudo/bentuk gelombang kembali ke orbit unik setelah transien, dengan fase akhir boleh berbeda; untuk siklus hiperbolik, menghubungkannya dengan pengali Floquet melintang bermodulus kurang dari satu, sambil membolehkan pemulihan orde tinggi yang lebih lambat pada kasus menarik nonhiperbolik."
+          },
+          {
+            "criterion": "Prediksi untuk keluarga orbit netral",
+            "full_credit": "Menyatakan bahwa amplitudo baru bertahan pada orbit tetangga dan menghubungkannya dengan kontinuum orbit atau pengali melintang satu."
+          },
+          {
+            "criterion": "Pengukuran kuantitatif",
+            "full_credit": "Mengestimasi peluruhan jarak ke orbit atau peta balik Poincaré dari penampang yang sama, bukan hanya menilai osilasi secara visual."
+          },
+          {
+            "criterion": "Kontrol eksperimen",
+            "full_credit": "Mengulang percobaan, memvariasikan arah dan besar gangguan, serta membahas derau, drift, redaman lemah, dan keterbatasan observasi sebagian keadaan."
+          }
+        ],
+        "conclusion": "Ciri pembeda adalah seleksi amplitudo secara transversal: atraksi memulihkan satu orbit, sedangkan kenetralan mempertahankan orbit baru. Respons fase saja tidak cukup karena kedua sistem dapat mengalami pergeseran fase."
+      }
+    }
+  ]
+}

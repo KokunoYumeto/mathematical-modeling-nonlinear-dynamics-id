@@ -286,6 +286,32 @@ UNIT_SPECS = {
             },
         ],
     },
+    "O005-LEGA-V101-CH09": {
+        "record_id": 196,
+        "modified_gmt": "2026-03-19T20:10:36",
+        "record_bytes": 65160,
+        "record_sha256": "e53b35acf85334d2df48124211843b08b7ca1e9e9ca8c91465f215dfbb219c2a",
+        "assets": [
+            {
+                "path": "assets/diffusion-random-walk-source.png",
+                "epub_member": "EPUB/assets/Diffusion-300x261.png",
+                "bytes": 37521,
+                "sha256": "4659e7a659e47069360aedfe1f6a6511516e8c99d96ccc9421d5edc34e33648e",
+            },
+            {
+                "path": "assets/fisher-traveling-wave-phase-1-source.png",
+                "epub_member": "EPUB/assets/TW_PP1.png",
+                "bytes": 126169,
+                "sha256": "a3080ea906a114bc538bb27ca30c22a40953ee77eeda75537a7f120e44e45366",
+            },
+            {
+                "path": "assets/fisher-traveling-wave-phase-2-source.png",
+                "epub_member": "EPUB/assets/TW_PP2.png",
+                "bytes": 115933,
+                "sha256": "17bb5d8b4b0f3f0b34e68a7276290020c7b34f3592df1ca307769bdea591bbcb",
+            },
+        ],
+    },
 }
 
 

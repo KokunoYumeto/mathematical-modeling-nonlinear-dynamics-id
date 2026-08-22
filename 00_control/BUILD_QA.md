@@ -548,3 +548,47 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   Coverage includes the complete Part 4 target/backend/reader, corrected
   code-point provenance, pipeline and cursor controls, and all seven Chapter 8
   authority files including its three source rasters.
+
+## Admitted build — O005-LEGA-V101-CH08 — 2026-08-22
+
+- Builder: `scripts/build_unit_reader.py --unit O005-LEGA-V101-CH08`, Pandoc
+  3.9.0.2, native MathML for chapter and mastery mathematics.
+- Final gate: `scripts/qa_unit.py --unit O005-LEGA-V101-CH08
+  --execute-notebook --deterministic-build`, exit 0. Exact replay covers 179 /
+  179 ordered elements, 28 / 28 links, 186 / 186 TeX occurrences, three /
+  three figures, six / six footnotes, and thirteen / thirteen problems.
+- Target: 26,145 bytes, SHA-256
+  `49a6be865bf34fac62b832b7d2338982595c48e1ff5c1e0389e626b197659e0a`.
+  Backend: 217 paired segments / 134,156 bytes, SHA-256
+  `09725f630eb53b477329baf3a4d8c5a08605496e70fae0c113544bd81f146631`;
+  thirteen mastery records / 49,712 bytes, SHA-256
+  `f244ce8bc66e7fd8bb5fb62af32a95bbff0093741148c528a6b5514d1a12c0fa`.
+- Independent notebook: 16 cells / seven code cells, 33,424 bytes, SHA-256
+  `8cbc3faa8d63683d15ac4498d2c7249763622789988df9e5684250fef1f74a5b`.
+  Fresh execution under Python 3.13.9, NumPy 2.4.4, SciPy 1.17.1, and
+  Matplotlib 3.10.9 passed all 99 static assertion sites (226 successful
+  dynamic evaluations) in 6.314 seconds. Independent recomputation confirmed
+  the mass-action conservation basis, Brusselator Hopf and repeated-eigenvalue
+  cases, Oregonator Hopf threshold and attracting cycle, Poincare returns, and
+  distinct Lotka–Volterra invariants.
+- Reader: ten payload files / 972,822 bytes excluding the 1,058-byte manifest;
+  186 chapter and 321 mastery MathML nodes; six local dependencies; three
+  loaded figures. Manifest SHA-256
+  `1302a06298f3434e5e9f1b503fa602c05ce46b201e4e724f7a4c3fcaeb276275`.
+  Deterministic double build: eleven files, byte-identical, canonical tree
+  SHA-256 `313c59b2b4dcafd7a5b4336ad8b9f8105afb8eb0641e478350fc43f41fa0591f`.
+- Independent mastery review found three issues and all were repaired before
+  the final build: source/new-original attribution for Problem 8, an inaccurate
+  SymPy dependency claim, and an overgeneralized hyperbolic return criterion.
+  Independent notebook review found no remaining actionable issue.
+- Browser visual QA against final bytes: at 1280×900 the main shell / article
+  widths were 1,152 / 768 px and centered; at 390×844 the shell / article was
+  357.5 px and centered. Scroll width equaled client width; all three 1,024 px
+  rasters loaded responsively on opaque white canvases; all 45 IDs were unique;
+  every local fragment resolved; 39 disclosures rendered; the Problem 13
+  target landed at 80.08 px below the 45.05 px sticky navigation; and the final
+  warning/error console log was empty. External-link reachability was not
+  tested and no audio/live widget exists.
+- Every earlier completed unit (CH01, CH02, PT02, CH03, CH04, PT03, CH05,
+  CH06, CH07, and PT04) passed a fresh deterministic structure/backend/locality/
+  accessibility/package regression after the Chapter 8 pipeline additions.

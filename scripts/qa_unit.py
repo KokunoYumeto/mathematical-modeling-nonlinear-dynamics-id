@@ -452,6 +452,32 @@ QA_SPECS = {
         "lock": None,
         "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",
     },
+    "O005-LEGA-V101-CH08": {
+        "unit_type": "chapter",
+        "elements": 179,
+        "links": 28,
+        "math": 186,
+        "target_math": 186,
+        "reader_math": 186,
+        "problems": 13,
+        "footnotes": 6,
+        "assets": [
+            "assets/brusselator-phase-source.png",
+            "assets/brusselator-time-series-source.png",
+            "assets/oregonator-phase-source.png",
+        ],
+        "target_image_dimensions": [
+            ("800", "535"),
+            ("800", "684"),
+            ("800", "525"),
+        ],
+        "notebook": "notebooks/chapter-08-open-chemical-reactions.ipynb",
+        "notebook_cells": 16,
+        "code_cells": 7,
+        "mastery_math": 321,
+        "lock": None,
+        "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",
+    },
 }
 BUILDER = ROOT / "scripts" / "build_unit_reader.py"
 LATEX_RE = re.compile(r"\$latex\s+(.+?)\$", re.DOTALL)

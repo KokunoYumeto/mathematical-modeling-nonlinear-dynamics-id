@@ -1,0 +1,41 @@
+{
+  "assets": [
+    {
+      "bytes": 37521,
+      "epub_member": "EPUB/assets/Diffusion-300x261.png",
+      "path": "assets/diffusion-random-walk-source.png",
+      "sha256": "4659e7a659e47069360aedfe1f6a6511516e8c99d96ccc9421d5edc34e33648e"
+    },
+    {
+      "bytes": 126169,
+      "epub_member": "EPUB/assets/TW_PP1.png",
+      "path": "assets/fisher-traveling-wave-phase-1-source.png",
+      "sha256": "a3080ea906a114bc538bb27ca30c22a40953ee77eeda75537a7f120e44e45366"
+    },
+    {
+      "bytes": 115933,
+      "epub_member": "EPUB/assets/TW_PP2.png",
+      "path": "assets/fisher-traveling-wave-phase-2-source.png",
+      "sha256": "17bb5d8b4b0f3f0b34e68a7276290020c7b34f3592df1ca307769bdea591bbcb"
+    }
+  ],
+  "content_raw": {
+    "bytes": 27486,
+    "path": "content.raw.en.html",
+    "sha256": "84fe10d60eaacdb18efb97d52035e3f6e923012c7041e7b3d037b866e90af442"
+  },
+  "content_rendered": {
+    "bytes": 34901,
+    "path": "content.rendered.en.html",
+    "sha256": "181dc4ef464cf6cd586d8e91dc3ef5ed411fad48b914852be571733b189200a0"
+  },
+  "record": {
+    "bytes": 65160,
+    "path": "source-record.canonical.json",
+    "sha256": "e53b35acf85334d2df48124211843b08b7ca1e9e9ca8c91465f215dfbb219c2a"
+  },
+  "schema": "o005-unit-authority-v1",
+  "source_modified_gmt": "2026-03-19T20:10:36Z",
+  "source_record_id": 196,
+  "unit_id": "O005-LEGA-V101-CH09"
+}
