@@ -1,0 +1,41 @@
+{
+  "assets": [
+    {
+      "bytes": 169478,
+      "epub_member": "EPUB/assets/BR_PP-1024x685.png",
+      "path": "assets/brusselator-phase-source.png",
+      "sha256": "957ba0e2af31820eb0224add944508da2a1ab42135ea43450854880e38d8c9f4"
+    },
+    {
+      "bytes": 129573,
+      "epub_member": "EPUB/assets/BR_PPt-1024x876.png",
+      "path": "assets/brusselator-time-series-source.png",
+      "sha256": "0244fe5655d13b710978c4ee42ed84556d4cbc5124d3a60fe7c3d4ca9e2c5e7c"
+    },
+    {
+      "bytes": 140277,
+      "epub_member": "EPUB/assets/COR2_PP-1024x671.png",
+      "path": "assets/oregonator-phase-source.png",
+      "sha256": "052645103df598f8feac0be17dfbf64f6525bf6d44f798f9bccfc10c269a548b"
+    }
+  ],
+  "content_raw": {
+    "bytes": 25702,
+    "path": "content.raw.en.html",
+    "sha256": "d822c7b12a1f859ad3218ab7c6dc5f80f47e0e6f9115ef82544cdb08393e6830"
+  },
+  "content_rendered": {
+    "bytes": 32001,
+    "path": "content.rendered.en.html",
+    "sha256": "715ee23ec40ad0e384e41fcda8bc7b6229f0116b7320004b7fb375c0d48d291a"
+  },
+  "record": {
+    "bytes": 60372,
+    "path": "source-record.canonical.json",
+    "sha256": "1c9f5f1ec75756f23720a3ef5d278302de0957347a59dde6f8021d3a970d7656"
+  },
+  "schema": "o005-unit-authority-v1",
+  "source_modified_gmt": "2026-03-24T21:29:34Z",
+  "source_record_id": 62,
+  "unit_id": "O005-LEGA-V101-CH08"
+}

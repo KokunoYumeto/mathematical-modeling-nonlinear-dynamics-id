@@ -7,7 +7,7 @@ Pressbooks v1.01 (Maret 2026). Sumber dan terjemahan berada di bawah lisensi
 Edisi ini tidak disokong atau disahkan oleh penulis maupun University of
 Arizona.
 
-Status saat ini: **Bab 1–7 dari 14 serta pengantar Bagian 2–3 telah diterjemahkan,
+Status saat ini: **Bab 1–7 dari 14 serta pengantar Bagian 2–4 telah diterjemahkan,
 dibangun, dan lolos QA.**
 Pekerjaan berlanjut secara berurutan; repositori ini belum merupakan edisi
 lengkap atau terbitan final.
@@ -23,11 +23,12 @@ lengkap atau terbitan final.
 - Bab 5 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH05/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH05/index.html); [notebook dinamika populasi satu spesies](source/id-ID/O005-LEGA-V101-CH05/notebooks/chapter-05-open-single-species-models.ipynb); [data Sensus resmi](source/id-ID/O005-LEGA-V101-CH05/data/popclockest.txt); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH05.mastery.json).
 - Bab 6 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH06/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH06/index.html); [notebook model dua spesies](source/id-ID/O005-LEGA-V101-CH06/notebooks/chapter-06-open-two-species-models.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH06.mastery.json).
 - Bab 7 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH07/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH07/index.html); [notebook epidemiologi terbuka](source/id-ID/O005-LEGA-V101-CH07/notebooks/chapter-07-open-epidemiology.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH07.mastery.json).
+- Pengantar Bagian 4 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT04/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT04/index.html).
 
 ## Backend modular
 
 Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Tujuh bab dan
-dua pengantar bagian yang selesai memiliki 1.744 segmen Inggris–Indonesia yang
+tiga pengantar bagian yang selesai memiliki 1.748 segmen Inggris–Indonesia yang
 berpasangan, 69 ID soal tetap, tujuh notebook terbuka, catatan unit berhash,
 serta jalur eksplisit menuju aset, notebook, dan
 dukungan belajar. Lapisan ini dimaksudkan untuk memungkinkan pemindahan unit
@@ -58,6 +59,8 @@ python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH06
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH06 --execute-notebook --deterministic-build
 python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH07
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH07 --execute-notebook --deterministic-build
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-PT04
+python scripts/qa_unit.py --unit O005-LEGA-V101-PT04 --deterministic-build
 ```
 
 QA memeriksa kesetaraan struktur sumber–target, rumus dan tautan yang
@@ -86,4 +89,6 @@ petunjuk, pemeriksaan jawaban, serta solusi atau rubrik. Bab 7 mempertahankan
 tiga potret fase sumber, memberikan latar putih agar notasi hitam pada raster
 transparan tetap terbaca, mencatat koreksi model dan aksesibilitas secara
 eksplisit, serta menambahkan notebook epidemiologi terbuka dan lima paket
-dukungan belajar lengkap.
+dukungan belajar lengkap. Pengantar Bagian 4 mempertahankan empat paragraf,
+sebelas rumus, dan enam penekanan sumber tanpa menambahkan komponen yang tidak
+berlaku.

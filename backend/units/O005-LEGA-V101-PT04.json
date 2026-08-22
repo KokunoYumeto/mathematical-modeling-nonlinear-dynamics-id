@@ -1,0 +1,33 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "problems": [],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 4,
+    "path": "backend/segments/O005-LEGA-V101-PT04.segments.jsonl",
+    "sha256": "41d626f76bac4b0087399f82bc9a4b52b0de0322e9147001ddfc5aa6b09a3b88"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "content_sha256": "959b11175f0a5a913275f40058ae06a81e757ceab01aa54dbd63712d7d95d320",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "part": "Chemical Reactions and Spatial Effects",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/part/632-2-2/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-PT04/content.html",
+    "content_sha256": "79c8943cf558b0d1fe485b0765ef8def9c970703d5f80a7f18c04c66c8f60a25",
+    "title": "Reaksi Kimia dan Efek Spasial"
+  },
+  "unit_id": "O005-LEGA-V101-PT04",
+  "unit_type": "part"
+}

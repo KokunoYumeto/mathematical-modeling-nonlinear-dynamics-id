@@ -260,6 +260,32 @@ UNIT_SPECS = {
         "record_sha256": "75d370fb729c39ba436eb1a91f5876291ef4c0487235b968d8a0a0002481f232",
         "assets": [],
     },
+    "O005-LEGA-V101-CH08": {
+        "record_id": 62,
+        "modified_gmt": "2026-03-24T21:29:34",
+        "record_bytes": 60372,
+        "record_sha256": "1c9f5f1ec75756f23720a3ef5d278302de0957347a59dde6f8021d3a970d7656",
+        "assets": [
+            {
+                "path": "assets/brusselator-phase-source.png",
+                "epub_member": "EPUB/assets/BR_PP-1024x685.png",
+                "bytes": 169478,
+                "sha256": "957ba0e2af31820eb0224add944508da2a1ab42135ea43450854880e38d8c9f4",
+            },
+            {
+                "path": "assets/brusselator-time-series-source.png",
+                "epub_member": "EPUB/assets/BR_PPt-1024x876.png",
+                "bytes": 129573,
+                "sha256": "0244fe5655d13b710978c4ee42ed84556d4cbc5124d3a60fe7c3d4ca9e2c5e7c",
+            },
+            {
+                "path": "assets/oregonator-phase-source.png",
+                "epub_member": "EPUB/assets/COR2_PP-1024x671.png",
+                "bytes": 140277,
+                "sha256": "052645103df598f8feac0be17dfbf64f6525bf6d44f798f9bccfc10c269a548b",
+            },
+        ],
+    },
 }
 
 

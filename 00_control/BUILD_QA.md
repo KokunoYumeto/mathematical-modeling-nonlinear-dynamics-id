@@ -502,3 +502,35 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   mastery, unit record, notebook/lock, complete reader package, pipeline and
   controls; all eight earlier stylesheet/manifest pairs; and the complete
   frozen Part 4 authority record.
+
+## Admitted build — O005-LEGA-V101-PT04 — 2026-08-22
+
+- Before translation, strict UTF-8 code-point enumeration corrected an audit
+  error: the character before the emphasized source term “reaction-diffusion”
+  is one valid U+00A0 nonbreaking space, not U+FFFD. Both frozen source forms
+  contain zero U+FFFD. No invented source correction was applied.
+- Builder: `scripts/build_unit_reader.py --unit O005-LEGA-V101-PT04`, Pandoc
+  3.9.0.2, native MathML for all eleven formulas.
+- QA: `scripts/qa_unit.py --unit O005-LEGA-V101-PT04
+  --deterministic-build`, exit 0. Exact replay covers four / four paragraphs,
+  six / six ordered emphasis elements, zero / zero links, eleven / eleven TeX
+  occurrences, and zero problems/footnotes/assets.
+- Independent translation review found natural, complete Indonesian with no
+  semantic omission/addition and exact ordered TeX/emphasis preservation.
+- Backend: four paired segments / 7,692 bytes, SHA-256
+  `41d626f76bac4b0087399f82bc9a4b52b0de0322e9147001ddfc5aa6b09a3b88`;
+  mastery and notebook fields are correctly absent rather than dummy records.
+- Reader: four payload files / 21,506 bytes excluding the 397-byte manifest;
+  eleven chapter MathML nodes and one local CSS dependency; zero missing
+  dependency, duplicate ID, broken fragment, token-shape, local-path, privacy,
+  or U+FFFD failure. Manifest SHA-256
+  `9e58ce41950ccea4c052c223888b27eed3c933deaacf90c4c1f39cc8e1992790`.
+- Deterministic double build: five files including manifest, byte-identical;
+  canonical tree SHA-256
+  `04ea86d82fadf03fe68f476b7284e8b320987ad7a2c908254f520d3fba48284e`.
+- Browser visual QA against final bytes: at 1280×900 the 1,152 px main shell
+  and 768 px article were centered; at 390×844 the shell/article was 357.5 px
+  and centered. Document scroll width equaled client width, all four paragraphs,
+  six emphasis spans, and eleven formulas rendered, all three IDs were unique,
+  both local fragments resolved, and browser logs were empty. No audio, live
+  widget, figure, or external-link reachability test was applicable.

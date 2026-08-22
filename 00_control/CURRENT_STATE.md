@@ -7,12 +7,11 @@ Updated: 2026-08-22 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–7 and the visible Part 2 and Part 3 introductions
-are translated, built, and verified. Production now moves to the visible Part
-4 introduction, Pressbooks record 58, *Chemical Reactions and Spatial
-Effects*, as `O005-LEGA-V101-PT04`; its exact authority record is frozen and
-contains no asset, footnote, problem, mastery, or notebook surface. The next
-visible source item is Chapter 8, record 62, *Chemical Reactions*.
+into this lane. Chapters 1–7 and the visible Part 2–4 introductions are
+translated, built, and verified. Production now moves to Chapter 8,
+Pressbooks record 62, *Chemical Reactions*, as `O005-LEGA-V101-CH08`; its exact
+authority record and three-asset closure are frozen. The next visible source
+item is Chapter 9, record 196, *Diffusion*.
 
 ## Verified authority
 
@@ -376,7 +375,7 @@ visible source item is Chapter 8, record 62, *Chemical Reactions*.
   files / 2,573,920 bytes; every filename, byte count, and SHA-256 matched the
   committed local artifact.
 
-## Frozen Part 4 introduction boundary
+## Admitted Part 4 introduction boundary
 
 - Pressbooks part 58, *Chemical Reactions and Spatial Effects*; modified
   `2026-03-17T22:14:18Z`. Canonical record: 6,589 bytes, SHA-256
@@ -385,14 +384,46 @@ visible source item is Chapter 8, record 62, *Chemical Reactions*.
   `959b11175f0a5a913275f40058ae06a81e757ceab01aa54dbd63712d7d95d320`.
 - Scope: seven raw lines, six ordered opening elements, eleven TeX occurrences,
   and no link, asset, footnote, figure, problem, mastery, or notebook surface.
-  Both source forms contain one literal U+FFFD before “reaction-diffusion”; the
-  Indonesian translation must repair and ledger it rather than reproduce it.
+  Direct UTF-8 inspection proves the raw source's disputed spacing before
+  “reaction-diffusion” is valid U+00A0, with zero U+FFFD; it is not a defect.
+- Complete natural id-ID fragment: four paragraphs / 3,109 bytes, SHA-256
+  `79c8943cf558b0d1fe485b0765ef8def9c970703d5f80a7f18c04c66c8f60a25`.
+  Independent review found no semantic omission or addition; all six emphasis
+  nodes and all eleven formulas preserve their exact order and payload.
+- Modular segment layer: four records / 7,692 bytes, SHA-256
+  `41d626f76bac4b0087399f82bc9a4b52b0de0322e9147001ddfc5aa6b09a3b88`.
+- Reader package: four payload files / 21,506 bytes excluding its 397-byte
+  manifest; manifest SHA-256
+  `9e58ce41950ccea4c052c223888b27eed3c933deaacf90c4c1f39cc8e1992790`.
+  Repeated builds were byte-identical across five files, canonical tree
+  SHA-256 `04ea86d82fadf03fe68f476b7284e8b320987ad7a2c908254f520d3fba48284e`.
+- Browser QA: desktop main/article widths were 1,152 / 768 px and centered at
+  1280×900; mobile shell/article width was 357.5 px and centered at 390×844.
+  Document overflow was zero, four paragraphs and eleven MathML nodes rendered,
+  all three IDs were unique, both fragment links resolved, and logs were empty.
+
+## Frozen Chapter 8 boundary
+
+- Pressbooks chapter 62, *Chemical Reactions*; modified
+  `2026-03-24T21:29:34Z`. Canonical record: 60,372 bytes, SHA-256
+  `1c9f5f1ec75756f23720a3ef5d278302de0957347a59dde6f8021d3a970d7656`;
+  raw source: 25,702 bytes, SHA-256
+  `d822c7b12a1f859ad3218ab7c6dc5f80f47e0e6f9115ef82544cdb08393e6830`.
+- Scope: 216 raw lines, 179 ordered elements, 28 hrefs, 186 TeX occurrences,
+  three figures, six footnotes, and thirteen problems. The three primary source
+  rasters are frozen byte-for-byte; exact hashes are in the unit authority.
+- Known source caveats: the internally consistent `Orgonator` anchor misspells
+  Oregonator, Figure 8.2 uses generic phase-portrait alt text despite being a
+  time-series plot, and PPLANE/MAPLE/MATHEMATICA activities require an
+  independent open replacement. Next source item: Chapter 9 record 196,
+  *Diffusion*.
 
 ## Next action
 
-Translate visible Part 4 record 58, *Chemical Reactions and Spatial Effects*,
-in full as `O005-LEGA-V101-PT04`, titled *Reaksi Kimia dan Efek Spasial*.
-Preserve its seven raw lines, six ordered opening elements, eleven TeX
-occurrences, and zero-link/zero-asset surface. Correct the source's single
-literal U+FFFD transparently in the Indonesian prose, record the intervention,
-and do not manufacture mastery, notebook, footnote, figure, or problem data.
+Translate Chapter 8 record 62, *Chemical Reactions*, in full as
+`O005-LEGA-V101-CH08`, preserving 216 raw lines, 179 ordered elements, 28 hrefs,
+186 TeX occurrences, three source figures, six footnotes, and thirteen stable
+problems. Add complete mastery and an independent open Brusselator/Oregonator
+notebook for the PPLANE and symbolic-computation activities; preserve source
+anchors in the authority while repairing reader-facing spelling/accessibility
+through explicit ledger entries.

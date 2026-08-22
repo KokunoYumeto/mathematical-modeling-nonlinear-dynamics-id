@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="id-ID">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bagian 4 edisi Bahasa Indonesia Introduction to Mathematical Modeling karya Joceline Lega.">
+  <title>Reaksi Kimia dan Efek Spasial — Joceline Lega</title>
+  <link rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+  <link rel="stylesheet" href="assets/reader.css">
+</head>
+<body>
+  <a class="skip-link" href="#isi">Lewati ke isi utama</a>
+  <header class="reader-header">
+    <p class="eyebrow">O005 · C120 · Bagian 4</p>
+    <h1>Reaksi Kimia dan Efek Spasial</h1>
+    <p class="byline">Joceline Lega · Edisi Bahasa Indonesia</p>
+  </header>
+  <nav class="unit-nav" aria-label="Navigasi unit">
+    <a href="#isi">Isi bagian</a>
+  </nav>
+  <main id="isi" tabindex="-1">
+    <aside class="edition-notice" aria-labelledby="edition-notice-title">
+      <h2 id="edition-notice-title">Tentang edisi ini</h2>
+      <p>Terjemahan Bahasa Indonesia independen dari <cite>Introduction to Mathematical Modeling</cite>, v1.01 (Maret 2026), oleh Joceline Lega, University of Arizona. <a href="https://opentextbooks.library.arizona.edu/mathematicalmodeling/part/632-2-2/" rel="external noopener noreferrer">Baca sumber resmi bagian ini</a>.</p>
+      <p>Sumber dan terjemahan dilisensikan dengan <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="license external noopener noreferrer">CC BY-NC-SA 4.0</a>. Perubahan mencakup penerjemahan dan pengindeksan modular. Edisi ini tidak disokong atau disahkan oleh penulis maupun University of Arizona.</p>
+    </aside>
+    <article class="chapter part" aria-label="Bagian 4">
+<p>Bab 8 berfokus pada reaksi kimia. Pertama-tama, kita memperkenalkan <em>hukum aksi massa</em> untuk memperoleh persamaan laju, lalu membahas dua model klasik untuk reaksi kimia osilatori. Kedua model ini hanya melibatkan persamaan diferensial biasa. Model-model tersebut dapat disederhanakan menjadi sistem dinamik dua dimensi dan dapat dikaji dengan jenis analisis yang digunakan dalam bab-bab sebelumnya.</p>
+<p>Sejauh ini, kita belum membahas atau bahkan mempertimbangkan kenyataan bahwa kebanyakan model mendeskripsikan besaran yang bervariasi bukan hanya terhadap waktu, melainkan juga terhadap ruang. Sebagai contoh, jika <span class="math inline" data-tex="N"><math aria-label="Rumus matematika: N" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math></span> menyatakan kepadatan suatu populasi, wajar untuk mengasumsikan bahwa <span class="math inline" data-tex="N"><math aria-label="Rumus matematika: N" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math></span> bergantung pada bentang alam: bagi manusia, <span class="math inline" data-tex="N"><math aria-label="Rumus matematika: N" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math></span> lebih besar di kota daripada di daerah pegunungan atau gurun; bagi hewan, <span class="math inline" data-tex="N"><math aria-label="Rumus matematika: N" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math></span> bervariasi sesuai dengan keberadaan hutan, sungai, mangsa, dan sebagainya.</p>
+<p>Untuk memasukkan efek spasial ke dalam model-model yang telah kita bahas, kita menempuh langkah-langkah berikut. Pertama, kita mengasumsikan bahwa sifat model itu sendiri tidak berubah. Misalnya, jika spesies <span class="math inline" data-tex="u"><math aria-label="Rumus matematika: u" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math></span> memakan spesies <span class="math inline" data-tex="v"><math aria-label="Rumus matematika: v" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math></span>, maka pada setiap titik berkoordinat <span class="math inline" data-tex="(x,y)"><math aria-label="Rumus matematika: (x,y)" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">(x,y)</annotation></semantics></math></span> di bidang, <span class="math inline" data-tex="u(x,y)"><math aria-label="Rumus matematika: u(x,y)" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">u(x,y)</annotation></semantics></math></span> tumbuh sebanding dengan konsentrasi lokal <span class="math inline" data-tex="v(x,y)"><math aria-label="Rumus matematika: v(x,y)" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo form="prefix" stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo form="postfix" stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">v(x,y)</annotation></semantics></math></span>. Kita dapat membayangkan situasi yang lebih rumit, misalnya laju pertumbuhan <span class="math inline" data-tex="u"><math aria-label="Rumus matematika: u" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math></span> bergantung pada kepadatan <span class="math inline" data-tex="v"><math aria-label="Rumus matematika: v" display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math></span> yang dirata-ratakan secara spasial, tetapi kasus seperti itu berada di luar cakupan catatan ini. Dengan kata lain, kita hanya mempertimbangkan model <em>lokal</em>. Kedua, kita perlu menjelaskan bagaimana setiap spesies berperilaku ketika distribusinya tidak seragam di suatu wilayah. Secara intuitif, pergerakan semestinya berlangsung menjauhi daerah berkonsentrasi tinggi untuk mencapai distribusi yang seragam. Inilah fenomena <em>difusi</em>, yang dibahas dalam Bab 9. Jika terdapat aliran eksternal, suku-suku transpor lain harus disertakan, tetapi situasi semacam itu tidak akan kita bahas.</p>
+<p>Penambahan difusi pada persamaan diferensial nonlinear biasanya menghasilkan persamaan <em>reaksi-difusi</em>. Model-model ini berupa sistem persamaan diferensial parsial, dan terdapat literatur yang sangat luas mengenai topik ini maupun topik-topik terkait. Meskipun pembahasan lengkap berada di luar cakupan catatan ini, kita tetap memberikan gambaran sekilas tentang jenis pemodelan yang dilakukan dengan sistem semacam itu. Bab 9 menguraikan secara singkat contoh reaksi kimia pada permukaan, yang di dalamnya difusi digandengkan dengan persamaan laju reaksi kimia yang bersesuaian. Sistem reaksi-difusi yang dihasilkan mampu mempertahankan gelombang kimia, dan kami menganjurkan pembaca untuk mempelajari artikel-artikel yang dirujuk dalam teks guna memperoleh informasi tambahan. Bab 10 membahas fenomena umum <em>pembentukan pola</em> dalam sistem yang didorong jauh dari kesetimbangan. Di sana, kita menyelidiki dinamika model generik pembentuk pola, yakni persamaan <em>Swift-Hohenberg</em>, dan juga membahas contoh khusus model dua dimensi yang menghasilkan pola vegetasi.</p>
+    </article>
+    
+  </main>
+  <footer>
+    <p>Unit <code>O005-LEGA-V101-PT04</code> · 4 segmen berpasangan.</p>
+  </footer>
+</body>
+</html>

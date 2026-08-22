@@ -23,17 +23,17 @@ statement; never represent the Pressbooks theme as part of the independently
 reproducible source closure.
 
 Chapter boundaries `O005-LEGA-V101-CH01` through `CH07` (records 25, 27, 38,
-39, 48, 53, and 57) and the visible Part 2 and Part 3 introductions (records 28
-and 40) are translated, built, independently rereviewed where applicable, and
+39, 48, 53, and 57) and the visible Part 2–4 introductions (records 28, 40,
+and 58) are translated, built, independently rereviewed where applicable, and
 deterministically verified. Their complete topology, identifiers, protected
 mathematics, links, figures, 69 stable problem IDs and mastery records, seven
-open Python notebooks, and 1,744 paired segments are bound in the current
-state, cursor, and QA log. The immediate boundary is the visible Part 4
-introduction, Pressbooks record 58, *Chemical Reactions and Spatial Effects*,
-as `O005-LEGA-V101-PT04`: translate its exact seven raw lines, six opening
-elements and eleven TeX occurrences as *Reaksi Kimia dan Efek Spasial*, repair
-the frozen source's single U+FFFD transparently in Indonesian, and manufacture
-no mastery, notebook, asset, footnote, or problem surface where none exists.
+open Python notebooks, and 1,748 paired segments are bound in the current
+state, cursor, and QA log. The immediate boundary is Chapter 8, Pressbooks
+record 62, *Chemical Reactions*, as `O005-LEGA-V101-CH08`: translate its exact
+216 raw lines, 179 opening elements, 28 hrefs, 186 TeX occurrences, three
+figures, six footnotes, and thirteen problems, then supply complete mastery and
+an independent open Brusselator/Oregonator notebook replacing PPLANE and
+symbolic-package dependencies without returning to source selection.
 
 Continue in exact frozen TOC order through all front/back matter and
 fourteen chapters: 54,932 source words, 113 exercises, twelve projects, eleven

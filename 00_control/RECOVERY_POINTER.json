@@ -33,19 +33,19 @@
     "all_bytes_and_sha256_equal": true
   },
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-CH07",
-    "source_record_type": "chapters",
-    "source_record_id": 57,
-    "source_slug": "epidemiology",
-    "source_canonical_sha256": "dcf828ca5ce0c58ced8eb5203dfd1b5a949bd6af3b9c000017a6dd133bb58d2f",
-    "source_content_sha256": "027493e86a470e8573d48833b41e4bc365910b255bd7324f1d7ae3272d17c38c",
-    "target_content_sha256": "a7ea1f78c96dbdc24694bd376413e8d675e96899849f4ff2887c3c7a825918c1",
-    "segment_sha256": "57e00551fd14bc85e072def42da47c12ad7ade11a3445578a16a303d96903e7f",
-    "mastery_sha256": "d4e6d41a84fd2615af02e599df9ebcca1fd40a7b47152159ac501a5064785eed",
-    "notebook_sha256": "92a9cf27d48d5e7766881592095f1232cc4d2357ee5d0a46bdb871591afafce4",
-    "reader_manifest_sha256": "3db70ad91f0c0e1d5ffbe4ce0aed504f8fca516f03da216629fa4a15576feed1",
-    "qa_tree_sha256": "c5a308a88ba224e05416d4dc5d59219d3dcafa57a5623dbd16e253d5c3822011"
+    "unit_id": "O005-LEGA-V101-PT04",
+    "source_record_type": "parts",
+    "source_record_id": 58,
+    "source_slug": "632-2-2",
+    "source_canonical_sha256": "75d370fb729c39ba436eb1a91f5876291ef4c0487235b968d8a0a0002481f232",
+    "source_content_sha256": "959b11175f0a5a913275f40058ae06a81e757ceab01aa54dbd63712d7d95d320",
+    "target_content_sha256": "79c8943cf558b0d1fe485b0765ef8def9c970703d5f80a7f18c04c66c8f60a25",
+    "segment_sha256": "41d626f76bac4b0087399f82bc9a4b52b0de0322e9147001ddfc5aa6b09a3b88",
+    "mastery_sha256": null,
+    "notebook_sha256": null,
+    "reader_manifest_sha256": "9e58ce41950ccea4c052c223888b27eed3c933deaacf90c4c1f39cc8e1992790",
+    "qa_tree_sha256": "04ea86d82fadf03fe68f476b7284e8b320987ad7a2c908254f520d3fba48284e"
   },
-  "current_unit": "O005-LEGA-V101-PT04",
-  "next_action": "Translate Pressbooks part record 58, Chemical Reactions and Spatial Effects, as Reaksi Kimia dan Efek Spasial, preserving seven raw lines, six ordered elements and eleven TeX occurrences; repair the one source U+FFFD transparently and add no inapplicable mastery, notebook, asset, footnote, figure, or problem surface."
+  "current_unit": "O005-LEGA-V101-CH08",
+  "next_action": "Translate Pressbooks chapter record 62, Chemical Reactions, as Reaksi Kimia, preserving 216 raw lines, 179 ordered elements, 28 hrefs, 186 TeX occurrences, three figures, six footnotes, and thirteen problems; add complete mastery and an independent open Brusselator/Oregonator notebook replacing PPLANE and symbolic-package dependencies."
 }

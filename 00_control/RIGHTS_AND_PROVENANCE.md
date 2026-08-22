@@ -160,6 +160,29 @@ figure, data, or supplemental file is redistributed.
 
 Visible Part 4 record 58 is frozen as a source-derived CC BY-NC-SA 4.0 prose
 unit with no component asset, problem, mastery, notebook, footnote, or figure.
-Its raw and rendered source each contain one literal U+FFFD before
-“reaction-diffusion”; the planned Indonesian translation must record the
-transparent textual repair without altering the frozen authority witness.
+Its raw source contains one valid U+00A0 nonbreaking space before the emphasized
+term “reaction-diffusion” and zero U+FFFD characters. This is spacing, not a
+source-text defect; the frozen authority remains byte-identical. The complete
+four-paragraph Indonesian adaptation preserves the six emphasis nodes and
+eleven formulas and adds no inapplicable mastery, notebook, asset, footnote,
+figure, or problem component.
+
+## Chapter 8 frozen component record
+
+Chapter 8's admitted authority retains three primary Pressbooks rasters
+byte-for-byte: the Brusselator phase portrait (169,478 bytes, SHA-256
+`957ba0e2af31820eb0224add944508da2a1ab42135ea43450854880e38d8c9f4`),
+Brusselator time series (129,573 bytes, SHA-256
+`0244fe5655d13b710978c4ee42ed84556d4cbc5124d3a60fe7c3d4ca9e2c5e7c`),
+and Oregonator phase portrait (140,277 bytes, SHA-256
+`052645103df598f8feac0be17dfbf64f6525bf6d44f798f9bccfc10c269a548b`).
+Their exact EPUB members and authority identities are recorded in the unit
+manifest; no claim is made for the rendered `srcset` derivatives beyond the
+three primary frozen images.
+
+The source invokes PPLANE, MAPLE, and MATHEMATICA but supplies no program source
+in the admitted closure. Chapter 8 production must independently implement the
+printed Brusselator/Oregonator mathematics with open Python tools and must not
+copy proprietary program code. Source-derived translation, figures, captions,
+and descriptions remain within the CC BY-NC-SA 4.0 ShareAlike boundary; new
+mastery and code components receive distinct provenance.
