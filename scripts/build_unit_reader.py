@@ -92,6 +92,20 @@ UNIT_SPECS = {
         "plain_paragraphs": True,
         "change_note": "penerjemahan dan pengindeksan modular",
     },
+    "O005-LEGA-V101-PT05": {
+        "unit_type": "part",
+        "unit_number": 5,
+        "source_title": "Appendices",
+        "target_title": "Lampiran",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/part/appendices/",
+        "target_assets": [],
+        "caption_count": 0,
+        "footnote_count": 0,
+        "notebook": None,
+        "problem_count": 0,
+        "plain_paragraphs": True,
+        "change_note": "penerjemahan dan pengindeksan modular",
+    },
     "O005-LEGA-V101-CH03": {
         "unit_type": "chapter",
         "unit_number": 3,
@@ -255,6 +269,31 @@ UNIT_SPECS = {
             "https://doi.org/10.1126/science.230.4726.661",
         ],
         "change_note": "penerjemahan, koreksi dan klarifikasi terdokumentasi, pengindeksan modular, dukungan ketuntasan, serta pendamping gerak acak dan Fisher–KPP dengan Python terbuka tanpa ketergantungan MATLAB atau PPLANE",
+    },
+    "O005-LEGA-V101-CH10": {
+        "unit_type": "chapter",
+        "unit_number": 10,
+        "chapter_number": 10,
+        "source_title": "Pattern Formation",
+        "target_title": "Pembentukan Pola",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/pattern-formation/",
+        "target_assets": [
+            "assets/pattern-stripes-independent.svg",
+            "assets/swift-hohenberg-patterns-source.png",
+            "assets/pattern-growth-rates-source.png",
+        ],
+        "data_files": [
+            "assets/pattern-stripes-independent.provenance.json",
+        ],
+        "caption_count": 3,
+        "footnote_count": 13,
+        "notebook": "notebooks/chapter-10-open-pattern-formation.ipynb",
+        "problem_count": 6,
+        "plain_paragraphs": False,
+        "normalize_partial_title_links": [
+            "https://doi.org/10.1103/PhysRevLett.73.2978",
+        ],
+        "change_note": "penerjemahan, koreksi dan klarifikasi terdokumentasi, pengindeksan modular, penggantian kolase foto dengan ilustrasi vektor independen, dukungan ketuntasan, serta pendamping pembentukan pola dengan Python terbuka tanpa ketergantungan MATLAB",
     },
 }
 
@@ -794,7 +833,12 @@ def build_reader(output: Path) -> dict:
     if NOTEBOOK_LOCK:
         nav_lines.append(f'    <a href="downloads/{NOTEBOOK_LOCK.name}">Unduh requirements.lock</a>')
     for data_file in DATA_FILES:
-        label = "Data Sensus resmi" if data_file.suffix == ".txt" else "Proveniens data"
+        if data_file.suffix == ".txt":
+            label = "Data Sensus resmi"
+        elif data_file.parent.name == "assets":
+            label = "Proveniens aset"
+        else:
+            label = "Proveniens data"
         nav_lines.append(f'    <a href="data/{data_file.name}">{label}</a>')
     navigation = "\n".join(nav_lines)
     mastery_html = mastery_section(mastery) if mastery else ""

@@ -674,3 +674,54 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   Coverage includes the complete Chapter 9 translation, source fragments,
   assets, notebook/lock, mastery/backend, reader package, pipeline, status,
   correction/terminology records, and recovery controls.
+
+## Admitted build — O005-LEGA-V101-CH10 — 2026-08-22
+
+- Final gate: `scripts/qa_unit.py --unit O005-LEGA-V101-CH10
+  --execute-notebook --deterministic-build`, exit 0. Exact replay covers
+  116 / 116 ordered elements, 24 / 24 links, 77 source TeX occurrences mapped
+  to 78 declared target occurrences, three / three figures, thirteen / thirteen
+  footnotes, and six / six stable problems.
+- Target: 20,027 bytes, SHA-256
+  `0c951f1e8dd251be396e437660a6a610bfe28a2b6aeb4f18cd45882f38df18f3`;
+  backend: 149 segments / 96,796 bytes, SHA-256
+  `6adc788295e1edd7399946d386708c9520633424e4fade643b6f7492f3af14da`;
+  mastery: six records / 25,321 bytes, SHA-256
+  `3130aaa0d8efd70f2fc90c4c0568268579cbe05634b8a3abbc29d90b158fb257`.
+- Notebook: ten cells / four code cells, 36,507 bytes, SHA-256
+  `95a6aadcb565f6b78542065520e6bc5ee775387dd21b1a31b3de2b5cfc0dab50`.
+  Fresh execution under Python 3.13.9, NumPy 2.4.4, SciPy 1.17.1, and
+  Matplotlib 3.10.9 passed; two independent clean executions produced stable
+  stdout, numerical-array hashes, and three rendered-figure hashes.
+- Reader: eleven payload files / 403,280 bytes excluding its 1,177-byte
+  manifest; 78 chapter and 203 mastery MathML nodes; seven local dependencies.
+  Manifest SHA-256
+  `10086b57c048bc55eafaf431ae7a0e1c88f100542b02d03e965b16330a6ffcf7`.
+  The twelve-file deterministic tree SHA-256 is
+  `0785c71e3c71ab7021f515c1f489b9c4c5a1ea8f3a9b57b899f3cef531446bde`.
+- Browser QA: desktop main/article widths 1,152 / 768 px; mobile 357.5 /
+  357.5 px. Both are centered relative to the document client width; page
+  overflow is zero. Three images loaded at responsive/intrinsic dimensions,
+  all 28 IDs were unique, all 22 fragments resolved, thirteen notes rendered,
+  and the Problem 6 anchor cleared the sticky navigation. Logs were empty.
+  External-link reachability was not tested; no audio/live widget exists.
+
+## Admitted build — O005-LEGA-V101-PT05 — 2026-08-22
+
+- Final gate: `scripts/qa_unit.py --unit O005-LEGA-V101-PT05
+  --deterministic-build`, exit 0. Exact replay covers two / two plain
+  paragraphs and zero element, link, math, problem, footnote, or asset surface.
+- Target: 492 bytes, SHA-256
+  `00fb30fb29d5cbedc669ed8aea8931a455f90e426e51b7ca4191094f33221d65`;
+  backend: two segments / 1,843 bytes, SHA-256
+  `70d92d69ccb1e53fb1a1a1ad22a6c41d0c036a5bb652e3af52de0193856a97dd`.
+- Reader: four payload files / 10,006 bytes excluding its 397-byte manifest;
+  manifest SHA-256
+  `66ba9c2060abefc13a1bb12406ce978fc3d7dcf49b917916928521aa59f6b1f3`.
+  Repeated builds were byte-identical across five files, canonical tree
+  SHA-256 `4478e3e6a68aa854c5dbfaaf9011b3326b34bc15e59ea792300dff72f2a8bd17`.
+- Independent review found a complete natural two-paragraph translation with
+  all Chapter 11–14 references intact. Browser QA found centered 768 px and
+  357.5 px articles at 1280×900 and 390×844, zero overflow, three unique IDs,
+  two intact fragment links, and empty logs. Mastery/notebook execution and
+  external-link reachability were inapplicable; no audio/live widget exists.

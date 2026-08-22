@@ -186,3 +186,61 @@ printed Brusselator/Oregonator mathematics with open Python tools and must not
 copy proprietary program code. Source-derived translation, figures, captions,
 and descriptions remain within the CC BY-NC-SA 4.0 ShareAlike boundary; new
 mastery and code components receive distinct provenance.
+
+## Chapter 9 component record
+
+Chapter 9 retains its three frozen Pressbooks rasters byte-for-byte: the random
+walk figure and two Fisher–KPP phase-plane figures. Their exact EPUB members,
+sizes, and hashes are bound by the unit authority and reader manifests. The
+chapter-level record has no license override, so the translated prose,
+captions, descriptions, and retained figures are distributed within the
+book's CC BY-NC-SA 4.0 boundary; no broader component-rights claim is made.
+
+The named MATLAB diffusion GUI and PPLANE surfaces supply no code in the
+admitted closure. The random-walk/Fisher–KPP notebook is independently authored
+from the printed mathematics with NumPy/SciPy/Matplotlib. No MATLAB, PPLANE, or
+proprietary implementation was imported. Newly authored mastery records and
+code are identified separately and distributed compatibly with ShareAlike.
+
+## Chapter 10 component record
+
+Chapter 10's authority preserves all three exact Pressbooks figure witnesses:
+the 120,120-byte collage (SHA-256
+`ed55c4ad09e5b4f1746dabf66aa87509538bcf76bcbc442650a4925ea47006ba`),
+the 59,364-byte Swift–Hohenberg pattern raster (SHA-256
+`f92c04b397d388f84a31737b72dfbfdf89a14df4210e7cbf3c41fcf2f8b8958a`),
+and the 8,974-byte growth-rate raster (SHA-256
+`a49ff56eba92cc8f74400b6925443a63a4bcdbe95afd477c51f386f038abf32c`).
+The record provides no component-specific creator or license statement. The
+reader therefore retains the latter two within the inherited CC BY-NC-SA 4.0
+boundary at intrinsic size and makes no broader claim for them.
+
+The mixed-photo Figure 10.1 collage remains an audit witness but is not shipped
+as the reader figure. It is replaced by a self-contained 800×560 accessible SVG
+created independently for this edition, with no source pixels reused and with
+its own machine-readable provenance receipt shipped alongside the reader. The
+source long description is adapted to describe that replacement accurately.
+
+The proprietary MATLAB GUI `Patterns` is named but no URL, source, executable,
+dataset, parameter set, grid, time step, or random seed is supplied. The open
+pattern-formation notebook is a new independent implementation of the printed
+Swift–Hohenberg mathematics and separately reconstructed Klausmeier checks; it
+imports no MATLAB code and does not claim to reproduce either source figure
+pixel-for-pixel. The cited Klausmeier article is not redistributed. Its
+equations and scaling are supplied as mathematical facts with an exact DOI
+citation so Problems 4–6 can be studied offline; all new hints, checks, worked
+solutions, and code remain explicitly separate from source-provided content.
+
+## Part 5 introduction and Chapter 11 authority record
+
+Visible Part 5 record 409 is a source-derived two-paragraph prose unit with no
+asset, problem, formula, footnote, notebook, or mastery component. Its natural
+Indonesian translation and modular segment records remain within the inherited
+CC BY-NC-SA 4.0 boundary with the standard change and non-endorsement notice.
+
+Chapter 11 record 410 likewise references no component asset. Its frozen
+canonical/raw/rendered bytes inherit the book license because the record-level
+license override is empty. Translation, formula corrections if any, seven
+exercise adaptations, and newly authored mastery support must retain separate
+source/new-original provenance; no notebook or external artifact is part of
+the admitted source closure.

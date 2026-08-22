@@ -565,6 +565,17 @@ SPECS = {
         ],
         "replacements": [],
     },
+    "O005-LEGA-V101-CH10": {
+        "source_lines": 98,
+        "problem_count": 6,
+        "fragments": [
+            "01-objectives-turing-and-model.html",
+            "02-linear-stability-and-selection.html",
+            "03-vegetation-summary-descriptions.html",
+            "04-exercises.html",
+        ],
+        "replacements": [],
+    },
 }
 
 

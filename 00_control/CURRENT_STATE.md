@@ -7,10 +7,38 @@ Updated: 2026-08-22 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–9 and the visible Part 2–4 introductions are
-translated, built, and verified. Production now moves to Chapter 10,
-Pressbooks record 194, *Pattern Formation*, as `O005-LEGA-V101-CH10`; its
-authority freeze is the next executable action.
+into this lane. Chapters 1–10 and the visible Part 2–5 introductions are
+translated, built, and verified. Production is active on Chapter 11,
+Pressbooks record 410, *Refresher: Linear Algebra*, as
+`O005-LEGA-V101-CH11`. Its exact canonical/raw/rendered authority and empty
+asset closure are frozen; source-order structural census and natural id-ID
+translation are now the executable action.
+
+## Frozen Chapter 10 authority
+
+- Record 194, slug `pattern-formation`, modified
+  `2026-03-19T20:11:05Z`; the empty record-level license override inherits the
+  book's CC BY-NC-SA 4.0 license.
+- Canonical record: 49,768 bytes, SHA-256
+  `fbabaa5ed87f7b1e1a2a851555b2e0b7b37d3398a6450b67ffb73efcdb614f06`;
+  raw content: 19,476 bytes, SHA-256
+  `b1daf70ba354c270332d0e0f849c73e165aa84769be71eb15a7594159bfa2367`;
+  rendered content: 28,202 bytes, SHA-256
+  `ff79a728a7d61bcd33717cdb540dc4f09cc03d6de25d223ac53458ed6bd91108`.
+- Exact raw census: 98 physical lines, 116 opening/void elements, 24 `href`
+  attributes, 77 TeX slots, three captions, thirteen footnotes, six numbered
+  problems, and three source images.
+- Frozen figures: 120,120-byte pattern collage
+  (`ed55c4ad09e5b4f1746dabf66aa87509538bcf76bcbc442650a4925ea47006ba`),
+  59,364-byte Swift–Hohenberg pattern image
+  (`f92c04b397d388f84a31737b72dfbfdf89a14df4210e7cbf3c41fcf2f8b8958a`),
+  and 8,974-byte growth-rate image
+  (`a49ff56eba92cc8f74400b6925443a63a4bcdbe95afd477c51f386f038abf32c`).
+- The only named executable surface is the unavailable proprietary MATLAB GUI
+  `Patterns`; no code, data, URL, or binary is bundled. Problems 4–6 rely on
+  the cited Klausmeier paper, so the independent companion must supply an
+  explicitly cited, self-contained equation/scaling card without importing
+  proprietary code.
 
 ## Verified authority
 
@@ -512,10 +540,82 @@ authority freeze is the next executable action.
   ordered inventory SHA-256 is
   `f3a45caf82be33b8c5d0c9af4c86b2d4eb4c977d441036ec01b63a6f7e1ec12f`.
 
+## Admitted Chapter 10 boundary
+
+- Pressbooks chapter 194, *Pattern Formation*, modified
+  `2026-03-19T20:11:05Z`; canonical/raw/rendered hashes remain bound by the
+  frozen authority. The 98-line target is 20,027 bytes, SHA-256
+  `0c951f1e8dd251be396e437660a6a610bfe28a2b6aeb4f18cd45882f38df18f3`.
+- Exact replay preserves 116 / 116 ordered elements, 24 / 24 links, 77 source
+  TeX occurrences mapped to 78 declared target occurrences, three / three
+  figures, thirteen / thirteen footnotes, and six / six stable problems.
+  Backend: 149 paired segments / 96,796 bytes, SHA-256
+  `6adc788295e1edd7399946d386708c9520633424e4fade643b6f7492f3af14da`.
+- Six-record mastery: 25,321 bytes, SHA-256
+  `3130aaa0d8efd70f2fc90c4c0568268579cbe05634b8a3abbc29d90b158fb257`;
+  independent review found all six hints, checks, and worked solutions complete
+  after the exact Soal 2 uniqueness cases and Soal 5 physical units were made
+  explicit. It renders 203 MathML nodes.
+- Independent open notebook: ten cells / four code cells, 36,507 bytes,
+  SHA-256
+  `95a6aadcb565f6b78542065520e6bc5ee775387dd21b1a31b3de2b5cfc0dab50`.
+  Two clean executions under the locked Python/NumPy/SciPy/Matplotlib stack
+  were deterministic and passed the Swift–Hohenberg branch, finite-box,
+  spectral, time-refinement, Klausmeier scaling, equilibrium, Jacobian, and
+  dispersion assertions without external-file or network access.
+- Figure 10.1 is an independently authored accessible 800×560 SVG, 3,946
+  bytes, SHA-256
+  `6d416bd0125b06047b352be7b645f58bc1304161290e9177fd16e3c535d6b779`;
+  its standalone provenance receipt is 984 bytes, SHA-256
+  `d376a0b6bf31a8dd27abe12d2b40669a5533e61baee096e672aeb6f605adcc54`.
+- Reader: eleven payload files / 403,280 bytes excluding its 1,177-byte
+  manifest; manifest SHA-256
+  `10086b57c048bc55eafaf431ae7a0e1c88f100542b02d03e965b16330a6ffcf7`.
+  Repeated clean builds were byte-identical across twelve files, canonical tree
+  SHA-256 `0785c71e3c71ab7021f515c1f489b9c4c5a1ea8f3a9b57b899f3cef531446bde`.
+  Desktop/mobile browser QA found centered 768 / 357.5 px articles, zero page
+  overflow, three loaded responsive figures, 28 unique IDs, 22 intact fragment
+  links, thirteen notes, and an empty warning/error log; the Problem 6 target
+  landed at 80.13 px below the 70.60 px sticky navigation.
+
+## Admitted Part 5 introduction boundary
+
+- Pressbooks part 409, *Appendices*, modified `2024-07-04T01:20:04Z`;
+  canonical record 1,664 bytes, SHA-256
+  `ccc3b6a575bf84e7ae94d3b3f5320e59279b088bede008e0e99bb423821a05c8`;
+  raw source 510 bytes, SHA-256
+  `657289c8fa8b8aeb613fff2d842330b3b769024a17c9609abc0fefab547419c0`.
+- Complete two-paragraph natural id-ID target *Lampiran*: 492 bytes, SHA-256
+  `00fb30fb29d5cbedc669ed8aea8931a455f90e426e51b7ca4191094f33221d65`.
+  Independent review found no omission, addition, or changed Chapter 11–14
+  reference. Backend: two paired segments / 1,843 bytes, SHA-256
+  `70d92d69ccb1e53fb1a1a1ad22a6c41d0c036a5bb652e3af52de0193856a97dd`.
+- Reader: four payload files / 10,006 bytes excluding its 397-byte manifest;
+  manifest SHA-256
+  `66ba9c2060abefc13a1bb12406ce978fc3d7dcf49b917916928521aa59f6b1f3`.
+  Five-file deterministic tree SHA-256
+  `4478e3e6a68aa854c5dbfaaf9011b3326b34bc15e59ea792300dff72f2a8bd17`.
+  Desktop/mobile inspection found centered 768 / 357.5 px articles, two exact
+  paragraphs, zero overflow, three unique IDs, two intact fragment links, and
+  no browser warning/error. Mastery, notebook, asset, problem, formula, and
+  footnote surfaces are correctly absent.
+
+## Frozen Chapter 11 authority
+
+- Pressbooks chapter 410, slug `linear-algebra`, *Refresher: Linear Algebra*,
+  modified `2026-03-19T20:11:37Z`; no component asset is referenced.
+- Canonical record: 29,468 bytes, SHA-256
+  `762b7d0825a0669bc603f74b7d9b4c183a5e862dc594d3f9d467788397be31ce`;
+  raw content: 13,223 bytes, SHA-256
+  `e851d0cc9f84fd0636fe3057cf7777cce2969e5fa96e4a6074860e79cf6ffe17`;
+  rendered content: 14,077 bytes, SHA-256
+  `577606c2e102366dec0676168001211a22ed658178f0960b9d2c4aa0b720befb`.
+
 ## Next action
 
-Freeze official Pressbooks Chapter 10 record 194, *Pattern Formation*, as
-`O005-LEGA-V101-CH10`: materialize its canonical/raw/rendered records and exact
-asset closure, compute the full structural/content census, bind all hashes,
-then begin the complete natural id-ID translation in source order. Do not
-return to source selection or delay translation once the authority closes.
+Compute Chapter 11's exact topology/math/problem census from the frozen bytes,
+then immediately translate the complete unit as *Penyegaran: Aljabar Linear*
+in source order and add seven stable mastery records. Preserve formulas,
+identifiers, the two source equation anchors, and the nested exercise topology;
+do not manufacture a notebook or asset where the source and admitted scope do
+not require one.

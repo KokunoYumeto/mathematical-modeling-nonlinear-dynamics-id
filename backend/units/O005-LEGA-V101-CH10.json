@@ -1,0 +1,64 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "data": [
+    {
+      "bytes": 984,
+      "path": "source/id-ID/O005-LEGA-V101-CH10/assets/pattern-stripes-independent.provenance.json",
+      "sha256": "d376a0b6bf31a8dd27abe12d2b40669a5533e61baee096e672aeb6f605adcc54"
+    }
+  ],
+  "language": "id-ID",
+  "mastery_path": "backend/mastery/O005-LEGA-V101-CH10.mastery.json",
+  "mastery_sha256": "3130aaa0d8efd70f2fc90c4c0568268579cbe05634b8a3abbc29d90b158fb257",
+  "notebook_path": "source/id-ID/O005-LEGA-V101-CH10/notebooks/chapter-10-open-pattern-formation.ipynb",
+  "notebook_sha256": "95a6aadcb565f6b78542065520e6bc5ee775387dd21b1a31b3de2b5cfc0dab50",
+  "problems": [
+    "O005-LEGA-V101-CH10-P01",
+    "O005-LEGA-V101-CH10-P02",
+    "O005-LEGA-V101-CH10-P03",
+    "O005-LEGA-V101-CH10-P04",
+    "O005-LEGA-V101-CH10-P05",
+    "O005-LEGA-V101-CH10-P06"
+  ],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 149,
+    "path": "backend/segments/O005-LEGA-V101-CH10.segments.jsonl",
+    "sha256": "6adc788295e1edd7399946d386708c9520633424e4fade643b6f7492f3af14da"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "chapter": "Pattern Formation",
+    "content_sha256": "b1daf70ba354c270332d0e0f849c73e165aa84769be71eb15a7594159bfa2367",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/pattern-formation/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-CH10/content.html",
+    "content_sha256": "0c951f1e8dd251be396e437660a6a610bfe28a2b6aeb4f18cd45882f38df18f3",
+    "figures": [
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH10/assets/pattern-stripes-independent.svg",
+        "sha256": "6d416bd0125b06047b352be7b645f58bc1304161290e9177fd16e3c535d6b779"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH10/assets/swift-hohenberg-patterns-source.png",
+        "sha256": "f92c04b397d388f84a31737b72dfbfdf89a14df4210e7cbf3c41fcf2f8b8958a"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH10/assets/pattern-growth-rates-source.png",
+        "sha256": "a49ff56eba92cc8f74400b6925443a63a4bcdbe95afd477c51f386f038abf32c"
+      }
+    ],
+    "title": "Pembentukan Pola"
+  },
+  "unit_id": "O005-LEGA-V101-CH10"
+}

@@ -1,0 +1,98 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Learning Objectives</h2>
+</header>
+<div class="textbox__content">
+
+At the end of this chapter, you will be able to do the following.
+<ul>
+ 	<li>Explain why different sets of parameters in a single generic model may lead to different types of patterns.</li>
+ 	<li>Analyze the linear stability of a homogeneous solution to a pattern-forming system.</li>
+ 	<li>Predict the wavelength of the pattern that emerges above threshold.</li>
+ 	<li>Recognize that different nonlinear terms lead to different types of patterns.</li>
+ 	<li>Reconstruct a simple model for the formation of vegetation patterns.</li>
+</ul>
+</div>
+</div>
+<h2>Pattern Formation</h2>
+[caption id="attachment_247" align="alignleft" width="300"]<img class="wp-image-247" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/Collage-200x300.png" alt="Photo collage. Long description available." width="300" height="450" /> Figure 10.1. Stripe patterns in nature: sand ripples, saguaro ribs, colorful bands on fish coats, roll structures in clouds. [<a href="#Fig_10.1_Desc"><em>Image Description</em></a>][/caption]<a id="Fig_10.1"></a>Patterns (see Figure 10.1), such as stripes and spots on animal coats or sand ripples on a beach, are very common in nature and in carefully controlled laboratory experiments. They typically occur in systems which are <em>driven far from equilibrium</em> by external forces or sources of energy. When the forcing is larger than what is necessary to balance inertial forces, the system responds by reorganizing itself into a periodic structure, called a pattern. There are many types of patterns, such as rolls, squares or hexagons, and they can be stationary or dynamic. The study of pattern-forming systems has been the subject of active research in physics, chemistry, nonlinear optics and applied mathematics for more than half a century[footnote]See for instance the book by P. Ball, entitled <em>The Self-made Tapestry: Pattern formation in nature</em> (Oxford, New York, 1999).[/footnote]. In what follows, we will briefly mention Turing patterns, explore a canonical pattern-forming model, known as the complex Swift-Hohenberg equation, and discuss a reaction-diffusion model for vegetation patterns.
+<h3>Turing patterns</h3>
+In 1952, A.M. Turing[footnote] A.M. Turing, <a href="https://doi.org/10.1098/rstb.1952.0012"><em>The chemical basis of morphogenesis</em></a>, Phil. Trans. R. Soc. London B <strong>237</strong>, 37-72 (1952).[/footnote] proposed the idea that differentiation patterns such as those selecting regions where a hydra grows its tentacles, were in fact chemical patterns, in particular those corresponding to stationary periodic structures[footnote]Turing also mentioned the possibility of wave patterns, but these were not the main focus of his paper.[/footnote]. Turing explained how such patterns could result from the instability of a homogeneous solution to a set of coupled reaction-diffusion equations. This instability was described as a <em>symmetry-breaking instability</em>, since the periodic structure that grew as a result of the instability broke the translational invariance of the initial homogeneous solution. It is only in the 1990s that Turing patterns were seen in chemical experiments[footnote]V. Castets, E. Dulos, J. Boissonade, and P. De Kepper, <a href="https://doi.org/10.1103/PhysRevLett.64.2953"><em>Experimental evidence of a sustained standing Turing-type nonequilibrium chemical pattern</em></a>, Phys. Rev. Lett. <strong>64</strong>, 2953-2956 (1990).[/footnote][footnote]Q. Ouyang and H.L. Swinney,<em> <a href="https://doi.org/10.1038/352610a0">Transition from a uniform state to hexagonal and striped Turing patterns</a></em>, Nature <strong>352</strong>, 610-612 (1991).[/footnote], in the form of hexagons and stripes, but also as irregular structures corresponding to a state of chemical turbulence[footnote]Q. Ouyang and H.L. Swinney, <a href="https://doi.org/10.1063/1.165851"><em>Transition to chemical turbulence</em></a>, Chaos <strong>1</strong>, 411-420 (1991).[/footnote].
+<h3>The complex Swift-Hohenberg equation</h3>
+[caption id="attachment_248" align="alignleft" width="400"]<img class="wp-image-248" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/SH1-300x141.png" alt="Numerical simulations of two-dimensional patterns. Long description available." width="400" height="187" /> Figure 10.2. Numerical simulations (with periodic boundary conditions) of the complex Swift-Hohenberg equation showing stripe and hexagon patterns. [<a href="#Fig_10.2_Desc"><em>Image Description</em></a>][/caption]<a id="Fig_10.2"></a>We will explore pattern formation by means of a single model, called the complex Swift-Hohenberg equation. Depending on whether the parameters of this model are real or complex, stationary or traveling patterns will be observed. Figure 10.2 shows stripe and hexagon patterns produced by this model. The general theory of pattern formation[footnote]For a review see for instance M.C. Cross, and P.C. Hohenberg, <a href="https://doi.org/10.1103/RevModPhys.65.851"><em>Pattern formation outside of equilibrium</em></a>, Rev. Mod. Phys. <strong>65</strong>, 851-1112 (1993) and A. C. Newell, T. Passot and J. Lega, <a href="https://doi.org/10.1146/annurev.fl.25.010193.002151"><em>Order parameter equations for patterns</em></a>, Ann. Rev. Fluid Mech. <strong>25</strong>, 399-453 (1993).[/footnote] explains why different models may produce patterns that are similar, and as a consequence why different chemical, physical or biological systems may display patterns that look alike. It also justifies the use of a generic pattern forming model to understand the mechanisms involved in pattern formation, as we do in the next section.
+
+Consider the following partial differential equation
+<p style="text-align: center"><a id="Eq_10.1"></a>$latex \displaystyle \begin{align*}\frac{\partial \psi}{\partial t} = &amp; (\mu + i \nu) \psi - (\alpha + i \beta) \left(\Omega + \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}\right)^2 \psi \\ &amp; + i \eta \left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}\right) \psi  - (\gamma + i \delta) |\psi|^2 \psi - \zeta |\psi|^2, \qquad (10.1)\end{align*}$</p>
+where all of the parameters are real, $latex \alpha &gt; 0$, $latex \gamma &gt; 0$, and $latex \psi(x,y,t)$ is <em>a priori</em> complex. This equation is a version of the Swift-Hohenberg equation[footnote] J. Swift and P.C. Hohenberg, <a href="https://doi.org/10.1103/PhysRevA.15.319"><em>Hydrodynamic fluctuations at the convective instability</em></a>, Phys. Rev. <strong>A 15</strong>, 319-328 (1977).[/footnote] with complex coefficients[footnote]J. Lega, J.V. Moloney, and A.C. Newell, <em><a href="https://doi.org/10.1103/PhysRevLett.73.2978">Swift-Hohenberg</a> equation for lasers</em>, Phys. Rev. Lett. <strong>73</strong>, 2978-2981 (1994).[/footnote] and a quadratic term. It is easy to see that $latex \psi=0$ is a solution, and it is natural to ask under what conditions such a solution is also stable. We proceed in the same way as we did for systems of ordinary differential equations, that is we linearize Equation (<a href="#Eq_10.1">10.1</a>) about the solution $latex \psi=0$. The linearized equation reads
+<p style="text-align: center"><a id="Eq_10.2"></a>$latex \displaystyle \begin{align*} \frac{\partial \psi}{\partial t} = &amp; (\mu + i \nu) \psi - (\alpha + i \beta) \left(\Omega + \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}\right)^2 \psi \\ &amp; + i \eta \left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}\right) \psi. \qquad (10.2)\end{align*}$</p>
+Typically, we are interested in spatially extended systems, which are large enough for patterns to develop (how large is "large" will be made more precise soon). We will thus only worry about instabilities that develop in the bulk, and consider that $latex \psi$ can be decomposed into Fourier modes. From the linearized equation, we see that the rate of change (i.e. the derivative) of Fourier mode $latex u_{\vec k} \equiv a_{\vec k}\, \exp(i \vec k \cdot \vec r)$ with wave vector $latex \vec k = (k_x, k_y)$ is $latex \lambda_{\vec k}\ u_{\vec k}$, where
+<p style="text-align: center">$latex \lambda_{\vec k} = \mu + i \nu - (\alpha + i \beta) (\Omega - k_x^2 - k_y^2)^2 - i \eta (k_x^2 + k_y^2).$</p>
+The growth rate of this mode is thus
+<p style="text-align: center">$latex \sigma_k = \Re e(\lambda_{\vec k}) = \mu - \alpha (\Omega - k^2)^2,$</p>
+where $latex k = \sqrt{k_x^2 + k_y^2} = ||\vec k||$. So each Fourier mode grows (or decays) at a rate that only depends on the magnitude $latex k$ of the associated wave vector $latex \vec k$, and not on its direction. If $latex \mu &lt; 0$, all Fourier modes decay, and the solution $latex \psi = 0$ is linearly stable. As $latex \mu$ increases, some Fourier modes will become unstable.<a id="Fig_10.3"></a>
+
+[caption id="attachment_255" align="alignleft" width="400"]<img class="wp-image-255" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/Pat_growth-1-300x142.png" alt="Plots of growth rate. Long description available." width="400" height="189" /> Figure 10.3. Sketch of the graph of the growth rate σ<sub>k</sub> as a function of <em>k</em> ≥ 0, for 0 &lt; μ &lt; α Ω<sup>2</sup>. (a) Ω &lt; 0; (b) Ω &gt; 0$. [<a href="#Fig_10.3_Desc"><em>Image Description</em></a>][/caption]&nbsp;
+
+If $latex \Omega &lt; 0$, the graph of $latex \sigma_k$ as a function of $latex k \ge 0$ is monotonic (see Figure 10.3.a), and the first Fourier mode to become unstable is the $latex k = 0$ mode. This instability occurs for $latex \mu = \alpha\, \Omega^2$. If on the contrary $latex \Omega &gt; 0$, then $latex \sigma_k$ has a maximum for $latex k = \sqrt \Omega \equiv k_c$ (see Figure 10.3.b), and modes with $latex k = k_c$ become unstable when $latex \mu$ increases past zero. In this case, we expect a pattern to form above threshold with a characteristic length equal to $latex l_c = 2 \pi / k_c$. The size of the system in which the pattern is to be observed should thus be much larger than $latex l_c$.
+
+Above threshold, it is the nonlinear terms which decide which pattern is selected. Typically, if quadratic terms are present (i.e. if $latex \zeta \ne 0$ in Equation (<a href="#Eq_10.1">10.1</a>)), then hexagons are observed near threshold. On the contrary, if cubic terms dominate, then rolls (or stripes) prevail. If the imaginary parts of the coefficients in (<a href="#Eq_10.1">10.1</a>) are set to zero, the patterns that develop above threshold are stationary. If not, they are time-dependent. These and other aspects of the dynamics of Equation (<a href="#Eq_10.1">10.1</a>), including secondary instabilities and space-time disorder, may be explored with the MATLAB GUI interface called <em>Patterns</em>. This GUI allows the user to select the parameters and start a simulation from small, random initial conditions. Color-coded snapshots of the real part of the solution $latex \psi$ are shown at successive times as the simulation progresses. After a simulation has ended, new parameters can be entered and a new simulation may then be restarted from the last solution.
+
+The theory of pattern formation[footnote]See the articles in Footnote #7[/footnote] provides means of describing the nonlinear dynamics of a pattern-forming system near and above threshold. A full discussion of this topic is however beyond the scope of these notes. In the next section, we briefly mention a reaction-diffusion model for the description of vegetation patterns in semiarid regions.
+<h3>Vegetation patterns</h3>
+In semiarid regions, plants (shrubs, grass, etc) tend to arrange themselves into stripes parallel to elevation contours on hilly terrain, and into patches on flat ground. Reaction-diffusion models have been proposed to explain these observations[footnote]C.A. Klausmeier, <a href="https://doi.org/10.1126/science.284.5421.1826"><em>Regular and irregular patterns in semiarid vegetation</em></a>, Science <strong>284</strong>, 1826-1828(1999).[/footnote][footnote]R. Lefever, O. Lejeune and P. Couteron, <em>Generic modelling of vegetation patterns. A case study of Tiger bush in sub-saharian Sahel</em>, in <a href="https://doi.org/10.1007/978-1-4613-0133-2_5">Mathematical Models for Biological Pattern Formation</a>, edited by P.K. Maini and H.G. Othmer, pp. 83-112, Springer, New York, 2001.[/footnote][footnote]J. von Hardenberg, E. Meron, M. Shachak, and Y. Zarmi, <a href="https://doi.org/10.1103/PhysRevLett.87.198101"><em>Diversity of vegetation patterns and desertification</em></a>, Phys. Rev. Lett. <strong>87</strong>, 198101 (2001).[/footnote]. In one of these articles, C.A. Klausmeier introduces a simple model with two dependent variables, the plant biomass $latex n$ and the amount of water $latex w$. Written in dimensionless form, the model reads
+<p style="text-align: center">$latex \begin{align*} \displaystyle \frac{\partial w}{\partial t} &amp; = a - w - w\,n^2 + v \frac{\partial w}{\partial x}, \\ \displaystyle \frac{\partial n}{\partial t} &amp; = w\,n^2 - m\, n + \left(\frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2}\right)n,\end{align*}$</p>
+where $latex a$ represents water input through rain, $latex v$ is the speed at which water is transported downhill (in the $latex -x$ direction), $latex w\, n^2$ represents biomass increase due to water consumption, and $latex m$ is the plant death rate. Moreover, water evaporates at rate $latex w$, and the diffusion of $latex n$ accounts for the spreading of vegetation patches.
+
+After finding equilibrium points (stationary and uniform solutions) of this model, the author investigates their linear stability. Figure 2 of the 1999 Klausmeier article shows a level set of the wavelength of the pattern that is expected to grow above threshold, in the $latex (a,m)$ parameter plane, for a fixed value of $latex v$. More precisely, the $latex (a,m)$ plane can be divided into three regions, one where the fixed point corresponding to no vegetation is stable, one where the fixed point corresponding to homogeneous vegetation is stable, and a region in between where linear stability analysis predicts the existence of vegetation patterns. A numerical simulation of the model in this latter regime confirms the existence of traveling stripes on hilly terrain, and of vegetation patches on flat ground. The speed $latex v$ at which water flows downhill measures the steepness of the slope.
+<h2>Summary</h2>
+Different types of patterns may be obtained from the same, generic model, by choosing different sets of parameters. We have seen how to use linear stability analysis to predict whether a pattern can develop from a homogeneous solution as a <em>control parameter</em> ($latex \mu$ in the discussion of the Swift-Hohenberg equation) is varied, and if so, how to determine the typical length scale of the structure that will emerge. Although such a treatment is linear, it is nevertheless indicative of the kind of pattern one may expect. The same methodology, which consists in finding homogeneous solutions and studying their linear stability, can be applied to any pattern-forming system, as briefly illustrated in the case of the Klausmeier model.
+<h2>Figure Descriptions</h2>
+<a id="Fig_10.1_Desc"></a><strong>Figure 10.1</strong>: A collage of seven photographs showcasing natural "stripe" patterns. The images include rippled sand dunes, the vertical ribs of a Saguaro cactus, the vibrant horizontal stripes of two different tropical fish (an Emperor Angelfish and a Sohal Surgeonfish), and various "mackerel sky" cloud formations featuring repetitive white tufts against a blue background. [<em><a href="#Fig_10.1">Return to Figure 10.1</a></em>]
+
+<a id="Fig_10.2_Desc"></a><strong>Figure 10.2</strong>: Numerical simulations (with periodic boundary conditions) of the complex Swift-Hohenberg equation showing two-dimensional stripe (left panel) and hexagon (right panel) patterns. The orientation of the stripes varies across the picture on the left. Defects (irregularities in the patterns) are visible in both images. Defects present in the stripe pattern include a disclination (looking like an arch), short grain boundaries (lines where stripes with different orientations meet), and dislocations (points where a stripe splits into two). Defect of the hexagonal pattern take the form of penta-hepta pairs (neighboring spots with 5 and 7 neighbors). [<em><a href="#Fig_10.2">Return to Figure 10.2</a></em>]
+
+<a id="Fig_10.3_Desc"></a><strong>Figure 10.3</strong>: Two graphs, (a) and (b), plotting the growth rate $latex y = \sigma_k$ against the wavenumber $latex k$. Graph (a) shows a strictly decreasing curve starting at a negative value, indicating a stable system where all perturbations decay. Graph (b) shows a curve that rises above the $latex x$-axis, peaking at a maximum growth rate $latex \mu$ at $latex k = \sqrt{\Omega}$, indicating that specific spatial frequencies will grow and form patterns. [<em><a href="#Fig_10.3">Return to Figure 10.3</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Food for Thought</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center">Problem 1</h3>
+Consider Equation (<a href="#Eq_10.2">10.2</a>) with $latex \mu = 0$. Find a solution to this equation in the form
+<p style="text-align: center">$latex \psi(x,t) = \exp[i(\omega t + q x + p y)], \qquad \omega,\, q,\,p\, \in \mathbb{R}.$</p>
+Try to express $latex \omega$, $latex q$ and $latex p$ in terms of the parameters of this equation. Is this solution unique?
+
+<hr />
+
+<h3 style="text-align: center">Problem 2</h3>
+Find a solution of the form
+<p style="text-align: center">$latex \psi(x,t) = \exp[i(\omega t + q x + p y)], \qquad \omega,\, q,\,p\, \in \mathbb{R}.$</p>
+to Equation (<a href="#Eq_10.2">10.2</a>) with $latex \mu \ne 0$. Try to express $latex \omega$, $latex q$ and $latex p$ in terms of the parameters of this equation. Is this solution unique?
+
+<hr />
+
+<h3 style="text-align: center">Problem 3</h3>
+Find a solution of the form
+<p style="text-align: center">$latex \psi(x,t) = \exp[\lambda t + i(\omega t + q x + p y)], \qquad \lambda,\,\omega,\, q,\,p\, \in \mathbb{R}$</p>
+to Equation (<a href="#Eq_10.2">10.2</a>) with $latex \mu \ne 0$. Try to express $latex \omega$, $latex q$ and $latex p$ in terms of the parameters of this equation. Is this solution unique?
+
+<hr />
+
+<h3 style="text-align: center">Problem 4</h3>
+Read the 1999 article by C.A. Klausmeier. Explain how to go from their system of equations (1) to the dimensionless form (2).
+
+<hr />
+
+<h3 style="text-align: center">Problem 5</h3>
+Read the 1999 article by C.A. Klausmeier. What are the dimensions of the parameters $latex A$, $latex L$, $latex R$, $latex V$, $latex J$, $latex M$ and $latex D$, and variables $latex W$ and $latex N$ in their system of equations (1)?
+
+<hr />
+
+<h3 style="text-align: center">Problem 6</h3>
+Read the 1999 article by C.A. Klausmeier.
+<ul>
+ 	<li>Explain how to find the fixed points of their system of equations (2).</li>
+ 	<li>Find the Jacobian of (2).</li>
+</ul>
+</div>
+</div>

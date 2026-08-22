@@ -1,0 +1,18 @@
+{
+  "schema": "o005-asset-provenance-v1",
+  "asset_id": "O005-LEGA-V101-CH10-A01-ID",
+  "unit_id": "O005-LEGA-V101-CH10",
+  "path": "assets/pattern-stripes-independent.svg",
+  "relationship": "new_original_replacement",
+  "replaces_source_asset": "authority/units/O005-LEGA-V101-CH10/assets/pattern-collage-source.png",
+  "source_pixels_reused": false,
+  "creator": "Codex (OpenAI), at the user's direction",
+  "created_utc": "2026-08-22",
+  "creation_method": "Authored directly as a self-contained SVG from vector primitives and Indonesian text; no source pixels were copied, traced, or embedded.",
+  "bytes": 3946,
+  "sha256": "6d416bd0125b06047b352be7b645f58bc1304161290e9177fd16e3c535d6b779",
+  "purpose": "Replace the mixed-photo collage with a self-contained, translatable, accessible vector illustration preserving the four pattern categories named by the source caption.",
+  "reader_description_language": "id-ID",
+  "license": "CC BY-NC-SA 4.0",
+  "non_endorsement": true
+}

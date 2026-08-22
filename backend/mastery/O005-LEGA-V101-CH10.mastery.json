@@ -1,0 +1,436 @@
+{
+  "schema": "o005-mastery-v1",
+  "schema_version": "1.0.0",
+  "unit_id": "O005-LEGA-V101-CH10",
+  "language": "id-ID",
+  "source": {
+    "resource": "Joceline Lega, Introduction to Mathematical Modeling",
+    "edition": "University of Arizona Pressbooks v1.01 (Maret 2026)",
+    "record": "Pressbooks chapter 194",
+    "record_id": 194,
+    "source_title": "Pattern Formation",
+    "target_title": "Pembentukan Pola",
+    "modified_utc": "2026-03-19T20:11:05Z",
+    "source_file": "authority/units/O005-LEGA-V101-CH10/content.raw.en.html",
+    "source_locator": "exact frozen Pressbooks record 194 content.raw, equations on lines 23–45, problems on lines 60–96",
+    "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/pattern-formation/",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "provenance_policy": {
+    "source_derived": "Ringkasan masalah merupakan adaptasi/terjemahan dari soal sumber dan tetap berada di bawah CC BY-NC-SA 4.0.",
+    "new_original": "Petunjuk, kartu persamaan dan penskalaan, rekaman pemeriksaan/jawaban, solusi, rubrik, dan implementasi komputasi ditulis baru untuk edisi Bahasa Indonesia dan ditandai terpisah dari materi sumber. Sumber bab tidak menyediakan himpunan solusi. Analisis dispersi Swift-Hohenberg, penurunan penskalaan Klausmeier, pemeriksaan dimensi, serta perhitungan kesetimbangan dan matriks Jacobi dilakukan secara independen. Fakta model Klausmeier yang diperlukan untuk Soal 4–6 dirujuk secara eksplisit ke DOI 10.1126/science.284.5421.1826."
+  },
+  "article_link_catalog": [
+    {
+      "link_id": "O005-LEGA-V101-CH10-LINK01",
+      "title": "Notebook Python terbuka Bab 10: pembentukan pola",
+      "url": "notebooks/chapter-10-open-pattern-formation.ipynb"
+    },
+    {
+      "link_id": "O005-LEGA-V101-CH10-LINK02",
+      "title": "C.A. Klausmeier, Regular and irregular patterns in semiarid vegetation (1999)",
+      "url": "https://doi.org/10.1126/science.284.5421.1826"
+    }
+  ],
+  "problems": [
+    {
+      "problem_id": "O005-LEGA-V101-CH10-P01",
+      "ordinal": 1,
+      "problem_summary": "Untuk persamaan Swift-Hohenberg linear (10.2) dengan \\(\\mu=0\\), cari gelombang bidang bermodulus satu \\(\\psi(x,y,t)=\\exp[i(\\omega t+qx+py)]\\), nyatakan \\(\\omega,q,p\\) melalui parameter model, dan tentukan apakah solusinya unik.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH10-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\begin{align*} \\frac{\\partial \\psi}{\\partial t} = & (\\mu + i \\nu) \\psi - (\\alpha + i \\beta) \\left(\\Omega + \\frac{\\partial^2}{\\partial x^2} + \\frac{\\partial^2}{\\partial y^2}\\right)^2 \\psi \\\\ & + i \\eta \\left(\\frac{\\partial^2}{\\partial x^2} + \\frac{\\partial^2}{\\partial y^2}\\right) \\psi. \\qquad (10.2)\\end{align*}",
+        "\\mu = 0",
+        "\\psi(x,t) = \\exp[i(\\omega t + q x + p y)]"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-10-open-pattern-formation.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Tetapkan \\(Q=q^2+p^2\\). Operator Laplace mengalikan gelombang bidang dengan \\(-Q\\), sedangkan turunan waktunya adalah \\(i\\omega\\psi\\). Samakan bagian real dan imajiner dari faktor pengalinya; modulus tetap menuntut bagian real sama dengan nol."
+      },
+      "check": {
+        "type": "exact_swift_hohenberg_neutral_mode_mu_zero",
+        "final_answer": "Dengan \\(Q=q^2+p^2\\), substitusi memberi \\(i\\omega=\\mu+i\\nu-(\\alpha+i\\beta)(\\Omega-Q)^2-i\\eta Q\\). Untuk \\(\\mu=0\\) dan \\(\\alpha>0\\), bagian real lenyap tepat ketika \\(Q=\\Omega\\). Karena itu harus berlaku \\(\\Omega\\ge0\\), dan frekuensinya adalah \\(\\omega=\\nu-\\eta\\Omega\\). Jika \\(\\Omega>0\\), pasangan \\((q,p)\\) dapat berupa titik mana pun pada lingkaran \\(q^2+p^2=\\Omega\\), sehingga solusi tidak unik terhadap arah. Jika \\(\\Omega=0\\), hanya \\(q=p=0\\). Jika \\(\\Omega<0\\), tidak ada pasangan real \\(q,p\\) dan tidak ada mode bermodulus satu dalam bentuk yang diminta.",
+        "quick_check": "Periksa bahwa \\(q^2+p^2\\) tidak pernah negatif. Pada \\(Q=\\Omega\\), seluruh suku yang mengandung \\(\\alpha\\) dan \\(\\beta\\) harus lenyap, sehingga hasil akhir tidak bergantung pada keduanya."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Definisikan kuadrat magnitudo vektor gelombang sebagai satu besaran tak negatif.",
+            "formula": "Q=q^2+p^2\\ge0"
+          },
+          {
+            "explanation": "Gunakan aksi operator diferensial pada gelombang bidang.",
+            "formula": "\\partial_t\\psi=i\\omega\\psi,\\qquad(\\partial_x^2+\\partial_y^2)\\psi=-Q\\psi"
+          },
+          {
+            "explanation": "Substitusikan ke persamaan linear dan bagi dengan \\(\\psi\\ne0\\).",
+            "formula": "i\\omega=\\mu+i\\nu-(\\alpha+i\\beta)(\\Omega-Q)^2-i\\eta Q"
+          },
+          {
+            "explanation": "Untuk \\(\\mu=0\\), bagian real hanya dapat nol jika kuadratnya nol.",
+            "formula": "0=-\\alpha(\\Omega-Q)^2\\quad\\Longrightarrow\\quad Q=\\Omega"
+          },
+          {
+            "explanation": "Ambil bagian imajiner setelah syarat netral dipenuhi.",
+            "formula": "\\omega=\\nu-\\beta(\\Omega-Q)^2-\\eta Q=\\nu-\\eta\\Omega"
+          }
+        ],
+        "conclusion": "Mode dengan \\(q,p\\in\\mathbb R\\) ada hanya untuk \\(\\Omega\\ge0\\); lingkaran arah membuatnya tidak unik ketika \\(\\Omega>0\\), sedangkan \\(\\Omega=0\\) hanya memberi mode spasial seragam."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH10-P02",
+      "ordinal": 2,
+      "problem_summary": "Untuk persamaan (10.2) dengan \\(\\mu\\ne0\\), cari gelombang bidang bermodulus satu \\(\\psi(x,y,t)=\\exp[i(\\omega t+qx+py)]\\), tentukan syarat keberadaannya, dan jelaskan ketidakunikannya.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH10-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\psi(x,t) = \\exp[i(\\omega t + q x + p y)]",
+        "\\mu \\ne 0",
+        "\\omega, q,p \\in \\mathbb R"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-10-open-pattern-formation.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Gunakan kembali \\(Q=q^2+p^2\\ge0\\). Karena ansatz tidak memiliki faktor pertumbuhan \\(e^{\\lambda t}\\), bagian real nilai eigen harus nol. Selesaikan kuadrat \\((\\Omega-Q)^2=\\mu/\\alpha\\), lalu saring setiap cabang dengan syarat \\(Q\\ge0\\)."
+      },
+      "check": {
+        "type": "exact_swift_hohenberg_unit_modulus_modes_mu_nonzero",
+        "final_answer": "Mode bermodulus satu menuntut \\(0=\\mu-\\alpha(\\Omega-Q)^2\\). Karena \\(\\alpha>0\\) dan \\(\\mu\\ne0\\), solusi dengan \\(q,p\\in\\mathbb R\\) hanya mungkin untuk \\(\\mu>0\\). Tuliskan \\(s=\\sqrt{\\mu/\\alpha}\\); cabang radialnya \\(Q=\\Omega\\pm s\\), dengan hanya \\(Q\\ge0\\) yang diperbolehkan. Jika \\(\\Omega<-s\\), tidak ada solusi. Jika \\(\\Omega=-s\\), satu-satunya cabang ialah \\(Q=0\\), sehingga \\((q,p)=(0,0)\\) dan solusinya unik. Untuk setiap \\(Q>0\\), pasangan \\((q,p)\\) mengisi lingkaran \\(q^2+p^2=Q\\), sehingga solusi tidak unik; hal ini mencakup \\(\\Omega=s\\), yang juga memiliki cabang \\(Q=0\\) selain lingkaran positif. Pada setiap cabang sah, \\(\\omega=\\nu-\\beta\\mu/\\alpha-\\eta Q\\). Untuk \\(\\mu<0\\), tidak ada gelombang bidang bermodulus satu dengan \\(q,p\\in\\mathbb R\\) dalam bentuk ini.",
+        "quick_check": "Masukkan setiap kandidat \\(Q\\) ke \\((\\Omega-Q)^2\\): hasilnya harus \\(\\mu/\\alpha\\). Buang cabang dengan \\(Q<0\\), dan jangan menyatakan adanya solusi untuk \\(\\mu<0\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Pisahkan faktor pengali menjadi bagian real dan imajiner.",
+            "formula": "i\\omega=\\underbrace{\\mu-\\alpha(\\Omega-Q)^2}_{\\text{real}}+i\\underbrace{[\\nu-\\beta(\\Omega-Q)^2-\\eta Q]}_{\\text{imajiner}}"
+          },
+          {
+            "explanation": "Modulus satu mengharuskan laju pertumbuhan real nol.",
+            "formula": "(\\Omega-Q)^2=\\frac{\\mu}{\\alpha}"
+          },
+          {
+            "explanation": "Akar real memerlukan \\(\\mu>0\\), lalu menghasilkan dua cabang aljabar yang harus diuji terhadap \\(Q\\ge0\\).",
+            "formula": "Q_{\\pm}=\\Omega\\pm\\sqrt{\\frac{\\mu}{\\alpha}},\\qquad Q_{\\pm}\\ge0"
+          },
+          {
+            "explanation": "Gunakan syarat real tadi untuk menyederhanakan bagian imajiner.",
+            "formula": "\\omega_{\\pm}=\\nu-\\frac{\\beta\\mu}{\\alpha}-\\eta Q_{\\pm}"
+          },
+          {
+            "explanation": "Untuk radius positif, parameter sudut memperlihatkan keluarga arah yang kontinu.",
+            "formula": "q=\\sqrt Q\\cos\\theta,\\qquad p=\\sqrt Q\\sin\\theta,\\qquad0\\le\\theta<2\\pi"
+          }
+        ],
+        "conclusion": "Keberadaan ditentukan oleh tanda \\(\\mu\\) dan ketaknegatifan setiap cabang \\(Q\\). Solusi unik hanya terjadi pada batas \\(\\mu>0,\\ \\Omega=-\\sqrt{\\mu/\\alpha}\\), ketika \\(Q=0\\); setiap cabang positif menghasilkan ketidakunikan arah, dan dua cabang sah dapat menambah ketidakunikan radial."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH10-P03",
+      "ordinal": 3,
+      "problem_summary": "Untuk persamaan (10.2) dengan \\(\\mu\\ne0\\), substitusikan \\(\\psi(x,y,t)=\\exp[\\lambda t+i(\\omega t+qx+py)]\\) dan nyatakan laju pertumbuhan \\(\\lambda\\) serta frekuensi \\(\\omega\\) sebagai fungsi vektor gelombang.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH10-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\psi(x,t) = \\exp[\\lambda t + i(\\omega t + q x + p y)]",
+        "\\lambda,\\omega,q,p \\in \\mathbb R",
+        "\\mu \\ne 0"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-10-open-pattern-formation.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Sekarang turunan waktu menghasilkan \\((\\lambda+i\\omega)\\psi\\), sehingga bagian real tidak perlu dibuat nol. Tetapkan \\(Q=q^2+p^2\\) dan cocokkan langsung bagian real serta imajiner dari nilai eigen Fourier."
+      },
+      "check": {
+        "type": "exact_swift_hohenberg_complex_dispersion_relation",
+        "final_answer": "Untuk \\(Q=q^2+p^2\\ge0\\), substitusi memberi \\(\\lambda+i\\omega=\\mu+i\\nu-(\\alpha+i\\beta)(\\Omega-Q)^2-i\\eta Q\\). Jadi \\(\\lambda=\\mu-\\alpha(\\Omega-Q)^2\\) dan \\(\\omega=\\nu-\\beta(\\Omega-Q)^2-\\eta Q\\). Setiap \\(q,p\\in\\mathbb R\\) mendefinisikan satu mode; untuk \\(Q>0\\), semua arah dengan radius \\(\\sqrt Q\\) memiliki \\(\\lambda\\) dan \\(\\omega\\) yang sama. Mode tumbuh jika \\(\\lambda>0\\), netral jika \\(\\lambda=0\\), dan meluruh jika \\(\\lambda<0\\).",
+        "quick_check": "Bagian real harus persis sama dengan kurva pertumbuhan bab, \\(\\sigma_Q=\\mu-\\alpha(\\Omega-Q)^2\\). Menetapkan \\(\\lambda=0\\) harus mengembalikan syarat Soal 1 dan 2."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Definisikan kuadrat magnitudo vektor gelombang.",
+            "formula": "Q=q^2+p^2"
+          },
+          {
+            "explanation": "Hitung turunan waktu dan aksi Laplasian.",
+            "formula": "\\partial_t\\psi=(\\lambda+i\\omega)\\psi,\\qquad\\Delta\\psi=-Q\\psi"
+          },
+          {
+            "explanation": "Operator Swift-Hohenberg kuadrat menjadi pengali skalar.",
+            "formula": "(\\Omega+\\Delta)^2\\psi=(\\Omega-Q)^2\\psi"
+          },
+          {
+            "explanation": "Samakan faktor kompleks pada kedua ruas.",
+            "formula": "\\lambda+i\\omega=\\mu+i\\nu-(\\alpha+i\\beta)(\\Omega-Q)^2-i\\eta Q"
+          },
+          {
+            "explanation": "Pisahkan bagian real dan imajiner.",
+            "formula": "\\lambda=\\mu-\\alpha(\\Omega-Q)^2,\\qquad\\omega=\\nu-\\beta(\\Omega-Q)^2-\\eta Q"
+          }
+        ],
+        "conclusion": "Relasi dispersi bergantung hanya pada besar vektor gelombang, bukan arahnya; \\(\\lambda\\) menentukan pertumbuhan amplitudo dan \\(\\omega\\) menentukan perubahan fase."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH10-P04",
+      "ordinal": 4,
+      "problem_summary": "Dengan merujuk artikel Klausmeier tahun 1999, jelaskan penskalaan yang mengubah sistem vegetasi dimensional (1) menjadi sistem tak berdimensi (2).",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH10-LINK01",
+        "O005-LEGA-V101-CH10-LINK02"
+      ],
+      "source_formula_occurrences": [
+        "system of equations (1)",
+        "dimensionless form (2)"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-10-open-pattern-formation.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Kartu persamaan dan penskalaan—dukungan baru, dengan fakta model dirujuk ke Klausmeier, DOI 10.1126/science.284.5421.1826: \\(W_T=A-LW-RWN^2+VW_X\\), \\(N_T=JRWN^2-MN+D\\Delta N\\). Gunakan \\(t=LT\\), \\((x,y)=\\sqrt{L/D}(X,Y)\\), \\(n=N\\sqrt{R/L}\\), \\(w=JW\\sqrt{R/L}\\), serta \\(a=AJ\\sqrt R/L^{3/2}\\), \\(m=M/L\\), dan \\(v=V/\\sqrt{LD}\\). Tuliskan aturan rantai sebelum menyederhanakan setiap suku."
+      },
+      "check": {
+        "type": "exact_klausmeier_nondimensionalization",
+        "final_answer": "Kartu mandiri yang dirujuk ke Klausmeier (DOI 10.1126/science.284.5421.1826) menggunakan \\(W_T=A-LW-RWN^2+VW_X\\) dan \\(N_T=JRWN^2-MN+D\\Delta_{X,Y}N\\). Tetapkan \\(s=\\sqrt{R/L}\\), lalu \\(t=LT\\), \\(x=\\sqrt{L/D}X\\), \\(y=\\sqrt{L/D}Y\\), \\(n=sN\\), dan \\(w=JsW\\). Dengan \\(a=AJs/L=AJ\\sqrt R/L^{3/2}\\), \\(m=M/L\\), dan \\(v=V/\\sqrt{LD}\\), aturan rantai menghasilkan tepat \\(w_t=a-w-wn^2+vw_x\\) dan \\(n_t=wn^2-mn+\\Delta_{x,y}n\\). Variabel \\(t,x,y,n,w\\) dan parameter \\(a,m,v\\) yang baru semuanya tak berdimensi.",
+        "quick_check": "Koefisien \\(w\\), \\(wn^2\\), dan \\(\\Delta n\\) harus menjadi satu. Koefisien adveksi harus menyederhana menjadi \\(V/\\sqrt{LD}\\), bukan \\(V\\sqrt{L/D}\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Kartu sumber-fakta untuk perhitungan ini adalah sistem dimensional Klausmeier; uraian dan penurunan berikut merupakan dukungan baru.",
+            "formula": "W_T=A-LW-RWN^2+VW_X,\\qquad N_T=JRWN^2-MN+D\\Delta_{X,Y}N"
+          },
+          {
+            "explanation": "Perkenalkan singkatan skala amplitudo dan balikkan definisi variabel terikat.",
+            "formula": "s=\\sqrt{R/L},\\qquad W=\\frac{w}{Js},\\qquad N=\\frac n s"
+          },
+          {
+            "explanation": "Transformasi koordinat memberi faktor turunan yang diperlukan.",
+            "formula": "\\partial_T=L\\partial_t,\\qquad\\partial_X=\\sqrt{L/D}\\partial_x,\\qquad\\Delta_{X,Y}=\\frac LD\\Delta_{x,y}"
+          },
+          {
+            "explanation": "Substitusi ke persamaan air dan perkalian dengan \\(Js/L\\) menormalkan peluruhan serta konsumsi.",
+            "formula": "w_t=\\frac{AJs}{L}-w-wn^2+\\frac{V}{\\sqrt{LD}}w_x"
+          },
+          {
+            "explanation": "Substitusi ke persamaan biomassa dan perkalian dengan \\(s/L\\) menormalkan pertumbuhan serta difusi.",
+            "formula": "n_t=wn^2-\\frac ML n+\\Delta_{x,y}n"
+          },
+          {
+            "explanation": "Namai tiga kombinasi parameter yang tersisa.",
+            "formula": "a=\\frac{AJ\\sqrt R}{L^{3/2}},\\qquad m=\\frac ML,\\qquad v=\\frac V{\\sqrt{LD}}"
+          }
+        ],
+        "conclusion": "Penskalaan mengubah sistem dimensional menjadi \\(w_t=a-w-wn^2+vw_x\\), \\(n_t=wn^2-mn+\\Delta n\\), dengan hanya tiga parameter tak berdimensi \\(a,m,v\\)."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH10-P05",
+      "ordinal": 5,
+      "problem_summary": "Dengan merujuk sistem dimensional Klausmeier (1), tentukan dimensi parameter \\(A,L,R,V,J,M,D\\) dan variabel \\(W,N\\).",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH10-LINK01",
+        "O005-LEGA-V101-CH10-LINK02"
+      ],
+      "source_formula_occurrences": [
+        "A, L, R, V, J, M, D",
+        "W and N",
+        "system of equations (1)"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-10-open-pattern-formation.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Kartu persamaan—dukungan baru, dengan fakta model dirujuk ke Klausmeier, DOI 10.1126/science.284.5421.1826: \\(W_T=A-LW-RWN^2+VW_X\\) dan \\(N_T=JRWN^2-MN+D\\Delta N\\). Secara fisik, \\(W\\) adalah massa air per satuan luas dan \\(N\\) adalah massa kering biomassa tumbuhan per satuan luas. Misalkan \\([X]=\\mathsf L\\) dan \\([T]=\\mathsf T\\), lalu samakan dimensi setiap suku dengan dimensi ruas kirinya."
+      },
+      "check": {
+        "type": "exact_klausmeier_parameter_dimensions",
+        "final_answer": "Dengan \\(\\mathsf L\\) sebagai dimensi panjang dan \\(\\mathsf T\\) sebagai dimensi waktu, \\(W\\) berdimensi massa air per satuan luas (misalnya kg H₂O m⁻²) dan \\(N\\) berdimensi massa kering biomassa tumbuhan per satuan luas (misalnya kg massa kering m⁻²). Hasil parameter ialah \\([A]=[W]\\mathsf T^{-1}\\), \\([L]=[M]=\\mathsf T^{-1}\\), \\([R]=[N]^{-2}\\mathsf T^{-1}\\), \\([V]=\\mathsf L\\mathsf T^{-1}\\), \\([J]=[N][W]^{-1}\\), dan \\([D]=\\mathsf L^2\\mathsf T^{-1}\\).",
+        "quick_check": "Setiap suku pada persamaan \\(W\\) harus berdimensi \\([W]/\\mathsf T\\), dan setiap suku pada persamaan \\(N\\) harus berdimensi \\([N]/\\mathsf T\\). Kombinasi \\(a,m,v,n,w\\) pada penskalaan Soal 4 semuanya harus tak berdimensi."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Suku sumber pada persamaan air harus mempunyai dimensi yang sama dengan \\(W_T\\).",
+            "formula": "[A]=[W]\\mathsf T^{-1}"
+          },
+          {
+            "explanation": "Peluruhan linear pada kedua persamaan menetapkan dimensi \\(L\\) dan \\(M\\).",
+            "formula": "[LW]=[W]\\mathsf T^{-1},\\ [MN]=[N]\\mathsf T^{-1}\\quad\\Longrightarrow\\quad[L]=[M]=\\mathsf T^{-1}"
+          },
+          {
+            "explanation": "Samakan suku konsumsi air dengan \\(W_T\\).",
+            "formula": "[R][W][N]^2=[W]\\mathsf T^{-1}\\quad\\Longrightarrow\\quad[R]=[N]^{-2}\\mathsf T^{-1}"
+          },
+          {
+            "explanation": "Turunan ruang pertama dan kedua menetapkan dimensi adveksi dan difusi.",
+            "formula": "[V]\\frac{[W]}{\\mathsf L}=\\frac{[W]}{\\mathsf T},\\qquad[D]\\frac{[N]}{\\mathsf L^2}=\\frac{[N]}{\\mathsf T}"
+          },
+          {
+            "explanation": "Gunakan suku produksi biomassa untuk menentukan faktor hasil \\(J\\).",
+            "formula": "[J][R][W][N]^2=[N]\\mathsf T^{-1}\\quad\\Longrightarrow\\quad[J]=[N][W]^{-1}"
+          },
+          {
+            "explanation": "Kumpulkan hasil adveksi dan difusi.",
+            "formula": "[V]=\\mathsf L\\mathsf T^{-1},\\qquad[D]=\\mathsf L^2\\mathsf T^{-1}"
+          }
+        ],
+        "conclusion": "Dengan \\(W\\) sebagai massa air per luas dan \\(N\\) sebagai massa kering biomassa per luas, dimensi tersebut membuat kedua persamaan homogen dan membuktikan bahwa semua kelompok pada penskalaan Soal 4 benar-benar tanpa satuan."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH10-P06",
+      "ordinal": 6,
+      "problem_summary": "Untuk sistem Klausmeier tak berdimensi, tentukan semua titik tetap spasial homogen dan matriks Jacobi bagian reaksinya.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH10-LINK01",
+        "O005-LEGA-V101-CH10-LINK02"
+      ],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{\\partial w}{\\partial t}=a-w-wn^2+v\\frac{\\partial w}{\\partial x}",
+        "\\displaystyle \\frac{\\partial n}{\\partial t}=wn^2-mn+(\\partial_x^2+\\partial_y^2)n",
+        "fixed points",
+        "Jacobian"
+      ],
+      "notebook": {
+        "path": "notebooks/chapter-10-open-pattern-formation.ipynb",
+        "runtime": "Python 3",
+        "open_stack": [
+          "NumPy",
+          "SciPy",
+          "Matplotlib"
+        ],
+        "relationship": "new_original_open_companion"
+      },
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original",
+        "notebook": "new_original_separate_component"
+      },
+      "hint": {
+        "text": "Untuk keadaan spasial homogen, turunan ruang lenyap. Tetapkan \\(f(w,n)=a-w-wn^2\\) dan \\(g(w,n)=wn^2-mn=n(wn-m)\\). Pisahkan cabang \\(n=0\\) dari cabang \\(wn=m\\), kemudian hitung Jacobi dalam urutan variabel \\((w,n)\\)."
+      },
+      "check": {
+        "type": "exact_klausmeier_homogeneous_equilibria_and_reaction_jacobian",
+        "final_answer": "Titik tetap tanpa vegetasi adalah \\((w,n)=(a,0)\\). Untuk vegetasi positif, \\(wn=m\\) dan \\(mn^2-an+m=0\\), sehingga—untuk \\(a,m>0\\)—titik vegetasi ada tepat ketika \\(a\\ge2m\\): \\(n_{\\pm}=[a\\pm\\sqrt{a^2-4m^2}]/(2m)\\) dan \\(w_{\\pm}=m/n_{\\pm}\\). Matriks Jacobi bagian reaksi dalam urutan \\((w,n)\\) adalah \\(J(w,n)=\\begin{pmatrix}-(1+n^2)&-2wn\\\\n^2&2wn-m\\end{pmatrix}\\). Pada titik vegetasi, \\(wn=m\\), jadi \\(J_{\\pm}=\\begin{pmatrix}-(1+n_{\\pm}^2)&-2m\\\\n_{\\pm}^2&m\\end{pmatrix}\\).",
+        "quick_check": "Substitusi \\((a,0)\\) harus menolkan kedua reaksi. Untuk setiap akar vegetasi, hasil kali \\(n_+n_-=1\\) dan \\(w_{\\pm}n_{\\pm}=m\\); diskriminannya harus \\(a^2-4m^2\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Hilangkan turunan spasial dan definisikan medan reaksi.",
+            "formula": "f(w,n)=a-w-wn^2,\\qquad g(w,n)=wn^2-mn=n(wn-m)"
+          },
+          {
+            "explanation": "Cabang tanpa vegetasi berasal dari \\(n=0\\).",
+            "formula": "n=0,\\quad f=0\\Longrightarrow w=a"
+          },
+          {
+            "explanation": "Pada cabang vegetasi, gunakan \\(wn=m\\) dalam persamaan air.",
+            "formula": "w=\\frac mn,\\qquad0=a-\\frac mn-mn\\quad\\Longrightarrow\\quad mn^2-an+m=0"
+          },
+          {
+            "explanation": "Selesaikan persamaan kuadrat dan nyatakan syarat keberadaan real positif.",
+            "formula": "n_{\\pm}=\\frac{a\\pm\\sqrt{a^2-4m^2}}{2m},\\qquad w_{\\pm}=\\frac m{n_{\\pm}},\\qquad a\\ge2m"
+          },
+          {
+            "explanation": "Diferensiasikan kedua fungsi reaksi dalam urutan \\((w,n)\\).",
+            "formula": "J(w,n)=\\begin{pmatrix}f_w&f_n\\\\g_w&g_n\\end{pmatrix}=\\begin{pmatrix}-(1+n^2)&-2wn\\\\n^2&2wn-m\\end{pmatrix}"
+          },
+          {
+            "explanation": "Pada titik vegetasi, sederhanakan dengan hubungan \\(wn=m\\).",
+            "formula": "J_{\\pm}=\\begin{pmatrix}-(1+n_{\\pm}^2)&-2m\\\\n_{\\pm}^2&m\\end{pmatrix}"
+          }
+        ],
+        "conclusion": "Sistem mempunyai satu keadaan tanpa vegetasi untuk semua \\(a>0\\). Cabang vegetasi ada ketika \\(a\\ge2m\\): terdapat dua keadaan berbeda untuk \\(a>2m\\), sedangkan pada \\(a=2m\\) kedua akar vegetasi berimpit."
+      }
+    }
+  ]
+}

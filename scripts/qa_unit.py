@@ -92,6 +92,21 @@ QA_SPECS = {
         "lock": None,
         "plain_paragraphs": 4,
     },
+    "O005-LEGA-V101-PT05": {
+        "unit_type": "part",
+        "elements": 0,
+        "links": 0,
+        "math": 0,
+        "problems": 0,
+        "footnotes": 0,
+        "assets": [],
+        "notebook": None,
+        "notebook_cells": 0,
+        "code_cells": 0,
+        "mastery_math": 0,
+        "lock": None,
+        "plain_paragraphs": 2,
+    },
     "O005-LEGA-V101-CH03": {
         "unit_type": "chapter",
         "elements": 423,
@@ -538,6 +553,64 @@ QA_SPECS = {
         ],
         "descriptive_links": [
             "https://doi.org/10.1126/science.230.4726.661",
+        ],
+        "lock": None,
+        "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",
+    },
+    "O005-LEGA-V101-CH10": {
+        "unit_type": "chapter",
+        "elements": 116,
+        "links": 24,
+        "math": 77,
+        "target_math": 78,
+        "reader_math": 78,
+        "problems": 6,
+        "footnotes": 13,
+        "assets": [
+            "assets/pattern-stripes-independent.svg",
+            "assets/swift-hohenberg-patterns-source.png",
+            "assets/pattern-growth-rates-source.png",
+        ],
+        "data_files": [
+            "assets/pattern-stripes-independent.provenance.json",
+        ],
+        "target_image_dimensions": [
+            ("800", "560"),
+            ("300", "141"),
+            ("300", "142"),
+        ],
+        "math_replacements": {
+            10: (
+                "\\lambda_{\\vec k}\\ u_{\\vec k}",
+                "\\lambda_{\\vec k}",
+            ),
+            12: (
+                "\\sigma_k = \\Re e(\\lambda_{\\vec k}) = \\mu - \\alpha (\\Omega - k^2)^2,",
+                "\\sigma_k = \\operatorname{Re}(\\lambda_{\\vec k}) = \\mu - \\alpha (\\Omega - k^2)^2,",
+            ),
+            54: (
+                "\\psi(x,t) = \\exp[i(\\omega t + q x + p y)], \\qquad \\omega,\\, q,\\,p\\, \\in \\mathbb{R}.",
+                "\\psi(x,y,t) = \\exp[i(\\omega t + q x + p y)], \\qquad \\omega,\\, q,\\,p\\, \\in \\mathbb{R}.",
+            ),
+            58: (
+                "\\psi(x,t) = \\exp[i(\\omega t + q x + p y)], \\qquad \\omega,\\, q,\\,p\\, \\in \\mathbb{R}.",
+                "\\psi(x,y,t) = \\exp[i(\\omega t + q x + p y)], \\qquad \\omega,\\, q,\\,p\\, \\in \\mathbb{R}.",
+            ),
+            63: (
+                "\\psi(x,t) = \\exp[\\lambda t + i(\\omega t + q x + p y)], \\qquad \\lambda,\\,\\omega,\\, q,\\,p\\, \\in \\mathbb{R}",
+                "\\psi(x,y,t) = \\exp[\\lambda t + i(\\omega t + q x + p y)], \\qquad \\lambda,\\,\\omega,\\, q,\\,p\\, \\in \\mathbb{R}",
+            ),
+        },
+        "math_insertions_before": {65: ["\\lambda"]},
+        "notebook": "notebooks/chapter-10-open-pattern-formation.ipynb",
+        "notebook_cells": None,
+        "code_cells": None,
+        "mastery_math": None,
+        "footnote_links": [
+            "https://doi.org/10.1126/science.284.5421.1826",
+        ],
+        "descriptive_links": [
+            "https://doi.org/10.1103/PhysRevLett.73.2978",
         ],
         "lock": None,
         "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",

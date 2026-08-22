@@ -1,0 +1,41 @@
+{
+  "assets": [
+    {
+      "bytes": 120120,
+      "epub_member": "EPUB/assets/Collage-200x300.png",
+      "path": "assets/pattern-collage-source.png",
+      "sha256": "ed55c4ad09e5b4f1746dabf66aa87509538bcf76bcbc442650a4925ea47006ba"
+    },
+    {
+      "bytes": 59364,
+      "epub_member": "EPUB/assets/SH1-300x141.png",
+      "path": "assets/swift-hohenberg-patterns-source.png",
+      "sha256": "f92c04b397d388f84a31737b72dfbfdf89a14df4210e7cbf3c41fcf2f8b8958a"
+    },
+    {
+      "bytes": 8974,
+      "epub_member": "EPUB/assets/Pat_growth-1-300x142.png",
+      "path": "assets/pattern-growth-rates-source.png",
+      "sha256": "a49ff56eba92cc8f74400b6925443a63a4bcdbe95afd477c51f386f038abf32c"
+    }
+  ],
+  "content_raw": {
+    "bytes": 19476,
+    "path": "content.raw.en.html",
+    "sha256": "b1daf70ba354c270332d0e0f849c73e165aa84769be71eb15a7594159bfa2367"
+  },
+  "content_rendered": {
+    "bytes": 28202,
+    "path": "content.rendered.en.html",
+    "sha256": "ff79a728a7d61bcd33717cdb540dc4f09cc03d6de25d223ac53458ed6bd91108"
+  },
+  "record": {
+    "bytes": 49768,
+    "path": "source-record.canonical.json",
+    "sha256": "fbabaa5ed87f7b1e1a2a851555b2e0b7b37d3398a6450b67ffb73efcdb614f06"
+  },
+  "schema": "o005-unit-authority-v1",
+  "source_modified_gmt": "2026-03-19T20:11:05Z",
+  "source_record_id": 194,
+  "unit_id": "O005-LEGA-V101-CH10"
+}

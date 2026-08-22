@@ -312,6 +312,46 @@ UNIT_SPECS = {
             },
         ],
     },
+    "O005-LEGA-V101-CH10": {
+        "record_id": 194,
+        "modified_gmt": "2026-03-19T20:11:05",
+        "record_bytes": 49768,
+        "record_sha256": "fbabaa5ed87f7b1e1a2a851555b2e0b7b37d3398a6450b67ffb73efcdb614f06",
+        "assets": [
+            {
+                "path": "assets/pattern-collage-source.png",
+                "epub_member": "EPUB/assets/Collage-200x300.png",
+                "bytes": 120120,
+                "sha256": "ed55c4ad09e5b4f1746dabf66aa87509538bcf76bcbc442650a4925ea47006ba",
+            },
+            {
+                "path": "assets/swift-hohenberg-patterns-source.png",
+                "epub_member": "EPUB/assets/SH1-300x141.png",
+                "bytes": 59364,
+                "sha256": "f92c04b397d388f84a31737b72dfbfdf89a14df4210e7cbf3c41fcf2f8b8958a",
+            },
+            {
+                "path": "assets/pattern-growth-rates-source.png",
+                "epub_member": "EPUB/assets/Pat_growth-1-300x142.png",
+                "bytes": 8974,
+                "sha256": "a49ff56eba92cc8f74400b6925443a63a4bcdbe95afd477c51f386f038abf32c",
+            },
+        ],
+    },
+    "O005-LEGA-V101-PT05": {
+        "record_id": 409,
+        "modified_gmt": "2024-07-04T01:20:04",
+        "record_bytes": 1664,
+        "record_sha256": "ccc3b6a575bf84e7ae94d3b3f5320e59279b088bede008e0e99bb423821a05c8",
+        "assets": [],
+    },
+    "O005-LEGA-V101-CH11": {
+        "record_id": 410,
+        "modified_gmt": "2026-03-19T20:11:37",
+        "record_bytes": 29468,
+        "record_sha256": "762b7d0825a0669bc603f74b7d9b4c183a5e862dc594d3f9d467788397be31ce",
+        "assets": [],
+    },
 }
 
 

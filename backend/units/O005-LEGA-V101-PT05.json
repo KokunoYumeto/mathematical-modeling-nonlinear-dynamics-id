@@ -1,0 +1,33 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "problems": [],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 2,
+    "path": "backend/segments/O005-LEGA-V101-PT05.segments.jsonl",
+    "sha256": "70d92d69ccb1e53fb1a1a1ad22a6c41d0c036a5bb652e3af52de0193856a97dd"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "content_sha256": "657289c8fa8b8aeb613fff2d842330b3b769024a17c9609abc0fefab547419c0",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "part": "Appendices",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/part/appendices/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-PT05/content.html",
+    "content_sha256": "00fb30fb29d5cbedc669ed8aea8931a455f90e426e51b7ca4191094f33221d65",
+    "title": "Lampiran"
+  },
+  "unit_id": "O005-LEGA-V101-PT05",
+  "unit_type": "part"
+}

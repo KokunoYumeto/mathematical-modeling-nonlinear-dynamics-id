@@ -1,0 +1,140 @@
+<p>In this appendix, we state basic facts of linear algebra concerning matrices, eigenvalues and eigenvectors. No proofs are given and the reader should consult linear algebra texts for more details. The brief review presented below, although far from being complete, should however provide sufficient information for a reader to follow most of the linear stability arguments made in the previous chapters.</p>
+<h2>Vector spaces</h2>
+<h3>Definitions</h3>
+<ul>
+<li>[latex]\mathcal S[/latex] is a real (resp. complex) <em>vector space</em> if and only if it is closed under addition and under multiplication by a scalar. In other words,</li>
+</ul>
+<p style="text-align: center">[latex]\begin{align*} & \forall x, y \in {\mathcal S}, x+y \in {\mathcal S} \\ & \forall x \in {\mathcal S}, \forall \alpha \in \mathbb{R} \text{ (resp. }\mathbb{C}), \alpha x \in {\mathcal S}. \end{align*}[/latex]</p>
+<ul>
+<li>The vectors in [latex]\{u_i \in S, i=1 \dots n\}[/latex] are <em>linearly independent</em> if and only if any linear combination equal to zero must have all of its coefficients equal to zero. In other words,</li>
+</ul>
+<p style="text-align: center">[latex]\begin{align*} \forall &\{\alpha_i, i=1, \dots n \} \subset \mathbb{R} \text { (or } \mathbb{C}),\\ &\sum_{i=1}^n \alpha_i\,u_i = 0 \Longrightarrow \alpha_i = 0, \forall i=1, \dots n. \end{align*}[/latex]</p>
+<ul>
+<li>[latex]\mathcal S[/latex] is <em>finite dimensional</em> if there exists a finite set of linearly independent vectors that <em>span</em> [latex]\mathcal S[/latex].</li>
+<li>Such a set is called a <em>basis</em> of [latex]\mathcal S[/latex]. In what follows, we are only concerned with <span style="text-decoration: underline">finite dimensional</span> vector spaces.</li>
+<li>The <em>dimension</em> of a finite dimensional vector space [latex]\mathcal S[/latex] is the number of vectors in any basis of [latex]\mathcal S[/latex].</li>
+</ul>
+<h2>Linear mappings</h2>
+<p>We say that the mapping [latex]{\mathcal T}: {\mathcal S} \rightarrow {\mathcal U}[/latex] from a vector space [latex]\mathcal S[/latex] to a vector space [latex]\mathcal U[/latex] is <em>linear</em> if for every [latex]x,y \in {\mathcal S}[/latex],</p>
+<p style="text-align: center">[latex]\begin{align*} & {\mathcal T}(x+y)={\mathcal T}(x)+{\mathcal T}(y) \\ & {\mathcal T}(\alpha x) = \alpha {\mathcal T}(x), \end{align*}[/latex]</p>
+<p>where [latex]\alpha \in \mathbb{R}[/latex] (resp. [latex]\alpha \in \mathbb{C}[/latex]) if [latex]\mathcal S[/latex] and [latex]\mathcal U[/latex] are vector spaces over [latex]\mathbb{R}[/latex] (resp. [latex]\mathbb{C}[/latex]).</p>
+<h3>Properties of linear mappings</h3>
+<ul>
+<li>The <em>range</em> [latex]{\mathcal R}_{\mathcal T}[/latex] of [latex]\mathcal T[/latex], which is the image of [latex]\mathcal S[/latex] under [latex]\mathcal T[/latex], is a linear subspace of [latex]\mathcal U[/latex].</li>
+<li>The <em>nullspace</em> or <em>kernel</em> of [latex]\mathcal T[/latex] is a linear subspace of [latex]\mathcal S[/latex]. It is defined as the set [latex]{\mathcal N}_{\mathcal T}[/latex] of vectors of [latex]\mathcal S[/latex] whose image under [latex]\mathcal T[/latex] is zero,</li>
+</ul>
+<p style="text-align: center">[latex]{\mathcal N}_{\mathcal T} = \left\{x \in {\mathcal S} \vert {\mathcal T}(x)=0 \right\}.[/latex]</p>
+<ul>
+<li>The dimensions of [latex]{\mathcal R}_{\mathcal T}[/latex] and [latex]{\mathcal N}_{\mathcal T}[/latex] are such that</li>
+</ul>
+<p style="text-align: center">[latex]\text{dim}({\mathcal R}_{\mathcal T})+\text{dim}({\mathcal N}_{\mathcal T})=\text{dim}({\mathcal S}).[/latex]</p>
+<h2>Matrices</h2>
+<p>Every linear mapping</p>
+<p style="text-align: center">[latex]\begin{array}{llll} {\mathcal T} : & \mathbb{R}^n & \rightarrow & \mathbb{R}^m \\ & x &\mapsto & u \end{array}[/latex]</p>
+<p>can be written as</p>
+<p style="text-align: center">[latex]u_i = \sum_{j=1}^n A_{ij} x_j \quad i=1,\dots,m; \qquad u=\left( \begin{array}{c}u_1 \\u_2\\ \vdots \\u_m\end{array}\right);\quad x=\left(\begin{array}{c}x_1 \\x_2\\ \vdots \\x_n\end{array}\right),[/latex]</p>
+<p>where [latex]A \equiv (A_{ij})[/latex] is a [latex]m \times n[/latex] ([latex]m[/latex] rows, [latex]n[/latex] columns) matrix with real entries. By convention, [latex]A_{ij}[/latex] is the entry at the intersection of the [latex]i^{\hbox{th}}[/latex] row and [latex]j^{\hbox{th}}[/latex] column of [latex]A[/latex].</p>
+<p><span style="text-align: initial;font-size: 1em">Note that once a basis has been chosen, every linear </span>vector space of dimension [latex]n[/latex] is isomorphic to [latex]\mathbb{R}^n[/latex]. We can then represent any linear mapping between two finite dimensional vector spaces by a matrix. In what follows, we will only consider matrices with real coefficients.</p>
+<h3>Definitions</h3>
+<ul>
+<li>The <em>transpose</em> of the matrix [latex]A[/latex] is [latex]A^T[/latex] such that [latex](A^T_{ij}) = (A_{ji})[/latex].</li>
+<li>The <em>rank</em> of the matrix [latex]A[/latex] associated with the linear transformation [latex]\mathcal T[/latex] is the dimension of [latex]{\mathcal R}_{\mathcal T}[/latex]. It is also equal to the rank of [latex]A^T[/latex].</li>
+<li>The <em>determinant</em> of a [latex]2 \times 2[/latex] matrix, [latex]A = \left(\begin{array}{cc} a & b \\ c & d \end{array} \right)[/latex] is</li>
+</ul>
+<p style="text-align: center">[latex]\det A = \left|\begin{array}{cc} a & b \\ c & d \end{array} \right| = a d - b c.[/latex]</p>
+<ul>
+<li><span style="text-align: initial;font-size: 1em">The <em>determinant</em> of an [latex]n \times n[/latex] matrix [latex]A = (A_{ij})[/latex] c</span>an be calculated by means of the formula below, where [latex]i[/latex] is one row of [latex]A[/latex] and [latex]M_{ij}[/latex] is the matrix obtained from [latex]A[/latex] by deleting row [latex]i[/latex] and column [latex]j[/latex]:</li>
+</ul>
+<p style="text-align: center">[latex]\det A = \sum_{j=1}^n (-1)^{i + j} A_{i j} \det M_{ij}.[/latex]</p>
+<ul>
+<li>A similar formula exists for expanding [latex]\det A[/latex] with respect to one column of [latex]A[/latex].</li>
+<li>The <em>trace</em> Tr([latex]A[/latex]) of a square matrix [latex]A[/latex] is the sum of the diagonal entries of [latex]A[/latex].</li>
+</ul>
+<h3>Properties</h3>
+<ul>
+<li>If [latex]A[/latex] is an [latex]m \times n[/latex] matrix, the system [latex]A x = b[/latex] has <span style="text-decoration: underline">at least</span> one solution for every [latex]b[/latex] if and only if the columns of [latex]A[/latex] span [latex]\mathbb{R}^m[/latex]. Then the rank of [latex]A[/latex], [latex]r[/latex], is such that [latex]r = m[/latex], which implies [latex]m \le n[/latex].</li>
+<li>The system [latex]A x = b[/latex] has <span style="text-decoration: underline">at most</span> one solution for every [latex]b[/latex] if and only if the columns of [latex]A[/latex] are linearly independent, i.e. if and only if the nullspace of [latex]A[/latex] is trivial. Then, [latex]r=n[/latex], which implies [latex]n \le m[/latex].</li>
+<li>Let [latex]A[/latex] be an [latex]n \times n[/latex] matrix. Then, the following statements are equivalent.
+<ul>
+<li>The equation [latex]A X = b[/latex] has exactly one solution.</li>
+<li>The range of [latex]A[/latex] is [latex]\mathbb{R}^n[/latex].</li>
+<li>The nullspace of [latex]A[/latex] is trivial.</li>
+<li>The matrix [latex]A[/latex] is invertible.</li>
+<li>The determinant of [latex]A[/latex], [latex]\det A[/latex], is non-zero.</li>
+</ul>
+</li>
+</ul>
+<h2>Eigenvalues and eigenvectors</h2>
+<h3>Definitions</h3>
+<p>Let [latex]A[/latex] be a real [latex]n \times n[/latex] matrix.</p>
+<ul>
+<li>The vector [latex]h \in {\mathcal S}[/latex] is an <em>eigenvector</em> of [latex]A[/latex] with <em>eigenvalue</em> [latex]a \in \mathbb{C}[/latex] if</li>
+</ul>
+<p style="text-align: center">[latex]A h = a h, \qquad h\ne 0.[/latex]</p>
+<ul>
+<li>The vector [latex]f \in {\mathcal S}[/latex] is a <em>generalized eigenvector</em> of [latex]A[/latex] with <em>eigenvalue</em> [latex]a[/latex] if, for some positive integer [latex]m \ne 1[/latex], we have</li>
+</ul>
+<p style="text-align: center">[latex](A - a I_n) f \ne 0, \qquad (A - a I_n)^m f = 0, \qquad f \ne 0.[/latex]</p>
+<p>In the above equation, [latex]I_n[/latex] is the [latex]n \times n[/latex] identity matrix. To find the eigenvalues and eigenvectors of a matrix, first note that if [latex]u[/latex] is an eigenvector of a matrix [latex]A[/latex] with eigenvalue [latex]a[/latex], then the equation</p>
+<p style="text-align: center"><a id="Evec"></a>[latex](A - a\, I_n) u = 0, \qquad (A1.1)[/latex]</p>
+<p>has a non-trivial solution. This implies that</p>
+<p style="text-align: center"><a id="Eval"></a>[latex]\det (A - a I)= 0, \qquad (A1.2)[/latex]</p>
+<p>and one can therefore find the eigenvalues of [latex]A[/latex] by solving this equation.</p>
+<h3>Properties</h3>
+<ul>
+<li>The left-hand-side of (A1.2) is a polynomial of degree [latex]n[/latex] in [latex]a[/latex], called the <em>characteristic polynomial</em> of [latex]A[/latex].</li>
+<li>The characteristic polynomial of [latex]A[/latex] has [latex]n[/latex] complex roots, which are the eigenvalues of [latex]A[/latex].</li>
+<li>Since [latex]A[/latex] has real entries, if [latex]a[/latex] is an eigenvalue of [latex]A[/latex], so is its complex conjugate [latex]a^*[/latex]. As a consequence, the eigenvalues of [latex]A[/latex] are either real, or complex conjugate pairs.</li>
+<li>The trace of [latex]A[/latex] is the sum of the eigenvalues of [latex]A[/latex].</li>
+<li>The determinant of [latex]A[/latex] is the product of the eigenvalues of [latex]A[/latex].</li>
+</ul>
+<p>Once an eigenvalue is found, one needs to solve (A1.1) in order to obtain a corresponding eigenvector. There is not one such eigenvector, but a linear subspace thereof. Each of these eigenspaces is an invariant subspace of the linear transformation [latex]\mathcal T[/latex] associated with the matrix [latex]A[/latex]. The vector space [latex]\mathcal S[/latex], or equivalently [latex]\mathbb{R}^n[/latex], can thus be viewed as the sum of the eigenspaces of [latex]A[/latex], and this decomposition gives a geometric picture of how [latex]\mathcal T[/latex] acts on [latex]\mathcal S[/latex].</p>
+<p>&nbsp;</p>
+<div class="textbox textbox--exercises">
+<header class="textbox__header">
+<h2 class="textbox__title">Food for Thought</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center">Problem 1</h3>
+<p>Show that eigenvectors [latex]u[/latex] and [latex]v[/latex] of a matrix [latex]A[/latex] corresponding to different eigenvalues are linearly independent.</p>
+<hr />
+<h3 style="text-align: center">Problem 2</h3>
+<p>Find the determinant of the following matrix</p>
+<p style="text-align: center">[latex]C = \left[\begin{array}{ccc} 2 & 2 & 6 \\ 4 & 3 & 12 \\ 6 & 4 & 16 \end{array} \right].[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 3</h3>
+<p>Find the eigenvalues and eigenvectors of the following matrix</p>
+<p style="text-align: center">[latex]B = \left[\begin{array}{ccc}4 & -1 & 1 \\ -1 & 4 & -1 \\ -1 & 1 & 2 \end{array}\right].[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 4</h3>
+<p>Consider the transformation from [latex]\mathbb{R}^5[/latex] to [latex]\mathbb{R}^3[/latex] defined by</p>
+<p style="text-align: center">[latex]{\mathcal T}(\vec x) = \left[\begin{array}{c} 0 \\ 2 x_1 - 4 x_2 + x_5 \\ x_2 + x_3 + x_5 \end{array}\right], \qquad \text{where} \qquad \vec x = \left[\begin{array}{c}x_1 \\ x_2 \\ x_3 \\ x_4 \\ x_5 \end{array}\right].[/latex]</p>
+<ol>
+<li><span style="font-size: 1rem;text-align: initial">Is [latex]\mathcal T[/latex] a linear transformation ? Why or why not ?</span></li>
+<li>Find the matrix of [latex]\mathcal T[/latex] relative to the standard bases of [latex]\mathbb{R}^5[/latex] and [latex]\mathbb{R}^3[/latex].</li>
+</ol>
+<hr />
+<h3 style="text-align: center">Problem 5</h3>
+<p>Consider the matrix</p>
+<p style="text-align: center">[latex]A = \left[\begin{array}{ccccc} 1 & 2 & 2 & 4 & 4 \\ 2 & 4 & 3 & 4 & 2 \\ 1 & 1 & 3 & 2 & 3 \end{array}\right].[/latex]</p>
+<ol>
+<li>Find a basis for the column space (or range) of [latex]A[/latex]. Justify your answer.</li>
+<li>Find a basis for the null space of [latex]A[/latex]. Justify your answer.</li>
+<li>What is the rank of [latex]A[/latex]?</li>
+</ol>
+<hr />
+<h3 style="text-align: center">Problem 6</h3>
+<p>Consider the space [latex]\mathbb{P}_2[/latex] of polynomials of degree less than or equal to 2, and let [latex]{\mathcal S} = \left\{q_0,\, q_1,\, q_2,\, q_3,\, q_4\right\}[/latex] be a set of polynomials in [latex]\mathbb{P}_2[/latex], where</p>
+<p style="text-align: center">[latex]\begin{eqnarray*} && q_0(t) = 6 t - t^2, \qquad q_1(t) = 1 - t, \qquad q_2(t)= t + 1 \\ && q_3(t) = 4, \qquad \qquad \ q_4(t) = 2 - 2 t + t^2. \end{eqnarray*}[/latex]</p>
+<ol>
+<li>Find the coordinates of the polynomial [latex]Q[/latex] relative to the standard basis of [latex]\mathbb{P}_2[/latex], where [latex]Q(t)= 4 t^2 - 2 t + 10[/latex].</li>
+<li>Give a basis of [latex]\mathbb{P}_2[/latex] which consists of vectors in [latex]\mathcal S[/latex]. Explain how you choose the vectors.</li>
+<li>Find the coordinates of the polynomial [latex]Q[/latex] defined in Question #1 relative to the basis you found in Question #2.</li>
+</ol>
+<hr />
+<h3 style="text-align: center">Problem 7</h3>
+<p>Consider the following vectors in [latex]\mathbb{R}^4[/latex].</p>
+<p style="text-align: center">[latex]\begin{align*} &\vec v_1 = \left[\begin{array}{cccc} 1 \\ 2 \\ 3 \\ 4\end{array}\right],\qquad \vec v_2 = \left[\begin{array}{cccc} 0 \\ 1 \\ 0 \\ -1\end{array}\right],\qquad \vec v_3 = \left[\begin{array}{cccc} 1 \\ 0 \\ 1 \\ 0\end{array}\right],\\ & \vec v_4 = \left[\begin{array}{cccc} 1 \\ 1 \\ 1 \\ -2\end{array}\right],\qquad \vec v_5 = \left[\begin{array}{cccc} 1 \\ 1 \\ 1 \\ 1\end{array}\right]. \end{align*}[/latex]</p>
+<p>Show that [latex]\displaystyle \left\{\vec v_1,\,\vec v_2,\,\vec v_3,\,\vec v_4,\,\vec v_5\right\}[/latex] is a linearly dependent set.</p>
+</div>
+</div>

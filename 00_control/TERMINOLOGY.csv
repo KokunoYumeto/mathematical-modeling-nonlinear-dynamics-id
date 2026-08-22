@@ -155,3 +155,21 @@ O005-TERM-0153,wave speed,laju gelombang,admitted,Use laju rambat when emphasizi
 O005-TERM-0154,chemotaxis,kemotaksis,admitted,
 O005-TERM-0155,chemotactic,kemotaktik,admitted,
 O005-TERM-0156,degenerate stable node,simpul stabil degenerat,admitted,
+O005-TERM-0157,Turing pattern,pola Turing,admitted,
+O005-TERM-0158,homogeneous solution,solusi homogen,admitted,Use keadaan homogen when the source says homogeneous state.
+O005-TERM-0159,symmetry-breaking instability,ketakstabilan pemecah simetri,admitted,Natural prose may use ketakstabilan yang memecahkan simetri.
+O005-TERM-0160,translational invariance,invariansi translasi,admitted,
+O005-TERM-0161,Fourier mode,mode Fourier,admitted,
+O005-TERM-0162,wave vector,vektor gelombang,admitted,
+O005-TERM-0163,wavenumber,bilangan gelombang,admitted,
+O005-TERM-0164,growth rate,laju pertumbuhan,admitted,
+O005-TERM-0165,linear stability analysis,analisis kestabilan linear,admitted,
+O005-TERM-0166,control parameter,parameter kendali,admitted,
+O005-TERM-0167,characteristic length,panjang karakteristik,admitted,
+O005-TERM-0168,above threshold,di atas ambang,admitted,
+O005-TERM-0169,stationary pattern,pola stasioner,admitted,
+O005-TERM-0170,traveling pattern,pola yang merambat,admitted,Distinguish from traveling wave = gelombang berjalan.
+O005-TERM-0171,vegetation pattern,pola vegetasi,admitted,
+O005-TERM-0172,spatiotemporal disorder,ketakteraturan ruang-waktu,admitted,
+O005-TERM-0173,biomass,biomassa,admitted,
+O005-TERM-0174,semiarid,semiarid,admitted,

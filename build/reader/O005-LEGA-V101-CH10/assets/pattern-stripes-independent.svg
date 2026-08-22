@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="560" viewBox="0 0 800 560" role="img" aria-labelledby="title desc" lang="id" xml:lang="id">
+  <title id="title">Empat contoh ilustratif pola garis di alam</title>
+  <desc id="desc">Empat panel vektor independen memperlihatkan riak pasir, rusuk vertikal kaktus, pita berwarna pada ikan, dan deret awan. Ilustrasi menekankan kemiripan struktur berkala tanpa menyalin foto sumber.</desc>
+  <rect width="800" height="560" rx="24" fill="#f7f4ec"/>
+  <g font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#17324d">
+    <text x="32" y="44">Pola garis di alam</text>
+  </g>
+  <g transform="translate(28 72)">
+    <g>
+      <rect width="356" height="208" rx="16" fill="#d9b778"/>
+      <g fill="none" stroke="#75522f" stroke-width="7" stroke-linecap="round" opacity="0.9">
+        <path d="M-12 32 C50 3 105 61 169 31 S286 7 372 37"/>
+        <path d="M-12 66 C52 37 109 95 172 65 S290 41 372 71"/>
+        <path d="M-12 100 C48 71 109 129 171 99 S289 75 372 105"/>
+        <path d="M-12 134 C50 105 106 163 170 133 S287 109 372 139"/>
+        <path d="M-12 168 C53 139 110 197 174 167 S291 143 372 173"/>
+      </g>
+      <rect y="166" width="356" height="42" rx="0" fill="#17324d" opacity="0.9"/>
+      <text x="18" y="195" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#fff">Riak pasir</text>
+    </g>
+    <g transform="translate(388 0)">
+      <rect width="356" height="208" rx="16" fill="#d8ecf2"/>
+      <path d="M155 166 V56 C155 30 174 15 198 15 C222 15 241 30 241 56 V166 Z" fill="#417b55"/>
+      <path d="M155 91 C128 91 117 73 117 55 C117 43 109 36 99 36 C89 36 81 44 81 56 V106 C81 128 99 145 121 145 H155" fill="#417b55"/>
+      <path d="M241 112 H272 C291 112 305 97 305 78 V55 C305 44 297 36 287 36 C277 36 269 44 269 55 C269 67 260 76 241 76" fill="#417b55"/>
+      <g fill="none" stroke="#b9d79e" stroke-width="5" opacity="0.95">
+        <path d="M174 166 V48"/><path d="M198 166 V35"/><path d="M222 166 V48"/>
+        <path d="M101 120 V58"/><path d="M126 138 V92"/><path d="M286 111 V55"/><path d="M261 109 V78"/>
+      </g>
+      <rect y="166" width="356" height="42" fill="#17324d" opacity="0.9"/>
+      <text x="18" y="195" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#fff">Rusuk kaktus</text>
+    </g>
+    <g transform="translate(0 236)">
+      <rect width="356" height="208" rx="16" fill="#b9e2e7"/>
+      <defs>
+        <clipPath id="fish-body">
+          <ellipse cx="182" cy="94" rx="112" ry="62"/>
+        </clipPath>
+      </defs>
+      <path d="M75 94 L24 49 L29 94 L24 139 Z" fill="#275d77"/>
+      <ellipse cx="182" cy="94" rx="112" ry="62" fill="#2f8fa3"/>
+      <g clip-path="url(#fish-body)" stroke="#f2d34f" stroke-width="13">
+        <path d="M75 48 L285 48"/><path d="M66 78 L295 78"/><path d="M66 108 L295 108"/><path d="M75 138 L285 138"/>
+      </g>
+      <circle cx="255" cy="78" r="7" fill="#102b3b"/>
+      <path d="M285 95 Q301 103 314 94" fill="none" stroke="#102b3b" stroke-width="4" stroke-linecap="round"/>
+      <rect y="166" width="356" height="42" fill="#17324d" opacity="0.9"/>
+      <text x="18" y="195" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#fff">Pita ikan</text>
+    </g>
+    <g transform="translate(388 236)">
+      <rect width="356" height="208" rx="16" fill="#87b8dc"/>
+      <g fill="none" stroke="#f7fbff" stroke-width="18" stroke-linecap="round" opacity="0.92">
+        <path d="M-10 35 C58 8 102 58 166 32 S277 5 368 39"/>
+        <path d="M-10 78 C53 51 106 101 169 75 S281 49 368 82"/>
+        <path d="M-10 121 C60 94 105 144 172 118 S284 92 368 125"/>
+      </g>
+      <rect y="166" width="356" height="42" fill="#17324d" opacity="0.9"/>
+      <text x="18" y="195" font-family="Arial, sans-serif" font-size="21" font-weight="700" fill="#fff">Deret awan</text>
+    </g>
+  </g>
+</svg>
