@@ -401,6 +401,10 @@ item is Chapter 9, record 196, *Diffusion*.
   1280×900; mobile shell/article width was 357.5 px and centered at 390×844.
   Document overflow was zero, four paragraphs and eleven MathML nodes rendered,
   all three IDs were unique, both fragment links resolved, and logs were empty.
+- Published production commit:
+  `a21eeb7bb5f092042ab0e726a263788dca0ce14a` on `origin/main`. Remote-head
+  equality passed. Anonymous immutable-commit readback covered all 27 changed
+  files / 793,229 bytes with zero byte-count or SHA-256 mismatches.
 
 ## Frozen Chapter 8 boundary
 

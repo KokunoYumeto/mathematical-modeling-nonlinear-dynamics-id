@@ -534,3 +534,17 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   six emphasis spans, and eleven formulas rendered, all three IDs were unique,
   both local fragments resolved, and browser logs were empty. No audio, live
   widget, figure, or external-link reachability test was applicable.
+
+## Public readback — Part 4 and Chapter 8 authority — 2026-08-22
+
+- Production commit: `a21eeb7bb5f092042ab0e726a263788dca0ce14a`.
+- `git push origin main` advanced the public branch from `baff434` to
+  `a21eeb7`; remote-head equality passed.
+- All 27 changed files were fetched anonymously from immutable GitHub raw URLs
+  and compared with committed local counterparts: 793,229 local bytes, 793,229
+  public bytes, zero byte-count mismatches, and zero SHA-256 mismatches.
+- The ordered `path<TAB>bytes<TAB>sha256` public inventory has SHA-256
+  `d52b0b8b21296e8899faa1d3efd633a7760e4f769df2d5c81c37656d13a089bb`.
+  Coverage includes the complete Part 4 target/backend/reader, corrected
+  code-point provenance, pipeline and cursor controls, and all seven Chapter 8
+  authority files including its three source rasters.
