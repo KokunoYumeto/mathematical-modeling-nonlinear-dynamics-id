@@ -181,6 +181,25 @@ UNIT_SPECS = {
         "plain_paragraphs": False,
         "change_note": "penerjemahan, koreksi matematika terdokumentasi, pengindeksan modular, dukungan ketuntasan, dan pendamping analisis bidang fase dengan Python terbuka tanpa ketergantungan perangkat lunak berpemilik",
     },
+    "O005-LEGA-V101-CH07": {
+        "unit_type": "chapter",
+        "unit_number": 7,
+        "chapter_number": 7,
+        "source_title": "Epidemiology",
+        "target_title": "Epidemiologi",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/epidemiology/",
+        "target_assets": [
+            "assets/sir-phase-source.png",
+            "assets/endemic-phase-1-source.png",
+            "assets/endemic-phase-2-source.png",
+        ],
+        "caption_count": 3,
+        "footnote_count": 1,
+        "notebook": "notebooks/chapter-07-open-epidemiology.ipynb",
+        "problem_count": 5,
+        "plain_paragraphs": False,
+        "change_note": "penerjemahan, koreksi matematika terdokumentasi, pengindeksan modular, dukungan ketuntasan, dan pendamping epidemiologi serta analisis bidang fase dengan Python terbuka tanpa ketergantungan perangkat lunak berpemilik",
+    },
 }
 
 

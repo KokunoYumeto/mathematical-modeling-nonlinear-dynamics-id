@@ -135,3 +135,31 @@ The mastery record explicitly labels the simplifying closure `R = B` as new to
 this edition rather than source-derived. All six newly authored hints, checks,
 solutions/rubrics, and the notebook remain distributed compatibly with the
 reader's ShareAlike boundary.
+
+## Chapter 7 and Part 4 introduction component record
+
+Chapter 7 retains all three frozen Pressbooks raster phase portraits
+byte-for-byte: classic SIR (269,240 bytes, SHA-256
+`6fb4ddda16dc32455db64ec8211e561260118f5a2994aa88b503a179d851c08b`),
+stable disease-free endemic dynamics (307,592 bytes, SHA-256
+`20862c9a7ae87d9d6cc5d3c00a5ea855ee7c7a786cd832e40b6aebf8acbb63af`),
+and stable endemic dynamics (288,503 bytes, SHA-256
+`e1b4360292dceb3d403cc54cc1b76cf1b45d80a9331acdad6a2f460d77eb9058`).
+Indonesian captions, distinct alternative text, long descriptions, corrections,
+and the white reader canvas are adaptation components under CC BY-NC-SA 4.0;
+the white canvas changes presentation only and does not alter the source bytes.
+
+No PPLANE, MATLAB, or other proprietary program code was imported. The
+NumPy/SciPy/Matplotlib epidemiology notebook is a new independent
+implementation of the displayed systems. Problem 5 does not determine a unique
+MSEIR model; the notebook and mastery record therefore identify every added
+transition assumption and label their passively immune newborn-fraction model
+as a reference closure rather than source-authored fact. The cited journal
+articles were used only to verify bibliographic/model claims; no article text,
+figure, data, or supplemental file is redistributed.
+
+Visible Part 4 record 58 is frozen as a source-derived CC BY-NC-SA 4.0 prose
+unit with no component asset, problem, mastery, notebook, footnote, or figure.
+Its raw and rendered source each contain one literal U+FFFD before
+“reaction-diffusion”; the planned Indonesian translation must record the
+transparent textual repair without altering the frozen authority witness.

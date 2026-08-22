@@ -31,19 +31,19 @@
     "all_bytes_and_sha256_equal": true
   },
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-CH06",
+    "unit_id": "O005-LEGA-V101-CH07",
     "source_record_type": "chapters",
-    "source_record_id": 53,
-    "source_slug": "two-species-models",
-    "source_canonical_sha256": "cdcc1c12fc5c0245ffbb94c6cfdc706570f50540bb6719d78e1391f282b114de",
-    "source_content_sha256": "d9e372db30a8afbae16bdc43f03fa486035c87deb5f8db774ae2e671d6594938",
-    "target_content_sha256": "67e09680f3a67626a2a6761dd4376202985d87a06bdea72dbbd59978b9b08564",
-    "segment_sha256": "f6e18702e5d7c5ed521a487b5439d888f942b052fda194cbc16217feacc0eecf",
-    "mastery_sha256": "898e4b224ca73073a20a8fb87021d305d00be53f43729eb10d9717cc39dba1b4",
-    "notebook_sha256": "2bb805326ad45bfb90a914dbd2eb12b5a579e63d0cb60cdce8f4f6c8928eb33a",
-    "reader_manifest_sha256": "7a5b5b3d80871ba4f1411fd693a2cb351befa7bab8c0cda11c55999585605b44",
-    "qa_tree_sha256": "f18df68aa2462a496b8cca2eb3c85ddb9e7a421924819cdeff9c1316a635c1cc"
+    "source_record_id": 57,
+    "source_slug": "epidemiology",
+    "source_canonical_sha256": "dcf828ca5ce0c58ced8eb5203dfd1b5a949bd6af3b9c000017a6dd133bb58d2f",
+    "source_content_sha256": "027493e86a470e8573d48833b41e4bc365910b255bd7324f1d7ae3272d17c38c",
+    "target_content_sha256": "a7ea1f78c96dbdc24694bd376413e8d675e96899849f4ff2887c3c7a825918c1",
+    "segment_sha256": "57e00551fd14bc85e072def42da47c12ad7ade11a3445578a16a303d96903e7f",
+    "mastery_sha256": "d4e6d41a84fd2615af02e599df9ebcca1fd40a7b47152159ac501a5064785eed",
+    "notebook_sha256": "92a9cf27d48d5e7766881592095f1232cc4d2357ee5d0a46bdb871591afafce4",
+    "reader_manifest_sha256": "3db70ad91f0c0e1d5ffbe4ce0aed504f8fca516f03da216629fa4a15576feed1",
+    "qa_tree_sha256": "c5a308a88ba224e05416d4dc5d59219d3dcafa57a5623dbd16e253d5c3822011"
   },
-  "current_unit": "O005-LEGA-V101-CH07",
-  "next_action": "Translate Pressbooks chapter record 57, Epidemiology, as Epidemiologi, preserving 123 raw lines, 126 opening elements, 29 links, 150 TeX occurrences, three figures, one footnote, and five problems, with complete mastery and an independent open phase-plane/epidemiology computation closure."
+  "current_unit": "O005-LEGA-V101-PT04",
+  "next_action": "Translate Pressbooks part record 58, Chemical Reactions and Spatial Effects, as Reaksi Kimia dan Efek Spasial, preserving seven raw lines, six ordered elements and eleven TeX occurrences; repair the one source U+FFFD transparently and add no inapplicable mastery, notebook, asset, footnote, figure, or problem surface."
 }

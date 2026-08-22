@@ -535,6 +535,16 @@ SPECS = {
         ],
         "replacements": [],
     },
+    "O005-LEGA-V101-CH07": {
+        "source_lines": 123,
+        "problem_count": 5,
+        "fragments": [
+            "01-viral-intro.html",
+            "02-sir-endemic-summary.html",
+            "03-exercises.html",
+        ],
+        "replacements": [],
+    },
 }
 
 

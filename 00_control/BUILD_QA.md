@@ -418,3 +418,70 @@ validated the visible anchor behavior on the final stylesheet bytes.
   `2bb805326ad45bfb90a914dbd2eb12b5a579e63d0cb60cdce8f4f6c8928eb33a`;
   and shared CSS
   `855b0177868a8c3d32ceffee55adfa8f738f8b2116581ca460acaa3e734789ee`.
+
+## Admitted build — O005-LEGA-V101-CH07 — 2026-08-22
+
+- Builder: `scripts/build_unit_reader.py --unit O005-LEGA-V101-CH07`, Pandoc
+  3.9.0.2, native MathML for chapter and mastery mathematics.
+- Final QA: `scripts/qa_unit.py --unit O005-LEGA-V101-CH07
+  --execute-notebook --deterministic-build`, exit 0 after the white scientific-
+  figure canvas repair.
+- Structural replay: 123 / 123 source-target lines, 126 / 126 ordered
+  elements, 29 / 29 links, 150 source TeX occurrences mapped to 160 declared
+  target occurrences, three / three figures, one / one footnote, and five /
+  five stable problems. Declared interventions are O005-CORR-0064–0080.
+- Backend: 162 paired segments / 106,058 bytes, SHA-256
+  `57e00551fd14bc85e072def42da47c12ad7ade11a3445578a16a303d96903e7f`;
+  five complete mastery records / 19,470 bytes, SHA-256
+  `d4e6d41a84fd2615af02e599df9ebcca1fd40a7b47152159ac501a5064785eed`.
+- Notebook: 14 cells / six code cells / 42 assertions, unique deterministic
+  cell IDs and clean stored outputs. Python 3.13.9, NumPy 2.4.4, SciPy 1.17.1,
+  and Matplotlib 3.10.9 executed successfully with the Agg backend. Viral and
+  endemic equilibria, local eigenvalues, classic-SIR invariants/final sizes,
+  threshold cases, and the explicitly added MSEIR population-balance closure
+  all passed.
+- Reader: ten payload files / 1,188,206 bytes excluding the 1,035-byte
+  manifest; 160 chapter and 151 mastery MathML nodes; six local dependencies;
+  three loaded figures; one localized note; zero missing dependency, duplicate
+  ID, broken fragment, raw mastery TeX, token-shape, local-path, privacy, or
+  U+FFFD failure.
+- Reader manifest SHA-256
+  `3db70ad91f0c0e1d5ffbe4ce0aed504f8fca516f03da216629fa4a15576feed1`.
+  Final deterministic double build: 11 files including manifest,
+  byte-identical; canonical tree SHA-256
+  `c5a308a88ba224e05416d4dc5d59219d3dcafa57a5623dbd16e253d5c3822011`.
+- Browser visual QA against the final bytes: at 1280×900 the main shell was
+  1,152 px and the article 768 px, both centered; at 390×844 the shell/article
+  was 357.5 px and centered. Document scroll width equaled client width, all
+  three 1,024 px rasters loaded responsively with an opaque white canvas, all
+  30 IDs were unique, all 34 fragment links resolved, and the Figure 7.3 return
+  target landed 79.97 px below the top against a 45.05 px sticky navigation.
+  Browser logs were empty. External-link reachability was not tested; no audio
+  or live widget exists.
+
+## Scientific-figure canvas propagation — all completed units — 2026-08-22
+
+Chapter 7 exposed a shared dark-theme defect: transparent source rasters with
+black equations and axis labels inherited the reader's dark background, making
+their margins unreadable. The generic figure-image rule now supplies a white
+canvas. Final shared CSS is 4,760 bytes, SHA-256
+`dbcefe88c42a8cf49df285682124fa86010c6621faf9b82ec7be5c324625a0a5`.
+The exact 20-byte change was copied into every earlier completed reader and
+each package manifest regenerated; source prose, mathematics, segments,
+mastery, notebooks, data, and figures did not change.
+
+| Unit | Payload bytes | Package-manifest SHA-256 | Current tree SHA-256 |
+|---|---:|---|---|
+| O005-LEGA-V101-CH01 | 217,574 | `57c36f76beb9103f37bf352b03618764297497f2ff242bdf1826c95f29962910` | `753ccc07a6b6d999868befe65c562684c076d3031cccc17fbdaf302d966de097` |
+| O005-LEGA-V101-CH02 | 358,845 | `4326d84165451af8281e4ebbeaf9ae7f886d14b25160e05c6cebf68fcdedc81f` | `e57091cdc7cc973569b57c18ee77cae3b672987f0195e31d57ecda27e4b59b61` |
+| O005-LEGA-V101-PT02 | 11,272 | `dabde43f8d08b87e180a678b13f352bc29cea8158c50139bd20ef83cadf11ee1` | `389c6f8f17e675a1a71d19f67634b2d7885d0e652f331f60f236b27ccfc7b851` |
+| O005-LEGA-V101-CH03 | 2,025,516 | `aae42b82ed66defe9ca7c741f548d528f4809ac522d3998e66853de773eac071` | `52d03ce3523f45b181fb089e2519eae5f30817a71e636037093f7df9e2611739` |
+| O005-LEGA-V101-CH04 | 447,272 | `d5f3d23ae55a2036227575e38a3b84cb575dd38f32ee497e3445dd88bdff8181` | `194e3f0bbb034087e21bd48ead7dfcd046c9e6072385b2d115957ba869fb9451` |
+| O005-LEGA-V101-PT03 | 17,072 | `420acb90f6e882533916d201c95e6caf441463e190d44968293bac57ba4ff18b` | `29a20b059617c2f6184357c341ed595f9471e545bfa7fc0aa76f810a6823ebb6` |
+| O005-LEGA-V101-CH05 | 968,551 | `ef76221c7c0f89c90f3d3dfb416f9c82e16a93886ea42f4e24a6b9beee313525` | `e931b31a5ed2d9adc634089fca4aa495b235c65fb88164461048a181069e7e0f` |
+| O005-LEGA-V101-CH06 | 1,461,009 | `3b317bf8da9e47c46fab03537496df7db27fb0ae81beae787f696ffb4381fe2e` | `879007befcf0a2908dfce14bcea55c4d20904c1d07f9bb79ab57d4631bd505ef` |
+
+Each earlier unit passed a deterministic, non-notebook-executing structure,
+backend, locality, accessibility, and package regression after propagation.
+Chapter 7 then passed the complete notebook-executing deterministic gate and
+the bounded desktop/mobile browser inspection on the same final CSS bytes.

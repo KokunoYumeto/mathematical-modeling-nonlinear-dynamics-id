@@ -1,0 +1,56 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "mastery_path": "backend/mastery/O005-LEGA-V101-CH07.mastery.json",
+  "mastery_sha256": "d4e6d41a84fd2615af02e599df9ebcca1fd40a7b47152159ac501a5064785eed",
+  "notebook_path": "source/id-ID/O005-LEGA-V101-CH07/notebooks/chapter-07-open-epidemiology.ipynb",
+  "notebook_sha256": "92a9cf27d48d5e7766881592095f1232cc4d2357ee5d0a46bdb871591afafce4",
+  "problems": [
+    "O005-LEGA-V101-CH07-P01",
+    "O005-LEGA-V101-CH07-P02",
+    "O005-LEGA-V101-CH07-P03",
+    "O005-LEGA-V101-CH07-P04",
+    "O005-LEGA-V101-CH07-P05"
+  ],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 162,
+    "path": "backend/segments/O005-LEGA-V101-CH07.segments.jsonl",
+    "sha256": "57e00551fd14bc85e072def42da47c12ad7ade11a3445578a16a303d96903e7f"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "chapter": "Epidemiology",
+    "content_sha256": "027493e86a470e8573d48833b41e4bc365910b255bd7324f1d7ae3272d17c38c",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/epidemiology/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-CH07/content.html",
+    "content_sha256": "a7ea1f78c96dbdc24694bd376413e8d675e96899849f4ff2887c3c7a825918c1",
+    "figures": [
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH07/assets/sir-phase-source.png",
+        "sha256": "6fb4ddda16dc32455db64ec8211e561260118f5a2994aa88b503a179d851c08b"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH07/assets/endemic-phase-1-source.png",
+        "sha256": "20862c9a7ae87d9d6cc5d3c00a5ea855ee7c7a786cd832e40b6aebf8acbb63af"
+      },
+      {
+        "path": "source/id-ID/O005-LEGA-V101-CH07/assets/endemic-phase-2-source.png",
+        "sha256": "e1b4360292dceb3d403cc54cc1b76cf1b45d80a9331acdad6a2f460d77eb9058"
+      }
+    ],
+    "title": "Epidemiologi"
+  },
+  "unit_id": "O005-LEGA-V101-CH07"
+}

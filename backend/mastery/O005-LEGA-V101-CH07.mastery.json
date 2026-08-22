@@ -1,0 +1,309 @@
+{
+  "schema": "o005-mastery-v1",
+  "schema_version": "1.0.0",
+  "unit_id": "O005-LEGA-V101-CH07",
+  "language": "id-ID",
+  "source": {
+    "resource": "Joceline Lega, Introduction to Mathematical Modeling",
+    "edition": "University of Arizona Pressbooks v1.01 (Maret 2026)",
+    "record": "Pressbooks chapter 57",
+    "record_id": 57,
+    "source_title": "Epidemiology",
+    "target_title": "Epidemiologi",
+    "modified_utc": "2026-03-19T20:23:36Z",
+    "source_file": "authority/units/O005-LEGA-V101-CH07/content.raw.en.html",
+    "source_locator": "exact frozen Pressbooks record 57 content.raw, equations on lines 15–77, problems on lines 94–120",
+    "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/epidemiology/",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "provenance_policy": {
+    "source_derived": "Ringkasan masalah merupakan adaptasi/terjemahan dari soal sumber dan tetap berada di bawah CC BY-NC-SA 4.0.",
+    "new_original": "Petunjuk, rekaman pemeriksaan/jawaban, solusi, rubrik, implementasi komputasi, dan koreksi matematis ditulis baru untuk edisi Bahasa Indonesia dan ditandai terpisah dari materi sumber. Sumber tidak menyediakan himpunan solusi. Koreksi berkeyakinan tinggi meliputi syarat ketat bagi kesetimbangan endemik, ketidakcocokan parameter Gambar 7.3 antara prosa dan keterangan gambar, serta kebutuhan mengasumsikan beta positif sebelum mendefinisikan delta=beta/alpha dan R0=alpha/beta."
+  },
+  "article_link_catalog": [
+    {
+      "link_id": "O005-LEGA-V101-CH07-LINK01",
+      "title": "Notebook Python terbuka Bab 7: epidemiologi",
+      "url": "notebooks/chapter-07-open-epidemiology.ipynb"
+    }
+  ],
+  "problems": [
+    {
+      "problem_id": "O005-LEGA-V101-CH07-P01",
+      "ordinal": 1,
+      "problem_summary": "Tuliskan model infeksi virus (7.1) dalam bentuk tak berdimensi dengan waktu alternatif \\(\\tau=\\lambda kbt/\\delta^2\\), pilih skala \\(x,y,v\\) yang konsisten dengan perpindahan sel, dan buktikan bahwa \\(\\tau\\) tak berdimensi.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH07-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\tau = \\lambda k b t / \\delta^2",
+        "\\displaystyle x = \\frac{k b}{\\delta^2} X",
+        "y = \\frac{k b}{\\delta^2} Y",
+        "v = \\frac{b}{\\delta} V."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Pertahankan skala sel yang sama untuk \\(X\\) dan \\(Y\\): \\(X_0=Y_0=\\delta^2/(kb)\\). Gunakan skala virus \\(V_0=\\delta/b\\), lalu nyatakan laju waktu alternatif sebagai \\(q=\\lambda/X_0=\\lambda kb/\\delta^2\\)."
+      },
+      "check": {
+        "type": "exact_alternative_nondimensionalization",
+        "final_answer": "Ambil \\(x=kbX/\\delta^2\\), \\(y=kbY/\\delta^2\\), \\(v=bV/\\delta\\), dan \\(\\tau=\\lambda kbt/\\delta^2\\). Dengan \\(\\rho=\\delta^3/(\\lambda kb)=1/\\zeta\\), \\(\\eta=a/\\delta\\), dan \\(\\mu=\\kappa/\\delta\\), diperoleh \\(dx/d\\tau=1-\\rho x(1+v)\\), \\(dy/d\\tau=\\rho(vx-\\eta y)\\), dan \\(dv/d\\tau=\\rho(y-\\mu v)\\). Karena \\([\\lambda]=CT^{-1}\\), \\([k]=VC^{-1}T^{-1}\\), \\([b]=V^{-1}T^{-1}\\), dan \\([\\delta]=T^{-1}\\), maka \\([\\lambda kb t/\\delta^2]=1\\). Bentuk ini setara dengan (7.2) melalui perubahan waktu \\(\\tau_{\\mathrm{alt}}=\\zeta\\tau_{(7.2)}\\).",
+        "quick_check": "Skala \\(X\\) dan \\(Y\\) harus sama agar suku \\(bVX\\) berpindah antarkompartemen tanpa faktor konversi buatan. Substitusi balik wajib memulihkan ketiga persamaan (7.1), dan \\(\\rho,\\eta,\\mu\\) harus tak berdimensi."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Gunakan skala sel dan virus yang sama dengan penskalaan bab, tetapi ganti skala waktu.",
+            "formula": "X_0=Y_0=\\frac{\\delta^2}{kb},\\qquad V_0=\\frac\\delta b,\\qquad q=\\frac\\lambda{X_0}=\\frac{\\lambda kb}{\\delta^2}"
+          },
+          {
+            "explanation": "Definisikan variabel tak berdimensi.",
+            "formula": "x=\\frac X{X_0},\\qquad y=\\frac Y{Y_0},\\qquad v=\\frac V{V_0},\\qquad \\tau=qt"
+          },
+          {
+            "explanation": "Substitusi pada persamaan sel tak terinfeksi dan bagi dengan \\(qX_0=\\lambda\\).",
+            "formula": "\\frac{dx}{d\\tau}=1-\\frac\\delta qx-\\frac\\delta qvx=1-\\rho x(1+v)"
+          },
+          {
+            "explanation": "Gunakan skala sel yang sama pada persamaan sel terinfeksi.",
+            "formula": "\\frac{dy}{d\\tau}=\\rho(vx-\\eta y)"
+          },
+          {
+            "explanation": "Substitusi skala virus memberi persamaan ketiga.",
+            "formula": "\\frac{dv}{d\\tau}=\\rho(y-\\mu v)"
+          },
+          {
+            "explanation": "Periksa dimensi laju waktu alternatif.",
+            "formula": "[\\lambda kb]=T^{-3},\\qquad[\\delta^2]=T^{-2},\\qquad\\left[\\frac{\\lambda kb}{\\delta^2}t\\right]=1"
+          }
+        ],
+        "conclusion": "Pilihan waktu alternatif hanya mengalikan ruas kanan bentuk (7.2) dengan \\(1/\\zeta\\); lintasan ruang fase sama, tetapi parametrisasinya terhadap waktu berubah."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH07-P02",
+      "ordinal": 2,
+      "problem_summary": "Untuk model virus tak berdimensi (7.2), tentukan semua titik tetap, syarat agar berada di oktan pertama beserta makna biologisnya, dan kestabilan linear titik bebas infeksi \\(y=v=0\\).",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH07-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\left\\{\\begin{align*} \\displaystyle \\frac{d x}{d \\tau} &amp; = \\zeta - x - v\\, x,\\\\ \\displaystyle \\frac{d y}{d \\tau} &amp; = v\\, x - \\eta\\, y,\\\\ \\displaystyle \\frac{d v}{d \\tau} &amp; = y - \\mu\\, v, \\end{align*}\\right. \\qquad (7.2)",
+        "y = v = 0"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Dari \\(v'=0\\), gunakan \\(y=\\mu v\\). Persamaan \\(y'=0\\) lalu memfaktorkan \\(v(x-\\eta\\mu)=0\\). Pada titik bebas infeksi, Jacobian mempunyai satu nilai eigen \\(-1\\) dan satu blok \\(2\\times2\\)."
+      },
+      "check": {
+        "type": "exact_viral_equilibria_and_threshold",
+        "final_answer": "Titik bebas infeksi ialah \\(E_0=(\\zeta,0,0)\\), selalu berada di oktan nonnegatif untuk \\(\\zeta\\ge0\\). Kandidat endemik ialah \\(E_*=(\\eta\\mu,(\\zeta-\\eta\\mu)/\\eta,(\\zeta-\\eta\\mu)/(\\eta\\mu))\\); ia nonnegatif bila \\(\\zeta\\ge\\eta\\mu\\) dan benar-benar interior bila \\(\\zeta>\\eta\\mu\\). Definisikan \\(\\mathcal R_v=\\zeta/(\\eta\\mu)=\\lambda kb/(\\delta a\\kappa)\\). Di \\(E_0\\), nilai eigen adalah \\(-1\\) dan akar \\(r^2+(\\eta+\\mu)r+\\eta\\mu-\\zeta=0\\). Jadi \\(E_0\\) stabil asimtotik jika \\(\\mathcal R_v<1\\), pelana jika \\(\\mathcal R_v>1\\), dan nonhiperbolik pada ambang \\(\\mathcal R_v=1\\), saat kedua titik tetap berimpit.",
+        "quick_check": "Pada \\(\\zeta=\\eta\\mu\\), kandidat endemik harus mereduksi tepat ke \\((\\zeta,0,0)\\). Tanda suku konstan polinom eigen, \\(\\eta\\mu-\\zeta\\), harus membalik tepat pada ambang invasi."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Persamaan ketiga pada titik tetap menghubungkan sel terinfeksi dan virus bebas.",
+            "formula": "0=y-\\mu v\\quad\\Longrightarrow\\quad y=\\mu v"
+          },
+          {
+            "explanation": "Masukkan relasi tersebut ke persamaan kedua.",
+            "formula": "0=vx-\\eta\\mu v=v(x-\\eta\\mu)"
+          },
+          {
+            "explanation": "Cabang \\(v=0\\) memberi titik bebas infeksi.",
+            "formula": "v=0\\Rightarrow y=0,\\ x=\\zeta\\Rightarrow E_0=(\\zeta,0,0)"
+          },
+          {
+            "explanation": "Cabang \\(x=\\eta\\mu\\) memberi titik endemik.",
+            "formula": "v=\\frac{\\zeta}{\\eta\\mu}-1,\\qquad y=\\mu v=\\frac{\\zeta-\\eta\\mu}{\\eta}"
+          },
+          {
+            "explanation": "Evaluasi Jacobian pada titik bebas infeksi dan pisahkan arah \\(x\\).",
+            "formula": "J(E_0)=\\begin{pmatrix}-1&0&-\\zeta\\\\0&-\\eta&\\zeta\\\\0&1&-\\mu\\end{pmatrix}"
+          },
+          {
+            "explanation": "Blok infeksi menentukan apakah gangguan kecil tumbuh atau meluruh.",
+            "formula": "(r+\\eta)(r+\\mu)-\\zeta=0"
+          }
+        ],
+        "conclusion": "Rasio \\(\\mathcal R_v\\) membandingkan produksi infeksi baru dengan kehilangan sel terinfeksi dan virus. Nilai di bawah satu membersihkan infeksi; nilai di atas satu memungkinkan keadaan endemik positif."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH07-P03",
+      "ordinal": 3,
+      "problem_summary": "Buktikan bahwa segitiga biologis \\(\\mathcal T=\\{(s,i):s\\ge0,\\ i\\ge0,\\ s+i\\le1\\}\\) invarian maju untuk model endemik (7.6).",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH07-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\left\\{\\begin{align*} \\displaystyle \\frac{d s}{d \\tau} &amp; = \\eta - \\eta s - s i,\\\\ \\displaystyle \\frac{d i}{d \\tau} &amp; = - (\\eta+\\delta) i + s i, \\end{align*}\\right. \\qquad (7.6)",
+        "\\mathcal T"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Periksa tiga sisi secara terpisah. Pada sisi miring gunakan \\(i=1-s\\) setelah menjumlahkan kedua persamaan."
+      },
+      "check": {
+        "type": "exact_triangle_positive_invariance",
+        "final_answer": "Pada \\(s=0\\), \\(s'=\\eta>0\\), sehingga medan mengarah masuk. Pada \\(i=0\\), \\(i'=0\\), sehingga sumbu \\(s\\) invarian dan \\(s'=\\eta(1-s)\\) tetap berada pada \\([0,1]\\). Pada \\(s+i=1\\), \\((s+i)'=\\eta(1-s)-i(\\eta+\\delta)=-\\delta i\\le0\\). Karena ruas kanan polinomial menjamin keunikan, tidak ada lintasan yang dapat menyeberang keluar melalui ketiga sisi; maka \\(\\mathcal T\\) invarian maju.",
+        "quick_check": "Komponen normal harus bertanda masuk atau menyinggung pada setiap sisi. Pada sudut \\((0,1)\\), hasil tetap konsisten: \\(s'=\\eta>0\\) dan \\((s+i)'=-\\delta<0\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Medan polinomial lokal Lipschitz, sehingga solusi unik dan argumen batas dapat dipakai.",
+            "formula": "F(s,i)=\\bigl(\\eta(1-s)-si,\\ i(s-\\eta-\\delta)\\bigr)"
+          },
+          {
+            "explanation": "Pada sisi vertikal, komponen \\(s\\) menunjuk ke kanan.",
+            "formula": "s=0:\\qquad s'=\\eta>0"
+          },
+          {
+            "explanation": "Pada sisi horizontal, komponen normal nol.",
+            "formula": "i=0:\\qquad i'=0,\\quad s'=\\eta(1-s)"
+          },
+          {
+            "explanation": "Pada sisi miring, turunan jumlah kompartemen aktif tidak positif.",
+            "formula": "s+i=1:\\qquad (s+i)'=-\\delta i\\le0"
+          }
+        ],
+        "conclusion": "Setiap sisi menahan lintasan di dalam segitiga, sehingga keadaan awal yang mewakili proporsi populasi tetap bermakna secara biologis untuk semua waktu maju."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH07-P04",
+      "ordinal": 4,
+      "problem_summary": "Untuk model endemik (7.6) dengan \\(\\eta+\\delta<1\\), tentukan apakah kesetimbangan endemik \\(P_2\\) dapat berupa simpul stabil alih-alih spiral stabil, dan berikan syarat serta contoh parameter eksplisit.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH07-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "\\eta + \\delta \\lt 1",
+        "P_2",
+        "J(P_2) = \\left(\\begin{array}{cc} -\\displaystyle \\frac{\\eta}{\\eta+\\delta} &amp; -(\\eta + \\delta) \\\\ \\displaystyle \\frac{\\eta (1 - \\eta - \\delta)}{\\eta + \\delta} &amp; 0 \\end{array} \\right)."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Tetapkan \\(q=\\eta+\\delta\\). Di \\(P_2\\), gunakan jejak \\(T=-\\eta/q\\), determinan \\(D=\\eta(1-q)\\), dan uji tanda diskriminan \\(T^2-4D\\)."
+      },
+      "check": {
+        "type": "exact_endemic_node_spiral_boundary",
+        "final_answer": "Ya. Untuk \\(q=\\eta+\\delta\\in(0,1)\\), diskriminannya ialah \\(\\Delta=\\eta^2/q^2-4\\eta(1-q)\\). Karena jejak negatif dan determinan positif, \\(P_2\\) adalah simpul stabil bila \\(\\Delta\\ge0\\), yakni \\(\\eta\\ge4q^2(1-q)\\), dan spiral stabil bila \\(\\eta<4q^2(1-q)\\). Contoh simpul: \\(\\eta=0{,}15\\), \\(\\delta=0{,}05\\), sehingga \\(q=0{,}2\\), \\(\\Delta=0{,}0825>0\\), dan nilai eigen sekitar \\(-0{,}231386\\) serta \\(-0{,}518614\\).",
+        "quick_check": "Contoh harus memenuhi \\(\\eta>0\\), \\(\\delta>0\\), dan \\(q<1\\). Pasangan \\((\\eta,\\delta)=(0{,}1,0{,}2)\\) memberi \\(\\Delta<0\\) dan merupakan spiral, bukan simpul."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Ringkas dua parameter melalui jumlahnya.",
+            "formula": "q=\\eta+\\delta,\\qquad 0<q<1"
+          },
+          {
+            "explanation": "Baca jejak dan determinan dari Jacobian yang tercetak.",
+            "formula": "T=-\\frac\\eta q<0,\\qquad D=\\eta(1-q)>0"
+          },
+          {
+            "explanation": "Hitung diskriminan polinom karakteristik.",
+            "formula": "\\Delta=T^2-4D=\\frac{\\eta^2}{q^2}-4\\eta(1-q)"
+          },
+          {
+            "explanation": "Karena \\(\\eta>0\\), sederhanakan syarat akar real.",
+            "formula": "\\Delta\\ge0\\quad\\Longleftrightarrow\\quad\\eta\\ge4q^2(1-q)"
+          },
+          {
+            "explanation": "Uji satu pasangan eksplisit di wilayah simpul.",
+            "formula": "(\\eta,\\delta)=(0.15,0.05):\\quad T=-0.75,\\ D=0.12,\\ \\Delta=0.0825"
+          }
+        ],
+        "conclusion": "Wilayah simpul dan spiral sama-sama tidak kosong. Sumber juga tidak konsisten tentang Gambar 7.3: prosa memberi \\((\\eta,\\delta)=(0{,}2,0{,}1)\\), sedangkan keterangannya memberi \\((0{,}1,0{,}2)\\). Keduanya menghasilkan spiral, tetapi titik endemiknya berbeda. Selain itu, pada \\(\\eta+\\delta=1\\), \\(P_2=P_1=(1,0)\\) dan titiknya nonhiperbolik; kesetimbangan endemik dengan \\(i>0\\) memerlukan pertidaksamaan ketat \\(\\eta+\\delta<1\\)."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH07-P05",
+      "ordinal": 5,
+      "problem_summary": "Bangun satu model MSEIR yang konsisten untuk penyakit dengan kekebalan permanen, laju kelahiran per kapita \\(\\nu\\), laju kematian per kapita \\(\\mu\\), dan \\(\\nu\\ne\\mu\\); karena sumber tidak menentukan hukum transisi, nyatakan semua asumsi dan laju kompartemen sebelum memeriksa keseimbangan populasi total.",
+      "article_link_ids": [
+        "O005-LEGA-V101-CH07-LINK01"
+      ],
+      "source_formula_occurrences": [
+        "MSEIR",
+        "\\nu",
+        "\\mu",
+        "\\nu \\ne \\mu"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "hint": {
+        "text": "Definisikan \\(N=M+S+E+I+R\\). Gunakan \\(\\omega\\) untuk hilangnya kekebalan pasif, \\(\\alpha SI/N\\) untuk insidensi standar, \\(\\sigma\\) untuk progresi \\(E\\to I\\), dan \\(\\gamma\\) untuk pemulihan \\(I\\to R\\). Tempatkan kematian alami \\(-\\mu\\) pada setiap kompartemen dan jumlahkan semua persamaan sebagai pemeriksaan."
+      },
+      "check": {
+        "type": "valid_mseir_model_with_exact_population_balance",
+        "final_answer": "Sumber tidak menentukan alokasi bayi, hilangnya kekebalan maternal, hukum insidensi, progresi laten, atau pemulihan, sehingga tidak ada satu sistem unik yang dapat diturunkan. Sebagai penutupan referensi tambahan, satu model yang sah adalah \\(\\dot M=p\\nu N-(\\omega+\\mu)M\\), \\(\\dot S=(1-p)\\nu N+\\omega M-\\alpha SI/N-\\mu S\\), \\(\\dot E=\\alpha SI/N-(\\sigma+\\mu)E\\), \\(\\dot I=\\sigma E-(\\gamma+\\mu)I\\), dan \\(\\dot R=\\gamma I-\\mu R\\), dengan \\(0\\le p\\le1\\) sebagai proporsi bayi yang masuk kelas kekebalan pasif. Model MSEIR dengan semua bayi mula-mula kebal pasif diperoleh dari \\(p=1\\). Semua fluks internal saling hapus ketika persamaan dijumlahkan, sehingga \\(\\dot N=(\\nu-\\mu)N\\) dan \\(N(t)=N_0e^{(\\nu-\\mu)t}\\). Karena \\(\\nu\\ne\\mu\\), penyebut insidensi standar \\(N(t)\\) tidak boleh diperlakukan konstan.",
+        "quick_check": "Setiap aliran internal harus muncul sekali dengan tanda minus di kompartemen asal dan sekali dengan tanda plus di kompartemen tujuan. Pada batas setiap kompartemen nol, turunannya tidak boleh negatif. Untuk MSEIR, kelas \\(R\\) berisi individu pulih yang masih hidup dan kebal permanen; kematian keluar dari sistem, bukan ditimbun di \\(R\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Definisikan populasi hidup total dan asumsi kelahiran. Fraksi \\(p\\) masuk \\(M\\); sisanya langsung rentan.",
+            "formula": "N=M+S+E+I+R,\\qquad p\\nu N\\to M,\\quad(1-p)\\nu N\\to S"
+          },
+          {
+            "explanation": "Kekebalan pasif hilang dengan laju per kapita \\(\\omega\\).",
+            "formula": "M\\xrightarrow{\\omega}S"
+          },
+          {
+            "explanation": "Gunakan insidensi standar agar laju kontak per rentan tidak tumbuh hanya karena ukuran populasi.",
+            "formula": "S\\xrightarrow{\\alpha I/N}E"
+          },
+          {
+            "explanation": "Tambahkan progresi laten dan pemulihan dengan kekebalan permanen.",
+            "formula": "E\\xrightarrow{\\sigma}I\\xrightarrow{\\gamma}R"
+          },
+          {
+            "explanation": "Kematian alami bekerja pada setiap kelas hidup.",
+            "formula": "\\dot Z\\supset-\\mu Z,\\qquad Z\\in\\{M,S,E,I,R\\}"
+          },
+          {
+            "explanation": "Gabungkan semua aliran menjadi lima persamaan.",
+            "formula": "\\begin{aligned}\\dot M&=p\\nu N-(\\omega+\\mu)M,\\\\\\dot S&=(1-p)\\nu N+\\omega M-\\alpha SI/N-\\mu S,\\\\\\dot E&=\\alpha SI/N-(\\sigma+\\mu)E,\\\\\\dot I&=\\sigma E-(\\gamma+\\mu)I,\\\\\\dot R&=\\gamma I-\\mu R.\\end{aligned}"
+          },
+          {
+            "explanation": "Jumlahkan untuk memeriksa konservasi semua perpindahan internal.",
+            "formula": "\\dot N=(\\nu-\\mu)N"
+          }
+        ],
+        "conclusion": "Sistem ini adalah penutupan referensi baru, bukan model unik yang diimplikasikan sumber. Soal tidak menentukan apakah semua bayi atau hanya sebagian menerima kekebalan pasif; parameter \\(p\\) membuat asumsi itu eksplisit. Memilih \\(p=1\\) memberi bentuk MSEIR paling sederhana. Model mengabaikan kematian akibat penyakit dan hilangnya kekebalan setelah pulih; keduanya dapat ditambahkan bila dinyatakan."
+      }
+    }
+  ]
+}

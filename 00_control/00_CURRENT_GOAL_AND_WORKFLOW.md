@@ -22,17 +22,18 @@ notice, and non-endorsement. Maintain component-level rights. Redraw Figure
 statement; never represent the Pressbooks theme as part of the independently
 reproducible source closure.
 
-Chapter boundaries `O005-LEGA-V101-CH01` through `CH06` (records 25, 27, 38,
-39, 48, and 53) and the visible Part 2 and Part 3 introductions (records 28 and
-40) are translated, built, independently rereviewed where applicable, and
+Chapter boundaries `O005-LEGA-V101-CH01` through `CH07` (records 25, 27, 38,
+39, 48, 53, and 57) and the visible Part 2 and Part 3 introductions (records 28
+and 40) are translated, built, independently rereviewed where applicable, and
 deterministically verified. Their complete topology, identifiers, protected
-mathematics, links, figures, 64 stable problem IDs and mastery records, six
-open Python notebooks, and 1,582 paired segments are bound in the current
-state, cursor, and QA log. The immediate boundary is Chapter 7, Pressbooks
-record 57, *Epidemiology*, as `O005-LEGA-V101-CH07`; preserve its frozen
-123-line raw source, 126 opening elements, 29 links, 150 TeX occurrences, three
-figures, one footnote, and five problems, then complete its
-mastery/computation closure without returning to source selection.
+mathematics, links, figures, 69 stable problem IDs and mastery records, seven
+open Python notebooks, and 1,744 paired segments are bound in the current
+state, cursor, and QA log. The immediate boundary is the visible Part 4
+introduction, Pressbooks record 58, *Chemical Reactions and Spatial Effects*,
+as `O005-LEGA-V101-PT04`: translate its exact seven raw lines, six opening
+elements and eleven TeX occurrences as *Reaksi Kimia dan Efek Spasial*, repair
+the frozen source's single U+FFFD transparently in Indonesian, and manufacture
+no mastery, notebook, asset, footnote, or problem surface where none exists.
 
 Continue in exact frozen TOC order through all front/back matter and
 fourteen chapters: 54,932 source words, 113 exercises, twelve projects, eleven

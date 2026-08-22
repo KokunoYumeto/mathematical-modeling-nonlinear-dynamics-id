@@ -1,0 +1,123 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Tujuan Pembelajaran</h2>
+</header>
+<div class="textbox__content">
+
+Pada akhir bab ini, Anda akan mampu melakukan hal-hal berikut.
+<ul>
+ 	<li>Menyusun model kompartemen yang mendeskripsikan infeksi dan epidemi.</li>
+ 	<li>Merumuskan bentuk tak berdimensi dari model dua dimensi dan menilai dinamikanya melalui analisis bidang fase.</li>
+ 	<li>Menerjemahkan hasil analisis model ke dalam istilah biologis dan membahas arti pentingnya dalam konteks tersebut.</li>
+</ul>
+</div>
+</div>
+<h2>Infeksi virus</h2>
+Pertama-tama, kita memodelkan dinamika infeksi virus, seperti hepatitis B atau C, untuk mendeskripsikan bagaimana virus yang bersangkutan dapat menyebar dan memperbanyak diri di dalam tubuh seseorang. Nyatakan dengan $latex X$ jumlah rata-rata sel yang tidak terinfeksi dan menjadi sasaran infeksi virion; misalkan $latex Y$ adalah jumlah rata-rata sel terinfeksi, dan $latex V$ adalah beban virus rata-rata (atau jumlah virion bebas di dalam tubuh). Sel yang tidak terinfeksi diproduksi tubuh dengan laju konstan $latex \lambda$, mati dengan laju $latex \delta X$, dan terinfeksi dengan laju $latex f(X,V) X$, dengan $latex f$ sebagai suatu fungsi dari $latex X$ dan $latex V$. Akibatnya, sel terinfeksi $latex Y$ terbentuk dengan laju $latex f(X,V) X$, dan kita mengasumsikan sel-sel tersebut mati dengan laju $latex a Y$. Terakhir, virion bebas diproduksi dengan laju yang sebanding dengan jumlah sel terinfeksi, yaitu $latex k Y$, dan disingkirkan atau dihancurkan dengan laju $latex \kappa V$. Sebagai pendekatan pertama, jika kita menganggap $latex f$ sebagai fungsi linear dari $latex V$, yaitu $latex f(X,V) = b V$, kita memperoleh model berikut.[footnote]M.A. Nowak, S. Bonhoeffer, A.M. Hill, R. Boehme, H.C. Thomas, and H. McDade, <em><a href="http://dx.doi.org/10.1073/pnas.93.9.4398">Viral dynamics in hepatitis B virus infection</a></em>, Proc. Natl. Acad. Sci. USA 93, 4398-4402 (1996).[/footnote]
+<p style="text-align: center"><a id="Viral"></a>$latex \left\{\begin{align*} \displaystyle \frac{d X}{d t} &amp; =\lambda - \delta X - b V X, \\ \displaystyle \frac{d Y}{d t} &amp; = b V X - a Y,\\ \displaystyle \frac{d V}{d t} &amp; = k Y - \kappa V, \end{align*}\right. \qquad (7.1)$</p>
+Model ini memiliki enam parameter dan empat variabel. Kita dapat menskalakan ulang waktu dan $latex V$, tetapi sebaiknya tidak menskalakan $latex X$ dan $latex Y$ secara terpisah karena keduanya menghitung sel dan suku $latex b V X$ memindahkan sel dari kompartemen $latex X$ ke kompartemen $latex Y$. Karena itu, kita dapat mereduksi Persamaan (<a href="#Viral">7.1</a>) menjadi model dengan tiga parameter. Secara lebih tepat, misalkan
+<p style="text-align: center">$latex \tau = \delta t, \qquad \displaystyle x = \frac{k b}{\delta^2} X, \qquad y = \frac{k b}{\delta^2} Y, \qquad v = \frac{b}{\delta} V.$</p>
+Dengan demikian, bentuk terskala Persamaan (<a href="#Viral">7.1</a>) adalah
+<p style="text-align: center"><a id="CViral"></a>$latex \left\{\begin{align*} \displaystyle \frac{d x}{d \tau} &amp; = \zeta - x - v\, x,\\ \displaystyle \frac{d y}{d \tau} &amp; = v\, x - \eta\, y,\\ \displaystyle \frac{d v}{d \tau} &amp; = y - \mu\, v, \end{align*}\right. \qquad (7.2)$</p>
+dengan $latex \zeta = \displaystyle \frac{\lambda k b}{\delta^3},$ $latex \eta = \displaystyle \frac{a}{\delta},$ dan $latex \mu = \displaystyle \frac{\kappa}{\delta}$ sebagai parameter tak berdimensi.
+
+Kita menskalakan waktu berdasarkan laju kematian sel yang tidak terinfeksi. Sebagai alternatif, kita dapat menskalakan waktu berdasarkan laju produksi sel yang tidak terinfeksi oleh tubuh, yaitu dengan mendefinisikan $latex \tau = \lambda t / X_0$, dengan $latex X_0 = \delta^2 / (k b)$. Kita juga dapat menggunakan gabungan kedua skala waktu tersebut. Secara umum, variabel tak berdimensi dapat didefinisikan dengan lebih dari satu cara. Pilihan yang paling mudah digunakan sering kali adalah pilihan yang menghasilkan parameter tak berdimensi berorde satu, sejauh hal itu memungkinkan.
+
+Pembaca kami rujuk pada artikel tahun 1998 karya A.U. Neumann <em>et al.</em> yang berjudul <a href="http://dx.doi.org/10.1126/science.282.5386.103"><em>Hepatitis C viral dynamics in vivo and the antiviral efficacy of interferon-alpha therapy</em></a> untuk melihat bagaimana estimasi parameter dalam model (<a href="#Viral">7.1</a>) dapat digunakan guna memahami peran interferon dalam terapi hepatitis C.
+<h2>Pemodelan penyakit menular</h2>
+Literatur mengenai pemodelan penyakit menular sangat luas (untuk sebuah tinjauan, lihat misalnya artikel tahun 2000 karya H. Hethcote yang berjudul <a href="http://dx.doi.org/10.1137/S0036144500371907"><em>The Mathematics of Infectious Diseases</em></a>). Model dasar yang paling umum disebut model MSEIRS. Setiap huruf dalam akronim tersebut merujuk pada kelas atau kompartemen tertentu dalam populasi, dan urutan hurufnya mencerminkan perpindahan individu dari suatu kelas ke kelas di sebelah kanannya seiring perkembangan infeksi atau perubahan status kekebalan. Berbagai kelas tersebut didefinisikan sebagai berikut.
+<ul>
+ 	<li>Kelas M mencakup <em>bayi dengan kekebalan pasif</em>. Biasanya, mereka adalah bayi baru lahir yang ibunya memiliki kekebalan dan yang menerima antibodi melalui plasenta sebelum dilahirkan.</li>
+ 	<li>Kelas S adalah kelas individu <em>rentan</em>, yang dapat terinfeksi penyakit. Bayi dalam kelas M memiliki kekebalan sementara dan pada akhirnya berpindah ke kelas S.</li>
+ 	<li>Kelas E mencakup individu <em>terpapar</em>, yaitu individu yang telah terinfeksi tetapi masih berada dalam masa laten dan belum dapat menularkan penyakit.</li>
+ 	<li>Kelas I adalah kelas individu <em>infeksius</em>, yang dapat menularkan penyakit.</li>
+ 	<li>Kelas R mencakup individu yang telah <em>pulih </em>(atau meninggal) akibat penyakit, atau yang telah <em>dikeluarkan</em> dari kelompok orang yang terdampak penyakit.</li>
+</ul>
+Bergantung pada jenis penyakit menularnya, individu dalam kelas R mungkin telah memperoleh kekebalan permanen. Dalam kasus ini, model yang sesuai berjenis MSEIR. Namun, jika individu yang pulih dalam kelas R pada akhirnya kembali rentan, model MSEIRS perlu digunakan. Kebanyakan model realistis menghubungkan kelas-kelas yang dijelaskan di atas dengan kelompok umur. Beberapa model memperlakukan umur $latex a$ seseorang sebagai variabel bebas. Kelas-kelas lain, seperti kelompok individu bergejala dan tanpa gejala, juga dapat dipertimbangkan, sedangkan jumlah kompartemen yang sesuai beserta sifatnya dipilih oleh pemodel. Penerapan model kompartemen mencakup peramalan perkembangan penyakit serta prediksi efektivitas vaksinasi atau kampanye pemberantasan penyakit. Di bawah ini, kita hanya membahas dua model sederhana, yakni model SIR klasik dan endemik.
+<h3>Model SIR</h3>
+Model SIR klasik tidak mencakup kelas M dan E, dan dituliskan sebagai
+<p style="text-align: center"><a id="SIR"></a>$latex \left\{\begin{align*} \displaystyle \frac{d S}{d t} &amp; = - \alpha S \frac{I}{N},\\ \displaystyle \frac{d I}{d t} &amp; = \alpha S \frac{I}{N} - \beta I,\\ \displaystyle \frac{d R}{d t} &amp; = \beta I, \end{align*}\right. \qquad (7.3)$</p>
+dengan kondisi awal $latex S(0) = S_0 \ge 0,$ $latex I(0)=I_0 \gt 0,$ dan $latex R(0) \ge 0.$ Di sini, $latex S$, $latex I$, dan $latex R$ adalah nilai harapan jumlah individu dalam setiap kompartemen, sedangkan $latex N = S + I + R$ adalah total populasi. Perhatikan bahwa kelahiran dan kematian tidak disertakan dalam model. Hampiran ini biasanya sesuai untuk penyakit yang berkembang dalam jangka waktu singkat, sehingga perubahan total populasi dapat diabaikan.
+
+Dalam model ini, $latex I/N$ menyatakan fraksi individu infeksius. Hasil kali besaran ini dengan <em>laju kontak</em> $latex \alpha &gt; 0$ mengukur rata-rata jumlah kontak efektif (yakni kontak yang menyebabkan penularan penyakit) per individu rentan per satuan waktu. Karena rata-rata terdapat $latex S$ individu rentan, laju perubahan $latex S$ adalah $latex - \alpha S I /N$. Jumlah individu terinfeksi bertambah melalui kontak dengan individu rentan dan berkurang akibat pemulihan dengan suku laju $latex - \beta I$, dengan $latex \beta \gt 0$. Dengan menjumlahkan ketiga persamaan tersebut, mudah diperiksa bahwa $latex d N / d t = 0$, sesuai dengan dugaan karena kelahiran dan kematian telah diabaikan. Karena itu, sistem (<a href="#SIR">7.3</a>) dapat direduksi menjadi sistem persamaan diferensial biasa dua dimensi dengan menghilangkan persamaan terakhir untuk $latex R$. Dua persamaan yang tersisa dapat dituliskan dalam bentuk tak berdimensi dengan menetapkan
+<p style="text-align: center">$latex s = \displaystyle \frac{S}{N},$ $latex i = \displaystyle \frac{I}{N},$ dan $latex \tau = \alpha t.$</p>
+Dengan demikian, dua persamaan pertama dari (<a href="#SIR">7.3</a>) menjadi
+<p style="text-align: center"><a id="CSIR"></a>$latex \left\{\begin{align*} \displaystyle \frac{d s}{d \tau} &amp; =- s i,\\ \displaystyle \frac{d i}{d \tau} &amp; = s i - \delta i, \end{align*}\right. \qquad (7.4)$</p>
+dengan $latex \delta = \beta / \alpha &gt; 0$. Besaran $latex \sigma = 1 /\delta$ adalah laju kontak $latex \alpha$ dikalikan waktu karakteristik $latex 1 / \beta$ selama seseorang tetap infeksius. Besaran ini disebut <em>bilangan kontak</em> penyakit dan sama dengan <i>angka reproduksi dasar  </i>$latex R_0$ ketika infeksi diperkenalkan ke dalam populasi yang seluruhnya rentan.
+
+Karena $latex (1 - s - i) N = R \ge 0$, Persamaan (<a href="#CSIR">7.4</a>) hanya bermakna secara biologis jika $latex s$ dan $latex i$ tetap taknegatif serta memenuhi $latex s + i \le 1$, asalkan kondisi awalnya memenuhi persyaratan tersebut. Dengan kata lain, lintasan sistem dinamika (<a href="#CSIR">7.4</a>) yang bermula di dalam segitiga
+<p style="text-align: center">$latex {\mathcal T} = \left\{ (s,i) | s \ge 0,\ i \ge 0,\ s + i \le 1\right\}$</p>
+harus tetap berada di dalam $latex \mathcal T.$ Untuk memeriksanya, tinjau dinamika pada batas $latex \mathcal T.$ Pertama, misalkan $latex s = 0$ dan $latex i \le 1$. Maka $latex d s / d \tau = 0$, yaitu $latex s$ tetap sama dengan nol, sedangkan $latex i$ berkurang menuju nol tetapi tidak menjadi negatif. Demikian pula, jika $latex i = 0$, maka $latex s$ dan $latex i$ keduanya tetap konstan (apa makna biologis fakta ini?). Terakhir, jika $latex s + i = 1$, maka $latex \displaystyle \frac{d}{d \tau} (s + i) = - \delta i \le 0,$ sehingga $latex s+i$ tidak akan meningkat melewati nilai 1. Sistem (<a href="#CSIR">7.4</a>) memiliki tak hingga banyaknya titik tetap di dalam $latex {\mathcal T}$, yaitu titik-titik dengan $latex i = 0$ dan $latex s$ sembarang.<a id="Fig_7.1"></a>
+
+&nbsp;
+
+[caption id="attachment_54" align="alignnone" width="800"]<img class="wp-image-54" src="assets/sir-phase-source.png" alt="Potret fase model SIR klasik dengan lintasan menuju sumbu s. Deskripsi panjang tersedia." width="800" height="594" /> Gambar 7.1. Bidang fase sistem (<a href="#CSIR">7.4</a>), dengan δ = 0.2, yang diplot menggunakan perangkat lunak PPLANE. Hanya dinamika di dalam <em>T</em> (tidak diarsir) yang relevan. [<a href="#Fig_7.1_Desc"><em>Deskripsi Gambar</em></a>][/caption]Gambar 7.1 memperlihatkan potret fase (<a href="#CSIR">7.4</a>) yang diperoleh menggunakan PPLANE dengan $latex \delta = 0.2$. Dalam kasus ini, kita melihat bahwa semua lintasan di dalam $latex \mathcal T$ konvergen menuju salah satu titik tetap, yaitu $latex \displaystyle \lim_{\tau \rightarrow \infty} i = 0.$ Artinya, epidemi akhirnya mereda dan hanya menyisakan individu rentan dan/atau individu yang telah pulih dari penyakit.
+<h3>Model endemik klasik</h3>
+Untuk penyakit endemik, kelahiran dan kematian perlu diperhitungkan sehingga model SIR menjadi
+<p style="text-align: center"><a id="ESIR"></a>$latex \left\{\begin{align*} \displaystyle \frac{d S}{d t} &amp; = \nu N - \mu S- \alpha S \frac{I}{N},\\ \displaystyle \frac{d I}{d t} &amp; = - \mu I +\alpha S \frac{I}{N} - \beta I,\\ \displaystyle \frac{d R}{d t} &amp; = - \mu R + \beta I, \end{align*}\right. \qquad (7.5)$</p>
+dengan kondisi awal $latex S(0) = S_0 \ge 0,$ $latex I(0)=I_0 \gt 0,$ dan $latex R(0) \ge 0.$ Di sini, parameter barunya adalah laju kematian per kapita $latex \mu$ dan laju kelahiran per kapita $latex \nu$ dalam populasi. Dengan mengasumsikan kedua laju tersebut positif dan memilih $latex \mu = \nu$, total populasi $latex N = S + I + R$ menjadi konstan. Dalam kasus ini, dengan menggunakan variabel tak berdimensi yang sama seperti pada model SIR klasik, kita memperoleh sistem dinamika dua dimensi berikut dalam bentuk tak berdimensi,
+<p style="text-align: center"><a id="CESIR"></a>$latex \left\{\begin{align*} \displaystyle \frac{d s}{d \tau} &amp; = \eta - \eta s - s i,\\ \displaystyle \frac{d i}{d \tau} &amp; = - (\eta+\delta) i + s i, \end{align*}\right. \qquad (7.6)$</p>
+dengan $latex \eta = \nu / \alpha = \mu /\alpha$.
+
+Seperti sebelumnya, mudah diperiksa bahwa lintasan yang bermula di dalam $latex \mathcal T$ tetap berada di dalam $latex \mathcal T$ (lihat soal-soal). Titik-titik tetap (<a href="#CESIR">7.6</a>) pada bidang $latex (s,i)$ adalah
+<p style="text-align: center">$latex P_1 = (1, 0) \qquad \text{dan} \qquad P_2 = \left(\eta + \delta, \displaystyle \frac{\eta (1 - \eta - \delta)}{\eta + \delta}\right).$</p>
+Jacobian dari (<a href="#CESIR">7.6</a>) adalah
+<p style="text-align: center">$latex J(s,i) = \left(\begin{array}{cc} - \eta - i &amp; - s \\ i &amp; s - (\eta + \delta) \end{array} \right)$</p>
+<p style="text-align: left">dan</p>
+<p style="text-align: center">$latex J(P_1) = \left(\begin{array}{cc} - \eta &amp; - 1 \\ 0 &amp; 1 - (\eta + \delta) \end{array} \right).$</p>
+Keberadaan $latex P_2$ di dalam $latex \mathcal T$ bergantung pada parameter $latex \delta$ dan $latex \eta$. Lebih tepatnya, $latex P_2 \in {\mathcal T} \Leftrightarrow 0 \lt \eta + \delta \le 1.$ Pada batas $latex \eta + \delta = 1$, kedua titik tetap berimpit, $latex P_2=P_1=(1,0)$, dan bersifat nonhiperbolik karena Jacobian memiliki satu nilai eigen nol. Jika $latex \eta + \delta &gt; 1$, $latex P_1$ merupakan satu-satunya titik tetap di dalam $latex \mathcal T$. Nilai-nilai eigen $latex J(P_1)$ adalah $latex -\eta$ dan $latex 1 - (\eta + \delta)$, sehingga $latex P_1$ merupakan simpul stabil secara lokal. Simpulan global memerlukan argumen tambahan: di dalam $latex \mathcal T$, persamaan kedua memberikan $latex \displaystyle \frac{d i}{d\tau}=i[s-(\eta+\delta)]\le i[1-(\eta+\delta)]$, sehingga $latex i$ menuju nol, dan dinamika demografis kemudian membawa $latex s$ menuju 1. Dengan demikian, semua lintasan yang bermula di dalam $latex \mathcal T$ konvergen menuju $latex P_1$, yang berarti bahwa dalam jangka panjang populasi hanya terdiri atas individu rentan. Hal ini terjadi karena individu yang telah pulih dari penyakit pada akhirnya meninggal dan digantikan oleh bayi baru lahir yang rentan. Keadaan ini diilustrasikan pada Gambar 7.2, yang memperlihatkan potret fase (<a href="#CESIR">7.6</a>) yang diperoleh menggunakan PPLANE dengan $latex \delta = 0.2$ dan $latex \eta = 1$.<a id="Fig_7.2"></a>
+
+&nbsp;
+
+[caption id="attachment_55" align="alignnone" width="800"]<img class="wp-image-55" src="assets/endemic-phase-1-source.png" alt="Potret fase model endemik menuju kesetimbangan bebas penyakit yang stabil. Deskripsi panjang tersedia." width="800" height="593" /> Gambar 7.2. Bidang fase sistem (<a href="#CESIR">7.6</a>), dengan δ = 0.2 dan η = 1, yang diplot menggunakan perangkat lunak PPLANE. Hanya dinamika di dalam <em>T</em> (tidak diarsir) yang relevan. [<a href="#Fig_7.2_Desc"><em>Deskripsi Gambar</em></a>][/caption]Sebaliknya, jika $latex \eta + \delta \lt 1$, maka $latex P_1$ merupakan titik pelana dan
+<p style="text-align: center">$latex J(P_2) = \left(\begin{array}{cc} -\displaystyle \frac{\eta}{\eta+\delta} &amp; -(\eta + \delta) \\ \displaystyle \frac{\eta (1 - \eta - \delta)}{\eta + \delta} &amp; 0 \end{array} \right).$</p>
+Determinan $latex J(P_2)$ sama dengan $latex \eta (1 - \eta - \delta)$ dan bernilai positif. Jejak $latex J(P_2)$ bernilai negatif, sehingga $latex P_2$ merupakan spiral stabil atau simpul stabil secara lokal. Klasifikasi Jacobian ini hanya bersifat lokal; dengan menggunakan keinvarianan $latex \mathcal T$ dan argumen Bendixson-Dulac untuk menyingkirkan orbit periodik di bagian interior, dapat disimpulkan bahwa lintasan yang bermula di dalam $latex \mathcal T$ dengan jumlah individu terinfeksi awal yang positif konvergen menuju $latex P_2$, yang disebut <em>kesetimbangan endemik</em>. Lintasan pada batas bebas penyakit tetap berada di batas itu dan konvergen menuju titik tetap bebas penyakit. Dalam kasus ini, penyakit selalu ada dalam populasi dan jumlah individu terinfeksi selalu taknol. Gambar 7.3 memperlihatkan potret fase (<a href="#CESIR">7.6</a>) dengan $latex \eta = 0.1$ dan $latex \delta=0.2$.<a id="Fig_7.3"></a>
+
+&nbsp;
+
+[caption id="attachment_56" align="alignnone" width="800"]<img class="wp-image-56" src="assets/endemic-phase-2-source.png" alt="Potret fase model endemik menuju kesetimbangan endemik yang stabil. Deskripsi panjang tersedia." width="800" height="593" /> Gambar 7.3. Bidang fase sistem (<a href="#CESIR">7.6</a>), dengan δ = 0.2 dan η = 0.1, yang diplot menggunakan perangkat lunak PPLANE. Hanya dinamika di dalam <em>T</em> (tidak diarsir) yang relevan. [<a href="#Fig_7.3_Desc"><em>Deskripsi Gambar</em></a>][/caption]
+<h2>Ringkasan</h2>
+Bab ini mengilustrasikan bagaimana konsep-konsep pemodelan yang dibahas dalam bab-bab sebelumnya dapat diterapkan untuk mendeskripsikan dinamika penyakit menular dan penyebaran epidemi dalam bentuk persamaan diferensial biasa. Selain itu, bab ini memberikan pengantar dasar mengenai terminologi dan penerapan model kompartemen.
+
+Seharusnya kini jelas bahwa model dengan tingkat kerumitan sembarang dapat dibangun dari alat-alat sederhana yang dibahas dalam buku ini. Proses pemodelannya selalu sama, betapapun rumit model tersebut. Metode analisis dalam bentuk pemetaan atau persamaan diferensial juga serupa, tetapi menjadi makin rumit ketika dimensi model meningkat. Secara khusus, sistem dinamika tiga dimensi yang terdiferensialkan secara kontinu dapat memperlihatkan kekacauan, yang pemahamannya memerlukan teknik lebih lanjut daripada yang dibahas di sini. Bagian bacaan lanjutan memuat buku-buku mengenai sistem dinamika dan kekacauan yang mungkin ingin dirujuk oleh pembaca.
+<h2>Deskripsi Gambar</h2>
+<a id="Fig_7.1_Desc"></a><strong>Gambar 7.1</strong>: Potret fase pada bidang ($latex s, i$) yang memperlihatkan medan vektor dan beberapa lintasan. Nilai $latex s$ dan $latex i$ sama-sama bervariasi antara 0 dan 1. Lintasan bergerak dari kanan ke kiri dan berakhir pada sumbu $latex s$. Segitiga besar berwarna abu-abu dan diarsir menutupi bagian kanan atas grafik; segitiga ini merepresentasikan daerah ruang fase (dengan $latex s+i &gt; 1$) yang tidak dapat dicapai oleh dinamika. [<em><a href="#Fig_7.1">Kembali ke Gambar 7.1</a></em>]
+
+<a id="Fig_7.2_Desc"></a><strong>Gambar 7.2</strong>: Potret fase pada bidang ($latex s, i$) yang memperlihatkan medan vektor dengan semua lintasan konvergen menuju satu titik kesetimbangan stabil (simpul stabil) di sudut kanan bawah, pada koordinat (1,0). Nilai $latex s$ dan $latex i$ sama-sama bervariasi antara 0 dan 1. Segitiga besar berwarna abu-abu dan diarsir menutupi bagian kanan atas grafik; segitiga ini merepresentasikan daerah ruang fase (dengan $latex s+i &gt; 1$) yang tidak dapat dicapai oleh dinamika. [<em><a href="#Fig_7.2">Kembali ke Gambar 7.2</a></em>]
+
+<a id="Fig_7.3_Desc"></a><strong>Gambar 7.3</strong>: Potret fase pada bidang ($latex s, i$) yang memperlihatkan medan vektor dan beberapa lintasan. Nilai $latex s$ dan $latex i$ sama-sama bervariasi antara 0 dan 1. Segitiga besar berwarna abu-abu dan diarsir menutupi bagian kanan atas grafik; segitiga ini merepresentasikan daerah ruang fase (dengan $latex s+i &gt; 1$) yang tidak dapat dicapai oleh dinamika. Sebuah titik hitam yang mencolok, yang bersesuaian dengan titik tetap stabil, terletak di bagian tengah bawah bidang fase. Titik tetap lain pada (1,0) merupakan titik pelana. [<em><a href="#Fig_7.3">Kembali ke Gambar 7.3</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Bahan Renungan</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center" id="O005-LEGA-V101-CH07-P01">Soal 1</h3>
+Tuliskan model (<a href="#Viral">7.1</a>) dalam bentuk tak berdimensi dengan mendefinisikan $latex \tau = \lambda k b t / \delta^2$ dan variabel $latex x$, $latex y$, serta $latex v$ yang sesuai. Jelaskan langkah yang Anda lakukan dan periksa bahwa $latex \tau$ tak berdimensi.
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH07-P02">Soal 2</h3>
+Pertimbangkan model (<a href="#CViral">7.2</a>).
+<ol>
+ 	<li>Tentukan titik-titik tetap sistem ini.</li>
+ 	<li>Apa syarat pada parameter agar titik-titik tetap ini berada di oktan pertama? Apa makna biologis syarat-syarat tersebut?</li>
+ 	<li>Bahas kestabilan linear titik tetap dengan $latex y = v = 0$.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH07-P03">Soal 3</h3>
+Pertimbangkan model (<a href="#CESIR">7.6</a>). Tunjukkan bahwa lintasan yang bermula di segitiga $latex \mathcal T$ tetap berada di $latex \mathcal T$.
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH07-P04"><span style="text-indent: 0em">Soal 4</span></h3>
+<span style="text-indent: 0em">Pertimbangkan model (</span><a style="text-indent: 0em" href="#CESIR">7.6</a><span style="text-indent: 0em">) dengan $latex \eta + \delta \lt 1$. </span>Adakah nilai $latex \eta$ dan $latex \delta$ yang membuat $latex P_2$ menjadi simpul stabil, bukan spiral stabil?
+
+<hr />
+
+<h3 style="text-align: center" id="O005-LEGA-V101-CH07-P05"><span style="text-indent: 0em">Soal 5</span></h3>
+<span style="text-indent: 0em">Model MSEIR sesuai untuk penyakit seperti rubela </span>atau campak karena setelah terinfeksi, seseorang menjadi kebal terhadap penyakit tersebut. Tuliskan sistem persamaan untuk model MSEIR pada populasi dengan laju kelahiran per kapita $latex \nu$ dan laju kematian per kapita $latex \mu$, dengan $latex \nu \ne \mu$. Nyatakan asumsi Anda dan definisikan setiap laju transisi yang digunakan.
+
+</div>
+</div>

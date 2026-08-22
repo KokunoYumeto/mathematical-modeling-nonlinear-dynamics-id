@@ -98,3 +98,19 @@ O005-TERM-0096,basin of attraction,daerah tarikan,admitted,
 O005-TERM-0097,neutrally stable,stabil netral,admitted,Do not imply asymptotic attraction.
 O005-TERM-0098,bilinear interaction term,suku interaksi bilinear,admitted,
 O005-TERM-0099,nutrient,nutrien,admitted,
+O005-TERM-0100,compartmental model,model kompartemen,admitted,Use model berkompartemen only when emphasizing the act of partitioning.
+O005-TERM-0101,compartment,kompartemen,admitted,Keep the epidemiological class letter immediately visible.
+O005-TERM-0102,viral load,beban virus,admitted,
+O005-TERM-0103,susceptible,rentan,admitted,Use individu rentan for people and kompartemen rentan for S.
+O005-TERM-0104,exposed,terpapar,admitted,In an SEIR model this means infected but not yet infectious when the model assumptions say so.
+O005-TERM-0105,infectious,infeksius,admitted,Use dapat menularkan in explanatory prose where clearer.
+O005-TERM-0106,recovered,pulih,admitted,Do not conflate recovery with every possible removed-state mechanism.
+O005-TERM-0107,removed compartment,kompartemen keluar,admitted,Explain whether removal means recovery isolation or death in the particular model.
+O005-TERM-0108,passive immunity,kekebalan pasif,admitted,
+O005-TERM-0109,basic reproduction number,angka reproduksi dasar,admitted,Retain the symbol R_0 and state the fully susceptible reference condition.
+O005-TERM-0110,contact number,bilangan kontak,admitted,Do not silently treat it as R_0 outside the source model assumptions.
+O005-TERM-0111,disease-free equilibrium,kesetimbangan bebas penyakit,admitted,
+O005-TERM-0112,endemic equilibrium,kesetimbangan endemik,admitted,
+O005-TERM-0113,incidence,insidensi,admitted,Use suku insidensi for the model flow term.
+O005-TERM-0114,outbreak,wabah,admitted,Use epidemi for a broad population-level outbreak only where idiomatic.
+O005-TERM-0115,effective contact,kontak efektif,admitted,Means a contact that produces transmission under the model.

@@ -1,0 +1,38 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Tujuan Pembelajaran</h2>
+</header>
+<div class="textbox__content">
+
+Pada akhir bab ini, Anda akan mampu melakukan hal-hal berikut.
+<ul>
+ 	<li>Menyusun model kompartemen yang mendeskripsikan infeksi dan epidemi.</li>
+ 	<li>Merumuskan bentuk tak berdimensi dari model dua dimensi dan menilai dinamikanya melalui analisis bidang fase.</li>
+ 	<li>Menerjemahkan hasil analisis model ke dalam istilah biologis dan membahas arti pentingnya dalam konteks tersebut.</li>
+</ul>
+</div>
+</div>
+<h2>Infeksi virus</h2>
+Pertama-tama, kita memodelkan dinamika infeksi virus, seperti hepatitis B atau C, untuk mendeskripsikan bagaimana virus yang bersangkutan dapat menyebar dan memperbanyak diri di dalam tubuh seseorang. Nyatakan dengan $latex X$ jumlah rata-rata sel yang tidak terinfeksi dan menjadi sasaran infeksi virion; misalkan $latex Y$ adalah jumlah rata-rata sel terinfeksi, dan $latex V$ adalah beban virus rata-rata (atau jumlah virion bebas di dalam tubuh). Sel yang tidak terinfeksi diproduksi tubuh dengan laju konstan $latex \lambda$, mati dengan laju $latex \delta X$, dan terinfeksi dengan laju $latex f(X,V) X$, dengan $latex f$ sebagai suatu fungsi dari $latex X$ dan $latex V$. Akibatnya, sel terinfeksi $latex Y$ terbentuk dengan laju $latex f(X,V) X$, dan kita mengasumsikan sel-sel tersebut mati dengan laju $latex a Y$. Terakhir, virion bebas diproduksi dengan laju yang sebanding dengan jumlah sel terinfeksi, yaitu $latex k Y$, dan disingkirkan atau dihancurkan dengan laju $latex \kappa V$. Sebagai pendekatan pertama, jika kita menganggap $latex f$ sebagai fungsi linear dari $latex V$, yaitu $latex f(X,V) = b V$, kita memperoleh model berikut.[footnote]M.A. Nowak, S. Bonhoeffer, A.M. Hill, R. Boehme, H.C. Thomas, and H. McDade, <em><a href="http://dx.doi.org/10.1073/pnas.93.9.4398">Viral dynamics in hepatitis B virus infection</a></em>, Proc. Natl. Acad. Sci. USA 93, 4398-4402 (1996).[/footnote]
+<p style="text-align: center"><a id="Viral"></a>$latex \left\{\begin{align*} \displaystyle \frac{d X}{d t} &amp; =\lambda - \delta X - b V X, \\ \displaystyle \frac{d Y}{d t} &amp; = b V X - a Y,\\ \displaystyle \frac{d V}{d t} &amp; = k Y - \kappa V, \end{align*}\right. \qquad (7.1)$</p>
+Model ini memiliki enam parameter dan empat variabel. Kita dapat menskalakan ulang waktu dan $latex V$, tetapi sebaiknya tidak menskalakan $latex X$ dan $latex Y$ secara terpisah karena keduanya menghitung sel dan suku $latex b V X$ memindahkan sel dari kompartemen $latex X$ ke kompartemen $latex Y$. Karena itu, kita dapat mereduksi Persamaan (<a href="#Viral">7.1</a>) menjadi model dengan tiga parameter. Secara lebih tepat, misalkan
+<p style="text-align: center">$latex \tau = \delta t, \qquad \displaystyle x = \frac{k b}{\delta^2} X, \qquad y = \frac{k b}{\delta^2} Y, \qquad v = \frac{b}{\delta} V.$</p>
+Dengan demikian, bentuk terskala Persamaan (<a href="#Viral">7.1</a>) adalah
+<p style="text-align: center"><a id="CViral"></a>$latex \left\{\begin{align*} \displaystyle \frac{d x}{d \tau} &amp; = \zeta - x - v\, x,\\ \displaystyle \frac{d y}{d \tau} &amp; = v\, x - \eta\, y,\\ \displaystyle \frac{d v}{d \tau} &amp; = y - \mu\, v, \end{align*}\right. \qquad (7.2)$</p>
+dengan $latex \zeta = \displaystyle \frac{\lambda k b}{\delta^3},$ $latex \eta = \displaystyle \frac{a}{\delta},$ dan $latex \mu = \displaystyle \frac{\kappa}{\delta}$ sebagai parameter tak berdimensi.
+
+Kita menskalakan waktu berdasarkan laju kematian sel yang tidak terinfeksi. Sebagai alternatif, kita dapat menskalakan waktu berdasarkan laju produksi sel yang tidak terinfeksi oleh tubuh, yaitu dengan mendefinisikan $latex \tau = \lambda t / X_0$, dengan $latex X_0 = \delta^2 / (k b)$. Kita juga dapat menggunakan gabungan kedua skala waktu tersebut. Secara umum, variabel tak berdimensi dapat didefinisikan dengan lebih dari satu cara. Pilihan yang paling mudah digunakan sering kali adalah pilihan yang menghasilkan parameter tak berdimensi berorde satu, sejauh hal itu memungkinkan.
+
+Pembaca kami rujuk pada artikel tahun 1998 karya A.U. Neumann <em>et al.</em> yang berjudul <a href="http://dx.doi.org/10.1126/science.282.5386.103"><em>Hepatitis C viral dynamics in vivo and the antiviral efficacy of interferon-alpha therapy</em></a> untuk melihat bagaimana estimasi parameter dalam model (<a href="#Viral">7.1</a>) dapat digunakan guna memahami peran interferon dalam terapi hepatitis C.
+<h2>Pemodelan penyakit menular</h2>
+Literatur mengenai pemodelan penyakit menular sangat luas (untuk sebuah tinjauan, lihat misalnya artikel tahun 2000 karya H. Hethcote yang berjudul <a href="http://dx.doi.org/10.1137/S0036144500371907"><em>The Mathematics of Infectious Diseases</em></a>). Model dasar yang paling umum disebut model MSEIRS. Setiap huruf dalam akronim tersebut merujuk pada kelas atau kompartemen tertentu dalam populasi, dan urutan hurufnya mencerminkan perpindahan individu dari suatu kelas ke kelas di sebelah kanannya seiring perkembangan infeksi atau perubahan status kekebalan. Berbagai kelas tersebut didefinisikan sebagai berikut.
+<ul>
+ 	<li>Kelas M mencakup <em>bayi dengan kekebalan pasif</em>. Biasanya, mereka adalah bayi baru lahir yang ibunya memiliki kekebalan dan yang menerima antibodi melalui plasenta sebelum dilahirkan.</li>
+ 	<li>Kelas S adalah kelas individu <em>rentan</em>, yang dapat terinfeksi penyakit. Bayi dalam kelas M memiliki kekebalan sementara dan pada akhirnya berpindah ke kelas S.</li>
+ 	<li>Kelas E mencakup individu <em>terpapar</em>, yaitu individu yang telah terinfeksi tetapi masih berada dalam masa laten dan belum dapat menularkan penyakit.</li>
+ 	<li>Kelas I adalah kelas individu <em>infeksius</em>, yang dapat menularkan penyakit.</li>
+ 	<li>Kelas R mencakup individu yang telah <em>pulih </em>(atau meninggal) akibat penyakit, atau yang telah <em>dikeluarkan</em> dari kelompok orang yang terdampak penyakit.</li>
+</ul>
+Bergantung pada jenis penyakit menularnya, individu dalam kelas R mungkin telah memperoleh kekebalan permanen. Dalam kasus ini, model yang sesuai berjenis MSEIR. Namun, jika individu yang pulih dalam kelas R pada akhirnya kembali rentan, model MSEIRS perlu digunakan. Kebanyakan model realistis menghubungkan kelas-kelas yang dijelaskan di atas dengan kelompok umur. Beberapa model memperlakukan umur $latex a$ seseorang sebagai variabel bebas. Kelas-kelas lain, seperti kelompok individu bergejala dan tanpa gejala, juga dapat dipertimbangkan, sedangkan jumlah kompartemen yang sesuai beserta sifatnya dipilih oleh pemodel. Penerapan model kompartemen mencakup peramalan perkembangan penyakit serta prediksi efektivitas vaksinasi atau kampanye pemberantasan penyakit. Di bawah ini, kita hanya membahas dua model sederhana, yakni model SIR klasik dan endemik.
+<h3>Model SIR</h3>
+Model SIR klasik tidak mencakup kelas M dan E, dan dituliskan sebagai
+<p style="text-align: center"><a id="SIR"></a>$latex \left\{\begin{align*} \displaystyle \frac{d S}{d t} &amp; = - \alpha S \frac{I}{N},\\ \displaystyle \frac{d I}{d t} &amp; = \alpha S \frac{I}{N} - \beta I,\\ \displaystyle \frac{d R}{d t} &amp; = \beta I, \end{align*}\right. \qquad (7.3)$</p>

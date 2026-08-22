@@ -101,6 +101,7 @@ h2, h3 { line-height: 1.25; scroll-margin-top: 5rem; }
   max-width: 100%;
   height: auto;
   margin-inline: auto;
+  background: #fff;
 }
 .reader-figure figcaption { margin-top: 0.75rem; color: var(--muted); font: 0.9rem/1.5 system-ui, sans-serif; }
 

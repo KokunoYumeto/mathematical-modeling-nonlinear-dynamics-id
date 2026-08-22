@@ -7,12 +7,12 @@ Updated: 2026-08-22 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–6 and the visible Part 2 and Part 3 introductions
-are translated, built, and verified. Production now moves to Chapter 7,
-Pressbooks record 57, *Epidemiology*, as `O005-LEGA-V101-CH07`. Its exact
-authority record and three-asset closure are already frozen. The next visible
-source item after Chapter 7 is Part 4 record 58, *Chemical Reactions and Spatial
-Effects*.
+into this lane. Chapters 1–7 and the visible Part 2 and Part 3 introductions
+are translated, built, and verified. Production now moves to the visible Part
+4 introduction, Pressbooks record 58, *Chemical Reactions and Spatial
+Effects*, as `O005-LEGA-V101-PT04`; its exact authority record is frozen and
+contains no asset, footnote, problem, mastery, or notebook surface. The next
+visible source item is Chapter 8, record 62, *Chemical Reactions*.
 
 ## Verified authority
 
@@ -332,10 +332,62 @@ Effects*.
   reader, manifest, notebook, source figure, mastery, unit/segment backend,
   shared CSS, Chapter 7 authority, and representative Chapter 5 reflow.
 
+## Admitted Chapter 7 boundary
+
+- Source record: Pressbooks chapter 57, *Epidemiology*; target title
+  *Epidemiologi*; modified `2026-03-19T20:23:36Z`.
+- Canonical record: 48,627 bytes, SHA-256
+  `dcf828ca5ce0c58ced8eb5203dfd1b5a949bd6af3b9c000017a6dd133bb58d2f`;
+  raw source: 20,928 bytes, SHA-256
+  `027493e86a470e8573d48833b41e4bc365910b255bd7324f1d7ae3272d17c38c`.
+- Complete natural id-ID fragment: 22,380 bytes, SHA-256
+  `a7ea1f78c96dbdc24694bd376413e8d675e96899849f4ff2887c3c7a825918c1`.
+- Exact replay: 123 / 123 source-target lines, 126 / 126 ordered elements,
+  29 / 29 links, 150 source TeX occurrences mapped to 160 declared target
+  occurrences, three / three figures, one / one footnote, and five / five
+  stable problems. Every intervention is enumerated as O005-CORR-0064–0080.
+- Five-record mastery layer: 19,470 bytes, SHA-256
+  `d4e6d41a84fd2615af02e599df9ebcca1fd40a7b47152159ac501a5064785eed`;
+  each problem has a hint, answer check, and worked solution or explicit
+  reference closure.
+- Independent epidemiology notebook: 23,599 bytes, SHA-256
+  `92a9cf27d48d5e7766881592095f1232cc4d2357ee5d0a46bdb871591afafce4`;
+  14 cells / six code cells / 42 assertions. Locked execution passed under
+  Python 3.13.9, NumPy 2.4.4, SciPy 1.17.1, and Matplotlib 3.10.9.
+- Three frozen source phase portraits are retained byte-for-byte. Modular
+  segment layer: 162 records / 106,058 bytes, SHA-256
+  `57e00551fd14bc85e072def42da47c12ad7ade11a3445578a16a303d96903e7f`.
+- Reader package: ten payload files / 1,188,206 bytes excluding its manifest;
+  manifest SHA-256
+  `3db70ad91f0c0e1d5ffbe4ce0aed504f8fca516f03da216629fa4a15576feed1`.
+  A final deterministic double build was byte-identical across 11 files,
+  canonical tree SHA-256
+  `c5a308a88ba224e05416d4dc5d59219d3dcafa57a5623dbd16e253d5c3822011`.
+- Browser QA: at 1280×900 the main shell was 1,152 px and the article 768 px,
+  exactly centered; at 390×844 the shell/article was 357.5 px and centered.
+  Document overflow was zero, all three 1,024 px rasters loaded responsively,
+  their transparent canvases rendered white so black equations and axes stayed
+  legible, all 30 IDs were unique, all 34 fragment links resolved, the Figure
+  7.3 return target landed below the sticky navigation, and browser logs were
+  empty. External-link reachability was not tested; no audio/live widget exists.
+
+## Frozen Part 4 introduction boundary
+
+- Pressbooks part 58, *Chemical Reactions and Spatial Effects*; modified
+  `2026-03-17T22:14:18Z`. Canonical record: 6,589 bytes, SHA-256
+  `75d370fb729c39ba436eb1a91f5876291ef4c0487235b968d8a0a0002481f232`;
+  raw source: 2,907 bytes, SHA-256
+  `959b11175f0a5a913275f40058ae06a81e757ceab01aa54dbd63712d7d95d320`.
+- Scope: seven raw lines, six ordered opening elements, eleven TeX occurrences,
+  and no link, asset, footnote, figure, problem, mastery, or notebook surface.
+  Both source forms contain one literal U+FFFD before “reaction-diffusion”; the
+  Indonesian translation must repair and ledger it rather than reproduce it.
+
 ## Next action
 
-Translate Chapter 7 record 57, *Epidemiology*, in full as
-`O005-LEGA-V101-CH07`, preserving the frozen 123-line raw source, 126 opening
-elements, 29 links, 150 TeX occurrences, three figures, one footnote, and five
-problems. Add complete mastery and the bounded open phase-plane/epidemiology
-computation closure; do not return to source selection.
+Translate visible Part 4 record 58, *Chemical Reactions and Spatial Effects*,
+in full as `O005-LEGA-V101-PT04`, titled *Reaksi Kimia dan Efek Spasial*.
+Preserve its seven raw lines, six ordered opening elements, eleven TeX
+occurrences, and zero-link/zero-asset surface. Correct the source's single
+literal U+FFFD transparently in the Indonesian prose, record the intervention,
+and do not manufacture mastery, notebook, footnote, figure, or problem data.

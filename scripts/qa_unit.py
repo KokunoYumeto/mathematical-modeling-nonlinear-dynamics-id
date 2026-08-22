@@ -385,6 +385,58 @@ QA_SPECS = {
         "lock": None,
         "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",
     },
+    "O005-LEGA-V101-CH07": {
+        "unit_type": "chapter",
+        "elements": 126,
+        "links": 29,
+        "math": 150,
+        "target_math": 160,
+        "reader_math": 160,
+        "math_replacements": {
+            46: (r"\beta \ge 0", r"\beta \gt 0"),
+            81: (
+                r"\displaystyle \lim_{t \rightarrow \infty} i = 0.",
+                r"\displaystyle \lim_{\tau \rightarrow \infty} i = 0.",
+            ),
+            95: (
+                r"P_1 = (1, 0) \qquad \text{and} \qquad P_2 = \left(\eta + \delta, \displaystyle \frac{\eta (1 - \eta - \delta)}{\eta + \delta}\right).",
+                r"P_1 = (1, 0) \qquad \text{dan} \qquad P_2 = \left(\eta + \delta, \displaystyle \frac{\eta (1 - \eta - \delta)}{\eta + \delta}\right).",
+            ),
+            122: (r"\eta = 0.2", r"\eta = 0.1"),
+            123: (r"\delta=0.1", r"\delta=0.2"),
+        },
+        "math_insertions_before": {
+            103: [r"\eta + \delta = 1", r"P_2=P_1=(1,0)"],
+            111: [
+                r"\displaystyle \frac{d i}{d\tau}=i[s-(\eta+\delta)]\le i[1-(\eta+\delta)]",
+                r"i",
+                r"s",
+                r"\mathcal T",
+                r"P_1",
+            ],
+            121: [r"\mathcal T"],
+            132: [r"s+i &gt; 1"],
+            135: [r"s+i &gt; 1"],
+        },
+        "problems": 5,
+        "footnotes": 1,
+        "assets": [
+            "assets/sir-phase-source.png",
+            "assets/endemic-phase-1-source.png",
+            "assets/endemic-phase-2-source.png",
+        ],
+        "target_image_dimensions": [
+            ("800", "594"),
+            ("800", "593"),
+            ("800", "593"),
+        ],
+        "notebook": "notebooks/chapter-07-open-epidemiology.ipynb",
+        "notebook_cells": 14,
+        "code_cells": 6,
+        "mastery_math": 151,
+        "lock": None,
+        "lock_sha256": "e0d52933f0d73f273363adb1a77c42b7680a05d3f80ccb9143dac8e079743041",
+    },
 }
 BUILDER = ROOT / "scripts" / "build_unit_reader.py"
 LATEX_RE = re.compile(r"\$latex\s+(.+?)\$", re.DOTALL)
