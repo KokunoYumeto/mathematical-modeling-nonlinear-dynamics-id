@@ -485,3 +485,20 @@ Each earlier unit passed a deterministic, non-notebook-executing structure,
 backend, locality, accessibility, and package regression after propagation.
 Chapter 7 then passed the complete notebook-executing deterministic gate and
 the bounded desktop/mobile browser inspection on the same final CSS bytes.
+
+## Public readback — Chapter 7 and figure-canvas propagation — 2026-08-22
+
+- Production commit: `ade2b69bdc07a1ca665de50494b969b221559c0b`.
+- `git push origin main` advanced the public branch from `74af9fe` to
+  `ade2b69`; `git ls-remote origin refs/heads/main` returned the exact local
+  40-character commit.
+- Every one of the 58 files changed by the production commit was fetched as
+  anonymous bytes from its immutable GitHub raw URL and compared with the
+  committed local counterpart: 2,573,920 local bytes, 2,573,920 public bytes,
+  and zero byte-count or SHA-256 mismatches.
+- The ordered `path<TAB>bytes<TAB>sha256` public inventory has SHA-256
+  `8dde382d77db97cbde208752600293f63c574c866f52bd6088e0eb725d5a8606`.
+  Coverage includes Chapter 7 source fragments/assets, target, segments,
+  mastery, unit record, notebook/lock, complete reader package, pipeline and
+  controls; all eight earlier stylesheet/manifest pairs; and the complete
+  frozen Part 4 authority record.

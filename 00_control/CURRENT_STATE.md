@@ -370,6 +370,11 @@ visible source item is Chapter 8, record 62, *Chemical Reactions*.
   legible, all 30 IDs were unique, all 34 fragment links resolved, the Figure
   7.3 return target landed below the sticky navigation, and browser logs were
   empty. External-link reachability was not tested; no audio/live widget exists.
+- Published production commit:
+  `ade2b69bdc07a1ca665de50494b969b221559c0b` on `origin/main`. Remote-head
+  equality passed. Anonymous immutable-commit readback covered all 58 changed
+  files / 2,573,920 bytes; every filename, byte count, and SHA-256 matched the
+  committed local artifact.
 
 ## Frozen Part 4 introduction boundary
 
