@@ -1,0 +1,35 @@
+<h2>Rotasi (curl)</h2>
+Rotasi suatu medan vektor $latex \vec F = F_1 \vec \imath+ F_2 \vec \jmath + F_3 \vec k$ yang memiliki turunan parsial kontinu adalah vektor yang diberikan oleh
+<p style="text-align: center">$latex \begin{align*} \text{curl} \vec F &amp; = \vec \nabla \times \vec F = \left \vert \begin{array}{ccc} \vec \imath &amp; \vec \jmath &amp; \vec k \\ \frac{\partial}{\partial x} &amp; \frac{\partial}{\partial y} &amp; \frac{\partial}{\partial z} \\ F_1 &amp; F_2 &amp; F_3 \end{array} \right \vert \\ &amp; = \left( \frac{\partial F_3}{\partial y} - \frac{\partial F_2}{\partial z} \right) \vec \imath+ \left( \frac{\partial F_1}{\partial z} - \frac{\partial F_3} {\partial x}\right) \vec \jmath + \left( \frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y}\right) \vec k. \end{align*}$</p>
+Rotasi memiliki sifat-sifat berikut.
+<ul>
+  	<li>Arah $latex \text{curl}\vec F$ di suatu titik $latex P$ adalah arah sumbu yang dikelilingi oleh rapat sirkulasi $latex \vec F$ terbesar.</li>
+  	<li>Magnitudo $latex \text{curl} \vec F$ adalah rapat sirkulasi di sekitar arah tersebut.</li>
+  	<li>Rapat sirkulasi $latex \vec F$ di sekitar sebarang vektor satuan $latex \vec n$ sama dengan $latex \text{curl}\vec F\cdot\vec n$.</li>
+  	<li>Untuk sebarang fungsi $latex f$ yang memiliki turunan parsial kedua kontinu,</li>
+</ul>
+<p style="text-align: center">$latex \text{curl grad} f = \vec \nabla \times \vec \nabla f = \vec 0.$</p>
+
+<ul>
+  	<li><span style="text-align: initial;font-size: 1em">Sebaliknya, setiap medan vektor mulus yang didefinisikan pada suatu domain tanpa </span>lubang berkodimensi satu dan yang rotasinya nol di setiap titik merupakan medan gradien (inilah <em>uji rotasi</em>).</li>
+</ul>
+<h2>Teorema Stokes dan Teorema Green</h2>
+Fluks medan vektor $latex \vec F$ melalui permukaan berorientasi $latex S$ adalah $latex \iint_S \vec F \cdot d\vec S$.
+<ul>
+  	<li>Jika permukaan $latex S$ adalah grafik suatu fungsi $latex f(x,y)$, maka, jika $latex R$ adalah domain $latex f(x,y)$, kita dapat menuliskan</li>
+</ul>
+<p style="text-align: center">$latex \displaystyle \iint_S \vec F \cdot d\vec S = \iint_R \vec F\left(x,y,z(x,y)\right)\cdot \left[-\frac{\partial f}{\partial x} \vec \imath - \frac{\partial f}{\partial y} \vec \jmath + \vec k \right] dx dy,$</p>
+
+<ul>
+   	<li>Jika $latex S$ adalah permukaan parametrik yang diparameterkan oleh $latex \vec r = \vec r(s,t)$, dengan $latex s$ dan $latex t$ bervariasi dalam suatu daerah $latex R$, dan jika kita mengasumsikan bahwa $latex \displaystyle \frac{\partial \vec r}{\partial s} \times \frac{\partial \vec r} {\partial t}$ searah dengan vektor normal $latex \vec n$ terhadap permukaan $latex S$ di setiap titik, maka kita dapat menuliskan</li>
+</ul>
+<p style="text-align: center">$latex \displaystyle \int_S \vec F \cdot d\vec S = \int_R \vec F\left(\vec r(s,t)\right) \cdot \left(\frac{\partial \vec r}{\partial s} \times \frac{\partial \vec r} {\partial t} \right) ds dt.$</p>
+
+<h3>Teorema Stokes</h3>
+Teorema Stokes menghubungkan sirkulasi suatu medan vektor mulus di sepanjang kurva tertutup $latex \mathcal C$ yang mulus sepotong demi sepotong dengan fluks $latex \text{curl} \vec F$ melalui sebarang permukaan mulus $latex S$ yang batasnya sama dengan $latex \mathcal C$. Teorema ini berbunyi:
+<p style="text-align: center">$latex \displaystyle \int_{\mathcal C} \vec F \cdot d\vec r = \int_S \text{curl}\vec F \cdot d\vec A,$</p>
+di mana orientasi $latex \mathcal C$ ditentukan dari orientasi $latex S$ (atau sebaliknya) dengan <em>kaidah tangan kanan</em>. Perhatikan bahwa Teorema Stokes hanya berlaku jika $latex \vec F$ <span style="text-decoration: underline">didefinisikan di setiap titik</span> pada $latex S$ dan $latex \mathcal C$.
+<h3>Teorema Green</h3>
+Teorema Green adalah versi planar dari Teorema Stokes dan berbunyi
+<p style="text-align: center">$latex \displaystyle \int_{\mathcal C} \vec F \cdot d\vec r = \int_R \left(\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y} \right) \ dx\ dy,$</p>
+di mana $latex \vec F(x,y) = F_1(x,y) \vec \imath + F_2(x,y) \vec \jmath$ adalah medan vektor mulus yang didefinisikan di setiap titik $latex \mathcal C$ serta di bagian dalam $latex \mathcal C$, dan $latex \mathcal C$ adalah kurva tertutup sederhana yang mulus sepotong demi sepotong serta diorientasikan sedemikian rupa sehingga bagian dalamnya, $latex R$, berada di sebelah kiri ketika kita bergerak di sepanjang $latex \mathcal C$.

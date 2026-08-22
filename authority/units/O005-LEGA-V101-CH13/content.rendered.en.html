@@ -1,0 +1,482 @@
+<p>This appendix briefly reviews the most common methods for solving ordinary differential equations (ODEs). Many ODEs or systems of ODEs introduced in these notes are nonlinear and cannot therefore be easily solved with such methods. However, linear stability analysis of fixed points relies on solving linear systems with constant coefficients, which are discussed here. Moreover, it is essential for a modeler to be able to recognize ODEs that can be solved exactly, and to solve them if necessary. The information below is meant to be used as a quick reference; theorems are given without proof and the reader should consult classical texts on differential equations for details.</p>
+<h2>Definitions and basic existence theorems</h2>
+<h3>Definitions</h3>
+<ul>
+<li>An <em>ordinary differential equation</em> of order [latex]n[/latex] is an equation of the form</li>
+</ul>
+<p style="text-align: center"><a id="Eq_13.1"></a>[latex]\displaystyle \frac{d^n y}{d x^n}=F\left( x,y,\frac{d y}{d x},\dots,\frac{d^{n-1} y} {d x^{n-1}}\right). \qquad (13.1)[/latex]</p>
+<ul>
+<li>A <em>solution</em> to this differential equation is an [latex]n[/latex]-times differentiable function [latex]y(x)[/latex] of a real variable [latex]x[/latex] that satisfies Equation (<a href="#Eq_13.1">13.1</a>).</li>
+<li><span style="text-align: initial;font-size: 1em">An <em>initial condition</em> is the prescription of the values </span>of [latex]y[/latex] and of its [latex](n-1)[/latex]st derivatives at a point [latex]x_0[/latex].  It takes the following form, where [latex]y_0[/latex], [latex]y_1[/latex], &#8230; [latex]y_{n-1}[/latex] are given numbers:</li>
+</ul>
+<p style="text-align: center"><a id="Eq_13.2"></a>[latex]\displaystyle \label{init} y(x_0)=y_0, \frac{d y}{d x}(x_0)=y_1, \dots \frac{d^{n-1}y}{d x^{n-1}}(x_0) = y_{n-1}, \qquad (13.2)[/latex]</p>
+<ul>
+<li><em>Boundary conditions</em> prescribe the values of linear combinations of [latex]y[/latex] and its derivatives at two different values of [latex]x[/latex].</li>
+</ul>
+<h3>Existence and uniqueness theorems</h3>
+<p style="text-align: left">We list below the main existence and uniqueness theorems for solutions to first-order systems of ordinary differential equations. The reader should note that Equation (<a href="#Eq_13.1">13.1</a>) may be written as a first-order system</p>
+<p style="text-align: center"><a id="Eq_13.3"></a>[latex]\displaystyle \label{ode_fo} \frac{d Y}{d x} = f(x,Y) \qquad (13.3)[/latex]</p>
+<p>by setting [latex]\displaystyle Y = \left(y,\frac{dy}{d x},\frac{d^2 y}{d x}, \cdots, \frac{d^{n-1} y}{d x^{n-1}}\right)[/latex].</p>
+<h4>The Cauchy-Peano theorem</h4>
+<p>If [latex]f[/latex] is continuous on the rectangle [latex]{\mathcal R} = \left\{|x-x_0| \le a, ||Y - Y_0|| \le b \right\}[/latex] where [latex]a > 0[/latex] and [latex]b > 0,[/latex] then there exists a continuously differentiable solution [latex]Y[/latex] of (<a href="#Eq_13.3">13.3</a>) on [latex]|x - x_0| \le \alpha[/latex] for which [latex]Y(x_0) = Y_0[/latex], where</p>
+<p style="text-align: center">[latex]\alpha = \min\left(a, \frac{b}{M}\right), \quad M = \max_{(x,Y) \in {\mathcal R}} ||f(x,Y)||.[/latex]</p>
+<h4>The Picard-Lindelöf Theorem</h4>
+<p>If [latex]f[/latex] is Lipschitz on [latex]\mathcal R[/latex], i.e. if there exists a constant [latex]k > 0[/latex] such that</p>
+<p style="text-align: center">[latex]\forall (x,Y_1) \in {\mathcal R}, \forall (x,Y_2) \in {\mathcal R}, ||f(x,Y_1) - f(x,Y_2) || < k ||Y_1 - Y_2||,[/latex]</p>
+<p>and if [latex]f[/latex] is continuous on [latex]\mathcal R[/latex], then there exists a unique solution [latex]Y[/latex] to (<a href="#Eq_13.3">13.3</a>) on [latex]|x - x_0| \le \alpha[/latex], such that [latex]Y(x_0) = Y_0.[/latex]</p>
+<p>Together, these theorems imply that for continuously differentiable dynamical systems of the form (<a href="#Eq_13.3">13.3</a>), there is a unique solution to every initial value problem. In other words, if [latex]f[/latex] in (<a href="#Eq_13.3">13.3</a>) is continuously differentiable, then trajectories in the phase space of the dynamical system (<a href="#Eq_13.3">13.3</a>) cannot cross.</p>
+<p>In the following, we list various common techniques used to solve differential equations. Initial or boundary conditions should be imposed after the general solution has been found.</p>
+<h2>First order differential equations</h2>
+<p>We start with a first order differential equation, which we write as</p>
+<p style="text-align: center">[latex]M(x,y) dx + N(x,y) dy=0.[/latex]</p>
+<h3>Separable equations</h3>
+<p>If [latex]\displaystyle \frac{M(x,y)}{N(x,y)}= - f(x) g(y),[/latex] then the equation is <em>separable</em>, and reads</p>
+<p style="text-align: center">[latex]\displaystyle f(x) dx=\frac{1}{g(y)} dy,[/latex]</p>
+<p>which can be integrated easily.</p>
+<h4>Example</h4>
+<p>The solution to the initial value problem [latex]\displaystyle \frac{d y}{d x}=\frac{3 x^2 + 4 x + 2}{2 (y-1)}, \quad y(0)=-1[/latex] is [latex]y=1-\sqrt{x^3 + 2 x^2 + 2 x + 4}[/latex].</p>
+<h3>Equations where <em>M</em> and <em>N</em> are both homogeneous of degree <em>n</em></h3>
+<p>If [latex]M(x,y)[/latex] and [latex]N(x,y)[/latex] are both homogeneous of degree [latex]n[/latex], then the change of variable [latex]v=y/x[/latex] (or [latex]u=x/y[/latex]) will make the ODE separable.</p>
+<h4>Example</h4>
+<p>The general solution to [latex]\displaystyle \frac{d y}{d x}=\frac{y^2 + 2 x y}{x^2}[/latex] is [latex]\displaystyle y = \frac{C x^2}{1 - C x}[/latex], where [latex]C[/latex] is an arbitrary constant.</p>
+<h3>Exact equations</h3>
+<p>If [latex]{\partial M}/{\partial y}[/latex] and [latex]{\partial N}/{\partial x}[/latex] are continuous and if [latex]\displaystyle \frac{\partial M}{\partial y}=\frac{\partial N}{\partial x},[/latex] then the ODE is <em>exact</em>, i.e. there exists [latex]u(x,y)[/latex] such that</p>
+<p style="text-align: center">[latex]\displaystyle \frac{\partial u}{\partial x}=M(x,y) \qquad \text{and} \qquad \frac{\partial u}{\partial y}=N(x,y).[/latex]</p>
+<p>Then the ODE can be written in the form</p>
+<p style="text-align: center">[latex]\displaystyle \frac{\partial u}{\partial x} dx + \frac{\partial u}{\partial y} dy=0,[/latex]</p>
+<p>which gives [latex]d \left(u(x,y) \right)=0[/latex], i.e. [latex]u(x,y)=C[/latex]. The function [latex]u[/latex] can be found by integrating the two equations</p>
+<p style="text-align: center">[latex]\displaystyle \frac{\partial u}{\partial x}=M(x,y) \quad \text{ and } \quad \frac{\partial u}{\partial y}=N(x,y).[/latex]</p>
+<h4>Example</h4>
+<p>The general solution to [latex]\displaystyle (y \cos(x) + 2 x e^y) + (\sin(x) + x^2 e^y - 1) y^\prime = 0[/latex] is implicitly given by [latex]y \sin(x) + x^2 e^y - y = C[/latex], where [latex]C[/latex] is an arbitrary constant.</p>
+<h3>Integrating factor</h3>
+<p>An integrating factor is a function [latex]\rho(x,y)[/latex] such that the differential equation</p>
+<p style="text-align: center">[latex]\rho(x,y)\left[ M(x,y) dx + N(x,y) dy \right][/latex]</p>
+<p>is exact. If [latex]\displaystyle \frac{\partial M}{\partial y} \ne \frac{\partial N}{\partial x},[/latex] but if</p>
+<ul>
+<li>[latex]\displaystyle \frac{\partial M}{\partial y}-\frac{\partial N}{\partial x} =-n \frac{M}{y} + m \frac{N}{x},[/latex] try the integrating factor [latex]\rho(x,y)=x^m y^n.[/latex]</li>
+<li>If [latex]\displaystyle \frac{1}{N} \left[\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}\right][/latex] is a function of [latex]x[/latex] only, try the integrating factor [latex]\rho(x,y)=f(x).[/latex]</li>
+<li>If [latex]\displaystyle \frac{1}{M} \left[\frac{\partial M}{\partial y}-\frac{\partial N} {\partial x}\right][/latex] is a function of [latex]y[/latex] only, try the integrating factor [latex]\rho(x,y)=f(y).[/latex]</li>
+</ul>
+<h4>Example</h4>
+<p>The general solution to [latex]\displaystyle 3 x y + y^2 + (x^2 + x y) \frac{d y}{d x} = 0[/latex] is implicitly given by [latex]\displaystyle x^3 y + \frac{1}{2} x^2 y^2 = C[/latex].</p>
+<h3>Linear equations</h3>
+<p>If the differential equation can be written in the form [latex]y^\prime + p(x) y = q(x),[/latex] i.e. if</p>
+<p style="text-align: center">[latex]\displaystyle -\frac{M(x,y)}{N(x,y)} =-p(x) y + q(x),[/latex]</p>
+<p>then the ODE is <em>linear</em>. Let [latex]\rho(x)=\exp\left[\int p(x) dx\right][/latex]. We have</p>
+<p style="text-align: center">[latex]\displaystyle \rho^\prime(x)=p(x) \exp\left[\int p(x) dx \right]=p(x) \rho(x),[/latex]</p>
+<p>and by multiplying the ODE by [latex]\rho(x)[/latex], we get</p>
+<p style="text-align: center">[latex]\begin{align*} &y^\prime \rho(x)+p(x) \rho(x) y = q(x) \rho(x) \\ \Longleftrightarrow &\displaystyle \frac{d}{d x}\left[\rho(x) y\right]=q(x) \rho(x),\\ \Longleftrightarrow & y \rho(x)=\int q(x) \rho(x) dx + C, \\ \Longleftrightarrow & \displaystyle y=\frac{1}{\rho(x)} \int q(x) \rho(x) dx + \frac{C}{\rho(x)}, \\ \Longleftrightarrow & y=\left[\int q(x) \rho(x) dx + C\right] \exp\left[-\int p(x)\  dx \right].\end{align*}[/latex]</p>
+<h4>Example 1</h4>
+<p><span style="text-align: initial;font-size: 1em">The general solution to [latex]y^\prime + 2 y = e^{-x}[/latex] is [latex]y = e^{-x} + C e^{-2 x}.[/latex]</span></p>
+<h4>Example 2</h4>
+<p>The solution to [latex]y^\prime - 2 x y = x[/latex], [latex]y(0)=0[/latex] is [latex]\displaystyle y = - \frac{1}{2} + \frac{1}{2} e^{x^2}.[/latex]</p>
+<h3>Bernoulli's equation</h3>
+<p>If [latex]\displaystyle -\frac{M(x,y)}{N(x,y)}=-p(x) y + q(x) y^n,[/latex] with [latex]n\ne 0,1,[/latex] we obtain the following Bernoulli's equation</p>
+<p style="text-align: center">[latex]y^\prime + p(x) y=q(x) y^n.[/latex]</p>
+<p>This nonlinear equation can be brought to the form of a linear equation by the change of variable [latex]u=y^{1-n}[/latex].</p>
+<h4>Example</h4>
+<p>The general solution to [latex]x^2 y^\prime + 2 x y - y^3 = 0, x>0[/latex] is [latex]\displaystyle y = \pm \sqrt{\frac{5 x}{2 + C x^5}}[/latex].</p>
+<h3>Riccati's equation</h3>
+<p>If [latex]\displaystyle -\frac{M(x,y)}{N(x,y)}=a_0(x) + a_1(x) y + a_2(x) y^2,[/latex] we have the following Riccati's equation</p>
+<p style="text-align: center">[latex]y^\prime=a_0(x) + a_1(x) y + a_2(x) y^2.[/latex]</p>
+<p style="text-align: left">To solve it, proceed as follows.</p>
+<ol>
+<li style="text-align: left">Find a particular solution [latex]y=y_1(x)[/latex] by trying simple functions such as [latex]a x^b[/latex] or [latex]a \exp(b x)[/latex].</li>
+<li style="text-align: left">Note that [latex]u=y-y_1[/latex] satisfies the following Bernoulli's equation (where [latex]n=2[/latex]): [latex]\begin{align*} u^\prime & = a_1(x) u + a_2(x) u (2 y_1(x)+u)\\ & = \left[ a_1(x)+2 a_2(x) y_1(x)\right] u + a_2(x) u^2,\end{align*}[/latex]</li>
+<li>Convert the above equation into a linear equation by applying the change of variable [latex]w=u^{1-2}=1/u[/latex], and solve for [latex]w[/latex]. In terms of the original variable, the solution [latex]y[/latex] is given by [latex]y=y_1+1/w[/latex].</li>
+</ol>
+<h4>Example</h4>
+<p>The general solution to [latex]y^\prime = 1 + x^2 - 2 x y + y^2[/latex] is [latex]y = x + 1/(C - x)[/latex].</p>
+<h3>Clairaut's equation</h3>
+<p>The differential equation [latex]y = x y^\prime + f(y^\prime)[/latex] has for solution the family of straight lines</p>
+<p style="text-align: center">[latex]y = c x + f(c), \qquad c=\text{ constant}[/latex]</p>
+<p>and may also have a singular solution in the parametric form</p>
+<p style="text-align: center">[latex]\left \{ \begin{array}{l} x=-f^\prime(p) \\ y= p x + f(p) \end{array}.\right.[/latex]</p>
+<h4>Example</h4>
+<p>The general solution to [latex]\displaystyle y = y^\prime x + \frac{1}{y^\prime}[/latex] is [latex]y=C x + 1/C[/latex] and a singular solution is [latex]y^2 = 4 x[/latex].</p>
+<h2>Second order differential equations</h2>
+<h3>Equations without <em>y</em></h3>
+<p>Second order differential equations without [latex]y[/latex] are of the form [latex]F(y^{\prime\prime}, y^\prime, x)=0.[/latex] With [latex]w=y^\prime,[/latex] this equation reads [latex]F(w^\prime, w, x)=0,[/latex] which is a first order equation. It can first be solved for [latex]w[/latex] and then for [latex]y,[/latex] using [latex]w=d y / d x[/latex].</p>
+<h4>Example</h4>
+<p>The general solution to [latex]x^2 y^{\prime\prime} + {y^\prime}^2 - 2 x y^\prime = 0[/latex] is</p>
+<p style="text-align: center">[latex]\displaystyle y = \frac{1}{2} x^2 - C_1 x + C_1^2 \ln(|x+C_1|) + C_2,[/latex]</p>
+<p>where [latex]C_1[/latex] and [latex]C_2[/latex] are arbitrary constants.</p>
+<h3>Equations without <em>x</em></h3>
+<p>Such ODEs read [latex]F(y^{\prime\prime}, y^\prime, y)=0.[/latex] Let [latex]w=d y / d x[/latex] be a function of [latex]y[/latex]. Then,</p>
+<p style="text-align: center">[latex]\displaystyle \frac{d^2 y}{d x^2}=\frac{d w}{d x}=\frac{d w}{d y} \frac{d y}{d x}= \frac{d w}{d y} w,[/latex]</p>
+<p>and the ode becomes [latex]\displaystyle F(w \frac{d w}{d y}, w, y)=0,[/latex] which is a first order differential equation where the independent variable is [latex]y[/latex]. One can solve this equation for [latex]w[/latex] in terms of [latex]y[/latex] and then solve the first order separable equation [latex]\displaystyle \frac{d y}{d x}=w(y)[/latex].</p>
+<h4><span style="text-align: initial;font-size: 1em">Example</span></h4>
+<p><span style="text-align: initial;font-size: 1em">The general solution to [latex]\displaystyle y y^{\prime\prime} + \left(y^\prime \right)^2 + 4 = 0[/latex] </span>is implicitly given by</p>
+<p style="text-align: center">[latex]\displaystyle x^2 = \left(C_2 + \frac{1}{4 C_1} \sqrt{1-4 C_1^2 y^2}\right)^2[/latex].</p>
+<h3>Linear equations</h3>
+<p>The general solution to [latex]\displaystyle a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h(x)[/latex] reads</p>
+<p style="text-align: center">[latex]y(x)=C_1 y_1(x) + C_2 y_2(x)+y_p(x),[/latex]</p>
+<p>where</p>
+<ul>
+<li>[latex]y_p(x)[/latex] is a particular solution to [latex]a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h(x)[/latex],</li>
+<li><span style="text-align: initial;font-size: 1em">[latex]y_1[/latex] and [latex]y_2[/latex] are two <span style="text-decoration: underline">linearly independent</span> solutions </span>of the associated homogeneous equation [latex]a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=0,[/latex]</li>
+<li><span style="text-align: initial;font-size: 1em">[latex]C_1[/latex] and [latex]C_2[/latex] are two arbitrary constants.</span></li>
+</ul>
+<p>Therefore, the above linear equation is solved in two steps:</p>
+<ol>
+<li>Solve the homogeneous equation (i.e. find two linearly independent solutions [latex]y_1[/latex] and [latex]y_2[/latex]),</li>
+<li><span style="text-align: initial;font-size: 1em">Find a particular solution to the full equation.</span></li>
+</ol>
+<h4>How to solve the homogeneous equation</h4>
+<p>The general solution [latex]y[/latex] to the homogeneous equation</p>
+<p style="text-align: center">[latex]a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=0[/latex]</p>
+<p>is a linear combination of two of its linearly independent solutions [latex]y_1[/latex] and [latex]y_2[/latex], i.e. [latex]y=C_1 y_1+C_2 y_2[/latex] where [latex]C_1[/latex] and [latex]C_2[/latex] are constants.</p>
+<h5>Equations with constant coefficients</h5>
+<p>Assume that the homogeneous differential equation reads</p>
+<p style="text-align: center">[latex]a_2 y^{\prime\prime} + a_1 y^\prime + a_0 y=0,[/latex]</p>
+<p>where [latex]a_2[/latex], [latex]a_1[/latex] and [latex]a_0[/latex] are constants. The associated characteristic equation is [latex]a_2 r^2 + a_1 r + a_0=0[/latex].</p>
+<ul>
+<li>If the characteristic equation has 2 real distinct roots [latex]r_1[/latex] and [latex]r_2[/latex], then two linearly independent solutions to the homogeneous equation are</li>
+</ul>
+<p style="text-align: center">[latex]y_1(x)=\exp(r_1 x) \qquad {\rm and} \qquad y_2(x)=\exp(r_2 x).[/latex]</p>
+<ul>
+<li style="text-align: left">If the characteristic equation has 2 complex roots [latex]\alpha \pm i \beta[/latex], two linearly independent solutions are</li>
+</ul>
+<p style="text-align: center">[latex]y_1(x)=\exp(\alpha x) \cos(\beta x) \qquad y_2(x)=\exp(\alpha x) \sin(\beta x).[/latex]</p>
+<ul>
+<li>If the characteristic equation has 1 real repeated root [latex]r[/latex], two linearly independent solutions are</li>
+</ul>
+<p style="text-align: center">[latex]y_1(x)=\exp(r x) \qquad y_2(x)=x \exp(r x).[/latex]</p>
+<h6>Example 1</h6>
+<p>The solution to [latex]y^{\prime\prime} + y^\prime - 2 y = 0[/latex], [latex]y(0)=0[/latex] and [latex]y^\prime(0)=3[/latex] is [latex]\displaystyle y = e^x - e^{-2 x}[/latex].</p>
+<h6>Example 2</h6>
+<p>The general solution to [latex]y^{\prime\prime} - 4 y^\prime + 4 y = 0[/latex] is [latex]\displaystyle y=C_1 e^{2 x} + C_2 x e^{2 x}[/latex].</p>
+<h5>Cauchy-Euler equation</h5>
+<p>If the ODE reads</p>
+<p style="text-align: center">[latex]a_2 x^2 y^{\prime\prime} + a_1 x y^\prime+ a_0 y=0, \quad a_2, a_1, \text{and }a_0 \text{ constants},[/latex]</p>
+<p>we look for solutions in the form [latex]y=x^r=\exp(r \ln(x))[/latex] (defined for [latex]x>0[/latex]). Then, [latex]r[/latex] must satisfy</p>
+<p style="text-align: center">[latex]a_2 r (r-1)+a_1 r+a_0=0.[/latex]</p>
+<ul>
+<li>If this equation has 2 real distinct roots [latex]r_1[/latex] and [latex]r_2[/latex], then two linearly independent solutions are</li>
+</ul>
+<p style="text-align: center">[latex]y_1=x^{r_1} \qquad y_2=x^{r_2},[/latex]</p>
+<ul>
+<li>If this equation has 2 complex roots [latex]\alpha \pm i \beta[/latex], two linearly independent solutions are</li>
+</ul>
+<p style="text-align: center">[latex]y_1(x)=x^\alpha \cos(\beta \ln(x)) \qquad y_2(x)=x^\alpha \sin(\beta \ln(x)),[/latex]</p>
+<ul>
+<li>If this equation has 1 real repeated root [latex]r[/latex], two linearly independent solutions are</li>
+</ul>
+<p style="text-align: center">[latex]y_1(x)=x^r \qquad y_2(x)=x^r \ln(x).[/latex]</p>
+<p><span style="text-decoration: underline">Note</span>: If you have to solve for [latex]x < 0,[/latex] first make the change of variable [latex]t=-x[/latex].
+
+
+<h6>Example</h6>
+<p>[latex]y = C_1 x^2[/latex] solves [latex]x^2 y^{\prime\prime} - 3 x y^\prime + 4 y =0[/latex], [latex]y(0)=0[/latex], [latex]y^\prime(0)=0[/latex].</p>
+<h5>Other equations</h5>
+<p>If you have a particular solution [latex]y_{ph}[/latex] (for instance found by inspection) to the homogeneous equation, you may apply the method of <em>variation of constants</em>: look for another solution in the form [latex]y=v(x) y_{ph}(x)[/latex], substitute into the homogeneous equation and solve the first order equation for [latex]v[/latex]. This procedure is called <em>reduction of order</em>.</p>
+<h4>How to find a particular solution to the full equation</h4>
+<p>We now turn to [latex]a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h(x)[/latex] and look for a particular solution [latex]y_p[/latex] to this equation. As before, there are a few of special cases for which a systematic method of solution exists.</p>
+<h5>Equations with constant coefficients: Method of undetermined coefficients</h5>
+<p>If the ode has constant coefficients and if</p>
+<p style="text-align: center">[latex]h(x)=P_m(x) \exp(\alpha x) \cos(\beta x)+ Q_m(x) \exp(\alpha x) \sin(\beta x),[/latex]</p>
+<p>where [latex]P_m[/latex] and [latex]Q_m[/latex] are polynomials of degree [latex]m[/latex], then try the particular solution given below, where [latex]K_m[/latex] and [latex]L_m[/latex] are polynomials of degree [latex]m[/latex] in each case.</p>
+<ul>
+<li>[latex]y_p=K_m(x) \exp(\alpha x) \cos(\beta x)+ L_m(x) \exp(\alpha x) \sin(\beta x)[/latex] if [latex]\alpha \pm i \beta[/latex] <span style="text-decoration: underline">are not</span> roots of the associated characteristic equation,</li>
+<li>[latex]y_p=x^h \big[ K_m(x) \exp(\alpha x) \cos(\beta x)+ L_m(x) \exp(\alpha x) \sin(\beta x)\big][/latex] if [latex]\alpha \pm i \beta[/latex] <span style="text-decoration: underline">are</span> roots of <span style="text-decoration: underline">multiplicity</span> [latex]h[/latex] of the associated characteristic equation ([latex]h[/latex] can be 1 or 2).</li>
+</ul>
+<p><span style="text-decoration: underline">Note</span>: Since the equation is linear, it might be useful to use the <span style="text-decoration: underline">principle of superposition</span>: if [latex]h(x)=h_1(x)+h_2(x)[/latex], and if [latex]y_{p_1}[/latex] and [latex]y_{p_2}[/latex] are particular solutions to [latex]a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h_1(x)[/latex] and [latex]a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h_2(x)[/latex] respectively, then [latex]y_{p}=y_{p_1}+y_{p_2}[/latex] is a particular solution to [latex]a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h(x)[/latex].</p>
+<h6>Example 1</h6>
+<p>A particular solution to [latex]y^{\prime\prime} + y^\prime - 2 y = 4 \sin(2 x)[/latex] is [latex]\displaystyle y_p = - \frac{1}{5} \cos(2 x) - \frac{3}{5} \sin(2 x)[/latex].</p>
+<h6>Example 2</h6>
+<p>A particular solution to [latex]y^{\prime\prime} - 4 y^\prime + 4 y = 12 x e^{2 x}[/latex] is [latex]\displaystyle y_p = 2 x^3 e^{2 x}[/latex].</p>
+<h5>Cauchy-Euler equations</h5>
+<p>The change of variable [latex]x = e^t[/latex] will turn a Cauchy-Euler equation into an equation with constant coefficients, which can then be solved as described above.</p>
+<h5>Other equations</h5>
+<p>If the ODE does not have constant coefficients, or if [latex]h(x)[/latex] is not of the form discussed above, you may want to try using the method of <span style="text-decoration: underline">variation of constants</span>: look for a particular solution [latex]y_p=v_1(x) y_1(x)+v_2(x) y_2(x),[/latex] where [latex]y_1[/latex] and [latex]y_2[/latex] are two linearly independent solutions to the associated homogeneous equation and solve for [latex]v_1[/latex] and [latex]v_2[/latex] after imposing</p>
+<p style="text-align: center">[latex]v_1^\prime(x) y_1(x) + v_2^\prime(x) y_2(x)=0.[/latex]</p>
+<h6>Example</h6>
+<p>The general solution to [latex]y^{\prime\prime} + 2 y^\prime + y = 2 x^{-2} e^{-x}[/latex], [latex]x > 0[/latex] is</p>
+<p style="text-align: center">[latex]\displaystyle C_1 e^{-x} + C_2 x e^{-x} - 2 \left(1+\ln(x)\right) e^{-x}[/latex].</p>
+<p><span style="text-decoration: underline">Note</span>: There is a convenient way to check that two functions [latex]y_1[/latex] and [latex]y_2[/latex] are linearly independent: their Wronskian</p>
+<p style="text-align: center">[latex]W[y_1,y_2]=\left| \begin{array}{cc}y_1 & y_2 \\ y_1^\prime & y_2^\prime \end{array} \right|[/latex]</p>
+<p>must be nonzero.</p>
+<h2>Linear differential equations of order higher than two</h2>
+<p>The general solution to</p>
+<p style="text-align: center">[latex]\begin{align*} &a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_1(x) y^\prime + a_0(x) y=h(x), \\ & a_n(x) \ne 0 \end{align*}[/latex]</p>
+<p>reads</p>
+<p style="text-align: center">[latex]y(x)=C_n y_n(x) + C_{n-1} y_{n-1}(x) + \dots + C_1 y_1(x)+ y_p(x),[/latex]</p>
+<p>where</p>
+<ul>
+<li>[latex]y_p(x)[/latex] is a particular solution to the full equation</li>
+</ul>
+<p style="text-align: center">[latex]a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h(x),[/latex]</p>
+<ul>
+<li>[latex]y_i, i=1,\dots, n[/latex], are [latex]n[/latex] <span style="text-decoration: underline">linearly independent</span> solutions to the associated homogeneous equation</li>
+</ul>
+<p style="text-align: center">[latex]a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=0,[/latex]</p>
+<ul>
+<li>[latex]C_i, i=1, \dots, n[/latex], are [latex]n[/latex] arbitrary constants.</li>
+</ul>
+<p>Therefore, the method to solve the linear equation is as follows.</p>
+<ol>
+<li>Solve the homogeneous equation (i.e. find [latex]n[/latex] linearly independent solutions [latex]y_1 \dots, y_n[/latex]),</li>
+<li>Find a particular solution to the full equation.</li>
+</ol>
+<h3>How to solve the homogeneous equation</h3>
+<p>The general solution [latex]y[/latex] to the homogeneous equation</p>
+<p style="text-align: center">[latex]a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=0[/latex]</p>
+<p>is a linear combination of [latex]n[/latex] of its linearly independent solutions [latex]y_n, \dots, y_1[/latex], i.e. [latex]y=C_n y_n + \dots +C_1 y_1[/latex] where the [latex]C_i[/latex] are constants.</p>
+<h4>Equations with constant coefficients</h4>
+<p>Suppose the homogeneous equation reads</p>
+<p style="text-align: center">[latex]a_n y^{(n)} + a_{n-1} y^{(n-1)} + \dots + a_2 y^{\prime\prime} + a_1 y^\prime + a_0 y=0,[/latex]</p>
+<p>where the [latex]a_i[/latex] are real constants. The associated characteristic equation is</p>
+<p style="text-align: center">[latex]a_n r^n+\dots + a_1 r + a_0=0.[/latex]</p>
+<ul>
+<li>If the characteristic equation has only simple roots [latex]r_i[/latex], you can find [latex]n[/latex] linearly independent solutions by using [latex]y_j(x)=\exp(r_j x)[/latex] for real roots, and the following solutions for any set of complex conjugate roots [latex]r_i =\alpha_i + i \beta_i[/latex] and [latex]r_{i+1}=\alpha_i - i \beta_i[/latex]:</li>
+</ul>
+<p style="text-align: center">[latex]\left\{ \begin{array}{ccl} y_i(x)&=&\exp(\alpha_i x) \cos(\beta_i x) \\ y_{i+1}(x)&=&\exp(\alpha_i x)\sin(\beta_i x) \end{array} \right.[/latex]</p>
+<ul>
+<li>If the characteristic equation has one or more roots of multiplicity greater than one, use the above formula for roots of multiplicity one, and for any root [latex]r_i[/latex] of multiplicity [latex]h[/latex], use</li>
+</ul>
+<p style="text-align: center">[latex]\begin{align*} y_i & = \exp(r_i x),\\ y_{i+1} & = x \exp(r_i x), \\ y_{i+2} & = x^2 \exp(r_i x),\\  & \vdots \\ y_{i+h-1} & = x^{h-1} \exp(r_i x), \end{align*}[/latex]</p>
+<p>Again, if [latex]r_i=\alpha_i \pm i \beta_i[/latex], it is customary to use [latex]x^k \exp(\alpha_i x)  \cos(\beta_i x)[/latex] and [latex]x^k \exp(\alpha_i x) \sin(\beta_i x)[/latex] instead of [latex]x^k \exp(r_i x)[/latex] (since the ODE has real coefficients).</p>
+<h5>Example 1</h5>
+<p>The general solution to [latex]y^{(4)}-8 y^{\prime\prime} - 9 y = 6 x + 12 \sin(x)[/latex] is</p>
+<p style="text-align: center">[latex]\displaystyle y = C_1 \cos(x) + C_2 \sin(x) + C_3 e^{3 x} + C_4 e^{-3 x} - \frac{2}{3} x + \frac{3}{5} x \cos(x)[/latex].</p>
+<h5>Example 2</h5>
+<p>The solution to [latex]y^{(4)} - 2 y^{(3)} = 0[/latex] with [latex]y(0)=0[/latex], [latex]y^\prime(0)=0[/latex], [latex]y^{\prime\prime}(0)=0[/latex] and [latex]y^{(3)}(0) = 4[/latex] is</p>
+<p style="text-align: center">[latex]\displaystyle y = \frac{1}{2} e^{2 x} - x^2 - x - \frac{1}{2}.[/latex]</p>
+<h4>Cauchy-Euler equation</h4>
+<p>To solve</p>
+<p style="text-align: center">[latex]a_n x^n y^{(n)} + a_{n-1} x^{n-1} y^{(n-1)}+\dots+ a_2 x^2 y^{\prime\prime} + a_1 x y^\prime+ a_0 y=0, \qquad x>0[/latex]</p>
+<p>where the [latex]a_i[/latex] are real constants, make the change of variable [latex]x=\exp(t) = e^t[/latex]. This gives an equation with constant coefficients for [latex]y[/latex] (as a function of [latex]t[/latex]), which can be solved as described above. Then, the change of variable [latex]t=\ln(x)[/latex] gives [latex]y[/latex] in terms of [latex]x[/latex].</p>
+<p><span style="text-decoration: underline">Note</span>: If you have to solve for [latex]x < 0,[/latex] make the change of variable [latex]x=-\exp(t)[/latex], and proceed as before (but now, [latex]t=\ln(-x)[/latex]).
+
+
+<h5>Example</h5>
+<p>The general solution to [latex]x^3 y^{(3)} - 2 x^2 y^{\prime\prime} + 8 x y^\prime - 8 y = 0[/latex], [latex]x >0[/latex] is</p>
+<p style="text-align: center">[latex]\displaystyle C_1 x + C_2 x^2 \cos(2 \ln(x)) + C_3 x^2 \sin(2 \ln(x))[/latex].</p>
+<h3>How to find a particular solution to the full equation</h3>
+<p>We now look for a particular solution to</p>
+<p style="text-align: center">[latex]a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h(x).[/latex]</p>
+<p>If the above equation has constant coefficients and if</p>
+<p style="text-align: center">[latex]h(x)=P_m(x) \exp(\alpha x) \cos(\beta x)+ Q_m(x) \exp(\alpha x) \sin(\beta x),[/latex]</p>
+<p>where [latex]P_m[/latex] and [latex]Q_m[/latex] are polynomials of degree [latex]m[/latex], then try the following particular solution, where [latex]K_m[/latex] and [latex]L_m[/latex] are polynomials of degree [latex]m[/latex] in each case.</p>
+<ul>
+<li>[latex]y_p=K_m(x) \exp(\alpha x) \cos(\beta x)+ L_m(x) \exp(\alpha x) \sin(\beta x)[/latex] if [latex]\alpha \pm i \beta[/latex] <span style="text-decoration: underline">are not</span> roots of the associated characteristic equation.</li>
+<li><span style="text-align: initial;font-size: 1em"><span style="text-align: initial;font-size: 1em">[latex]y_p = x^h \big[K_m(x) \exp(\alpha x) \cos(\beta x) + L_m(x) \exp(\alpha x) \sin(\beta x) \big][/latex] </span></span>if [latex]\alpha \pm i \beta[/latex] <span style="text-decoration: underline">are</span> roots <span style="text-decoration: underline">of multiplicity</span> [latex]h[/latex] of the associated characteristic equation.</li>
+</ul>
+<p>If the ODE does not have constant coefficients, or if [latex]h(x)[/latex] is not of the form discussed above, use the method of variation of constants: look for a particular solution [latex]y_p=v_n(x) y_n(x)+ \dots +v_1(x) y_1(x)[/latex] where the [latex]y_i[/latex] are [latex]n[/latex] linearly independent solutions of the associated homogeneous equation, and solve for the [latex]v_i[/latex] after imposing the [latex]n-1[/latex] following conditions:</p>
+<p style="text-align: center">[latex]\left\{ \begin{array}{clllcl} v_n^\prime(x) y_n(x) &+ & \dots&+ & v_1^\prime(x) y_1(x)&=0 \\  v_n^\prime(x) y_n^\prime(x)&+ & \dots&+ & v_1^\prime(x) y_1^\prime(x)&=0 \\ \vdots && \ddots && \vdots \\ v_n^\prime(x) y_n^{(n-2)}(x)&+ & \dots&+ & v_1^\prime(x) y_1^{(n-2)}(x)&=0. \end{array} \right.[/latex]</p>
+<p><span style="text-decoration: underline">Note</span>: If the Wronskian</p>
+<p style="text-align: center">[latex]W[y_1,\dots, y_n]=\left| \begin{array}{cccc} y_1 & y_2 &\dots & y_n \\ y_1^\prime & y_2^\prime &\dots &y_n^\prime \\ \vdots & \vdots & \ddots & \vdots \\ y_1^{(n-1)} & y_2^{(n-1)} &\dots & y_n^{(n-1)} \end{array} \right|[/latex]</p>
+<p>of [latex]y_1, \dots, y_n[/latex] is nonzero, then these functions are linearly independent.</p>
+<h2>Systems of first order linear differential equations</h2>
+<p>We consider systems of the form</p>
+<p>[latex]\left\{ \begin{array}{cccccc} \displaystyle \frac{d x_1}{d t}&=a_{11}(t) x_1(t) &+ a_{12}(t)\ x_2(t) &+\dots &+ a_{1n}(t) x_n(t) &+ b_1(t) \\ \displaystyle \frac{d x_2}{d t}&=a_{21}(t) x_1(t) &+ a_{22}(t) x_2(t) &+ \dots &+ a_{2n}(t) x_n(t) &+ b_2(t) \\ \vdots& \vdots & \vdots & \ddots & \vdots &\vdots \\ \displaystyle \frac{d x_n}{d t}&=a_{n1}(t) x_1(t) &+ a_{n2}(t) x_2(t) &+ \dots &+ a_{nn}(t) x_n(t) &+ b_n(t) \end{array},\right.[/latex]</p>
+<p>which can also be written as [latex]\displaystyle D X = \frac{d}{d t} X = \dot X = A X + B,[/latex]</p>
+<p>where</p>
+<p style="text-align: center">[latex]X=X(t)=\left(\begin{array}{c} x_1(t) \\ x_2(t) \\ \vdots \\ x_n(t) \end{array}\right), \qquad B=\left(\begin{array}{c} b_1(t) \cr b_2(t) \cr \vdots \cr b_n(t) \end{array}\right),[/latex]</p>
+<p>and</p>
+<p style="text-align: center">[latex]A=A(t)=\left(\begin{array}{cccc} a_{11}(t) & a_{12}(t) & \dots & a_{1n}(t) \\ a_{21}(t) & a_{22}(t) & \dots & a_{2n}(t) \\ \vdots & \vdots & \ddots & \vdots \\ a_{n1}(t) & a_{n2}(t) & \dots & a_{nn}(t) \end{array}\right).[/latex]</p>
+<p>If [latex]B[/latex] and the [latex]a_{ij}[/latex] are continuous on an interval [latex]a < t < b[/latex], and if [latex]t_0 \in (a,b)[/latex], then there is a unique solution to [latex]\dot X = A X + B[/latex] which satisfies [latex]x_1(t)=\alpha_1, x_2(t)=\alpha_2,\dots, x_n(t)=\alpha_n[/latex], valid on the interval [latex](a,b)[/latex].
+
+The general solution to [latex]\dot X = A X + B[/latex] reads
+
+
+<p style="text-align: center">[latex]\begin{align*} X(t)& = U(t) C + X_p(t),\\ &= C_1 X_1(t) + C_2 X_2(t) + \dots + C_n X_n(t) + X_p(t), \end{align*}[/latex]</p>
+<p>where</p>
+<ul>
+<li>[latex]X_p(t)[/latex] is a particular solution to [latex]\dot X=A X + B[/latex],</li>
+<li>[latex]X_i, i=1,\dots, n[/latex], are [latex]n[/latex] <span style="text-decoration: underline">linearly independent</span> solutions to the associated homogeneous system [latex]\dot X = A X[/latex],</li>
+<li>[latex]C_i, i=1, \dots, n[/latex], are [latex]n[/latex] constants.</li>
+</ul>
+<p>The matrix [latex]U(t)=[X_1(t), X_2(t), \dots, X_n(t)][/latex] is called a <span style="text-decoration: underline">fundamental matrix</span> of the homogeneous system [latex]\dot X = A X[/latex]. Therefore, to solve the differential system, proceed as follows.</p>
+<ol>
+<li>Solve the homogeneous system (i.e. find [latex]n[/latex] linearly independent solutions [latex]X_1, \dots, X_n[/latex]),</li>
+<li>Find a particular solution to the full system.</li>
+</ol>
+<h3>How to solve the homogeneous system</h3>
+<p>The general solution [latex]X(t)[/latex] to the homogeneous system [latex]\dot X = A X[/latex] is a linear combination of [latex]n[/latex] linearly independent solutions [latex]X_1, \dots, X_n[/latex], i.e. [latex]X(t)=C_1 X_1(t) + \dots +C_n X_n(t)[/latex] where the [latex]C_i[/latex] are constants. In other words, it reads</p>
+<p style="text-align: center">[latex]X(t)=U(t) C[/latex]</p>
+<p>where [latex]U(t)[/latex] is a fundamental matrix and [latex]C[/latex] a constant vector.</p>
+<p>In the following, we consider systems with constant coefficients only, that is we assume the matrix [latex]A[/latex] does not depend on time. The procedure is then as follows.</p>
+<ol>
+<li>Find the eigenvalues and eigenvectors of [latex]A[/latex].</li>
+<li>For each eigenvector [latex]\xi[/latex] belonging to the eigenvalue [latex]\lambda[/latex], we know that [latex]X(t) = \exp(\lambda t) \xi[/latex] is a solution to [latex]\dot X=A X[/latex]. Therefore,
+<ul>
+<li>If [latex]A[/latex] has [latex]n[/latex] distinct eigenvalues, we already know [latex]n[/latex] linearly independent solutions to the homogeneous system, namely [latex]X_i(t)=\exp(\lambda_i t) \xi_i[/latex], [latex]i=1, \dots, n[/latex].</li>
+<li>If an eigenvalue [latex]\lambda[/latex] has a multiplicity [latex]h[/latex] higher than one, find as many linearly independent eigenvectors as you can, and write the corresponding solutions [latex]X_j(t)=\exp(\lambda t) \xi_j[/latex]. Then, look for the missing solutions in the form [latex]X_i=(t^{h-1} Y_{h-1}+ t^{h-2} Y_{h-2} + \dots + t Y_1 + Y_0) \exp(\lambda t),[/latex] where the [latex]Y_i[/latex] are constant vectors. Substitute this solution in the homogeneous system and solve for the [latex]Y_i[/latex]. Always make sure that you have found [latex]n[/latex] linearly independent solutions to the homogeneous system, and write the corresponding fundamental matrix.</li>
+</ul>
+</li>
+</ol>
+<p><span style="text-decoration: underline">Note</span>: If one eigenvalue is complex, and since (in general) [latex]A[/latex] has real coefficients, its complex conjugate is also an eigenvalue. In the same way, if [latex]\xi[/latex] is a (complex) eigenvector that belongs to the complex eigenvalue [latex]\lambda[/latex], then its complex conjugate [latex]\xi^*[/latex] belongs to the eigenvalue [latex]\lambda^*[/latex]. Thus, if one eigenvalue [latex]\lambda=\alpha + i \beta[/latex] is complex, you may use the real functions [latex]X_i(t)=\Re e[\exp(\alpha+i \beta)  \xi][/latex] and [latex]X_{i+1}(t)=\Im m[\exp(\alpha+i \beta) \xi][/latex] instead of the complex solutions [latex]X_i(t)=\exp(\lambda t) \xi[/latex] and [latex]X_{i+1}(t) = X_i^*(t) = \exp(\lambda^* t) \xi^*[/latex].</p>
+<h4>Example 1</h4>
+<p>A fundamental matrix for [latex]\dot X = A X[/latex] with [latex]\displaystyle A = \left(\begin{array}{cc} 1 & 3 \\ 2 & 2 \end{array} \right)[/latex] is [latex]\displaystyle \left( \begin{array}{cc} 3 e^{-t} & e^{4 t} \\ -2 e^{-t} & e^{4t} \end{array} \right)[/latex].</p>
+<h4>Example 2</h4>
+<p>A fundamental matrix for [latex]\dot X = A X[/latex] with [latex]\displaystyle A = \left(\begin{array}{cc} 1 & 1 \\ -1 & 3 \end{array} \right)[/latex] is [latex]\displaystyle \left( \begin{array}{cc} e^{2 t} & t e^{2 t} \\ e^{2 t} & (t+1) e^{2t} \end{array} \right)[/latex].</p>
+<h3>How to find a particular solution to the full system</h3>
+<p>If [latex]B(t)=b \exp(\omega t)[/latex], where [latex]b[/latex] is a constant vector, and if [latex]\omega[/latex] <span style="text-decoration: underline">is not</span> an eigenvalue of [latex]A[/latex], then try the particular solution [latex]X_p(t)=k \exp(\omega t),[/latex] where [latex]k[/latex] is a constant vector. Substitute the expression of [latex]X_p[/latex] back into the differential system [latex]\dot X=A X + B[/latex] and solve for [latex]k[/latex].</p>
+<p><span style="text-decoration: underline">Note</span>: It might be useful to use the principle of superposition. Indeed, s<span style="font-size: 1em">ince [latex]A[/latex] has real </span><span style="font-size: 1em">coefficients, if [latex]X_p[/latex] is a solution to [latex]\dot X = A X + b \exp(\alpha t + i \beta t),[/latex] </span><span style="font-size: 1em">(where [latex]b[/latex] is a constant vector and is </span><span style="font-size: 1em">real), then [latex]\Re e(X_p)[/latex] and [latex]\Im m(X_p)[/latex] are respectively </span><span style="font-size: 1em">solutions to [latex]\dot X =A X + b \exp(\alpha t) \cos(\beta t)[/latex] and to </span><span style="font-size: 1em">[latex]\dot X= A X + b \exp(\alpha t) \sin(\beta t)[/latex]. </span>Thus, if [latex]B(t)[/latex] has the form [latex]b \exp(\alpha t) \cos(\beta t)[/latex] or [latex]b \exp(\alpha t) \sin(\beta t),[/latex] and if [latex]\alpha + i \beta[/latex] is not an eigenvalue of [latex]A[/latex], the above method can be used to find a particular solution to [latex]\dot X = A X + b \exp(\alpha t + i \beta t)[/latex]. Its real or its imaginary part (depending on the form of [latex]B(t)[/latex]) is then a particular solution to the original differential system.</p>
+<p>If the above method cannot be applied, use the method of <span style="text-decoration: underline">variation of constants</span>: look for a solution in the form [latex]X_p=U(t) V(t),[/latex] where [latex]U(t)[/latex] is a fundamental matrix associated with the homogeneous system, and [latex]V(t)[/latex] is a vector to be determined. Then [latex]V(t)[/latex]<br />
+satisfies [latex]\dot V=U^{-1}(t) B(t),[/latex] i.e. [latex]V(t)=\int U^{-1}(t) B(t) dt.[/latex]</p>
+<h4>Example 1</h4>
+<p>A particular solution to [latex]\dot X = A X + H[/latex] with [latex]\displaystyle A = \left(\begin{array}{cc} -2 & 4 \\ 1 & 1 \end{array} \right)[/latex] and [latex]\displaystyle H = \left(\begin{array}{c}  2 \\ 0 \end{array} \right) e^t[/latex] is [latex]\displaystyle X_p = \left(\begin{array}{c} 0 \\ -1/2 \end{array} \right) e^t[/latex].</p>
+<h4>Example 2</h4>
+<p>A particular solution to [latex]\dot X = A X + H[/latex] with [latex]\displaystyle A = \left(\begin{array}{cc} 2 & 1 \\ -3 & -2 \end{array} \right)[/latex] and [latex]\displaystyle H = \left(\begin{array}{c} 2 \\ 4 \end{array} \right) e^t[/latex] is [latex]\displaystyle X_p = \left(\begin{array}{c} 5 t -\frac{3}{2} \\ -5 t + \frac{9}{2} \end{array} \right) e^{t}[/latex].</p>
+<p><span style="text-decoration: underline">General remark</span>: Sometimes, the elimination method (which consists in making successive operations on the rows of the linear system) may be easier to apply, or may simply go faster. It may also be useful if the matrix [latex]A[/latex] depends on time.</p>
+<h2><a id="Phase_Plane_Analysis"></a>Phase plane analysis</h2>
+<p>We now apply the information presented above to the linear stability analysis of fixed points of two-dimensional dynamical systems. Suppose that the nonlinear system of differential equations</p>
+<p style="text-align: center"><a id="Eq_13.4"></a>[latex]\label{2d_system} \displaystyle \frac{d Y}{d t} = F(Y), \qquad (13.4)[/latex]</p>
+<p>where [latex]Y \in \mathbb{R}^2[/latex] has a fixed point at [latex]Y = Y_0[/latex]. The linearization of the above system near [latex]Y = Y_0[/latex] is obtained by setting [latex]Y = Y_0 + X[/latex], where [latex]||X||[/latex] is small, substituting this expression into Equation (<a href="#Eq_13.4">13.4</a>), and keeping only the terms that are linear in [latex]X[/latex]. One thus writes</p>
+<p style="text-align: center">[latex]\displaystyle \frac{d X}{d t} = \frac{d Y}{d t} = F(Y_0 + X) = F(Y_0) + DF(Y_0)\, X + {\mathcal O}(X^2) \simeq DF(Y_0) X,[/latex]</p>
+<p>where [latex]DF(Y_0)[/latex] is the Jacobian of [latex]F[/latex] at [latex]Y=Y_0[/latex], [latex]{\mathcal O}(X^2)[/latex] represents nonlinear terms, and we used the fact that [latex]F(Y_0) = 0[/latex] since [latex]Y_0[/latex] is a fixed point of (<a href="#Eq_13.4">13.4</a>). The Jacobian of [latex]F[/latex] at [latex]Y = Y_0[/latex] is defined as</p>
+<p style="text-align: center">[latex]DF(Y_0) = \left(\begin{array}{cc} \left. \frac{\partial F_1}{\partial x} \right|_{(x_0,y_0)} & \left. \frac{\partial F_1}{\partial y} \right|_{(x_0,y_0)}\\ \left. \frac{\partial F_2}{\partial x}\right|_{(x_0,y_0)} & \left. \frac{\partial F_2}{\partial y} \right|_{(x_0,y_0)} \end{array} \right),[/latex]</p>
+<p>where we used the following notation</p>
+<p style="text-align: center">[latex]Y = \left(\begin{array}{c}x \\ y \end{array} \right), \qquad F(X) = \left(\begin{array}{c} F_1(x,y) \\ F_2(x,y) \end{array} \right), \qquad Y_0 = \left(\begin{array}{c}x_0 \\ y_0 \end{array} \right).[/latex]</p>
+<p>The dynamics of the linear system</p>
+<p style="text-align: center"><a id="Eq_13.5"></a>[latex]\displaystyle \frac{d X}{d t} = DF(Y_0)\, X \qquad (13.5)[/latex]</p>
+<p>depends on the eigenvalues and eigenvectors of the matrix [latex]A \equiv DF(Y_0)[/latex]. Indeed, we know that if [latex]A[/latex] has distinct eigenvalues, the general solution of the linear system is of the form</p>
+<p style="text-align: center">[latex]\label{2d_lin_sys_sol} X = C_1 \exp(\lambda_1 t) \xi_1 + C_2 \exp(\lambda_2 t) \xi_2, \qquad (13.6)[/latex]</p>
+<p>where [latex]\xi_1[/latex] and [latex]\xi_2[/latex] are eigenvectors of [latex]A[/latex] associated with eigenvalues [latex]\lambda_1[/latex] and [latex]\lambda_2[/latex], and where [latex]C_1[/latex] and [latex]C_2[/latex] are arbitrary constants.</p>
+<p>The fixed point [latex]Y = Y_0[/latex] of (<a href="#Eq_13.4">13.4</a>) is <em>linearly </em><em>stable</em> if all solutions of the linearized system (<a href="#Eq_13.5">13.5)</a> converge towards the origin as [latex]t \rightarrow + \infty[/latex]. This only occurs if the real parts of [latex]\lambda_1[/latex] and [latex]\lambda_2[/latex] are both negative, which implies that the trace of [latex]A[/latex] is also negative. If we assume that [latex]F[/latex] is real, as we do from now on, then [latex]A[/latex] has real coefficients and its eigenvalues are either both real or complex conjugate of one another. In this case, a linearly stable fixed point is such that both [latex]\text{Tr} (A) = \lambda_1 + \lambda_2 < 0[/latex] and [latex]\det (A) = \lambda_1 \lambda_2 > 0[/latex].<a id="Fig_13.1"></a></p>
+<figure id="attachment_477" aria-describedby="caption-attachment-477" style="width: 150px" class="wp-caption alignleft"><img loading="lazy" decoding="async" class="wp-image-477" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_node-300x217.png" alt="Phase portrait of a stable node. Long description available." width="150" height="109" srcset="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_node-300x217.png 300w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_node-1024x741.png 1024w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_node-768x556.png 768w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_node-1536x1111.png 1536w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_node-65x47.png 65w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_node-225x163.png 225w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_node-350x253.png 350w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_node.png 1635w" sizes="auto, (max-width: 150px) 100vw, 150px" /><figcaption id="caption-attachment-477" class="wp-caption-text">Figure 13.1 [<a href="#Fig_13.1_Desc"><em>Image Description</em></a>]</figcaption></figure>
+<p>If the eigenvalues of [latex]A[/latex] are both negative, real and distinct, then the fixed point is a <em>stable node</em>. The phase portrait of the linear system (<a href="#Eq_13.5">13.5</a>) looks like the sketch of Figure 13.1. Note that the trajectories are tangent at the origin to the eigendirection associated with the slowest eigenvalue.<a id="Fig_13.2"></a></p>
+<figure id="attachment_478" aria-describedby="caption-attachment-478" style="width: 150px" class="wp-caption alignright"><img loading="lazy" decoding="async" class="wp-image-478" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_star-300x217.png" alt="Phase portrait of a stable star. Long description available." width="150" height="109" srcset="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_star-300x217.png 300w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_star-1024x741.png 1024w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_star-768x556.png 768w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_star-1536x1112.png 1536w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_star-65x47.png 65w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_star-225x163.png 225w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_star-350x253.png 350w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_star.png 1631w" sizes="auto, (max-width: 150px) 100vw, 150px" /><figcaption id="caption-attachment-478" class="wp-caption-text">Figure 13.2 [<a href="#Fig_13.2_Desc"><em>Image Description</em></a>]</figcaption></figure>
+<p>If [latex]A[/latex] is proportional to the identity matrix (i.e. if the eigenvalues of [latex]A[/latex] are the same but the corresponding eigenspace is two-dimensional), then the fixed point [latex]Y=Y_0[/latex] is called a <em>star</em>.</p>
+<p>If the eigenvalues of [latex]A[/latex] are the same but the corresponding eigenspace is one-dimensional, then [latex]Y=Y_0[/latex] is called a <em>degenerate node</em>.<a id="Fig_13.3"></a></p>
+<figure id="attachment_479" aria-describedby="caption-attachment-479" style="width: 150px" class="wp-caption alignleft"><img loading="lazy" decoding="async" class="wp-image-479" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_deg_node-300x217.png" alt="Phase portrait of a stable degenerate node. Long description available." width="150" height="109" srcset="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_deg_node-300x217.png 300w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_deg_node-1024x742.png 1024w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_deg_node-768x556.png 768w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_deg_node-1536x1113.png 1536w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_deg_node-65x47.png 65w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_deg_node-225x163.png 225w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_deg_node-350x254.png 350w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_deg_node.png 1630w" sizes="auto, (max-width: 150px) 100vw, 150px" /><figcaption id="caption-attachment-479" class="wp-caption-text">Figure 13.3 [<a href="#Fig_13.3_Desc"><em>Image Description</em></a>]</figcaption></figure>
+<p>Figures 13.2 and 13.3 show the typical phase portrait of the linear system (<a href="#Eq_13.5">13.5</a>) when the fixed point is a stable star and a stable degenerate node, respectively.</p>
+<p>If the eigenvalues of [latex]A[/latex] have non-zero imaginary parts, then [latex]Y=Y_0[/latex] is a stable spiral. The corresponding phase portrait of (<a href="#Eq_13.5">13.5</a>) is shown in Figure 13.4.<a id="Fig_13.4"></a></p>
+<figure id="attachment_480" aria-describedby="caption-attachment-480" style="width: 150px" class="wp-caption alignright"><img loading="lazy" decoding="async" class="wp-image-480" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_spiral-300x218.png" alt="Phase portrait of a stable spiral. Long description available." width="150" height="109" srcset="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_spiral-300x218.png 300w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_spiral-1024x745.png 1024w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_spiral-768x558.png 768w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_spiral-1536x1117.png 1536w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_spiral-65x47.png 65w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_spiral-225x164.png 225w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_spiral-350x254.png 350w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_spiral.png 1645w" sizes="auto, (max-width: 150px) 100vw, 150px" /><figcaption id="caption-attachment-480" class="wp-caption-text">Figure 13.4 [<a href="#Fig_13.4_Desc"><em>Image Description</em></a>]</figcaption></figure>
+<p>If one of the eigenvalues of [latex]A[/latex] has positive real part, then the fixed point [latex]Y=Y_0[/latex] is linearly unstable. This occurs if either [latex]\det(A)<0[/latex], in which case the fixed point is a &lt;em&gt;saddle point, or if [latex]\det(A)>0[/latex] and [latex]\text{Tr} (A) > 0[/latex].<a id="Fig_13.5"></a></p>
+<figure id="attachment_481" aria-describedby="caption-attachment-481" style="width: 150px" class="wp-caption alignleft"><img loading="lazy" decoding="async" class="wp-image-481" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_saddle-300x255.png" alt="Phase portrait of a saddle point. Long description available." width="150" height="127" srcset="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_saddle-300x255.png 300w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_saddle-1024x870.png 1024w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_saddle-768x653.png 768w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_saddle-65x55.png 65w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_saddle-225x191.png 225w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_saddle-350x297.png 350w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_saddle.png 1392w" sizes="auto, (max-width: 150px) 100vw, 150px" /><figcaption id="caption-attachment-481" class="wp-caption-text">Figure 13.5 [<a href="#Fig_13.5_Desc"><em>Image Description</em></a>]</figcaption></figure>
+<p>The phase portrait of (<a href="#Eq_13.5">13.5</a>) when the origin is a saddle point is shown in Figure 13.5. The phase portraits of (<a href="#Eq_13.5">13.5</a>) when the origin is an unstable node, an unstable star, an unstable degenerate node, or unstable spiral are similar to those of Figures 13.1, 13.2, 13.3, and 13.4, but with the direction of the arrows reversed.</p>
+<p><span style="text-align: initial;font-size: 1em">If [latex]\det(A)=0[/latex] and [latex]\text{Tr} (A) \ne 0[/latex], then one of the eigenvalues of [latex]A[/latex] is zero, and system (<a href="#Eq_13.5">13.5</a>) has a line of fixed points.<a id="Fig_13.6"></a></span></p>
+<figure id="attachment_482" aria-describedby="caption-attachment-482" style="width: 150px" class="wp-caption alignright"><img loading="lazy" decoding="async" class="wp-image-482" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_line-300x217.png" alt="Phase portrait in the presence of a line of fixed points. Long description available." width="150" height="109" srcset="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_line-300x217.png 300w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_line-1024x742.png 1024w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_line-768x556.png 768w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_line-1536x1113.png 1536w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_line-65x47.png 65w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_line-225x163.png 225w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_line-350x254.png 350w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_line.png 1633w" sizes="auto, (max-width: 150px) 100vw, 150px" /><figcaption id="caption-attachment-482" class="wp-caption-text">Figure 13.6 [<a href="#Fig_13.6_Desc"><em>Image Description</em></a>]</figcaption></figure>
+<p><span style="text-align: initial;font-size: 1em">This is a degenerate situation and in most cases the dynamical system (<a href="#Eq_13.4">13.4</a>) has a single fixed point, even though its linearization has a continuous family of fixed points. The phase portrait of (<a href="#Eq_13.5">13.5</a>) in a case where [latex]\lambda_1 < 0[/latex] and [latex]\lambda_2 = 0[/latex] is shown in Figure 13.6.<a id="Fig_13.7"></a></span></p>
+<figure id="attachment_483" aria-describedby="caption-attachment-483" style="width: 100px" class="wp-caption alignleft"><img loading="lazy" decoding="async" class="wp-image-483" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_center-241x300.png" alt="Phase portrait of a (linear) center. Long description available." width="100" height="125" srcset="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_center-241x300.png 241w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_center-822x1024.png 822w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_center-768x956.png 768w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_center-65x81.png 65w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_center-225x280.png 225w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_center-350x436.png 350w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_center.png 856w" sizes="auto, (max-width: 100px) 100vw, 100px" /><figcaption id="caption-attachment-483" class="wp-caption-text">Figure 13.7 [<a href="#Fig_13.7_Desc"><em>Image Description</em></a>]</figcaption></figure>
+<p><span style="text-align: initial;font-size: 1em">Finally, if all of the eigenvalues of [latex]A[/latex] have zero real part, then [latex]Y=Y_0[/latex] is <em>marginally stable</em>. Since we ignore the non-generic situation where [latex]A = 0[/latex], this implies that [latex]A[/latex] has purely imaginary complex conjugate eigenvalues, and the fixed point [latex]Y=Y_0[/latex] is called a </span><em style="text-align: initial;font-size: 1em">linear center</em><span style="text-align: initial;font-size: 1em">. In this case, [latex]\det(A) > 0[/latex] but [latex]\text{Tr} (A) = 0[/latex]. Figure 13.7 shows the phase portrait of the linear system (<a href="#Eq_13.5">13.5</a>) when the origin is a (linear) center. Determining whether the fixed point [latex]Y = Y_0[/latex] is a nonlinear center for the dynamical system (<a href="#Eq_13.4">13.4</a>) requires further analysis.</span></p>
+<p>The above results can be summarized in the diagram of Figure 13.8, which shows the classification of the fixed point [latex]X = 0[/latex] of the linear system (<a href="#Eq_13.5">13.5</a>), as a function of the trace and determinant of [latex]A[/latex].<a id="Fig_13.8"></a></p>
+<figure id="attachment_495" aria-describedby="caption-attachment-495" style="width: 1024px" class="wp-caption aligncenter"><img loading="lazy" decoding="async" class="wp-image-495 size-large" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_stability-1-1024x690.png" alt="Fixed points classification diagram. Long description available." width="1024" height="690" srcset="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_stability-1-1024x690.png 1024w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_stability-1-300x202.png 300w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_stability-1-768x517.png 768w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_stability-1-1536x1035.png 1536w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_stability-1-2048x1380.png 2048w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_stability-1-65x44.png 65w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_stability-1-225x152.png 225w, https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2024/06/temp_stability-1-350x236.png 350w" sizes="auto, (max-width: 1024px) 100vw, 1024px" /><figcaption id="caption-attachment-495" class="wp-caption-text">Figure 13.8. Classification of the fixed point [latex]X = 0[/latex] of the linear system (<a href="#Eq_13.5">13.5</a>), as a function of the trace and determinant of its Jacobian [latex]A[/latex]. [<a href="#Fig_13.8_Desc"><em>Image Description</em></a>]</figcaption></figure>
+<p>The Hartman-Grobman theorem indicates that for a <span style="text-decoration: underline">smooth</span> dynamical system, the nature of a fixed point is not changed by nonlinear terms provided the fixed point is hyperbolic, i.e. provided the eigenvalues of the Jacobian of its linearization all have non-zero real parts. Linear stability analysis can therefore be used to classify hyperbolic fixed points of nonlinear dynamical systems. Further analysis is required to determine the nonlinear stability of non-hyperbolic fixed points. In particular, centers may remain centers or become stable or unstable spirals. Methods to investigate the effect of nonlinearities on hyperbolic and non-hyperbolic fixed points are typically discussed in an introductory text on dynamical systems.</p>
+<h2>Figure Descriptions</h2>
+<p><strong><a id="Fig_13.1_Desc"></a>Figure 13.1</strong>: A phase portrait of a stable node. Multiple curved and straight trajectories flow from the outer regions of the plane and converge toward a central fixed point at the origin. The arrowheads on each trajectory point inward and most paths are curved. This occurs because the system decays faster in one direction than the other. Trajectories quickly "flatten" out and approach the origin along the "slow" direction, giving it a characteristic swept-back look. [<em><a href="#Fig_13.1">Return to Figure 13.1</a></em>]</p>
+<p><strong><a id="Fig_13.2_Desc"></a>Figure 13.2</strong>: A phase portrait of a stable star. All trajectories consist of straight lines that radiate from the outer boundaries and converge directly toward a single central fixed point at the origin. All arrowheads point inward toward the center, indicating a stable fixed point. The flow is perfectly symmetrical, indicating that the eigenvalues are identical, meaning the system returns to equilibrium at the same rate from any direction. [<em><a href="#Fig_13.2">Return to Figure 13.2</a></em>]</p>
+<p><strong><a id="Fig_13.3_Desc"></a>Figure 13.3</strong>: A phase portrait of a stable degenerate node. Numerous trajectories converge toward a central fixed point at the origin. In this degenerate case, all trajectories become tangent to a single straight line (the single eigendirection) as they approach the center. All arrowheads point inward, indicating that the origin is a stable attractor. [<em><a href="#Fig_13.3">Return to Figure 13.3</a></em>]</p>
+<p><strong><a id="Fig_13.4_Desc"></a>Figure 13.4</strong>: A phase portrait featuring a single stable spiral. Seven curved trajectories originate from the outer edges of the frame and swirl inward in a clockwise direction, converging toward a central fixed point at the origin. Each trajectory has an arrowhead indicating the direction of flow toward the center. [<em><a href="#Fig_13.4">Return to Figure 13.4</a></em>]</p>
+<p><strong><a id="Fig_13.5_Desc"></a>Figure 13.5</strong>: A phase portrait showing a saddle point. The flow consists of trajectories that approach the center along one diagonal (the stable manifold) and are pushed away along the other diagonal (the unstable manifold). The resulting pattern resembles a series of hyperbola-like curves bending around the central equilibrium. Arrows indicate the direction of motion along each trajectory. [<em><a href="#Fig_13.5">Return to Figure 13.5</a></em>]</p>
+<p><strong><a id="Fig_13.6_Desc"></a>Figure 13.6</strong>: A simple phase portrait consisting of several parallel, straight-line trajectories. A single diagonal line of stable fixed points intersects the parallel flow lines. Arrowheads on each of the parallel lines point towards the fixed points. This corresponds to system (13.5) when one of the eigenvalues of [latex]A[/latex] is zero and the other eigenvalue is negative. [<em><a href="#Fig_13.6">Return to Figure 13.6</a></em>]</p>
+<p><strong><a id="Fig_13.7_Desc"></a>Figure 13.7</strong>: A phase portrait showing a central equilibrium point surrounded by three nested, closed elliptical orbits. Arrows on the orbits indicate a counter-clockwise direction of flow, representing a system that oscillates indefinitely without growing or decaying. [<em><a href="#Fig_13.7">Return to Figure 13.7</a></em>]</p>
+<p><strong><a id="Fig_13.8_Desc"></a>Figure 13.8</strong>: A classification diagram for fixed points in a 2D linear system. The vertical axis represents the determinant, [latex]\det(A)[/latex], and the horizontal axis represents the trace, [latex]\text{Tr}(A)[/latex]. A parabola defined by [latex]\text{Tr}(A)^2 - 4\det(A) = 0[/latex] divides the upper half-plane into regions for nodes and spirals. Below the horizontal axis (where [latex]\det(A) < 0[/latex]), all points are classified as saddle points. [<em><a href="#Fig_13.8">Return to Figure 13.8</a></em>]</p>
+<p>&nbsp;</p>
+<div class="textbox textbox--exercises">
+<header class="textbox__header">
+<h2 class="textbox__title">Food for Thought</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center">Problem 1</h3>
+<p>What is the type (linear, separable, exact, solvable after a change of variable, Riccati's, Bernoulli's, Clairaut's) of the following first order equations? (Do not try to solve the<br />
+equations).</p>
+<ol>
+<li>[latex]\displaystyle (1-y^3) \sinh(3 x) y^\prime + 7 \cosh(y)  \exp(x)=0.[/latex]</li>
+<li><span style="font-size: 1rem;text-align: initial">[latex]\displaystyle (4 y + 2 x + 4 x y + x^2 + 3 y^2) dx + (4 x + 6 y) dy = 0.[/latex]</span></li>
+<li>[latex]\displaystyle \left(x^2 \ln\left(\frac{x}{y}\right)\right) dx + \frac{1}{x} \left(x^3 + 3 y x^2 + \frac{y^4}{x} \right) dy = 0.[/latex]</li>
+<li>[latex]\displaystyle x^3 \text{sinh}(x) y^\prime + 5 x^2 y - \frac{3}{x} \cos(2 x) = \sin(x).[/latex]</li>
+<li><span style="font-size: 1rem;text-align: initial">[latex]\displaystyle (2 x^2 y - 2 y + 1) dx - x dy = 0.[/latex]</span></li>
+<li>[latex]\displaystyle \left(\cos(x) \sin(y) - x \sin(x) \sin(y) + y^2 \right) dx + \left( x \cos(x) \cos(y) + 2 x y \right) dy = 0.[/latex]</li>
+<li><span style="font-size: 1rem;text-align: initial">[latex]\displaystyle y y^\prime+\cosh(x) y^2=\exp(x).[/latex]</span></li>
+</ol>
+<hr />
+<h3 style="text-align: center">Problem 2</h3>
+<p>Solve equations (5) and (6) above.</p>
+<hr />
+<h3 style="text-align: center">Problem 3</h3>
+<ol>
+<li>Show that [latex]\frac{1}{3} \ln\left[(y-1)^2 |y+2|\right] = \exp(-x) - x + C[/latex] is an implicit solution to [latex]\exp(x) (1+y) \frac{dy}{dx} + (1 + \exp(x)) (y^2 + y -2)=0.[/latex]</li>
+<li><span style="font-size: 1rem;text-align: initial">Find a solution to the above differential equation which </span>satisfies [latex]y(0)=3[/latex]. Does the corresponding initial value problem have a unique solution ? Explain.</li>
+</ol>
+<hr />
+<h3 style="text-align: center">Problem 4</h3>
+<ol>
+<li><span style="font-size: 1rem;text-align: initial">Find the general solution to [latex]y^{\prime \prime}-3 y^\prime + 2 y=0[/latex].</span></li>
+<li><span style="font-size: 1rem;text-align: initial">Solve the initial value problem consisting of the above ODE </span>and the initial condition [latex]y(0)=0[/latex] and [latex]y^\prime(0)=1[/latex].</li>
+<li><span style="font-size: 1rem;text-align: initial">Is there a solution to the boundary value problem [latex]y(0)=0[/latex] </span>and [latex]y(1)=0[/latex]? If so, what is it ?</li>
+</ol>
+<hr />
+<h3 style="text-align: center">Problem 5</h3>
+<p>Solve the differential equation</p>
+<p style="text-align: center">[latex]x^3 y^{(3)} - 2 x^2 y^{\prime \prime}+8 x y^\prime - 8 y = 7 x + x^2 \cos\left(2 \ln(x)\right) \qquad x>0.[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 6</h3>
+<p>Solve [latex]\displaystyle x y^{\prime \prime} + y^\prime = 0[/latex].</p>
+<hr />
+<h3 style="text-align: center">Problem 7</h3>
+<p>Solve the differential equation</p>
+<p style="text-align: center">[latex]y^{\prime \prime} + 6 y^\prime + 9 y = {{1}\over{x}} \exp(- 3 x) \qquad x \ne 0.[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 8</h3>
+<p>Solve the following system of differential equations</p>
+<p style="text-align: center">[latex]\left \{ \begin{array}{l} \displaystyle \frac{d x}{d t} = 2 x + y + 3 e^t \\ \displaystyle \frac{d y}{d t} = - x + 2 y - e^t \end{array} \right. \qquad x(0)=0; y(0)=1.[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 9</h3>
+<p>Solve the system [latex]\dot X = A X + B[/latex] where</p>
+<p style="text-align: center">[latex]A = \left( \begin{array}{cc} 7 & 6 \\ 2 & 6 \end{array} \right) \quad \text{and} \quad B = \left(\begin{array}{c} -70 \\ 35 \end{array} \right) \exp(3 t).[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 10</h3>
+<p>Solve the differential equation</p>
+<p style="text-align: center">[latex]\displaystyle \frac{d^3 y}{d t^3} - 5 \frac{d^2 y}{d t^2} + 12 \frac{d y}{d t} - 8 y = \exp(3 t) \cos(2 t) + 7 t \exp(t).[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 11</h3>
+<p>Solve [latex]\displaystyle \left[5 x^4 y^3 + 3 y \sin(x) + 3 x y \cos(x) \right] dx + \left[3 x^5 y^2 + 3 x \sin(x) \right] dy = 0,[/latex] with the initial condition [latex]y(\pi)=5[/latex].</p>
+</div>
+</div>
+<div class="textbox textbox--key-takeaways">
+<header class="textbox__header">
+<h2 class="textbox__title">Answers</h2>
+</header>
+<h3 style="text-align: center">Problem 1</h3>
+<ol>
+<li>Separable.</li>
+<li><span style="font-size: 1rem;text-align: initial">[latex]e^x[/latex] is an integrating factor.</span></li>
+<li><span style="font-size: 1rem;text-align: initial">Homogeneous of degree 2.</span></li>
+<li><span style="font-size: 1rem;text-align: initial">Linear.</span></li>
+<li><span style="font-size: 1rem;text-align: initial">Linear.</span></li>
+<li><span style="font-size: 1rem;text-align: initial">Exact.</span></li>
+<li><span style="font-size: 1rem;text-align: initial">Bernoulli with [latex]n=-1.[/latex]</span></li>
+</ol>
+<hr />
+<h3 style="text-align: center">Problem 2</h3>
+<ul>
+<li>(5): [latex]\displaystyle y = -\frac{1}{2 x^2} + \frac{C}{x^2} e^{x^2}.[/latex]</li>
+<li>(6): [latex]K = x \cos(x) \sin(y) + x y^2.[/latex]</li>
+</ul>
+<hr />
+<h3 style="text-align: center">Problem 3</h3>
+<p style="text-align: center">[latex]\displaystyle \frac{1}{3} \ln\left[(y-1)^2 |y+2|\right] = e^{-x} - x + \frac{1}{3} \ln(20) -1.[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 4</h3>
+<ol>
+<li><span style="font-size: 1rem;text-align: initial">[latex]\displaystyle y = C_1 e^{2 x} + C_2 e^x.[/latex]</span></li>
+<li><span style="font-size: 1rem;text-align: initial">[latex]\displaystyle y=e^{2 x} - e^x.[/latex]</span></li>
+<li><span style="font-size: 1rem;text-align: initial">Yes, [latex]y=0.[/latex]</span></li>
+</ol>
+<hr />
+<h3 style="text-align: center">Problem 5</h3>
+<p style="text-align: center">[latex]\begin{align*} y = C_1 x &+ C_2 x^2 \cos(2 \ln(x)) + C_3 x^2 \sin(2 \ln(x)) + \frac{7 x}{5} \ln(x)\\ &- \frac{x^2}{10} \ln(x) \cos(2 \ln(x)) + \frac{x^2}{20} \ln(x) \sin(2 \ln(x)). \end{align*}[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 6</h3>
+<p style="text-align: center">[latex]\displaystyle y = K_1 \ln(|x|) + K_2.[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 7</h3>
+<p style="text-align: center">[latex]\displaystyle y=C_1 e^{-3 x} + C_2 x e^{- 3 x}+ x \ln(|x|) e^{- 3 x}.[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 8</h3>
+<p style="text-align: center">[latex]\displaystyle \left\{ \begin{array}{l} x = C_1 \cos(t) e^{2 t} + C_2 \sin(t) e^{2 t} - 2 e^t \\ y = -C_1 \sin(t) e^{2 t} + C_2 \cos(t) e^{2 t} - e^t \end{array} \right. .[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 9</h3>
+<p style="text-align: center">[latex]\displaystyle X = \left(\begin{array}{cc} 3 e^{3 t} & 2 e^{10 t} \\ -2 e^{3 t} & e^{10 t}\end{array}\right) \left(\begin{array}{c} C_1 \\ C_2 \end{array}\right) + \left(\begin{array}{c}-60 t + \frac{10}{7} \\ 40 t + \frac{5}{7}\end{array}\right) e^{3t}.[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 10</h3>
+<p style="text-align: center">[latex]\begin{align*} y = C_1 e^t &+ C_2 e^{2 t} \cos(2 t) + C_3 e^{2 t} \sin(2 t) - \frac{3}{68} e^{3 t} \cos(2 t) \\ &+ \frac{5}{68} e^{3 t} \sin(2 t) + \left(\frac{7}{10} t^2 + \frac{14}{25} t \right) e^t. \end{align*}[/latex]</p>
+<hr />
+<h3 style="text-align: center">Problem 11</h3>
+<p style="text-align: center">[latex]x^5 y^3 + 3 x y \sin(x) = 125 \pi^5.[/latex]</p>
+<p>&nbsp;</p>
+</div>

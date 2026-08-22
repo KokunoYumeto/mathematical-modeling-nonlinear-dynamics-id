@@ -310,6 +310,21 @@ UNIT_SPECS = {
         "plain_paragraphs": False,
         "change_note": "penerjemahan, koreksi dan klarifikasi matematika terdokumentasi, pengindeksan modular, serta dukungan ketuntasan",
     },
+    "O005-LEGA-V101-CH12": {
+        "unit_type": "chapter",
+        "unit_number": 12,
+        "chapter_number": 12,
+        "source_title": "Refresher: Vector Calculus",
+        "target_title": "Penyegaran: Kalkulus Vektor",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/appendix-vector-calculus/",
+        "target_assets": [],
+        "caption_count": 0,
+        "footnote_count": 0,
+        "notebook": None,
+        "problem_count": 0,
+        "plain_paragraphs": False,
+        "change_note": "penerjemahan, koreksi dan klarifikasi matematika terdokumentasi, serta pengindeksan modular",
+    },
 }
 
 

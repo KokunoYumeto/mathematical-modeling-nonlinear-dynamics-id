@@ -7,7 +7,7 @@ Pressbooks v1.01 (Maret 2026). Sumber dan terjemahan berada di bawah lisensi
 Edisi ini tidak disokong atau disahkan oleh penulis maupun University of
 Arizona.
 
-Status saat ini: **Bab 1–11 dari 14 serta pengantar Bagian 2–5 telah
+Status saat ini: **Bab 1–12 dari 14 serta pengantar Bagian 2–5 telah
 diterjemahkan, dibangun, dan lolos QA.**
 Pekerjaan berlanjut secara berurutan; repositori ini belum merupakan edisi
 lengkap atau terbitan final.
@@ -29,11 +29,12 @@ lengkap atau terbitan final.
 - Bab 10 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH10/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH10/index.html); [notebook pembentukan pola terbuka](source/id-ID/O005-LEGA-V101-CH10/notebooks/chapter-10-open-pattern-formation.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH10.mastery.json).
 - Pengantar Bagian 5 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT05/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT05/index.html).
 - Bab 11 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH11/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH11/index.html); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH11.mastery.json).
+- Bab 12 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH12/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH12/index.html).
 
 ## Backend modular
 
-Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Sebelas bab dan
-empat pengantar bagian yang selesai memiliki 2.486 segmen Inggris–Indonesia yang
+Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Dua belas bab dan
+empat pengantar bagian yang selesai memiliki 2.607 segmen Inggris–Indonesia yang
 berpasangan, 102 ID soal tetap, sepuluh notebook terbuka, catatan unit berhash,
 serta jalur eksplisit menuju aset, notebook, dan
 dukungan belajar. Lapisan ini dimaksudkan untuk memungkinkan pemindahan unit
@@ -76,6 +77,8 @@ python scripts/build_unit_reader.py --unit O005-LEGA-V101-PT05
 python scripts/qa_unit.py --unit O005-LEGA-V101-PT05 --deterministic-build
 python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH11
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH11 --deterministic-build
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH12
+python scripts/qa_unit.py --unit O005-LEGA-V101-CH12 --deterministic-build
 ```
 
 QA memeriksa kesetaraan struktur sumber–target, rumus dan tautan yang
@@ -123,3 +126,7 @@ tidak berlaku. Bab 11 mempertahankan seluruh struktur dan 165 rumus sumber,
 mencatat tiga belas koreksi aljabar linear secara berjejak, serta menambahkan
 tujuh paket petunjuk, pemeriksaan, dan pembahasan yang dihitung secara
 independen; bab ini tidak memerlukan notebook atau aset.
+Bab 12 mempertahankan seluruh struktur kalkulus vektor dan memetakan 161 rumus
+sumber ke 165 rumus sasaran yang seluruh perbedaannya dinyatakan secara
+berjejak; bab ini tidak memiliki soal, aset, tautan, catatan kaki, notebook,
+atau komponen dukungan belajar untuk dibuat.

@@ -7,12 +7,12 @@ Updated: 2026-08-22 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–11 and the visible Part 2–5 introductions are
+into this lane. Chapters 1–12 and the visible Part 2–5 introductions are
 translated, built, independently reviewed, and verified. Production is active
-on Chapter 12, Pressbooks record 413, *Refresher: Vector Calculus*, as
-`O005-LEGA-V101-CH12`. Its exact canonical/raw/rendered authority and empty
-asset closure are frozen; complete source-order natural id-ID translation is
-now the executable action.
+on Chapter 13, Pressbooks record 445, *Refresher: Ordinary Differential
+Equations*, as `O005-LEGA-V101-CH13`. Its exact canonical/raw/rendered authority
+and eight-primary-asset closure are frozen; complete source-order natural id-ID
+translation is now the executable action.
 
 ## Frozen Chapter 10 authority
 
@@ -651,7 +651,7 @@ now the executable action.
   changed files / 866,260 bytes with zero mismatch; ordered inventory SHA-256
   `121edbad5bde443b6d01f41c24ed66f3e6d223db21722bdd472f9266801959a8`.
 
-## Frozen Chapter 12 authority
+## Admitted Chapter 12 boundary
 
 - Pressbooks chapter 413, slug `appendix-vector-calculus`, *Refresher: Vector
   Calculus*, modified `2026-03-19T19:53:52Z`; the empty record-level license
@@ -664,10 +664,57 @@ now the executable action.
   `1e6590dd97823f1dc009947eee63585b1e2afcda8dee91b66587e9cded4e0303`.
 - Exact frozen census: 112 physical lines, 85 ordered elements, 161 TeX
   occurrences, and zero links, assets, footnotes, or problems.
+- Complete natural id-ID target *Penyegaran: Kalkulus Vektor*: 15,288 bytes,
+  SHA-256
+  `6e0e2d720732726d88e3479d399ee25a4b012a750a4626c2219de9e54baa8f8b`.
+  Exact replay preserves 85 / 85 ordered elements and maps 161 source TeX
+  occurrences to 165 declared target occurrences. Corrections
+  `O005-CORR-0131` through `O005-CORR-0140` bind the four replacements and
+  four additive definitions without altering the frozen source.
+- Backend: 121 paired segments / 78,475 bytes, SHA-256
+  `be1a4ec04a0739dde654f507b7ef9bbf906398b4ae1dcf6c9f03572a15cec34d`;
+  unit record: 1,105 bytes, SHA-256
+  `044e1b32e3fc16e2418b7ab86015798fdf67b12d51afe7ae6706754876612940`.
+- Reader: four payload files / 181,451 bytes excluding its 399-byte manifest;
+  manifest SHA-256
+  `80eb6c5692d0d01c2fa85de079c32ba9056442455cbd3ed7f3495fb627f67085`.
+  Repeated builds were byte-identical across five files, canonical QA tree
+  SHA-256 `50d3befe18450e4ab83f1ca57e87703af285429c3957d8cd007f5711704b3fce`.
+- Independent translation and mathematics audits passed. The bounded regression
+  rebuilt every earlier completed unit successfully. Browser QA found centered
+  768 px desktop and 357.5 px mobile articles, zero page overflow, 165 labeled
+  MathML nodes, three unique IDs, two intact fragment links, and an unobscured
+  `#isi` target. Problems, mastery, notebook, links, assets, images, and
+  footnotes are correctly absent.
+
+## Frozen Chapter 13 authority
+
+- Pressbooks chapter 445, slug `appendix-ordinary-differential-equations`,
+  *Refresher: Ordinary Differential Equations*, modified
+  `2026-03-19T20:12:31Z`; the empty record-level license override inherits
+  CC BY-NC-SA 4.0.
+- Canonical record: 136,353 bytes, SHA-256
+  `4c1d86fe406cb145189312bc82c7c1572632335b2cab0eb29ee6fbfa1fa9a37c`;
+  raw content: 59,328 bytes, SHA-256
+  `4ef96c2d76484ba271a9e94c524d755806064a97eb051944a958f8e664b6b005`;
+  rendered content: 70,793 bytes, SHA-256
+  `2aa5153cf1262aecc298ebceffbaa2f447adb3f0701e39c9a7d50e562e280b6a`;
+  authority manifest: 2,535 bytes, SHA-256
+  `aabc41570d241c58c0c5e195a1db7ab04d5acdfc3039689914777783199b4861`.
+- Exact frozen census: 581 physical lines, 456 ordered elements, 524 balanced
+  TeX expressions, 39 fragment-only links with no missing target, eight figures
+  with eight descriptions, eleven numbered problems, and eleven corresponding
+  source answer groups.
+- Eight valid primary PNG assets total 284,549 bytes. Their exact paths, EPUB
+  members, dimensions, byte counts, and SHA-256 identities are bound in
+  `authority/units/O005-LEGA-V101-CH13/AUTHORITY_MANIFEST.json`. The frozen
+  rendered witness retains remote responsive `srcset` alternatives; production
+  must ship the eight local primary assets and remove remote runtime dependency.
 
 ## Next action
 
-Translate the complete Chapter 12 source in order as *Penyegaran: Kalkulus
-Vektor*. Preserve all 85 elements and 161 protected TeX slots while correcting
-only high-confidence source defects through the ledger. Do not manufacture
-mastery, notebook, link, or asset components where none is present.
+Translate the complete Chapter 13 source in order as *Penyegaran: Persamaan
+Diferensial Biasa*. Preserve all 456 elements, 524 protected TeX slots, 39
+fragment links, eight figures and descriptions, eleven problems, and eleven
+source answers. Add stable hint/check/worked-solution records for all eleven
+problems, localize the primary assets, and ledger only high-confidence defects.

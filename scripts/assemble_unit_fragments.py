@@ -660,6 +660,84 @@ SPECS = {
             (r"\begin{array}{cccc}", r"\begin{array}{c}", 5),
         ],
     },
+    "O005-LEGA-V101-CH12": {
+        "source_lines": 112,
+        "problem_count": 0,
+        "fragments": [
+            "01-gradient-line-integrals.html",
+            "02-curl-stokes-green.html",
+            "03-divergence.html",
+        ],
+        "replacements": [
+            (
+                "<li>$latex \\vec \\nabla f$ mengarah ke arah pertambahan $latex f$ yang paling cepat.</li>",
+                "<li>Pada titik tempat $latex \\vec \\nabla f$ tak nol, arahnya merupakan arah pertambahan $latex f$ yang paling cepat.</li>",
+                1,
+            ),
+            (
+                "<li>Laju perubahan $latex f$ ke arah tersebut sama dengan $latex ||\\vec \\nabla f||$.</li>",
+                "<li>Laju perubahan maksimum $latex f$ di antara semua arah yang direpresentasikan oleh vektor satuan sama dengan $latex ||\\vec \\nabla f||$.</li>",
+                1,
+            ),
+            (
+                "<li>$latex \\vec \\nabla f$ tegak lurus terhadap permukaan aras $latex f$ (yaitu, terhadap permukaan dengan persamaan $latex f=C$ = konstanta).</li>",
+                "<li>Pada titik tempat $latex \\vec \\nabla f$ tak nol, gradien tersebut tegak lurus terhadap permukaan aras reguler fungsi $latex f$ (yaitu, terhadap permukaan dengan persamaan $latex f=C$ = konstanta).</li>",
+                1,
+            ),
+            (
+                "<li>Ekstremum $latex f$ dengan kendala $latex g(x,y,z)=C$ adalah titik-titik pada kurva dengan persamaan $latex g(x,y,z)=C$ tempat gradien $latex f$ sejajar dengan gradien $latex g.$ Konstanta kesebandingannya disebut <em>pengali Lagrange</em>.</li>",
+                "<li>Ekstremum lokal $latex f$ dengan kendala $latex g(x,y,z)=C$ pada titik reguler permukaan $latex g(x,y,z)=C$ harus memenuhi bahwa gradien $latex f$ sejajar dengan gradien $latex g.$ Di sini, titik reguler berarti gradien kendala tidak nol; konstanta kesebandingannya disebut <em>pengali Lagrange</em>.</li>",
+                1,
+            ),
+            (
+                r"\left[\frac{1}{2} m \left(\frac{d \vec r}{d t}\right)^2 \right]_{t_0}^{t_1}",
+                r"\left[\frac{1}{2} m \left\|\frac{d \vec r}{d t}\right\|^2 \right]_{t_0}^{t_1}",
+                1,
+            ),
+            (
+                "yaitu, usaha yang dilakukan oleh $latex \\vec F$ ketika suatu massa titik bergerak di sepanjang lintasan $latex \\mathcal C$ sama dengan selisih energi kinetik massa titik tersebut di antara kedua titik ujung $latex \\mathcal C$.",
+                "di mana $latex v$ menyatakan kelajuan; dengan demikian, usaha yang dilakukan oleh $latex \\vec F$ ketika suatu massa titik bergerak di sepanjang lintasan $latex \\mathcal C$ sama dengan selisih energi kinetik massa titik tersebut di antara kedua titik ujung $latex \\mathcal C$.",
+                1,
+            ),
+            (r"V(r)", r"V(\vec r)", 1),
+            (
+                "<li><span style=\"text-align: initial;font-size: 1em\">Sebaliknya, setiap medan vektor mulus yang didefinisikan pada suatu domain tanpa </span>lubang berkodimensi satu dan yang rotasinya nol di setiap titik merupakan medan gradien (inilah <em>uji rotasi</em>).</li>",
+                "<li><span style=\"text-align: initial;font-size: 1em\">Sebaliknya, setiap medan vektor mulus yang didefinisikan pada domain terbuka terhubung sederhana dan </span>memiliki rotasi nol di setiap titik merupakan medan gradien (inilah <em>uji rotasi</em>).</li>",
+                1,
+            ),
+            (
+                "<li>Arah $latex \\text{curl}\\vec F$ di suatu titik $latex P$ adalah arah sumbu yang dikelilingi oleh rapat sirkulasi $latex \\vec F$ terbesar.</li>",
+                "<li>Jika $latex \\text{curl}\\vec F$ tak nol di titik $latex P$, arahnya adalah arah sumbu dengan rapat sirkulasi $latex \\vec F$ terbesar di sekeliling sumbu tersebut.</li>",
+                1,
+            ),
+            (
+                "<li>Magnitudo $latex \\text{curl} \\vec F$ adalah rapat sirkulasi di sekitar arah tersebut.</li>",
+                "<li>Nilai maksimum rapat sirkulasi di antara semua arah yang direpresentasikan oleh vektor satuan sama dengan magnitudo $latex \\text{curl} \\vec F$.</li>",
+                1,
+            ),
+            (
+                "<li>Jika permukaan $latex S$ adalah grafik suatu fungsi $latex f(x,y)$, maka, jika $latex R$ adalah domain $latex f(x,y)$, kita dapat menuliskan</li>",
+                "<li>Jika permukaan $latex S$ adalah grafik suatu fungsi $latex f(x,y)$ dan diorientasikan ke atas, maka, jika $latex R$ adalah domain $latex f(x,y)$, kita dapat menuliskan</li>",
+                1,
+            ),
+            (r"\vec F\left(x,y,z(x,y)\right)", r"\vec F\left(x,y,f(x,y)\right)", 1),
+            (
+                r"\text{div} \vec F = \displaystyle \lim_{W \rightarrow 0} \frac{\int_S \vec F \cdot d \vec A} {\hbox{volume of }W}.",
+                r"\text{div} \vec F(P) = \displaystyle \lim_{\varepsilon \rightarrow 0} \frac{\iint_{\partial B_\varepsilon(P)} \vec F \cdot \vec n\, dS}{\operatorname{vol}(B_\varepsilon(P))}.",
+                1,
+            ),
+            (
+                "<li>Divergensi $latex \\vec F$ di suatu titik $latex P$ sama dengan limit, ketika permukaan $latex S$ yang mengelilingi $latex P$ menyusut ke nol, dari fluks $latex \\vec F$ melalui $latex S$ (yang diorientasikan ke luar) dibagi dengan volume daerah $latex W$ yang dibatasi oleh $latex S$. Dengan kata lain,</li>",
+                "<li>Divergensi $latex \\vec F$ di titik $latex P$ sama dengan limit fluks per volume ketika permukaan $latex S$ yang mengelilingi $latex P$ menyusut ke titik tersebut: fluks $latex \\vec F$ melalui $latex S$ yang berorientasi ke luar dibagi dengan volume daerah $latex W$ yang dibatasi oleh $latex S$. Dalam rumus berikut, $latex B_\\varepsilon(P)$ adalah bola berpusat di titik itu dengan jari-jari epsilon; $latex \\partial B_\\varepsilon(P)$ adalah permukaannya; dan $latex \\vec n$ adalah vektor normal satuan ke luar. Dengan kata lain,</li>",
+                1,
+            ),
+            (
+                "<li>Sebaliknya, setiap medan vektor mulus $latex \\vec F$ yang domainnya tertutup dan tidak memiliki lubang, serta yang divergensinya nol di setiap titik, merupakan <em>medan rotasi</em>; yaitu, terdapat suatu medan vektor $latex \\vec G$ sedemikian sehingga $latex \\vec F = \\text{curl} \\vec G$ (inilah <em>uji divergensi</em>).</li>",
+                "<li>Sebaliknya, pada setiap domain terbuka berbentuk bintang, setiap medan vektor mulus $latex \\vec F$ yang divergensinya nol di setiap titik merupakan <em>medan rotasi</em>; yaitu, terdapat suatu medan vektor $latex \\vec G$ sedemikian sehingga $latex \\vec F = \\text{curl} \\vec G$ (inilah <em>uji divergensi</em>).</li>",
+                1,
+            ),
+        ],
+    },
 }
 
 

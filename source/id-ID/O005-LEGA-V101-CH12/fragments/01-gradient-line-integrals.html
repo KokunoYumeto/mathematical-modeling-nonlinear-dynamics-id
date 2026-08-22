@@ -1,0 +1,46 @@
+Informasi di bawah ini merupakan ikhtisar elementer mengenai sifat-sifat dasar gradien suatu fungsi, serta divergensi dan rotasi (curl) suatu medan vektor. Topik-topik ini biasanya dibahas dalam mata kuliah kalkulus semester ketiga.
+<h2>Gradien</h2>
+Gradien suatu fungsi tiga variabel yang dapat didiferensialkan $latex f(x,y,z)$ didefinisikan oleh
+<p style="text-align: center">$latex \hbox{grad}f=\vec \nabla f = \displaystyle \frac{\partial f}{\partial x} \vec \imath + \frac{\partial f}{\partial y} \vec \jmath + \frac{\partial f}{\partial z} \vec k$</p>
+dan memiliki sifat-sifat berikut.
+<ul>
+  	<li>$latex \vec \nabla f$ mengarah ke arah pertambahan $latex f$ yang paling cepat.</li>
+  	<li>Laju perubahan $latex f$ ke arah tersebut sama dengan $latex ||\vec \nabla f||$.</li>
+  	<li>$latex \vec \nabla f$ tegak lurus terhadap permukaan aras $latex f$ (yaitu, terhadap permukaan dengan persamaan $latex f=C$ = konstanta).</li>
+  	<li>Turunan berarah $latex f$ dalam arah <span style="text-decoration: underline">vektor satuan</span> $latex \vec u$ sama dengan $latex \vec \nabla f \cdot \vec u$.</li>
+  	<li>Pada titik-titik kritis $latex f$, berlaku $latex \vec \nabla f = \vec 0$. Titik kritis generik berupa titik minimum, maksimum, dan pelana dari fungsi $latex f$.</li>
+  	<li>Ekstremum $latex f$ dengan kendala $latex g(x,y,z)=C$ adalah titik-titik pada kurva dengan persamaan $latex g(x,y,z)=C$ tempat gradien $latex f$ sejajar dengan gradien $latex g.$ Konstanta kesebandingannya disebut <em>pengali Lagrange</em>.</li>
+</ul>
+<h2>Integral garis dan medan gradien</h2>
+<h3>Integral garis</h3>
+Integral garis suatu medan vektor kontinu $latex \vec F$ di sepanjang lintasan berorientasi $latex \mathcal C$ dituliskan sebagai
+<p style="text-align: center">$latex \displaystyle \int_{\mathcal C} \vec F(\vec r) \cdot d\vec r,$</p>
+dengan $latex \vec r$ sebagai vektor posisi dan $latex d\vec r$ merupakan vektor tangen terhadap lintasan $latex \mathcal C$. Jika kita mengetahui suatu parametrisasi $latex \mathcal C$, yaitu jika $latex \mathcal C$ ditelusuri oleh $latex \vec r(t)$ saat $latex t$ bervariasi antara $latex t_0$ dan $latex t_1$, integral garis di atas menjadi
+<p style="text-align: center">$latex \displaystyle \int_{\mathcal C} \vec F \cdot d\vec r = \int_{t_0}^{t_1} \vec F(\vec r(t)) \cdot \frac{d \vec r}{d t}\ dt,$</p>
+sehingga dapat dihitung.
+<h4>Contoh 1</h4>
+Perhatikan medan vektor $latex \vec F(x,y) = e^x \vec \imath + e^y \vec \jmath$. Misalkan $latex \mathcal C$ merupakan bagian elips $latex x^2+4 y^2 = 4$ yang menghubungkan $latex (0,1)$ ke $latex (2,0)$ searah jarum jam. Suatu parametrisasi $latex \mathcal C$ adalah $latex x = 2 \sin(t)$, $latex y=\cos(t)$, dengan $latex t$ bervariasi antara 0 dan $latex \pi/2$. Oleh karena itu,
+<p style="text-align: center">$latex \begin{align*} \int_{\mathcal C} \vec F \cdot d\vec r &amp; = \int_0^{\pi/2} \left[e^{2 \sin(t)} \vec \imath + e^{\cos(t)} \vec \jmath \right] \cdot \left[2 \cos(t) \vec \imath - \sin(t) \vec \jmath \right] dt \\ &amp; = \int_0^{\pi/2} \left[2 \cos(t) e^{2 \sin(t)} - \sin(t) e^{\cos(t)} \right]\ dt \\ &amp; = \left[ e^{2 \sin(t)} + e^{\cos(t)} \right]_0^{\pi/2} = e (e -1).\end{align*}$</p>
+
+<h4>Contoh 2</h4>
+Usaha yang dilakukan oleh gaya $latex \vec F$ di sepanjang lintasan $latex \mathcal C$ diberikan oleh $latex W = \int_{\mathcal C} \vec F \cdot d\vec r$. Jika $latex \vec r$ bergerak menurut hukum Newton, $latex \vec F = m \ d^2 \vec r / d t^2$, maka
+<p style="text-align: center">$latex \displaystyle W = \int_{t_0}^{t_1} m\ \frac{d^2 \vec r}{d t^2} \cdot \frac{d \vec r}{d t}\ dt = \left[\frac{1}{2} m \left(\frac{d \vec r}{d t}\right)^2 \right]_{t_0}^{t_1} = \left[ \frac{1}{2} m v^2 \right]_{t_0}^{t_1},$</p>
+yaitu, usaha yang dilakukan oleh $latex \vec F$ ketika suatu massa titik bergerak di sepanjang lintasan $latex \mathcal C$ sama dengan selisih energi kinetik massa titik tersebut di antara kedua titik ujung $latex \mathcal C$.
+<h3>Medan gradien</h3>
+Suatu medan vektor $latex \vec F$ disebut <em>medan gradien</em> jika terdapat fungsi $latex f(x,y,z)$ sedemikian sehingga $latex \vec F = \vec \nabla f$. Medan vektor $latex \vec F$ tersebut bersifat <em>konservatif</em>, <em>tidak bergantung pada lintasan</em>, dan <em>bebas sirkulasi</em>.
+<ul>
+  	<li>Suatu medan vektor $latex \vec F$ yang <em>tidak bergantung pada lintasan</em> memiliki sifat bahwa integral garis $latex \vec F$ di sepanjang sebarang lintasan dalam domain $latex \vec F$ hanya bergantung pada titik-titik ujung lintasan tersebut.</li>
+  	<li>Suatu medan vektor yang <em>bebas sirkulasi</em> memiliki sirkulasi (yaitu, integral garisnya di sepanjang sebarang kurva tertutup) yang bernilai nol di seluruh domain $latex \vec F$.</li>
+</ul>
+Menurut <span style="text-decoration: underline">teorema dasar kalkulus untuk integral garis</span>, suatu medan gradien tidak bergantung pada lintasan, yaitu
+<p style="text-align: center">$latex \displaystyle \int_{\mathcal C} \vec \nabla f \cdot d \vec r = f(Q) - f(P),$</p>
+dengan $latex \mathcal C$ sebagai lintasan yang mulus sepotong demi sepotong dan menghubungkan $latex P$ ke $latex Q$, serta $latex \vec \nabla f$ kontinu pada $latex \mathcal C$. Sebaliknya, setiap medan vektor yang tidak bergantung pada lintasan merupakan medan gradien.
+<h4>Contoh</h4>
+Perhatikan gaya $latex \vec F = m \frac{d^2 \vec r}{d t^2}$ yang dibahas di atas. Jika $latex \vec F$ memiliki fungsi potensial, yaitu jika terdapat fungsi $latex V(r)$ sedemikian sehingga $latex \vec F = - \vec \nabla V$, maka
+<p style="text-align: center">$latex \begin{align*} W &amp; = \int_{\mathcal C} \vec F \cdot d\vec r = - \int_{\mathcal C} \vec \nabla V \cdot d\vec r = V(\vec r(t_0)) - V(\vec r(t_1)) \\ &amp; = \left[ \frac{1}{2} m v^2 \right]_{t_0}^{t_1}. \end{align*}$</p>
+Dengan demikian, $latex \displaystyle \frac{1}{2} m v^2(t_0) + V \left(\vec r(t_0) \right) = \frac{1}{2} m v^2(t_1) + V \left(\vec r(t_1) \right),$ yaitu, energi total, yang merupakan jumlah energi kinetik dan energi potensial, bersifat kekal.
+<ul>
+  	<li>Jika $latex \vec F = F_1 \vec \imath+ F_2 \vec \jmath + F_3 \vec k$ adalah medan gradien dengan turunan parsial kontinu, maka</li>
+</ul>
+<p style="text-align: center">$latex \displaystyle \frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x}, \qquad \frac{\partial F_2}{\partial z} = \frac{\partial F_3}{\partial y}, \qquad \frac{\partial F_3}{\partial x} = \frac{\partial F_1}{\partial z},$</p>
+yaitu, $latex \text{curl} \vec F = \vec 0$.

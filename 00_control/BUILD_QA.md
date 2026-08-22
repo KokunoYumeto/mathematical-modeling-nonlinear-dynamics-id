@@ -810,3 +810,59 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   occurrences, and zero links, assets, footnotes, or problems. The next
   production action is complete source-order Indonesian translation without
   fabricated mastery, notebook, or asset surfaces.
+
+## Admitted build — O005-LEGA-V101-CH12 — 2026-08-22
+
+- Final gate: `scripts/qa_unit.py --unit O005-LEGA-V101-CH12
+  --deterministic-build`, exit 0. Exact replay covers 85 / 85 ordered elements,
+  zero / zero links, 161 source TeX occurrences mapped to 165 declared target
+  occurrences, and zero problems, assets, images, footnotes, mastery records,
+  or notebook surfaces.
+- Target: 15,288 bytes, SHA-256
+  `6e0e2d720732726d88e3479d399ee25a4b012a750a4626c2219de9e54baa8f8b`;
+  backend: 121 paired segments / 78,475 bytes, SHA-256
+  `be1a4ec04a0739dde654f507b7ef9bbf906398b4ae1dcf6c9f03572a15cec34d`;
+  unit record: 1,105 bytes, SHA-256
+  `044e1b32e3fc16e2418b7ab86015798fdf67b12d51afe7ae6706754876612940`.
+- Reader: four payload files / 181,451 bytes excluding its 399-byte manifest;
+  manifest SHA-256
+  `80eb6c5692d0d01c2fa85de079c32ba9056442455cbd3ed7f3495fb627f67085`.
+  Deterministic double build: five files, byte-identical, canonical QA tree
+  SHA-256 `50d3befe18450e4ab83f1ca57e87703af285429c3957d8cd007f5711704b3fce`.
+- Independent artifact, translation, and mathematics audits passed. All four
+  source-to-target formula replacements and four additive definitions are
+  declared; corrections `O005-CORR-0131`–`0140` are the only ledgered
+  mathematical interventions. Strict JSON, JSONL, and changed-ledger CSV
+  validation passed with unique IDs and no sensitive credential or local-path
+  strings in the bounded artifact set.
+- Every earlier completed unit, `CH01`–`CH11` and `PT02`–`PT05`, passed a
+  fresh named deterministic regression. Browser QA against final bytes found a
+  centered 1,152 / 768 px main/article at a 1,280 px desktop viewport and a
+  centered 357.5 px main/article in the 375 px mobile client at 390×844.
+  Document scroll width equaled client width at both sizes; all 165 MathML
+  nodes were labeled, all three IDs were unique, both fragment links resolved,
+  and `#isi` landed immediately below the sticky navigation. External-link
+  reachability and audio/live widgets were inapplicable.
+
+## Frozen authority — O005-LEGA-V101-CH13 — 2026-08-22
+
+- Official Pressbooks record 445, slug
+  `appendix-ordinary-differential-equations`, modified
+  `2026-03-19T20:12:31Z`; canonical 136,353 bytes / SHA-256
+  `4c1d86fe406cb145189312bc82c7c1572632335b2cab0eb29ee6fbfa1fa9a37c`.
+- Raw content 59,328 bytes / SHA-256
+  `4ef96c2d76484ba271a9e94c524d755806064a97eb051944a958f8e664b6b005`;
+  rendered content 70,793 bytes / SHA-256
+  `2aa5153cf1262aecc298ebceffbaa2f447adb3f0701e39c9a7d50e562e280b6a`;
+  authority manifest 2,535 bytes / SHA-256
+  `aabc41570d241c58c0c5e195a1db7ab04d5acdfc3039689914777783199b4861`.
+- Exact audit: 581 raw lines, 456 ordered elements, 524 balanced formulas, 39
+  fragment-only hrefs with complete targets, eight figures and descriptions,
+  eleven numbered problem groups, and eleven corresponding source answer
+  groups. Raw/rendered heading, formula, link, and primary-image sequences
+  agree.
+- All eight primary PNGs are valid and match both manifest and preparation
+  script; aggregate 284,549 bytes. The unit closure is exactly twelve files
+  including the manifest. The frozen rendered HTML still names 62 remote
+  responsive `srcset` candidates, so the Indonesian reader must bind the eight
+  local primary PNGs and eliminate that runtime dependency.

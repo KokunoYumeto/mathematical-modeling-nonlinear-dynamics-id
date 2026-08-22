@@ -359,6 +359,62 @@ UNIT_SPECS = {
         "record_sha256": "fa1364a307b033035bce94975db0667edf3b8d208e73b4e07882b090cafab377",
         "assets": [],
     },
+    "O005-LEGA-V101-CH13": {
+        "record_id": 445,
+        "modified_gmt": "2026-03-19T20:12:31",
+        "record_bytes": 136353,
+        "record_sha256": "4c1d86fe406cb145189312bc82c7c1572632335b2cab0eb29ee6fbfa1fa9a37c",
+        "assets": [
+            {
+                "path": "assets/phase-stable-node-source.png",
+                "epub_member": "EPUB/assets/temp_node-300x217.png",
+                "bytes": 24941,
+                "sha256": "c5daccb30f3c66e636fac005bf19e8a7d1a761800d6b09144f8bdcef7dc3e08c",
+            },
+            {
+                "path": "assets/phase-stable-star-source.png",
+                "epub_member": "EPUB/assets/temp_star-300x217.png",
+                "bytes": 22947,
+                "sha256": "0da55a0033fdf653b5db5d89074195587093343d4d0fa799161b2d426e2b92c1",
+            },
+            {
+                "path": "assets/phase-stable-degenerate-node-source.png",
+                "epub_member": "EPUB/assets/temp_deg_node-300x217.png",
+                "bytes": 25201,
+                "sha256": "77f80739745857295802507db38cca576f82b53495d6b72b6e84de4187f7822f",
+            },
+            {
+                "path": "assets/phase-stable-spiral-source.png",
+                "epub_member": "EPUB/assets/temp_spiral-300x218.png",
+                "bytes": 23523,
+                "sha256": "302f1d6d090e3e54ccd6c4751fbab798af4e9486d105af93fb2711d248076fe2",
+            },
+            {
+                "path": "assets/phase-saddle-source.png",
+                "epub_member": "EPUB/assets/temp_saddle-300x255.png",
+                "bytes": 37146,
+                "sha256": "b3fa934ee671eac4cc0db13f10458a61542a81105bb80eccbc0eb012e2d17430",
+            },
+            {
+                "path": "assets/phase-line-fixed-points-source.png",
+                "epub_member": "EPUB/assets/temp_line-300x217.png",
+                "bytes": 19097,
+                "sha256": "d19e076f30c8593c583432894461441fa359f81c4dab831c6c29e26e619acd5e",
+            },
+            {
+                "path": "assets/phase-center-source.png",
+                "epub_member": "EPUB/assets/temp_center-241x300.png",
+                "bytes": 22356,
+                "sha256": "14d916dce59d38fe05a522b9413eeda0a20e468fd4d7884c79c5f78b9a8bd0a6",
+            },
+            {
+                "path": "assets/fixed-point-classification-source.png",
+                "epub_member": "EPUB/assets/temp_stability-1-1024x690.png",
+                "bytes": 109338,
+                "sha256": "acfbcaf132a502f2b338beea44a3a925e45da981c1ad7941c6b7428d430475ca",
+            },
+        ],
+    },
 }
 
 

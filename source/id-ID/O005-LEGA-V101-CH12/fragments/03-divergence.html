@@ -1,0 +1,31 @@
+<h2>Teorema divergensi</h2>
+Divergensi suatu medan vektor $latex \vec F = F_1 \vec \imath+ F_2 \vec \jmath + F_3 \vec k$ yang memiliki turunan parsial kontinu diberikan oleh
+<p style="text-align: center">$latex \text{div} \vec F = \vec \nabla \cdot \vec F = \frac{\partial F_1}{\partial x} + \frac{\partial F_2} {\partial y} + \frac{\partial F_3}{\partial z}.$</p>
+Perhatikan bahwa besaran ini adalah besaran <span style="text-decoration: underline">skalar</span>. Divergensi memiliki sifat-sifat berikut.
+<ul>
+  	<li>$latex \displaystyle \text{div}(\vec \nabla f)= {\vec \nabla}^2 f = \Delta f = \frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2} + \frac{\partial^2 f}{\partial z^2}$.</li>
+  	<li>$latex \displaystyle \text{div}(f \vec \nabla g) = f {\vec \nabla}^2 g + \vec \nabla f \cdot \vec \nabla g.$</li>
+  	<li>$latex \displaystyle \hbox{div}(f \vec g)= f \hbox{div}(\vec g) + \vec \nabla f \cdot \vec g$.</li>
+  	<li>Divergensi $latex \vec F$ di suatu titik $latex P$ sama dengan limit, ketika permukaan $latex S$ yang mengelilingi $latex P$ menyusut ke nol, dari fluks $latex \vec F$ melalui $latex S$ (yang diorientasikan ke luar) dibagi dengan volume daerah $latex W$ yang dibatasi oleh $latex S$. Dengan kata lain,</li>
+</ul>
+<p style="text-align: center">$latex \text{div} \vec F = \displaystyle \lim_{W \rightarrow 0} \frac{\int_S \vec F \cdot d \vec A} {\hbox{volume of }W}.$</p>
+
+<ul>
+  	<li><span style="text-align: initial;font-size: 1em">Untuk sebarang medan vektor $latex \vec F$ yang memiliki turunan parsial kedua </span>kontinu,</li>
+</ul>
+<p style="text-align: center">$latex \text{div curl} \vec F = \vec \nabla \cdot (\vec \nabla \times \vec F) = 0.$</p>
+
+<ul>
+  	<li>Sebaliknya, setiap medan vektor mulus $latex \vec F$ yang domainnya tertutup dan tidak memiliki lubang, serta yang divergensinya nol di setiap titik, merupakan <em>medan rotasi</em>; yaitu, terdapat suatu medan vektor $latex \vec G$ sedemikian sehingga $latex \vec F = \text{curl} \vec G$ (inilah <em>uji divergensi</em>).</li>
+</ul>
+Menurut <span style="text-decoration: underline">teorema divergensi</span>, fluks suatu medan vektor mulus melalui permukaan tertutup $latex S$ yang mulus sepotong demi sepotong dan diorientasikan ke luar sama dengan integral volume divergensinya di seluruh daerah $latex W$ yang dibatasi oleh $latex S$; yaitu,
+<p style="text-align: center">$latex \displaystyle \int_S \vec F \cdot d \vec A \ = \int_W \hbox{div}\vec F \ dV,$</p>
+dengan asumsi bahwa $latex \vec F$ <em>didefinisikan di setiap titik</em> di dalam $latex W$ dan pada $latex S$.
+<h3>Contoh: persamaan kontinuitas</h3>
+Perhatikan aliran $latex \vec v(\vec r)$ suatu fluida dengan kerapatan $latex \rho(\vec r,t)$. Misalkan $latex V$ adalah suatu daerah tetap dalam domain fluida. Massa fluida di dalam $latex V$ diberikan oleh $latex \displaystyle m = \int_V \rho dV$, dan laju perubahannya adalah
+<p style="text-align: center">$latex \displaystyle \frac{d m}{d t} = \int_V \frac{\partial \rho}{\partial t}\ dV,$</p>
+jika kita mengasumsikan bahwa $latex \rho$ mulus. Di sisi lain, laju perubahan ini sama dengan lawan dari fluks massa $latex \rho \vec v$ melalui batas $latex S$ dari $latex V$, dan berdasarkan teorema divergensi,
+<p style="text-align: center">$latex \displaystyle \frac{d m}{d t} = - \int_S \rho\ \vec v \cdot d\vec A = - \int_V \text{div}(\rho\ \vec v)\ dV.$</p>
+Dengan membandingkan kedua ungkapan $latex dm/dt,$ yang sama untuk setiap daerah $latex V$, kita memperoleh persamaan kontinuitas, yang berbunyi
+<p style="text-align: center">$latex \displaystyle \frac{\partial \rho}{\partial t} + \hbox{div}(\rho\ \vec v) = 0.$</p>
+&nbsp;

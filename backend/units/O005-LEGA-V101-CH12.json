@@ -1,0 +1,32 @@
+{
+  "build": {
+    "pandoc": "pandoc 3.9.0.2",
+    "script": "scripts/build_unit_reader.py"
+  },
+  "course_id": "C120",
+  "language": "id-ID",
+  "problems": [],
+  "resource_id": "O005",
+  "schema": "o005-unit-v1",
+  "segments": {
+    "count": 121,
+    "path": "backend/segments/O005-LEGA-V101-CH12.segments.jsonl",
+    "sha256": "be1a4ec04a0739dde654f507b7ef9bbf906398b4ae1dcf6c9f03572a15cec34d"
+  },
+  "source": {
+    "author": "Joceline Lega",
+    "chapter": "Refresher: Vector Calculus",
+    "content_sha256": "165e0b7a0b489dd9be7ae396ac9a3c0430c89599c23a444fcaadffb2a07a3ccc",
+    "edition": "v1.01 (Maret 2026)",
+    "license": "CC BY-NC-SA 4.0",
+    "url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/appendix-vector-calculus/",
+    "work": "Introduction to Mathematical Modeling"
+  },
+  "source_language": "en",
+  "target": {
+    "content_path": "source/id-ID/O005-LEGA-V101-CH12/content.html",
+    "content_sha256": "6e0e2d720732726d88e3479d399ee25a4b012a750a4626c2219de9e54baa8f8b",
+    "title": "Penyegaran: Kalkulus Vektor"
+  },
+  "unit_id": "O005-LEGA-V101-CH12"
+}

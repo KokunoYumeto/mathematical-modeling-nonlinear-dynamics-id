@@ -1,0 +1,71 @@
+{
+  "assets": [
+    {
+      "bytes": 24941,
+      "epub_member": "EPUB/assets/temp_node-300x217.png",
+      "path": "assets/phase-stable-node-source.png",
+      "sha256": "c5daccb30f3c66e636fac005bf19e8a7d1a761800d6b09144f8bdcef7dc3e08c"
+    },
+    {
+      "bytes": 22947,
+      "epub_member": "EPUB/assets/temp_star-300x217.png",
+      "path": "assets/phase-stable-star-source.png",
+      "sha256": "0da55a0033fdf653b5db5d89074195587093343d4d0fa799161b2d426e2b92c1"
+    },
+    {
+      "bytes": 25201,
+      "epub_member": "EPUB/assets/temp_deg_node-300x217.png",
+      "path": "assets/phase-stable-degenerate-node-source.png",
+      "sha256": "77f80739745857295802507db38cca576f82b53495d6b72b6e84de4187f7822f"
+    },
+    {
+      "bytes": 23523,
+      "epub_member": "EPUB/assets/temp_spiral-300x218.png",
+      "path": "assets/phase-stable-spiral-source.png",
+      "sha256": "302f1d6d090e3e54ccd6c4751fbab798af4e9486d105af93fb2711d248076fe2"
+    },
+    {
+      "bytes": 37146,
+      "epub_member": "EPUB/assets/temp_saddle-300x255.png",
+      "path": "assets/phase-saddle-source.png",
+      "sha256": "b3fa934ee671eac4cc0db13f10458a61542a81105bb80eccbc0eb012e2d17430"
+    },
+    {
+      "bytes": 19097,
+      "epub_member": "EPUB/assets/temp_line-300x217.png",
+      "path": "assets/phase-line-fixed-points-source.png",
+      "sha256": "d19e076f30c8593c583432894461441fa359f81c4dab831c6c29e26e619acd5e"
+    },
+    {
+      "bytes": 22356,
+      "epub_member": "EPUB/assets/temp_center-241x300.png",
+      "path": "assets/phase-center-source.png",
+      "sha256": "14d916dce59d38fe05a522b9413eeda0a20e468fd4d7884c79c5f78b9a8bd0a6"
+    },
+    {
+      "bytes": 109338,
+      "epub_member": "EPUB/assets/temp_stability-1-1024x690.png",
+      "path": "assets/fixed-point-classification-source.png",
+      "sha256": "acfbcaf132a502f2b338beea44a3a925e45da981c1ad7941c6b7428d430475ca"
+    }
+  ],
+  "content_raw": {
+    "bytes": 59328,
+    "path": "content.raw.en.html",
+    "sha256": "4ef96c2d76484ba271a9e94c524d755806064a97eb051944a958f8e664b6b005"
+  },
+  "content_rendered": {
+    "bytes": 70793,
+    "path": "content.rendered.en.html",
+    "sha256": "2aa5153cf1262aecc298ebceffbaa2f447adb3f0701e39c9a7d50e562e280b6a"
+  },
+  "record": {
+    "bytes": 136353,
+    "path": "source-record.canonical.json",
+    "sha256": "4c1d86fe406cb145189312bc82c7c1572632335b2cab0eb29ee6fbfa1fa9a37c"
+  },
+  "schema": "o005-unit-authority-v1",
+  "source_modified_gmt": "2026-03-19T20:12:31Z",
+  "source_record_id": 445,
+  "unit_id": "O005-LEGA-V101-CH13"
+}

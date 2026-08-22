@@ -666,6 +666,41 @@ QA_SPECS = {
         "mastery_math": 156,
         "lock": None,
     },
+    "O005-LEGA-V101-CH12": {
+        "unit_type": "chapter",
+        "elements": 85,
+        "links": 0,
+        "math": 161,
+        "target_math": 165,
+        "reader_math": 165,
+        "math_replacements": {
+            49: (
+                r"\displaystyle W = \int_{t_0}^{t_1} m\ \frac{d^2 \vec r}{d t^2} \cdot \frac{d \vec r}{d t}\ dt = \left[\frac{1}{2} m \left(\frac{d \vec r}{d t}\right)^2 \right]_{t_0}^{t_1} = \left[ \frac{1}{2} m v^2 \right]_{t_0}^{t_1},",
+                r"\displaystyle W = \int_{t_0}^{t_1} m\ \frac{d^2 \vec r}{d t^2} \cdot \frac{d \vec r}{d t}\ dt = \left[\frac{1}{2} m \left\|\frac{d \vec r}{d t}\right\|^2 \right]_{t_0}^{t_1} = \left[ \frac{1}{2} m v^2 \right]_{t_0}^{t_1},",
+            ),
+            69: (r"V(r)", r"V(\vec r)"),
+            94: (
+                r"\displaystyle \iint_S \vec F \cdot d\vec S = \iint_R \vec F\left(x,y,z(x,y)\right)\cdot \left[-\frac{\partial f}{\partial x} \vec \imath - \frac{\partial f}{\partial y} \vec \jmath + \vec k \right] dx dy,",
+                r"\displaystyle \iint_S \vec F \cdot d\vec S = \iint_R \vec F\left(x,y,f(x,y)\right)\cdot \left[-\frac{\partial f}{\partial x} \vec \imath - \frac{\partial f}{\partial y} \vec \jmath + \vec k \right] dx dy,",
+            ),
+            134: (
+                r"\text{div} \vec F = \displaystyle \lim_{W \rightarrow 0} \frac{\int_S \vec F \cdot d \vec A} {\hbox{volume of }W}.",
+                r"\text{div} \vec F(P) = \displaystyle \lim_{\varepsilon \rightarrow 0} \frac{\iint_{\partial B_\varepsilon(P)} \vec F \cdot \vec n\, dS}{\operatorname{vol}(B_\varepsilon(P))}.",
+            ),
+        },
+        "math_insertions_before": {
+            50: [r"v"],
+            134: [r"B_\varepsilon(P)", r"\partial B_\varepsilon(P)", r"\vec n"],
+        },
+        "problems": 0,
+        "footnotes": 0,
+        "assets": [],
+        "notebook": None,
+        "notebook_cells": 0,
+        "code_cells": 0,
+        "mastery_math": 0,
+        "lock": None,
+    },
 }
 BUILDER = ROOT / "scripts" / "build_unit_reader.py"
 LATEX_RE = re.compile(r"\$latex\s+(.+?)\$", re.DOTALL)

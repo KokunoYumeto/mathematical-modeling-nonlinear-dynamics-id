@@ -33,18 +33,18 @@
     "all_bytes_and_sha256_equal": true
   },
   "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-CH11",
+    "unit_id": "O005-LEGA-V101-CH12",
     "source_record_type": "chapters",
-    "source_record_id": 410,
-    "source_slug": "linear-algebra",
-    "source_canonical_sha256": "762b7d0825a0669bc603f74b7d9b4c183a5e862dc594d3f9d467788397be31ce",
-    "source_content_sha256": "e851d0cc9f84fd0636fe3057cf7777cce2969e5fa96e4a6074860e79cf6ffe17",
-    "target_content_sha256": "f62354eb267c5788bd0ea8a70d6b7de64f8059c1656eedbffa40898da4c9606d",
-    "segment_sha256": "0ee5d83a3cd0f9096019e0d7ced962ff8f44b4938a49caea207293dc7dcee289",
-    "mastery_sha256": "76acebcc58ce8f81d35b933a08e47a5a0eee5a717caa168975ada561f091f56e",
-    "reader_manifest_sha256": "4c2f860ed701af4682ebd7202c9f5a01b6daba8a0e4d8015f97ca450d54c0153",
-    "qa_tree_sha256": "4711a2d39c2ce08eb9f7f760ca7b0346451d60496583e09fa72213150ff14da1"
+    "source_record_id": 413,
+    "source_slug": "appendix-vector-calculus",
+    "source_canonical_sha256": "fa1364a307b033035bce94975db0667edf3b8d208e73b4e07882b090cafab377",
+    "source_content_sha256": "165e0b7a0b489dd9be7ae396ac9a3c0430c89599c23a444fcaadffb2a07a3ccc",
+    "target_content_sha256": "6e0e2d720732726d88e3479d399ee25a4b012a750a4626c2219de9e54baa8f8b",
+    "segment_sha256": "be1a4ec04a0739dde654f507b7ef9bbf906398b4ae1dcf6c9f03572a15cec34d",
+    "mastery_sha256": null,
+    "reader_manifest_sha256": "80eb6c5692d0d01c2fa85de079c32ba9056442455cbd3ed7f3495fb627f67085",
+    "qa_tree_sha256": "50d3befe18450e4ab83f1ca57e87703af285429c3957d8cd007f5711704b3fce"
   },
-  "current_unit": "O005-LEGA-V101-CH12",
-  "next_action": "Use authority/units/O005-LEGA-V101-CH12/AUTHORITY_MANIFEST.json and content.raw.en.html to translate the full 112-line Refresher: Vector Calculus unit as Penyegaran: Kalkulus Vektor, preserving 85 elements and 161 TeX slots; no problems, mastery, notebook, links, or assets are present."
+  "current_unit": "O005-LEGA-V101-CH13",
+  "next_action": "Use authority/units/O005-LEGA-V101-CH13/AUTHORITY_MANIFEST.json and content.raw.en.html to translate the complete 581-line Refresher: Ordinary Differential Equations unit as Penyegaran: Persamaan Diferensial Biasa, preserving 456 elements, 524 TeX slots, 39 fragment links, eight local primary figures and descriptions, eleven problems, and eleven source answer groups; add separately provenanced hint/check/worked-solution records for all eleven problems."
 }

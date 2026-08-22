@@ -250,6 +250,18 @@ to this unit.
 Chapter 12 record 413 has an empty record-level license override and references
 no component asset, link, exercise, or computational surface. Its frozen
 canonical/raw/rendered bytes therefore inherit the book's CC BY-NC-SA 4.0
-license. The forthcoming translation remains an adaptation under that license;
-no mastery, notebook, or asset component may be fabricated merely to populate
-an otherwise inapplicable backend field.
+license. The admitted Indonesian translation remains an adaptation under that
+license; its corrections are separately ledgered, and no mastery, notebook, or
+asset component was fabricated merely to populate an inapplicable backend
+field.
+
+Chapter 13 record 445 also has an empty record-level license override and thus
+inherits CC BY-NC-SA 4.0. Its eight primary PNGs are preserved byte-for-byte in
+the frozen authority and bound by exact EPUB member, path, size, dimension, and
+SHA-256 identity; no broader component-rights claim is made. The rendered
+Pressbooks witness retains remote responsive `srcset` variants that are not
+part of the admitted primary-asset closure. The independent Indonesian reader
+must use the eight frozen local primary files, retain and translate the eight
+figure descriptions, and remove remote image selection at runtime. The eleven
+printed answer groups are source-derived; new hints, checks, and worked
+solutions must be labeled separately and remain compatible with ShareAlike.
