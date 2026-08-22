@@ -269,3 +269,8 @@ O005-TERM-0267,mathematical fluency,kemahiran bermatematika,admitted,Means flexi
 O005-TERM-0268,graphical user interface,antarmuka pengguna grafis,admitted,Spell out before the abbreviation GUI where needed.
 O005-TERM-0269,capstone course,mata kuliah integratif tingkat akhir,admitted,Functional Indonesian rendering; retain capstone parenthetically only where curricular comparison requires it.
 O005-TERM-0270,research article,artikel penelitian,admitted,Use for a scholarly research paper in running prose.
+O005-TERM-0271,holdout data,data uji yang disisihkan,admitted,Introduce once as data uji yang disisihkan (holdout) and then use data uji; Indonesian research and instructional usage consistently pairs data latih with data uji, so avoid the unnatural calque data tahan.
+O005-TERM-0272,training data,data latih,admitted,Established Indonesian pairing with data uji; prefer over the more literal data pelatihan in reader-facing prose.
+O005-TERM-0273,algorithm,algoritma,admitted,Use the form attested in the Indonesian arXiv TeX and Badan Bahasa technical terminology; normalize the variant algoritme in this edition.
+O005-TERM-0274,data provenance,asal-usul data,admitted,Use the natural reader-facing explanation; retain provenance only in locale-neutral machine keys or when defining the English technical label.
+O005-TERM-0275,parameter estimation,estimasi parameter,admitted,Use for numerical estimation procedures; avoid pencocokan parameter when the operation is explicitly estimation by least squares.

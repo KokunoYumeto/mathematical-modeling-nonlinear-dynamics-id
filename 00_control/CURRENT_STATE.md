@@ -1,6 +1,6 @@
 # Current State — O005/C120
 
-Updated: 2026-08-22 Europe/Berlin
+Updated: 2026-08-23 Europe/Berlin
 
 ## Status
 
@@ -12,8 +12,9 @@ visible part introductions, Chapters 1–14, and both back-matter records—are
 translated, built, reviewed, and verified. Chapter 14,
 Pressbooks record 555, is admitted as `O005-LEGA-V101-CH14`, *Proyek
 Pemodelan*, with all twelve independent open project packets. The
-source-derived translation is therefore closed. Four declared original bridge
-modules now remain before the edition is complete.
+source-derived translation is therefore closed. Original bridge C1 is now
+complete and verified; three declared bridge modules remain before the edition
+is complete.
 
 The complete Chapter 14 boundary and sanitized Zenodo preservation receipt are
 sealed in local commit `555062f9ef9942c2c3167a15e59e81b5f87ab0ea`
@@ -935,7 +936,7 @@ preservation surface while the GitHub lineage is temporarily unavailable.
 - Final browser regression at 1,440 px and 390 px found every one of these four
   articles centered (768 px desktop; 357.507 px mobile), with zero document or
   element overflow and zero runtime console entries. The glossary now contains
-  270 unique stable term IDs through `O005-TERM-0270`.
+  275 unique stable term IDs through `O005-TERM-0275`.
 - A final independent fidelity pass then sharpened three bounded renderings:
   spatial extent is `terbentang secara spasial`, successive refinement is
   `secara berulang`, and postgraduate mentors are no longer narrowed to
@@ -950,12 +951,41 @@ preservation surface while the GitHub lineage is temporarily unavailable.
   `7624a19694ea44dba5e02e48656bab04782626c7bf5e15a1b146b2c94098f30d`).
   Neither commit was sent to the suspended GitHub account.
 
+## Admitted original bridge C1 boundary
+
+- `O005-BRIDGE-C1`, *Alur Kerja Python/Jupyter yang Reprodusibel*, is a new
+  independent supplement, not source-book content. Its canonical content is
+  16,946 bytes, SHA-256
+  `c8593b80996e6f7bd368a4a2e198472198163fc17ee408b98ccbd7e58c99e4eb`.
+- The seven-record mastery layer is 12,528 bytes, SHA-256
+  `8757a13a2c799fe2f13aa697fb4596d4ab623c06688733cb16df39fc151fb27a`.
+  The output-clean 14-cell notebook is 14,436 bytes, SHA-256
+  `c266a0e332b6d709007344e1d401b8af324744d6ed524e7afa793ba5a01bee02`;
+  its complete pinned environment lock is SHA-256
+  `5c6816d5c2e5993961f8a21ddce68f7f1ecbb4a48eff04fb345dc8e4ce2a8c68`.
+- The stable modular layer has 152 segment records, SHA-256
+  `dfd2cb1f671ab3f672e27d7435d92c84b562b30131c14cca00863040749a20b0`,
+  bound to the immutable semantic-ID ledger SHA-256
+  `8cf00bb705b542fe1f300076824b23a05af3b58188cef6a92fde76ed1521ebbd`.
+- Canonical and changed-seed notebooks each passed in a separate fresh kernel
+  with one PNG. Two isolated 14-file builds matched each other and every
+  canonical byte; final deterministic tree SHA-256 is
+  `c169dd1fc53b2b99f3c4a9876553b52403d7b7308669ed7918ce2129b7819d46`.
+- Desktop/mobile browser QA proves centered 768 px / 357.507 px articles, zero
+  horizontal overflow, valid captions, clean preformatted code, zero empty
+  paragraphs or raw TeX, and zero console warnings. The shared renderer repair
+  is part of the admitted boundary.
+- C1 preserves the exact source-book credit, CC BY-NC-SA 4.0 boundary,
+  non-endorsement, and production identification `OpenAI Codex gpt-5.6-sol,
+  Ultra.` It imports no proprietary code, external data, or third-party art.
+
 ## Next action
 
-Build `O005-BRIDGE-C1`, the reproducible Python/Jupyter workflow, as a complete
-natural id-ID learning unit with a deterministic notebook and stable modular
-backend. Then continue in order through C2 bifurcations, C3 chaos, and C4 model
-validation and uncertainty. At the next substantial verified reader boundary,
+Integrate and verify `O005-BRIDGE-C2`, the complete natural id-ID local-
+bifurcation unit now present in the source tree, by generalizing the strict
+bridge schemas/build/QA without weakening cross-record or fresh-kernel gates.
+Then continue in order through C3 chaos and C4 model validation and
+uncertainty. At the next substantial verified reader boundary,
 use Zenodo's new-version action on concept DOI `10.5281/zenodo.22059939`, update
 Figshare article `33314769`, and republish collection `8668413`. Do not retry
 GitHub until the user reports that account access is restored.

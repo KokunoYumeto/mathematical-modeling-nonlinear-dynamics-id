@@ -5,9 +5,9 @@
   "source_semantic_records_total": 22,
   "source_semantic_records_completed": 22,
   "source_translation_complete": true,
-  "current_unit_id": "O005-BRIDGE-C1",
+  "current_unit_id": "O005-BRIDGE-C2",
   "current_unit_type": "original-bridge",
-  "current_unit_title": "Alur Kerja Python/Jupyter yang Reprodusibel",
+  "current_unit_title": "Bifurkasi Lokal: Perubahan Kestabilan dan Munculnya Osilasi",
   "authority_frozen": "not_applicable_original_addition",
   "indonesian_field_terminology_qa": {
     "status": "completed_and_propagated",
@@ -72,14 +72,29 @@
       "O005-LEGA-V101-BM02": "ab0c3fbb16e2a6e9a4a9e7d47211ccd480946407faec337c7d0bb022563439f7"
     },
     "browser_qa": "desktop_1440_and_mobile_390_centered_zero_overflow",
-    "glossary_unique_term_ids": 270
+    "glossary_unique_term_ids": 275
+  },
+  "last_completed_bridge": {
+    "unit_id": "O005-BRIDGE-C1",
+    "title": "Alur Kerja Python/Jupyter yang Reprodusibel",
+    "content_sha256": "c8593b80996e6f7bd368a4a2e198472198163fc17ee408b98ccbd7e58c99e4eb",
+    "mastery_sha256": "8757a13a2c799fe2f13aa697fb4596d4ab623c06688733cb16df39fc151fb27a",
+    "notebook_sha256": "c266a0e332b6d709007344e1d401b8af324744d6ed524e7afa793ba5a01bee02",
+    "segment_count": 152,
+    "segment_sha256": "dfd2cb1f671ab3f672e27d7435d92c84b562b30131c14cca00863040749a20b0",
+    "segment_id_ledger_sha256": "8cf00bb705b542fe1f300076824b23a05af3b58188cef6a92fde76ed1521ebbd",
+    "reader_manifest_sha256": "70fa784b99491451a5f43cdd7d6e8a3940cc947b499460648feb1abb2dafa0df",
+    "qa_tree_sha256": "c169dd1fc53b2b99f3c4a9876553b52403d7b7308669ed7918ce2129b7819d46",
+    "notebook_fresh_kernel_runs": 2,
+    "build_complete": true,
+    "qa_complete": true,
+    "browser_qa_complete": true
   },
   "remaining_source_order": [],
   "remaining_bridge_order": [
-    "O005-BRIDGE-C1",
     "O005-BRIDGE-C2",
     "O005-BRIDGE-C3",
     "O005-BRIDGE-C4"
   ],
-  "next_action": "Create the complete natural id-ID O005-BRIDGE-C1 reproducible Python/Jupyter workflow, its deterministic notebook, stable segment/unit metadata, accessible reader, and executable QA. Continue directly through bridges C2-C4. Use the existing Zenodo/Figshare lineages at the next substantial verified boundary; do not retry GitHub until the user reports account restoration."
+  "next_action": "Integrate and verify the complete natural id-ID O005-BRIDGE-C2 local-bifurcation module already present in the source tree. Generalize the strict bridge schemas, builder, and fresh-kernel QA without weakening C1, create its semantic-ID ledger/backend/reader, and then continue directly through C3-C4. Use the existing Zenodo/Figshare lineages at the next substantial verified boundary; do not retry GitHub until the user reports account restoration."
 }

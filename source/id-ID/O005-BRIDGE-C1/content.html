@@ -1,0 +1,174 @@
+<div class="textbox textbox--learning-objectives" id="O005-BRIDGE-C1-OBJ">
+<header class="textbox__header">
+<h2 class="textbox__title">Tujuan Pembelajaran</h2>
+</header>
+<div class="textbox__content">
+<p>Setelah menyelesaikan modul ini, Anda akan mampu:</p>
+<ul>
+<li>menjelaskan perbedaan antara hasil yang dapat diulang, hasil yang dapat ditelusuri, dan kesimpulan yang benar;</li>
+<li>menata proyek pemodelan sehingga data, asumsi, kode, lingkungan komputasi, dan keluaran dapat diperiksa secara terpisah;</li>
+<li>menyatakan kontrak model yang memuat variabel, satuan, parameter, domain, asumsi, serta kriteria kegagalan;</li>
+<li>menggunakan bilangan acak, pembagian data, dan catatan asal-usul data secara deterministik; dan</li>
+<li>menjalankan ulang notebook dari keadaan bersih serta memverifikasi hasilnya dengan pemeriksaan numerik dan hash.</li>
+</ul>
+</div>
+</div>
+
+<section id="O005-BRIDGE-C1-SEC01">
+<h2>Reprodusibilitas adalah rantai bukti</h2>
+<p>Dalam pemodelan matematika, sebuah angka akhir bukanlah hasil yang berdiri sendiri. Angka itu bergantung pada pertanyaan yang diajukan, data yang digunakan, asumsi yang dibuat, persamaan yang dipilih, nilai parameter, algoritma, versi perangkat lunak, dan urutan eksekusi. Proyek disebut <em>reprodusibel secara komputasional</em> apabila orang lain dapat mengambil bahan yang sama, menjalankan prosedur yang dinyatakan, dan memperoleh keluaran yang sama dalam toleransi yang telah ditetapkan.</p>
+<p>Reprodusibilitas tidak membuktikan bahwa model benar. Kesalahan yang ditulis dengan rapi tetap merupakan kesalahan. Namun, tanpa rantai bukti yang dapat diperiksa, pembaca tidak dapat membedakan perbedaan ilmiah dari kesalahan salin, keadaan tersembunyi dalam notebook, perubahan data, atau perbedaan lingkungan komputasi. Karena itu, reprodusibilitas merupakan syarat pemeriksaan, bukan pengganti kritik model.</p>
+<aside class="textbox textbox--key-takeaway" aria-labelledby="O005-BRIDGE-C1-PRINCIPLE">
+<header class="textbox__header"><h3 class="textbox__title" id="O005-BRIDGE-C1-PRINCIPLE">Prinsip inti</h3></header>
+<div class="textbox__content"><p>Setiap klaim kuantitatif harus dapat ditelusuri mundur ke data, model, parameter, kode, dan lingkungan yang menghasilkannya. Setiap perubahan pada salah satu unsur tersebut harus terlihat sebagai perubahan yang disengaja, bukan sebagai keadaan tersembunyi.</p></div>
+</aside>
+</section>
+
+<section id="O005-BRIDGE-C1-SEC02">
+<h2>Satu pertanyaan, satu proyek yang dapat diperiksa</h2>
+<p>Mulailah dengan satu pertanyaan operasional. Contohnya: “Dengan menganggap suhu ruangan tetap, seberapa cepat secangkir cairan panas mendekati suhu ruangan?” Pertanyaan ini lebih berguna daripada judul umum seperti “model pendinginan” karena menyebutkan sistem, besaran yang diamati, dan asumsi yang paling menentukan.</p>
+<p>Struktur direktori berikut memisahkan bahan yang memiliki fungsi berbeda. Nama direktori bukan hukum universal; pemisahan tanggung jawabnya yang penting.</p>
+<pre><code>proyek-pendinginan/
+├── README.md
+├── requirements.lock
+├── data/
+│   ├── raw/
+│   └── derived/
+├── src/
+│   └── model.py
+├── notebooks/
+│   └── analisis.ipynb
+├── outputs/
+└── manifest.tsv</code></pre>
+<table>
+<caption>Peran setiap unsur dalam proyek pemodelan yang dapat diperiksa</caption>
+<thead><tr><th scope="col">Unsur</th><th scope="col">Isi</th><th scope="col">Aturan minimum</th></tr></thead>
+<tbody>
+<tr><th scope="row"><code>README.md</code></th><td>Pertanyaan, cara menjalankan, dan batas klaim</td><td>Pembaca baru dapat memulai tanpa menebak urutan langkah.</td></tr>
+<tr><th scope="row"><code>requirements.lock</code></th><td>Versi tepat perangkat lunak</td><td>Jangan hanya menulis “gunakan Python terbaru”.</td></tr>
+<tr><th scope="row"><code>data/raw</code></th><td>Data sebagaimana diperoleh</td><td>Jangan diedit secara manual; simpan identitas dan sumbernya.</td></tr>
+<tr><th scope="row"><code>data/derived</code></th><td>Data hasil pembersihan atau transformasi</td><td>Harus dapat dibuat ulang dari data mentah dengan kode.</td></tr>
+<tr><th scope="row"><code>src</code></th><td>Fungsi model dan prosedur analisis</td><td>Hindari logika penting yang hanya hidup di keadaan notebook.</td></tr>
+<tr><th scope="row"><code>notebooks</code></th><td>Narasi eksekutabel</td><td>Harus lulus “mulai ulang lalu jalankan semua”.</td></tr>
+<tr><th scope="row"><code>outputs</code></th><td>Gambar dan tabel turunan</td><td>Boleh dihapus dan dibuat ulang tanpa kehilangan informasi asli.</td></tr>
+<tr><th scope="row"><code>manifest.tsv</code></th><td>Daftar berkas, ukuran, dan hash</td><td>Mengikat klaim pada byte yang tepat.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="O005-BRIDGE-C1-SEC03">
+<h2>Bekukan konteks sebelum menghitung</h2>
+<p>Catat versi Python dan setiap pustaka yang memengaruhi hasil. Versi yang dipatok membuat lingkungan dapat dibangun ulang; ia tidak menjamin bahwa pustaka bebas cacat. Catat pula sistem operasi atau arsitektur apabila perhitungan sangat peka terhadap implementasi numerik.</p>
+<p>Jika simulasi memakai bilangan acak, gunakan pembangkit yang dibuat dari benih eksplisit. Dalam NumPy, bentuk seperti <code>rng = np.random.default_rng(20260822)</code> lebih mudah diaudit daripada keadaan acak global. Benih menjadikan satu realisasi dapat diulang, tetapi tidak menjadikan satu realisasi representatif. Analisis yang bergantung pada keacakan tetap perlu diperiksa dengan beberapa benih yang dinyatakan.</p>
+<p>Gunakan satuan eksplisit. Nama <code>t</code> dan <code>k</code> tidak cukup apabila pembaca tidak tahu apakah waktu diukur dalam detik, menit, atau hari. Konversi satuan harus terjadi di satu tempat yang terlihat. Tanggal, zona waktu, pemisah desimal, pengodean teks, dan aturan penanganan data hilang juga termasuk konteks ketika dapat mengubah interpretasi.</p>
+</section>
+
+<section id="O005-BRIDGE-C1-SEC04">
+<h2>Tulis kontrak model</h2>
+<p>Sebelum melakukan estimasi parameter, tuliskan apa yang masuk ke model, apa yang keluar, dan kapan model tidak layak digunakan. Untuk contoh pendinginan, misalkan \(T(t)\) adalah suhu cairan dalam derajat Celsius pada waktu \(t\) menit, \(T_{\infty}\) suhu lingkungan tetap, dan \(k&gt;0\) tetapan laju dengan satuan menit\(^{-1}\). Hukum pendinginan Newton dinyatakan oleh</p>
+<p>\[
+\frac{dT}{dt}=-k\bigl(T-T_{\infty}\bigr), \qquad T(0)=T_0,
+\]</p>
+<p>dengan solusi</p>
+<p>\[
+T(t)=T_{\infty}+\bigl(T_0-T_{\infty}\bigr)e^{-kt}.
+\]</p>
+<p>Kontrak contoh ini memuat asumsi bahwa suhu cairan seragam, suhu lingkungan tetap, laju pertukaran panas sebanding dengan selisih suhu, dan alat ukur tidak mengubah sistem secara berarti. Domain parameternya mencakup \(k&gt;0\) dan nilai \(T_{\infty}\) yang masuk akal secara fisik. Model gagal sebagai deskripsi apabila, misalnya, suhu lingkungan berubah tajam, cairan mengalami perubahan fase, atau residu menunjukkan pola sistematis yang besar.</p>
+<p>Kontrak juga harus menyebutkan konvensi perangkat lunak. Notebook pendamping menggunakan argumen fungsi dalam urutan <code>(waktu_menit, laju_per_menit, suhu_lingkungan_c)</code>, menetapkan \(T_0=92\,^{\circ}\mathrm{C}\), dan membatasi pencarian parameter agar \(0.001\le k\le0.5\) serta \(0\le T_{\infty}\le50\).</p>
+</section>
+
+<section id="O005-BRIDGE-C1-SEC05">
+<h2>Contoh kerja: dari data sintetis ke pemeriksaan</h2>
+<p>Notebook pendamping membuat sebelas pengamatan sintetis pada \(t=0,5,\ldots,50\) menit. Nilai parameter pembangkit data adalah \(k=0.073\) menit\(^{-1}\), \(T_{\infty}=22.4\,^{\circ}\mathrm{C}\), dan simpangan baku galat pengukuran \(0.35\,^{\circ}\mathrm{C}\). Benih tetap digunakan agar byte data dapat dihitung ulang. Data sintetis dipakai untuk menguji alur kerja; data tersebut bukan bukti empiris tentang proses pendinginan nyata.</p>
+<p>Delapan pengamatan pertama digunakan untuk mengestimasi \(k\) dan \(T_{\infty}\), sedangkan tiga pengamatan terakhir menjadi data uji dan tidak digunakan dalam proses estimasi. Pemisahan ini sengaja sederhana. Tujuannya ialah memperlihatkan bahwa prosedur estimasi dan pemeriksaan harus dibedakan. Modul C4 membahas validasi, identifiabilitas, perbandingan model, dan ketidakpastian secara lebih mendalam.</p>
+<p>Untuk data latih \((t_i,y_i)\), parameter dipilih dengan meminimalkan jumlah kuadrat residu</p>
+<p>\[\operatorname{SSE}(k,T_{\infty})=\sum_{i\in\mathcal{I}_{\mathrm{latih}}}\left[y_i-T(t_i;k,T_{\infty})\right]^2.\]</p>
+<p>Setelah parameter diestimasi, notebook menghitung residu \(r_i=y_i-\widehat{T}(t_i)\), akar rerata kuadrat galat pada data latih (RMSE), korelasi residu dengan waktu, dan galat absolut rerata pada data uji yang disisihkan (<i lang="en">holdout</i>). Besaran-besaran ini merupakan pemeriksaan alur kerja, bukan sertifikat bahwa model memadai untuk semua tujuan.</p>
+</section>
+
+<section id="O005-BRIDGE-C1-SEC06">
+<h2>Notebook tanpa keadaan tersembunyi</h2>
+<p>Notebook mudah menyesatkan ketika sel dijalankan tidak berurutan. Variabel dapat tetap hidup dari percobaan lama, gambar dapat berasal dari parameter yang sudah berubah, dan keluaran tersimpan dapat tampak sah walaupun kode saat ini gagal. Karena itu, pemeriksaan minimum ialah: mulai ulang kernel, hapus keluaran, jalankan semua sel dari atas ke bawah, lalu pastikan semua pemeriksaan lulus.</p>
+<ol>
+<li>Sel impor tidak mengunduh data dan tidak mengubah lingkungan.</li>
+<li>Konstanta, benih, satuan, serta batas parameter dinyatakan sebelum digunakan.</li>
+<li>Fungsi model tidak bergantung pada variabel global yang tersembunyi.</li>
+<li>Data turunan dibuat oleh kode, bukan disunting dengan tangan.</li>
+<li>Pemisahan data dilakukan sebelum estimasi parameter.</li>
+<li>Gambar dibuat dari objek data dan parameter yang sama dengan ringkasan numerik.</li>
+<li>Pemeriksaan menggunakan toleransi bermakna, bukan kesamaan pecahan mengambang secara membuta.</li>
+</ol>
+<p>Notebook kanonik disimpan tanpa keluaran eksekusi. Pilihan ini memudahkan pemeriksaan perubahan byte dan memaksa keluaran dibuat ulang. Pembaca tetap dapat menjalankannya secara lokal dengan perangkat lunak terbuka yang dipatok dalam <code>requirements.lock</code>.</p>
+</section>
+
+<section id="O005-BRIDGE-C1-SEC07">
+<h2>Manifest, hash, dan batas yang tepat</h2>
+<p>Hash SHA-256 memadatkan byte sebuah berkas menjadi pengenal yang peka terhadap perubahan. Hash menjawab pertanyaan “apakah byte ini sama?”, bukan “apakah isi ini benar?” atau “apakah dua tabel yang diformat berbeda memiliki makna yang sama?”. Catat sekurang-kurangnya jalur relatif, jumlah byte, dan hash untuk setiap artefak yang perlu dipertahankan.</p>
+<p>Manifest harus dibuat dengan urutan jalur yang tetap, pengodean UTF-8 yang dinyatakan, dan aturan akhir baris yang konsisten. Jangan masukkan token, kata sandi, jalur profil pribadi, cache, atau data rahasia. Untuk data yang tidak boleh didistribusikan, catat identitas, prosedur perolehan, dan batas akses tanpa menyisipkan byte terlarang.</p>
+<p>Dalam notebook contoh, tabel sintetis diserialisasi dengan enam angka di belakang koma sebelum hash dihitung. Aturan serialisasi itu merupakan bagian dari kontrak. Mengubah jumlah angka, nama kolom, atau aturan akhir baris akan mengubah hash walaupun nilai matematis dasarnya hampir sama.</p>
+</section>
+
+<section id="O005-BRIDGE-C1-SEC08">
+<h2>Daftar periksa sebelum menyatakan hasil dapat direproduksi</h2>
+<ul class="checklist">
+<li>Pertanyaan, tujuan penggunaan, dan batas klaim tertulis jelas.</li>
+<li>Data mentah tidak ditimpa; sumber, lisensi, tanggal, dan identitasnya tercatat.</li>
+<li>Semua transformasi data dapat dijalankan ulang dari input yang dinyatakan.</li>
+<li>Variabel, parameter, satuan, domain, dan asumsi model memiliki definisi tunggal.</li>
+<li>Versi Python dan pustaka dipatok.</li>
+<li>Benih acak dan algoritma pembangkit dinyatakan jika keacakan digunakan.</li>
+<li>Pemisahan data latih dan data uji terjadi sebelum estimasi.</li>
+<li>Notebook lulus mulai ulang dan jalankan semua dari keadaan bersih.</li>
+<li>Pemeriksaan numerik memiliki toleransi dan alasan.</li>
+<li>Gambar serta tabel berasal dari alur yang sama dengan angka yang dilaporkan.</li>
+<li>Manifest tidak memuat kredensial atau data yang tidak boleh disebarkan.</li>
+<li>Perubahan terhadap sumber atau versi sebelumnya dijelaskan.</li>
+</ul>
+</section>
+
+<section id="O005-BRIDGE-C1-SEC09">
+<h2>Kegagalan yang sering terjadi</h2>
+<table>
+<caption>Gejala kegagalan, penyebab yang mungkin, dan tindakan perbaikan</caption>
+<thead><tr><th scope="col">Gejala</th><th scope="col">Penyebab yang mungkin</th><th scope="col">Perbaikan</th></tr></thead>
+<tbody>
+<tr><th scope="row">Notebook hanya bekerja setelah beberapa sel dijalankan manual.</th><td>Keadaan tersembunyi atau urutan sel salah.</td><td>Mulai ulang, jalankan semua, dan pindahkan definisi sebelum pemakaian.</td></tr>
+<tr><th scope="row">Hasil berubah pada setiap eksekusi.</th><td>Benih atau sumber keacakan tidak dikendalikan.</td><td>Buat pembangkit lokal dengan benih eksplisit dan uji beberapa benih secara terpisah.</td></tr>
+<tr><th scope="row">Hasil sama, tetapi tidak diketahui data mana yang dipakai.</th><td>Asal-usul dan identitas data hilang.</td><td>Simpan sumber, waktu perolehan, aturan transformasi, jumlah byte, dan hash.</td></tr>
+<tr><th scope="row">Galat pada data latih sangat kecil, tetapi prediksi buruk.</th><td>Pencocokan berlebih, kebocoran data, atau model di luar domain.</td><td>Pisahkan data lebih awal dan periksa residu serta data uji.</td></tr>
+<tr><th scope="row">Dua komputer memberi digit terakhir yang berbeda.</th><td>Perbedaan pustaka atau aritmetika pecahan mengambang.</td><td>Patok lingkungan dan gunakan toleransi yang sesuai dengan skala masalah.</td></tr>
+<tr><th scope="row">Manifest berubah setiap kali dibuat.</th><td>Urutan jalur, waktu, atau format serialisasi tidak tetap.</td><td>Urutkan jalur dan keluarkan metadata yang tidak deterministik.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="O005-BRIDGE-C1-SEC10">
+<h2>Ringkasan</h2>
+<p>Alur kerja reprodusibel mengubah perhitungan menjadi argumen yang dapat diaudit. Ia mengikat pertanyaan, data, asumsi, model, kode, lingkungan, pemeriksaan, dan artefak akhir dalam satu rantai yang terlihat. Notebook pendamping memperagakan rantai tersebut dengan model pendinginan sederhana: data sintetis dibuat dari benih tetap, parameter diestimasi hanya dari data latih, residu dan data uji diperiksa, serta identitas byte data dihitung. Reprodusibilitas komputasional ini belum menjawab apakah model paling tepat; ia memastikan bahwa pertanyaan itu dapat diajukan terhadap bukti yang sama.</p>
+</section>
+
+<div class="textbox textbox--exercises" id="O005-BRIDGE-C1-EXERCISES">
+<header class="textbox__header"><h2 class="textbox__title">Latihan Penguasaan</h2></header>
+<div class="textbox__content">
+<h3 id="O005-BRIDGE-C1-P01">Soal 1</h3>
+<p>Sebuah laporan hanya menyertakan gambar hasil simulasi dan kalimat “dibuat dengan Python”. Susun daftar lima informasi paling penting yang masih diperlukan agar klaim numeriknya dapat diperiksa dan diulang.</p>
+
+<h3 id="O005-BRIDGE-C1-P02">Soal 2</h3>
+<p>Rancang struktur proyek untuk data pengamatan populasi mingguan. Jelaskan berkas mana yang tidak boleh disunting, berkas mana yang boleh dibuat ulang, dan tiga kolom minimum dalam manifest.</p>
+
+<h3 id="O005-BRIDGE-C1-P03">Soal 3</h3>
+<p>Untuk model pendinginan di atas, tentukan satuan \(k\), periksa bahwa eksponen \(kt\) tak berdimensi, dan jelaskan mengapa batas \(k&gt;0\) sesuai dengan proses pendinginan menuju suhu lingkungan.</p>
+
+<h3 id="O005-BRIDGE-C1-P04">Soal 4</h3>
+<p>Bandingkan <code>np.random.seed(17)</code> yang mengubah keadaan global dengan <code>rng = np.random.default_rng(17)</code> yang membuat pembangkit lokal. Jelaskan mengapa pembangkit lokal biasanya lebih mudah diaudit dalam proyek besar.</p>
+
+<h3 id="O005-BRIDGE-C1-P05">Soal 5</h3>
+<p>Hitung suhu yang diprediksi pada \(t=10\) menit jika \(T_0=92\,^{\circ}\mathrm{C}\), \(T_{\infty}=22\,^{\circ}\mathrm{C}\), dan \(k=0.07\) menit\(^{-1}\). Berikan jawaban hingga dua angka di belakang koma.</p>
+
+<h3 id="O005-BRIDGE-C1-P06">Soal 6</h3>
+<p>Jelaskan mengapa memilih data uji setelah melihat seluruh hasil dapat menghasilkan penilaian yang terlalu optimistis. Usulkan urutan kerja yang mencegah kebocoran informasi.</p>
+
+<h3 id="O005-BRIDGE-C1-P07">Soal 7</h3>
+<p>Jalankan notebook pendamping dari keadaan bersih. Catat hash tabel sintetis, estimasi kedua parameter, RMSE data latih, dan MAE data uji. Kemudian ubah hanya <code>SEED</code> dari <code>20260822</code> menjadi <code>20260823</code>, jalankan ulang, dan jelaskan mana yang berubah, mana yang tetap, serta mengapa perubahan itu tidak boleh disembunyikan. Notebook menandai benih nonkanonik secara terlihat dan melewatkan hanya pemeriksaan angka kanonik; pemeriksaan struktur dan keterhinggaan tetap berjalan.</p>
+</div>
+</div>

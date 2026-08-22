@@ -509,7 +509,7 @@ FOOTNOTE_SPAN_CLOSE_RE = re.compile(
     re.IGNORECASE,
 )
 BLOCK_LINE_RE = re.compile(
-    r"^</?(?:address|article|aside|blockquote|details|div|dl|fieldset|figcaption|figure|"
+    r"^</?(?:address|article|aside|blockquote|caption|details|div|dl|fieldset|figcaption|figure|"
     r"footer|form|h[1-6]|header|hr|li|main|nav|ol|p|pre|section|table|tbody|td|"
     r"tfoot|th|thead|tr|ul)\b",
     re.IGNORECASE,
@@ -692,14 +692,35 @@ def wrap_inline_runs(fragment: str) -> BeautifulSoup:
     paragraph boundaries while leaving every existing block element intact.
     """
     normalized: list[str] = []
+    pre_depth = 0
     for line in fragment.splitlines():
         stripped = line.strip()
+        if pre_depth:
+            # Text inside ``pre`` is already block content.  Preserve its
+            # whitespace and never manufacture paragraph elements inside the
+            # code block.
+            normalized.append(line)
+            pre_depth += len(re.findall(r"<pre\b", line, flags=re.IGNORECASE))
+            pre_depth -= len(re.findall(r"</pre\s*>", line, flags=re.IGNORECASE))
+            if pre_depth < 0:
+                raise RuntimeError("Unbalanced closing pre element in target fragment")
+            continue
         if not stripped or stripped in {"&nbsp;", "&#160;"}:
+            continue
+        opens_pre = len(re.findall(r"<pre\b", line, flags=re.IGNORECASE))
+        closes_pre = len(re.findall(r"</pre\s*>", line, flags=re.IGNORECASE))
+        if opens_pre:
+            normalized.append(line)
+            pre_depth = opens_pre - closes_pre
+            if pre_depth < 0:
+                raise RuntimeError("Unbalanced pre element in target fragment")
             continue
         if BLOCK_LINE_RE.match(stripped):
             normalized.append(stripped)
         else:
             normalized.append(f"<p>{stripped}</p>")
+    if pre_depth:
+        raise RuntimeError("Unclosed pre element in target fragment")
     return BeautifulSoup("\n".join(normalized), "html.parser")
 
 

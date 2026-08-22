@@ -128,12 +128,22 @@
       "O005-LEGA-V101-BM02": "ab0c3fbb16e2a6e9a4a9e7d47211ccd480946407faec337c7d0bb022563439f7"
     }
   },
-  "current_unit": "O005-BRIDGE-C1",
+  "last_completed_bridge": {
+    "unit_id": "O005-BRIDGE-C1",
+    "content_sha256": "c8593b80996e6f7bd368a4a2e198472198163fc17ee408b98ccbd7e58c99e4eb",
+    "notebook_sha256": "c266a0e332b6d709007344e1d401b8af324744d6ed524e7afa793ba5a01bee02",
+    "segment_sha256": "dfd2cb1f671ab3f672e27d7435d92c84b562b30131c14cca00863040749a20b0",
+    "segment_id_ledger_sha256": "8cf00bb705b542fe1f300076824b23a05af3b58188cef6a92fde76ed1521ebbd",
+    "reader_manifest_sha256": "70fa784b99491451a5f43cdd7d6e8a3940cc947b499460648feb1abb2dafa0df",
+    "qa_tree_sha256": "c169dd1fc53b2b99f3c4a9876553b52403d7b7308669ed7918ce2129b7819d46",
+    "fresh_kernel_runs": 2,
+    "status": "complete_verified"
+  },
+  "current_unit": "O005-BRIDGE-C2",
   "remaining_bridge_order": [
-    "O005-BRIDGE-C1",
     "O005-BRIDGE-C2",
     "O005-BRIDGE-C3",
     "O005-BRIDGE-C4"
   ],
-  "next_action": "Build the complete natural id-ID O005-BRIDGE-C1 reproducible Python/Jupyter workflow with deterministic notebook, stable backend, accessible reader, and executable QA, then continue through C2-C4. Maintain future substantial boundaries as new versions of Zenodo concept DOI 10.5281/zenodo.22059939. Do not retry GitHub until the user reports account restoration."
+  "next_action": "Integrate and verify O005-BRIDGE-C2 from the completed source/generator/notebook/mastery inputs by generalizing the closed bridge schemas/build/QA, creating its semantic-ID ledger/backend/reader, and running canonical plus changed-configuration fresh kernels and deterministic browser QA. Continue through C3-C4. Maintain future substantial boundaries as new versions of Zenodo concept DOI 10.5281/zenodo.22059939. Do not retry GitHub until the user reports account restoration."
 }

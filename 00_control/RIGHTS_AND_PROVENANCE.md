@@ -290,3 +290,21 @@ Each executable project packet, notebook, synthetic/open dataset, check, and
 rubric is independently authored for this edition, separately provenanced, and
 must not import proprietary code or imply reproduction of an article result
 unless the packet actually verifies that result from lawfully available data.
+
+## Original bridge C1 component record
+
+`O005-BRIDGE-C1`, *Alur Kerja Python/Jupyter yang Reprodusibel*, is a newly
+authored independent supplement and is not part of Joceline Lega's source
+book. Its prose, seven mastery records, synthetic cooling dataset generator,
+NumPy/SciPy/Matplotlib notebook, backend records, and reader presentation were
+created for this edition and are distributed compatibly under CC BY-NC-SA
+4.0. The source-book author/work attribution is retained separately; neither
+Joceline Lega nor the University of Arizona is claimed to have authored,
+sponsored, reviewed, or endorsed the supplement.
+
+No proprietary program, external dataset, or third-party artwork was imported.
+The cooling observations are deterministic synthetic data and are explicitly
+not represented as empirical validation. The Indonesian arXiv and journal
+witnesses used for terminology QA supplied usage evidence only; none of their
+prose, formulas, code, data, or figures appears in C1. Production provenance is
+identified exactly as `OpenAI Codex gpt-5.6-sol, Ultra.`

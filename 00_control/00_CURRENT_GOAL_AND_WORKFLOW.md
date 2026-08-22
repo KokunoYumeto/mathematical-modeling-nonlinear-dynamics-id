@@ -39,8 +39,9 @@ metadata. Later substantial boundaries update this same Figshare item rather
 than creating a competing work record. The complete 22-record source-derived
 reader closure is now translated: the fourteen chapters, all five visible part
 introductions, the Preface, the Accessibility Statement, and the Version
-History. The immediate production unit is original bridge `O005-BRIDGE-C1`,
-the reproducible Python/Jupyter workflow, followed in order by bridges C2-C4.
+History. Original bridge `O005-BRIDGE-C1`, the reproducible Python/Jupyter
+workflow, is complete and verified. The immediate production unit is
+`O005-BRIDGE-C2`, followed in order by bridges C3 and C4.
 GitHub publication remains paused until the user reports that the suspended
 account has been restored; preserve the unchanged local commit chain.
 

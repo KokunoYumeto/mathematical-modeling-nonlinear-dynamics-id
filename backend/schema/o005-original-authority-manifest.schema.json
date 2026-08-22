@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/o005-original-authority-manifest.schema.json",
+  "title": "O005 original bridge authority manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "unit_id", "record", "canonical_content", "notebook",
+    "mastery", "lock", "generator", "segment_id_ledger", "toolchain"
+  ],
+  "properties": {
+    "schema": {"const": "o005-original-authority-manifest-v1"},
+    "unit_id": {"const": "O005-BRIDGE-C1"},
+    "record": {"$ref": "#/$defs/fileIdentity"},
+    "canonical_content": {"$ref": "#/$defs/fileIdentity"},
+    "notebook": {"$ref": "#/$defs/fileIdentity"},
+    "mastery": {"$ref": "#/$defs/fileIdentity"},
+    "lock": {"$ref": "#/$defs/fileIdentity"},
+    "generator": {"$ref": "#/$defs/fileIdentity"},
+    "segment_id_ledger": {"$ref": "#/$defs/fileIdentity"},
+    "toolchain": {"$ref": "#/$defs/toolchain"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "fileIdentity": {
+      "type": "object", "additionalProperties": false,
+      "required": ["path", "bytes", "sha256"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "bytes": {"type": "integer", "minimum": 0},
+        "sha256": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "toolchain": {
+      "type": "object", "additionalProperties": false,
+      "required": ["files", "pandoc", "python", "platform", "dependencies"],
+      "properties": {
+        "files": {
+          "type": "array", "minItems": 13, "maxItems": 13, "uniqueItems": true,
+          "items": {"$ref": "#/$defs/fileIdentity"}
+        },
+        "pandoc": {
+          "type": "object", "additionalProperties": false,
+          "required": ["version", "bytes", "sha256"],
+          "properties": {
+            "version": {"type": "string", "pattern": "^pandoc [0-9]+(?:\\.[0-9]+)+$"},
+            "bytes": {"type": "integer", "minimum": 1},
+            "sha256": {"$ref": "#/$defs/sha256"}
+          }
+        },
+        "python": {
+          "type": "object", "additionalProperties": false,
+          "required": ["implementation", "version", "executable_bytes", "executable_sha256"],
+          "properties": {
+            "implementation": {"type": "string", "minLength": 1},
+            "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
+            "executable_bytes": {"type": "integer", "minimum": 1},
+            "executable_sha256": {"$ref": "#/$defs/sha256"}
+          }
+        },
+        "platform": {
+          "type": "object", "additionalProperties": false,
+          "required": ["system", "release", "version", "machine"],
+          "properties": {
+            "system": {"type": "string", "minLength": 1},
+            "release": {"type": "string", "minLength": 1},
+            "version": {"type": "string", "minLength": 1},
+            "machine": {"type": "string", "minLength": 1}
+          }
+        },
+        "dependencies": {
+          "type": "object", "additionalProperties": false,
+          "required": ["beautifulsoup4", "jsonschema"],
+          "properties": {
+            "beautifulsoup4": {"type": "string", "minLength": 1},
+            "jsonschema": {"type": "string", "minLength": 1}
+          }
+        }
+      }
+    }
+  }
+}

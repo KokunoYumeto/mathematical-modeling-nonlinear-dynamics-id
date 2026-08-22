@@ -1,0 +1,285 @@
+{
+  "article_link_catalog": {},
+  "language": "id-ID",
+  "problems": [
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Jawaban lengkap menyebut sedikitnya lima unsur yang membuat klaim dapat ditelusuri dan dijalankan ulang.",
+        "required_evidence": [
+          "Identitas dan asal-usul data.",
+          "Persamaan, asumsi, parameter, serta satuan model.",
+          "Kode dan urutan eksekusi.",
+          "Versi Python/pustaka dan benih acak bila ada.",
+          "Nilai numerik atau manifest yang mengikat gambar pada keluaran tepat."
+        ],
+        "type": "qualitative"
+      },
+      "hint": {
+        "text": "Telusuri rantai dari pertanyaan dan data hingga kode, lingkungan, parameter, serta keluaran."
+      },
+      "ordinal": 1,
+      "problem_id": "O005-BRIDGE-C1-P01",
+      "problem_summary": "Identifikasi informasi yang hilang dari laporan yang hanya menyertakan gambar simulasi dan keterangan bahwa Python digunakan.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Kalimat “dibuat dengan Python” hanya menyebut alat; ia tidak mengidentifikasi perhitungan yang dilakukan.",
+        "steps": [
+          "Nyatakan pertanyaan dan tujuan penggunaan simulasi.",
+          "Berikan data atau cara deterministik untuk memperolehnya beserta hash dan lisensi.",
+          "Tuliskan model, asumsi, satuan, parameter, kondisi awal, dan domain.",
+          "Sertakan kode lengkap serta urutan menjalankan dari keadaan bersih.",
+          "Patok lingkungan dan sumber keacakan, lalu catat keluaran numerik yang mendasari gambar."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Data mentah dipertahankan byte demi byte; data turunan, gambar, dan tabel harus dapat dibuat ulang.",
+        "required_evidence": [
+          "Direktori raw dan derived dipisahkan.",
+          "Transformasi disimpan sebagai kode.",
+          "Manifest sekurang-kurangnya memuat jalur relatif, jumlah byte, dan SHA-256."
+        ],
+        "type": "structured"
+      },
+      "hint": {
+        "text": "Pisahkan data mentah, data turunan, kode transformasi, notebook, keluaran, dan dokumentasi."
+      },
+      "ordinal": 2,
+      "problem_id": "O005-BRIDGE-C1-P02",
+      "problem_summary": "Rancang struktur proyek untuk data populasi mingguan dan bedakan input yang tidak boleh disunting dari keluaran yang dapat dibuat ulang.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Pemisahan ini memungkinkan keluaran dihapus dan dibangun ulang tanpa kehilangan saksi sumber.",
+        "steps": [
+          "Simpan unduhan asli di data/raw tanpa penyuntingan manual.",
+          "Tulis skrip yang membaca raw dan menghasilkan data/derived.",
+          "Tempatkan fungsi model di src, narasi di notebooks, dan artefak yang dapat dibuat ulang di outputs.",
+          "Buat README, requirements.lock, dan manifest.tsv yang diurutkan secara deterministik."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Jika waktu dalam menit, maka [k] = menit^{-1}; kt tak berdimensi; k>0 membuat selisih suhu menyusut menuju nol.",
+        "required_evidence": [
+          "[dT/dt] = suhu/waktu.",
+          "[k(T-T_inf)] = waktu^{-1} kali suhu.",
+          "Untuk T>T_inf dan k>0, turunan suhu negatif."
+        ],
+        "type": "quantitative"
+      },
+      "hint": {
+        "text": "Eksponen harus tak berdimensi dan kedua ruas persamaan diferensial harus memiliki satuan suhu per waktu."
+      },
+      "ordinal": 3,
+      "problem_id": "O005-BRIDGE-C1-P03",
+      "problem_summary": "Periksa satuan dan tanda parameter laju dalam hukum pendinginan Newton.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Solusi mendekati T_inf ketika t bertambah.",
+        "steps": [
+          "Karena T dan T_inf bersatuan °C, selisihnya juga bersatuan °C.",
+          "Agar ruas kanan bersatuan °C/menit, k harus bersatuan menit^{-1}.",
+          "Maka kt tidak memiliki satuan dan sah berada di dalam fungsi eksponensial.",
+          "Untuk T>T_inf, k>0 memberi dT/dt<0; untuk T<T_inf, dT/dt>0."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "k",
+        "kt",
+        "dT/dt=-k(T-T_inf)"
+      ]
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Pembangkit lokal membatasi keadaan dan dependensi ke objek yang diteruskan secara eksplisit, sehingga urutan konsumsi lebih mudah dilacak.",
+        "required_evidence": [
+          "Keadaan global dapat diubah oleh fungsi atau pustaka lain.",
+          "Objek Generator dapat diberi nama, diteruskan, dan diuji secara lokal.",
+          "Benih tetap mengulang satu realisasi, bukan membuktikan keterwakilan statistik."
+        ],
+        "type": "qualitative"
+      },
+      "hint": {
+        "text": "Tanyakan kode mana saja yang dapat mengonsumsi urutan acak yang sama tanpa terlihat."
+      },
+      "ordinal": 4,
+      "problem_id": "O005-BRIDGE-C1-P04",
+      "problem_summary": "Bandingkan keadaan acak global dengan pembangkit acak lokal yang berbenih eksplisit.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Pembangkit lokal biasanya memberi batas dependensi yang lebih jelas.",
+        "steps": [
+          "np.random.seed mengubah keadaan bersama dalam modul lama.",
+          "default_rng membuat objek Generator yang memiliki keadaan sendiri.",
+          "Perubahan konsumsi acak di komponen lain tidak menggeser urutan objek lokal jika objek tidak dibagikan.",
+          "Untuk menilai kestabilan terhadap keacakan, jalankan beberapa benih dan laporkan semuanya secara terpisah."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "56.76 °C",
+        "formula": "T(10)=22+70e^{-0.7}",
+        "tolerances": {
+          "absolute_c": 0.01
+        },
+        "type": "quantitative"
+      },
+      "hint": {
+        "text": "Substitusikan selisih awal 92-22=70 dan hitung e^{-0.7}."
+      },
+      "ordinal": 5,
+      "problem_id": "O005-BRIDGE-C1-P05",
+      "problem_summary": "Hitung prediksi suhu model pada t=10 menit untuk parameter yang diberikan.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "T(10)≈56.76 °C.",
+        "steps": [
+          "Hitung kt=0.07(10)=0.7.",
+          "Hitung e^{-0.7}≈0.496585.",
+          "Kalikan dengan 70 untuk memperoleh sekitar 34.7610.",
+          "Tambahkan suhu lingkungan 22 °C."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "T(t)=T_inf+(T0-T_inf)e^{-kt}"
+      ]
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Pemisahan harus ditetapkan sebelum estimasi dan sebelum melihat metrik kandidat; data uji baru dibuka setelah alur analisis dibekukan.",
+        "required_evidence": [
+          "Pilihan pascahasil menyesuaikan evaluasi terhadap data yang sudah diketahui.",
+          "Urutan aman: tetapkan tujuan, bagi data, kembangkan prosedur dengan data latih, bekukan prosedur, lalu evaluasi data uji.",
+          "Setelah data uji dipakai untuk revisi, ia bukan lagi evaluasi akhir yang independen."
+        ],
+        "type": "qualitative"
+      },
+      "hint": {
+        "text": "Jika pilihan data uji dipengaruhi oleh hasil, data itu telah memengaruhi keputusan pemodelan walaupun tidak masuk ke fungsi objektif."
+      },
+      "ordinal": 6,
+      "problem_id": "O005-BRIDGE-C1-P06",
+      "problem_summary": "Jelaskan kebocoran informasi ketika data uji dipilih setelah seluruh hasil dilihat.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Kebocoran adalah pengaruh informasi yang tidak tercatat, bukan hanya baris data yang dimasukkan langsung ke estimator.",
+        "steps": [
+          "Tentukan unit pembagian dan aturan pemisahan data sebelum pencocokan.",
+          "Simpan indeks data latih dan data uji sebagai bagian dari konfigurasi.",
+          "Gunakan data latih untuk estimasi serta pengembangan prosedur.",
+          "Bekukan kode dan ambang pemeriksaan sebelum membuka metrik data uji.",
+          "Jika hasil evaluasi pada data uji memicu revisi, nyatakan hal itu dan buat evaluasi baru dengan data lain bila tersedia."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Benih 20260822 menghasilkan hash 1000bc1092f173258d2be37e4f8906ea0933708582d09768ce96eed739be337e, k_hat=0.07287235, T_inf_hat=22.63964536 °C, RMSE=0.31976406 °C, dan MAE data uji=0.17952331 °C.",
+        "notebook_check": "Semua sel kode berjalan dari keadaan bersih dan semua pemeriksaan eksplisit lulus.",
+        "required_evidence": [
+          "Benih baru mengubah realisasi galat, hash data, estimasi, dan metrik numerik.",
+          "Model, waktu pengamatan, parameter pembangkit data, serta aturan serialisasi tetap sama.",
+          "Perubahan benih harus diungkapkan karena mengubah identitas data dan hasil yang dilaporkan."
+        ],
+        "tolerances": {
+          "k_absolute": 1e-08,
+          "metric_absolute_c": 1e-08,
+          "temperature_absolute_c": 1e-08
+        },
+        "type": "executable"
+      },
+      "hint": {
+        "text": "Bedakan kontrak yang tetap—model, waktu, parameter simulasi, dan aturan serialisasi—dari realisasi galat acak yang berubah."
+      },
+      "notebook": {
+        "path": "source/id-ID/O005-BRIDGE-C1/notebooks/bridge-c1-reproducible-workflow.ipynb",
+        "provenance": "new_original"
+      },
+      "ordinal": 7,
+      "problem_id": "O005-BRIDGE-C1-P07",
+      "problem_summary": "Jalankan notebook bersih, cocokkan identitas dan diagnostik, lalu jelaskan dampak perubahan benih.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Perubahan yang disengaja sah apabila identitas konfigurasi dan artefaknya ikut berubah secara terlihat.",
+        "steps": [
+          "Mulai ulang kernel, hapus keluaran, dan jalankan semua sel berurutan.",
+          "Cocokkan hash, parameter, RMSE, dan MAE dengan pemeriksaan notebook.",
+          "Ubah hanya benih, lalu jalankan ulang seluruh notebook.",
+          "Hash data, realisasi suhu, estimasi, dan metrik berubah; fungsi model, satuan, waktu pengamatan, serta aturan serialisasi tetap.",
+          "Catat benih baru dan jangan menyajikan keluaran baru sebagai byte yang sama dengan keluaran lama."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    }
+  ],
+  "provenance_policy": {
+    "model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
+    "non_endorsement": true,
+    "source_author_credit_preserved": true
+  },
+  "schema": "o005-bridge-mastery-v1",
+  "schema_version": "1.0.0",
+  "source": {
+    "license": "CC BY-NC-SA 4.0",
+    "not_part_of_source_book": true,
+    "spine": "Joceline Lega, Introduction to Mathematical Modeling, v1.01",
+    "type": "new_original_addition"
+  },
+  "unit_id": "O005-BRIDGE-C1"
+}

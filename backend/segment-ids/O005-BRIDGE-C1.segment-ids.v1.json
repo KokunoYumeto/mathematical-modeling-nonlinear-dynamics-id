@@ -1,0 +1,925 @@
+{
+  "binding_algorithm": "sha256-html-path-nul-canonical-text-v1",
+  "content_path": "source/id-ID/O005-BRIDGE-C1/content.html",
+  "content_sha256": "c8593b80996e6f7bd368a4a2e198472198163fc17ee408b98ccbd7e58c99e4eb",
+  "entries": [
+    {
+      "segment_id": "O005-BRIDGE-C1-S0001",
+      "segment_key": "c1/tujuan-pembelajaran",
+      "slot_binding_sha256": "1f2f9187fd8a0caf317bd5336f5aa4be9f954bc70c1ae8051e0c881e6294aa41",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0002",
+      "segment_key": "c1/setelah-menyelesaikan-modul-ini-anda-akan-mampu",
+      "slot_binding_sha256": "57098a6245c9cfc66ec227b9cd46896e493e61041b4074edf1ad5347c8b3ef70",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0003",
+      "segment_key": "c1/menjelaskan-perbedaan-antara-hasil-yang-dapat-diulang-hasil",
+      "slot_binding_sha256": "3657c225364ae1e79a496713370bc30062a111c174a5de3c04b98031e4384ebc",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0004",
+      "segment_key": "c1/menata-proyek-pemodelan-sehingga-data-asumsi-kode-lingkungan",
+      "slot_binding_sha256": "190413a4dfc415dcccf928ade1cdd1ea9753fb285836165eb553cd01f93582d8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0005",
+      "segment_key": "c1/menyatakan-kontrak-model-yang-memuat-variabel-satuan-parameter",
+      "slot_binding_sha256": "b7a0f49e48bf35078de0bd670b09a9d90a3c11552ad57629e8605df0ec3e73c5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0006",
+      "segment_key": "c1/menggunakan-bilangan-acak-pembagian-data-dan-catatan-asal",
+      "slot_binding_sha256": "75c01119bbdb936b5f5e81833a0343eaddb65719c3da462732f8c1427d522776",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0007",
+      "segment_key": "c1/menjalankan-ulang-notebook-dari-keadaan-bersih-serta-memverifikasi",
+      "slot_binding_sha256": "611fd32c3e572e44002f0629210ca3c45b49e9f7542c4cb79c49683dd13ab06c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0008",
+      "segment_key": "c1/reprodusibilitas-adalah-rantai-bukti",
+      "slot_binding_sha256": "8073867c73b8b56ed0edab9ea6e3e6d4ecc954dd5c02039aa2b1210ed5b45067",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0009",
+      "segment_key": "c1/dalam-pemodelan-matematika-sebuah-angka-akhir-bukanlah-hasil",
+      "slot_binding_sha256": "33e3994c35bb328e4b8d36589bb8f1ae6c64794539d83ee2c9aadd263b1d6244",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0010",
+      "segment_key": "c1/reprodusibel-secara-komputasional",
+      "slot_binding_sha256": "602d302ffe9826b0968d61614bb60c8cb4f0002d71389c5e08a6511459f3056e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0011",
+      "segment_key": "c1/apabila-orang-lain-dapat-mengambil-bahan-yang-sama",
+      "slot_binding_sha256": "24871b61a19471ec93bc189da04793e873cdd0980116e19a76a76aee034ba66d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0012",
+      "segment_key": "c1/reprodusibilitas-tidak-membuktikan-bahwa-model-benar-kesalahan-yang",
+      "slot_binding_sha256": "293543d22f161a2ed7bbb7a9b9b2d4d923c2082794b87b439f79d29d5fbb8e67",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0013",
+      "segment_key": "c1/prinsip-inti",
+      "slot_binding_sha256": "516952bb3de7793c5558a7a88184ed8956f5fd80060a0d154125629ad2544cb2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0014",
+      "segment_key": "c1/setiap-klaim-kuantitatif-harus-dapat-ditelusuri-mundur-ke",
+      "slot_binding_sha256": "35c1c36a26b47e819a33e563e923058d46bb6c145d29905ec3139f6c344b769a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0015",
+      "segment_key": "c1/satu-pertanyaan-satu-proyek-yang-dapat-diperiksa",
+      "slot_binding_sha256": "1281e322359cbe949a29f3203a23d46eab3fbf32e23218cf0ea7cb5079d765c5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0016",
+      "segment_key": "c1/mulailah-dengan-satu-pertanyaan-operasional-contohnya-dengan-menganggap",
+      "slot_binding_sha256": "556bb7759763ac3722c8834d9f86840444bb200a178733bc2be671d4034d80f2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0017",
+      "segment_key": "c1/struktur-direktori-berikut-memisahkan-bahan-yang-memiliki-fungsi",
+      "slot_binding_sha256": "cc4d8082de9108a624191153ff5b8040dafe6c8705091ea4279b16fd9b2cea04",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0018",
+      "segment_key": "c1/proyek-pendinginan-readme-md-requirements-lock-data-raw",
+      "slot_binding_sha256": "1634dbf6c52c7e5b2865f1db2e5b40f10f479a69dffc570d0837abf4502f5e6f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0151",
+      "segment_key": "c1/peran-setiap-unsur-dalam-proyek-pemodelan-yang-dapat",
+      "slot_binding_sha256": "6b4747e362f4f3f35ec5ece252bc9ed971025cce1c325efbdc265ee2f12f47dc",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0019",
+      "segment_key": "c1/unsur",
+      "slot_binding_sha256": "d186d3671b6a5524b23e8e1057ce478dca54dff38e388df75eb2885598ca6220",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0020",
+      "segment_key": "c1/isi",
+      "slot_binding_sha256": "c8ea13e3a1457b99f7a09ea5fa4b09bb0e3fe6fafe984ba5292cb083520b7c2a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0021",
+      "segment_key": "c1/aturan-minimum",
+      "slot_binding_sha256": "113179b3dbbd8a55ce7a8fe34c57b6e31fe98e3f7f62579cac9a314d36fc8297",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0022",
+      "segment_key": "c1/readme-md",
+      "slot_binding_sha256": "29a8e251e258746c1945cff38bf33446434ff9e25eaf173efa5dad9e93019c62",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0023",
+      "segment_key": "c1/pertanyaan-cara-menjalankan-dan-batas-klaim",
+      "slot_binding_sha256": "b4ba57f95c97eae5f5b61e15e1b5a2595cd86a40200491f50294e6ea5ece9ce6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0024",
+      "segment_key": "c1/pembaca-baru-dapat-memulai-tanpa-menebak-urutan-langkah",
+      "slot_binding_sha256": "e8287b5af599a54238774bda5687ccc9d605c26c4ac00668b642a1f7a836efe6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0025",
+      "segment_key": "c1/requirements-lock",
+      "slot_binding_sha256": "4cbb68bc96b89f46ed181c138ebc2005b66c77c1e49406f44cca2b1fb64a5e28",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0026",
+      "segment_key": "c1/versi-tepat-perangkat-lunak",
+      "slot_binding_sha256": "95233d35e903e2bd4029ae1e9c09534921c16b03d7ab8f5ab1493a7bcaa7d461",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0027",
+      "segment_key": "c1/jangan-hanya-menulis-gunakan-python-terbaru",
+      "slot_binding_sha256": "45412498446b964767233bc69cbc7272a9484bcfd2a2ecc046b48c7214fe46ec",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0028",
+      "segment_key": "c1/data-raw",
+      "slot_binding_sha256": "9d241207b1390eba6b6169f70153e8ca5a34e9f811467d2b333d470a3a88c4c5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0029",
+      "segment_key": "c1/data-sebagaimana-diperoleh",
+      "slot_binding_sha256": "092d1c29bedd2cc501be6453ec90953e3f8495d594e3bc13984735337bb0e82f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0030",
+      "segment_key": "c1/jangan-diedit-secara-manual-simpan-identitas-dan-sumbernya",
+      "slot_binding_sha256": "8496a2fd780e1074f9f46dc627ace8c101a4e9203ed0729c374c07ca2b9babfe",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0031",
+      "segment_key": "c1/data-derived",
+      "slot_binding_sha256": "7faf5ec5a6e7514a2de5fc88b78e421804a6b9a0f8d8a4cba7b6bae21d34d152",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0032",
+      "segment_key": "c1/data-hasil-pembersihan-atau-transformasi",
+      "slot_binding_sha256": "51ceb63d44b41ceb4916977d54d79ef7c44339c07d1fe9a155b1d73416883116",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0033",
+      "segment_key": "c1/harus-dapat-dibuat-ulang-dari-data-mentah-dengan",
+      "slot_binding_sha256": "9bf3954495a801a6b655ed0edfa0cd315cbc625bf42f46df4d6f8193a3f95f56",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0034",
+      "segment_key": "c1/src",
+      "slot_binding_sha256": "eee54e0f1a1b6cd9507e06d5898d8760cf4c199ee683c785a60c3e901d137855",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0035",
+      "segment_key": "c1/fungsi-model-dan-prosedur-analisis",
+      "slot_binding_sha256": "13999972a847ed23d659e5d9b4a8a46b3848cb56c37027bfa85f3dfef6a1c13a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0036",
+      "segment_key": "c1/hindari-logika-penting-yang-hanya-hidup-di-keadaan",
+      "slot_binding_sha256": "3e936beff14e75020dd1a463a9b1011c39503f1cd19c3ec673ec7ed66dd461cc",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0037",
+      "segment_key": "c1/notebooks",
+      "slot_binding_sha256": "f20ecd5a90091a6a0ac0c226307fb49bc5636701e37e777d4ad8c08a2325e5f3",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0038",
+      "segment_key": "c1/narasi-eksekutabel",
+      "slot_binding_sha256": "ffd2c617d954e69fdd7b2d7bf1e3c206e725a9c033da090c551d731c3d966008",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0039",
+      "segment_key": "c1/harus-lulus-mulai-ulang-lalu-jalankan-semua",
+      "slot_binding_sha256": "40b17283424e7fb401a6c817f4e64f96dcb05fc88f6facb1a5deda1b027057ca",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0040",
+      "segment_key": "c1/outputs",
+      "slot_binding_sha256": "12b777c13425a77a212c91c089bbd6f546e970f266a49830383c0ccabb3d4023",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0041",
+      "segment_key": "c1/gambar-dan-tabel-turunan",
+      "slot_binding_sha256": "13bce544b18479392d466c78cfd4c5cd78e144c08f9e79a1c5138969b741db5f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0042",
+      "segment_key": "c1/boleh-dihapus-dan-dibuat-ulang-tanpa-kehilangan-informasi",
+      "slot_binding_sha256": "cfcfefb494cc573a22c1175e957e7bf585b94c85c28f46579582cb60bf6ea6b5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0043",
+      "segment_key": "c1/manifest-tsv",
+      "slot_binding_sha256": "0c82f4a4cf2e076b8fe8324dc8a1271e99f7f2978eed737068be882e9f56ab3b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0044",
+      "segment_key": "c1/daftar-berkas-ukuran-dan-hash",
+      "slot_binding_sha256": "0d4e89fa224489ef14c8827411939a70c57fddf16a402ed89351d2f2003b03d0",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0045",
+      "segment_key": "c1/mengikat-klaim-pada-byte-yang-tepat",
+      "slot_binding_sha256": "1d2066d6434f8329a9850ba887ef22dffeffaadc7c2dc68cf1e67c650f6de015",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0046",
+      "segment_key": "c1/bekukan-konteks-sebelum-menghitung",
+      "slot_binding_sha256": "f368197aae015b8f1dc0d69c3a9aa69fd2cbabe4525ccfca23cf9d241856a152",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0047",
+      "segment_key": "c1/catat-versi-python-dan-setiap-pustaka-yang-memengaruhi",
+      "slot_binding_sha256": "b52d4238db62fd0d657c3edbd5449df541eb5eee8a11872011c28c646442e7b8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0048",
+      "segment_key": "c1/jika-simulasi-memakai-bilangan-acak-gunakan-pembangkit-yang",
+      "slot_binding_sha256": "24ae4d56ab67ddcc808a6c9dd1f622e2130e8a07ff72f903a4bbe8550aa0029d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0049",
+      "segment_key": "c1/rng-np-random-default-rng-20260822",
+      "slot_binding_sha256": "447f9c59c84c4329c1216e77a1a22056cea17d8f9f279d77b5ab203908c21deb",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0050",
+      "segment_key": "c1/lebih-mudah-diaudit-daripada-keadaan-acak-global-benih",
+      "slot_binding_sha256": "edadac3cc90da5bc1429b0c1c8b365e5c2f0c6218e3f59ac26a303a1b7a18f53",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0051",
+      "segment_key": "c1/gunakan-satuan-eksplisit-nama",
+      "slot_binding_sha256": "f302ca8aa5b806e547f4073579d45dcca144e058068ca6f2a60019abd85fb18e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0052",
+      "segment_key": "c1/t",
+      "slot_binding_sha256": "dbaf1f6a600e8a4cdf91ac489e0c69211d6bad68638ff3cbd5d80094d572d5cb",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0053",
+      "segment_key": "c1/dan",
+      "slot_binding_sha256": "786e1a806884596f75066f42735ee46ad6767b0d881304efef6387a4a9a09527",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0054",
+      "segment_key": "c1/k",
+      "slot_binding_sha256": "1d66da31ae6e681d89f5f3e097b274649d94bb5e06a63bbe2bdd49dfdf59c45a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0055",
+      "segment_key": "c1/tidak-cukup-apabila-pembaca-tidak-tahu-apakah-waktu",
+      "slot_binding_sha256": "9796200355df61dd5b645a3d1b4760002aa6b135f1f5490f84e664e09e81d042",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0056",
+      "segment_key": "c1/tulis-kontrak-model",
+      "slot_binding_sha256": "4fd9954b778d9477f8beeb717d308435fc502c95de0af65ff9ad582d084c8ca8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0057",
+      "segment_key": "c1/sebelum-melakukan-estimasi-parameter-tuliskan-apa-yang-masuk",
+      "slot_binding_sha256": "15614e39d0b65965e9b7534caf60a6dc99f275b1f218592d0c076bf98c088c5a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0058",
+      "segment_key": "c1/frac-dt-dt-k-bigl-t-t-infty",
+      "slot_binding_sha256": "0677bd767e0360396f4b73aff049f2a2a2fe1a0d193a07b868bd68683755f40b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0059",
+      "segment_key": "c1/dengan-solusi",
+      "slot_binding_sha256": "ddcba294e19377a7610dbb6dd9e05f46831e1b1edd109f67fb7563c92a6cceac",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0060",
+      "segment_key": "c1/t-t-t-infty-bigl-t-0-t",
+      "slot_binding_sha256": "9075070ec59a453b1aab7393329db62a65fba7133cf79e8b13790a461d7617fc",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0061",
+      "segment_key": "c1/kontrak-contoh-ini-memuat-asumsi-bahwa-suhu-cairan",
+      "slot_binding_sha256": "5a85a46f0effe8eed3432d1305707f7fca4859ccbbd5c96bf0952e6bafb95d70",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0062",
+      "segment_key": "c1/kontrak-juga-harus-menyebutkan-konvensi-perangkat-lunak-notebook",
+      "slot_binding_sha256": "68376af8251c696ec5e8d0fc9928ef1d1e2ddf91c1bd45858583e4976ec1b639",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0063",
+      "segment_key": "c1/waktu-menit-laju-per-menit-suhu-lingkungan-c",
+      "slot_binding_sha256": "3fc770af0b7a871bb07670f7ed34c81d393ad5ae35e8c461a32fcb918daf5934",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0064",
+      "segment_key": "c1/menetapkan-t-0-92-circ-mathrm-c-dan",
+      "slot_binding_sha256": "74c92d979c5ccf8d898d18fd9e516b52ad6d734f0194ff8abc9b8d42b3a150b5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0065",
+      "segment_key": "c1/contoh-kerja-dari-data-sintetis-ke-pemeriksaan",
+      "slot_binding_sha256": "700501ca1722702f974a380363aca856983703e6f787f5b0e2562b91aa5ed591",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0066",
+      "segment_key": "c1/notebook-pendamping-membuat-sebelas-pengamatan-sintetis-pada-t",
+      "slot_binding_sha256": "7e356c965c9ca2c7a6ea7acbb1db4a4520f5c56ddc94857058061930d5ac6d5e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0067",
+      "segment_key": "c1/delapan-pengamatan-pertama-digunakan-untuk-mengestimasi-k-dan",
+      "slot_binding_sha256": "4d21cc28c8460c7b464b6627b28ca3d84c3caecfa78890395416062848a1cbb1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0068",
+      "segment_key": "c1/untuk-data-latih-t-i-y-i-parameter",
+      "slot_binding_sha256": "4c113a06a2b9e36ea027644466b8349858ba9f1ad6a94ac1f8a067648a65bd26",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0069",
+      "segment_key": "c1/operatorname-sse-k-t-infty-sum-i-in",
+      "slot_binding_sha256": "0b9c7f4b45a3da05e52d21ec305a175f8a3d9b78278f16cdfeece0a562d3201f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0070",
+      "segment_key": "c1/setelah-parameter-diestimasi-notebook-menghitung-residu-r-i",
+      "slot_binding_sha256": "e7bb58c994fb753f22cd6fb9869526d46d2278b3e03a37e0a3c9f7eb96d30878",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0071",
+      "segment_key": "c1/holdout",
+      "slot_binding_sha256": "672b578e153dbef26916e92f2f9bdd11fa9ee23f30d4f2a1d435eab0880932fe",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0072",
+      "segment_key": "c1/besaran-besaran-ini-merupakan-pemeriksaan-alur-kerja-bukan",
+      "slot_binding_sha256": "e3efec7c2e35f351f66c83bee5fd57112c077dcbdf0f90d3036cd59e2115711b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0073",
+      "segment_key": "c1/notebook-tanpa-keadaan-tersembunyi",
+      "slot_binding_sha256": "afe89621c730e391a9a721c798f47bf8e11f21007aff7bea0bb4c656d1b64676",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0074",
+      "segment_key": "c1/notebook-mudah-menyesatkan-ketika-sel-dijalankan-tidak-berurutan",
+      "slot_binding_sha256": "49cdd50fe3ecdb2b28519b38f2ca478db12272b7e14442ee15c0083fb6507ca7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0075",
+      "segment_key": "c1/sel-impor-tidak-mengunduh-data-dan-tidak-mengubah",
+      "slot_binding_sha256": "203367300b906c7ca5212c57fbe0bb76cab954834d1c65a7c5476b12374bcd4e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0076",
+      "segment_key": "c1/konstanta-benih-satuan-serta-batas-parameter-dinyatakan-sebelum",
+      "slot_binding_sha256": "b680633ac23e8d276c2b89bdcb086b02f092c3352d66c0fd227857232f6a586c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0077",
+      "segment_key": "c1/fungsi-model-tidak-bergantung-pada-variabel-global-yang",
+      "slot_binding_sha256": "665e3d9527f74037ddccecd1e0112be2bdc6149d6d0985427b0f201a1c6414d0",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0078",
+      "segment_key": "c1/data-turunan-dibuat-oleh-kode-bukan-disunting-dengan",
+      "slot_binding_sha256": "400210fa07a9163e2163429ae19912e630169bb297a015fc1b15a09f0ecd9450",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0079",
+      "segment_key": "c1/pemisahan-data-dilakukan-sebelum-estimasi-parameter",
+      "slot_binding_sha256": "b31b86190d900731399975a0042204ec00981bfc06679407bf73157645a68a56",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0080",
+      "segment_key": "c1/gambar-dibuat-dari-objek-data-dan-parameter-yang",
+      "slot_binding_sha256": "5a75b5365338abeef0d26140427a69f7754e22d2644aea4b4a3d55d8739af431",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0081",
+      "segment_key": "c1/pemeriksaan-menggunakan-toleransi-bermakna-bukan-kesamaan-pecahan-mengam",
+      "slot_binding_sha256": "ff65a9de9729941387f6a172a857fc4fc62d4b7ddd8b2a035ccf8adf527064c4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0082",
+      "segment_key": "c1/notebook-kanonik-disimpan-tanpa-keluaran-eksekusi-pilihan-ini",
+      "slot_binding_sha256": "07b0abb992a88310d552def9c391c2c2c04c89e3682b6aa3f79c067fcdb50f56",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0083",
+      "segment_key": "c1/requirements-lock-2",
+      "slot_binding_sha256": "fc1588e7f635e31f3ed1992a79901651d09db8e7ac849ac7ee16054828ab85c6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0084",
+      "segment_key": "c1/untitled",
+      "slot_binding_sha256": "2867db1655a84531ab5c5fa9e66fc4bc5b51d8bfd27235645b4326092267aadc",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0085",
+      "segment_key": "c1/manifest-hash-dan-batas-yang-tepat",
+      "slot_binding_sha256": "dcd0f7e65964e35c458901382cbf5c8b051e24655903d333f5603aace8b76698",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0086",
+      "segment_key": "c1/hash-sha-256-memadatkan-byte-sebuah-berkas-menjadi",
+      "slot_binding_sha256": "9a211caee75252586e5a065f3805cdeb253ae7c3a48835faca61c526999ef344",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0087",
+      "segment_key": "c1/manifest-harus-dibuat-dengan-urutan-jalur-yang-tetap",
+      "slot_binding_sha256": "e36502490b0ae6edef43f0f2703a0f794226f3639a983875bf6d942e35bc3aa5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0088",
+      "segment_key": "c1/dalam-notebook-contoh-tabel-sintetis-diserialisasi-dengan-enam",
+      "slot_binding_sha256": "5f395946f70a7a3c529dafd9061be09449ce2183e86622c79a260f13123c3aac",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0089",
+      "segment_key": "c1/daftar-periksa-sebelum-menyatakan-hasil-dapat-direproduksi",
+      "slot_binding_sha256": "007fc0d93065f13f63e12d6ed1bf602230f61266c08134759d330072a9e8e272",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0090",
+      "segment_key": "c1/pertanyaan-tujuan-penggunaan-dan-batas-klaim-tertulis-jelas",
+      "slot_binding_sha256": "88d79366b40c3782b793198dfc176c4c25f54ab9b2aaa32750b2f726766a680b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0091",
+      "segment_key": "c1/data-mentah-tidak-ditimpa-sumber-lisensi-tanggal-dan",
+      "slot_binding_sha256": "16cccba8f84f0bb147edd2ab91cc7fcb1bbc388ce39d8eb967575acbec946ed6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0092",
+      "segment_key": "c1/semua-transformasi-data-dapat-dijalankan-ulang-dari-input",
+      "slot_binding_sha256": "e976cfa30636dcc850226e9b58c54c99207a0b4fdebe85006b66a0df7f061379",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0093",
+      "segment_key": "c1/variabel-parameter-satuan-domain-dan-asumsi-model-memiliki",
+      "slot_binding_sha256": "557bcf89b8ba66c59527ec13d84a093a71611464e40af2905ff95fb75baad75b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0094",
+      "segment_key": "c1/versi-python-dan-pustaka-dipatok",
+      "slot_binding_sha256": "43c265ad98ec76a7da03971679def3013ad6eca8db056b8720c29b40ba0f945e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0095",
+      "segment_key": "c1/benih-acak-dan-algoritma-pembangkit-dinyatakan-jika-keacakan",
+      "slot_binding_sha256": "d8713d68b4bff0bf4418e97edb7e837945a18b5c126b9312f165b88bb62c375e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0096",
+      "segment_key": "c1/pemisahan-data-latih-dan-data-uji-terjadi-sebelum",
+      "slot_binding_sha256": "8f868a9b79327c682c076145e8434d091c810add1a7a667c368845a815d3deed",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0097",
+      "segment_key": "c1/notebook-lulus-mulai-ulang-dan-jalankan-semua-dari",
+      "slot_binding_sha256": "eff4d7177856fa1adff856a52f27d73dd735ea5e93d6e522f50b58f03d37fda1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0098",
+      "segment_key": "c1/pemeriksaan-numerik-memiliki-toleransi-dan-alasan",
+      "slot_binding_sha256": "098c0301b33da3f0e78319865630b8169495529688710d5d1230bc57f86f43bf",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0099",
+      "segment_key": "c1/gambar-serta-tabel-berasal-dari-alur-yang-sama",
+      "slot_binding_sha256": "479971591928802208367ff10008ecd4bf48b234ffbf6f0ade4795a83ed8af33",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0100",
+      "segment_key": "c1/manifest-tidak-memuat-kredensial-atau-data-yang-tidak",
+      "slot_binding_sha256": "e025c8144071f278d31963210a3adf1d173863ddc342d94a15090bcf3326b0ba",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0101",
+      "segment_key": "c1/perubahan-terhadap-sumber-atau-versi-sebelumnya-dijelaskan",
+      "slot_binding_sha256": "c09bf112391f36393f3fd78660ea7c975b1f1ed7c8b23d48ce52c579a5de3e3c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0102",
+      "segment_key": "c1/kegagalan-yang-sering-terjadi",
+      "slot_binding_sha256": "73b500cb8881886cefcf62329387087374edab3ed275096b66f50669d0497d07",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0152",
+      "segment_key": "c1/gejala-kegagalan-penyebab-yang-mungkin-dan-tindakan-perbaikan",
+      "slot_binding_sha256": "4bb2277e68acc64a74df9f93db27666e807b9b259c119aeda82fe3f26c646abd",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0103",
+      "segment_key": "c1/gejala",
+      "slot_binding_sha256": "3c215234f0d77284d29b85bd8e78aea425266839ea4f90b710507cd1b3994cd7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0104",
+      "segment_key": "c1/penyebab-yang-mungkin",
+      "slot_binding_sha256": "93f66e430cb91dfa8cdf2218d64a2043fea709d25b2f2bf88c1c55b4f55de0c7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0105",
+      "segment_key": "c1/perbaikan",
+      "slot_binding_sha256": "07118faa25959c3e8ceb090267415efc6289ef13671618be6930104f820fdb7a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0106",
+      "segment_key": "c1/notebook-hanya-bekerja-setelah-beberapa-sel-dijalankan-manual",
+      "slot_binding_sha256": "8ede31189f8be194dd79215947620ad8602e88128e7156de25b40b8acd0863ce",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0107",
+      "segment_key": "c1/keadaan-tersembunyi-atau-urutan-sel-salah",
+      "slot_binding_sha256": "659ce420b2e323edfce7268c4945c14f8fee77ab789072c9bfd89f1fd045a56f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0108",
+      "segment_key": "c1/mulai-ulang-jalankan-semua-dan-pindahkan-definisi-sebelum",
+      "slot_binding_sha256": "20c1708949cb30537b2756eb9c974e71cdd87ca40d1bc1c7bb1528936ac8f7c7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0109",
+      "segment_key": "c1/hasil-berubah-pada-setiap-eksekusi",
+      "slot_binding_sha256": "25b58ecd3305aefeb1a1d808ddc7beeba75f16da1fcf8eefadc5ef8f0a167eca",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0110",
+      "segment_key": "c1/benih-atau-sumber-keacakan-tidak-dikendalikan",
+      "slot_binding_sha256": "db6e2b51a77eb9c3335f606955ba0496e3702b9b4e0a0db9baf253522d71e236",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0111",
+      "segment_key": "c1/buat-pembangkit-lokal-dengan-benih-eksplisit-dan-uji",
+      "slot_binding_sha256": "a518cacd412211d5e4e4536a1876b82b11642d460eb7ba041e1832507da0b390",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0112",
+      "segment_key": "c1/hasil-sama-tetapi-tidak-diketahui-data-mana-yang",
+      "slot_binding_sha256": "ce026f3974b8bcda444ced2de557c70d8cc2940b2d97cdb14b9e5f6a9165741f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0113",
+      "segment_key": "c1/asal-usul-dan-identitas-data-hilang",
+      "slot_binding_sha256": "660ceb299b38a74a960b11d8bd029fd23156cf2731ae000a926bfc7c4cc54cf1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0114",
+      "segment_key": "c1/simpan-sumber-waktu-perolehan-aturan-transformasi-jumlah-byte",
+      "slot_binding_sha256": "0c0299335d08941aabf94e5698a707d98d6409495944d4a32b606f978825a47d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0115",
+      "segment_key": "c1/galat-pada-data-latih-sangat-kecil-tetapi-prediksi",
+      "slot_binding_sha256": "44178e154bb89aa0afd2b37f7beea8089c4a1a2638c3f223a169a384434c240d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0116",
+      "segment_key": "c1/pencocokan-berlebih-kebocoran-data-atau-model-di-luar",
+      "slot_binding_sha256": "04ac3e5efd81be48655c4e03700c4c756f5efbd7926fd3df43b5a575c7e24e69",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0117",
+      "segment_key": "c1/pisahkan-data-lebih-awal-dan-periksa-residu-serta",
+      "slot_binding_sha256": "644f29f42dffa76a08e2af6e9c3024b6cb96c44b796574002ff66f965a2a9a8d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0118",
+      "segment_key": "c1/dua-komputer-memberi-digit-terakhir-yang-berbeda",
+      "slot_binding_sha256": "d0f294a4eb74e840e7ae17539cbe4151718402ff41e260db8fc50b50767a1767",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0119",
+      "segment_key": "c1/perbedaan-pustaka-atau-aritmetika-pecahan-mengambang",
+      "slot_binding_sha256": "52732b3629184357fe9a266752a7b52c5bc3d794e4aa6a617ef206037892d2da",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0120",
+      "segment_key": "c1/patok-lingkungan-dan-gunakan-toleransi-yang-sesuai-dengan",
+      "slot_binding_sha256": "c83d28f745e0674813ed884387388cd9f8687866d5e387b20c638bf456c07ebd",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0121",
+      "segment_key": "c1/manifest-berubah-setiap-kali-dibuat",
+      "slot_binding_sha256": "ac855b4cc1b5afe281970c02ca1df0442447fc4d947d02c9dbb9d5683b4872e5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0122",
+      "segment_key": "c1/urutan-jalur-waktu-atau-format-serialisasi-tidak-tetap",
+      "slot_binding_sha256": "23dc712a50bc4026408b9fe9d88a774f19fdd3d5e99e6cf67116fa132ea53abd",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0123",
+      "segment_key": "c1/urutkan-jalur-dan-keluarkan-metadata-yang-tidak-deterministik",
+      "slot_binding_sha256": "83b069d0cefbad27d6de7d267942cdf9d3bfcc28d39e1ac38cfb727aa969fc7d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0124",
+      "segment_key": "c1/ringkasan",
+      "slot_binding_sha256": "081f4d645aadb169f7f1410b27ce595801759eb160576b29f342c0cbc6bc0993",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0125",
+      "segment_key": "c1/alur-kerja-reprodusibel-mengubah-perhitungan-menjadi-argumen-yang",
+      "slot_binding_sha256": "894a771a270f27c32693df4210ced4fab88c6633373bbfdfdb55043efc71e795",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0126",
+      "segment_key": "c1/latihan-penguasaan",
+      "slot_binding_sha256": "26ad5fbebc960ef47755a7982555f006f8a0939a3c4fb1a8454cbdfaf716c2f6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0127",
+      "segment_key": "c1/soal-1",
+      "slot_binding_sha256": "34c27253a3a1d4e847b514c8790cd0edb9349cb7d507c38c458bce33926dadd9",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0128",
+      "segment_key": "c1/sebuah-laporan-hanya-menyertakan-gambar-hasil-simulasi-dan",
+      "slot_binding_sha256": "b0033bb7ad5fa494bde840f0166cbf972aedb424b9d9cfe966c5dae6f088f515",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0129",
+      "segment_key": "c1/soal-2",
+      "slot_binding_sha256": "40c74c4e13b9f47a06538c833b58305ab1b51862b991daadb3fd8693a4546ec3",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0130",
+      "segment_key": "c1/rancang-struktur-proyek-untuk-data-pengamatan-populasi-mingguan",
+      "slot_binding_sha256": "428a02f62d5ae10b9ac0cdcf4e790861183f35d48c5a04867efbdc6032b2b41e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0131",
+      "segment_key": "c1/soal-3",
+      "slot_binding_sha256": "52f55ef555b812aec5cff7a5f2795af2a6a5fc0a878b6e0236212487402c9588",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0132",
+      "segment_key": "c1/untuk-model-pendinginan-di-atas-tentukan-satuan-k",
+      "slot_binding_sha256": "d542477366ce316ff2efea9e33742e4c30d198b440fbf5f131fee7d3b2b5e872",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0133",
+      "segment_key": "c1/soal-4",
+      "slot_binding_sha256": "aa531b8a23c8013ab4ca6fb9811a10ff84eaafba1d6d63551f06e26535b2060a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0134",
+      "segment_key": "c1/bandingkan",
+      "slot_binding_sha256": "f5881ccffc9b4a158d9e6768d6f810b0206d37c7f6ad1c86692908df8a781c8f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0135",
+      "segment_key": "c1/np-random-seed-17",
+      "slot_binding_sha256": "8b5f27ccd07b7e36acde469c88aa8392cb44119e59f4beaf36e2f16a1eb2587b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0136",
+      "segment_key": "c1/yang-mengubah-keadaan-global-dengan",
+      "slot_binding_sha256": "37b6ec07a1592f504aa7f8bea30c236b1c122b46f5b00714298cd73f7a163554",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0137",
+      "segment_key": "c1/rng-np-random-default-rng-17",
+      "slot_binding_sha256": "5a3dcf96cce999aa5a4ba436f3d7f08ef0d6dccae0b0b9c290a50f3ced0a40e7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0138",
+      "segment_key": "c1/yang-membuat-pembangkit-lokal-jelaskan-mengapa-pembangkit-lokal",
+      "slot_binding_sha256": "3606d3fda74ecbc8e5b3f894391629f47b29472bbb7b4dc49de042e27e4edd20",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0139",
+      "segment_key": "c1/soal-5",
+      "slot_binding_sha256": "a03ee6c6af872d2e51d875e57a27710e15559f7a832d7a33781949e139e8327f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0140",
+      "segment_key": "c1/hitung-suhu-yang-diprediksi-pada-t-10-menit",
+      "slot_binding_sha256": "045abcf39cd929557074a37a50b45a5db9522303efb461eb3193acc9dafafb0d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0141",
+      "segment_key": "c1/soal-6",
+      "slot_binding_sha256": "fb184e351f775cd1731e2decba66f200428ffc4c79d0c2b29cb0d8d4b3a8c483",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0142",
+      "segment_key": "c1/jelaskan-mengapa-memilih-data-uji-setelah-melihat-seluruh",
+      "slot_binding_sha256": "d2bb8ee7f0e039b16fa37959846d4a9806d565449998499ab57111a28cb5d2a4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0143",
+      "segment_key": "c1/soal-7",
+      "slot_binding_sha256": "ef833ca480c6383c4653b0d41091ad0f6590c09bc468f677f372c6c5175c1429",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0144",
+      "segment_key": "c1/jalankan-notebook-pendamping-dari-keadaan-bersih-catat-hash",
+      "slot_binding_sha256": "388e5e8aa2da7dc25910414582fd79d16eed6e4f95438cc98209dc8082253065",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0145",
+      "segment_key": "c1/seed",
+      "slot_binding_sha256": "71928e4a096733eac996baf4769bf559143912d7c36b59bce7808fce325d32d1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0146",
+      "segment_key": "c1/dari",
+      "slot_binding_sha256": "850068e0f9a92c2ff64304723cfabd5cba30ecdcfed912a1f2be6e85b2c3ac14",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0147",
+      "segment_key": "c1/20260822",
+      "slot_binding_sha256": "5cd2ba0bd828a032749d0cafe7f3ce4773f7f517536f2d15b03cf60ce8b1bd50",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0148",
+      "segment_key": "c1/menjadi",
+      "slot_binding_sha256": "31e3a55743d7eb77ef3687a87d777887224f9c79758ebdf4e79b5abc3f8bfc7e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0149",
+      "segment_key": "c1/20260823",
+      "slot_binding_sha256": "7ef1adaf3e81f5504013c98b9b8065e6d2e2c1793cdff0a1601315439fb65dd0",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C1-S0150",
+      "segment_key": "c1/jalankan-ulang-dan-jelaskan-mana-yang-berubah-mana",
+      "slot_binding_sha256": "796e82e1a6d48c0fefb5693aa1d952fe1401687fc6f1807006eab13e40733f03",
+      "state": "active"
+    }
+  ],
+  "ledger_version": 1,
+  "next_serial": 153,
+  "previous": null,
+  "schema": "o005-segment-id-ledger-v2",
+  "strategy": "explicit-versioned-semantic-key-v1",
+  "unit_id": "O005-BRIDGE-C1"
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/o005-bridge-segment.schema.json",
+  "title": "O005 original bridge segment",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "segment_id",
+    "unit_id",
+    "ordinal",
+    "html_path",
+    "canonical_language",
+    "canonical_text",
+    "canonical_sha256",
+    "status"
+  ],
+  "properties": {
+    "schema": {"const": "o005-bridge-segment-v1"},
+    "segment_id": {"type": "string", "pattern": "^O005-BRIDGE-C[1-4]-S[0-9]{4}$"},
+    "unit_id": {"type": "string", "pattern": "^O005-BRIDGE-C[1-4]$"},
+    "ordinal": {"type": "integer", "minimum": 1},
+    "html_path": {"type": "string", "minLength": 1},
+    "canonical_language": {"const": "id-ID"},
+    "canonical_text": {"type": "string", "minLength": 1},
+    "canonical_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "status": {"const": "original"}
+  }
+}

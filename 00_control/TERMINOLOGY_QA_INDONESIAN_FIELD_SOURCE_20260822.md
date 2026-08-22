@@ -121,6 +121,49 @@ note and were not misrepresented as containing the later local README edit.
 
 ## Next action
 
-Resume the selected O005 production cursor at `O005-LEGA-V101-FM01`, the
-Pressbooks Preface, only after this QA boundary and the public preservation
-receipts are sealed in the durable controls.
+Complete the technical release gate for `O005-BRIDGE-C1`, record its final
+identities, and then advance the production cursor to `O005-BRIDGE-C2`.
+
+## C1 reader-language addendum — 2026-08-23
+
+The arXiv witness above remains the primary same-field source and directly
+supports the edition's core mathematical-modeling vocabulary. It does not use
+the machine-learning split terminology required by C1, so three bounded
+Indonesian primary/official sources were consulted rather than pretending the
+arXiv TeX attested a term it does not contain:
+
+- Revina Nur Rahmah, Puspita Nurul Sabrina, and Edvin Ramadhan, *Prediksi
+  Pendapatan Film Menggunakan Gradient Boosting*, Jurnal Algoritma 22(2),
+  2025, DOI `10.33364/algoritma/v.22-2.2613`, official PDF
+  <https://jurnal.itg.ac.id/index.php/algoritma/article/download/2613/1788/21464>.
+  Its holdout section explicitly pairs `data latih` with `data uji`.
+- Muhammad Nur, *Data Mining Untuk Memprediksi Kelulusan Mahasiswa Jurusan
+  Teknik Informatika UIN Syarif Hidayatullah Jakarta Menggunakan Metode
+  Klasifikasi C4.5* (2022), official repository PDF
+  <https://repository.uinjkt.ac.id/dspace/bitstream/123456789/65006/1/MUHAMMAD%20NUR-FST.pdf>.
+  Section 2.4.1 likewise defines holdout subsets as `data latih` and `data uji`.
+- Ferra Yanuar, Sisca Wulandari, and Izzati Rahmi HG, *Analisis Survival untuk
+  Parameter Skala dari Distribusi Weibull Menggunakan MLE dan Metode Bayesian*,
+  BAREKENG 15(1), 2021, DOI `10.30598/barekengvol15iss1pp147-156`, official PDF
+  <https://ojs3.unpatti.ac.id/index.php/barekeng/article/download/3109/2705/>.
+  Its use of `data tahan hidup` for survival data confirms that the bare calque
+  `data tahan` is misleading in C1.
+
+The resulting reader-facing decisions are recorded in terminology IDs
+`O005-TERM-0271` through `O005-TERM-0275`: introduce `data uji yang
+disisihkan (holdout)` once and then use `data uji`; use `data latih`,
+`algoritma`, `asal-usul data`, and `estimasi parameter`. The closing summary
+now says `reprodusibilitas komputasional` rather than collapsing that concept
+into measurement repeatability (`keterulangan`). Machine keys named
+`provenance` remain unchanged. No witness prose, formulas, figures, or code
+were imported into the edition.
+
+An independent byte-level recheck on 2026-08-23 verified all twenty members of
+`SOURCE_MANIFEST.json` against both the extracted files and the TAR member
+names. The Indonesian TeX contains 35 literal occurrences of `syarat batas`
+on 31 distinct physical lines; the earlier figure 31 was a matching-line
+count, not an occurrence count. This accounting clarification changes none of
+the terminology decisions. The same recheck confirmed glossary IDs
+`O005-TERM-0271` through `O005-TERM-0275` exactly once each and confirmed the
+exact model identification `OpenAI Codex gpt-5.6-sol, Ultra.` in the current
+repository provenance and sanitized Zenodo/Figshare receipts.

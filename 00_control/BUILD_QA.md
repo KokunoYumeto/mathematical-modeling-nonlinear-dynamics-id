@@ -1213,3 +1213,46 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   is explicitly iterative, and postgraduate mentors are not narrowed to
   postdoctoral mentors. Both readers were regenerated; the hashes above are
   the final trees, and repeated 1,440/390 px browser QA remained clean.
+
+## Original bridge C1 — 2026-08-23
+
+- Canonical content: 16,946 bytes, SHA-256
+  `c8593b80996e6f7bd368a4a2e198472198163fc17ee408b98ccbd7e58c99e4eb`.
+  It contains ten coherent instructional sections, two captioned tables, seven
+  mastery problems, and an independent synthetic cooling workflow.
+- Notebook: 14 cells / seven code cells / 14,436 bytes, SHA-256
+  `c266a0e332b6d709007344e1d401b8af324744d6ed524e7afa793ba5a01bee02`.
+  The 57-entry environment lock is 1,170 bytes, SHA-256
+  `5c6816d5c2e5993961f8a21ddce68f7f1ecbb4a48eff04fb345dc8e4ce2a8c68`.
+- A fresh canonical kernel run produced one PNG, data SHA-256
+  `1000bc1092f173258d2be37e4f8906ea0933708582d09768ce96eed739be337e`,
+  and summary SHA-256
+  `f45ccaf6ba510522a68809f0d258151580103c804e52fdba51bd7085459481a5`.
+  A second fresh kernel with seed 20260823 produced one PNG, data SHA-256
+  `36aa2d4b324fe14d5d9ba37fb1ab0ac72fad2d842de10cd60d7f1d3989ce4f62`,
+  and summary SHA-256
+  `2308117f8f9c3af10b9250271f8b3558323a04413c33b0136980469cb9230e64`.
+- The notebook rounds observations to six decimals before both serialization
+  and analysis, uses explicit `require()` gates that remain active under
+  `python -O`, emits an actual Jupyter PNG, and distinguishes a same-kernel
+  deterministic replay from the two external fresh-kernel executions.
+- Backend closure: seven mastery records, 152 segment records / 63,709 bytes /
+  SHA-256 `dfd2cb1f671ab3f672e27d7435d92c84b562b30131c14cca00863040749a20b0`,
+  and a 152-entry immutable semantic-ID ledger / 37,629 bytes / SHA-256
+  `8cf00bb705b542fe1f300076824b23a05af3b58188cef6a92fde76ed1521ebbd`.
+  The closed unit, mastery, authority, manifest, segment, and ledger schemas and
+  exact cross-record/toolchain checks pass.
+- Two independently staged 14-file trees were byte-identical to one another
+  and to every canonical reader/backend record. After the shared caption/pre
+  renderer repair, the deterministic tree SHA-256 is
+  `c169dd1fc53b2b99f3c4a9876553b52403d7b7308669ed7918ce2129b7819d46`;
+  canonical package manifest SHA-256 is
+  `70fa784b99491451a5f43cdd7d6e8a3940cc947b499460648feb1abb2dafa0df`.
+- Browser QA at the default 1,280 px viewport rendered a centered 768 px
+  article (center error 0.056 px); the 390 px viewport rendered a centered
+  357.507 px article (center error 0.053 px). Both had zero page, table, or
+  code-block overflow; zero empty paragraphs; zero paragraphs inside `pre`;
+  two valid captions; 31 MathML nodes; 21 mastery disclosures; no raw TeX,
+  missing images, or console warnings. Mobile fragment navigation cleared the
+  sticky navigation by about 9.2 px. External-link reachability and nonexistent
+  audio/live widgets were not exercised.

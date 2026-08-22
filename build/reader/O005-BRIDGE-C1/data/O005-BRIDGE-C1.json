@@ -1,0 +1,153 @@
+{
+  "build": {
+    "generator": "scripts/generate_bridge_c1.py",
+    "pandoc": "pandoc 3.9.0.2",
+    "requirements_lock": "source/id-ID/O005-BRIDGE-C1/notebooks/requirements.lock",
+    "requirements_lock_sha256": "5c6816d5c2e5993961f8a21ddce68f7f1ecbb4a48eff04fb345dc8e4ce2a8c68",
+    "script": "scripts/build_bridge_unit.py",
+    "toolchain": {
+      "dependencies": {
+        "beautifulsoup4": "4.14.3",
+        "jsonschema": "4.26.0"
+      },
+      "files": [
+        {
+          "bytes": 27733,
+          "path": "scripts/build_bridge_unit.py",
+          "sha256": "987715fd3245eb1257ce44053f4390eea4e00196af54b7c74c27f4f1e1834d80"
+        },
+        {
+          "bytes": 53405,
+          "path": "scripts/build_unit_reader.py",
+          "sha256": "81ce24f93862a4dcc3d8d98f2f7e6fee7318c07361a5edc59bbe14c582729b93"
+        },
+        {
+          "bytes": 32560,
+          "path": "scripts/qa_bridge_unit.py",
+          "sha256": "518f66ad52d39bfc248b624e8f6947f0a6a7db28e054938e827fe53084e99ec1"
+        },
+        {
+          "bytes": 7271,
+          "path": "scripts/execute_bridge_notebook_jupyter.py",
+          "sha256": "9043272155db73a259113c02b900c3a61fb9da9f692f7a2d967ac61d9d165d94"
+        },
+        {
+          "bytes": 5205,
+          "path": "source/reader/reader.css",
+          "sha256": "3936eb3901ba21b97be260071090ef01dbeef859b5d3b4da2b72ca7e99bad477"
+        },
+        {
+          "bytes": 1170,
+          "path": "source/id-ID/O005-BRIDGE-C1/notebooks/requirements.lock",
+          "sha256": "5c6816d5c2e5993961f8a21ddce68f7f1ecbb4a48eff04fb345dc8e4ce2a8c68"
+        },
+        {
+          "bytes": 7023,
+          "path": "backend/schema/o005-bridge-unit.schema.json",
+          "sha256": "f27894b00f149f683bdbb37b3698309e4b2ca5ebe5af4057b8226c065e7e62f7"
+        },
+        {
+          "bytes": 956,
+          "path": "backend/schema/o005-bridge-segment.schema.json",
+          "sha256": "824a1e305d209d711f3891f66c5f178b58ebc47bb66f8b8cba7a22bd80921fe2"
+        },
+        {
+          "bytes": 6851,
+          "path": "backend/schema/o005-bridge-mastery.schema.json",
+          "sha256": "3a8a71220da26265f44d1092285975de542d0005738094c2962cdfb143ff91ec"
+        },
+        {
+          "bytes": 3897,
+          "path": "backend/schema/o005-original-authority.schema.json",
+          "sha256": "9686d32609fbbc31571daa11e7232b85b1689efd069604dd7511b5c94c3e54e0"
+        },
+        {
+          "bytes": 3310,
+          "path": "backend/schema/o005-original-authority-manifest.schema.json",
+          "sha256": "e87744e824f8276cb8705311f09b64ee7b0b08fbf5c06a55a4ff5aef6b63196a"
+        },
+        {
+          "bytes": 2832,
+          "path": "backend/schema/o005-segment-id-ledger.schema.json",
+          "sha256": "c2ebf51b7f543fe55c6fa9f23255d7d4b551c50cf1c333bab07beedbf6c3443e"
+        },
+        {
+          "bytes": 37629,
+          "path": "backend/segment-ids/O005-BRIDGE-C1.segment-ids.v1.json",
+          "sha256": "8cf00bb705b542fe1f300076824b23a05af3b58188cef6a92fde76ed1521ebbd"
+        }
+      ],
+      "pandoc": {
+        "bytes": 231056136,
+        "sha256": "24f1593d7ba9f511bc428be3d7177d2a8ddc4bf60457c9f24a888a4790748c5d",
+        "version": "pandoc 3.9.0.2"
+      },
+      "platform": {
+        "machine": "AMD64",
+        "release": "11",
+        "system": "Windows",
+        "version": "10.0.26200"
+      },
+      "python": {
+        "executable_bytes": 104264,
+        "executable_sha256": "7679e53fa969789309e81fdad0d52b8cda5f83c9abf7cb31a3c58bf24b31e264",
+        "implementation": "CPython",
+        "version": "3.13.9"
+      }
+    }
+  },
+  "content_mode": "new_original_addition",
+  "course_id": "C120",
+  "language": "id-ID",
+  "mastery_path": "backend/mastery/O005-BRIDGE-C1.mastery.json",
+  "mastery_sha256": "8757a13a2c799fe2f13aa697fb4596d4ab623c06688733cb16df39fc151fb27a",
+  "notebook_path": "source/id-ID/O005-BRIDGE-C1/notebooks/bridge-c1-reproducible-workflow.ipynb",
+  "notebook_sha256": "c266a0e332b6d709007344e1d401b8af324744d6ed524e7afa793ba5a01bee02",
+  "problems": [
+    "O005-BRIDGE-C1-P01",
+    "O005-BRIDGE-C1-P02",
+    "O005-BRIDGE-C1-P03",
+    "O005-BRIDGE-C1-P04",
+    "O005-BRIDGE-C1-P05",
+    "O005-BRIDGE-C1-P06",
+    "O005-BRIDGE-C1-P07"
+  ],
+  "provenance": {
+    "authority_manifest": "authority/units/O005-BRIDGE-C1/AUTHORITY_MANIFEST.json",
+    "authority_manifest_sha256": "5f6b7e5e3466644349336aaf6e76111869bf5170948e3cfe0fde09c64644f7d7",
+    "license": "CC BY-NC-SA 4.0",
+    "model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
+    "non_endorsement": true,
+    "relationship": "independent_supplement",
+    "spine_author": "Joceline Lega",
+    "spine_work": "Introduction to Mathematical Modeling"
+  },
+  "resource_id": "O005",
+  "schema": "o005-bridge-unit-v1",
+  "segments": {
+    "count": 152,
+    "id_ledger_path": "backend/segment-ids/O005-BRIDGE-C1.segment-ids.v1.json",
+    "id_ledger_sha256": "8cf00bb705b542fe1f300076824b23a05af3b58188cef6a92fde76ed1521ebbd",
+    "id_strategy": "versioned-semantic-ledger-v1",
+    "path": "backend/segments/O005-BRIDGE-C1.segments.jsonl",
+    "schema": "o005-bridge-segment-v1",
+    "sha256": "dfd2cb1f671ab3f672e27d7435d92c84b562b30131c14cca00863040749a20b0"
+  },
+  "target": {
+    "concepts": [
+      "reproducible-computing",
+      "data-provenance",
+      "model-contract",
+      "deterministic-randomness",
+      "parameter-estimation",
+      "residual-diagnostics",
+      "holdout-data",
+      "artifact-hashing"
+    ],
+    "content_path": "source/id-ID/O005-BRIDGE-C1/content.html",
+    "content_sha256": "c8593b80996e6f7bd368a4a2e198472198163fc17ee408b98ccbd7e58c99e4eb",
+    "placement": "after_source_record_closure_before_bridge_c2",
+    "title": "Alur Kerja Python/Jupyter yang Reprodusibel"
+  },
+  "unit_id": "O005-BRIDGE-C1"
+}
