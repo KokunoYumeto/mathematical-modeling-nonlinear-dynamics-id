@@ -725,3 +725,20 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   357.5 px articles at 1280×900 and 390×844, zero overflow, three unique IDs,
   two intact fragment links, and empty logs. Mastery/notebook execution and
   external-link reachability were inapplicable; no audio/live widget exists.
+
+## Public readback — Chapter 10, Part 5, and Chapter 11 authority — 2026-08-22
+
+- Production commit: `0302eef818b06dafa372b2ab5cd5ff784b6eb184`.
+- `git push origin main` advanced the public branch from `05c8f93` to
+  `0302eef`; `git ls-remote origin refs/heads/main` returned the exact local
+  40-character commit.
+- Every one of the 61 files changed by the production commit was fetched as
+  anonymous bytes from its immutable GitHub raw URL and compared with the
+  committed local counterpart: 1,366,211 local bytes, 1,366,211 public bytes,
+  zero byte-count mismatches, and zero SHA-256 mismatches.
+- The ordered `path<TAB>bytes<TAB>sha256` inventory has SHA-256
+  `c8c095a643dae69fc354c031b30812ef799fb5c874b1a73fb0fe84c0f57821dc`.
+  Coverage includes the complete Chapter 10 authority/translation/assets/
+  mastery/notebook/backend/reader, the complete Part 5 authority/translation/
+  backend/reader, Chapter 11's frozen canonical/raw/rendered authority, and all
+  changed pipeline and durable control files.

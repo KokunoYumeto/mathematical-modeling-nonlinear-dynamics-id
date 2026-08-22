@@ -577,6 +577,9 @@ translation are now the executable action.
   overflow, three loaded responsive figures, 28 unique IDs, 22 intact fragment
   links, thirteen notes, and an empty warning/error log; the Problem 6 target
   landed at 80.13 px below the 70.60 px sticky navigation.
+- Published in production commit
+  `0302eef818b06dafa372b2ab5cd5ff784b6eb184` on `origin/main`; remote-head
+  equality and anonymous immutable-commit byte readback passed.
 
 ## Admitted Part 5 introduction boundary
 
@@ -599,6 +602,11 @@ translation are now the executable action.
   paragraphs, zero overflow, three unique IDs, two intact fragment links, and
   no browser warning/error. Mastery, notebook, asset, problem, formula, and
   footnote surfaces are correctly absent.
+- Published with Chapter 10 and the frozen Chapter 11 authority in production
+  commit `0302eef818b06dafa372b2ab5cd5ff784b6eb184`. Anonymous readback covered all
+  61 changed files / 1,366,211 bytes with zero byte-count or SHA-256 mismatch;
+  ordered inventory SHA-256
+  `c8c095a643dae69fc354c031b30812ef799fb5c874b1a73fb0fe84c0f57821dc`.
 
 ## Frozen Chapter 11 authority
 
