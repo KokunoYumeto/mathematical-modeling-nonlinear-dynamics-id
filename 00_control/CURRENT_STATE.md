@@ -505,6 +505,12 @@ authority freeze is the next executable action.
   footnotes, and an empty fresh-load warning/error log. The Problem 7 target
   landed at 79.86 px below the 70.60 px sticky navigation. External-link
   reachability was not tested; no audio/live widget exists.
+- Published production commit:
+  `cbfde5f97e1d79cddbd2fb729a028adf13d5994b` on `origin/main`. Remote-head
+  equality passed. Anonymous immutable-commit readback covered all 35 changed
+  files / 1,548,116 bytes with zero byte-count or SHA-256 mismatches; the
+  ordered inventory SHA-256 is
+  `f3a45caf82be33b8c5d0c9af4c86b2d4eb4c977d441036ec01b63a6f7e1ec12f`.
 
 ## Next action
 
