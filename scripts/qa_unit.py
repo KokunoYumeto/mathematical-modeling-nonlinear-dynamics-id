@@ -701,6 +701,112 @@ QA_SPECS = {
         "mastery_math": 0,
         "lock": None,
     },
+    "O005-LEGA-V101-CH13": {
+        "unit_type": "chapter",
+        "elements": 456,
+        "links": 39,
+        "math": 524,
+        "target_math": 528,
+        "reader_math": 528,
+        "math_replacements": {
+            15: (
+                r"\displaystyle Y = \left(y,\frac{dy}{d x},\frac{d^2 y}{d x}, \cdots, \frac{d^{n-1} y}{d x^{n-1}}\right)",
+                r"\displaystyle Y = \left(y,\frac{dy}{d x},\frac{d^2 y}{d x^2}, \cdots, \frac{d^{n-1} y}{d x^{n-1}}\right)",
+            ),
+            51: (
+                r"\displaystyle \frac{\partial u}{\partial x}=M(x,y) \qquad \text{and} \qquad \frac{\partial u}{\partial y}=N(x,y).",
+                r"\displaystyle \frac{\partial u}{\partial x}=M(x,y) \qquad \text{dan} \qquad \frac{\partial u}{\partial y}=N(x,y).",
+            ),
+            56: (
+                r"\displaystyle \frac{\partial u}{\partial x}=M(x,y) \quad \text{ and } \quad \frac{\partial u}{\partial y}=N(x,y).",
+                r"\displaystyle \frac{\partial u}{\partial x}=M(x,y) \quad \text{ dan } \quad \frac{\partial u}{\partial y}=N(x,y).",
+            ),
+            67: (
+                r"\rho(x,y)=f(x).",
+                r"\rho(x)=\exp\left(\int f(x)\,dx\right).",
+            ),
+            70: (
+                r"\rho(x,y)=f(y).",
+                r"\rho(y)=\exp\left(-\int f(y)\,dy\right).",
+            ),
+            105: (
+                r"y = c x + f(c), \qquad c=\text{ constant}",
+                r"y = c x + f(c), \qquad c=\text{ konstan}",
+            ),
+            157: (
+                r"y_1(x)=\exp(r_1 x) \qquad {\rm and} \qquad y_2(x)=\exp(r_2 x).",
+                r"y_1(x)=\exp(r_1 x) \qquad \text{dan} \qquad y_2(x)=\exp(r_2 x).",
+            ),
+            168: (
+                r"a_2 x^2 y^{\prime\prime} + a_1 x y^\prime+ a_0 y=0, \quad a_2, a_1, \text{and }a_0 \text{ constants},",
+                r"a_2 x^2 y^{\prime\prime} + a_1 x y^\prime+ a_0 y=0, \quad a_2, a_1, \text{dan }a_0 \text{ konstan},",
+            ),
+            315: (
+                r"x_1(t)=\alpha_1, x_2(t)=\alpha_2,\dots, x_n(t)=\alpha_n",
+                r"x_1(t_0)=\alpha_1, x_2(t_0)=\alpha_2,\dots, x_n(t_0)=\alpha_n",
+            ),
+            363: (
+                "X_i(t)=\\Re e[\\exp(\\alpha+i \\beta)\n\\xi]",
+                "X_i(t)=\\operatorname{Re}[\\exp((\\alpha+i\\beta)t)\n\\xi]",
+            ),
+            364: (
+                r"X_{i+1}(t)=\Im m[\exp(\alpha+i \beta) \xi]",
+                r"X_{i+1}(t)=\operatorname{Im}[\exp((\alpha+i\beta)t) \xi]",
+            ),
+            386: (r"\Re e(X_p)", r"\operatorname{Re}(X_p)"),
+            387: (r"\Im m(X_p)", r"\operatorname{Im}(X_p)"),
+            429: (
+                r"Y = \left(\begin{array}{c}x \\ y \end{array} \right), \qquad F(X) = \left(\begin{array}{c} F_1(x,y) \\ F_2(x,y) \end{array} \right), \qquad Y_0 = \left(\begin{array}{c}x_0 \\ y_0 \end{array} \right).",
+                r"Y = \left(\begin{array}{c}x \\ y \end{array} \right), \qquad F(Y) = \left(\begin{array}{c} F_1(x,y) \\ F_2(x,y) \end{array} \right), \qquad Y_0 = \left(\begin{array}{c}x_0 \\ y_0 \end{array} \right).",
+            ),
+            461: (
+                r"\det(A)&gt;0",
+                r"\det(A)\ge 0",
+            ),
+            505: (
+                r"A = \left( \begin{array}{cc} 7 &amp; 6 \\ 2 &amp; 6 \end{array} \right) \quad \text{and} \quad B = \left(\begin{array}{c} -70 \\ 35 \end{array} \right) \exp(3 t).",
+                r"A = \left( \begin{array}{cc} 7 &amp; 6 \\ 2 &amp; 6 \end{array} \right) \quad \text{dan} \quad B = \left(\begin{array}{c} -70 \\ 35 \end{array} \right) \exp(3 t).",
+            ),
+            520: (
+                r"\displaystyle \left\{ \begin{array}{l} x = C_1 \cos(t) e^{2 t} + C_2 \sin(t) e^{2 t} - 2 e^t \\ y = -C_1 \sin(t) e^{2 t} + C_2 \cos(t) e^{2 t} - e^t \end{array} \right. .",
+                r"\displaystyle \left\{ \begin{array}{l} x = 2 \cos(t) e^{2 t} + 2 \sin(t) e^{2 t} - 2 e^t \\ y = -2 \sin(t) e^{2 t} + 2 \cos(t) e^{2 t} - e^t \end{array} \right. .",
+            ),
+        },
+        "math_insertions_before": {
+            47: [r"y=-x"],
+            90: [r"y=0"],
+            104: [r"y=x"],
+            121: [r"y=C"],
+        },
+        "problems": 11,
+        "answer_headings": 11,
+        "footnotes": 0,
+        "assets": [
+            "assets/phase-stable-node-source.png",
+            "assets/phase-stable-star-source.png",
+            "assets/phase-stable-degenerate-node-source.png",
+            "assets/phase-stable-spiral-source.png",
+            "assets/phase-saddle-source.png",
+            "assets/phase-line-fixed-points-source.png",
+            "assets/phase-center-source.png",
+            "assets/fixed-point-classification-source.png",
+        ],
+        "target_image_dimensions": [
+            ("150", "109"),
+            ("150", "109"),
+            ("150", "109"),
+            ("150", "109"),
+            ("150", "127"),
+            ("150", "109"),
+            ("100", "125"),
+            ("1024", "690"),
+        ],
+        "notebook": None,
+        "notebook_cells": 0,
+        "code_cells": 0,
+        "mastery_math": None,
+        "lock": None,
+    },
 }
 BUILDER = ROOT / "scripts" / "build_unit_reader.py"
 LATEX_RE = re.compile(r"\$latex\s+(.+?)\$", re.DOTALL)
@@ -763,7 +869,7 @@ def structural_replay() -> dict:
             if SPEC.get("target_image_dimensions"):
                 left_attrs.pop("width", None); right_attrs.pop("width", None)
                 left_attrs.pop("height", None); right_attrs.pop("height", None)
-        if left.name == "h3" and right.get("id", "").startswith(f"{UNIT_ID}-P"):
+        if left.name == "h3" and right.get("id", "").startswith((f"{UNIT_ID}-P", f"{UNIT_ID}-A")):
             right_attrs.pop("id", None)
         if left.name == "a":
             left_attrs.pop("href", None); right_attrs.pop("href", None)
@@ -826,7 +932,15 @@ def structural_replay() -> dict:
     ids = [tag["id"] for tag in target_tags if tag.has_attr("id")]
     require(len(ids) == len(set(ids)), "Duplicate target IDs")
     expected = [f"{UNIT_ID}-P{i:02d}" for i in range(1, SPEC["problems"] + 1)]
-    require([tag["id"] for tag in target_tags if tag.name == "h3" and tag.has_attr("id")] == expected, "Problem IDs differ")
+    expected_answer_ids = [
+        f"{UNIT_ID}-A{i:02d}"
+        for i in range(1, SPEC.get("answer_headings", 0) + 1)
+    ]
+    require(
+        [tag["id"] for tag in target_tags if tag.name == "h3" and tag.has_attr("id")]
+        == expected + expected_answer_ids,
+        "Problem/answer heading IDs differ",
+    )
     result = {
         "elements": len(source_tags),
         "links": len(source_links),

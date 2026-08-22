@@ -325,6 +325,30 @@ UNIT_SPECS = {
         "plain_paragraphs": False,
         "change_note": "penerjemahan, koreksi dan klarifikasi matematika terdokumentasi, serta pengindeksan modular",
     },
+    "O005-LEGA-V101-CH13": {
+        "unit_type": "chapter",
+        "unit_number": 13,
+        "chapter_number": 13,
+        "source_title": "Refresher: Ordinary Differential Equations",
+        "target_title": "Penyegaran: Persamaan Diferensial Biasa",
+        "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/appendix-ordinary-differential-equations/",
+        "target_assets": [
+            "assets/phase-stable-node-source.png",
+            "assets/phase-stable-star-source.png",
+            "assets/phase-stable-degenerate-node-source.png",
+            "assets/phase-stable-spiral-source.png",
+            "assets/phase-saddle-source.png",
+            "assets/phase-line-fixed-points-source.png",
+            "assets/phase-center-source.png",
+            "assets/fixed-point-classification-source.png",
+        ],
+        "caption_count": 8,
+        "footnote_count": 0,
+        "notebook": None,
+        "problem_count": 11,
+        "plain_paragraphs": False,
+        "change_note": "penerjemahan, koreksi dan klarifikasi matematika terdokumentasi, pelokalan aset, pengindeksan modular, serta dukungan ketuntasan",
+    },
 }
 
 
@@ -443,8 +467,15 @@ def render_math(tex: str) -> str:
     # Pandoc does not convert the two legacy Pressbooks array idioms used in
     # Chapter 2.  Normalize them losslessly for MathML, while retaining the
     # exact frozen/source TeX in data-tex and the aligned backend.
-    tex = tex.replace(r"\left\{ \begin{array}{ll}", r"\begin{cases}")
-    tex = tex.replace(r"\end{array} \right.", r"\end{cases}")
+    legacy_cases_opener = r"\left\{ \begin{array}{ll}"
+    if legacy_cases_opener in tex:
+        tex = tex.replace(legacy_cases_opener, r"\begin{cases}")
+        tex = tex.replace(r"\end{array} \right.", r"\end{cases}")
+    tex = re.sub(
+        r"\{\{([^{}]+)\}\\over\{([^{}]+)\}\}",
+        r"\\frac{\1}{\2}",
+        tex,
+    )
 
     def parenthesized_array(match: re.Match[str]) -> str:
         body = match.group(1).replace(r"\cr", r"\\")

@@ -1,0 +1,215 @@
+Lampiran ini mengulas secara singkat metode-metode yang paling umum untuk menyelesaikan persamaan diferensial biasa (PDB). Banyak PDB atau sistem PDB yang diperkenalkan dalam catatan ini bersifat nonlinear sehingga tidak dapat diselesaikan dengan mudah menggunakan metode-metode tersebut. Namun, analisis kestabilan linear titik tetap bertumpu pada penyelesaian sistem linear berkoefisien konstan, yang dibahas di sini. Selain itu, seorang pemodel harus mampu mengenali PDB yang dapat diselesaikan secara eksak dan menyelesaikannya jika diperlukan. Informasi di bawah ini dimaksudkan sebagai rujukan cepat; teorema-teorema diberikan tanpa bukti dan pembaca sebaiknya merujuk pada buku-buku klasik tentang persamaan diferensial untuk memperoleh perinciannya.
+<h2>Definisi dan teorema dasar tentang eksistensi</h2>
+<h3>Definisi</h3>
+<ul>
+	<li>Sebuah <em>persamaan diferensial biasa</em> berorde $latex n$ adalah persamaan berbentuk</li>
+</ul>
+<p style="text-align: center"><a id="Eq_13.1"></a>$latex \displaystyle \frac{d^n y}{d x^n}=F\left( x,y,\frac{d y}{d x},\dots,\frac{d^{n-1} y} {d x^{n-1}}\right). \qquad (13.1)$</p>
+
+<ul>
+	<li>Sebuah <em>solusi</em> persamaan diferensial ini adalah fungsi yang dapat didiferensialkan sebanyak $latex n$ kali, yaitu $latex y(x)$ dari peubah real $latex x$, yang memenuhi Persamaan (<a href="#Eq_13.1">13.1</a>).</li>
+	<li><span style="text-align: initial;font-size: 1em">Sebuah <em>syarat awal</em> adalah penetapan nilai </span>$latex y$ beserta turunan-turunannya hingga orde $latex (n-1)$ pada suatu titik $latex x_0$.  Syarat ini berbentuk sebagai berikut, dengan $latex y_0$, $latex y_1$, ... $latex y_{n-1}$ merupakan bilangan-bilangan yang diberikan:</li>
+</ul>
+<p style="text-align: center"><a id="Eq_13.2"></a>$latex \displaystyle \label{init} y(x_0)=y_0, \frac{d y}{d x}(x_0)=y_1, \dots \frac{d^{n-1}y}{d x^{n-1}}(x_0) = y_{n-1}, \qquad (13.2)$</p>
+
+<ul>
+ 	<li><em>Syarat batas</em> menetapkan nilai kombinasi linear dari $latex y$ dan turunan-turunannya pada dua nilai $latex x$ yang berbeda.</li>
+</ul>
+<h3>Teorema eksistensi dan ketunggalan</h3>
+<p style="text-align: left">Di bawah ini kami mencantumkan teorema-teorema utama tentang eksistensi dan ketunggalan solusi sistem persamaan diferensial biasa orde pertama. Perhatikan bahwa Persamaan (<a href="#Eq_13.1">13.1</a>) dapat ditulis sebagai sistem orde pertama</p>
+<p style="text-align: center"><a id="Eq_13.3"></a>$latex \displaystyle \label{ode_fo} \frac{d Y}{d x} = f(x,Y) \qquad (13.3)$</p>
+dengan menetapkan $latex \displaystyle Y = \left(y,\frac{dy}{d x},\frac{d^2 y}{d x}, \cdots, \frac{d^{n-1} y}{d x^{n-1}}\right)$.
+<h4>Teorema Cauchy–Peano</h4>
+Jika $latex f$ kontinu pada persegi panjang $latex {\mathcal R} = \left\{|x-x_0| \le a, ||Y - Y_0|| \le b \right\}$ dengan $latex a &gt; 0$ dan $latex b &gt; 0,$ maka terdapat solusi $latex Y$ dari (<a href="#Eq_13.3">13.3</a>) yang terdiferensialkan secara kontinu pada $latex |x - x_0| \le \alpha$ dan memenuhi $latex Y(x_0) = Y_0$, dengan
+<p style="text-align: center">$latex \alpha = \min\left(a, \frac{b}{M}\right), \quad M = \max_{(x,Y) \in {\mathcal R}} ||f(x,Y)||.$</p>
+
+<h4>Teorema Picard–Lindelöf</h4>
+Jika $latex f$ bersifat Lipschitz pada $latex \mathcal R$, yakni jika terdapat konstanta $latex k &gt; 0$ sedemikian sehingga
+<p style="text-align: center">$latex \forall (x,Y_1) \in {\mathcal R}, \forall (x,Y_2) \in {\mathcal R}, ||f(x,Y_1) - f(x,Y_2) || &lt; k ||Y_1 - Y_2||,$</p>
+dan jika $latex f$ kontinu pada $latex \mathcal R$, maka terdapat solusi tunggal $latex Y$ dari (<a href="#Eq_13.3">13.3</a>) pada $latex |x - x_0| \le \alpha$ yang memenuhi $latex Y(x_0) = Y_0.$
+
+Secara bersama-sama, teorema-teorema ini menyiratkan bahwa untuk sistem dinamis yang terdiferensialkan secara kontinu dan berbentuk (<a href="#Eq_13.3">13.3</a>), setiap masalah nilai awal memiliki solusi tunggal. Dengan kata lain, jika $latex f$ dalam (<a href="#Eq_13.3">13.3</a>) terdiferensialkan secara kontinu, lintasan-lintasan dalam ruang fase sistem dinamis (<a href="#Eq_13.3">13.3</a>) tidak dapat saling berpotongan.
+
+Berikut ini kami mencantumkan berbagai teknik umum yang digunakan untuk menyelesaikan persamaan diferensial. Syarat awal atau syarat batas sebaiknya diterapkan setelah solusi umum diperoleh.
+<h2>Persamaan diferensial orde pertama</h2>
+Kita mulai dengan persamaan diferensial orde pertama, yang kita tulis sebagai
+<p style="text-align: center">$latex M(x,y) dx + N(x,y) dy=0.$</p>
+
+<h3>Persamaan terpisahkan</h3>
+Jika $latex \displaystyle \frac{M(x,y)}{N(x,y)}= - f(x) g(y),$ maka persamaan tersebut <em>dapat dipisahkan</em> dan berbentuk
+<p style="text-align: center">$latex \displaystyle f(x) dx=\frac{1}{g(y)} dy,$</p>
+yang dapat diintegralkan dengan mudah.
+<h4>Contoh</h4>
+Solusi masalah nilai awal $latex \displaystyle \frac{d y}{d x}=\frac{3 x^2 + 4 x + 2}{2 (y-1)}, \quad y(0)=-1$ adalah $latex y=1-\sqrt{x^3 + 2 x^2 + 2 x + 4}$.
+<h3>Persamaan dengan <em>M</em> dan <em>N</em> yang keduanya homogen berderajat <em>n</em></h3>
+Jika $latex M(x,y)$ dan $latex N(x,y)$ keduanya homogen berderajat $latex n$, maka perubahan peubah $latex v=y/x$ (atau $latex u=x/y$) akan menjadikan PDB tersebut dapat dipisahkan.
+<h4>Contoh</h4>
+Solusi umum persamaan $latex \displaystyle \frac{d y}{d x}=\frac{y^2 + 2 x y}{x^2}$ adalah $latex \displaystyle y = \frac{C x^2}{1 - C x}$, dengan $latex C$ konstanta sembarang.
+<h3>Persamaan eksak</h3>
+Jika $latex {\partial M}/{\partial y}$ dan $latex {\partial N}/{\partial x}$ kontinu dan jika $latex \displaystyle \frac{\partial M}{\partial y}=\frac{\partial N}{\partial x},$ maka PDB tersebut <em>eksak</em>, yaitu terdapat $latex u(x,y)$ sedemikian sehingga
+<p style="text-align: center">$latex \displaystyle \frac{\partial u}{\partial x}=M(x,y) \qquad \text{and} \qquad \frac{\partial u}{\partial y}=N(x,y).$</p>
+Dengan demikian, PDB dapat ditulis dalam bentuk
+<p style="text-align: center">$latex \displaystyle \frac{\partial u}{\partial x} dx + \frac{\partial u}{\partial y} dy=0,$</p>
+yang menghasilkan $latex d \left(u(x,y) \right)=0$, yaitu $latex u(x,y)=C$. Fungsi $latex u$ dapat diperoleh dengan mengintegralkan kedua persamaan
+<p style="text-align: center">$latex \displaystyle \frac{\partial u}{\partial x}=M(x,y) \quad \text{ and } \quad \frac{\partial u}{\partial y}=N(x,y).$</p>
+
+<h4>Contoh</h4>
+Solusi umum persamaan $latex \displaystyle (y \cos(x) + 2 x e^y) + (\sin(x) + x^2 e^y - 1) y^\prime = 0$ diberikan secara implisit oleh $latex y \sin(x) + x^2 e^y - y = C$, dengan $latex C$ konstanta sembarang.
+<h3>Faktor integrasi</h3>
+Faktor integrasi adalah fungsi $latex \rho(x,y)$ sedemikian sehingga persamaan diferensial
+<p style="text-align: center">$latex \rho(x,y)\left[ M(x,y) dx + N(x,y) dy \right]$</p>
+bersifat eksak. Jika $latex \displaystyle \frac{\partial M}{\partial y} \ne \frac{\partial N}{\partial x},$ tetapi
+<ul>
+ 	<li>$latex \displaystyle \frac{\partial M}{\partial y}-\frac{\partial N}{\partial x} =-n \frac{M}{y} + m \frac{N}{x},$ gunakan faktor integrasi $latex \rho(x,y)=x^m y^n.$</li>
+ 	<li>Jika $latex \displaystyle \frac{1}{N} \left[\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}\right]$ hanya merupakan fungsi $latex x$, gunakan faktor integrasi $latex \rho(x,y)=f(x).$</li>
+ 	<li>Jika $latex \displaystyle \frac{1}{M} \left[\frac{\partial M}{\partial y}-\frac{\partial N} {\partial x}\right]$ hanya merupakan fungsi $latex y$, gunakan faktor integrasi $latex \rho(x,y)=f(y).$</li>
+</ul>
+<h4>Contoh</h4>
+Solusi umum persamaan $latex \displaystyle 3 x y + y^2 + (x^2 + x y) \frac{d y}{d x} = 0$ diberikan secara implisit oleh $latex \displaystyle x^3 y + \frac{1}{2} x^2 y^2 = C$.
+<h3>Persamaan linear</h3>
+Jika persamaan diferensial dapat ditulis dalam bentuk $latex y^\prime + p(x) y = q(x),$ yaitu jika
+<p style="text-align: center">$latex \displaystyle -\frac{M(x,y)}{N(x,y)} =-p(x) y + q(x),$</p>
+maka PDB tersebut <em>linear</em>. Misalkan $latex \rho(x)=\exp\left[\int p(x) dx\right]$. Kita peroleh
+<p style="text-align: center">$latex \displaystyle \rho^\prime(x)=p(x) \exp\left[\int p(x) dx \right]=p(x) \rho(x),$</p>
+dan dengan mengalikan PDB dengan $latex \rho(x)$, kita memperoleh
+<p style="text-align: center">$latex \begin{align*} &amp;y^\prime \rho(x)+p(x) \rho(x) y = q(x) \rho(x) \\ \Longleftrightarrow &amp;\displaystyle \frac{d}{d x}\left[\rho(x) y\right]=q(x) \rho(x),\\ \Longleftrightarrow &amp; y \rho(x)=\int q(x) \rho(x) dx + C, \\ \Longleftrightarrow &amp; \displaystyle y=\frac{1}{\rho(x)} \int q(x) \rho(x) dx + \frac{C}{\rho(x)}, \\ \Longleftrightarrow &amp; y=\left[\int q(x) \rho(x) dx + C\right] \exp\left[-\int p(x)\
+dx \right].\end{align*}$</p>
+
+<h4>Contoh 1</h4>
+<span style="text-align: initial;font-size: 1em">Solusi umum persamaan $latex y^\prime + 2 y = e^{-x}$ adalah $latex y = e^{-x} + C e^{-2 x}.$</span>
+<h4>Contoh 2</h4>
+Solusi persamaan $latex y^\prime - 2 x y = x$ dengan syarat $latex y(0)=0$ adalah $latex \displaystyle y = - \frac{1}{2} + \frac{1}{2} e^{x^2}.$
+<h3>Persamaan Bernoulli</h3>
+Jika $latex \displaystyle -\frac{M(x,y)}{N(x,y)}=-p(x) y + q(x) y^n,$ dengan $latex n\ne 0,1,$ kita memperoleh persamaan Bernoulli berikut
+<p style="text-align: center">$latex y^\prime + p(x) y=q(x) y^n.$</p>
+Persamaan nonlinear ini dapat diubah menjadi bentuk persamaan linear melalui perubahan peubah $latex u=y^{1-n}$.
+<h4>Contoh</h4>
+Solusi umum persamaan $latex x^2 y^\prime + 2 x y - y^3 = 0, x&gt;0$ adalah $latex \displaystyle y = \pm \sqrt{\frac{5 x}{2 + C x^5}}$.
+<h3>Persamaan Riccati</h3>
+Jika $latex \displaystyle -\frac{M(x,y)}{N(x,y)}=a_0(x) + a_1(x) y + a_2(x) y^2,$ kita memperoleh persamaan Riccati berikut
+<p style="text-align: center">$latex y^\prime=a_0(x) + a_1(x) y + a_2(x) y^2.$</p>
+<p style="text-align: left">Untuk menyelesaikannya, lakukan langkah-langkah berikut.</p>
+
+<ol>
+ 	<li style="text-align: left">Carilah solusi khusus $latex y=y_1(x)$ dengan mencoba fungsi-fungsi sederhana seperti $latex a x^b$ atau $latex a \exp(b x)$.</li>
+ 	<li style="text-align: left">Perhatikan bahwa $latex u=y-y_1$ memenuhi persamaan Bernoulli berikut (dengan $latex n=2$): $latex \begin{align*} u^\prime &amp; = a_1(x) u + a_2(x) u (2 y_1(x)+u)\\ &amp; = \left[ a_1(x)+2 a_2(x) y_1(x)\right] u + a_2(x) u^2,\end{align*}$</li>
+ 	<li>Ubahlah persamaan di atas menjadi persamaan linear dengan menerapkan perubahan peubah $latex w=u^{1-2}=1/u$, lalu selesaikan untuk $latex w$. Dalam peubah semula, solusi $latex y$ diberikan oleh $latex y=y_1+1/w$.</li>
+</ol>
+<h4>Contoh</h4>
+Solusi umum persamaan $latex y^\prime = 1 + x^2 - 2 x y + y^2$ adalah $latex y = x + 1/(C - x)$.
+<h3>Persamaan Clairaut</h3>
+Persamaan diferensial $latex y = x y^\prime + f(y^\prime)$ memiliki keluarga garis lurus berikut sebagai solusi
+<p style="text-align: center">$latex y = c x + f(c), \qquad c=\text{ constant}$</p>
+dan juga dapat memiliki solusi singular dalam bentuk parametrik
+<p style="text-align: center">$latex \left \{ \begin{array}{l} x=-f^\prime(p) \\ y= p x + f(p) \end{array}.\right.$</p>
+
+<h4>Contoh</h4>
+Solusi umum persamaan $latex \displaystyle y = y^\prime x + \frac{1}{y^\prime}$ adalah $latex y=C x + 1/C$ dan salah satu solusi singularnya adalah $latex y^2 = 4 x$.
+<h2>Persamaan diferensial orde kedua</h2>
+<h3>Persamaan tanpa <em>y</em></h3>
+Persamaan diferensial orde kedua yang tidak memuat $latex y$ berbentuk $latex F(y^{\prime\prime}, y^\prime, x)=0.$ Dengan $latex w=y^\prime,$ persamaan ini menjadi $latex F(w^\prime, w, x)=0,$ yang merupakan persamaan orde pertama. Persamaan tersebut mula-mula dapat diselesaikan untuk $latex w$, kemudian untuk $latex y,$ dengan menggunakan $latex w=d y / d x$.
+<h4>Contoh</h4>
+Solusi umum persamaan $latex x^2 y^{\prime\prime} + {y^\prime}^2 - 2 x y^\prime = 0$ adalah
+<p style="text-align: center">$latex \displaystyle y = \frac{1}{2} x^2 - C_1 x + C_1^2 \ln(|x+C_1|) + C_2,$</p>
+dengan $latex C_1$ dan $latex C_2$ konstanta sembarang.
+<h3>Persamaan tanpa <em>x</em></h3>
+PDB jenis ini berbentuk $latex F(y^{\prime\prime}, y^\prime, y)=0.$ Misalkan $latex w=d y / d x$ merupakan fungsi $latex y$. Maka,
+<p style="text-align: center">$latex \displaystyle \frac{d^2 y}{d x^2}=\frac{d w}{d x}=\frac{d w}{d y} \frac{d y}{d x}= \frac{d w}{d y} w,$</p>
+dan PDB tersebut menjadi $latex \displaystyle F(w \frac{d w}{d y}, w, y)=0,$ yang merupakan persamaan diferensial orde pertama dengan $latex y$ sebagai peubah bebas. Persamaan ini dapat diselesaikan untuk $latex w$ sebagai fungsi $latex y$, kemudian persamaan terpisahkan orde pertama $latex \displaystyle \frac{d y}{d x}=w(y)$ dapat diselesaikan.
+<h4><span style="text-align: initial;font-size: 1em">Contoh</span></h4>
+<span style="text-align: initial;font-size: 1em">Solusi umum persamaan $latex \displaystyle y y^{\prime\prime} + \left(y^\prime \right)^2 + 4 = 0$ </span>diberikan secara implisit oleh
+<p style="text-align: center">$latex \displaystyle x^2 = \left(C_2 + \frac{1}{4 C_1} \sqrt{1-4 C_1^2 y^2}\right)^2$.</p>
+
+<h3>Persamaan linear</h3>
+Solusi umum persamaan $latex \displaystyle a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h(x)$ berbentuk
+<p style="text-align: center">$latex y(x)=C_1 y_1(x) + C_2 y_2(x)+y_p(x),$</p>
+dengan
+<ul>
+ 	<li>$latex y_p(x)$ merupakan solusi khusus dari persamaan $latex a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h(x)$,</li>
+	<li><span style="text-align: initial;font-size: 1em">$latex y_1$ dan $latex y_2$ merupakan dua solusi <span style="text-decoration: underline">bebas linear</span> satu sama lain </span>dari persamaan homogen terkait $latex a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=0,$</li>
+ 	<li><span style="text-align: initial;font-size: 1em">$latex C_1$ dan $latex C_2$ merupakan dua konstanta sembarang.</span></li>
+</ul>
+Dengan demikian, persamaan linear di atas diselesaikan dalam dua langkah:
+<ol>
+ 	<li>Selesaikan persamaan homogen (yaitu, carilah dua solusi bebas linear $latex y_1$ dan $latex y_2$),</li>
+ 	<li><span style="text-align: initial;font-size: 1em">Carilah solusi khusus persamaan lengkap.</span></li>
+</ol>
+<h4>Cara menyelesaikan persamaan homogen</h4>
+Solusi umum $latex y$ dari persamaan homogen
+<p style="text-align: center">$latex a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=0$</p>
+merupakan kombinasi linear dari dua solusi bebas linearnya $latex y_1$ dan $latex y_2$, yaitu $latex y=C_1 y_1+C_2 y_2$ dengan $latex C_1$ dan $latex C_2$ konstanta.
+<h5>Persamaan dengan koefisien konstan</h5>
+Misalkan persamaan diferensial homogen tersebut berbentuk
+<p style="text-align: center">$latex a_2 y^{\prime\prime} + a_1 y^\prime + a_0 y=0,$</p>
+dengan $latex a_2$, $latex a_1$, dan $latex a_0$ konstanta. Persamaan karakteristik yang terkait adalah $latex a_2 r^2 + a_1 r + a_0=0$.
+<ul>
+ 	<li>Jika persamaan karakteristik mempunyai dua akar real berbeda $latex r_1$ dan $latex r_2$, maka dua solusi bebas linear persamaan homogen tersebut adalah</li>
+</ul>
+<p style="text-align: center">$latex y_1(x)=\exp(r_1 x) \qquad {\rm and} \qquad y_2(x)=\exp(r_2 x).$</p>
+
+<ul>
+ 	<li style="text-align: left">Jika persamaan karakteristik mempunyai dua akar kompleks $latex \alpha \pm i \beta$, dua solusi bebas linearnya adalah</li>
+</ul>
+<p style="text-align: center">$latex y_1(x)=\exp(\alpha x) \cos(\beta x) \qquad y_2(x)=\exp(\alpha x) \sin(\beta x).$</p>
+
+<ul>
+ 	<li>Jika persamaan karakteristik mempunyai satu akar real berulang $latex r$, dua solusi bebas linearnya adalah</li>
+</ul>
+<p style="text-align: center">$latex y_1(x)=\exp(r x) \qquad y_2(x)=x \exp(r x).$</p>
+
+<h6>Contoh 1</h6>
+Solusi masalah nilai awal $latex y^{\prime\prime} + y^\prime - 2 y = 0$, $latex y(0)=0$, dan $latex y^\prime(0)=3$ adalah $latex \displaystyle y = e^x - e^{-2 x}$.
+<h6>Contoh 2</h6>
+Solusi umum persamaan $latex y^{\prime\prime} - 4 y^\prime + 4 y = 0$ adalah $latex \displaystyle y=C_1 e^{2 x} + C_2 x e^{2 x}$.
+<h5>Persamaan Cauchy–Euler</h5>
+Jika PDB tersebut berbentuk
+<p style="text-align: center">$latex a_2 x^2 y^{\prime\prime} + a_1 x y^\prime+ a_0 y=0, \quad a_2, a_1, \text{and }a_0 \text{ constants},$</p>
+kita mencari solusi berbentuk $latex y=x^r=\exp(r \ln(x))$ (yang didefinisikan untuk $latex x&gt;0$). Kemudian, $latex r$ harus memenuhi
+<p style="text-align: center">$latex a_2 r (r-1)+a_1 r+a_0=0.$</p>
+
+<ul>
+ 	<li>Jika persamaan ini mempunyai dua akar real berbeda $latex r_1$ dan $latex r_2$, maka dua solusi bebas linearnya adalah</li>
+</ul>
+<p style="text-align: center">$latex y_1=x^{r_1} \qquad y_2=x^{r_2},$</p>
+
+<ul>
+ 	<li>Jika persamaan ini mempunyai dua akar kompleks $latex \alpha \pm i \beta$, dua solusi bebas linearnya adalah</li>
+</ul>
+<p style="text-align: center">$latex y_1(x)=x^\alpha \cos(\beta \ln(x)) \qquad y_2(x)=x^\alpha \sin(\beta \ln(x)),$</p>
+
+<ul>
+ 	<li>Jika persamaan ini mempunyai satu akar real berulang $latex r$, dua solusi bebas linearnya adalah</li>
+</ul>
+<p style="text-align: center">$latex y_1(x)=x^r \qquad y_2(x)=x^r \ln(x).$</p>
+<span style="text-decoration: underline">Catatan</span>: Jika Anda harus menyelesaikan persamaan untuk $latex x &lt; 0,$ terlebih dahulu lakukan perubahan peubah $latex t=-x$.
+<h6>Contoh</h6>
+$latex y = C_1 x^2$ memenuhi $latex x^2 y^{\prime\prime} - 3 x y^\prime + 4 y =0$, $latex y(0)=0$, $latex y^\prime(0)=0$.
+<h5>Persamaan lain</h5>
+Jika Anda mengetahui suatu solusi khusus $latex y_{ph}$ (misalnya ditemukan melalui inspeksi) dari persamaan homogen, Anda dapat menerapkan metode <em>variasi konstanta</em>: carilah solusi lain berbentuk $latex y=v(x) y_{ph}(x)$, substitusikan ke dalam persamaan homogen, lalu selesaikan persamaan orde pertama untuk $latex v$. Prosedur ini disebut <em>reduksi orde</em>.
+<h4>Cara mencari solusi khusus persamaan lengkap</h4>
+Sekarang kita meninjau $latex a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h(x)$ dan mencari solusi khusus $latex y_p$ untuk persamaan ini. Seperti sebelumnya, terdapat beberapa kasus khusus yang memiliki metode penyelesaian sistematis.
+<h5>Persamaan dengan koefisien konstan: Metode koefisien tak tentu</h5>
+Jika PDB tersebut memiliki koefisien konstan dan jika
+<p style="text-align: center">$latex h(x)=P_m(x) \exp(\alpha x) \cos(\beta x)+ Q_m(x) \exp(\alpha x) \sin(\beta x),$</p>
+dengan $latex P_m$ dan $latex Q_m$ polinom berderajat $latex m$, gunakan bentuk solusi khusus di bawah ini, dengan $latex K_m$ dan $latex L_m$ merupakan polinom berderajat $latex m$ dalam setiap kasus.
+<ul>
+ 	<li>$latex y_p=K_m(x) \exp(\alpha x) \cos(\beta x)+ L_m(x) \exp(\alpha x) \sin(\beta x)$ jika $latex \alpha \pm i \beta$ <span style="text-decoration: underline">bukan</span> akar persamaan karakteristik yang terkait,</li>
+ 	<li>$latex y_p=x^h \big[ K_m(x) \exp(\alpha x) \cos(\beta x)+ L_m(x) \exp(\alpha x) \sin(\beta x)\big]$ jika $latex \alpha \pm i \beta$ <span style="text-decoration: underline">merupakan</span> akar dengan <span style="text-decoration: underline">multiplisitas</span> $latex h$ dari persamaan karakteristik yang terkait ($latex h$ dapat bernilai 1 atau 2).</li>
+</ul>
+<span style="text-decoration: underline">Catatan</span>: Karena persamaan tersebut linear, <span style="text-decoration: underline">prinsip superposisi</span> dapat digunakan: jika $latex h(x)=h_1(x)+h_2(x)$, dan jika $latex y_{p_1}$ serta $latex y_{p_2}$ masing-masing merupakan solusi khusus dari $latex a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h_1(x)$ dan $latex a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h_2(x)$, maka $latex y_{p}=y_{p_1}+y_{p_2}$ merupakan solusi khusus dari $latex a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h(x)$.
+<h6>Contoh 1</h6>
+Salah satu solusi khusus persamaan $latex y^{\prime\prime} + y^\prime - 2 y = 4 \sin(2 x)$ adalah $latex \displaystyle y_p = - \frac{1}{5} \cos(2 x) - \frac{3}{5} \sin(2 x)$.
+<h6>Contoh 2</h6>
+Salah satu solusi khusus persamaan $latex y^{\prime\prime} - 4 y^\prime + 4 y = 12 x e^{2 x}$ adalah $latex \displaystyle y_p = 2 x^3 e^{2 x}$.
+<h5>Persamaan Cauchy–Euler</h5>
+Perubahan peubah $latex x = e^t$ akan mengubah persamaan Cauchy–Euler menjadi persamaan berkoefisien konstan, yang kemudian dapat diselesaikan seperti dijelaskan di atas.
+<h5>Persamaan lain</h5>
+Jika PDB tersebut tidak memiliki koefisien konstan, atau jika $latex h(x)$ tidak berbentuk seperti yang dibahas di atas, Anda dapat mencoba menggunakan metode <span style="text-decoration: underline">variasi konstanta</span>: carilah solusi khusus $latex y_p=v_1(x) y_1(x)+v_2(x) y_2(x),$ dengan $latex y_1$ dan $latex y_2$ dua solusi bebas linear dari persamaan homogen terkait, lalu selesaikan untuk $latex v_1$ dan $latex v_2$ setelah menetapkan
+<p style="text-align: center">$latex v_1^\prime(x) y_1(x) + v_2^\prime(x) y_2(x)=0.$</p>
+
+<h6>Contoh</h6>
+Solusi umum persamaan $latex y^{\prime\prime} + 2 y^\prime + y = 2 x^{-2} e^{-x}$, $latex x &gt; 0$ adalah
+<p style="text-align: center">$latex \displaystyle C_1 e^{-x} + C_2 x e^{-x} - 2 \left(1+\ln(x)\right) e^{-x}$.</p>
+<span style="text-decoration: underline">Catatan</span>: Terdapat cara mudah untuk memeriksa bahwa dua fungsi $latex y_1$ dan $latex y_2$ bebas linear: Wronskian keduanya
+<p style="text-align: center">$latex W[y_1,y_2]=\left| \begin{array}{cc}y_1 &amp; y_2 \\ y_1^\prime &amp; y_2^\prime \end{array} \right|$</p>
+harus tak nol.

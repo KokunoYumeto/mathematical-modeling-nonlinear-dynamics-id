@@ -1,0 +1,593 @@
+{
+  "schema": "o005-mastery-v1",
+  "schema_version": "1.0.0",
+  "unit_id": "O005-LEGA-V101-CH13",
+  "language": "id-ID",
+  "source": {
+    "resource": "Joceline Lega, Introduction to Mathematical Modeling",
+    "edition": "University of Arizona Pressbooks v1.01 (Maret 2026)",
+    "record": "Pressbooks chapter 445",
+    "record_id": 445,
+    "source_title": "Refresher: Ordinary Differential Equations",
+    "target_title": "Penyegaran: Persamaan Diferensial Biasa",
+    "modified_utc": "2026-03-19T20:12:31Z",
+    "source_file": "authority/units/O005-LEGA-V101-CH13/content.raw.en.html",
+    "source_locator": "exact frozen Pressbooks record 445 content.raw, problems and printed answer groups on lines 415–580",
+    "source_url": "https://opentextbooks.library.arizona.edu/mathematicalmodeling/chapter/appendix-ordinary-differential-equations/",
+    "license": "CC BY-NC-SA 4.0"
+  },
+  "provenance_policy": {
+    "source_derived": "Ringkasan masalah dan jawaban tercetak merupakan adaptasi/terjemahan hanya dari soal serta kelompok jawaban pada baris 415–580 sumber beku dan tetap berada di bawah CC BY-NC-SA 4.0.",
+    "new_original": "Petunjuk, pemeriksaan, jawaban lengkap, domain, dan solusi bertahap dihitung serta ditulis baru untuk edisi Bahasa Indonesia. Kolom source_answer sengaja mempertahankan cakupan jawaban tercetak, sedangkan check dan solution_or_rubric membedakan hasil verifikasi independen, melengkapi syarat awal Soal 8, dan menjelaskan setiap kekurangan sumber."
+  },
+  "article_link_catalog": [],
+  "problems": [
+    {
+      "problem_id": "O005-LEGA-V101-CH13-P01",
+      "ordinal": 1,
+      "problem_summary": "Klasifikasikan tujuh persamaan diferensial orde pertama yang diberikan sebagai linear, dapat dipisahkan, eksak, dapat diselesaikan melalui perubahan variabel, Riccati, Bernoulli, atau Clairaut, tanpa menyelesaikannya.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle (1-y^3) \\sinh(3 x) y^\\prime + 7 \\cosh(y) \\exp(x)=0.",
+        "\\displaystyle (4 y + 2 x + 4 x y + x^2 + 3 y^2) dx + (4 x + 6 y) dy = 0.",
+        "\\displaystyle \\left(x^2 \\ln\\left(\\frac{x}{y}\\right)\\right) dx + \\frac{1}{x} \\left(x^3 + 3 y x^2 + \\frac{y^4}{x} \\right) dy = 0.",
+        "\\displaystyle x^3 \\text{sinh}(x) y^\\prime + 5 x^2 y - \\frac{3}{x} \\cos(2 x) = \\sin(x).",
+        "\\displaystyle (2 x^2 y - 2 y + 1) dx - x dy = 0.",
+        "\\displaystyle \\left(\\cos(x) \\sin(y) - x \\sin(x) \\sin(y) + y^2 \\right) dx + \\left( x \\cos(x) \\cos(y) + 2 x y \\right) dy = 0.",
+        "\\displaystyle y y^\\prime+\\cosh(x) y^2=\\exp(x)."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "source_answer": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "source_answer": "Jawaban tercetak: (1) dapat dipisahkan; (2) \\(e^x\\) adalah faktor integrasi; (3) homogen berderajat dua; (4) linear; (5) linear; (6) eksak; (7) Bernoulli dengan \\(n=-1\\).",
+      "hint": {
+        "text": "Uji tiap persamaan dengan kriteria yang paling langsung: pisahkan faktor yang hanya bergantung pada \\(x\\) dan \\(y\\); untuk bentuk \\(M\\,dx+N\\,dy=0\\), bandingkan \\(M_y\\) dan \\(N_x\\); untuk linearitas, susun sebagai \\(y'+p(x)y=q(x)\\); dan untuk Bernoulli cari bentuk \\(y'+p(x)y=q(x)y^n\\)."
+      },
+      "check": {
+        "type": "classified_first_order_equations_with_exact_criteria",
+        "final_answer": "Klasifikasinya adalah: (1) dapat dipisahkan pada setiap interval yang tidak memuat \\(x=0\\); (2) menjadi eksak setelah dikalikan faktor integrasi \\(e^x\\); (3) homogen berderajat dua sehingga dapat memakai \\(y=vx\\); (4) linear pada setiap interval yang tidak memuat \\(x=0\\); (5) linear pada setiap interval yang tidak memuat \\(x=0\\); (6) eksak; dan (7) Bernoulli dengan pangkat \\(n=-1\\).",
+        "quick_check": "Untuk (2), \\((M_y-N_x)/N=1\\), sehingga \\(\\mu'/\\mu=1\\) dan \\(\\mu=e^x\\). Untuk (6), kedua turunan silang sama dengan \\(\\cos x\\cos y-x\\sin x\\cos y+2y\\). Untuk (7), pembagian dengan \\(y\\) memberi \\(y'+\\cosh(x)y=e^x y^{-1}\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_classification",
+        "steps": [
+          {
+            "explanation": "Pisahkan persamaan pertama dengan mengumpulkan semua faktor \\(y\\) bersama \\(dy\\) dan semua faktor \\(x\\) bersama \\(dx\\).",
+            "formula": "\\frac{1-y^3}{\\cosh y}\\,dy=-\\frac{7e^x}{\\sinh(3x)}\\,dx,\\qquad x\\ne0"
+          },
+          {
+            "explanation": "Untuk persamaan kedua, selisih turunan silang berbanding tepat dengan \\(N\\), sehingga faktor integrasinya hanya bergantung pada \\(x\\).",
+            "formula": "M_y-N_x=4x+6y=N,\\qquad \\frac{\\mu'}{\\mu}=1\\Longrightarrow\\mu=e^x"
+          },
+          {
+            "explanation": "Pada persamaan ketiga, kedua koefisien bentuk diferensial berskala dengan pangkat dua ketika \\((x,y)\\) diganti oleh \\((tx,ty)\\).",
+            "formula": "M(tx,ty)=t^2M(x,y),\\qquad N(tx,ty)=t^2N(x,y)"
+          },
+          {
+            "explanation": "Persamaan keempat dan kelima dapat disusun secara linear terhadap \\(y\\).",
+            "formula": "y'+\\frac{5}{x\\sinh x}y=\\frac{\\sin x+3\\cos(2x)/x}{x^3\\sinh x},\\qquad y'-\\left(2x-\\frac2x\\right)y=\\frac1x"
+          },
+          {
+            "explanation": "Turunan silang persamaan keenam sama, sehingga bentuk diferensialnya eksak.",
+            "formula": "M_y=N_x=\\cos x\\cos y-x\\sin x\\cos y+2y"
+          },
+          {
+            "explanation": "Persamaan ketujuh adalah Bernoulli; substitusi \\(u=y^2\\) juga langsung mengubahnya menjadi persamaan linear.",
+            "formula": "y'+\\cosh(x)y=e^x y^{-1},\\qquad u=y^2\\Longrightarrow \\frac12u'+\\cosh(x)u=e^x"
+          }
+        ],
+        "conclusion": "Ketujuh klasifikasi jawaban tercetak benar. Persamaan (1) tidak memiliki solusi real melalui \\(x=0\\), sebab persamaan asal di titik itu menjadi \\(7\\cosh y=0\\). Pembatasan interval pada (4) dan (5) diperlukan karena koefisien bentuk normal singular di \\(x=0\\); persamaan (3) juga mensyaratkan \\(x/y>0\\) agar logaritma real terdefinisi."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH13-P02",
+      "ordinal": 2,
+      "problem_summary": "Selesaikan persamaan (5) dan (6) dari Soal 1.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle (2 x^2 y - 2 y + 1) dx - x dy = 0.",
+        "\\displaystyle \\left(\\cos(x) \\sin(y) - x \\sin(x) \\sin(y) + y^2 \\right) dx + \\left( x \\cos(x) \\cos(y) + 2 x y \\right) dy = 0."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "source_answer": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "source_answer": "Jawaban tercetak: (5) \\(y=-1/(2x^2)+(C/x^2)e^{x^2}\\); (6) \\(K=x\\cos(x)\\sin(y)+xy^2\\).",
+      "hint": {
+        "text": "Untuk (5), gunakan bentuk linear yang diperoleh pada Soal 1 dan faktor integrasi \\(x^2e^{-x^2}\\); setelah memperoleh keluarga pada \\(x\\ne0\\), periksa khusus nilai parameter yang mungkin meniadakan singularitas di nol. Untuk (6), integralkan koefisien \\(dx\\) terhadap \\(x\\), lalu cocokkan turunannya terhadap \\(y\\) dengan koefisien \\(dy\\)."
+      },
+      "check": {
+        "type": "exact_linear_and_exact_first_order_solutions",
+        "final_answer": "Pada setiap interval \\(x>0\\) atau \\(x<0\\), solusi umum (5) adalah \\(y(x)=-\\frac{1}{2x^2}+\\frac{C}{x^2}e^{x^2}\\). Untuk \\(C=\\tfrac12\\), singularitasnya dapat dihilangkan: tetapkan \\(y(0)=\\tfrac12\\) sehingga diperoleh solusi analitik yang melintasi nol. Solusi implisit (6) adalah \\(x\\cos x\\sin y+xy^2=C\\).",
+        "quick_check": "Substitusi solusi (5) ke \\((2x^2y-2y+1)-xy'=0\\) memberi nol identik untuk \\(x\\ne0\\). Jika \\(C=\\tfrac12\\), deretnya adalah \\(y=\\tfrac12+\\tfrac14x^2+\\tfrac1{12}x^4+\\cdots\\), yang memenuhi persamaan juga di nol. Untuk (6), potensial \\(F=x\\cos x\\sin y+xy^2\\) memenuhi \\(F_x=M\\) dan \\(F_y=N\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Susun persamaan (5) dalam bentuk linear.",
+            "formula": "y'+\\left(\\frac2x-2x\\right)y=\\frac1x,\\qquad x\\ne0"
+          },
+          {
+            "explanation": "Hitung faktor integrasi pada satu interval yang tidak melintasi nol.",
+            "formula": "\\mu(x)=\\exp\\!\\int\\left(\\frac2x-2x\\right)dx=x^2e^{-x^2}"
+          },
+          {
+            "explanation": "Integralkan persamaan yang telah menjadi turunan hasil kali.",
+            "formula": "(x^2e^{-x^2}y)'=xe^{-x^2}\\Longrightarrow x^2e^{-x^2}y=-\\frac12e^{-x^2}+C"
+          },
+          {
+            "explanation": "Kasus \\(C=1/2\\) meniadakan suku singular dan mempunyai perluasan analitik melalui nol.",
+            "formula": "y=\\frac{e^{x^2}-1}{2x^2}=\\frac12+\\frac{x^2}{4}+\\frac{x^4}{12}+\\cdots,\\qquad y(0)=\\frac12"
+          },
+          {
+            "explanation": "Untuk (6), integrasikan \\(M\\) terhadap \\(x\\).",
+            "formula": "F(x,y)=\\int M\\,dx=x\\cos x\\sin y+xy^2+g(y)"
+          },
+          {
+            "explanation": "Pencocokan \\(F_y=N\\) memberi \\(g'(y)=0\\), sehingga kurva aras \\(F=C\\) adalah solusi.",
+            "formula": "F_y=x\\cos x\\cos y+2xy=N\\Longrightarrow x\\cos x\\sin y+xy^2=C"
+          }
+        ],
+        "conclusion": "Kedua jawaban tercetak benar sebagai keluarga pada \\(x\\ne0\\). Solusi (5) umumnya berlaku pada interval yang tidak memuat nol, tetapi pilihan \\(C=1/2\\) memiliki singularitas yang dapat dihilangkan dan meluas analitik melalui \\(x=0\\) dengan \\(y(0)=1/2\\). Solusi (6) bersifat implisit dan cabang eksplisitnya harus dipilih di daerah tempat teorema fungsi implisit berlaku."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH13-P03",
+      "ordinal": 3,
+      "problem_summary": "Verifikasi solusi implisit yang diberikan untuk persamaan \\(e^x(1+y)y'+(1+e^x)(y^2+y-2)=0\\), lalu tentukan solusi dengan \\(y(0)=3\\) dan jelaskan keunikannya.",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\frac{1}{3} \\ln\\left[(y-1)^2 |y+2|\\right] = \\exp(-x) - x + C",
+        "\\exp(x) (1+y) \\frac{dy}{dx} + (1 + \\exp(x)) (y^2 + y -2)=0.",
+        "y(0)=3"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "source_answer": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "source_answer": "Jawaban tercetak hanya memberikan \\(\\frac13\\ln[(y-1)^2|y+2|]=e^{-x}-x+\\frac13\\ln20-1\\).",
+      "hint": {
+        "text": "Turunkan kedua ruas secara implisit dan gunakan \\(y^2+y-2=(y-1)(y+2)\\). Untuk konstanta, substitusikan \\((x,y)=(0,3)\\). Keunikan dapat diperiksa setelah menulis \\(y'=f(x,y)\\) di sekitar \\((0,3)\\)."
+      },
+      "check": {
+        "type": "implicit_solution_initial_condition_and_uniqueness",
+        "final_answer": "Solusi yang memenuhi data awal adalah \\(\\frac13\\ln[(y-1)^2|y+2|]=e^{-x}-x+\\frac13\\ln20-1\\), dengan cabang \\(y(x)>1\\). Solusi ini unik: \\(f(x,y)=-(1+e^{-x})(y^2+y-2)/(1+y)\\) mulus terhadap \\((x,y)\\) di sekitar \\((0,3)\\), sehingga teorema eksistensi–keunikan berlaku. Pada cabang \\(y>1\\), ruas kiri naik dari \\(-\\infty\\) ke \\(+\\infty\\), sehingga relasi implisit menentukan tepat satu \\(y\\) untuk setiap \\(x\\in\\mathbb R\\).",
+        "quick_check": "Turunan ruas kiri terhadap \\(y\\) adalah \\((1+y)/(y^2+y-2)\\), sedangkan turunan \\(e^{-x}-x+C\\) adalah \\(-(1+e^{-x})\\). Pada \\(x=0,y=3\\), kedua ruas bernilai \\(\\frac13\\ln20\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Turunkan fungsi logaritmik terhadap \\(y\\).",
+            "formula": "\\frac{d}{dy}\\left[\\frac13\\ln((y-1)^2|y+2|)\\right]=\\frac13\\left(\\frac2{y-1}+\\frac1{y+2}\\right)=\\frac{1+y}{y^2+y-2}"
+          },
+          {
+            "explanation": "Diferensiasi implisit menghasilkan kembali persamaan sumber.",
+            "formula": "\\frac{1+y}{y^2+y-2}y'=-(1+e^{-x})\\Longleftrightarrow e^x(1+y)y'+(1+e^x)(y^2+y-2)=0"
+          },
+          {
+            "explanation": "Gunakan data awal untuk menentukan konstanta.",
+            "formula": "\\frac13\\ln(2^2\\cdot5)=1+C\\Longrightarrow C=\\frac13\\ln20-1"
+          },
+          {
+            "explanation": "Fungsi ruas kanan bentuk eksplisit tidak singular di sekitar data awal karena \\(1+y=4\\ne0\\).",
+            "formula": "y'=f(x,y)=-(1+e^{-x})\\frac{(y-1)(y+2)}{1+y}"
+          },
+          {
+            "explanation": "Cabang data awal berada pada \\(y>1\\); monotisitas fungsi logaritmik di cabang ini memberi keunikan global relasi implisit.",
+            "formula": "g'(y)=\\frac{1+y}{(y-1)(y+2)}>0\\quad(y>1)"
+          }
+        ],
+        "conclusion": "Rumus tercetak untuk kurva solusi benar, tetapi kelompok jawaban sumber tidak menjawab bagian penjelasan keunikan. Solusi kesetimbangan \\(y=1\\) dan \\(y=-2\\) juga memenuhi ODE, namun tidak termasuk dalam keluarga logaritmik dan tidak memenuhi data awal ini."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH13-P04",
+      "ordinal": 4,
+      "problem_summary": "Untuk \\(y''-3y'+2y=0\\), tentukan solusi umum, selesaikan masalah nilai awal \\(y(0)=0,\\ y'(0)=1\\), dan tentukan solusi masalah nilai batas \\(y(0)=y(1)=0\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "y^{\\prime \\prime}-3 y^\\prime + 2 y=0",
+        "y(0)=0",
+        "y^\\prime(0)=1",
+        "y(1)=0"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "source_answer": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "source_answer": "Jawaban tercetak: (1) \\(y=C_1e^{2x}+C_2e^x\\); (2) \\(y=e^{2x}-e^x\\); (3) ya, \\(y=0\\).",
+      "hint": {
+        "text": "Faktorkan persamaan karakteristik. Untuk setiap pasangan syarat, substitusikan langsung ke solusi umum dan selesaikan sistem linear bagi kedua konstanta."
+      },
+      "check": {
+        "type": "constant_coefficient_ode_ivp_and_bvp",
+        "final_answer": "Solusi umum pada \\(\\mathbb R\\) adalah \\(y=C_1e^{2x}+C_2e^x\\). Masalah nilai awal mempunyai solusi unik \\(y=e^{2x}-e^x\\). Masalah nilai batas mempunyai satu-satunya solusi \\(y\\equiv0\\).",
+        "quick_check": "Untuk IVP, \\(y(0)=0\\) memberi \\(C_2=-C_1\\) dan \\(y'(0)=1\\) memberi \\(C_1=1\\). Untuk BVP, syarat kedua memberi \\(C_1(e^2-e)=0\\), sehingga kedua konstanta nol."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Faktorkan polinom karakteristik.",
+            "formula": "r^2-3r+2=(r-1)(r-2)"
+          },
+          {
+            "explanation": "Dua akar berbeda menghasilkan dua solusi eksponensial bebas linear.",
+            "formula": "y=C_1e^{2x}+C_2e^x"
+          },
+          {
+            "explanation": "Terapkan syarat awal.",
+            "formula": "C_1+C_2=0,\\qquad 2C_1+C_2=1\\Longrightarrow(C_1,C_2)=(1,-1)"
+          },
+          {
+            "explanation": "Untuk syarat batas, gunakan kembali \\(C_2=-C_1\\).",
+            "formula": "0=y(1)=C_1(e^2-e)\\Longrightarrow C_1=C_2=0"
+          }
+        ],
+        "conclusion": "Ketiga bagian jawaban tercetak benar; koefisien ODE kontinu di seluruh garis real, sehingga tidak ada pembatasan domain tambahan."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH13-P05",
+      "ordinal": 5,
+      "problem_summary": "Selesaikan persamaan Cauchy–Euler \\(x^3y'''-2x^2y''+8xy'-8y=7x+x^2\\cos(2\\ln x)\\) untuk \\(x>0\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "x^3 y^{(3)} - 2 x^2 y^{\\prime \\prime}+8 x y^\\prime - 8 y = 7 x + x^2 \\cos\\left(2 \\ln(x)\\right) \\qquad x&gt;0."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "source_answer": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "source_answer": "Jawaban tercetak: \\(y=C_1x+C_2x^2\\cos(2\\ln x)+C_3x^2\\sin(2\\ln x)+\\frac75x\\ln x-\\frac1{10}x^2\\ln x\\cos(2\\ln x)+\\frac1{20}x^2\\ln x\\sin(2\\ln x)\\).",
+      "hint": {
+        "text": "Gunakan \\(t=\\ln x\\) dan \\(Y(t)=y(e^t)\\). Operator Euler berubah menjadi polinom koefisien konstan \\(P(D)=D^3-5D^2+12D-8\\); kedua suku pemaksa beresonansi dengan akar \\(1\\) dan \\(2+2i\\)."
+      },
+      "check": {
+        "type": "exact_cauchy_euler_resonant_solution",
+        "final_answer": "Untuk \\(x>0\\), solusi umum adalah \\(y=C_1x+C_2x^2\\cos(2\\ln x)+C_3x^2\\sin(2\\ln x)+\\frac75x\\ln x-\\frac1{10}x^2\\ln x\\cos(2\\ln x)+\\frac1{20}x^2\\ln x\\sin(2\\ln x)\\).",
+        "quick_check": "Penerapan operator \\(L[y]=x^3y'''-2x^2y''+8xy'-8y\\) pada tiga suku homogen memberi nol, sedangkan pada tiga suku partikular memberi tepat \\(7x+x^2\\cos(2\\ln x)\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Lakukan perubahan variabel Euler.",
+            "formula": "t=\\ln x,\\quad Y(t)=y(e^t),\\quad L=P(D)=D^3-5D^2+12D-8"
+          },
+          {
+            "explanation": "Faktorkan polinom karakteristik.",
+            "formula": "P(r)=r^3-5r^2+12r-8=(r-1)((r-2)^2+4)"
+          },
+          {
+            "explanation": "Kembalikan solusi homogen dari variabel \\(t\\) ke \\(x\\).",
+            "formula": "y_h=C_1x+C_2x^2\\cos(2\\ln x)+C_3x^2\\sin(2\\ln x)"
+          },
+          {
+            "explanation": "Pemaksa \\(7e^t\\) beresonansi dengan akar sederhana \\(r=1\\), sehingga koefisiennya ditentukan oleh \\(P'(1)=5\\).",
+            "formula": "Y_{p,1}=\\frac7{P'(1)}te^t=\\frac75te^t"
+          },
+          {
+            "explanation": "Untuk pemaksa kompleks \\(e^{(2+2i)t}\\), gunakan \\(1/P'(2+2i)=-1/10-i/20\\), lalu ambil bagian real.",
+            "formula": "Y_{p,2}=t e^{2t}\\left[-\\frac1{10}\\cos(2t)+\\frac1{20}\\sin(2t)\\right]"
+          },
+          {
+            "explanation": "Substitusi \\(t=\\ln x\\) dan \\(e^t=x\\) memberi solusi tercetak.",
+            "formula": "y=y_h+\\frac75x\\ln x-\\frac1{10}x^2\\ln x\\cos(2\\ln x)+\\frac1{20}x^2\\ln x\\sin(2\\ln x)"
+          }
+        ],
+        "conclusion": "Jawaban tercetak benar dan terverifikasi secara simbolik. Domain \\(x>0\\) merupakan bagian dari soal dan diperlukan oleh perubahan variabel \\(t=\\ln x\\)."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH13-P06",
+      "ordinal": 6,
+      "problem_summary": "Selesaikan persamaan \\(xy''+y'=0\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle x y^{\\prime \\prime} + y^\\prime = 0"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "source_answer": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "source_answer": "Jawaban tercetak: \\(y=K_1\\ln|x|+K_2\\).",
+      "hint": {
+        "text": "Kenali ruas kiri sebagai turunan hasil kali \\((xy')'\\), lalu integralkan dua kali. Perhatikan titik singular \\(x=0\\)."
+      },
+      "check": {
+        "type": "exact_reduced_order_logarithmic_solution",
+        "final_answer": "Pada setiap interval \\((0,\\infty)\\) atau \\((-\\infty,0)\\), solusi umum adalah \\(y=K_1\\ln|x|+K_2\\). Solusi konstan, yaitu kasus \\(K_1=0\\), dapat diperluas melintasi \\(x=0\\), tetapi keluarga umum logaritmik tidak.",
+        "quick_check": "Dari \\(y'=K_1/x\\) dan \\(y''=-K_1/x^2\\), diperoleh \\(xy''+y'=-K_1/x+K_1/x=0\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Gabungkan kedua suku sebagai satu turunan.",
+            "formula": "xy''+y'=(xy')'=0"
+          },
+          {
+            "explanation": "Integrasi pertama memberi konstanta pada setiap komponen domain.",
+            "formula": "xy'=K_1\\Longrightarrow y'=\\frac{K_1}{x},\\qquad x\\ne0"
+          },
+          {
+            "explanation": "Integrasi kedua menghasilkan logaritma nilai mutlak.",
+            "formula": "y=K_1\\ln|x|+K_2"
+          }
+        ],
+        "conclusion": "Jawaban tercetak benar. Solusi umum harus dinyatakan pada interval yang tidak melintasi titik singular \\(x=0\\)."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH13-P07",
+      "ordinal": 7,
+      "problem_summary": "Selesaikan \\(y''+6y'+9y=e^{-3x}/x\\) untuk \\(x\\ne0\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "y^{\\prime \\prime} + 6 y^\\prime + 9 y = {{1}\\over{x}} \\exp(- 3 x) \\qquad x \\ne 0."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "source_answer": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "source_answer": "Jawaban tercetak: \\(y=C_1e^{-3x}+C_2xe^{-3x}+x\\ln|x|e^{-3x}\\).",
+      "hint": {
+        "text": "Operator ruas kiri adalah \\((D+3)^2\\). Substitusi \\(y=e^{-3x}v(x)\\) menghilangkan bagian homogen dan menyisakan persamaan sederhana bagi \\(v''\\)."
+      },
+      "check": {
+        "type": "exact_repeated_root_variation_solution",
+        "final_answer": "Pada setiap interval \\(x>0\\) atau \\(x<0\\), solusi umum adalah \\(y=e^{-3x}(C_1+C_2x+x\\ln|x|)\\).",
+        "quick_check": "Identitas \\((D+3)^2(e^{-3x}v)=e^{-3x}v''\\) mengubah ODE menjadi \\(v''=1/x\\). Substitusi kembali memberi residual nol."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Faktorkan operator homogen dan lakukan substitusi.",
+            "formula": "D^2+6D+9=(D+3)^2,\\qquad y=e^{-3x}v"
+          },
+          {
+            "explanation": "Sederhanakan persamaan setelah faktor eksponensial dicoret.",
+            "formula": "e^{-3x}v''=\\frac{e^{-3x}}x\\Longrightarrow v''=\\frac1x"
+          },
+          {
+            "explanation": "Integrasikan dua kali pada satu interval yang tidak memuat nol.",
+            "formula": "v'=\\ln|x|+A,\\qquad v=x\\ln|x|-x+Ax+B"
+          },
+          {
+            "explanation": "Serap suku \\(-x\\) ke konstanta koefisien \\(x\\).",
+            "formula": "v=C_1+C_2x+x\\ln|x|"
+          }
+        ],
+        "conclusion": "Jawaban tercetak benar; \\(x=0\\) memisahkan dua komponen domain dan tidak boleh dilintasi oleh solusi umum."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH13-P08",
+      "ordinal": 8,
+      "problem_summary": "Selesaikan sistem \\(x'=2x+y+3e^t\\), \\(y'=-x+2y-e^t\\) dengan syarat awal \\(x(0)=0\\) dan \\(y(0)=1\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\left \\{ \\begin{array}{l} \\displaystyle \\frac{d x}{d t} = 2 x + y + 3 e^t \\\\ \\displaystyle \\frac{d y}{d t} = - x + 2 y - e^t \\end{array} \\right. \\qquad x(0)=0; y(0)=1."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "source_answer": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "source_answer": "Jawaban tercetak memberikan keluarga \\(x=C_1e^{2t}\\cos t+C_2e^{2t}\\sin t-2e^t\\), \\(y=-C_1e^{2t}\\sin t+C_2e^{2t}\\cos t-e^t\\), tetapi tidak menentukan \\(C_1,C_2\\).",
+      "hint": {
+        "text": "Gunakan keluarga umum tercetak atau diagonal kompleks matriks \\(\\begin{pmatrix}2&1\\\\-1&2\\end{pmatrix}\\). Setelah mendapatkan solusi umum, terapkan kedua syarat awal; keduanya harus menentukan dua konstanta."
+      },
+      "check": {
+        "type": "exact_two_by_two_linear_ivp",
+        "final_answer": "Syarat awal memberi \\(C_1=2\\) dan \\(C_2=2\\). Jadi solusi unik pada seluruh \\(\\mathbb R\\) adalah \\(x(t)=2e^{2t}(\\cos t+\\sin t)-2e^t\\) dan \\(y(t)=2e^{2t}(\\cos t-\\sin t)-e^t\\).",
+        "quick_check": "Pada \\(t=0\\), diperoleh \\(x(0)=2-2=0\\) dan \\(y(0)=2-1=1\\). Diferensiasi langsung memberi residual nol pada kedua persamaan sistem."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Matriks homogen mempunyai nilai eigen \\(2\\pm i\\), sehingga basis real solusi homogen berbentuk sinus–kosinus dengan faktor \\(e^{2t}\\).",
+            "formula": "x_h=e^{2t}(C_1\\cos t+C_2\\sin t),\\qquad y_h=e^{2t}(-C_1\\sin t+C_2\\cos t)"
+          },
+          {
+            "explanation": "Coba solusi partikular berbentuk vektor konstan kali \\(e^t\\).",
+            "formula": "X_p=ke^t,\\quad (I-A)k=(3,-1)^T\\Longrightarrow k=(-2,-1)^T"
+          },
+          {
+            "explanation": "Gabungkan bagian homogen dan partikular.",
+            "formula": "x=x_h-2e^t,\\qquad y=y_h-e^t"
+          },
+          {
+            "explanation": "Gunakan data awal untuk menentukan kedua konstanta yang tidak ditentukan dalam jawaban sumber.",
+            "formula": "x(0)=C_1-2=0,\\qquad y(0)=C_2-1=1\\Longrightarrow C_1=C_2=2"
+          }
+        ],
+        "conclusion": "Keluarga umum yang dicetak sumber benar, tetapi jawaban sumber tidak menyelesaikan IVP karena membiarkan kedua konstanta bebas. Penerapan syarat awal menghasilkan solusi unik di atas."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH13-P09",
+      "ordinal": 9,
+      "problem_summary": "Selesaikan sistem \\(\\dot X=AX+B\\) dengan \\(A=\\begin{pmatrix}7&6\\\\2&6\\end{pmatrix}\\) dan \\(B=(-70,35)^Te^{3t}\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\dot X = A X + B",
+        "A = \\left( \\begin{array}{cc} 7 &amp; 6 \\\\ 2 &amp; 6 \\end{array} \\right) \\quad \\text{and} \\quad B = \\left(\\begin{array}{c} -70 \\\\ 35 \\end{array} \\right) \\exp(3 t)."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "source_answer": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "source_answer": "Jawaban tercetak: \\(X=\\begin{pmatrix}3e^{3t}&2e^{10t}\\\\-2e^{3t}&e^{10t}\\end{pmatrix}(C_1,C_2)^T+(-60t+10/7,\\ 40t+5/7)^Te^{3t}\\).",
+      "hint": {
+        "text": "Cari nilai eigen \\(3\\) dan \\(10\\). Karena pemaksa mengandung \\(e^{3t}\\), terjadi resonansi dengan mode pertama; gunakan ansatz \\(X_p=e^{3t}(tv+w)\\)."
+      },
+      "check": {
+        "type": "exact_resonant_linear_system_solution",
+        "final_answer": "Solusi umum pada \\(\\mathbb R\\) adalah \\(X(t)=\\begin{pmatrix}3e^{3t}&2e^{10t}\\\\-2e^{3t}&e^{10t}\\end{pmatrix}\\begin{pmatrix}C_1\\\\C_2\\end{pmatrix}+e^{3t}\\begin{pmatrix}-60t+10/7\\\\40t+5/7\\end{pmatrix}\\).",
+        "quick_check": "Kolom fundamental memenuhi \\(AX_i=X_i'\\) dan determinannya \\(7e^{13t}\\ne0\\). Untuk bagian partikular, substitusi menghasilkan \\(X_p'-AX_p=(-70,35)^Te^{3t}\\) tepat."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Hitung nilai eigen dan pilih vektor eigen.",
+            "formula": "\\lambda_1=3,\\ \\xi_1=(3,-2)^T;\\qquad \\lambda_2=10,\\ \\xi_2=(2,1)^T"
+          },
+          {
+            "explanation": "Susun matriks fundamental.",
+            "formula": "U(t)=\\begin{pmatrix}3e^{3t}&2e^{10t}\\\\-2e^{3t}&e^{10t}\\end{pmatrix}"
+          },
+          {
+            "explanation": "Gunakan ansatz resonan dan samakan koefisien \\(t\\) serta konstanta.",
+            "formula": "X_p=e^{3t}(tv+w),\\qquad Av=3v,\\qquad (A-3I)w=v-b"
+          },
+          {
+            "explanation": "Salah satu pilihan yang memenuhi sistem tersebut adalah",
+            "formula": "v=(-60,40)^T,\\qquad w=(10/7,5/7)^T"
+          },
+          {
+            "explanation": "Gabungkan solusi homogen dan partikular.",
+            "formula": "X=U(t)C+e^{3t}\\begin{pmatrix}-60t+10/7\\\\40t+5/7\\end{pmatrix}"
+          }
+        ],
+        "conclusion": "Jawaban tercetak benar dan terverifikasi dengan substitusi simbolik; semua koefisien kontinu, sehingga domain solusi adalah seluruh garis real."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH13-P10",
+      "ordinal": 10,
+      "problem_summary": "Selesaikan \\(y'''-5y''+12y'-8y=e^{3t}\\cos(2t)+7te^t\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\frac{d^3 y}{d t^3} - 5 \\frac{d^2 y}{d t^2} + 12 \\frac{d y}{d t} - 8 y = \\exp(3 t) \\cos(2 t) + 7 t \\exp(t)."
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "source_answer": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "source_answer": "Jawaban tercetak: \\(y=C_1e^t+C_2e^{2t}\\cos2t+C_3e^{2t}\\sin2t-\\frac3{68}e^{3t}\\cos2t+\\frac5{68}e^{3t}\\sin2t+(\\frac7{10}t^2+\\frac{14}{25}t)e^t\\).",
+      "hint": {
+        "text": "Faktorkan polinom karakteristik menjadi \\((r-1)((r-2)^2+4)\\). Pemaksa sinusoidal tidak beresonansi, sedangkan \\(7te^t\\) beresonansi dengan akar \\(r=1\\), sehingga ansatz polinomialnya harus dikalikan satu faktor \\(t\\)."
+      },
+      "check": {
+        "type": "exact_third_order_constant_coefficient_solution",
+        "final_answer": "Solusi umum pada \\(\\mathbb R\\) adalah \\(y=C_1e^t+C_2e^{2t}\\cos(2t)+C_3e^{2t}\\sin(2t)-\\frac3{68}e^{3t}\\cos(2t)+\\frac5{68}e^{3t}\\sin(2t)+(\\frac7{10}t^2+\\frac{14}{25}t)e^t\\).",
+        "quick_check": "Untuk \\(P(r)=r^3-5r^2+12r-8\\), \\(1/P(3+2i)=(-3-5i)/68\\), yang memberi koefisien \\(-3/68\\) dan \\(5/68\\). Substitusi seluruh solusi ke ODE menghasilkan residual nol."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Faktorkan polinom karakteristik dan tuliskan solusi homogen.",
+            "formula": "P(r)=(r-1)((r-2)^2+4),\\qquad y_h=C_1e^t+C_2e^{2t}\\cos2t+C_3e^{2t}\\sin2t"
+          },
+          {
+            "explanation": "Gunakan eksponensial kompleks untuk pemaksa \\(e^{3t}\\cos2t\\).",
+            "formula": "\\frac1{P(3+2i)}=\\frac{-3-5i}{68}"
+          },
+          {
+            "explanation": "Ambil bagian real untuk memperoleh solusi partikular sinusoidal.",
+            "formula": "y_{p,1}=-\\frac3{68}e^{3t}\\cos2t+\\frac5{68}e^{3t}\\sin2t"
+          },
+          {
+            "explanation": "Untuk pemaksa resonan \\(7te^t\\), tulis \\(y=e^tv\\); operator pada \\(v\\) menjadi \\(D^3-2D^2+5D\\).",
+            "formula": "(D^3-2D^2+5D)v=7t"
+          },
+          {
+            "explanation": "Ansatz \\(v=at^2+bt\\) memberi kedua koefisien.",
+            "formula": "10at+(5b-4a)=7t\\Longrightarrow a=\\frac7{10},\\quad b=\\frac{14}{25}"
+          }
+        ],
+        "conclusion": "Jawaban tercetak benar dan terverifikasi secara simbolik; koefisien serta pemaksa terdefinisi untuk semua \\(t\\in\\mathbb R\\)."
+      }
+    },
+    {
+      "problem_id": "O005-LEGA-V101-CH13-P11",
+      "ordinal": 11,
+      "problem_summary": "Selesaikan bentuk diferensial \\([5x^4y^3+3y\\sin x+3xy\\cos x]dx+[3x^5y^2+3x\\sin x]dy=0\\) dengan syarat \\(y(\\pi)=5\\).",
+      "article_link_ids": [],
+      "source_formula_occurrences": [
+        "\\displaystyle \\left[5 x^4 y^3 + 3 y \\sin(x) + 3 x y \\cos(x) \\right] dx + \\left[3 x^5 y^2 + 3 x \\sin(x) \\right] dy = 0,",
+        "y(\\pi)=5"
+      ],
+      "provenance": {
+        "problem_summary": "source_derived",
+        "source_answer": "source_derived",
+        "hint": "new_original",
+        "check": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "source_answer": "Jawaban tercetak: \\(x^5y^3+3xy\\sin x=125\\pi^5\\).",
+      "hint": {
+        "text": "Periksa keeksakan dengan membandingkan \\(M_y\\) dan \\(N_x\\). Integrasikan \\(M\\) terhadap \\(x\\), lalu gunakan syarat awal untuk menentukan konstanta kurva aras."
+      },
+      "check": {
+        "type": "exact_differential_equation_with_initial_condition",
+        "final_answer": "Solusi implisit yang melalui \\((\\pi,5)\\) adalah \\(x^5y^3+3xy\\sin x=125\\pi^5\\). Relasi ini menentukan cabang solusi lokal yang unik di sekitar \\(x=\\pi\\), karena \\(F_y(\\pi,5)=75\\pi^5\\ne0\\). Cabang maksimal harus tetap berada di daerah tempat \\(F_y=3x(x^4y^2+\\sin x)\\ne0\\); kurva tidak dapat memuat \\(x=0\\) karena konstanta arasnya positif.",
+        "quick_check": "Dengan \\(F=x^5y^3+3xy\\sin x\\), diperoleh \\(F_x=5x^4y^3+3y\\sin x+3xy\\cos x=M\\) dan \\(F_y=3x^5y^2+3x\\sin x=N\\). Selain itu, \\(F(\\pi,5)=125\\pi^5\\)."
+      },
+      "solution_or_rubric": {
+        "type": "worked_solution",
+        "steps": [
+          {
+            "explanation": "Hitung kedua turunan silang.",
+            "formula": "M_y=15x^4y^2+3\\sin x+3x\\cos x=N_x"
+          },
+          {
+            "explanation": "Integrasikan \\(M\\) terhadap \\(x\\).",
+            "formula": "F(x,y)=\\int M\\,dx=x^5y^3+3xy\\sin x+g(y)"
+          },
+          {
+            "explanation": "Bandingkan dengan \\(N\\) untuk menentukan fungsi tambahan.",
+            "formula": "F_y=3x^5y^2+3x\\sin x+g'(y)=N\\Longrightarrow g'(y)=0"
+          },
+          {
+            "explanation": "Gunakan syarat awal untuk menentukan konstanta.",
+            "formula": "C=F(\\pi,5)=\\pi^5(5^3)+15\\pi\\sin\\pi=125\\pi^5"
+          },
+          {
+            "explanation": "Periksa keberadaan cabang eksplisit lokal melalui teorema fungsi implisit.",
+            "formula": "F_y(\\pi,5)=3\\pi^5\\cdot25+3\\pi\\sin\\pi=75\\pi^5\\ne0"
+          }
+        ],
+        "conclusion": "Jawaban tercetak benar. Bentuk implisit adalah bentuk alami solusi; domain cabang eksplisit dibatasi oleh titik tempat koefisien \\(dy\\), yaitu \\(F_y\\), menjadi nol."
+      }
+    }
+  ]
+}

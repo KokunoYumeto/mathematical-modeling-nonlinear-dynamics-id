@@ -22,19 +22,20 @@ notice, and non-endorsement. Maintain component-level rights. Redraw Figure
 statement; never represent the Pressbooks theme as part of the independently
 reproducible source closure.
 
-Chapter boundaries `O005-LEGA-V101-CH01` through `CH12` and the visible Part
+Chapter boundaries `O005-LEGA-V101-CH01` through `CH13` and the visible Part
 2–5 introductions are translated, built, independently rereviewed where
 applicable, and deterministically verified. Their complete topology,
-identifiers, protected mathematics, links, figures, 102 stable problem IDs and
-mastery records, ten open Python notebooks, and 2,607 paired segments are bound
-in the current state, cursor, and QA log. The immediate boundary is Chapter 13,
-Pressbooks record 445, *Refresher: Ordinary Differential Equations*, as
-`O005-LEGA-V101-CH13`: its exact canonical/raw/rendered authority and eight
-primary assets are frozen. Translate the complete 581-line unit in source order
-as *Penyegaran: Persamaan Diferensial Biasa*, preserving 456 elements, 524 TeX
-slots, 39 fragment links, eight figures with descriptions, eleven problems,
-and eleven source final-answer groups. Create the eleven required stable
-hint/check/solution records without attributing new support to the source.
+identifiers, protected mathematics, links, figures, all 113 stable problem IDs
+and mastery records, ten open Python notebooks, and 3,153 paired segments are
+bound in the current state, cursor, and QA log. The immediate source-order
+boundary is Chapter 14, Pressbooks record 555, *Examples of Project Topics*, as
+`O005-LEGA-V101-CH14`: freeze its exact canonical/raw/rendered authority and
+component closure from the admitted coordinator snapshot, then translate the
+complete unit naturally as *Contoh Topik Proyek* while preserving its project
+topology, mathematics, links, assets, descriptions, and rights. Build the
+declared twelve self-contained open/synthetic-data project packets only where
+they add the missing executable and self-study closure, with distinct
+provenance and no proprietary code.
 
 Continue in exact frozen TOC order through all front/back matter and
 fourteen chapters: 54,932 source words, 113 exercises, twelve projects, eleven

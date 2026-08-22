@@ -738,6 +738,124 @@ SPECS = {
             ),
         ],
     },
+    "O005-LEGA-V101-CH13": {
+        "source_lines": 581,
+        "problem_count": 11,
+        "answer_heading_count": 11,
+        "fragments": [
+            "01-foundations-first-second-order.html",
+            "02-higher-order-systems.html",
+            "03-phase-plane-problems-answers.html",
+        ],
+        "replacements": [
+            (r"\frac{d^2 y}{d x},", r"\frac{d^2 y}{d x^2},", 1),
+            (
+                r"\rho(x,y)=f(x).",
+                r"\rho(x)=\exp\left(\int f(x)\,dx\right).",
+                1,
+            ),
+            (
+                r"\rho(x,y)=f(y).",
+                r"\rho(y)=\exp\left(-\int f(y)\,dy\right).",
+                1,
+            ),
+            (
+                r"x_1(t)=\alpha_1, x_2(t)=\alpha_2,\dots, x_n(t)=\alpha_n",
+                r"x_1(t_0)=\alpha_1, x_2(t_0)=\alpha_2,\dots, x_n(t_0)=\alpha_n",
+                1,
+            ),
+            (
+                r"\Re e[\exp(\alpha+i \beta)",
+                r"\operatorname{Re}[\exp((\alpha+i\beta)t)",
+                1,
+            ),
+            (
+                r"\Im m[\exp(\alpha+i \beta)",
+                r"\operatorname{Im}[\exp((\alpha+i\beta)t)",
+                1,
+            ),
+            (r"\Re e(X_p)", r"\operatorname{Re}(X_p)", 1),
+            (r"\Im m(X_p)", r"\operatorname{Im}(X_p)", 1),
+            (r"F(X)", r"F(Y)", 1),
+            (r"\det(A)&gt;0", r"\det(A)\ge 0", 1),
+            (
+                r"\displaystyle \left\{ \begin{array}{l} x = C_1 \cos(t) e^{2 t} + C_2 \sin(t) e^{2 t} - 2 e^t \\ y = -C_1 \sin(t) e^{2 t} + C_2 \cos(t) e^{2 t} - e^t \end{array} \right. .",
+                r"\displaystyle \left\{ \begin{array}{l} x = 2 \cos(t) e^{2 t} + 2 \sin(t) e^{2 t} - 2 e^t \\ y = -2 \sin(t) e^{2 t} + 2 \cos(t) e^{2 t} - e^t \end{array} \right. .",
+                1,
+            ),
+            (r"\text{and}", r"\text{dan}", 2),
+            (r"\text{ and }", r"\text{ dan }", 1),
+            (r"\text{ constant}", r"\text{ konstan}", 1),
+            (r"{\rm and}", r"\text{dan}", 1),
+            (r"\text{and }", r"\text{dan }", 1),
+            (r"\text{ constants}", r"\text{ konstan}", 1),
+            (
+                r'Secara bersama-sama, teorema-teorema ini menyiratkan bahwa untuk sistem dinamis yang terdiferensialkan secara kontinu dan berbentuk (<a href="#Eq_13.3">13.3</a>), setiap masalah nilai awal memiliki solusi tunggal. Dengan kata lain, jika $latex f$ dalam (<a href="#Eq_13.3">13.3</a>) terdiferensialkan secara kontinu, lintasan-lintasan dalam ruang fase sistem dinamis (<a href="#Eq_13.3">13.3</a>) tidak dapat saling berpotongan.',
+                r'Secara bersama-sama, teorema-teorema ini menyiratkan bahwa untuk sistem dinamis yang terdiferensialkan secara kontinu dan berbentuk (<a href="#Eq_13.3">13.3</a>), setiap masalah nilai awal memiliki solusi tunggal. Karena $latex f$ dalam (<a href="#Eq_13.3">13.3</a>) dapat bergantung secara eksplisit pada variabel bebas, kesimpulan tanpa-perpotongan berlaku dalam ruang keadaan diperluas (x,Y); untuk sistem otonom berbentuk (<a href="#Eq_13.3">13.3</a>), kesimpulan itu berlaku langsung bagi lintasan dalam ruang fase Y.',
+                1,
+            ),
+            (
+                r'<li>Jika $latex \displaystyle \frac{1}{N} \left[\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}\right]$ hanya merupakan fungsi $latex x$, gunakan faktor integrasi $latex \rho(x)=\exp\left(\int f(x)\,dx\right).$</li>',
+                r'<li>Jika $latex \displaystyle \frac{1}{N} \left[\frac{\partial M}{\partial y}-\frac{\partial N}{\partial x}\right]$ hanya bergantung pada $latex x$ dan hasilnya dinamai f(x), faktor integrasinya adalah $latex \rho(x)=\exp\left(\int f(x)\,dx\right).$</li>',
+                1,
+            ),
+            (
+                r'<li>Jika $latex \displaystyle \frac{1}{M} \left[\frac{\partial M}{\partial y}-\frac{\partial N} {\partial x}\right]$ hanya merupakan fungsi $latex y$, gunakan faktor integrasi $latex \rho(y)=\exp\left(-\int f(y)\,dy\right).$</li>',
+                r'<li>Jika $latex \displaystyle \frac{1}{M} \left[\frac{\partial M}{\partial y}-\frac{\partial N} {\partial x}\right]$ hanya bergantung pada $latex y$ dan hasilnya dinamai f(y), faktor integrasinya adalah $latex \rho(y)=\exp\left(-\int f(y)\,dy\right).$</li>',
+                1,
+            ),
+            (
+                r'Solusi umum persamaan $latex \displaystyle \frac{d y}{d x}=\frac{y^2 + 2 x y}{x^2}$ adalah $latex \displaystyle y = \frac{C x^2}{1 - C x}$, dengan $latex C$ konstanta sembarang.',
+                r'Keluarga solusi persamaan $latex \displaystyle \frac{d y}{d x}=\frac{y^2 + 2 x y}{x^2}$ adalah $latex \displaystyle y = \frac{C x^2}{1 - C x}$, dengan $latex C$ konstanta sembarang. Selain keluarga ini, $latex y=-x$ juga merupakan solusi dan tidak diperoleh untuk nilai parameter C yang berhingga.',
+                1,
+            ),
+            (
+                r'Solusi umum persamaan $latex x^2 y^\prime + 2 x y - y^3 = 0, x&gt;0$ adalah $latex \displaystyle y = \pm \sqrt{\frac{5 x}{2 + C x^5}}$.',
+                r'Keluarga solusi tak nol persamaan $latex x^2 y^\prime + 2 x y - y^3 = 0, x&gt;0$ adalah $latex \displaystyle y = \pm \sqrt{\frac{5 x}{2 + C x^5}}$. Solusi nol $latex y=0$ juga memenuhi persamaan.',
+                1,
+            ),
+            (
+                r'Solusi umum persamaan $latex y^\prime = 1 + x^2 - 2 x y + y^2$ adalah $latex y = x + 1/(C - x)$.',
+                r'Keluarga solusi persamaan $latex y^\prime = 1 + x^2 - 2 x y + y^2$ adalah $latex y = x + 1/(C - x)$. Solusi khusus $latex y=x$ juga memenuhi persamaan dan tidak termasuk dalam keluarga untuk nilai parameter C yang berhingga.',
+                1,
+            ),
+            (
+                r'dengan $latex C_1$ dan $latex C_2$ konstanta sembarang.',
+                r'dengan $latex C_1$ dan $latex C_2$ konstanta sembarang. Selain keluarga tersebut, setiap fungsi konstan $latex y=C$ juga merupakan solusi.',
+                1,
+            ),
+            (
+                r'Jika nilai-nilai eigen dari $latex A$ memiliki bagian imajiner tak nol, maka $latex Y=Y_0$ merupakan spiral stabil. Potret fase (<a href="#Eq_13.5">13.5</a>) yang bersesuaian ditunjukkan pada Gambar 13.4.<a id="Fig_13.4"></a>',
+                r'Jika nilai-nilai eigen dari $latex A$ merupakan pasangan kompleks konjugat dengan bagian imajiner tak nol dan bagian real negatif, maka $latex Y=Y_0$ merupakan spiral stabil. Jika bagian realnya positif, spiral tersebut tak stabil. Potret fase stabil (<a href="#Eq_13.5">13.5</a>) ditunjukkan pada Gambar 13.4.<a id="Fig_13.4"></a>',
+                1,
+            ),
+            (
+                r'[caption id="attachment_483" align="alignleft" width="100"]<img class="wp-image-483" src="assets/phase-center-source.png" alt="Potret fase sebuah pusat (linear). Deskripsi panjang tersedia." width="100" height="125" /> Gambar 13.7 [<a href="#Fig_13.7_Desc"><em>Deskripsi Gambar</em></a>][/caption]<span style="text-align: initial;font-size: 1em">Terakhir, jika semua nilai eigen dari $latex A$ memiliki bagian real nol, maka $latex Y=Y_0$ <em>stabil marginal</em>. Karena kita mengabaikan situasi nongenerik ketika $latex A = 0$, hal ini menyiratkan bahwa $latex A$ memiliki nilai-nilai eigen kompleks konjugat yang imajiner murni, dan titik tetap $latex Y=Y_0$ disebut </span><em style="text-align: initial;font-size: 1em">pusat linear</em><span style="text-align: initial;font-size: 1em">. Dalam hal ini, $latex \det(A) &gt; 0$ tetapi $latex \text{Tr} (A) = 0$. Gambar 13.7 menunjukkan potret fase sistem linear (<a href="#Eq_13.5">13.5</a>) ketika titik asal merupakan pusat (linear). Menentukan apakah titik tetap $latex Y = Y_0$ merupakan pusat nonlinear bagi sistem dinamis (<a href="#Eq_13.4">13.4</a>) memerlukan analisis lebih lanjut.</span>',
+                r'[caption id="attachment_483" align="alignleft" width="100"]<img class="wp-image-483" src="assets/phase-center-source.png" alt="Potret fase sebuah pusat (linear). Deskripsi panjang tersedia." width="100" height="125" /> Gambar 13.7 [<a href="#Fig_13.7_Desc"><em>Deskripsi Gambar</em></a>][/caption]<span style="text-align: initial;font-size: 1em">Terakhir, jika nilai-nilai eigen $latex A$ membentuk pasangan konjugat imajiner murni tak nol, maka $latex Y=Y_0$ <em>stabil marginal</em>. Sekadar mensyaratkan semua bagian real nol tidaklah cukup: sekalipun kasus $latex A = 0$ diabaikan, matriks $latex A$ dapat nilpoten tak nol, dengan nilai-nilai eigen nol dan solusi linear yang tumbuh tak terbatas. Untuk pasangan imajiner murni tak nol, titik tetap $latex Y=Y_0$ disebut </span><em style="text-align: initial;font-size: 1em">pusat linear</em><span style="text-align: initial;font-size: 1em">. Dalam hal ini, $latex \det(A) &gt; 0$ tetapi $latex \text{Tr} (A) = 0$. Gambar 13.7 menunjukkan potret fase sistem linear (<a href="#Eq_13.5">13.5</a>) ketika titik asal merupakan pusat (linear). Menentukan apakah titik tetap $latex Y = Y_0$ merupakan pusat nonlinear bagi sistem dinamis (<a href="#Eq_13.4">13.4</a>) memerlukan analisis lebih lanjut.</span>',
+                1,
+            ),
+            (
+                r'<p style="text-align: center">$latex \displaystyle \frac{1}{3} \ln\left[(y-1)^2 |y+2|\right] = e^{-x} - x + \frac{1}{3} \ln(20) -1.$</p>',
+                r'<p style="text-align: center">$latex \displaystyle \frac{1}{3} \ln\left[(y-1)^2 |y+2|\right] = e^{-x} - x + \frac{1}{3} \ln(20) -1.$ Karena ruas kanan bentuk eksplisit persamaan diferensial kontinu dan Lipschitz lokal terhadap y di sekitar (0,3), dengan penyebut 1+y tidak nol, masalah nilai awal tersebut memiliki solusi lokal tunggal.</p>',
+                1,
+            ),
+            (
+                r'Selesaikan $latex \displaystyle x y^{\prime \prime} + y^\prime = 0$.',
+                r'Selesaikan $latex \displaystyle x y^{\prime \prime} + y^\prime = 0$ pada suatu interval yang tidak melintasi x=0.',
+                1,
+            ),
+            (
+                r'<p style="text-align: center">$latex \displaystyle y = K_1 \ln(|x|) + K_2.$</p>',
+                r'<p style="text-align: center">$latex \displaystyle y = K_1 \ln(|x|) + K_2.$ Keluarga ini berlaku secara terpisah pada interval dengan x positif atau x negatif.</p>',
+                1,
+            ),
+            (
+                r'<p style="text-align: center">$latex \displaystyle \left\{ \begin{array}{l} x = 2 \cos(t) e^{2 t} + 2 \sin(t) e^{2 t} - 2 e^t \\ y = -2 \sin(t) e^{2 t} + 2 \cos(t) e^{2 t} - e^t \end{array} \right. .$</p>',
+                r'<p style="text-align: center">$latex \displaystyle \left\{ \begin{array}{l} x = 2 \cos(t) e^{2 t} + 2 \sin(t) e^{2 t} - 2 e^t \\ y = -2 \sin(t) e^{2 t} + 2 \cos(t) e^{2 t} - e^t \end{array} \right. .$ Kondisi awal memberikan C1=C2=2.</p>',
+                1,
+            ),
+        ],
+    },
 }
 
 
@@ -786,18 +904,26 @@ def assemble(unit_id: str, *, write: bool) -> dict[str, object]:
         r"<h3(?P<attrs>[^>]*)>(?P<body>(?:(?!</h3>).)*Soal (?P<number>\d+)(?:(?!</h3>).)*)</h3>"
     )
     matches = list(problem_heading.finditer(text))
-    expected_numbers = list(range(1, spec.get("problem_count", 0) + 1))
+    problem_count = int(spec.get("problem_count", 0))
+    answer_heading_count = int(spec.get("answer_heading_count", 0))
+    expected_numbers = list(range(1, problem_count + 1))
+    expected_numbers.extend(range(1, answer_heading_count + 1))
     actual_numbers = [int(match.group("number")) for match in matches]
     if actual_numbers != expected_numbers:
         raise RuntimeError("Translated problem-heading sequence differs")
 
+    match_index = 0
+
     def add_problem_id(match: re.Match[str]) -> str:
+        nonlocal match_index
         number = int(match.group("number"))
         attrs = match.group("attrs")
         if re.search(r"\bid\s*=", attrs):
             raise RuntimeError("Translation fragment already has a problem-heading ID")
+        prefix = "P" if match_index < problem_count else "A"
+        match_index += 1
         return (
-            f'<h3{attrs} id="{unit_id}-P{number:02d}">'
+            f'<h3{attrs} id="{unit_id}-{prefix}{number:02d}">'
             f'{match.group("body")}</h3>'
         )
 

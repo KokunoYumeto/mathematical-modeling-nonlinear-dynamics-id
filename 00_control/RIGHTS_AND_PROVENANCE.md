@@ -261,7 +261,9 @@ the frozen authority and bound by exact EPUB member, path, size, dimension, and
 SHA-256 identity; no broader component-rights claim is made. The rendered
 Pressbooks witness retains remote responsive `srcset` variants that are not
 part of the admitted primary-asset closure. The independent Indonesian reader
-must use the eight frozen local primary files, retain and translate the eight
-figure descriptions, and remove remote image selection at runtime. The eleven
-printed answer groups are source-derived; new hints, checks, and worked
-solutions must be labeled separately and remain compatible with ShareAlike.
+uses only the eight frozen local primary files, retains and translates all
+eight figure descriptions, and removes remote image selection at runtime. The
+eleven printed answer groups remain labeled source-derived; the eleven hints,
+checks, and worked solutions are newly authored, distinctly provenanced, and
+distributed compatibly with ShareAlike. No notebook or proprietary program
+surface is attributed to or manufactured for this refresher chapter.

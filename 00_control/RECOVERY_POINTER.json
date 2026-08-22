@@ -32,19 +32,29 @@
     "inventory_receipt_sha256": "121edbad5bde443b6d01f41c24ed66f3e6d223db21722bdd472f9266801959a8",
     "all_bytes_and_sha256_equal": true
   },
-  "last_completed_unit": {
-    "unit_id": "O005-LEGA-V101-CH12",
-    "source_record_type": "chapters",
-    "source_record_id": 413,
-    "source_slug": "appendix-vector-calculus",
-    "source_canonical_sha256": "fa1364a307b033035bce94975db0667edf3b8d208e73b4e07882b090cafab377",
-    "source_content_sha256": "165e0b7a0b489dd9be7ae396ac9a3c0430c89599c23a444fcaadffb2a07a3ccc",
-    "target_content_sha256": "6e0e2d720732726d88e3479d399ee25a4b012a750a4626c2219de9e54baa8f8b",
-    "segment_sha256": "be1a4ec04a0739dde654f507b7ef9bbf906398b4ae1dcf6c9f03572a15cec34d",
-    "mastery_sha256": null,
-    "reader_manifest_sha256": "80eb6c5692d0d01c2fa85de079c32ba9056442455cbd3ed7f3495fb627f67085",
-    "qa_tree_sha256": "50d3befe18450e4ab83f1ca57e87703af285429c3957d8cd007f5711704b3fce"
+  "pending_publication": {
+    "commit": "d3363f6b3612b3beef9b235f9b6c134fa0593fc1",
+    "files": 37,
+    "bytes": 1240861,
+    "inventory_sha256": "8704b2c436b7998e6c2794baa054260c6520ac44ba9002d8a58c065fa5260b2f",
+    "attempted_at": "2026-08-22T16:47:58+02:00",
+    "status": "blocked_external",
+    "reason": "GitHub rejected the valid saved credential with HTTP 403 because the account is suspended; the second saved credential and keyring credential are invalid, SSH has no authorized key, and anonymous repository/raw reads return 404.",
+    "next_action": "Retry the complete local commit chain to origin/main when GitHub access is restored; do not create a duplicate repository or rewrite the commits."
   },
-  "current_unit": "O005-LEGA-V101-CH13",
-  "next_action": "Use authority/units/O005-LEGA-V101-CH13/AUTHORITY_MANIFEST.json and content.raw.en.html to translate the complete 581-line Refresher: Ordinary Differential Equations unit as Penyegaran: Persamaan Diferensial Biasa, preserving 456 elements, 524 TeX slots, 39 fragment links, eight local primary figures and descriptions, eleven problems, and eleven source answer groups; add separately provenanced hint/check/worked-solution records for all eleven problems."
+  "last_completed_unit": {
+    "unit_id": "O005-LEGA-V101-CH13",
+    "source_record_type": "chapters",
+    "source_record_id": 445,
+    "source_slug": "appendix-ordinary-differential-equations",
+    "source_canonical_sha256": "4c1d86fe406cb145189312bc82c7c1572632335b2cab0eb29ee6fbfa1fa9a37c",
+    "source_content_sha256": "4ef96c2d76484ba271a9e94c524d755806064a97eb051944a958f8e664b6b005",
+    "target_content_sha256": "90e45dbcb0e3c95a5f9ca07a1533886c4bee99b71530fe18f7b245a128bcc46b",
+    "segment_sha256": "d824d63da00be5f49f1d45f0cc6465c80b7e09efb2c106cb546b580a0120acbb",
+    "mastery_sha256": "67965dd1d7e64e66de99b060f1c6be4ee526cd5bd66ffae6a8e2b0be94ff115a",
+    "reader_manifest_sha256": "995e0f24de41317590468911dbd729f04484b9441baf4954e58af5dd400f78c3",
+    "qa_tree_sha256": "78ead87f005d1b4d48fa2a731a1c9287b332e7c288ee14fa2fc84c967e46af4d"
+  },
+  "current_unit": "O005-LEGA-V101-CH14",
+  "next_action": "Materialize and verify Chapter 14 record 555, Examples of Project Topics, from the exact admitted coordinator snapshot as O005-LEGA-V101-CH14; freeze canonical/raw/rendered and component closure plus rights, census every project/formula/link/asset/description surface, then begin complete natural id-ID translation as Contoh Topik Proyek and add only the declared bounded open project packets."
 }

@@ -7,12 +7,24 @@ Updated: 2026-08-22 Europe/Berlin
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
 The official PDF and EPUB are frozen locally, and the coordinator's complete
 22-record semantic snapshot and 45-asset manifest have been copied verbatim
-into this lane. Chapters 1–12 and the visible Part 2–5 introductions are
-translated, built, independently reviewed, and verified. Production is active
-on Chapter 13, Pressbooks record 445, *Refresher: Ordinary Differential
-Equations*, as `O005-LEGA-V101-CH13`. Its exact canonical/raw/rendered authority
-and eight-primary-asset closure are frozen; complete source-order natural id-ID
-translation is now the executable action.
+into this lane. Chapters 1–13 and the visible Part 2–5 introductions are
+translated, built, independently reviewed, and verified. Production advances
+to Chapter 14, Pressbooks record 555, *Examples of Project Topics*, as
+`O005-LEGA-V101-CH14`; its exact authority and component closure must now be
+materialized from the admitted coordinator snapshot before source-order natural
+id-ID translation begins as *Contoh Topik Proyek*.
+
+Chapter 12 production and the Chapter 13 freeze are preserved in local commit
+`d3363f6b3612b3beef9b235f9b6c134fa0593fc1` (37 files / 1,240,861 bytes;
+ordered inventory SHA-256
+`8704b2c436b7998e6c2794baa054260c6520ac44ba9002d8a58c065fa5260b2f`).
+Immediate authenticated push was attempted with both saved credentials, the
+keyring, and SSH. GitHub rejected the valid credential with HTTP 403 because
+the account is suspended; the other routes are invalid or unauthorized, and
+anonymous repository/raw URLs currently return 404. The exact commit remains
+push-ready and must be retried without rewriting or creating a duplicate
+repository when GitHub restores access. This external publication failure does
+not stop Chapter 13 translation.
 
 ## Frozen Chapter 10 authority
 
@@ -711,10 +723,38 @@ translation is now the executable action.
   rendered witness retains remote responsive `srcset` alternatives; production
   must ship the eight local primary assets and remove remote runtime dependency.
 
+## Admitted Chapter 13 boundary
+
+- Complete natural id-ID target *Penyegaran: Persamaan Diferensial Biasa*:
+  61,373 bytes, SHA-256
+  `90e45dbcb0e3c95a5f9ca07a1533886c4bee99b71530fe18f7b245a128bcc46b`.
+  Exact replay preserves 456 / 456 ordered elements and 39 / 39 links, and maps
+  524 source TeX occurrences to 528 declared target occurrences. Corrections
+  `O005-CORR-0141`–`0153` bind every mathematical intervention.
+- Backend: 546 paired segments / 329,930 bytes, SHA-256
+  `d824d63da00be5f49f1d45f0cc6465c80b7e09efb2c106cb546b580a0120acbb`;
+  unit record: 3,211 bytes, SHA-256
+  `7fd24929fe42d8f6f9961d81a1ec0da876eca0db68d52469c42c2bf2cf050fc1`.
+  Eleven independently authored mastery records are 34,275 bytes, SHA-256
+  `67965dd1d7e64e66de99b060f1c6be4ee526cd5bd66ffae6a8e2b0be94ff115a`.
+- Reader: thirteen payload files / 1,169,623 bytes excluding its 1,385-byte
+  manifest; manifest SHA-256
+  `995e0f24de41317590468911dbd729f04484b9441baf4954e58af5dd400f78c3`.
+  Repeated builds were byte-identical across fourteen files, canonical QA tree
+  SHA-256 `78ead87f005d1b4d48fa2a731a1c9287b332e7c288ee14fa2fc84c967e46af4d`.
+- Independent translation and mathematical/mastery audits passed after their
+  three findings were repaired. Every earlier completed unit, CH01–CH12 and
+  PT02–PT05, passed fresh deterministic regression; all ten applicable
+  notebooks executed successfully. Browser QA against final bytes found
+  centered 768 / 357.5 px articles, zero page overflow, eight loaded local
+  figures, 778 labeled MathML nodes, 68 unique IDs, 53 intact fragment links,
+  33 working disclosures, and no warning or error.
+
 ## Next action
 
-Translate the complete Chapter 13 source in order as *Penyegaran: Persamaan
-Diferensial Biasa*. Preserve all 456 elements, 524 protected TeX slots, 39
-fragment links, eight figures and descriptions, eleven problems, and eleven
-source answers. Add stable hint/check/worked-solution records for all eleven
-problems, localize the primary assets, and ledger only high-confidence defects.
+Materialize and verify Chapter 14 record 555, *Examples of Project Topics*, as
+`O005-LEGA-V101-CH14` from the exact admitted coordinator snapshot. Freeze its
+canonical/raw/rendered bytes, hierarchy, component assets and rights, census its
+project/formula/link/description surfaces, then begin complete source-order
+translation as *Contoh Topik Proyek* and add only the bounded open project
+packets required by the durable goal.

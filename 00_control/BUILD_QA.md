@@ -866,3 +866,67 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   including the manifest. The frozen rendered HTML still names 62 remote
   responsive `srcset` candidates, so the Indonesian reader must bind the eight
   local primary PNGs and eliminate that runtime dependency.
+
+## Publication attempt — Chapter 12 and Chapter 13 authority — 2026-08-22
+
+- Narrow production commit:
+  `d3363f6b3612b3beef9b235f9b6c134fa0593fc1`; 37 files / 1,240,861 bytes;
+  ordered `path<TAB>bytes<TAB>sha256` inventory SHA-256
+  `8704b2c436b7998e6c2794baa054260c6520ac44ba9002d8a58c065fa5260b2f`.
+- Immediate push was attempted through the configured remote, then with each of
+  the two saved GitHub credential candidates, the keyring, and SSH. The one
+  valid credential received HTTP 403 with GitHub's explicit account-suspended
+  response; the second saved credential and keyring credential are invalid,
+  and no authorized SSH key exists. Anonymous repository API and immutable raw
+  reads returned 404 while the suspension is active.
+- No public-head or public-byte equality claim is made for this commit. It is
+  retained unchanged and push-ready for `origin/main`; publication must be
+  retried when GitHub access returns, without creating a duplicate remote.
+
+## Admitted build — O005-LEGA-V101-CH13 — 2026-08-22
+
+- Final gate: `scripts/qa_unit.py --unit O005-LEGA-V101-CH13
+  --deterministic-build`, exit 0. Exact replay covers 456 / 456 ordered
+  elements, 39 / 39 links, 524 source TeX occurrences mapped to 528 declared
+  target occurrences, eight / eight local figures, eleven / eleven problem
+  headings, eleven / eleven answer headings, and eleven mastery records.
+- Target: 61,373 bytes, SHA-256
+  `90e45dbcb0e3c95a5f9ca07a1533886c4bee99b71530fe18f7b245a128bcc46b`;
+  backend: 546 paired segments / 329,930 bytes, SHA-256
+  `d824d63da00be5f49f1d45f0cc6465c80b7e09efb2c106cb546b580a0120acbb`;
+  unit record: 3,211 bytes, SHA-256
+  `7fd24929fe42d8f6f9961d81a1ec0da876eca0db68d52469c42c2bf2cf050fc1`.
+- Eleven-record mastery: 34,275 bytes, SHA-256
+  `67965dd1d7e64e66de99b060f1c6be4ee526cd5bd66ffae6a8e2b0be94ff115a`.
+  It supplies eleven hints, eleven final checks, and eleven worked solutions or
+  rubrics under new-original provenance while preserving the eleven printed
+  answer groups as source-derived. The final independent audit recomputed the
+  ODE residuals, characteristic polynomials, eigenstructure, initial data,
+  exactness, uniqueness, and domain restrictions and closed both reported
+  domain gaps.
+- Reader: thirteen payload files / 1,169,623 bytes excluding its 1,385-byte
+  manifest; manifest SHA-256
+  `995e0f24de41317590468911dbd729f04484b9441baf4954e58af5dd400f78c3`.
+  Deterministic double build: fourteen files, byte-identical, canonical QA tree
+  SHA-256 `78ead87f005d1b4d48fa2a731a1c9287b332e7c288ee14fa2fc84c967e46af4d`.
+- Independent translation review aligned all 581 / 581 lines, 472 / 472
+  nonblank blocks, the complete ordered HTML topology, all 39 hrefs, eight
+  figures/descriptions/returns, eleven problems, and eleven answer groups. Its
+  sole residual malformed real/imaginary operator finding was corrected in the
+  assembler, declared in QA, rebuilt, and independently closed. Corrections
+  `O005-CORR-0141`–`0153` are the complete ledgered intervention set.
+- Every earlier completed unit, CH01–CH12 and PT02–PT05, passed a fresh named
+  deterministic regression under the final shared renderer. All ten applicable
+  notebooks executed successfully; the other six units correctly reported no
+  notebook surface. Exact per-unit tree hashes are retained in the command
+  result and no regression failed.
+- Browser QA against final bytes: at 1280×900 the 1,152 px main shell, 960 px
+  edition note, and 768 px article/mastery column were centered in the 1,265 px
+  client. At 390×844 all four surfaces became a centered 357.5 px column in the
+  375 px client. Document scroll width equaled client width at both sizes;
+  eight figures loaded locally with no failure or page escape; all 778 MathML
+  nodes were labeled; 68 IDs were unique; all 53 fragment links resolved; 33
+  disclosures rendered; 88 mobile-wide formulas remained within explicit
+  horizontal-scroll hosts; and the support target cleared the sticky navigation
+  by 35.75 px. The final warning/error log was empty. External-link reachability
+  was not tested; no audio or live widget exists.

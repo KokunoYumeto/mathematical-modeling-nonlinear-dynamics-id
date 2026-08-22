@@ -1,0 +1,141 @@
+<h2>Persamaan diferensial linear berorde lebih tinggi dari dua</h2>
+Solusi umum untuk
+<p style="text-align: center">$latex \begin{align*} &amp;a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_1(x) y^\prime + a_0(x) y=h(x), \\ &amp; a_n(x) \ne 0 \end{align*}$</p>
+adalah
+<p style="text-align: center">$latex y(x)=C_n y_n(x) + C_{n-1} y_{n-1}(x) + \dots + C_1 y_1(x)+ y_p(x),$</p>
+dengan
+<ul>
+ 	<li>$latex y_p(x)$ merupakan solusi partikular dari persamaan lengkap</li>
+</ul>
+<p style="text-align: center">$latex a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h(x),$</p>
+
+<ul>
+ 	<li>$latex y_i, i=1,\dots, n$, adalah $latex n$ solusi <span style="text-decoration: underline">bebas linear</span> dari persamaan homogen terkait</li>
+</ul>
+<p style="text-align: center">$latex a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=0,$</p>
+
+<ul>
+ 	<li>$latex C_i, i=1, \dots, n$, adalah $latex n$ konstanta sembarang.</li>
+</ul>
+Dengan demikian, metode untuk menyelesaikan persamaan linear tersebut adalah sebagai berikut.
+<ol>
+ 	<li>Selesaikan persamaan homogen (yaitu, cari $latex n$ solusi bebas linear $latex y_1 \dots, y_n$),</li>
+ 	<li>Cari solusi partikular dari persamaan lengkap.</li>
+</ol>
+<h3>Cara menyelesaikan persamaan homogen</h3>
+Solusi umum $latex y$ dari persamaan homogen
+<p style="text-align: center">$latex a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=0$</p>
+merupakan kombinasi linear dari $latex n$ solusi bebas linearnya $latex y_n, \dots, y_1$, yaitu $latex y=C_n y_n + \dots +C_1 y_1$ dengan $latex C_i$ merupakan konstanta.
+<h4>Persamaan dengan koefisien konstan</h4>
+Misalkan persamaan homogen tersebut berbentuk
+<p style="text-align: center">$latex a_n y^{(n)} + a_{n-1} y^{(n-1)} + \dots + a_2 y^{\prime\prime} + a_1 y^\prime + a_0 y=0,$</p>
+dengan $latex a_i$ merupakan konstanta real. Persamaan karakteristik terkait adalah
+<p style="text-align: center">$latex a_n r^n+\dots + a_1 r + a_0=0.$</p>
+
+<ul>
+ 	<li>Jika persamaan karakteristik hanya memiliki akar sederhana $latex r_i$, kita dapat memperoleh $latex n$ solusi bebas linear dengan menggunakan $latex y_j(x)=\exp(r_j x)$ untuk akar real, dan solusi berikut untuk setiap pasangan akar kompleks konjugat $latex r_i =\alpha_i + i \beta_i$ dan $latex r_{i+1}=\alpha_i - i \beta_i$:</li>
+</ul>
+<p style="text-align: center">$latex \left\{ \begin{array}{ccl} y_i(x)&amp;=&amp;\exp(\alpha_i x) \cos(\beta_i x) \\ y_{i+1}(x)&amp;=&amp;\exp(\alpha_i x)\sin(\beta_i x) \end{array} \right.$</p>
+
+<ul>
+ 	<li>Jika persamaan karakteristik memiliki satu atau lebih akar dengan multiplisitas lebih besar dari satu, gunakan rumus di atas untuk akar bermultiplisitas satu, dan untuk setiap akar $latex r_i$ bermultiplisitas $latex h$, gunakan</li>
+</ul>
+<p style="text-align: center">$latex \begin{align*} y_i &amp; = \exp(r_i x),\\ y_{i+1} &amp; = x \exp(r_i x), \\ y_{i+2} &amp; = x^2 \exp(r_i x),\\
+&amp; \vdots \\ y_{i+h-1} &amp; = x^{h-1} \exp(r_i x), \end{align*}$</p>
+Sekali lagi, jika $latex r_i=\alpha_i \pm i \beta_i$, lazim digunakan $latex x^k \exp(\alpha_i x)
+\cos(\beta_i x)$ dan $latex x^k \exp(\alpha_i x) \sin(\beta_i x)$ sebagai ganti $latex x^k \exp(r_i x)$ (karena persamaan diferensial biasa tersebut memiliki koefisien real).
+<h5>Contoh 1</h5>
+Solusi umum untuk $latex y^{(4)}-8 y^{\prime\prime} - 9 y = 6 x + 12 \sin(x)$ adalah
+<p style="text-align: center">$latex \displaystyle y = C_1 \cos(x) + C_2 \sin(x) + C_3 e^{3 x} + C_4 e^{-3 x} - \frac{2}{3} x + \frac{3}{5} x \cos(x)$.</p>
+
+<h5>Contoh 2</h5>
+Solusi untuk $latex y^{(4)} - 2 y^{(3)} = 0$ dengan $latex y(0)=0$, $latex y^\prime(0)=0$, $latex y^{\prime\prime}(0)=0$, dan $latex y^{(3)}(0) = 4$ adalah
+<p style="text-align: center">$latex \displaystyle y = \frac{1}{2} e^{2 x} - x^2 - x - \frac{1}{2}.$</p>
+
+<h4>Persamaan Cauchy–Euler</h4>
+Untuk menyelesaikan
+<p style="text-align: center">$latex a_n x^n y^{(n)} + a_{n-1} x^{n-1} y^{(n-1)}+\dots+ a_2 x^2 y^{\prime\prime} + a_1 x y^\prime+ a_0 y=0, \qquad x&gt;0$</p>
+dengan $latex a_i$ merupakan konstanta real, lakukan perubahan variabel $latex x=\exp(t) = e^t$. Perubahan ini menghasilkan persamaan dengan koefisien konstan untuk $latex y$ (sebagai fungsi $latex t$), yang dapat diselesaikan seperti diuraikan di atas. Selanjutnya, perubahan variabel $latex t=\ln(x)$ menghasilkan $latex y$ sebagai fungsi $latex x$.
+
+<span style="text-decoration: underline">Catatan</span>: Jika harus menyelesaikan untuk $latex x &lt; 0,$ lakukan perubahan variabel $latex x=-\exp(t)$, lalu lanjutkan seperti sebelumnya (namun sekarang $latex t=\ln(-x)$).
+<h5>Contoh</h5>
+Solusi umum untuk $latex x^3 y^{(3)} - 2 x^2 y^{\prime\prime} + 8 x y^\prime - 8 y = 0$, $latex x &gt;0$ adalah
+<p style="text-align: center">$latex \displaystyle C_1 x + C_2 x^2 \cos(2 \ln(x)) + C_3 x^2 \sin(2 \ln(x))$.</p>
+
+<h3>Cara mencari solusi partikular dari persamaan lengkap</h3>
+Sekarang kita mencari solusi partikular untuk
+<p style="text-align: center">$latex a_n(x) y^{(n)} + a_{n-1}(x) y^{(n-1)} + \dots + a_2(x) y^{\prime\prime} + a_1(x) y^\prime + a_0(x) y=h(x).$</p>
+Jika persamaan di atas memiliki koefisien konstan dan jika
+<p style="text-align: center">$latex h(x)=P_m(x) \exp(\alpha x) \cos(\beta x)+ Q_m(x) \exp(\alpha x) \sin(\beta x),$</p>
+dengan $latex P_m$ dan $latex Q_m$ merupakan polinom berderajat $latex m$, maka coba solusi partikular berikut, dengan $latex K_m$ dan $latex L_m$ merupakan polinom berderajat $latex m$ pada setiap kasus.
+<ul>
+ 	<li>$latex y_p=K_m(x) \exp(\alpha x) \cos(\beta x)+ L_m(x) \exp(\alpha x) \sin(\beta x)$ jika $latex \alpha \pm i \beta$ <span style="text-decoration: underline">bukan</span> akar dari persamaan karakteristik terkait.</li>
+ 	<li><span style="text-align: initial;font-size: 1em"><span style="text-align: initial;font-size: 1em">$latex y_p = x^h \big[K_m(x) \exp(\alpha x) \cos(\beta x) + L_m(x) \exp(\alpha x) \sin(\beta x) \big]$ </span></span>jika $latex \alpha \pm i \beta$ <span style="text-decoration: underline">merupakan</span> akar <span style="text-decoration: underline">bermultiplisitas</span> $latex h$ dari persamaan karakteristik terkait.</li>
+</ul>
+Jika persamaan diferensial ini tidak memiliki koefisien konstan, atau jika $latex h(x)$ tidak berbentuk seperti yang dibahas di atas, gunakan metode variasi konstanta: carilah solusi partikular $latex y_p=v_n(x) y_n(x)+ \dots +v_1(x) y_1(x)$ dengan $latex y_i$ merupakan $latex n$ solusi bebas linear dari persamaan homogen terkait, lalu tentukan $latex v_i$ setelah memberlakukan $latex n-1$ syarat berikut:
+<p style="text-align: center">$latex \left\{ \begin{array}{clllcl} v_n^\prime(x) y_n(x) &amp;+ &amp; \dots&amp;+ &amp; v_1^\prime(x) y_1(x)&amp;=0 \\
+v_n^\prime(x) y_n^\prime(x)&amp;+ &amp; \dots&amp;+ &amp; v_1^\prime(x) y_1^\prime(x)&amp;=0 \\ \vdots &amp;&amp; \ddots &amp;&amp; \vdots \\ v_n^\prime(x) y_n^{(n-2)}(x)&amp;+ &amp; \dots&amp;+ &amp; v_1^\prime(x) y_1^{(n-2)}(x)&amp;=0. \end{array} \right.$</p>
+<span style="text-decoration: underline">Catatan</span>: Jika Wronskian
+<p style="text-align: center">$latex W[y_1,\dots, y_n]=\left| \begin{array}{cccc} y_1 &amp; y_2 &amp;\dots &amp; y_n \\ y_1^\prime &amp; y_2^\prime &amp;\dots &amp;y_n^\prime \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ y_1^{(n-1)} &amp; y_2^{(n-1)} &amp;\dots &amp; y_n^{(n-1)} \end{array} \right|$</p>
+dari $latex y_1, \dots, y_n$ tidak nol, maka fungsi-fungsi tersebut bebas linear.
+<h2>Sistem persamaan diferensial linear orde pertama</h2>
+Kita meninjau sistem berbentuk
+
+$latex \left\{ \begin{array}{cccccc} \displaystyle \frac{d x_1}{d t}&amp;=a_{11}(t) x_1(t) &amp;+ a_{12}(t)\ x_2(t) &amp;+\dots &amp;+ a_{1n}(t) x_n(t) &amp;+ b_1(t) \\ \displaystyle \frac{d x_2}{d t}&amp;=a_{21}(t) x_1(t) &amp;+ a_{22}(t) x_2(t) &amp;+ \dots &amp;+ a_{2n}(t) x_n(t) &amp;+ b_2(t) \\ \vdots&amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp;\vdots \\ \displaystyle \frac{d x_n}{d t}&amp;=a_{n1}(t) x_1(t) &amp;+ a_{n2}(t) x_2(t) &amp;+ \dots &amp;+ a_{nn}(t) x_n(t) &amp;+ b_n(t) \end{array},\right.$
+
+yang juga dapat ditulis sebagai $latex \displaystyle D X = \frac{d}{d t} X = \dot X = A X + B,$
+
+dengan
+<p style="text-align: center">$latex X=X(t)=\left(\begin{array}{c} x_1(t) \\ x_2(t) \\ \vdots \\ x_n(t) \end{array}\right), \qquad B=\left(\begin{array}{c} b_1(t) \cr b_2(t) \cr \vdots \cr b_n(t) \end{array}\right),$</p>
+dan
+<p style="text-align: center">$latex A=A(t)=\left(\begin{array}{cccc} a_{11}(t) &amp; a_{12}(t) &amp; \dots &amp; a_{1n}(t) \\ a_{21}(t) &amp; a_{22}(t) &amp; \dots &amp; a_{2n}(t) \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ a_{n1}(t) &amp; a_{n2}(t) &amp; \dots &amp; a_{nn}(t) \end{array}\right).$</p>
+Jika $latex B$ dan $latex a_{ij}$ kontinu pada interval $latex a &lt; t &lt; b$, dan jika $latex t_0 \in (a,b)$, maka terdapat solusi tunggal untuk $latex \dot X = A X + B$ yang memenuhi $latex x_1(t)=\alpha_1, x_2(t)=\alpha_2,\dots, x_n(t)=\alpha_n$, dan berlaku pada interval $latex (a,b)$.
+
+Solusi umum untuk $latex \dot X = A X + B$ adalah
+<p style="text-align: center">$latex \begin{align*} X(t)&amp; = U(t) C + X_p(t),\\ &amp;= C_1 X_1(t) + C_2 X_2(t) + \dots + C_n X_n(t) + X_p(t), \end{align*}$</p>
+dengan
+<ul>
+ 	<li>$latex X_p(t)$ merupakan solusi partikular untuk $latex \dot X=A X + B$,</li>
+ 	<li>$latex X_i, i=1,\dots, n$, merupakan $latex n$ solusi <span style="text-decoration: underline">bebas linear</span> dari sistem homogen terkait $latex \dot X = A X$,</li>
+ 	<li>$latex C_i, i=1, \dots, n$, merupakan $latex n$ konstanta.</li>
+</ul>
+Matriks $latex U(t)=[X_1(t), X_2(t), \dots, X_n(t)]$ disebut <span style="text-decoration: underline">matriks fundamental</span> dari sistem homogen $latex \dot X = A X$. Dengan demikian, untuk menyelesaikan sistem diferensial tersebut, ikuti langkah berikut.
+<ol>
+ 	<li>Selesaikan sistem homogen (yaitu, cari $latex n$ solusi bebas linear $latex X_1, \dots, X_n$),</li>
+ 	<li>Cari solusi partikular dari sistem lengkap.</li>
+</ol>
+<h3>Cara menyelesaikan sistem homogen</h3>
+Solusi umum $latex X(t)$ untuk sistem homogen $latex \dot X = A X$ merupakan kombinasi linear dari $latex n$ solusi bebas linear $latex X_1, \dots, X_n$, yaitu $latex X(t)=C_1 X_1(t) + \dots +C_n X_n(t)$ dengan $latex C_i$ merupakan konstanta. Dengan kata lain, solusi tersebut berbentuk
+<p style="text-align: center">$latex X(t)=U(t) C$</p>
+dengan $latex U(t)$ merupakan matriks fundamental dan $latex C$ merupakan vektor konstan.
+
+Dalam pembahasan berikut, kita hanya meninjau sistem dengan koefisien konstan; dengan kata lain, kita mengasumsikan matriks $latex A$ tidak bergantung pada waktu. Prosedurnya adalah sebagai berikut.
+<ol>
+ 	<li>Tentukan nilai eigen dan vektor eigen dari $latex A$.</li>
+ 	<li>Untuk setiap vektor eigen $latex \xi$ yang bersesuaian dengan nilai eigen $latex \lambda$, diketahui bahwa $latex X(t) = \exp(\lambda t) \xi$ merupakan solusi untuk $latex \dot X=A X$. Oleh karena itu,
+<ul>
+ 	<li>Jika $latex A$ memiliki $latex n$ nilai eigen berbeda, kita telah memperoleh $latex n$ solusi bebas linear untuk sistem homogen, yakni $latex X_i(t)=\exp(\lambda_i t) \xi_i$, $latex i=1, \dots, n$.</li>
+ 	<li>Jika suatu nilai eigen $latex \lambda$ memiliki multiplisitas $latex h$ yang lebih besar dari satu, carilah sebanyak mungkin vektor eigen bebas linear, lalu tuliskan solusi yang bersesuaian $latex X_j(t)=\exp(\lambda t) \xi_j$. Selanjutnya, cari solusi yang belum diperoleh dalam bentuk $latex X_i=(t^{h-1} Y_{h-1}+ t^{h-2} Y_{h-2} + \dots + t Y_1 + Y_0) \exp(\lambda t),$ dengan $latex Y_i$ merupakan vektor konstan. Substitusikan solusi ini ke dalam sistem homogen dan tentukan $latex Y_i$. Selalu pastikan bahwa Anda telah memperoleh $latex n$ solusi bebas linear untuk sistem homogen, lalu tuliskan matriks fundamental yang bersesuaian.</li>
+</ul>
+</li>
+</ol>
+<span style="text-decoration: underline">Catatan</span>: Jika salah satu nilai eigen bersifat kompleks, maka, karena (secara umum) $latex A$ memiliki koefisien real, konjugat kompleks nilai eigen tersebut juga merupakan nilai eigen. Demikian pula, jika $latex \xi$ merupakan vektor eigen (kompleks) yang bersesuaian dengan nilai eigen kompleks $latex \lambda$, maka konjugat kompleksnya $latex \xi^*$ bersesuaian dengan nilai eigen $latex \lambda^*$. Dengan demikian, jika nilai eigen $latex \lambda=\alpha + i \beta$ bersifat kompleks, Anda dapat menggunakan fungsi real $latex X_i(t)=\Re e[\exp(\alpha+i \beta)
+\xi]$ dan $latex X_{i+1}(t)=\Im m[\exp(\alpha+i \beta) \xi]$ sebagai ganti solusi kompleks $latex X_i(t)=\exp(\lambda t) \xi$ dan $latex X_{i+1}(t) = X_i^*(t) = \exp(\lambda^* t) \xi^*$.
+<h4>Contoh 1</h4>
+Suatu matriks fundamental untuk $latex \dot X = A X$ dengan $latex \displaystyle A = \left(\begin{array}{cc} 1 &amp; 3 \\ 2 &amp; 2 \end{array} \right)$ adalah $latex \displaystyle \left( \begin{array}{cc} 3 e^{-t} &amp; e^{4 t} \\ -2 e^{-t} &amp; e^{4t} \end{array} \right)$.
+<h4>Contoh 2</h4>
+Suatu matriks fundamental untuk $latex \dot X = A X$ dengan $latex \displaystyle A = \left(\begin{array}{cc} 1 &amp; 1 \\ -1 &amp; 3 \end{array} \right)$ adalah $latex \displaystyle \left( \begin{array}{cc} e^{2 t} &amp; t e^{2 t} \\ e^{2 t} &amp; (t+1) e^{2t} \end{array} \right)$.
+<h3>Cara mencari solusi partikular dari sistem lengkap</h3>
+Jika $latex B(t)=b \exp(\omega t)$, dengan $latex b$ merupakan vektor konstan, dan jika $latex \omega$ <span style="text-decoration: underline">bukan</span> nilai eigen dari $latex A$, maka coba solusi partikular $latex X_p(t)=k \exp(\omega t),$ dengan $latex k$ merupakan vektor konstan. Substitusikan bentuk $latex X_p$ kembali ke dalam sistem diferensial $latex \dot X=A X + B$, lalu tentukan $latex k$.
+
+<span style="text-decoration: underline">Catatan</span>: Prinsip superposisi mungkin berguna. Memang, <span style="font-size: 1em">karena $latex A$ memiliki koefisien real, </span><span style="font-size: 1em">jika $latex X_p$ merupakan solusi untuk $latex \dot X = A X + b \exp(\alpha t + i \beta t),$ </span><span style="font-size: 1em">(dengan $latex b$ merupakan vektor konstan dan </span><span style="font-size: 1em">real), maka $latex \Re e(X_p)$ dan $latex \Im m(X_p)$ berturut-turut merupakan </span><span style="font-size: 1em">solusi untuk $latex \dot X =A X + b \exp(\alpha t) \cos(\beta t)$ dan </span><span style="font-size: 1em">untuk $latex \dot X= A X + b \exp(\alpha t) \sin(\beta t)$. </span>Dengan demikian, jika $latex B(t)$ berbentuk $latex b \exp(\alpha t) \cos(\beta t)$ atau $latex b \exp(\alpha t) \sin(\beta t),$ dan jika $latex \alpha + i \beta$ bukan nilai eigen dari $latex A$, metode di atas dapat digunakan untuk mencari solusi partikular bagi $latex \dot X = A X + b \exp(\alpha t + i \beta t)$. Bagian real atau imajiner solusi tersebut (bergantung pada bentuk $latex B(t)$) kemudian merupakan solusi partikular bagi sistem diferensial semula.
+
+Jika metode di atas tidak dapat diterapkan, gunakan metode <span style="text-decoration: underline">variasi konstanta</span>: carilah solusi berbentuk $latex X_p=U(t) V(t),$ dengan $latex U(t)$ merupakan matriks fundamental yang terkait dengan sistem homogen, dan $latex V(t)$ merupakan vektor yang harus ditentukan. Kemudian $latex V(t)$
+memenuhi $latex \dot V=U^{-1}(t) B(t),$ yaitu $latex V(t)=\int U^{-1}(t) B(t) dt.$
+<h4>Contoh 1</h4>
+Solusi partikular untuk $latex \dot X = A X + H$ dengan $latex \displaystyle A = \left(\begin{array}{cc} -2 &amp; 4 \\ 1 &amp; 1 \end{array} \right)$ dan $latex \displaystyle H = \left(\begin{array}{c}
+2 \\ 0 \end{array} \right) e^t$ adalah $latex \displaystyle X_p = \left(\begin{array}{c} 0 \\ -1/2 \end{array} \right) e^t$.
+<h4>Contoh 2</h4>
+Solusi partikular untuk $latex \dot X = A X + H$ dengan $latex \displaystyle A = \left(\begin{array}{cc} 2 &amp; 1 \\ -3 &amp; -2 \end{array} \right)$ dan $latex \displaystyle H = \left(\begin{array}{c} 2 \\ 4 \end{array} \right) e^t$ adalah $latex \displaystyle X_p = \left(\begin{array}{c} 5 t -\frac{3}{2} \\ -5 t + \frac{9}{2} \end{array} \right) e^{t}$.
+
+<span style="text-decoration: underline">Catatan umum</span>: Terkadang metode eliminasi (yang terdiri atas serangkaian operasi pada baris-baris sistem linear) lebih mudah diterapkan, atau sekadar lebih cepat. Metode ini juga dapat berguna jika matriks $latex A$ bergantung pada waktu.

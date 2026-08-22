@@ -30,12 +30,13 @@ lengkap atau terbitan final.
 - Pengantar Bagian 5 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT05/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-PT05/index.html).
 - Bab 11 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH11/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH11/index.html); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH11.mastery.json).
 - Bab 12 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH12/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH12/index.html).
+- Bab 13 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH13/content.html); [pembaca HTML](build/reader/O005-LEGA-V101-CH13/index.html); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH13.mastery.json).
 
 ## Backend modular
 
-Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Dua belas bab dan
-empat pengantar bagian yang selesai memiliki 2.607 segmen Inggris–Indonesia yang
-berpasangan, 102 ID soal tetap, sepuluh notebook terbuka, catatan unit berhash,
+Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Tiga belas bab dan
+empat pengantar bagian yang selesai memiliki 3.153 segmen Inggris–Indonesia yang
+berpasangan, 113 ID soal tetap, sepuluh notebook terbuka, catatan unit berhash,
 serta jalur eksplisit menuju aset, notebook, dan
 dukungan belajar. Lapisan ini dimaksudkan untuk memungkinkan pemindahan unit
 yang sama ke bahasa lain tanpa menjadikan Bahasa Indonesia sebagai kunci
@@ -79,6 +80,8 @@ python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH11
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH11 --deterministic-build
 python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH12
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH12 --deterministic-build
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH13
+python scripts/qa_unit.py --unit O005-LEGA-V101-CH13 --deterministic-build
 ```
 
 QA memeriksa kesetaraan struktur sumber–target, rumus dan tautan yang
@@ -130,3 +133,9 @@ Bab 12 mempertahankan seluruh struktur kalkulus vektor dan memetakan 161 rumus
 sumber ke 165 rumus sasaran yang seluruh perbedaannya dinyatakan secara
 berjejak; bab ini tidak memiliki soal, aset, tautan, catatan kaki, notebook,
 atau komponen dukungan belajar untuk dibuat.
+Bab 13 mempertahankan seluruh struktur PDB, 39 tautan fragmen, dan delapan
+gambar sumber lokal beserta deskripsi panjangnya; 524 rumus sumber dipetakan
+ke 528 rumus sasaran melalui koreksi yang seluruhnya dinyatakan dalam ledger.
+Sebelas kelompok jawaban tercetak tetap dibedakan dari sebelas paket petunjuk,
+pemeriksaan, dan pembahasan yang dihitung serta ditulis baru; bab penyegaran ini
+tidak memiliki permukaan komputasi yang perlu diganti dengan notebook.
