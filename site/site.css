@@ -1,0 +1,155 @@
+:root {
+  color-scheme: light;
+  --ink: #17272d;
+  --muted: #53666e;
+  --paper: #f7f8f5;
+  --surface: #ffffff;
+  --teal: #0f5262;
+  --teal-dark: #0a3945;
+  --aqua: #9dd7da;
+  --gold: #e2b85d;
+  --line: #d8e1df;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+a { color: #075e75; }
+a:hover { color: #033e4e; }
+a:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -5rem;
+  z-index: 10;
+  padding: .65rem 1rem;
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: .35rem;
+}
+.skip-link:focus { top: 1rem; }
+
+.hero {
+  color: #fff;
+  background: linear-gradient(140deg, var(--teal-dark), var(--teal) 65%, #4c8c96);
+}
+
+.hero-inner,
+main,
+footer {
+  width: min(100% - 2rem, 1120px);
+  margin-inline: auto;
+}
+
+.hero-inner { padding: clamp(3rem, 9vw, 7rem) 0 clamp(2.5rem, 7vw, 5rem); }
+
+.eyebrow {
+  margin: 0 0 .8rem;
+  color: var(--aqua);
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.15;
+}
+
+h1 {
+  max-width: 850px;
+  margin: 0;
+  font-size: clamp(2.6rem, 7vw, 5.7rem);
+  letter-spacing: -.035em;
+}
+
+.subtitle {
+  margin: 1rem 0 .35rem;
+  font-size: clamp(1.2rem, 2.8vw, 1.7rem);
+}
+
+.source { margin: 0; color: #d7ebee; }
+
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+.button {
+  display: inline-block;
+  padding: .7rem 1rem;
+  border: 1px solid rgba(255,255,255,.7);
+  border-radius: .35rem;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.button:hover { color: #fff; background: rgba(255,255,255,.12); }
+.button.primary { color: var(--teal-dark); background: #fff; border-color: #fff; }
+.button.primary:hover { color: var(--teal-dark); background: #eaf4f4; }
+
+main { padding-block: clamp(2.5rem, 7vw, 5rem); }
+main > section, main > nav { max-width: 920px; margin-inline: auto; }
+h2 { margin: 0 0 1rem; font-size: clamp(1.8rem, 4vw, 2.55rem); }
+
+.intro {
+  padding: clamp(1.4rem, 4vw, 2.5rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: .6rem;
+  box-shadow: 0 18px 45px rgba(17, 53, 61, .07);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin: 2rem 0 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: .35rem;
+  background: var(--line);
+}
+.facts div { padding: 1rem; text-align: center; background: #f8fbfa; }
+.facts dt { color: var(--muted); font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+.facts dd { margin: .2rem 0 0; color: var(--teal-dark); font-family: Georgia, serif; font-size: 1.75rem; font-weight: 700; }
+
+.contents { margin-top: clamp(3rem, 8vw, 5rem); }
+.part { margin-top: 2.25rem; }
+.part h3 { margin: 0 0 .75rem; color: var(--teal-dark); font-size: 1.35rem; }
+.part ol { margin: 0; padding: 0; list-style: none; counter-reset: unit; }
+.part li + li { border-top: 1px solid var(--line); }
+.part a {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: .85rem .25rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+.part a:hover span { color: var(--teal); text-decoration: underline; text-underline-offset: .2em; }
+.part small { flex: 0 0 auto; color: var(--muted); font-size: .75rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.part.bridge { padding: 1.25rem 1.4rem; background: #eaf4f4; border-left: .35rem solid var(--teal); }
+
+.provenance { margin-top: clamp(3rem, 8vw, 5rem); padding-top: 2rem; border-top: 1px solid var(--line); }
+footer { padding: 1.25rem 0 2.5rem; color: var(--muted); font-size: .82rem; }
+
+@media (max-width: 720px) {
+  :root { font-size: 16px; }
+  .hero-inner, main, footer { width: min(100% - 1.25rem, 1120px); }
+  .facts { grid-template-columns: repeat(2, 1fr); }
+  .button { width: 100%; text-align: center; }
+  .part a { align-items: baseline; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

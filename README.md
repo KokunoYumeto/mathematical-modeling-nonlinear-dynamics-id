@@ -18,6 +18,9 @@ orisinal. Seluruh 113 soal sumber dan 28 soal jembatan memiliki petunjuk,
 pemeriksaan, dan pembahasan atau rubrik; 26 notebook Python terbuka melengkapi
 pembaca.
 
+- [Baca edisi HTML](https://kokunoyumeto.github.io/mathematical-modeling-nonlinear-dynamics-id/)
+- [Unduh rilis lengkap v1.01-r5](https://github.com/KokunoYumeto/mathematical-modeling-nonlinear-dynamics-id/releases/tag/v1.01-id-complete-reader-20260823-r5)
+
 Versi pembaca lengkap ini dipertahankan dalam garis versi konsep Zenodo
 [10.5281/zenodo.22059939](https://doi.org/10.5281/zenodo.22059939); tautan DOI
 konsep selalu mengarah ke versi publik terbaru. Arsip setiap versi menyimpan
