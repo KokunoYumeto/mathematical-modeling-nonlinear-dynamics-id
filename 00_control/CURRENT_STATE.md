@@ -1130,3 +1130,9 @@ reader controls and bridges`). The commit contains 178 lane files and no
 credential material. It was not pushed because the configured GitHub account
 is still externally suspended; the immutable public Zenodo bytes and receipts
 remain the authoritative release surface.
+
+The fresh continuation audit reconfirmed the canonical package and anonymous
+Zenodo readback without mutation: 467/467 source-manifest rows match, all
+4,105 packaged segment IDs are unique, and representative PDF renders remain
+visually clean. Local control head is
+`5e5714e68ad2e68c548e9bea2c8778564a6568f0`.

@@ -130,3 +130,27 @@ resolves to record `22070943`.
 The bounded lane commit `1f7e7c9a180f450d91352d1b117094f07f1158ae` preserves
 178 verified source/control/backend/reader files. A narrow post-commit status
 is clean. No remote push was attempted because GitHub remains suspended.
+
+## Fresh continuation audit — 2026-08-23
+
+The current lane was rechecked from its durable controls without rebuilding or
+mutating the public package. The official v1.01 PDF and EPUB witnesses match
+their recorded byte counts and SHA-256 values. The substantive Pressbooks
+manifest contains 22 records (plus metadata/TOC rows), and the authority asset
+manifest contains 45 rows. Every one of the 26 unit IDs has a local authority
+record, backend unit/segment closure, and reader index.
+
+The r5 source ZIP has 468 members, safe paths, a passing CRC read, 467 manifest
+rows, and all 467 manifest byte/hash pairs match. Its JSONL closure independently
+parses as 3,448 source plus 657 bridge segments, 4,105 unique IDs. Local reader
+QA found 26 indexes, zero missing images, duplicate IDs, missing image alts,
+or responsive-table tabindex failures. The 355-page PDF still has `/Lang id`,
+28 outlines, no forms or JavaScript, and the recorded SHA-256. Representative
+cover, dense chapter, and closing pages were rendered and visually inspected
+with no clipping, overlap, or broken glyphs.
+
+An anonymous API readback of Zenodo record `22070943` streamed all six files;
+every local/public byte and SHA-256 matched. The metadata remains `ind`,
+`cc-by-nc-sa-4.0`, submitted/done, clean of TTP in title/description, with one
+TTP organization contributor. The working tree remains clean at local control
+head `5e5714e68ad2e68c548e9bea2c8778564a6568f0`.
