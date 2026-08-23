@@ -124,3 +124,9 @@ SHA-256 readback; metadata passed version, `ind`, CC BY-NC-SA 4.0, corrected
 3,448/4,105 census, clean title/description, one organization contributor,
 and one model-provenance occurrence. Concept `22059939/versions/latest`
 resolves to record `22070943`.
+
+## Local preservation commit — 2026-08-23
+
+The bounded lane commit `1f7e7c9a180f450d91352d1b117094f07f1158ae` preserves
+178 verified source/control/backend/reader files. A narrow post-commit status
+is clean. No remote push was attempted because GitHub remains suspended.

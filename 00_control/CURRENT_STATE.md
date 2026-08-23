@@ -1120,3 +1120,13 @@ existing fileless Figshare article and Indonesian collection.
   follow-up now points to canonical Zenodo DOI `22070943`. GitHub remains
   paused. The current Figshare blocker receipt SHA-256 is
   `264aa276dc374d1e5031799aaeba242c9288c4306895b2370e0d5d8df0aee35a`.
+
+## Local preservation commit — 2026-08-23
+
+The verified lane source, backend, readers, controls, receipts, and final PDF
+were preserved in bounded local commit
+`1f7e7c9a180f450d91352d1b117094f07f1158ae` (`Publish complete Indonesian
+reader controls and bridges`). The commit contains 178 lane files and no
+credential material. It was not pushed because the configured GitHub account
+is still externally suspended; the immutable public Zenodo bytes and receipts
+remain the authoritative release surface.
