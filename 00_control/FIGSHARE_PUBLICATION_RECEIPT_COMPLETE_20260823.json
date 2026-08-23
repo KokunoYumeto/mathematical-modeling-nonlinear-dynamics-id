@@ -1,0 +1,38 @@
+{
+  "schema": "o005-figshare-publication-receipt-v3",
+  "checked_at": "2026-08-23T16:46:21.4463785+00:00",
+  "status": "blocked_external_account_disabled",
+  "intended_route": {
+    "project_id": 280296,
+    "project_url": "https://figshare.com/projects/Open_and_Share-Alike_Educational_Materials_Translations/280296",
+    "collection_id": 8668413,
+    "collection_url": "https://figshare.com/collections/Indonesian_Mathematics_Reader_PDFs/8668413",
+    "collection_doi": "10.6084/m9.figshare.c.8668413.v43",
+    "existing_article_id": 33314769,
+    "existing_article_doi": "10.6084/m9.figshare.33314769.v2"
+  },
+  "last_verified_lineage": {
+    "article_doi": "10.6084/m9.figshare.33314769.v2",
+    "article_url": "https://figshare.com/articles/online_resource/Pengantar_Pemodelan_Matematika_Edisi_Bahasa_Indonesia_metadata_/33314769/2",
+    "status": "previous_receipt_only; current_page_reports_removed",
+    "last_known_files": 0,
+    "last_known_license_scope": "CC0 metadata only; linked work remains CC BY-NC-SA 4.0",
+    "last_known_zenodo_link": "10.5281/zenodo.22061640"
+  },
+  "current_public_checks": {
+    "project_page": "published; no matching content",
+    "collection_page": "version 43; no content here yet",
+    "article_page": "page cannot be found / removed",
+    "public_api_article_lookup": "404 Entity not found: ArticleVersion",
+    "public_api_collection_articles": 0,
+    "public_api_project_articles": 0
+  },
+  "authenticated_check": {
+    "endpoint": "https://api.figshare.com/v2/account/articles/33314769",
+    "http_status": 403,
+    "error_code": "InactiveAccount",
+    "action_taken": "no mutation; no duplicate article; no substitute-license upload"
+  },
+  "required_follow_up": "When the supplied Figshare account is restored, update article 33314769 to the canonical complete Zenodo DOI 10.5281/zenodo.22070943, publish one new article version, add it additively to collection 8668413, publish the collection, and anonymously verify the public metadata-only item.",
+  "current_corrected_zenodo_link": "10.5281/zenodo.22070943"
+}

@@ -1,0 +1,175 @@
+<div class="textbox textbox--learning-objectives" id="O005-BRIDGE-C3-OBJ">
+<header class="textbox__header">
+<h2 class="textbox__title" data-o005-segment-key="c3/objectives/title">Tujuan Pembelajaran</h2>
+</header>
+<div class="textbox__content">
+<p data-o005-segment-key="c3/objectives/lead">Setelah menyelesaikan modul ini, Anda akan mampu:</p>
+<ul>
+<li data-o005-segment-key="c3/objectives/item-determinism">membedakan dinamika kacau yang deterministik dari keacakan dan dari galat numerik;</li>
+<li data-o005-segment-key="c3/objectives/item-logistic-stability">menganalisis titik tetap, orbit periodik, dan penggandaan periode pada peta logistik;</li>
+<li data-o005-segment-key="c3/objectives/item-lyapunov">menghitung serta menafsirkan estimasi eksponen Lyapunov tanpa melebih-lebihkan bukti numerik;</li>
+<li data-o005-segment-key="c3/objectives/item-lorenz">menggunakan sistem Lorenz untuk menyelidiki kepekaan terhadap kondisi awal dengan kendali galat numerik; dan</li>
+<li data-o005-segment-key="c3/objectives/item-poincare">membangun penampang Poincaré berarah dan membedakan peta Poincaré penuh dari proyeksi peta balik.</li>
+</ul>
+</div>
+</div>
+
+<aside class="edition-notice" id="O005-BRIDGE-C3-PROVENANCE" aria-labelledby="O005-BRIDGE-C3-PROVENANCE-TITLE">
+<h2 id="O005-BRIDGE-C3-PROVENANCE-TITLE" data-o005-segment-key="c3/provenance/title">Asal-usul modul</h2>
+<p data-o005-segment-key="c3/provenance/relationship">Modul ini merupakan tambahan independen untuk edisi Bahasa Indonesia <cite>Introduction to Mathematical Modeling</cite>, v1.01, karya Joceline Lega. Modul ini bukan bagian dari buku sumber, tidak menyalin atau mengadaptasi kode sumber pihak lain, tidak memakai data atau aset eksternal, dan tidak menyatakan dukungan atau pengesahan oleh Joceline Lega maupun University of Arizona. Komputasinya memakai pustaka sumber terbuka NumPy, SciPy, dan Matplotlib yang dicatat dalam berkas pengunci lingkungan. Distribusi mengikuti CC BY-NC-SA 4.0.</p>
+<p data-o005-segment-key="c3/provenance/model">Produksi dan QA tambahan: OpenAI Codex gpt-5.6-sol, Ultra.</p>
+</aside>
+
+<section id="O005-BRIDGE-C3-SEC01">
+<h2 data-o005-segment-key="c3/sec01/title">Kacau tidak berarti acak</h2>
+<p data-o005-segment-key="c3/sec01/deterministic-rule">Sistem dinamik disebut deterministik apabila keadaan sekarang dan aturan evolusinya menentukan keadaan berikutnya. Deterministik tidak berarti sederhana, periodik, atau mudah diprediksi. Aturan tanpa bilangan acak dapat menghasilkan lintasan terbatas yang tampak tidak berulang dan sangat peka terhadap perubahan kecil pada kondisi awal.</p>
+<p data-o005-segment-key="c3/sec01/evidence-boundary">Tidak ada satu gambar dari sampel berhingga yang sendirian membuktikan kekacauan. Diagram bifurkasi, eksponen Lyapunov positif, struktur peta balik, dan pemisahan lintasan berdekatan merupakan bukti yang saling melengkapi. Bukti itu tetap harus dibaca bersama pemeriksaan konvergensi numerik, lama transien yang dibuang, domain model, dan presisi komputasi.</p>
+<aside class="textbox textbox--key-takeaway" aria-labelledby="O005-BRIDGE-C3-PRINCIPLE">
+<header class="textbox__header"><h3 class="textbox__title" id="O005-BRIDGE-C3-PRINCIPLE" data-o005-segment-key="c3/sec01/principle-title">Prinsip inti</h3></header>
+<div class="textbox__content"><p data-o005-segment-key="c3/sec01/principle-text">Perbedaan lintasan yang membesar baru bermakna sebagai kepekaan dinamik setelah prosedur numerik menunjukkan konvergensi pada rentang waktu yang relevan. Kekacauan bukan nama lain untuk perhitungan yang tidak terkendali.</p></div>
+</aside>
+</section>
+
+<section id="O005-BRIDGE-C3-SEC02">
+<h2 data-o005-segment-key="c3/sec02/title">Peta logistik dan interval invarian</h2>
+<p data-o005-segment-key="c3/sec02/model-definition">Peta logistik adalah sistem waktu diskret satu dimensi</p>
+<p data-o005-segment-key="c3/sec02/equation-logistic">\[x_{n+1}=f_r(x_n)=r x_n(1-x_n),\]</p>
+<p data-o005-segment-key="c3/sec02/variables">dengan \(x_n\) keadaan pada iterasi ke-\(n\), \(r\) parameter kendali, dan \(x_0\) kondisi awal. Dalam penafsiran populasi yang ternormalisasi, \(x_n=0\) berarti tidak ada populasi dan \(x_n=1\) berarti skala acuan penuh; modul ini terutama memakai peta tersebut sebagai laboratorium sistem dinamik.</p>
+<p data-o005-segment-key="c3/sec02/invariant-proof">Untuk \(x\in[0,1]\), berlaku \(0\le x(1-x)\le1/4\). Karena itu, jika \(0\le r\le4\), maka \(0\le f_r(x)\le r/4\le1\). Jadi interval \([0,1]\) invarian terhadap peta: orbit yang dimulai di dalamnya tidak keluar. Untuk \(r&gt;4\), jaminan ini hilang dan beberapa keadaan dapat dipetakan ke luar interval.</p>
+<p data-o005-segment-key="c3/sec02/iteration-warning">Satu nilai \(x_n\) tidak menunjukkan pola jangka panjang. Kita perlu membuang bagian awal lintasan, yang disebut transien, lalu memeriksa nilai yang tersisa. Banyaknya iterasi transien merupakan bagian dari kontrak numerik dan tidak boleh dipilih diam-diam setelah melihat hasil.</p>
+</section>
+
+<section id="O005-BRIDGE-C3-SEC03">
+<h2 data-o005-segment-key="c3/sec03/title">Titik tetap, kestabilan, dan penggandaan periode</h2>
+<p data-o005-segment-key="c3/sec03/fixed-points-derivation">Titik tetap memenuhi \(x^*=f_r(x^*)\). Untuk \(r&gt;0\), pemfaktoran memberi dua kandidat</p>
+<p data-o005-segment-key="c3/sec03/equation-fixed-points">\[x_0^*=0,\qquad x_1^*=1-\frac{1}{r}.\]</p>
+<p data-o005-segment-key="c3/sec03/multiplier-rule">Pada \(r=0\), persamaan asli hanya mempunyai titik tetap \(x=0\); rumus \(1-1/r\) tidak terdefinisi. Untuk \(0&lt;r&lt;1\), kandidat tak nol itu negatif dan berada di luar interval keadaan \([0,1]\). Untuk peta satu dimensi, titik tetap hiperbolik menarik secara lokal jika \(\lvert f_r'(x^*)\rvert&lt;1\) dan menolak jika \(\lvert f_r'(x^*)\rvert&gt;1\). Karena \(f_r'(x)=r(1-2x)\), pengali di \(x_0^*\) adalah \(r\), sedangkan pengali di \(x_1^*\) adalah \(2-r\). Pada \(r=1\), kedua cabang berimpit di \(x=0\) dan pengalinya \(+1\), sehingga titik batas itu nonhiperbolik.</p>
+<table>
+<caption data-o005-segment-key="c3/sec03/stability-table-caption">Titik tetap peta logistik untuk parameter fisik \(r\ge0\)</caption>
+<thead><tr><th scope="col" data-o005-segment-key="c3/sec03/stability-header-point">Titik</th><th scope="col" data-o005-segment-key="c3/sec03/stability-header-multiplier">Pengali</th><th scope="col" data-o005-segment-key="c3/sec03/stability-header-interval">Interval stabil</th></tr></thead>
+<tbody>
+<tr><th scope="row" data-o005-segment-key="c3/sec03/stability-row-zero-point">\(x_0^*=0\)</th><td data-o005-segment-key="c3/sec03/stability-row-zero-multiplier">\(r\)</td><td data-o005-segment-key="c3/sec03/stability-row-zero-interval">\(0\le r&lt;1\)</td></tr>
+<tr><th scope="row" data-o005-segment-key="c3/sec03/stability-row-nonzero-point">\(x_1^*=1-1/r\)</th><td data-o005-segment-key="c3/sec03/stability-row-nonzero-multiplier">\(2-r\)</td><td data-o005-segment-key="c3/sec03/stability-row-nonzero-interval">\(1&lt;r&lt;3\)</td></tr>
+</tbody>
+</table>
+<p data-o005-segment-key="c3/sec03/period-doubling-transition">Pada \(r=3\), pengali titik tetap tak nol mencapai \(-1\). Di titik batas itu kedua titik calon dua-siklus masih berimpit dengan titik tetap \(x=2/3\). Ketika \(r\) meningkat melewati \(3\), titik tetap kehilangan kestabilan dan dua titik berbeda muncul sebagai orbit berperiode dua:</p>
+<p data-o005-segment-key="c3/sec03/equation-two-cycle">\[x_{\pm}=\frac{r+1\pm\sqrt{(r-3)(r+1)}}{2r}.\]</p>
+<p data-o005-segment-key="c3/sec03/prime-period">Untuk \(r&gt;3\), keduanya memenuhi \(f_r^2(x)=x\) dan berbeda dari titik tetap; tepat pada \(r=3\), rumus itu merosot menjadi nilai tunggal \(2/3\). Pembedaan ini penting karena solusi \(f_r^2(x)=x\) juga mencakup titik berperiode satu. Periode prima suatu titik adalah bilangan bulat positif terkecil \(p\) yang memenuhi \(f_r^p(x)=x\).</p>
+<p data-o005-segment-key="c3/sec03/cycle-multiplier">Pengali orbit dua-siklus adalah</p>
+<p data-o005-segment-key="c3/sec03/equation-cycle-multiplier">\[\mu_2=f_r'(x_-)f_r'(x_+)=-r^2+2r+4.\]</p>
+<p data-o005-segment-key="c3/sec03/two-cycle-stability">Karena itu orbit berperiode dua stabil untuk \(3&lt;r&lt;1+\sqrt{6}\). Pada batas atas, pengalinya mencapai \(-1\) dan orbit ini mengalami penggandaan periode berikutnya. Pengulangan mekanisme tersebut membentuk kaskade penggandaan periode.</p>
+</section>
+
+<section id="O005-BRIDGE-C3-SEC04">
+<h2 data-o005-segment-key="c3/sec04/title">Diagram bifurkasi: banyak eksperimen dalam satu bidang</h2>
+<p data-o005-segment-key="c3/sec04/algorithm">Notebook memakai 801 nilai \(r\) yang berjarak sama pada \([2.8,4]\). Untuk setiap nilai, orbit dimulai dari \(x_0=0.123456789\), 1.500 iterasi pertama dibuang, dan 200 iterasi berikutnya digambar. Prosedur yang sama untuk setiap kolom mencegah pemilihan transien berdasarkan tampilan yang diinginkan.</p>
+<p data-o005-segment-key="c3/sec04/interpretation">Satu cabang menarik terbelah menjadi dua di sekitar \(r=3\), lalu menjadi empat dan seterusnya. Kaskade utama menumpuk di sekitar \(r_{\infty}\approx3.569945672\). Di atas nilai itu terdapat pita kacau sekaligus jendela periodik; pernyataan “semua \(r&gt;r_{\infty}\) kacau” adalah salah.</p>
+<figure id="O005-BRIDGE-C3-FIG01" aria-labelledby="O005-BRIDGE-C3-FIG01-CAP">
+<figcaption id="O005-BRIDGE-C3-FIG01-CAP" data-o005-segment-key="c3/sec04/figure-caption">Diagram bifurkasi dan estimasi eksponen Lyapunov yang dibuat notebook pendamping.</figcaption>
+<details id="O005-BRIDGE-C3-FIG01-LONGDESC">
+<summary data-o005-segment-key="c3/sec04/figure-longdesc-summary">Deskripsi panjang gambar</summary>
+<p data-o005-segment-key="c3/sec04/figure-longdesc-text">Panel atas memperlihatkan satu cabang untuk parameter rendah, pemisahan menjadi dua cabang di sekitar \(r=3\), pemisahan berulang, lalu pita titik yang rapat dan diselingi jendela periodik. Panel bawah memperlihatkan estimasi eksponen Lyapunov: nilainya negatif pada banyak daerah periodik, melintasi nol di dekat perubahan kestabilan, dan positif pada banyak pita kacau. Garis vertikal dengan pola berbeda menandai \(r=3\), \(1+\sqrt{6}\), dan \(r_{\infty}\); pembacaan tidak bergantung pada warna saja.</p>
+</details>
+</figure>
+</section>
+
+<section id="O005-BRIDGE-C3-SEC05">
+<h2 data-o005-segment-key="c3/sec05/title">Eksponen Lyapunov mengukur pertumbuhan gangguan kecil</h2>
+<p data-o005-segment-key="c3/sec05/definition">Untuk orbit peta satu dimensi, estimasi sepanjang \(N\) iterasi setelah transien adalah</p>
+<p data-o005-segment-key="c3/sec05/equation-lyapunov">\[\lambda_N=\frac{1}{N}\sum_{n=0}^{N-1}\log\left|f_r'(x_n)\right|.\]</p>
+<p data-o005-segment-key="c3/sec05/interpretation">Nilai negatif berarti gangguan kecil menyusut secara rata-rata sepanjang orbit yang dihitung. Nilai positif berarti gangguan kecil bertumbuh secara eksponensial secara lokal dan merupakan bukti kuat kepekaan terhadap kondisi awal. Nilai dekat nol memerlukan rentang iterasi yang lebih panjang dan pemeriksaan khusus terhadap bifurkasi atau perilaku netral.</p>
+<p data-o005-segment-key="c3/sec05/periodic-formula">Untuk orbit stabil berperiode \(p\), eksponen asimtotiknya dapat dihitung dari pengali satu putaran:</p>
+<p data-o005-segment-key="c3/sec05/equation-periodic-lyapunov">\[\lambda=\frac1p\log\left|\prod_{j=0}^{p-1}f_r'(x_j)\right|.\]</p>
+<p data-o005-segment-key="c3/sec05/example-r32">Pada \(r=3.2\), titik dua-siklusnya sekitar \(0.51304451\) dan \(0.79945549\), pengali satu putarannya \(0.16\), dan \(\lambda=\tfrac12\log(0.16)\approx-0.91629073\). Orbit berganti nilai pada setiap iterasi, tetapi gangguan terhadap dua-siklus tetap menyusut.</p>
+<p data-o005-segment-key="c3/sec05/example-r4">Pada \(r=4\), untuk hampir semua kondisi awal di \((0,1)\), eksponen Lyapunov asimtotiknya adalah \(\log 2\approx0.69314718\). Notebook memperoleh estimasi berhingga sekitar \(0.69318\). Kondisi awal khusus dan aritmetika presisi terbatas dapat menghasilkan orbit pengecualian, sehingga kode tidak menyamakan satu hasil berhingga dengan teorema universal.</p>
+<p data-o005-segment-key="c3/sec05/zero-derivative-warning">Jika tepat terjadi \(f_r'(x_n)=0\), suku logaritmanya adalah \(-\infty\). Menggantinya diam-diam dengan bilangan kecil hanya agar grafik terlihat rapi akan mengubah definisi. Notebook mempertahankan nilai tersebut dan memisahkan aturan tampilan dari perhitungan.</p>
+</section>
+
+<section id="O005-BRIDGE-C3-SEC06">
+<h2 data-o005-segment-key="c3/sec06/title">Sistem Lorenz: aliran kontinu dengan dua lobus</h2>
+<p data-o005-segment-key="c3/sec06/model-introduction">Untuk melihat gagasan yang sama pada waktu kontinu, pertimbangkan sistem Lorenz</p>
+<p data-o005-segment-key="c3/sec06/equations">\[\dot x=\sigma(y-x),\qquad \dot y=x(\rho-z)-y,\qquad \dot z=xy-\beta z.\]</p>
+<p data-o005-segment-key="c3/sec06/parameters">Notebook menggunakan \(\sigma=10\), \(\rho=28\), \(\beta=8/3\), dan kondisi awal \((1,1,1)\). Parameter ini menghasilkan lintasan yang berputar tidak teratur di sekitar dua daerah ruang fase. Lintasan numerik tidak pernah dianggap sebagai daftar keadaan eksak untuk waktu tak terbatas.</p>
+<p data-o005-segment-key="c3/sec06/equilibria-derivation">Dengan menyetel ketiga turunan sama dengan nol, diperoleh titik kesetimbangan</p>
+<p data-o005-segment-key="c3/sec06/equilibria-equation">\[(0,0,0),\qquad \left(\pm\sqrt{\beta(\rho-1)},\ \pm\sqrt{\beta(\rho-1)},\ \rho-1\right).\]</p>
+<p data-o005-segment-key="c3/sec06/equilibria-values">Untuk parameter kanonik, dua titik tak nol adalah \((\pm\sqrt{72},\pm\sqrt{72},27)\), dengan \(\sqrt{72}\approx8.48528137\). Substitusi kembali ke ruas kanan memberi residu numerik di bawah \(10^{-12}\).</p>
+<figure id="O005-BRIDGE-C3-FIG02" aria-labelledby="O005-BRIDGE-C3-FIG02-CAP">
+<figcaption id="O005-BRIDGE-C3-FIG02-CAP" data-o005-segment-key="c3/sec06/figure-caption">Proyeksi lintasan Lorenz dan pemisahan dua kondisi awal berdekatan.</figcaption>
+<details id="O005-BRIDGE-C3-FIG02-LONGDESC">
+<summary data-o005-segment-key="c3/sec06/figure-longdesc-summary">Deskripsi panjang gambar</summary>
+<p data-o005-segment-key="c3/sec06/figure-longdesc-text">Proyeksi \(x\)–\(z\) membentuk dua lobus di sekitar titik kesetimbangan tak nol. Lintasan mengitari satu lobus beberapa kali lalu berpindah ke lobus lain tanpa pola periode pendek yang tetap. Panel waktu memakai garis utuh dan garis putus-putus untuk dua kondisi awal, sedangkan panel jarak memakai skala logaritmik: jarak mula-mula sangat kecil, kemudian bertumbuh beberapa orde besaran dan akhirnya tidak lagi berada dalam rezim gangguan linear.</p>
+</details>
+</figure>
+</section>
+
+<section id="O005-BRIDGE-C3-SEC07">
+<h2 data-o005-segment-key="c3/sec07/title">Pisahkan kepekaan dinamik dari galat numerik</h2>
+<p data-o005-segment-key="c3/sec07/refinement-contract">Integrasi utama memakai metode DOP853, toleransi relatif \(10^{-10}\), toleransi absolut \(10^{-12}\), dan langkah maksimum \(0.02\). Integrasi pembanding pada \(0\le t\le10\) memperketat toleransi menjadi \(10^{-12}\) dan \(10^{-14}\) serta langkah maksimum menjadi \(0.01\). Selisih norma maksimum kedua solusi pada rentang pendek harus lebih kecil dari \(10^{-6}\).</p>
+<p data-o005-segment-key="c3/sec07/paired-contract">Setelah pemeriksaan itu lulus, notebook mengintegrasikan \((1,1,1)\) dan \((1+10^{-9},1,1)\) sebagai satu sistem enam dimensi. Cara ini memberi keduanya riwayat langkah adaptif yang sama. Jarak awal sekitar \(10^{-9}\), masih di bawah \(10^{-4}\) pada \(t=20\), tetapi harus melebihi \(10^{-1}\) pada \(t=35\).</p>
+<p data-o005-segment-key="c3/sec07/interpretive-limit">Pertumbuhan jarak menunjukkan hilangnya kemampuan prediksi titik demi titik, bukan hilangnya determinisme. Setelah jarak menjadi sebanding dengan ukuran atraktor, kurva tidak lagi mengukur pertumbuhan gangguan linear. Karena itu, kemiringan seluruh kurva tidak boleh diperlakukan sebagai satu eksponen Lyapunov Lorenz tanpa algoritma renormalisasi yang sesuai.</p>
+</section>
+
+<section id="O005-BRIDGE-C3-SEC08">
+<h2 data-o005-segment-key="c3/sec08/title">Penampang Poincaré mengubah aliran menjadi urutan</h2>
+<p data-o005-segment-key="c3/sec08/section-definition">Penampang Poincaré memilih perpotongan lintasan dengan suatu permukaan. Modul ini memakai</p>
+<p data-o005-segment-key="c3/sec08/equation-section">\[S=\{(x,y,z):z=27,\ \dot z&gt;0\}.\]</p>
+<p data-o005-segment-key="c3/sec08/orientation">Syarat \(\dot z&gt;0\) memilih hanya perpotongan dari bawah ke atas. Tanpa arah, satu putaran dapat dihitung dua kali dan urutan baliknya berubah. Fungsi kejadian pada pemecah ODE menginterpolasi waktu perpotongan; memilih titik sampel yang sekadar paling dekat dengan \(z=27\) akan menambahkan galat bergantung grid.</p>
+<p data-o005-segment-key="c3/sec08/transient">Perpotongan dengan \(t&lt;30\) dibuang sebagai transien berdasarkan kontrak yang ditetapkan sebelum hasil diringkas. Gerbang numerik memeriksa waktu yang meningkat ketat, \(\lvert z-27\rvert&lt;10^{-8}\), \(\dot z&gt;0\), dan keberadaan titik pada kedua lobus.</p>
+</section>
+
+<section id="O005-BRIDGE-C3-SEC09">
+<h2 data-o005-segment-key="c3/sec09/title">Peta Poincaré penuh dan proyeksi peta balik</h2>
+<p data-o005-segment-key="c3/sec09/full-map">Jika perpotongan ke-\(n\) dinyatakan sebagai \((x_n,y_n)\) pada bidang \(z=27\), peta Poincaré penuh adalah</p>
+<p data-o005-segment-key="c3/sec09/equation-full-map">\[P(x_n,y_n)=(x_{n+1},y_{n+1}).\]</p>
+<p data-o005-segment-key="c3/sec09/projected-map">Notebook juga menggambar pasangan \(u_n=x_n\) dan \(u_{n+1}=x_{n+1}\). Gambar ini adalah proyeksi peta balik. Ia berguna untuk melihat cabang, pergantian lobus, dan struktur berulang, tetapi proyeksi dari \((x,y)\) ke \(x\) dapat membuang informasi.</p>
+<p data-o005-segment-key="c3/sec09/projection-warning">Karena kehilangan informasi itu, dua titik dengan \(x_n\) hampir sama dapat mempunyai \(y_n\) berbeda dan kembali ke \(x_{n+1}\) berbeda. Sebaran yang tampak mempunyai lebih dari satu nilai keluaran bukan kesalahan plot; ia dapat menunjukkan bahwa satu koordinat belum cukup untuk merepresentasikan peta penuh.</p>
+<figure id="O005-BRIDGE-C3-FIG03" aria-labelledby="O005-BRIDGE-C3-FIG03-CAP">
+<figcaption id="O005-BRIDGE-C3-FIG03-CAP" data-o005-segment-key="c3/sec09/figure-caption">Penampang Poincaré berarah dan proyeksi peta balik yang dibuat notebook.</figcaption>
+<details id="O005-BRIDGE-C3-FIG03-LONGDESC">
+<summary data-o005-segment-key="c3/sec09/figure-longdesc-summary">Deskripsi panjang gambar</summary>
+<p data-o005-segment-key="c3/sec09/figure-longdesc-text">Panel kiri menampilkan titik perpotongan pada bidang \(z=27\) dengan simbol lingkaran; terdapat gugus pada \(x&lt;0\) dan \(x&gt;0\), sehingga kedua lobus terwakili. Panel kanan menampilkan segitiga pada koordinat \((x_n,x_{n+1})\) dan garis putus-putus \(x_{n+1}=x_n\). Titik di luar garis diagonal menunjukkan perubahan koordinat dari satu perpotongan ke perpotongan berikutnya; beberapa cabang mencerminkan pergantian dan pengulangan lobus.</p>
+</details>
+</figure>
+</section>
+
+<section id="O005-BRIDGE-C3-SEC10">
+<h2 data-o005-segment-key="c3/sec10/title">Ringkasan dan batas klaim</h2>
+<p data-o005-segment-key="c3/sec10/summary">Peta logistik menunjukkan bagaimana titik tetap dapat kehilangan kestabilan melalui penggandaan periode dan bagaimana eksponen Lyapunov merangkum pertumbuhan gangguan kecil. Sistem Lorenz memperluas gagasan itu ke aliran kontinu. Penampang Poincaré mengubah aliran menjadi urutan perpotongan, sedangkan peta balik mengungkap hubungan antara perpotongan berurutan.</p>
+<p data-o005-segment-key="c3/sec10/limits">Semua hasil komputasi bergantung pada kontrak yang dinyatakan: kondisi awal, parameter, jumlah transien, metode integrasi, toleransi, langkah maksimum, arah penampang, dan rentang waktu. Notebook memeriksa kontrak tersebut serta mengulang perhitungan dalam kernel yang sama. Gerbang QA terpisah tetap harus menjalankan notebook dari kernel baru.</p>
+<table>
+<caption data-o005-segment-key="c3/sec10/check-table-caption">Sidik numerik lingkungan kanonik dan gerbang ilmiah portabel</caption>
+<thead><tr><th scope="col" data-o005-segment-key="c3/sec10/check-header-quantity">Besaran</th><th scope="col" data-o005-segment-key="c3/sec10/check-header-fingerprint">Sidik kanonik</th><th scope="col" data-o005-segment-key="c3/sec10/check-header-gate">Gerbang yang ditafsirkan</th></tr></thead>
+<tbody>
+<tr><th scope="row" data-o005-segment-key="c3/sec10/check-r32-label">\(\lambda\), \(r=3.2\)</th><td data-o005-segment-key="c3/sec10/check-r32-value">\(-0.91629073\)</td><td data-o005-segment-key="c3/sec10/check-r32-gate">Cocok dengan rumus dua-siklus dalam \(10^{-10}\).</td></tr>
+<tr><th scope="row" data-o005-segment-key="c3/sec10/check-r4-label">\(\lambda_N\), \(r=4\)</th><td data-o005-segment-key="c3/sec10/check-r4-value">\(0.69317558\)</td><td data-o005-segment-key="c3/sec10/check-r4-gate">Berjarak kurang dari \(5\times10^{-3}\) dari \(\log 2\).</td></tr>
+<tr><th scope="row" data-o005-segment-key="c3/sec10/check-refinement-label">Selisih integrator, \(t\le10\)</th><td data-o005-segment-key="c3/sec10/check-refinement-value">\(1.12\times10^{-8}\) atau lebih kecil</td><td data-o005-segment-key="c3/sec10/check-refinement-gate">Kurang dari \(10^{-6}\).</td></tr>
+<tr><th scope="row" data-o005-segment-key="c3/sec10/check-section-label">Perpotongan setelah transien</th><td data-o005-segment-key="c3/sec10/check-section-value">40 pada lingkungan kanonik</td><td data-o005-segment-key="c3/sec10/check-section-gate">Sedikitnya 30, semuanya berarah benar dan berada pada bidang dalam toleransi.</td></tr>
+</tbody>
+</table>
+</section>
+
+<div class="textbox textbox--exercises" id="O005-BRIDGE-C3-EXERCISES">
+<header class="textbox__header"><h2 class="textbox__title" data-o005-segment-key="c3/exercises/title">Latihan Penguasaan</h2></header>
+<div class="textbox__content">
+<h3 id="O005-BRIDGE-C3-P01" data-o005-segment-key="c3/exercises/p01/title">Soal 1</h3>
+<p data-o005-segment-key="c3/exercises/p01/prompt">Buktikan bahwa \([0,1]\) merupakan interval invarian peta logistik untuk \(0\le r\le4\). Jelaskan secara spesifik bagian bukti yang gagal jika \(r&gt;4\).</p>
+
+<h3 id="O005-BRIDGE-C3-P02" data-o005-segment-key="c3/exercises/p02/title">Soal 2</h3>
+<p data-o005-segment-key="c3/exercises/p02/prompt">Turunkan kedua titik tetap peta logistik dan tentukan interval kestabilan lokalnya untuk \(r\ge0\). Sebutkan apa yang khusus pada \(r=1\) dan \(r=3\).</p>
+
+<h3 id="O005-BRIDGE-C3-P03" data-o005-segment-key="c3/exercises/p03/title">Soal 3</h3>
+<p data-o005-segment-key="c3/exercises/p03/prompt">Untuk \(r=3.2\), hitung kedua titik orbit berperiode dua, pengali satu putaran, dan eksponen Lyapunov per iterasi. Jelaskan mengapa orbit dapat berganti nilai tetapi tetap stabil.</p>
+
+<h3 id="O005-BRIDGE-C3-P04" data-o005-segment-key="c3/exercises/p04/title">Soal 4</h3>
+<p data-o005-segment-key="c3/exercises/p04/prompt">Bandingkan estimasi eksponen Lyapunov notebook untuk \(r=3.2\) dan \(r=4\). Apa yang didukung oleh tanda masing-masing nilai, dan mengapa satu estimasi positif berhingga belum merupakan bukti universal?</p>
+
+<h3 id="O005-BRIDGE-C3-P05" data-o005-segment-key="c3/exercises/p05/title">Soal 5</h3>
+<p data-o005-segment-key="c3/exercises/p05/prompt">Turunkan ketiga titik kesetimbangan sistem Lorenz. Substitusikan \(\sigma=10\), \(\rho=28\), dan \(\beta=8/3\), lalu periksa ruas kanan secara numerik.</p>
+
+<h3 id="O005-BRIDGE-C3-P06" data-o005-segment-key="c3/exercises/p06/title">Soal 6</h3>
+<p data-o005-segment-key="c3/exercises/p06/prompt">Jelaskan mengapa perbandingan integrator pada rentang pendek perlu dilakukan sebelum pemisahan dua kondisi awal ditafsirkan sebagai kepekaan dinamik. Berikan dua pemeriksaan yang dipakai notebook.</p>
+
+<h3 id="O005-BRIDGE-C3-P07" data-o005-segment-key="c3/exercises/p07/title">Soal 7</h3>
+<p data-o005-segment-key="c3/exercises/p07/prompt">Jalankan notebook dari kernel bersih. Catat dua eksponen Lyapunov, galat pemurnian integrator, waktu pertama jarak lintasan melebihi \(10^{-3}\), jumlah perpotongan Poincaré setelah transien, galat bidang maksimum, dan jumlah pasangan balik. Jelaskan mengapa diagram \(x_{n+1}\) terhadap \(x_n\) hanya proyeksi peta Poincaré penuh.</p>
+</div>
+</div>

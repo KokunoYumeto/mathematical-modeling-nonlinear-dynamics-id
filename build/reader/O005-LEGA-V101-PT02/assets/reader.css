@@ -80,6 +80,7 @@ main { padding-block: clamp(1.5rem, 4vw, 3.5rem); }
 h2, h3 { line-height: 1.25; scroll-margin-top: 5rem; }
 [id] { scroll-margin-top: 5rem; }
 .chapter > h2 { margin-top: 2.7em; font-size: clamp(1.5rem, 3vw, 2.15rem); color: var(--accent-dark); }
+.chapter > h2[id*="-PRJ"] { text-align: center; }
 .chapter > h3 { margin-top: 2em; }
 .chapter p { hyphens: auto; }
 .chapter li + li { margin-top: 0.45rem; }
@@ -128,6 +129,18 @@ summary { cursor: pointer; font: 700 0.98rem/1.4 system-ui, sans-serif; }
 .record-fields dt { margin-top: 0.8rem; font-weight: 700; }
 .record-fields dd { margin-inline-start: 1rem; }
 
+.project-packets {
+  width: min(100%, 60rem);
+  margin: 3rem auto 0;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  background: color-mix(in srgb, var(--soft) 50%, var(--paper));
+  font-family: system-ui, sans-serif;
+}
+.project-packets h2 { margin-top: 0; color: var(--accent-dark); }
+.project-packets li + li { margin-top: 0.65rem; }
+
 footer {
   padding-block: 2rem 4rem;
   border-top: 1px solid var(--line);
@@ -136,8 +149,15 @@ footer {
 }
 code { overflow-wrap: anywhere; }
 
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+}
+th, td { overflow-wrap: anywhere; }
+
 @media (max-width: 42rem) {
   main, footer { width: min(100% - 1.1rem, 72rem); }
+  .chapter, #dukungan-belajar, section { min-width: 0; }
   .unit-nav {
     justify-content: center;
     overflow-x: visible;
@@ -145,7 +165,15 @@ code { overflow-wrap: anywhere; }
     gap: 0.45rem 1rem;
     font-size: 0.86rem;
   }
-  .edition-notice, .textbox__content, .mastery-record { padding-inline: 0.9rem; }
+  .edition-notice, .textbox__content, .mastery-record, .project-packets { padding-inline: 0.9rem; }
+  table.responsive-table {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

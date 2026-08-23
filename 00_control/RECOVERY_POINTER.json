@@ -1,7 +1,7 @@
 {
   "schema": "o005-recovery-pointer-v1",
   "lane_root": ".",
-  "status": "active_bridge_production_source_translation_complete",
+  "status": "complete_reader_published_zenodo_canonical_figshare_blocked",
   "read_first": [
     "00_control/00_CURRENT_GOAL_AND_WORKFLOW.md",
     "00_control/CURRENT_STATE.md",
@@ -9,7 +9,8 @@
     "00_control/DECISION_LOG.md",
     "00_control/TERMINOLOGY.csv",
     "00_control/RIGHTS_AND_PROVENANCE.md",
-    "00_control/BUILD_QA.md"
+    "00_control/BUILD_QA.md",
+    "00_control/PUBLIC_BUILD_QA.md"
   ],
   "semantic_manifest": {
     "path": "authority/coordinator-snapshot-20260821/snapshot/semantic_closure_manifest.tsv",
@@ -21,129 +22,67 @@
     "bytes": 14504,
     "sha256": "6bdfc501e3134de338fc9862feb4abbbd503037295ab8c701a627cb33550c740"
   },
-  "last_verified_public_commit": "8ff7758f0afdf66881a7a0552581e1c1668a6860",
-  "public_repository": "https://github.com/KokunoYumeto/mathematical-modeling-nonlinear-dynamics-id",
-  "last_public_readback": {
-    "verified_at": "2026-08-22T08:29:57+02:00",
-    "commit": "8ff7758f0afdf66881a7a0552581e1c1668a6860",
-    "remote_head_equal": true,
-    "raw_files_compared": 32,
-    "raw_bytes_compared": 866260,
-    "inventory_receipt_sha256": "121edbad5bde443b6d01f41c24ed66f3e6d223db21722bdd472f9266801959a8",
-    "all_bytes_and_sha256_equal": true
-  },
-  "pending_publication": {
-    "commit": "cc404bd113f5e7af294205c4ad32f59cc0edabba",
-    "parent_pending_commit": "2574d58777412210f6394b2920508765c1f1dd7f",
-    "pending_chain_base_commit": "d3363f6b3612b3beef9b235f9b6c134fa0593fc1",
-    "source_closure_base_commit": "2574d58777412210f6394b2920508765c1f1dd7f",
-    "source_closure_base_files": 58,
-    "source_closure_base_bytes": 541894,
-    "source_closure_base_inventory_sha256": "b350fc8e44acead9803e417e9d5fbf6681373f7be1031dd24ac78c91b8194d54",
-    "files": 20,
-    "bytes": 253900,
-    "inventory_sha256": "7624a19694ea44dba5e02e48656bab04782626c7bf5e15a1b146b2c94098f30d",
-    "inventory_scope": "current head commit changed paths",
-    "inventory_algorithm": "SHA-256 of UTF-8 no-BOM, LF-terminated, headerless, ordinal-path-sorted path<TAB>bytes<TAB>sha256 rows",
-    "last_attempted_at": "2026-08-22T18:16:05+02:00",
-    "current_commit_attempted": false,
-    "status": "blocked_external_not_retried",
-    "reason": "GitHub rejected the previous pending head with HTTP 403 because the account is suspended; the user reports that the suspension followed VPN use and that a support ticket is open. The complete 22-record source translation and its final fidelity refinements are sealed in the two recorded local commits without another futile remote attempt. The complete local commit chain remains intact.",
-    "next_action": "Do not retry GitHub until the user reports that account access is restored. Then push the unchanged complete local chain to origin/main; do not create a duplicate repository or rewrite the commits. Maintain verified substantial boundaries through the single Zenodo concept lineage while GitHub is unavailable."
-  },
-  "zenodo_publication": {
-    "status": "published_and_anonymously_verified",
-    "record_id": 22061640,
-    "concept_record_id": 22059939,
-    "doi": "10.5281/zenodo.22061640",
-    "concept_doi": "10.5281/zenodo.22059939",
-    "record_url": "https://zenodo.org/records/22061640",
-    "version": "v1.01-id-progress-CH14-reader-20260822",
-    "files": 5,
-    "bytes": 48468743,
-    "public_inventory_sha256": "444ff63bc66e3c2bff051f8a439c766f315a75e452a60e0286974728708928ff",
-    "receipt": "00_control/ZENODO_PUBLICATION_RECEIPT_CH14_20260822.json",
-    "model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
-    "next_action": "Use Zenodo's new-version action on record 22061640 for the next substantial verified boundary; never create a duplicate concept lineage."
-  },
-  "figshare_publication": {
-    "status": "published_metadata_link_and_anonymously_verified",
-    "article_id": 33314769,
-    "doi": "10.6084/m9.figshare.33314769.v2",
-    "record_url": "https://figshare.com/articles/online_resource/Pengantar_Pemodelan_Matematika_Edisi_Bahasa_Indonesia_metadata_/33314769/2",
-    "project_id": 280296,
-    "project_url": "https://figshare.com/projects/Open_and_Share-Alike_Educational_Materials_Translations/280296",
-    "collection_id": 8668413,
-    "verified_collection_version": 37,
-    "verified_collection_doi": "10.6084/m9.figshare.c.8668413.v37",
-    "license": "CC0 metadata only; linked work remains CC BY-NC-SA 4.0",
-    "public_files": 0,
-    "model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
-    "receipt": "00_control/FIGSHARE_PUBLICATION_RECEIPT_CH14_20260822.json",
-    "next_action": "At the next substantial verified boundary, update and publish a new version of article 33314769, then add/retain it in collection 8668413 and publish the next collection version. Never create a competing article for this work or upload work files under a substitute license."
+  "source_closure": {
+    "semantic_records": 22,
+    "completed_source_units": 22,
+    "completed_bridge_units": 4,
+    "source_segments": 3448,
+    "bridge_segments": 657,
+    "mastery_records": 141,
+    "notebooks": 26,
+    "projects": 12,
+    "last_unit": "O005-BRIDGE-C4",
+    "last_bridge_reader_tree_sha256": "9b1df796f9319ab1603bf9115e2c14e3e4b379e02512f32df11cbc0c875e77f0"
   },
   "terminology_qa": {
     "status": "completed_and_propagated",
     "witness": "arXiv:2001.05854v1",
     "source_archive_sha256": "520cd160b47664dda32e57df87a6eb028348154e4d7a7494d230e8e517891d53",
     "indonesian_tex_sha256": "03f7e68801badc84255df3323078ae00eee7ecff8a9f118cba064ce5d46ff2f2",
-    "affected_units": [
-      "O005-LEGA-V101-CH01",
-      "O005-LEGA-V101-CH02",
-      "O005-LEGA-V101-CH04",
-      "O005-LEGA-V101-CH05",
-      "O005-LEGA-V101-CH06",
-      "O005-LEGA-V101-CH07",
-      "O005-LEGA-V101-CH10",
-      "O005-LEGA-V101-CH13"
-    ],
     "decision_record": "00_control/TERMINOLOGY_QA_INDONESIAN_FIELD_SOURCE_20260822.md"
   },
-  "last_published_complete_unit": {
-    "unit_id": "O005-LEGA-V101-CH14",
-    "source_record_type": "chapters",
-    "source_record_id": 555,
-    "source_slug": "examples-of-project-topics",
-    "source_canonical_sha256": "cb9e10a0a6df089194f2bb90bc335d641230cce00dc47c90b6d1802dd6769013",
-    "source_content_sha256": "337ce752f17b70d3677216b114792685a84acded115dfdc06213bb469dd5761a",
-    "target_content_sha256": "9a08e5a663685a52c4551a560ee68ea4f4dad9675b3aea04702dfa8416d719b4",
-    "segment_sha256": "8074b66de970f9381056a7c5c71d9bff2806337813606b7a68bf244305d7ad7f",
-    "project_catalog_sha256": "9107863aee7cc9013b024e10d0091e227fdd3135b8913f5e103cc1157ce92e56",
-    "reader_manifest_sha256": "1be6f14f57da0ed950fd484c0c7e07291d981e4f4b76b2c8f3be49520507b597",
-    "qa_tree_sha256": "da7aa599e38559f33553872f7e1663de6d555ebc478b6b598dc7aa1d4bf6c347"
-  },
-  "completed_source_closure": {
-    "semantic_records": 22,
-    "last_unit": "O005-LEGA-V101-BM02",
-    "units_added_after_ch14": [
-      "O005-LEGA-V101-FM01",
-      "O005-LEGA-V101-PT01",
-      "O005-LEGA-V101-BM01",
-      "O005-LEGA-V101-BM02"
-    ],
-    "qa_tree_sha256": {
-      "O005-LEGA-V101-FM01": "ef0e77cf6c674f6b9a88b89fa8a357120a4249681be8c9e312a6b421e1d5c14c",
-      "O005-LEGA-V101-PT01": "d9029d36333e9a7596cef6aa44dac77e867b55a199c3af6232deaf67d0a14b0d",
-      "O005-LEGA-V101-BM01": "733d363f6c1af06623ca4a33bf78be6b2748d5b1e81b2af92f8e7ff3e43ca17c",
-      "O005-LEGA-V101-BM02": "ab0c3fbb16e2a6e9a4a9e7d47211ccd480946407faec337c7d0bb022563439f7"
+  "final_pdf": {
+    "path": "output/pdf/01_Pengantar_Pemodelan_Matematika_Edisi_Bahasa_Indonesia_Lengkap.pdf",
+    "bytes": 43463488,
+    "sha256": "f62218d51c97bd86f94ac80c6fe179a2b535be5cd8f8bcf2f402764421597cf3",
+    "pages": 355,
+    "receipt": {
+      "path": "output/pdf/01_Pengantar_Pemodelan_Matematika_Edisi_Bahasa_Indonesia_Lengkap.build.json",
+      "bytes": 18978,
+      "sha256": "e979ef2ac745b45ba50a15f43ab71864fc2e21c02151b7fa13592b0716ef9619"
     }
   },
-  "last_completed_bridge": {
-    "unit_id": "O005-BRIDGE-C1",
-    "content_sha256": "c8593b80996e6f7bd368a4a2e198472198163fc17ee408b98ccbd7e58c99e4eb",
-    "notebook_sha256": "c266a0e332b6d709007344e1d401b8af324744d6ed524e7afa793ba5a01bee02",
-    "segment_sha256": "dfd2cb1f671ab3f672e27d7435d92c84b562b30131c14cca00863040749a20b0",
-    "segment_id_ledger_sha256": "8cf00bb705b542fe1f300076824b23a05af3b58188cef6a92fde76ed1521ebbd",
-    "reader_manifest_sha256": "70fa784b99491451a5f43cdd7d6e8a3940cc947b499460648feb1abb2dafa0df",
-    "qa_tree_sha256": "c169dd1fc53b2b99f3c4a9876553b52403d7b7308669ed7918ce2129b7819d46",
-    "fresh_kernel_runs": 2,
-    "status": "complete_verified"
+  "release_package": {
+    "path": "release/zenodo/reader-first-complete-20260823-r5",
+    "files": 6,
+    "bytes": 54570837,
+    "manifest_sha256": "6767a2fb8e50f0cd4ed00e23de046948878cd2ceb513f7358c646bcc8234ce51",
+    "checksums_sha256": "dfd12f1352030df83c69de7b97565809bb0bae851cab77796347c43e90ea3cc2"
   },
-  "current_unit": "O005-BRIDGE-C2",
-  "remaining_bridge_order": [
-    "O005-BRIDGE-C2",
-    "O005-BRIDGE-C3",
-    "O005-BRIDGE-C4"
-  ],
-  "next_action": "Integrate and verify O005-BRIDGE-C2 from the completed source/generator/notebook/mastery inputs by generalizing the closed bridge schemas/build/QA, creating its semantic-ID ledger/backend/reader, and running canonical plus changed-configuration fresh kernels and deterministic browser QA. Continue through C3-C4. Maintain future substantial boundaries as new versions of Zenodo concept DOI 10.5281/zenodo.22059939. Do not retry GitHub until the user reports account restoration."
+  "github": {
+    "status": "paused_external_suspension",
+    "repository": "https://github.com/KokunoYumeto/mathematical-modeling-nonlinear-dynamics-id",
+    "next_action": "Do not retry until the user reports account restoration; preserve local work."
+  },
+  "zenodo": {
+    "concept_doi": "10.5281/zenodo.22059939",
+    "previous_public_record": "10.5281/zenodo.22061640",
+    "draft_record_id": 22070943,
+    "draft_doi": "10.5281/zenodo.22070943",
+    "status": "canonical_published_and_anonymously_byte_verified",
+    "published_record_id": 22070943,
+    "published_doi": "10.5281/zenodo.22070943",
+    "receipt": "00_control/ZENODO_PUBLICATION_RECEIPT_CANONICAL_20260823.json",
+    "receipt_sha256": "6cb1962c5e14668c2be86284b78e182b4f8951a1f5d9baafcd937ae25906cab9"
+  },
+  "figshare": {
+    "article_id": 33314769,
+    "project_id": 280296,
+    "collection_id": 8668413,
+    "status": "blocked_account_inactive_public_item_removed",
+    "license": "CC0 metadata only; linked work remains CC BY-NC-SA 4.0",
+    "receipt": "00_control/FIGSHARE_PUBLICATION_RECEIPT_COMPLETE_20260823.json",
+    "receipt_sha256": "264aa276dc374d1e5031799aaeba242c9288c4306895b2370e0d5d8df0aee35a"
+  },
+  "next_action": "Resume only from the canonical published Zenodo receipt. Do not retry suspended GitHub or inactive Figshare. When the supplied Figshare account is restored, update article 33314769 to the canonical Zenodo DOI 10.5281/zenodo.22070943, publish one metadata-only version, republish collection 8668413, and anonymously verify."
 }

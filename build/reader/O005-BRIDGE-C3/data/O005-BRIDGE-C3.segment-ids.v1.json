@@ -1,0 +1,715 @@
+{
+  "binding_algorithm": "sha256-segment-key-nul-html-path-nul-canonical-text-v1",
+  "content_path": "source/id-ID/O005-BRIDGE-C3/content.html",
+  "content_sha256": "6f16b026417252c5307c03a88272fc55542e955263cd85f6f82338e33065ed53",
+  "entries": [
+    {
+      "segment_id": "O005-BRIDGE-C3-S0001",
+      "segment_key": "c3/objectives/title",
+      "slot_binding_sha256": "a6b822224c46a371ab8b0b7ad1554ef87d76a40e2e7af9839bde32d8cb4921ec",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0002",
+      "segment_key": "c3/objectives/lead",
+      "slot_binding_sha256": "ba7c583ba73f9ddd0aa664faebcf62057949d147f817ef2e8adc64221a8f8702",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0003",
+      "segment_key": "c3/objectives/item-determinism",
+      "slot_binding_sha256": "6b68507d3729f26e1c11b9673dfc5a097a850a91738d0dac6c83687a6e501a8f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0004",
+      "segment_key": "c3/objectives/item-logistic-stability",
+      "slot_binding_sha256": "8ebdca6c23f02ceb54855c039add4a3a2099569210a427ec863332fe1eb42a74",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0005",
+      "segment_key": "c3/objectives/item-lyapunov",
+      "slot_binding_sha256": "c3c04d22b5451c764d6f576c87caf99d3b87c581d8fea292c0444ff365b4ba77",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0006",
+      "segment_key": "c3/objectives/item-lorenz",
+      "slot_binding_sha256": "63d4a2b23a59ebd669958f67816e6cee1d40188c9a6eb9e5440156eda00f4df7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0007",
+      "segment_key": "c3/objectives/item-poincare",
+      "slot_binding_sha256": "15af2f4c7626e9d4eccd4cb94784efa4f318fb1f77f70afb2c3a9b575dc47024",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0008",
+      "segment_key": "c3/provenance/title",
+      "slot_binding_sha256": "c6443bb6ac4383e0ded75c8bd761237c5f5cb8fd6a25c3863d4c00456d94eb28",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0009",
+      "segment_key": "c3/provenance/relationship",
+      "slot_binding_sha256": "2f899a701bc24a3ad4ced2a51718446c55a00cbc4d8dc90020ac8655502325df",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0010",
+      "segment_key": "c3/provenance/model",
+      "slot_binding_sha256": "9ecd4bf9e4b3e67de336a8ce31069ddaf54c9b3741a29e5f54e24d1a41d3e73c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0011",
+      "segment_key": "c3/sec01/title",
+      "slot_binding_sha256": "0dc79c2ea95fdcf4df2fd2afa864e729a2199e1a516ffc364721d296ae5a7c20",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0012",
+      "segment_key": "c3/sec01/deterministic-rule",
+      "slot_binding_sha256": "dd999475946f91c64a78a6363e71f6f264d605940c538182ccc4de1f94c69a4d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0013",
+      "segment_key": "c3/sec01/evidence-boundary",
+      "slot_binding_sha256": "ad3bfb67b4331d7e729f76c6d9a38ada7834eea64cf63156044c9691b4ca5357",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0014",
+      "segment_key": "c3/sec01/principle-title",
+      "slot_binding_sha256": "14130cd6a6b5da8d4afeaced1f6939a9c9243e6401eaeb6fc03fffea9b5dd95e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0015",
+      "segment_key": "c3/sec01/principle-text",
+      "slot_binding_sha256": "7e7465fc4ab7cf38c34af62b217eb59413a72ae7d362c790af8520913f9ddc92",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0016",
+      "segment_key": "c3/sec02/title",
+      "slot_binding_sha256": "173cf7c162ac95b9e5267c2e5e40b3d0034089f128cb89a8fc15ba64149f5e7e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0017",
+      "segment_key": "c3/sec02/model-definition",
+      "slot_binding_sha256": "e443f6b397cf43f7f9fa9fda1eab3d44c491c1de9eddae5fbd109b13c480123d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0018",
+      "segment_key": "c3/sec02/equation-logistic",
+      "slot_binding_sha256": "d2bbbb2ab3bf11c10c8aebb41acb0b10495df0f53359104f249b93fd9e7a39c3",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0019",
+      "segment_key": "c3/sec02/variables",
+      "slot_binding_sha256": "6806854a268abf8cdefc15cf5becd15d8a78509764fea293677dbe0b350d9028",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0020",
+      "segment_key": "c3/sec02/invariant-proof",
+      "slot_binding_sha256": "fdbe96133d2f25975f0199fc6c6bdc89eb4d3bfebba1f254fcfe72f5c7aa10e3",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0021",
+      "segment_key": "c3/sec02/iteration-warning",
+      "slot_binding_sha256": "a0bdc7f233769c08ba4cff43d7540a23edd61ddf31700f444a66ac2f094967ad",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0022",
+      "segment_key": "c3/sec03/title",
+      "slot_binding_sha256": "bb36f66d6d5ba762e3bcb9ccc65d1715e5e37875e5fb44ae3d3660201093945d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0023",
+      "segment_key": "c3/sec03/fixed-points-derivation",
+      "slot_binding_sha256": "779130d31b957f617c28b5c6c19fa93854e9b9bf7101f4d318d57eee5f29c95c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0024",
+      "segment_key": "c3/sec03/equation-fixed-points",
+      "slot_binding_sha256": "86a7217085cd607b97b1c42bc03783cff8c6a78cf3add44b3f78dcb91b6e4dff",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0025",
+      "segment_key": "c3/sec03/multiplier-rule",
+      "slot_binding_sha256": "5bc2981df772b69f63dd9962141da32fba342b05e91291ffc7d2b4e5d4d056b4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0026",
+      "segment_key": "c3/sec03/stability-table-caption",
+      "slot_binding_sha256": "0eff2e401db68f0a43438c45658a7b80e48eb46a4d73beef148006673e24ae6c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0027",
+      "segment_key": "c3/sec03/stability-header-point",
+      "slot_binding_sha256": "3469b6c388eadb2b5811176e44e4469a60b254356bb6a6990dd767b07a27b87f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0028",
+      "segment_key": "c3/sec03/stability-header-multiplier",
+      "slot_binding_sha256": "01f4f4275ee3f0802748b7cc790c07efa53079cda3b05cbb33df7f638b686cbb",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0029",
+      "segment_key": "c3/sec03/stability-header-interval",
+      "slot_binding_sha256": "aebd314b0c703e95a5926f5cab0f8d0538380a3515191826ae4cca58bbc291df",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0030",
+      "segment_key": "c3/sec03/stability-row-zero-point",
+      "slot_binding_sha256": "bb9f3982cc4e32c2596ce5c8e99bf0c2eb9751f6451d67a7b6355080a85fba6b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0031",
+      "segment_key": "c3/sec03/stability-row-zero-multiplier",
+      "slot_binding_sha256": "df2da17d0f5fa4612efa551ded4add0fd908653d65972baecb944a5a3c0d7b4d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0032",
+      "segment_key": "c3/sec03/stability-row-zero-interval",
+      "slot_binding_sha256": "4c9975452cb277968a14404144a295aaf78b0b6a0d26c57e74cc707687a1cd2b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0033",
+      "segment_key": "c3/sec03/stability-row-nonzero-point",
+      "slot_binding_sha256": "bfc47a6df70ba9390040dbef5ba6df91b5fbabfe5ac3a2ed3f280745424f2d3c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0034",
+      "segment_key": "c3/sec03/stability-row-nonzero-multiplier",
+      "slot_binding_sha256": "d48e0a3125d962bfbaff067e4a225a6ee7882b7ccdad64e8429f6259db6f585e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0035",
+      "segment_key": "c3/sec03/stability-row-nonzero-interval",
+      "slot_binding_sha256": "42bd656380dd89da7f56b4591a99deca747a0daa6a7cbca9804a8255e15e19d6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0036",
+      "segment_key": "c3/sec03/period-doubling-transition",
+      "slot_binding_sha256": "449e6faaaf58397ca66a71d55bf1ab7acbca0b62a375c4c4c2d150d100f2e36a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0037",
+      "segment_key": "c3/sec03/equation-two-cycle",
+      "slot_binding_sha256": "4aa3d12837a53ca8d5e2c48ceca6822422ac0ac338b1a1775cda6d4cc45e541c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0038",
+      "segment_key": "c3/sec03/prime-period",
+      "slot_binding_sha256": "8a167f55a3af5281e316818840cda98a90f430b538d12a13e1d17ba2500ac2ef",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0039",
+      "segment_key": "c3/sec03/cycle-multiplier",
+      "slot_binding_sha256": "01247cf4f42a2094af878a36e5a01891989e1fc3ee1d703933b11d9b6233b8f8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0040",
+      "segment_key": "c3/sec03/equation-cycle-multiplier",
+      "slot_binding_sha256": "24ac5802c62fc31b82708172f299b081990881ece96c980505060702402e8690",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0041",
+      "segment_key": "c3/sec03/two-cycle-stability",
+      "slot_binding_sha256": "bad66f486801228d36b1539415bd92d246fbb456bf36430f5d72075babb3b23f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0042",
+      "segment_key": "c3/sec04/title",
+      "slot_binding_sha256": "af5093137f1a23a99f772363fbb1efb8e9edd960aa242c179fb5a6dced4e5bdf",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0043",
+      "segment_key": "c3/sec04/algorithm",
+      "slot_binding_sha256": "0fca6ba5f6b5a0e5584e7632652f08b26fb116b64bdd9e19af7b9f94356617ed",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0044",
+      "segment_key": "c3/sec04/interpretation",
+      "slot_binding_sha256": "c2a09812708eb0480a6175c95757477c10274e35f9e2e7ebd31cf50d3066d7be",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0045",
+      "segment_key": "c3/sec04/figure-caption",
+      "slot_binding_sha256": "4d9e205059a8a02648ebe65a929da3e4ed784b96e429a35baeecdd3e33f89317",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0046",
+      "segment_key": "c3/sec04/figure-longdesc-summary",
+      "slot_binding_sha256": "dcede6caf191855ced28969d8c142d3b153ea43cd66ada65c97e647e323eaa5e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0047",
+      "segment_key": "c3/sec04/figure-longdesc-text",
+      "slot_binding_sha256": "7f21df86f4eaf19f38e6580de7d2b04ed69b420626554461cb6d79bae975ee2b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0048",
+      "segment_key": "c3/sec05/title",
+      "slot_binding_sha256": "05fcf5ade25df418c8efe48d06b763a0a74f5be14b2f04b0e522b7b7595b9d7e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0049",
+      "segment_key": "c3/sec05/definition",
+      "slot_binding_sha256": "035bcb23c0b92a1c7f235697c0631202e64987bde7db9e0f8383736fb031f5e9",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0050",
+      "segment_key": "c3/sec05/equation-lyapunov",
+      "slot_binding_sha256": "3bfa906a141fdc45eb96593a1022a5ff802f7ade00b35ec4b83a2781985feeed",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0051",
+      "segment_key": "c3/sec05/interpretation",
+      "slot_binding_sha256": "6892627688a9f3f6433bb61fe2e618cd7992ec26a4d903e9af7ef97d6d455d19",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0052",
+      "segment_key": "c3/sec05/periodic-formula",
+      "slot_binding_sha256": "02c026c993d2350f7bdec6615db1fda3ea8d6fdb95aee025f0e45a9195a7a882",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0053",
+      "segment_key": "c3/sec05/equation-periodic-lyapunov",
+      "slot_binding_sha256": "e30ae93b1ec7a0e78a313cb63a64a332772dd340de7d7e7307839a921edfcf1a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0054",
+      "segment_key": "c3/sec05/example-r32",
+      "slot_binding_sha256": "c7c2b0d158be9d019349aa845a4ef796e9f8225e3e11801d69ed8ea9d02ca4bf",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0055",
+      "segment_key": "c3/sec05/example-r4",
+      "slot_binding_sha256": "4dfb7b50b31eea17505f6d5df7e4a42d244f1373b51f3032137c25f177ee70ef",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0056",
+      "segment_key": "c3/sec05/zero-derivative-warning",
+      "slot_binding_sha256": "6efed236e7119915bd7451f930301c947c43df7439f142d8123ad48cdcbac51e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0057",
+      "segment_key": "c3/sec06/title",
+      "slot_binding_sha256": "ccb8026390829723b4b38750b1fdf0943a947618f66107ec0fcb5363c2ce246b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0058",
+      "segment_key": "c3/sec06/model-introduction",
+      "slot_binding_sha256": "ce3befcd96e65e0389e2ccd93fdb7b94ece67262234c60c9d17ef85d316fee3d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0059",
+      "segment_key": "c3/sec06/equations",
+      "slot_binding_sha256": "cfae67515cdf09e5eb8257003c78d77458c0df826faa6c392d1f6110f3bd87e4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0060",
+      "segment_key": "c3/sec06/parameters",
+      "slot_binding_sha256": "ebbbfe7e0e678e46230de3bd6af296875c0c421f5cd10ad12790edd21bdd7e36",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0061",
+      "segment_key": "c3/sec06/equilibria-derivation",
+      "slot_binding_sha256": "5c0f76d50f77b1bc4501e92242031fdd89dfd5d5cb2a9c358befc8e4ef05db0c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0062",
+      "segment_key": "c3/sec06/equilibria-equation",
+      "slot_binding_sha256": "5ee694ac592c117dc14ec3f559494781f203e12e08a924f4bbac4e2f3affb7ef",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0063",
+      "segment_key": "c3/sec06/equilibria-values",
+      "slot_binding_sha256": "50cc93452f1b16199c43722076693798bd6bcac9f746919b485bd42b8a01e04d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0064",
+      "segment_key": "c3/sec06/figure-caption",
+      "slot_binding_sha256": "35f8b2dc36c56c82ab1bf7a86d23331799afe8a8ebc0e2a1fe1123cf796a6c55",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0065",
+      "segment_key": "c3/sec06/figure-longdesc-summary",
+      "slot_binding_sha256": "c5cb18f9ca499cb84e75b6a0efef41b292b258a92d198653905905922e54a596",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0066",
+      "segment_key": "c3/sec06/figure-longdesc-text",
+      "slot_binding_sha256": "d475c0b3667501ab1d0f6aa5c4aedaaeee5c4f16ec97b8076aaa761327309984",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0067",
+      "segment_key": "c3/sec07/title",
+      "slot_binding_sha256": "7ca00e441fee0a9628573df7be8514d006f24cfb1f47704af605de9105af7e6c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0068",
+      "segment_key": "c3/sec07/refinement-contract",
+      "slot_binding_sha256": "0f7d38b656cc05c33008eb28af46d96639b67dbc259e71d6c5d3b4e0b68dc251",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0069",
+      "segment_key": "c3/sec07/paired-contract",
+      "slot_binding_sha256": "ed14ae6455f0749083494caf13dfb9de3a147ddd3cf30949a0a482be2a20a807",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0070",
+      "segment_key": "c3/sec07/interpretive-limit",
+      "slot_binding_sha256": "2aeb9f3f1376d4122e572dd5e984d638b02bf8fc09840c41177014307e0f92eb",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0071",
+      "segment_key": "c3/sec08/title",
+      "slot_binding_sha256": "75789485814dfbbb8c83511645e3af9448e12b240b89414f4adf1c2fe97fa136",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0072",
+      "segment_key": "c3/sec08/section-definition",
+      "slot_binding_sha256": "18ff69209b12f0769b31153329ebac22d1b3ca8ac9498b69f7ff43bb8ca9cff4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0073",
+      "segment_key": "c3/sec08/equation-section",
+      "slot_binding_sha256": "a5a06ebd89ba140d6cc8dc156b291f7c368b1ed91ce00cf9ef27facfcf17fc5a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0074",
+      "segment_key": "c3/sec08/orientation",
+      "slot_binding_sha256": "6d8a144a7fb05d9c47af1fd2d13b87f9f1aa587eeb12b5634d46f4d7ea565656",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0075",
+      "segment_key": "c3/sec08/transient",
+      "slot_binding_sha256": "3aad838a2411bb85cfbb433fe013474583eb1299bdea7b02134d990264577f90",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0076",
+      "segment_key": "c3/sec09/title",
+      "slot_binding_sha256": "9e8ebb7494322c3183841c986a9a3d35bfa2e27c8d3f10f0ec8b28a9e8406adf",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0077",
+      "segment_key": "c3/sec09/full-map",
+      "slot_binding_sha256": "9c7f2303b65dcca530c284fcc76134dba7103cee31160e0b6f3ca67cec983255",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0078",
+      "segment_key": "c3/sec09/equation-full-map",
+      "slot_binding_sha256": "aa0c731d9a86f06b8507ccf7ea5cf25f3723e6857d2bc4ecd655a8eb524f7c4f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0079",
+      "segment_key": "c3/sec09/projected-map",
+      "slot_binding_sha256": "e3a781cb44c21970680ff9c6a0b9f29ad641651ab477906dee9619003168a7bf",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0080",
+      "segment_key": "c3/sec09/projection-warning",
+      "slot_binding_sha256": "913c80846174bdb2a6fe68c8afb7140754efaac3538d788c809199862198494f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0081",
+      "segment_key": "c3/sec09/figure-caption",
+      "slot_binding_sha256": "9ed9b375274057af59e312e11e4b0dfa01b79dd11281f4fc5422ea271fe2fc7f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0082",
+      "segment_key": "c3/sec09/figure-longdesc-summary",
+      "slot_binding_sha256": "3dd234523122335a6c8a3262c91c78e046433a784f039ff8c6aedd1edcab969a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0083",
+      "segment_key": "c3/sec09/figure-longdesc-text",
+      "slot_binding_sha256": "8510f20e0bef1e6996229494146decde46b015236d2cebda20eb9993cc114af8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0084",
+      "segment_key": "c3/sec10/title",
+      "slot_binding_sha256": "3191972479a167d2fdf31d26e3d64d3bcb908c53487988fe260b8c26c8312e50",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0085",
+      "segment_key": "c3/sec10/summary",
+      "slot_binding_sha256": "38d75283c8286c86cbbaea3b3fd83e232eb3e9d0f7bac274c9eceb5324718d21",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0086",
+      "segment_key": "c3/sec10/limits",
+      "slot_binding_sha256": "2ab954314bcbf633b9c638f5c78c15b9c452c985d552fd2acc0a13e35ecc85ea",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0087",
+      "segment_key": "c3/sec10/check-table-caption",
+      "slot_binding_sha256": "8d816068e0e4a1429127145d8e145fc855f7815bc6267147658a7398437eb98d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0088",
+      "segment_key": "c3/sec10/check-header-quantity",
+      "slot_binding_sha256": "c958cc1be77b59a2faf937d7de2243d3451f32b041dd36c62601d2b6e2e60031",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0089",
+      "segment_key": "c3/sec10/check-header-fingerprint",
+      "slot_binding_sha256": "ba3505980e61736f27242acc17b5ebdb182149ec0b52d1ac347e4a7dcd1ca7dc",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0090",
+      "segment_key": "c3/sec10/check-header-gate",
+      "slot_binding_sha256": "c1afd340a28363d8b60087c3c91474933ec5dc9eef3e7f1a7418a3f66292d577",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0091",
+      "segment_key": "c3/sec10/check-r32-label",
+      "slot_binding_sha256": "1532e339048f0b251df55a143488b0aba64588cfee332428a081daa94440cd95",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0092",
+      "segment_key": "c3/sec10/check-r32-value",
+      "slot_binding_sha256": "6cd6a657f5236947eb414df03f5362bd1e68157b1d1f86ef50f72a1814cad2b3",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0093",
+      "segment_key": "c3/sec10/check-r32-gate",
+      "slot_binding_sha256": "5ffd780c2429f69b009e6563c2b4e8d67933946a77e0aa4d94c500cb245135a6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0094",
+      "segment_key": "c3/sec10/check-r4-label",
+      "slot_binding_sha256": "967f50b814b0deccb646dba2b645101c22390d316f246a76114be859e89effd8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0095",
+      "segment_key": "c3/sec10/check-r4-value",
+      "slot_binding_sha256": "b724a0d4450e23f7a0db29307a15bdf0f948bc47be329b7fc90da30a4bc8faaa",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0096",
+      "segment_key": "c3/sec10/check-r4-gate",
+      "slot_binding_sha256": "5a1e23fc9b910220929042f5f1813f3101e0f8a0793c0ed11ca71f9ffe333955",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0097",
+      "segment_key": "c3/sec10/check-refinement-label",
+      "slot_binding_sha256": "f63aea40883e70867b23fe2ce8cf35b8664f7274111a372dbfec6bccc1773678",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0098",
+      "segment_key": "c3/sec10/check-refinement-value",
+      "slot_binding_sha256": "4540e5dc4cba0e426691ef4b0f73be2151b9789390ff471cb62d08ee01d9009c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0099",
+      "segment_key": "c3/sec10/check-refinement-gate",
+      "slot_binding_sha256": "3700250f23e227b285cbf9fe752a4bce34d855e1316ceb6f1e69e6add562fd2c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0100",
+      "segment_key": "c3/sec10/check-section-label",
+      "slot_binding_sha256": "66efef343a69dd6f55015f31637b98514312e639a0cff69a414615dd15901360",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0101",
+      "segment_key": "c3/sec10/check-section-value",
+      "slot_binding_sha256": "92cce672fc2305d06ac1749bac70920f30a6f9626fb05cb34e0a98530ff7925e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0102",
+      "segment_key": "c3/sec10/check-section-gate",
+      "slot_binding_sha256": "6bee8e6926585ae93e4560ace4adbded69750e0fc7b57638491bfe8dea80d51f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0103",
+      "segment_key": "c3/exercises/title",
+      "slot_binding_sha256": "a49dc58bd9db231889ef68df1eb013a5c6727720c8d056e7eef06d0b3f7bfe77",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0104",
+      "segment_key": "c3/exercises/p01/title",
+      "slot_binding_sha256": "b190a6c9e2e9c8e38128df7a8664bdc979bded94c05886a9b2c0d435625ccbcc",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0105",
+      "segment_key": "c3/exercises/p01/prompt",
+      "slot_binding_sha256": "353d3d9a9612cd16e2fe7f1013f2846311651f10304c426b97e3da005b4b35e3",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0106",
+      "segment_key": "c3/exercises/p02/title",
+      "slot_binding_sha256": "868e0e0c8ee236a1d8025702cf70f686ee8a220b3b4898be2dd14c5b1f35a513",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0107",
+      "segment_key": "c3/exercises/p02/prompt",
+      "slot_binding_sha256": "0bf026a8406d18310f9c897cd1e91e605aab7c14f4a17e16f6c823539d4b50f7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0108",
+      "segment_key": "c3/exercises/p03/title",
+      "slot_binding_sha256": "90cd3212d136b8ed09379d3a0b55ad2a83cf3f7951f14a9c27e8f40f514fcd1f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0109",
+      "segment_key": "c3/exercises/p03/prompt",
+      "slot_binding_sha256": "422e7f44f9aad08284419c9c3ae02385616c6e704fb7519d9d2c3df4a9b2b146",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0110",
+      "segment_key": "c3/exercises/p04/title",
+      "slot_binding_sha256": "7458bc03ec762c6dc3238ef266a1f790aefffe4e7e5d2bef0047aabe60e911b3",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0111",
+      "segment_key": "c3/exercises/p04/prompt",
+      "slot_binding_sha256": "b23aa9d0aed187e90b97a8628de70b1fcef7b3a14ad778ddd86c3a9465f71a4c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0112",
+      "segment_key": "c3/exercises/p05/title",
+      "slot_binding_sha256": "440c0b92f0f20c911d9b7681691c7980151131087f698e5cf91dcb4133bf2ac2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0113",
+      "segment_key": "c3/exercises/p05/prompt",
+      "slot_binding_sha256": "c21e135a7bf5f1372c348623b3f5d80f3765671956d2af1d6c5aea4cb48c3cbb",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0114",
+      "segment_key": "c3/exercises/p06/title",
+      "slot_binding_sha256": "a04d5dbf0fa85f6f5aa921972c19ea4b1f8328ae7a543ba69150fb1d0c8ea144",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0115",
+      "segment_key": "c3/exercises/p06/prompt",
+      "slot_binding_sha256": "752aefb2426e4ac877899f04ef741c4159f9cf3c1ec7d3bbe342439f836760b6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0116",
+      "segment_key": "c3/exercises/p07/title",
+      "slot_binding_sha256": "56e70231f98facf29e4a691e0c36daa0cca50b46aa29542c7033844bc2b53044",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C3-S0117",
+      "segment_key": "c3/exercises/p07/prompt",
+      "slot_binding_sha256": "e37ba66924290693634d96f172b825e9577d89a88fb01a90156fd0f830c6fd6f",
+      "state": "active"
+    }
+  ],
+  "ledger_version": 1,
+  "next_serial": 118,
+  "previous": null,
+  "schema": "o005-segment-id-ledger-v2",
+  "strategy": "html-anchored-versioned-semantic-key-v1",
+  "unit_id": "O005-BRIDGE-C3"
+}

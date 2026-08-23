@@ -1,0 +1,65 @@
+{
+  "assets": [
+    {
+      "bytes": 10733,
+      "epub_member": "EPUB/assets/Redhawk_US_1-105-300x213.png",
+      "path": "assets/redhawk-count-source.png",
+      "sha256": "6026cbadc87a030ce119b009551d8a9428b9af51083bd708832ef7dbcea676cd"
+    },
+    {
+      "bytes": 17230,
+      "epub_member": "EPUB/assets/Redhawk_US_1-105_rate-300x213.png",
+      "path": "assets/redhawk-rate-source.png",
+      "sha256": "5a181a42c3cf709bc906ac372d2d173c6afd57ed34e426a92e22a718a87cc97e"
+    },
+    {
+      "bytes": 14910,
+      "epub_member": "EPUB/assets/Redhawk_US_1-105_1stR-300x213.png",
+      "path": "assets/redhawk-return-source.png",
+      "sha256": "3b348b9c541b763ac802525038fa5f5dc7c5d8580c3b319479bbabc9732b7d5e"
+    },
+    {
+      "bytes": 16413,
+      "epub_member": "EPUB/assets/Iterations-287x300.png",
+      "path": "assets/cobweb-iterations-source.png",
+      "sha256": "97ea2323b18b6bcae1ef4ab0b89bf5e589654f8dc7ff757dbb2c587e15bf30dc"
+    },
+    {
+      "bytes": 25987,
+      "epub_member": "EPUB/assets/Logistic1a-300x241.png",
+      "path": "assets/logistic-bifurcation-source.png",
+      "sha256": "4768b2076566ba00ee818166b9053836cb0166eea81545eaf5962e92aaf0dc7b"
+    },
+    {
+      "bytes": 58787,
+      "epub_member": "EPUB/assets/Logistic2a-300x239.png",
+      "path": "assets/logistic-bifurcation-zoom-source.png",
+      "sha256": "13fb09c5410c24f15085e872ecc9e4967a8c05b41f3f7e5104141ce6868431d3"
+    },
+    {
+      "bytes": 13876,
+      "epub_member": "EPUB/assets/Gen_stable-300x220.png",
+      "path": "assets/one-dimensional-stability-source.png",
+      "sha256": "8f7964291a6dc3b3bcc5a9c26ceacaae491f9478c29a2705eec672f7e3ce2c3e"
+    }
+  ],
+  "content_raw": {
+    "bytes": 51685,
+    "path": "content.raw.en.html",
+    "sha256": "476153ddf275a4c6d9f52e4268be21c009da3ba5a4e0b5b15fefc73c32d828f2"
+  },
+  "content_rendered": {
+    "bytes": 64134,
+    "path": "content.rendered.en.html",
+    "sha256": "bf4ca4fac53e5342c38e919e35ab80846b3cd5299b947c88aabdf36c92093588"
+  },
+  "record": {
+    "bytes": 119420,
+    "path": "source-record.canonical.json",
+    "sha256": "7f276a994f78af2af02d5bdd39b9566a50f5e3b09b25351c70cdff50736c66be"
+  },
+  "schema": "o005-unit-authority-v1",
+  "source_modified_gmt": "2026-03-27T02:27:32Z",
+  "source_record_id": 48,
+  "unit_id": "O005-LEGA-V101-CH05"
+}

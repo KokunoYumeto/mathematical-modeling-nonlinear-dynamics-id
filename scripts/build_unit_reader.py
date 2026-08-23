@@ -750,6 +750,16 @@ def harden_links(soup: BeautifulSoup) -> None:
             anchor["rel"] = "external noopener noreferrer"
 
 
+def harden_tables(soup: BeautifulSoup) -> None:
+    """Keep wide tables inside the reader viewport and keyboard-scrollable."""
+    for table in soup.find_all("table"):
+        classes = list(table.get("class", []))
+        if "responsive-table" not in classes:
+            classes.append("responsive-table")
+        table["class"] = classes
+        table["tabindex"] = "0"
+
+
 def rewrite_reader_local_links(soup: BeautifulSoup) -> None:
     """Map source-tree notebook links onto the packaged download directory."""
     for anchor in soup.find_all("a", href=True):
@@ -1066,6 +1076,7 @@ def build_reader(output: Path) -> dict:
     )
     rewrite_reader_local_links(body)
     harden_links(body)
+    harden_tables(body)
     unit_label = "Bab" if UNIT_SPEC["unit_type"] == "chapter" else "Bagian"
     source_unit_label = UNIT_SPEC.get(
         "source_unit_label",

@@ -1,0 +1,326 @@
+<div class="textbox textbox--learning-objectives"><header class="textbox__header">
+<h2 class="textbox__title">Learning Objectives</h2>
+</header>
+<div class="textbox__content">
+
+At the end of this chapter, you will be able to do the following.
+<ul>
+ 	<li>Construct discrete-time models for isolated or interacting groups of individuals, including models with age groups.</li>
+ 	<li>Solve linear discrete-time models exactly.</li>
+ 	<li>Analyze the dynamics of first order nonlinear difference equations by assessing the stability of fixed points and periodic cycles.</li>
+ 	<li>Describe the route to chaos in the logistic map.</li>
+ 	<li>Recognize continuous-time models as limits of discrete-time models.</li>
+</ul>
+</div>
+</div>
+<h2>The population of Red-tailed Hawks in the US</h2>
+We start by analyzing data collected by the Audubon Society through its <a href="http://www.audubon.org/conservation/science/christmas-bird-count">Christmas Bird Count</a>. Counts are currently available for every year since 1900. This information is discrete (we are given the number of birds that were counted at the end of each year), imprecise (since not all of the birds were counted and different people participate in the counting effort every year), and necessarily reflects a combination of many factors (in particular, not just growth or decay due to births and deaths). We will focus on the data for the red-tailed hawk, which is a short-distance migrant.<a id="Fig_5.1"></a>
+
+[caption id="attachment_41" align="alignleft" width="450"]<img class="wp-image-41" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Redhawk_US_1-105-300x213.png" alt="Plot of annual bird count. Long description available." width="450" height="320" /> Figure 5.1. Red-tailed hawk bird count in the US, from 1900 (year 1) to 2004 (year 105), based on data collected by the Audubon Society. [<a href="#Fig_5.1_Desc"><em>Image Description</em></a>][/caption]Figure 5.1 shows the number of red-tailed hawks that were counted in the US, from 1900 (year 1) to 2004 (year 105). We can see that the population grew during most of last century, and seems to have begun to saturate in the late nineties. In order to understand this data, we may try to plot the rate of change of the population, defined as
+
+$latex \displaystyle \frac{\Delta N}{\Delta t} = \frac{N(t + \Delta t) - N(t)}{\Delta t},$
+
+where $latex t$ is time in years, $latex N(t)$ is the bird count at time $latex t$, and $latex \Delta t = 1$ year in this case. Such a graph shows that the quantity $latex \Delta N / \Delta t$ fluctuates and the size of its fluctuations increases with time. Since the number of red-tailed hawks also increases as a function of time, we can look instead at the rate of change normalized by the number of individuals, which we denote by $latex R(t)$. We thus define the <em>per capita rate of change</em> of the red-tailed hawk population as
+<p style="text-align: center">$latex R(t) = \displaystyle \frac{N(t + \Delta t) - N(t)}{N(t) \Delta t}.$<a id="Fig_5.2"></a></p>
+
+[caption id="attachment_42" align="alignleft" width="450"]<img class="wp-image-42" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Redhawk_US_1-105_rate-300x213.png" alt="Plot of the normalized rate of change. Long description available." width="450" height="320" /> Figure 5.2. Plot of the quantity $latex R(t)$ for the red-tailed hawk bird count, based on data collected by the Audubon Society. [<a href="#Fig_5.2_Desc"><em>Image Description</em></a>][/caption]Figure 5.2 shows $latex R(t)$ as a function of $latex t$. Fluctuations are of course still present, but they are now especially large only when $latex N(t)$ is relatively small. Moreover, the data appear to fluctuate about a mean value which is positive (although rather small). In the recent years, this trend breaks down, and from 1995 on, $latex R(t)$ seems to oscillate about a value closer to zero.
+
+It is therefore reasonable to expect $latex N(t+\Delta t)$ to behave like a linear function of $latex N(t)$, up to some fluctuations, and to display saturation in the recent years. This is supported by the plot of Figure 5.3, which shows that $latex N(t + \Delta t) = N(t+ 1)$ as a function of $latex N(t)$. We see that $latex N(t+ 1)$ is very close to $latex 1.025\ N(t)$. This slope was obtained by a least-square fit of the data with a straight line going through the origin (shown in red). As can be seen on Figure 5.3, the agreement is reasonably good. The value $latex 1.025$ is also quite close to the 95% confidence interval [1.026, 1.029] for the per-annum growth rate of red-tailed hawks in North America, found in a 2016 article by C.S. Soykan <em>et al</em>.[footnote]Candan U. Soykan, John Sauer, Justin G. Schuetz, Geoffrey S. LeBaron, Kathy Dale, Gary M. Langham, <a href="http://dx.doi.org/10.1002/ecs2.1351"><em>Population trends for North American winter birds based on hierarchical models</em></a>, Ecosphere <strong>7, </strong>e01351 (2016); Table S3, line 206.[/footnote], which uses statistical analysis to estimate population trends from bird counts.<a id="Fig_5.3"></a>
+
+[caption id="attachment_47" align="alignleft" width="450"]<img class="wp-image-43" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Redhawk_US_1-105_1stR-300x213.png" alt="First return map of the annual bird count. Long description available." width="450" height="320" /> Figure 5.3. The first return map, showing <em>N</em>(<em>t</em> + Δ<em>t</em>) as a function of <em>N</em>(<em>t</em>), for the Audubon Society red-tailed hawk bird count. The straight line has slope 1.025. [<a href="#Fig_5.3_Desc"><em>Image Description</em></a>][/caption]Note however that we do not expect - and in fact there is not - a good agreement at small values of $latex N$. However, the scale of Figure 5.3 is such that the scatter of the points near the origin is not apparent for $latex N(t) \lt 5,000$, which corresponds to times $latex t \le 50$ (see Figure 5.1). In summary, even though the data is noisy and imprecise, a simple model for the red-tailed hawk population in the US from say 1950 to 1995 appears to be of the form
+<p style="text-align: center">$latex N (t + 1) = \kappa \ N(t),$</p>
+where $latex \kappa$ is a constant close to $latex 1.025$. <span style="text-indent: 0em">We can understand such a linear relationship as follows. If we neglect migration in and out of the United States - recall that the red-tailed hawk is a short distance migrant, we can write</span>
+<p style="text-align: center">$latex N(t + \Delta t) = N(t) + \text{number of births} - \text{number of deaths}.$</p>
+As a first approximation, it is reasonable to assume that both the number of deaths and the number of births may be written as the products of $latex N$ with a function of $latex N$ and $latex t$. Such an approximation is valid for most population dynamics models in a closed system. We thus define the <em>per capita birth rate  </em>$latex b,$ and the <em>per capita death</em> r<em>ate  </em>$latex d$ as
+<p style="text-align: center">$latex b = \displaystyle \frac{\text{number of births per }\Delta t}{N(t) \Delta t}, \qquad d = \displaystyle \frac{\text{number of deaths per }\Delta t}{N(t) \Delta t}.$</p>
+Then,
+<p style="text-align: center">$latex N(t + \Delta t) = N(t) \left(1 + b \Delta t - d \Delta t\right) = \kappa\ N(t),$</p>
+<p style="text-align: center">$latex R(t)= \displaystyle \frac{N(t + \Delta t) - N(t)}{N(t) \Delta t} = b - d.$</p>
+In a developmental phase, that is when the number of individuals is much lower than the maximum population that can be sustained by the environment, one can assume that $latex b$ and $latex d$ are constant, which gives
+<p style="text-align: center"><a id="linear_growth"></a>$latex N(t+1) = \kappa\ N(t), \qquad \kappa = \text{constant}.\qquad (5.1)$</p>
+For the red-tailed hawk, the above discussion suggests that $latex \kappa \simeq 1.025$, i.e. $latex b - d = 0.025$ individuals per year. Of course, fluctuations are always present in practice, but this simple model, known as <em>the Malthus equation in discrete time</em>, is sufficient to explain the exponential (or Malthusian) growth of the population. Indeed, Equation (<a href="#linear_growth">5.1</a>) implies that
+<p style="text-align: center">$latex N(t_0 + m \Delta t) = \kappa^m N(t_0).$</p>
+<p class="no-indent">If $latex \kappa &gt; 1$, i.e. if births exceed deaths, $latex N(t)$ grows exponentially. Conversely, if $latex 0 \lt \kappa \lt 1$, $latex N(t)$ decays exponentially and the species is driven towards extinction. We have assumed that $latex \kappa \ge 0$. If not, $latex N(t)$ would alternate between positive and negative values, and our population dynamics model would obviously be flawed.</p>
+When the number of individuals nears the carrying capacity of the environment, nonlinear effects can no longer be neglected, and the growth rate of the population changes with the number of individuals $latex N(t)$. For instance, logistic growth corresponds to
+<p style="text-align: center">$latex \displaystyle N(t + \Delta t) = \Big(1 + \kappa \big(N_\infty - N(t)\big)\Big) \cdot N(t) \qquad \kappa = \text{constant},$</p>
+which has a $latex N$-dependent per-$latex \Delta t$ growth rate equal to $latex \Big(1 + \kappa \big(N_\infty - N(t)\big)\Big)$. The parameter $latex N_\infty$ represents the carrying capacity of the environment.
+<h2>First-order difference equations</h2>
+The example discussed above suggests that discrete population models are of the form $latex N(t+\Delta t) = f(N(t))$, or equivalently,
+<p style="text-align: center"><a id="map"></a>$latex N_{k+1} = f(N_k), \qquad k \in \mathbb{N}, \qquad (5.2)$</p>
+where $latex N_k= N(k \Delta t)$. Equation (<a href="#map">5.2</a>) is called a <em>first order difference equation</em>. It is <em>linear</em> if $latex f(x)$ is linear in $latex x$, and has <em>constant coefficients</em> if $latex f$ does not depend on $latex k$. In the context of population dynamics, a model like Equation (<a href="#map">5.2</a>) is sometimes called a <em>metered model</em>. Equation (<a href="#linear_growth">5.1</a>), which can be written as
+<p style="text-align: center">$latex N_{k+1} = \kappa\ N_k,$</p>
+is therefore a linear first order difference equation with constant coefficients. As mentioned above, its solution is
+<p style="text-align: center">$latex N_k = \kappa^k\ N_0,$</p>
+where $latex N_0$ is the initial condition.<a id="Fig_5.4"></a>
+
+[caption id="attachment_47" align="alignleft" width="287"]<img class="wp-image-44 size-medium" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Iterations-287x300.png" alt="Cobweb plot. Long description available." width="287" height="300" /> Figure 5.4. Graphical representation of successive iterations of the map <em>N</em><sub><em>k</em>+1</sub> = <em>f</em>(<em>N<sub>k</sub></em>). The first four iterates N<sub>1</sub> to N<sub>4</sub> of the function <em>f</em>, starting at <em>N</em> = <em>N</em><sub>0</sub>, are also indicated. The symbols <em>N<sub>s</sub></em> and <em>N<sub>u</sub></em> refer to stable and unstable fixed points, respectively. [<a href="#Fig_5.4_Desc"><em>Image Description</em></a>][/caption]
+More generally, one can write
+<p style="text-align: center">$latex N_{k} = f^k(N_0),$</p>
+where $latex f^k$ is the $latex k^{\text{th}}$ iterate of $latex f$. Even if the graph of $latex f$ is complicated, it is possible to visualize the dynamics of $latex N_k$ by iterating $latex f$ graphically, as shown in Figure 5.4. Starting from the initial value $latex N_0$ of $latex N$, we first find $latex f(N_0)$ as the $latex y$-coordinate of the intersection of the graph of $latex f$ with the line $latex x = N_0$. We then mark the value of $latex N_1 = f(N_0)$ on the $latex x$-axis by drawing a vertical line through the intersection of the line $latex x=y$ with the line $latex y = f(N_0)$. Finally, we repeat this process to find the successive iterates of $latex f$. In the example of Figure 5.4, iterates starting at $latex N = N_0$ converge towards a <em>fixed point</em> $latex N = N_s$.
+<h3>Fixed points and their linear stability</h3>
+Fixed points $latex N_c$ of the map (<a href="#map">5.2</a>) are such that $latex N_c = f(N_c),$ and are found by intersecting the line of equation $latex y = x$ with the curve $latex y = f(x)$. In the example of Figure 5.4, the function $latex f$ has two fixed points, $latex N = N_s$ and $latex N = N_u$. We can study their <em>linear stability</em> as follows. Let $latex N = N_c + u,$ where $latex u$ is a small perturbation. Then,
+<p style="text-align: center">$latex f(N) = f(N_c + u) = f(N_c) + u f^\prime(N_c) + O(u^2),$</p>
+and
+<p style="text-align: center">$latex f(N) - N_c = f(N)-f(N_c) = u f^\prime(N_c) + O(u^2) \simeq u f^\prime(N_c),$</p>
+the last approximation being appropriate if $latex u$ is small enough. The linear map $latex u_{k+1} = f^\prime(N_c) u_k$ is such that its iterates converge towards zero if $latex |f^\prime(N_c)| \lt 1$, and diverge if $latex |f^\prime(N_c)| \gt 1$. The fixed point $latex N = N_c$ is thus said to be <em>linearly stable</em> if $latex |f^\prime(N_c)| \lt 1$, and <em>unstable</em> if $latex |f^\prime(N_c)| &gt; 1$. If $latex |f^\prime(N_c)| = 1,$ $latex N = N_c$ is <em>marginally stable</em>.
+<h3>The logistic map</h3>
+As an example, consider the logistic map defined by Equation (<a href="#map">5.2</a>), with $latex f(x) = a \ x \ (1 - x),$ where $latex a$ is a parameter such that $latex 0 \lt a \lt 4$. If $latex a \le 1$, then $latex x = 0$ is the only non-negative fixed point. It is stable for $latex a \lt 1$ and marginally stable if $latex a = 1$. For $latex a &gt; 1$, there are two fixed points, $latex x = 0$ and $latex x = 1 - 1/a$. Linear stability analysis shows that $latex x = 0$ is now unstable since $latex a &gt; 1$, and that $latex x = 1 - 1/a$ is linearly stable if $latex a \lt 3$ and unstable if $latex a &gt; 3$ (see exercises). A numerical exploration of the dynamics of the difference equation $latex x_{n+1} = a\ x_n\ (1 - x_n)$ reveals the presence of attractors of increasing complexity as $latex a$ is increased, such as period-two cycles (for instance at $latex a = 3.2$), period-four cycles (e.g. at $latex a = 3.5$), and period-eight cycles (for instance at $latex a = 3.55$). In fact, a <em>period-doubling</em> cascade occurs as $latex a$ is increased, and the dynamics becomes chaotic near $latex a = 3.57$.<a id="Fig_5.5"></a>
+
+[caption id="attachment_47" align="alignleft" width="300"]<img class="wp-image-45 size-medium" style="margin-bottom: -1ex" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Logistic1a-300x241.png" alt="Bifurcation diagram. Long description available." width="300" height="241" /> Figure 5.5. Bifurcation diagram of the logistic map. [<a href="#Fig_5.5_Desc"><em>Image Description</em></a>][/caption]Figure 5.5 shows the <em>bifurcation diagram</em> of the logistic map. As mentioned above, for a given value of $latex a$, successive iterations of $latex f$ converge towards an attractor, for instance a fixed point, a period-two cycle, or a much more complicated structure. The bifurcation diagram of $latex f$ gives a representation of this attractor as a function of $latex a.$ It is numerically obtained by plotting the set of points
+<p style="text-align: center">$latex \left\{ x_k,\ k_{min} \lt k \lt k_{max} \right\},$</p>
+for different values of $latex a$. Here, the initial condition is a point $latex x_0 \in (0,1)$, say $latex x_0 = 1/2$, $latex k_{min}$ is large enough so that the dynamics is sufficiently close to its attractor after $latex k_{min}$ iterations, and $latex k_{max}$ depends on the available computing power. The bifurcation diagram shown in Figure 5.5 was calculated with $latex k_{min}=1500$ and $latex k_{max}=1700$.<a id="Fig_5.6"></a>
+
+[caption id="attachment_47" align="alignleft" width="300"]<img class="size-medium wp-image-46" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Logistic2a-300x239.png" alt="Zoomed-in bifurcation diagram. Long description available." width="300" height="239" /> Figure 5.6. Bifurcation diagram of the logistic map, for 3 ≤ <em>a</em> ≤ 4. [<a href="#Fig_5.6_Desc"><em>Image Description</em></a>][/caption]An enlargement for $latex 3 \le a \le 4$ is shown in Figure 5.6. The cycles of period 2, 4 and 8 are clearly visible. Period 3 and 6 windows for larger values of $latex a$ are also easily detected.
+
+A period-$latex n$ cycle may be analyzed by looking at fixed points of $latex f^n$. Of course, as $latex n$ increases it quickly becomes difficult to solve for such fixed points. However, it can be shown that all of the period-doubling bifurcations occur in a similar, universal, fashion (see articles by P. Coullet &amp; C. Tresser, 1978[footnote]P. Coullet and C. Tresser, <em><a href="http://dx.doi.org/10.1051/jphyscol:1978513">Itérations d'endomorphismes et groupe de renormalisation</a></em> J. Phys. Colloques <strong>39</strong>, C5: 25-28 (1978)[/footnote] and by M. Feigenbaum, 1980[footnote]Mitchell J. Feigenbaurn, <a href="http://permalink.lanl.gov/object/tr?what=info:lanl-repo/lareport/LA-UR-80-5007"><em>Universal Behavior in Nonlinear Systems</em></a>, Los Alamos Science <strong>Summer 1980</strong>, 4-27 (1980)[/footnote]). For a simple description of the various types of instabilities occurring in the logistic and other iterated maps, the reader is referred to the 1976 article by Robert May entitled <a href="http://dx.doi.org/10.1038/261459a0"><em>Simple mathematical models with very complicated dynamics</em></a> and to the exercises at the end of this chapter.
+<h2>Continuous approximation of a one-species discrete model</h2>
+<p style="text-align: justify">The discrete model discussed in the first section is such that</p>
+<p style="text-align: center">$latex \displaystyle \frac{N(t + \Delta t) - N(t)}{\Delta t} = N(t) R(t).$</p>
+<p style="text-align: justify">As $latex \Delta t \rightarrow 0$, the difference quotient on the left-hand-side can be approximated by $latex dN / dt$, and we thus obtain the following continuous approximation</p>
+<p style="text-align: center"><a id="cont_map"></a>$latex \displaystyle \frac{d N}{d t} = R(t) N(t). \qquad (5.3)$</p>
+<p style="text-align: justify">Such an approximation is meaningful only if one can think of $latex N$ as a differentiable function of $latex t$. In particular, $latex N$ must be continuous. Equation (<a href="#cont_map">5.3</a>) will thus be a reasonable model for a population only if $latex N$ is large. In the case of a phenomenological model, if stochastic effects are negligible and $latex N$ approximates an actual number of individuals, the latter should be close to the integer $latex \text{round}(N(t))$ nearest to $latex N(t).$ Another possibility is to define $latex N(t)$ as a density, i.e. an average number of individuals per surface area for instance. Alternatively, one may view $latex N(t)$ as the expected value of a large population. In that context, it is useful to think of $latex R(t) \delta t + O(\delta t^2)$ as a per-capita probability of growth, so that the expected change in $latex N$ during the small amount of time between $latex t$ and $latex t + \delta t$ is $latex R(t) N(t) \delta t + O(\delta t^2)$. In the rest of these notes, we mainly use continuous models and thus implicitly assume that the relevant quantities are adequately described by continuous variables.</p>
+
+<h3>Linear model</h3>
+<p style="text-align: justify">If $latex R(t) = b - d \equiv r$ with $latex b$ and $latex d$ constant, Equation (<a href="#cont_map">5.3</a>) reads</p>
+<p style="text-align: center"><a id="cont_map_const"></a>$latex \displaystyle \frac{d N}{d t} = r\ N(t) \qquad (5.4)$</p>
+<p style="text-align: justify">and its solution is $latex N(t) = \exp(r t) N_0,$ where $latex N_0$ is the population at $latex t = 0$. If $latex r &gt; 0,$ the population grows exponentially; if $latex r \lt 0,$ $latex N(t)$ decays to zero and the species goes extinct. There is thus a direct analogy between the two linear models given by Equations (<a href="#linear_growth">5.1</a>) and (<a href="#cont_map_const">5.4</a>), which is further explored in the exercises. Equation (<a href="#cont_map_const">5.4</a>) is known as <em>the Malthus equation in continuous time</em>.</p>
+
+<h3>The Logistic model</h3>
+Consider now the logistic model, given by
+<p style="text-align: center">$latex \displaystyle \frac{d N}{d t} = a N (N_c - N),$</p>
+where $latex N_c$ and $latex a$ are parameters. This equation, known as <em>the Verhulst equation</em>, can be simplified into
+<p style="text-align: center"><a id="Logistic_cont"></a> $latex \displaystyle \frac{d M}{d t} =\lambda M (1 - M)\quad (5.5)$</p>
+by making the change of variables $latex \displaystyle M = \frac{N}{N_c}$ and $latex \lambda = a N_c$. Note that $latex M$ is dimensionless and $latex [\lambda] = 1/T.$ We could thus rescale the time variable and obtain a parameter-free model, but we will not do this now. The solution of Equation (<a href="#Logistic_cont">5.5</a>) with initial condition $latex M(0) = M_0$ is $latex M(t) = \displaystyle \left[1 + \frac{1-M_0}{M_0} \exp(- \lambda t)\right]^{-1},$ for all values of the parameter $latex \lambda$. As $latex t \rightarrow \infty$, $latex M \rightarrow 1$ if $latex \lambda &gt; 0$, for all values of $latex M_0$. In terms of the original variables, we have $latex N \rightarrow N_c$. The quantity $latex N_c$ is called the <em>carrying capacity</em> of the environment. It corresponds to an equilibrium state in which the number of deaths balances the number of births in order to sustain a population in the presence of limited resources. If $latex \lambda \lt 0$, then $latex M \rightarrow 0$ if $latex M_0 \lt 1$, and $latex M \rightarrow \infty$ for $latex t \rightarrow t^*$, where $latex t^* = \displaystyle \frac{1}{- \lambda} \ln\left(\frac{M_0}{M_0-1}\right),$ if $latex M_0 &gt; 1$. In this case, the solution therefore diverges in finite time. The dynamics of $latex M$ is monotonic for all values of $latex \lambda$, and is therefore completely different from that of the discrete logistic map, for which chaos may be observed.
+<h3>General autonomous model</h3>
+More generally, consider the differential equation
+<p style="text-align: center"><a id="auto_cont"></a> $latex \displaystyle \frac{d N}{d t} = f(N), \qquad (5.6)$</p>
+where $latex f$ is a nonlinear function of $latex N$. In the context of population dynamics, $latex f(N)$ is called the <em>net growth rate of the population</em>. It is often written as $latex f(N) = N R(N)$, where $latex R(N)$ is the <em>net per capita growth rate</em> of the population. Since the right-hand-side of Equation (<a href="#auto_cont">5.6</a>) does not depend on $latex t$, this differential equation is said to be <em>autonomous</em>.<a id="Fig_5.7"></a>
+
+[caption id="attachment_47" align="alignleft" width="300"]<img class="wp-image-47 size-medium" style="margin-bottom: -1ex" src="https://opentextbooks.library.arizona.edu/app/uploads/sites/217/2022/09/Gen_stable-300x220.png" alt="Stability diagram of a one-dimensional system. Long description available." width="300" height="220" /> Figure 5.7. The fixed points of Equation (5.39) are the values of <em>N</em> at which the graph of <em>f</em>(<em>N</em>) intersects the <em>x</em>-axis. The stability of a fixed point <em>N<sub>c</sub></em> can be inferred from the behavior of <em>f</em>(<em>N</em>) near <em>N</em> = <em>N<sub>c</sub></em>. [<a href="#Fig_5.7_Desc"><em>Image Description</em></a>][/caption]
+The fixed points $latex N_c$ of (<a href="#auto_cont">5.6</a>) are given by $latex f(N_c)=0$, and can be obtained graphically by looking at where the graph of $latex f$ intersects the horizontal axis. The <em>nonlinear</em> stability of these fixed points can also be assessed graphically. Indeed, $latex f(N)$ changes sign at $latex N = N_c$. We know that if $latex f(N) &gt; 0$ for $latex N \lt N_c$, then $latex N$ will grow towards $latex N_c$, whereas if $latex f(N) &gt; 0$ for $latex N &gt; N_c$, then $latex N$ will move away from $latex N_c$. The stability of any fixed point $latex N_c$ of $latex f$ can thus be inferred by adding arrows to the horizontal axis that point to the left where $latex f$ is negative and to the right where $latex f$ is positive. A stable fixed point $latex N_c$ will have arrows pointing towards it on both sides, whereas an unstable fixed point will be associated with arrows pointing away from it. This is illustrated in Figure 5.7.
+<h2>Discrete models with age distribution</h2>
+Models with age distribution describe the number of individuals in each age group of a population and allow to take into account different birth and death rates for different subgroups. Consider for instance a three-group model, in which $latex N_1(t)$ is the number of children at time $latex t$; $latex N_2(t)$ is the number of adults of child-bearing age, and $latex N_3(t)$ is the number of older adults. A simple set of difference equations describing the dynamics of such a population is as follows,
+<p style="text-align: center">$latex N_1(t + \Delta t) = N_1(t) + b_2 N_2(t) \Delta t - d_1 N_1(t) \Delta t - g_1 N_1(t) \Delta t$</p>
+<p style="text-align: center">$latex N_2(t + \Delta t) = N_2(t) + g_1 N_1(t) \Delta t - d_2 N_2(t) \Delta t - g_2 N_2(t) \Delta t$</p>
+<p style="text-align: center">$latex N_3(t + \Delta t) = N_3(t) + g_2 N_2(t) \Delta t - d_3 N_3(t) \Delta t,$</p>
+where $latex d_i$ is the per capita death rate of group $latex i$, $latex g_i$ is the rate at which surviving individuals move out of group $latex i$ (alternatively, $latex g_i \Delta t$ represents the probability that an individual in group $latex i$ will move to group $latex i+1$ during $latex \Delta t$), and $latex b_2$ is the per capita rate at which individuals in group 2 give birth. The period of time $latex \Delta t$ could be one year or five years for human populations. It should be shorter than the typical timescales of the system being modeled, such as the time it takes for one child to become an adult, or the time it takes for a young adult to move to group 3.
+
+The above system is linear and can thus be conveniently rewritten as a difference equation for the vector $latex \vec C = (N_1,N_2,N_3)^T$, which reads
+<p style="text-align: center"><a id="map_vector"></a> $latex \left(\begin{array}{c}N_1 \\ N_2 \\ N_3\end{array}\right)(t + \Delta t) = A \left(\begin{array}{c}N_1 \\ N_2 \\ N_3\end{array}\right)(t), \qquad (5.7)$</p>
+with $latex A = \displaystyle \left(\begin{array}{ccc} 1 - (d_1 + g_1) \Delta t &amp; b_2 \Delta t &amp; 0 \\ g_1 \Delta t &amp; 1 - (d_2 + g_2) \Delta t &amp; 0 \\ 0 &amp; g_2 \Delta t &amp; 1 - d_3 \Delta t\end{array}\right).$ The matrix $latex A$ typically has constant, non-negative entries. It is called a <em>Leslie matrix</em> in the context of population dynamics models. We can look for a solution to Equation (<a href="#map_vector">5.7</a>) in the form $latex \vec C (t_0 + m \Delta t) = r^m \vec C(t_0),$ where $latex t_0$ is some initial time. Substitution of this expression into Equation (<a href="#map_vector">5.7</a>) implies that $latex \displaystyle A \vec C(t_0) = r\, \vec C(t_0),$ i.e. $latex \vec C(t_0)$ is an eigenvector of $latex A$ with eigenvalue $latex r$. If the matrix $latex A$ is diagonalizable, the general solution of Equation (<a href="#map_vector">5.7</a>) may thus be written as
+<p style="text-align: center">$latex \vec C(m\, \Delta t) = a_1 r_1^m \vec C_1 + a_2 r_2^m \vec C_2 + a_3 r_3^m \vec C_3,$</p>
+where the $latex \vec C_i$ are three linearly independent eigenvectors of $latex A$ with associated eigenvalues $latex r_i$, and the $latex a_i$ are coefficients imposed by the initial condition $latex \vec C(0) = \vec C_0$, where $latex \vec C_0$ is known. Note that since $latex A$ has real entries, its eigenvalues are either all real or consist of a real eigenvalue and a complex conjugate pair of eigenvalues. In this latter case, two of the $latex \vec C_i$, say $latex \vec C_2$ and $latex \vec C_3$, are also complex conjugates and a real initial condition leads to $latex a_3 = a_2^*$, where the star denotes complex conjugation. The dynamics of Equation (<a href="#map_vector">5.7</a>) depends on the position of the eigenvalues of $latex A$ in the complex plane, relative to the unit circle. Indeed, if $latex |r_i|&gt;1$, then exponential growth will be observed in the direction of $latex \vec C_i$, with fastest and therefore dominant growth along the eigendirection associated with the principal eigenvalue of $latex A$. Conversely, if all of the eigenvalues of $latex A$ have modulus less than 1, then $latex \vec C(m\, \Delta t)$ will converge towards zero. More complex behaviors, including chaos, may be observed if nonlinear effects are taken into account.
+<h3>The LPA Model</h3>
+Depending on the type of species whose populations is being modeled, effects other than births and deaths may have to be considered. As an illustration, we now discuss a model developed by R.F. Costantino and colleagues[footnote]R.F. Costantino, J.M. Cushing, B. Dennis, and R.A. Desharnais, <a href="http://dx.doi.org/10.1038/375227a0"><em>Experimentally induced transitions in the dynamics behaviour of insect populations</em></a>, Nature <strong>375</strong>, 227-230 (1995).[/footnote][footnote]R.F. Costantino, R.A. Desharnais, J.M. Cushing, and B. Dennis, <a href="http://dx.doi.org/10.1126/science.275.5298.389"><em>Chaotic dynamics in an insect population</em></a>, Science <strong>275</strong>, 389-391 (1997).[/footnote][footnote]J.M. Cushing, R.F. Costantino, B. Dennis, R.A. Desharnais, and S.M. Henson, <a href="http://doi.org/10.1006/jtbi.1998.0736"><em>Nonlinear population dynamics: models, experiments and data</em></a>, J. Theor. Biol. <strong>194</strong>, 1-9 (1998).[/footnote] for a population of flour beetles, for which adults are known to eat their offspring. The different stages in the development of a beetle are the larval, pupal and adult stages. If one chooses $latex \Delta t$ (about 2 weeks for flour beetles) such that it corresponds to the time it takes on average for a larva to pupate and for a pupa to become a reproductive adult, one has, counting time in units of $latex \Delta t$, and in the absence of cannibalism,
+<p style="text-align: center">$latex \displaystyle \left\{\begin{array}{l} L(t + 1) = b A(t),\\ P(t + 1) = L(t) - d_l L(t),\\A(t + 1) = A(t) - d_a A(t) + P(t), \end{array}\right.$</p>
+where the positive constants $latex d_l$ and $latex d_a$ are the probabilities of death for larvae and adults during the period $latex \Delta t\ (= 1)$, the parameter $latex b &gt; 0$ is the average number of eggs per adult that have hatched during $latex \Delta t$, and one has neglected deaths in the pupal stage.
+
+Cannibalism of eggs by adults and larvae is modeled through multiplicative terms of the form $latex \exp(-c_{ea} A(t))$ and $latex \exp(-c_{el} L(t))$ respectively, and cannibalism of pupae by adults is described by $latex \exp(-c_{pa} A(t))$ (see the articles by Costantino et al. and Cushing et al. mentioned above). Here, the constants $latex c_{ea}$, $latex c_{el}$ and $latex c_{pa}$ are all positive. The exponential terms represent the fraction of eggs or pupae which survive to the next stage in their development, and can be understood as follows. Beetles in a crawling stage (larvae and adults) move through the flour and may encounter individuals in a non-moving stage, such as eggs and pupae. When this happens, the moving larva or adult beetle will bite the egg or pupa, thereby killing it. We assume that larvae only kill eggs, since pupae are bigger than larvae. Suppose the probability that an adult encounters one egg during the period of time $latex \Delta t$ is given by $latex p\, \Delta t$, where $latex p$ is constant. Then, the probability for this egg not to have been eaten by this adult at the end of $latex \Delta t$ is $latex 1 - p \Delta t$, and the probability for this (or any other) egg to become a larva is then $latex \left(1 - p \Delta t\right)^{A(t)}$, since there are $latex A(t)$ adults. Thus, if eggs were only eaten by adults, one would write
+<p style="text-align: center">$latex \begin{align*}L(t + \Delta t) &amp; =b A(t) (1 - p \Delta t)^{A(t)}\\ &amp; =b A(t) \exp\left(A(t) \ln(1 - p \Delta t)\right)=b A(t) \exp\left(- c_{ea} A(t)\right),\end{align*}$</p>
+where $latex c_{ea} = - \ln(1 - p \Delta t)$. Following similar arguments, the fact that eggs are also eaten by larvae is taken into account by multiplying the right hand side of the above equation by $latex \exp(- c_{el} L(t))$. Therefore, the <em>deterministic LPA</em> <em>model</em> (where LPA stands for Larva, Pupa, Adult), which includes cannibalism of pupae and eggs by adults and of eggs by larvae, reads
+<p style="text-align: center">$latex \displaystyle \left\{\begin{array}{l} L(t + 1)=b A(t) \exp(-c_{ea} A(t) - c_{el} L(t)),\\ P(t + 1) = L(t) - d_l L(t),\\A(t + 1) = A(t) - d_a A(t) + P(t) \exp(-c_{pa} A(t)). \end{array}\right.$</p>
+A review of the dynamical properties of the LPA model can be found in the 2004 article by Jim Cushing <em>et al</em>. entitled <a href="http://doi.org/10.1006/jtbi.1998.0736"><em>Nonlinear population dynamics: models, experiments and data</em></a>. In particular, it can be shown that the trajectories of the LPA model which start in the non-negative octant remain non-negative. Moreover, when stochastic terms are added to the above equations, the predictions given by the resulting model, including behavior consistent with chaotic dynamics, are in particular good agreement with experiments.
+<h2>Summary</h2>
+This chapter discusses discrete and continuous models for the dynamics of a single species. We first introduced exponential growth in the context of the Audubon Society's count of red-tailed hawks in the United States, and added nonlinear saturation to the corresponding model. We then discussed fixed points and periodic cycles of one-dimensional nonlinear maps and saw that simple nonlinear difference equations, such as the logistic map, could have very complex dynamics and exhibit chaos. We also described linear and nonlinear population models with age groups. An example of the latter is the LPA model, whose stochastic version gives an accurate representation of experimental observations. Finally, we introduced continuous models as approximations of discrete models, discussed the global stability of their fixed points, and pointed out that one-dimensional (as well as two-dimensional) continuous models have very simple dynamics. In particular, they cannot exhibit chaos.
+
+The methods and techniques introduced in this chapter generalize to more complex situations. The exercises below discuss models with continuous age distributions, delay and harvesting, as well as the evolution of the population of the United States.
+<h2>Figure Descriptions</h2>
+<a id="Fig_5.1_Desc"></a><strong>Figure 5.1</strong>: A line graph showing "Bird count" over a period of "Years." The population appears to remain near zero for the first 40 years before experiencing rapid exponential-like growth, peaking near 60,000 birds at year 100. The line is "noisy" (jagged), suggesting year-to-year fluctuations while maintaining a clear upward trajectory. [<em><a href="#Fig_5.1">Return to Figure 5.1</a></em>]
+
+<strong><a id="Fig_5.2_Desc"></a>Figure 5.2</strong>: A line graph showing the "Normalized rate of change" over slightly more than 100 "Years." The graph displays high volatility and large spikes in the first 45 years, followed by much smaller, stabilized fluctuations as the timeline progresses. [<em><a href="#Fig_5.2">Return to Figure 5.2</a></em>]
+
+<strong><a id="Fig_5.3_Desc"></a>Figure 5.3</strong>: A scatter plot with a linear regression line showing the relationship between $latex N(t)$ on the horizontal axis and $latex N(t+1)$ on the vertical axis. The data points (blue circles) are densely packed near the origin (0,0) and become more spread out as the population grows. They follow a strong upward linear trend, closely hugging a solid red line that passes through the origin. The size of the fluctuations about the trend line increases with $latex N(t)$. [<em><a href="#Fig_5.3">Return to Figure 5.3</a></em>]
+
+<a id="Fig_5.4_Desc"></a><strong>Figure 5.4</strong>: A cobweb plot showing a function $latex y = f(x)$ and the identity line $latex y = x$. A red stepped line (the cobweb) starts at $latex N_0$ and spirals inward toward a stable fixed point $latex N_s$. An unstable fixed point $latex N_u$ is also shown at a higher intersection. [<em><a href="#Fig_5.4">Return to Figure 5.4</a></em>]
+
+<strong><a id="Fig_5.5_Desc"></a>Figure 5.5</strong>: A bifurcation diagram plotting a parameter $latex a$ on the horizontal axis (from 0.5 to 4) against the long-term state of a system on the vertical axis (from 0 to 1). A single curve emerges at $latex a=1$, rises smoothly, and then begins a series of period-doubling branches at $latex a=3$ before descending into a dense chaotic region at the far right. [<em><a href="#Fig_5.5">Return to Figure 5.5</a></em>]
+
+<strong><a id="Fig_5.6_Desc"></a>Figure 5.6</strong>: A bifurcation diagram plotting a parameter $latex a$ on the horizontal axis (from 3 to 4) against the long-term state of a system on the vertical axis (from 0 to 1). The plot shows two branches on the left, corresponding to a period-two point. As $latex a$ increases, each branch breaks into two branches (period-doubling), each of which breaks into two new branches for slightly higher values of $latex a$. This process repeats itself until the graph shows a dense, dark region representing chaotic behavior with intermittent "windows" of stability. [<em><a href="#Fig_5.6">Return to Figure 5.6</a></em>]
+
+<strong><a id="Fig_5.7_Desc"></a>Figure 5.7</strong>: A stability diagram for a one-dimensional system showing a function $latex f(x)$ intersecting the $latex x$-axis at three fixed points. The center point is a stable equilibrium, indicated by a negative slope and arrows on the axis pointing toward it. The two outer points are unstable equilibria, indicated by positive slopes and arrows pointing away from them. [<em><a href="#Fig_5.7">Return to Figure 5.7</a></em>]
+
+&nbsp;
+<div class="textbox textbox--exercises"><header class="textbox__header">
+<h2>Food for Thought</h2>
+</header>
+<div class="textbox__content">
+<h3 style="text-align: center">Problem 1</h3>
+Assume that a population grows according to $latex \displaystyle N(t+1) = \kappa N(t), \kappa &gt; 1.$
+<ol>
+ 	<li>How long does it take to double the number of individuals?</li>
+ 	<li>Estimate the value of $latex \kappa$ from Figure 5.1, which shows the number of Red-tailed Hawks in the United States as a function of time.</li>
+ 	<li>Is your estimate of $latex \kappa$ in reasonable agreement with the value $latex \kappa = 1.025$ inferred from Figure 5.3?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 2</h3>
+Consider the continuous model $latex \displaystyle \frac{d N}{d t} = r N, r &gt; 0.$
+<ol>
+ 	<li>How long does it take to double $latex N$?</li>
+ 	<li>If this model is an approximation of a difference equation of the form $latex N(t + \Delta t) = \kappa N(t),$ what is the relationship between $latex \kappa$ and $latex r$?</li>
+ 	<li>How long does it take for a system described by the discrete model to double its population?</li>
+ 	<li>Is the discrete model faster or slower than its continuous approximation?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center"><span style="text-indent: 0em">Problem 3</span></h3>
+<span style="text-indent: 0em">Consider the continuous model $latex \displaystyle \frac{dN}{dt} = r(N) N,$ </span>where $latex r(N)$ is a linear function of $latex N$: $latex r(N) = a N + b$.
+<ol>
+ 	<li>What should the signs of $latex a$ and $latex b$ be if one wants the population to grow for small values of $latex N$ and saturate at large values of $latex N$?</li>
+ 	<li>What changes of variables should you make to turn this model into Equation (<a href="#Logistic_cont">5.5</a>)?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 4</h3>
+Find the non-trivial fixed point of the logistic map
+<p style="text-align: center">$latex x_{n+1} = a x_n (1 - x_n) \equiv f(x_n), 0 \lt a \lt 4.$</p>
+
+<ol>
+ 	<li>Show that this fixed point becomes unstable when $latex a &gt; 3$.</li>
+ 	<li>Show that as soon as this fixed point becomes unstable, a period-two cycle of the map starts to exist. <span style="text-decoration: underline">Hint</span>: look for fixed points of $latex f^2$.</li>
+ 	<li>Find the value of $latex a$ at which this period-two cycle becomes unstable.</li>
+ 	<li>Check your answer against the bifurcation diagram of Figure 5.6.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 5</h3>
+Solve the difference equation $latex \displaystyle X(t + 1) = \left(\begin{array}{cc} 2 &amp; 2 \\ 1 &amp; 3 \end{array}\right) X(t)$, where $latex X(t)$ has two components: $latex \displaystyle X(t) = \left(\begin{array}{c} x(t) \\ y(t) \end{array}\right).$ Assume the initial conditions are $latex x(0)=1$ and $latex y(0) = 0.$
+
+<hr />
+
+<h3 style="text-align: center">Problem 6</h3>
+Consider the differential equation $latex \displaystyle \frac{d x}{d t} = x (x - 1) (x - 2).$
+<ol>
+ 	<li>What are the fixed point of the dynamics?</li>
+ 	<li>Are they stable or unstable?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 7</h3>
+Consider the differential equation $latex \displaystyle \frac{d x}{d t} = x^2 (x-1).$
+<ol>
+ 	<li>What are the fixed point of the dynamics?</li>
+ 	<li>Are they stable or unstable?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 8</h3>
+Consider the differential equation $latex \displaystyle \frac{d x}{d t} = a + x^2 (x-1) \equiv f(x), a \in \mathbb{R}.$
+<ol>
+ 	<li>Plot $latex f(x)$ as a function of $latex x$. What happens as $latex a$ changes?</li>
+ 	<li>Without performing any calculation, sketch the behavior of the fixed points as a function of $latex a$.</li>
+ 	<li>Indicate the stability of each fixed point on the bifurcation diagram of question (2).</li>
+ 	<li>Assign a value of +1 to each stable fixed point and a value of -1 to each unstable fixed point. For each value of $latex a$, define a function $latex g(a)$ as the sum of indices associated with the fixed points existing for this particular value of $latex a$. Sketch the graph of $latex g$ as a function of $latex a$. What do you observe?</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 9</h3>
+Consider a population model where the age $latex a$ is a continuous independent variable. Define the age distribution $latex M(a,t)$ such that the number of individuals between age $latex a_1$ and age $latex a_2$ at time $latex t$ is given by
+<p style="text-align: center">$latex \int_{a_1}^{a_2} M(a,t) d a.$</p>
+Show that the dynamics of $latex M$ is described by the following partial differential equation, known as the <em>McKendrick</em> or <em>von Foerster</em> partial differential equation,
+<p style="text-align: center">$latex \displaystyle \frac{\partial M}{\partial t} + \frac{\partial M}{\partial a} = - d(a) M,$</p>
+where the mortality function $latex d(a)$ represents the per capita death rate of individuals of age $latex a$.
+
+<hr />
+
+<h3 style="text-align: center">Problem 10</h3>
+Use the method of characteristics to solve the McKendrick partial differential equation derived in Problem 9.
+
+<hr />
+
+<h3 style="text-align: center">Problem 11</h3>
+Consider the LPA model described in this chapter. What are the dimensions of the parameters ($latex b$, $latex c_{ea}$, $latex c_{el}$, $latex c_{pa}$, $latex d_a$, $latex d_l$) appearing in this model?
+
+<hr />
+
+<h3 style="text-align: center">Problem 12</h3>
+Write a model describing a situation analogous to that of the LPA model (with cannibalism), but such that the time for a pupa to become an adult is twice as long as the time it takes for a larva to pupate.
+
+<hr />
+
+<h3 style="text-align: center">Problem 13</h3>
+Write a model describing a population with two subgroups, juvenile and adults, in which adults eat some of their own eggs. You can use an exponential term similar to that appearing in the LPA model to describe cannibalism.
+
+<hr />
+
+<h3 style="text-align: center">Problem 14</h3>
+Consider the following model,
+<p style="text-align: center">$latex \displaystyle \left\{\begin{array}{l} J(t + \Delta t)=b A(t) \exp\left(- c A(t)\right),\\ A(t + \Delta t)=(1 - d_J) J(t) + (1 - d_A) A(t), \end{array}\right.$</p>
+where $latex b$, $latex d_J$ and $latex d_A$ are positive parameters.
+<ol>
+ 	<li>Describe in words a situation modeled by the above equations.</li>
+ 	<li>Under what condition is there a non-trivial fixed point for this model? What is the biological significance of this condition?</li>
+ 	<li>Discuss the stability of the fixed points of this model.</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 15</h3>
+Read the article by R. May, entitled <a href="http://dx.doi.org/10.1038/261459a0"><em>Simple mathematical models with complicated dynamics</em></a>, and address (i.e. explain, justifies, work out the details of, or prove) the following statements found in this paper.
+<ol>
+ 	<li>Page 460, left column, above Equation (3): "<em>By writing $latex X = b N/a$, the equation may be brought into the canonical form $latex X_{t+1} = a X_t (1-X_t)$."</em></li>
+ 	<li>Page 460, left column, bottom: "<em>If $latex X$ ever exceeds unity, subsequent iterations diverge towards $latex - \infty$</em>."</li>
+ 	<li>Page 460, right column, below Equation (6): "<em>So long as this slope lies between 45<sup>o</sup> and -45<sup>o</sup> ... the equilibrium point $latex X^*$ will be at least locally stable</em>."</li>
+ 	<li>Page 461, left column, below Equation (9): "<em>Clearly, the equilibrium point $latex X^*$ of Equation (5) is a solution of Equation (9)</em>."</li>
+ 	<li>Equation (10): $latex \lambda^{(2)}(X^*) = [\lambda^{(1)}(X^*)]^2$.</li>
+ 	<li>Page 461, left column, bottom: "<em>As this happens, the curve $latex F^{(2)}(X)$ must develop a ``loop'', and two new fixed points of period 2 appear</em>."</li>
+ 	<li>Page 461, left column, bottom: "<em>This slope is easily shown to be the same at both points, and more generally to be the same at all $latex k$ points on a period $latex k$ cycle</em>."</li>
+ 	<li>Bottom of page 461 and beginning of page 462: "<em>... until at last the three-point cycle appears (at $latex a = 3.8284 ...$ for equation (3))</em>."</li>
+ 	<li>Page 462, right column, bottom: "<em>This period 3 cycle is never stable</em>."</li>
+ 	<li>Page 462, right column, bottom: "<em>As $latex F(X)$ continues to steepen, the slope $latex \lambda^{(3)}$ for this initially stable three-point cycle decreases beyond -1; the cycle becomes unstable and gives rise by bifurcation process ... to stable cycles of period 6, 12, 24, ..., $latex 3 \times 2^n$</em>."</li>
+ 	<li>Draw pictures illustrating the concepts of tangent and pitchfork bifurcations (see page 463, top of left column).</li>
+ 	<li>Page 464, right column, top: "<em>... the slope of the $latex k$-time iterated map $latex F^{(k)}$ at any point on a period $latex k$ cycle is simply equal to the product of the slopes of $latex F(X)$ at each of the points $latex X^*_k$ on this cycle</em>."</li>
+ 	<li>Page 465, left column, bottom: "<em>... as each new pair of cycles is born by tangent bifurcation (see Fig. 5), one of them is at first stable, by virtue of the way smoothly rounded hills and valleys intercept the 45<sup>o</sup> line</em>."</li>
+ 	<li>Page 466, right column, bottom: "<em>... in continuous two-dimensional systems ... dynamic trajectories cannot cross each other</em>."</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 16</h3>
+The goal of this problem is to explore global changes in the population of the United States. The <a href="https://www.census.gov/">U.S. Census Bureau</a> maintains a file (<a href="https://www2.census.gov/programs-surveys/popest/tables/1900-1980/national/totals/popclockest.txt">popclockest.txt</a>) containing national population estimates between 1900 and 1999. Import this data set into MATLAB or EXCEL. Then answer the following questions.
+<ol>
+ 	<li>Plot the U.S. population as a function of time. What do you conclude?</li>
+ 	<li>Can the growth of the U.S. population be modeled by a simple evolution equation of the form $latex N(t+1) = (1+R) N(t)$, where $latex t$ is in years? Why or why not? If so, estimate $latex R$.</li>
+ 	<li>Post-census population estimates are obtained as described on the <a href="https://www.census.gov/programs-surveys/popest/technical-documentation/methodology.html">U.S. Census Bureau methodology page</a> (see for instance the <a href="https://www2.census.gov/programs-surveys/popest/technical-documentation/methodology/2020-2021/methods-statement-v2021.pdf">methodology file for the 2021 vintage</a>). Explain the main formula given in the Overview section of this article.</li>
+ 	<li>Given the following estimates[footnote]Downloaded in 2005 from a now decommissioned US Census Bureau web page (https://www.census.gov/popest/datasets.html)[/footnote] find the population of the U.S. in 2004:
+<ol>
+ 	<li>Population in 2001: 285,102,075.</li>
+ 	<li>Births, deaths, and net international immigration:
+<ul>
+ 	<li>2001-2002: 4,006,985; 2,429,999; 1,262,159.</li>
+ 	<li>2002-2003: 4,055,469; 2,432,874; 1,225,161.</li>
+ 	<li>2003-2004: 4,099,399; 2,453,984; 1,221,013.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+
+<hr />
+
+<h3 style="text-align: center">Problem 17</h3>
+The goal of this section is to explore the evolution of the population of the United States using different age groups. Population estimates by five-year age groups from 2010 to 2019 can be obtained from the <a href="https://www.census.gov/topics/population/age-and-sex/data/tables.html">U.S. Census Bureau web site</a> (each year has its own table).
+<ol>
+ 	<li>Use this information to plot the age distribution of the U.S. population for different years.
+<ol>
+ 	<li>Has there been major changes in the last 4 years of this data set?</li>
+ 	<li>The data set has 18 age groups. Use the age distributions that you just plotted to define larger age groups that can be used in a simplified model.</li>
+</ol>
+</li>
+ 	<li>Using recent <a href="https://www.cdc.gov/nchs/data/nvsr/nvsr67/nvsr67_01.pdf">birth</a> and <a href="https://www.cdc.gov/nchs/data/nvsr/nvsr65/nvsr65_04.pdf">death</a> rates estimates, as published by the Center for Disease Control and Prevention, create a model to predict the population in the age groups you defined, taking the 2010 data as initial condition. You may want to start with Figures 2 and 3 of the birth and deaths documents, respectively. There are also tables at the end that may be of use. (Note: do not attempt to print these files; they are more than 50 pages long!)
+<ol>
+ 	<li>How does your model compare to the Census Bureau estimates for 2019?</li>
+ 	<li>Use your model to predict the population in each age group in 2050. What do you conclude?</li>
+ 	<li>Discuss the limitations of your model.</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>

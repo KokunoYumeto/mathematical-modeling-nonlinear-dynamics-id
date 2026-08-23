@@ -167,3 +167,77 @@ the terminology decisions. The same recheck confirmed glossary IDs
 `O005-TERM-0271` through `O005-TERM-0275` exactly once each and confirmed the
 exact model identification `OpenAI Codex gpt-5.6-sol, Ultra.` in the current
 repository provenance and sanitized Zenodo/Figshare receipts.
+
+## C2 bifurcation-terminology addendum — 2026-08-23
+
+The primary arXiv witness remains the edition-wide same-field source, but it
+does not discuss local bifurcations. A bounded check of official Indonesian
+university publications was therefore used for C2's type names:
+
+- Dwi Ariani, *Bifurkasi Transkritikal, Pitchfork dan Saddle-Node pada Sistem
+  Dinamik* (UNY undergraduate thesis, 2010), official repository record
+  <https://eprints.uny.ac.id/1659/>. Its title and Indonesian abstract retain
+  `pitchfork` and `saddle-node` as the type names; the abstract uses `garpu`
+  only to explain the pitchfork diagram's shape.
+- Emli Rahmi and Hasan S. Panigoro, *Pengaruh Pemanenan terhadap Model Verhulst
+  dengan Efek Allee* (Universitas Negeri Gorontalo, 2017), official repository
+  PDF
+  <https://repository.ung.ac.id/get/karyailmiah/1148/Pengaruh-Pemanenan-terhadap-Model-Verhulst-dengan-Efek-Allee.pdf>.
+  Its abstract, section heading, and analysis repeatedly use `bifurkasi
+  saddle-node`.
+- Gesti Essa Waldhani and Chalimatusadiah, *Bifurkasi Hopf pada Model Dinamik
+  S-I-P dengan Penyakit pada Populasi Prey dan Fungsi Respon Holling Type II
+  dengan Pemanenan pada Prey* (MATHunesa 12(3), 2024), official journal PDF
+  <https://ejournal.unesa.ac.id/index.php/mathunesa/article/download/59676/46623>.
+  It attests `bifurkasi Hopf` and the running-prose adjective `transkritis`.
+
+The reader therefore uses `bifurkasi saddle-node`, `bifurkasi pitchfork`,
+`bifurkasi transkritis`, and `bifurkasi Hopf`. The unsupported literal coinage
+`pelana–simpul` and the shape description `garpu tala` are not used as head
+terms. Machine family identifiers `saddle_node` and `pitchfork` remain stable.
+Glossary IDs `O005-TERM-0276` through `O005-TERM-0289` record the C2
+terminology boundary and its dependent local-analysis terms.
+No witness prose, formulas, code, data, or figures were imported.
+
+## C3 discrete-dynamics terminology boundary — 2026-08-23
+
+C3 preserves the already admitted forms `peta logistik`, `penggandaan
+periode`, `eksponen Lyapunov`, `peta balik`, and `kekacauan` / `dinamika
+kacau`. It adds glossary IDs `O005-TERM-0290` through `O005-TERM-0301` for the
+dependent terms needed to state the mathematics without collapsing distinct
+objects: `penampang Poincaré`, the full `peta Poincaré`, `pengali`, `periode
+prima`, `transien`, `interval invarian`, `kepekaan terhadap kondisi awal`,
+`orbit periodik`, `proyeksi peta balik`, `atraktor kacau`, `sistem Lorenz`, and
+`sistem waktu diskret`. In particular, the one-coordinate graph
+`x_(n+1)` versus `x_n` is labeled a projection rather than falsely equated
+with the full section-to-section map. No external source prose, formulas,
+code, data, or figures were imported for this internal consistency boundary.
+
+## C4 calibration-and-validation terminology boundary — 2026-08-23
+
+The primary arXiv witness remains the edition-wide same-field source, but its
+wave-modeling scope does not attest the statistical-inference vocabulary added
+in C4. A bounded official Indonesian-university search was therefore used only
+as a terminology cross-check. The Universitas Negeri Medan journal paper
+*Algoritma Interval Prediksi Kriging Bootstrapping Parametrik*, *Generasi
+Kampus* 9(2), 2016, official PDF
+<https://jurnal.unimed.ac.id/2012/index.php/gk/article/viewFile/7824/6600>,
+directly attests `interval prediksi`, `bootstrap parametrik`, and `estimasi
+parameter`. The already recorded Indonesian holdout sources support the
+edition's `data latih` / `data uji` pairing.
+
+The reader introduces `data uji yang disisihkan (holdout)` once and then uses
+the shorter `data uji`. It expands `kriteria informasi Akaike terkoreksi
+(AICc)`, `akar rerata kuadrat galat (RMSE)`, and `rerata galat absolut (MAE)`
+at first substantive use. Glossary IDs `O005-TERM-0302` through
+`O005-TERM-0321` record the complete C4 boundary, including `kalibrasi`,
+structural and practical `identifiabilitas`, `sensitivitas terskala`,
+`bilangan kondisi`, `residu`, `respons laten`, `ketidakpastian parameter`,
+`ketaksesuaian model`, `validasi eksternal`, and `interval prediksi
+titik-demi-titik`.
+
+No source located in the bounded search was treated as authority for every
+niche term. The unattested terms above remain explicit editorial decisions
+chosen from mathematical meaning and Indonesian word formation rather than
+invented source evidence. No witness prose, formulas, code, data, or figures
+were imported into C4.

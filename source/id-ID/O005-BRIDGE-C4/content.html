@@ -1,0 +1,229 @@
+<div class="textbox textbox--learning-objectives" id="O005-BRIDGE-C4-OBJ">
+<header class="textbox__header">
+<h2 class="textbox__title" data-o005-segment-key="c4/objectives/title">Tujuan Pembelajaran</h2>
+</header>
+<div class="textbox__content">
+<p data-o005-segment-key="c4/objectives/lead">Setelah menyelesaikan modul ini, Anda akan mampu:</p>
+<ul>
+<li data-o005-segment-key="c4/objectives/calibration">mengalibrasi dua model kandidat terhadap data yang telah dibagi sebelum estimasi;</li>
+<li data-o005-segment-key="c4/objectives/identifiability">membedakan identifiabilitas struktural dari identifiabilitas praktis;</li>
+<li data-o005-segment-key="c4/objectives/sensitivity">menggunakan sensitivitas terskala dan bilangan kondisi untuk menilai rancangan pengamatan;</li>
+<li data-o005-segment-key="c4/objectives/diagnostics">membaca residu, metrik pada data uji yang disisihkan (holdout), dan AICc tanpa menganggapnya sebagai bukti mutlak;</li>
+<li data-o005-segment-key="c4/objectives/uncertainty">membedakan ketidakpastian parameter, respons laten, dan pengamatan mendatang; dan</li>
+<li data-o005-segment-key="c4/objectives/communication">mengomunikasikan klaim yang didukung, batas validasi, dan tanda kegagalan model.</li>
+</ul>
+</div>
+</div>
+
+<aside class="edition-notice" id="O005-BRIDGE-C4-PROVENANCE" aria-labelledby="O005-BRIDGE-C4-PROVENANCE-TITLE">
+<h2 id="O005-BRIDGE-C4-PROVENANCE-TITLE" data-o005-segment-key="c4/provenance/title">Asal-usul modul</h2>
+<p data-o005-segment-key="c4/provenance/relationship">Modul ini merupakan tambahan independen untuk edisi Bahasa Indonesia <cite>Introduction to Mathematical Modeling</cite>, v1.01, karya Joceline Lega. Modul ini bukan bagian dari buku sumber, memakai data sintetis yang dibuat di dalam notebook, tidak menyalin atau mengadaptasi kode sumber pihak lain, dan tidak menyatakan dukungan atau pengesahan oleh Joceline Lega maupun University of Arizona. Komputasinya memakai pustaka sumber terbuka NumPy, SciPy, dan Matplotlib yang dicatat dalam berkas pengunci lingkungan. Distribusi mengikuti CC BY-NC-SA 4.0.</p>
+<p data-o005-segment-key="c4/provenance/model">Produksi dan QA tambahan: OpenAI Codex gpt-5.6-sol, Ultra.</p>
+</aside>
+
+<section id="O005-BRIDGE-C4-SEC01">
+<h2 data-o005-segment-key="c4/question/title">Satu pertanyaan, satu batas klaim</h2>
+<p data-o005-segment-key="c4/question/operational-question">Pertanyaan operasional modul ini adalah: “Dapatkah model pertumbuhan yang dikalibrasi dengan pengamatan hari ke-0 sampai hari ke-16 memprediksi populasi pada hari ke-18 sampai hari ke-24?” Pertanyaan tersebut menetapkan besaran yang diprediksi, jendela kalibrasi, dan jendela data uji sebelum hasil dilihat.</p>
+<p data-o005-segment-key="c4/question/synthetic-boundary">Contoh memakai populasi kultur sintetis dalam juta sel. Data dibuat oleh kode dari model logistik dan galat acak dengan benih tetap. Data itu berguna untuk memeriksa alur inferensi karena kebenaran pembangkitnya diketahui, tetapi bukan bukti biologis tentang organisme, laboratorium, atau proses nyata apa pun.</p>
+<p data-o005-segment-key="c4/question/scope-boundary">Klaim yang diuji sengaja sempit: perbandingan dua model kandidat pada satu rancangan data sintetis. Keberhasilan optimasi, AICc yang lebih kecil, atau cakupan data uji tidak menjadikan model benar secara universal dan tidak menggantikan validasi eksternal.</p>
+</section>
+
+<section id="O005-BRIDGE-C4-SEC02">
+<h2 data-o005-segment-key="c4/model-contract/title">Kontrak model dan pengamatan</h2>
+<p data-o005-segment-key="c4/model-contract/observation-model">Misalkan \(N(t)\) menyatakan populasi laten pada waktu \(t\) hari. Pengamatan mengikuti \(y_i=N(t_i)+\varepsilon_i\), dengan \(\varepsilon_i\) saling bebas dan berdistribusi normal dengan rerata nol serta varians \(\sigma^2\). Nilai awal \(N_0=5\) juta sel dianggap diketahui dari rancangan eksperimen; karena \(y_0\) tetap mengandung galat ukur, pengamatan pada hari ke-0 tidak harus sama persis dengan \(N_0\).</p>
+<p data-o005-segment-key="c4/model-contract/candidates">Dua model kandidat memakai nilai awal yang sama. Model eksponensial memiliki satu parameter dinamik, sedangkan model logistik menambahkan daya dukung:</p>
+<p data-o005-segment-key="c4/model-contract/equations">\[
+N_E(t;r)=N_0e^{rt},\qquad
+N_L(t;r,K)=\frac{K}{1+(K/N_0-1)e^{-rt}}.
+\]</p>
+<table id="O005-BRIDGE-C4-TABLE-CONTRACT">
+<caption data-o005-segment-key="c4/table/model-contract/caption">Besaran, satuan, dan perannya dalam kontrak analisis</caption>
+<thead><tr>
+<th scope="col" data-o005-segment-key="c4/table/model-contract/header/symbol">Lambang</th>
+<th scope="col" data-o005-segment-key="c4/table/model-contract/header/meaning">Makna</th>
+<th scope="col" data-o005-segment-key="c4/table/model-contract/header/unit">Satuan</th>
+<th scope="col" data-o005-segment-key="c4/table/model-contract/header/status">Status</th>
+</tr></thead>
+<tbody>
+<tr><th scope="row" data-o005-segment-key="c4/table/model-contract/row/time/symbol">\(t\)</th><td data-o005-segment-key="c4/table/model-contract/row/time/meaning">waktu sejak awal pengamatan</td><td data-o005-segment-key="c4/table/model-contract/row/time/unit">hari</td><td data-o005-segment-key="c4/table/model-contract/row/time/status">ditentukan oleh rancangan</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/model-contract/row/population/symbol">\(N(t)\)</th><td data-o005-segment-key="c4/table/model-contract/row/population/meaning">populasi laten</td><td data-o005-segment-key="c4/table/model-contract/row/population/unit">juta sel</td><td data-o005-segment-key="c4/table/model-contract/row/population/status">diprediksi model</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/model-contract/row/initial/symbol">\(N_0\)</th><td data-o005-segment-key="c4/table/model-contract/row/initial/meaning">populasi awal</td><td data-o005-segment-key="c4/table/model-contract/row/initial/unit">juta sel</td><td data-o005-segment-key="c4/table/model-contract/row/initial/status">diketahui, bernilai 5</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/model-contract/row/rate/symbol">\(r\)</th><td data-o005-segment-key="c4/table/model-contract/row/rate/meaning">laju pertumbuhan intrinsik</td><td data-o005-segment-key="c4/table/model-contract/row/rate/unit">hari\(^{-1}\)</td><td data-o005-segment-key="c4/table/model-contract/row/rate/status">diestimasi</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/model-contract/row/capacity/symbol">\(K\)</th><td data-o005-segment-key="c4/table/model-contract/row/capacity/meaning">daya dukung dalam model logistik</td><td data-o005-segment-key="c4/table/model-contract/row/capacity/unit">juta sel</td><td data-o005-segment-key="c4/table/model-contract/row/capacity/status">diestimasi</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/model-contract/row/noise/symbol">\(\sigma\)</th><td data-o005-segment-key="c4/table/model-contract/row/noise/meaning">simpangan baku galat pengamatan</td><td data-o005-segment-key="c4/table/model-contract/row/noise/unit">juta sel</td><td data-o005-segment-key="c4/table/model-contract/row/noise/status">diestimasi dari residu untuk bootstrap</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="O005-BRIDGE-C4-SEC03">
+<h2 data-o005-segment-key="c4/identifiability/title">Identifiabilitas diperiksa sebelum optimasi</h2>
+<p data-o005-segment-key="c4/identifiability/structural-invariance">Bayangkan mekanisme awal ditulis sebagai \(dN/dt=\alpha\beta N(1-N/K)\), dengan \(\alpha\) frekuensi pertemuan dan \(\beta\) keberhasilan pertumbuhan per pertemuan. Jika hanya \(N(t)\) yang diamati, data hanya melihat hasil kali \(r=\alpha\beta\). Untuk setiap \(c&gt;0\), pasangan baru \((c\alpha,\beta/c)\) menghasilkan lintasan yang sama. Karena data ideal tanpa galat pun tidak dapat memilih satu pasangan, \(\alpha\) dan \(\beta\) tidak teridentifikasi secara struktural.</p>
+<p data-o005-segment-key="c4/identifiability/reduced-proof">Setelah reparameterisasi menjadi \(r=\alpha\beta\), parameter \(r\) dan \(K\) dapat teridentifikasi secara struktural pada lintasan ideal yang berubah terhadap waktu. Memang, \((1/N)dN/dt=r-(r/K)N\): intersep menentukan \(r\), sedangkan kemiringan menentukan \(-r/K\). Kesimpulan ini bergantung pada pengamatan skala populasi, variasi nilai \(N\), dan ketepatan bentuk persamaan.</p>
+<p data-o005-segment-key="c4/identifiability/practical-approximation">Identifiabilitas struktural tidak menjamin estimasi yang tajam dari data terbatas dan bising. Ketika \(N/K\ll1\), faktor \(1-N/K\) mendekati satu sehingga model logistik hampir tidak dapat dibedakan dari model eksponensial. Dalam keadaan itu, banyak nilai \(K\) yang besar dapat memberi lintasan awal yang hampir sama: masalahnya praktis, bukan lagi struktural.</p>
+<table id="O005-BRIDGE-C4-TABLE-IDENTIFIABILITY">
+<caption data-o005-segment-key="c4/table/identifiability/caption">Empat pertanyaan identifiabilitas dalam contoh kerja</caption>
+<thead><tr><th scope="col" data-o005-segment-key="c4/table/identifiability/header/level">Tahap</th><th scope="col" data-o005-segment-key="c4/table/identifiability/header/evidence">Bukti</th><th scope="col" data-o005-segment-key="c4/table/identifiability/header/conclusion">Kesimpulan yang sah</th></tr></thead>
+<tbody>
+<tr><th scope="row" data-o005-segment-key="c4/table/identifiability/row/raw/level">Parameter \(\alpha,\beta\)</th><td data-o005-segment-key="c4/table/identifiability/row/raw/evidence">Transformasi \((c\alpha,\beta/c)\) tidak mengubah keluaran.</td><td data-o005-segment-key="c4/table/identifiability/row/raw/conclusion">Tidak teridentifikasi secara struktural dari \(N(t)\) saja.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/identifiability/row/reduced/level">Parameter \(r,K\)</th><td data-o005-segment-key="c4/table/identifiability/row/reduced/evidence">Intersep dan kemiringan laju per kapita berbeda.</td><td data-o005-segment-key="c4/table/identifiability/row/reduced/conclusion">Teridentifikasi secara struktural dengan lintasan ideal yang informatif.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/identifiability/row/early/level">Hari 0–10</th><td data-o005-segment-key="c4/table/identifiability/row/early/evidence">Estimasi \(K\) menempel pada batas atas optimasi.</td><td data-o005-segment-key="c4/table/identifiability/row/early/conclusion">\(K\) lemah secara praktis; angka batas bukan estimasi ilmiah.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/identifiability/row/extended/level">Hari 0–16</th><td data-o005-segment-key="c4/table/identifiability/row/extended/evidence">Sensitivitas parameter lebih terpisah dan solusi jauh dari batas.</td><td data-o005-segment-key="c4/table/identifiability/row/extended/conclusion">Rancangan lebih informatif, tetapi tetap memerlukan diagnostik dan ketidakpastian.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="O005-BRIDGE-C4-SEC04">
+<h2 data-o005-segment-key="c4/data/title">Rancangan data dibekukan sebelum estimasi</h2>
+<p data-o005-segment-key="c4/data/generation">Notebook membuat tiga belas pengamatan pada hari \(0,2,\ldots,24\) dengan parameter pembangkit \(r=0.28\) hari\(^{-1}\), \(K=180\) juta sel, dan simpangan baku galat 2.5 juta sel. Benih data adalah 20260823. Nilai dibulatkan menjadi enam angka di belakang koma sebelum diserialisasi dan sebelum dianalisis, sehingga hash mengikat byte data yang benar-benar masuk ke estimasi.</p>
+<p data-o005-segment-key="c4/data/serialization">Serialisasi memakai kepala kolom <code>time_day,population_million_cells</code>, satu angka desimal untuk waktu, enam angka desimal untuk populasi, pengodean UTF-8, akhir baris LF, dan satu baris akhir. Panjangnya 228 byte dengan SHA-256 <code>932d0d27c2917936b0aa51d283d7b2fe2a5eba95989a6c785fa32d3d18dd2811</code>.</p>
+<p data-o005-segment-key="c4/data/split">Sembilan titik hingga hari ke-16 menjadi data kalibrasi. Empat titik pada hari ke-18 sampai ke-24 disisihkan sebagai data uji temporal. Enam titik hingga hari ke-10 hanya dipakai untuk mendemonstrasikan akibat berhenti mengamati terlalu dini; subset itu tidak menggantikan pembagian utama.</p>
+<table id="O005-BRIDGE-C4-TABLE-DATA">
+<caption data-o005-segment-key="c4/table/data/caption">Data sintetis kanonik dan pembagian yang ditetapkan sebelumnya</caption>
+<thead><tr><th scope="col" data-o005-segment-key="c4/table/data/header/time">Hari</th><th scope="col" data-o005-segment-key="c4/table/data/header/population">Populasi (juta sel)</th><th scope="col" data-o005-segment-key="c4/table/data/header/partition">Peran</th></tr></thead>
+<tbody>
+<tr><th scope="row" data-o005-segment-key="c4/table/data/row/day00/time">0</th><td data-o005-segment-key="c4/table/data/row/day00/population">3.559354</td><td data-o005-segment-key="c4/table/data/row/day00/partition">kalibrasi; juga subset awal</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/data/row/day02/time">2</th><td data-o005-segment-key="c4/table/data/row/day02/population">9.636269</td><td data-o005-segment-key="c4/table/data/row/day02/partition">kalibrasi; juga subset awal</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/data/row/day04/time">4</th><td data-o005-segment-key="c4/table/data/row/day04/population">16.481113</td><td data-o005-segment-key="c4/table/data/row/day04/partition">kalibrasi; juga subset awal</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/data/row/day06/time">6</th><td data-o005-segment-key="c4/table/data/row/day06/population">21.075010</td><td data-o005-segment-key="c4/table/data/row/day06/partition">kalibrasi; juga subset awal</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/data/row/day08/time">8</th><td data-o005-segment-key="c4/table/data/row/day08/population">34.263099</td><td data-o005-segment-key="c4/table/data/row/day08/partition">kalibrasi; juga subset awal</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/data/row/day10/time">10</th><td data-o005-segment-key="c4/table/data/row/day10/population">59.153537</td><td data-o005-segment-key="c4/table/data/row/day10/partition">kalibrasi; juga subset awal</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/data/row/day12/time">12</th><td data-o005-segment-key="c4/table/data/row/day12/population">82.629414</td><td data-o005-segment-key="c4/table/data/row/day12/partition">kalibrasi</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/data/row/day14/time">14</th><td data-o005-segment-key="c4/table/data/row/day14/population">108.782060</td><td data-o005-segment-key="c4/table/data/row/day14/partition">kalibrasi</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/data/row/day16/time">16</th><td data-o005-segment-key="c4/table/data/row/day16/population">126.347646</td><td data-o005-segment-key="c4/table/data/row/day16/partition">kalibrasi</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/data/row/day18/time">18</th><td data-o005-segment-key="c4/table/data/row/day18/population">146.532714</td><td data-o005-segment-key="c4/table/data/row/day18/partition">data uji</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/data/row/day20/time">20</th><td data-o005-segment-key="c4/table/data/row/day20/population">158.010601</td><td data-o005-segment-key="c4/table/data/row/day20/partition">data uji</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/data/row/day22/time">22</th><td data-o005-segment-key="c4/table/data/row/day22/population">163.840994</td><td data-o005-segment-key="c4/table/data/row/day22/partition">data uji</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/data/row/day24/time">24</th><td data-o005-segment-key="c4/table/data/row/day24/population">172.006445</td><td data-o005-segment-key="c4/table/data/row/day24/partition">data uji</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="O005-BRIDGE-C4-SEC05">
+<h2 data-o005-segment-key="c4/calibration/title">Kalibrasi dan perbandingan dua kandidat</h2>
+<p data-o005-segment-key="c4/calibration/objective">Untuk setiap kandidat \(m\), parameter dipilih dengan meminimalkan jumlah kuadrat residu pada data kalibrasi saja:</p>
+<p data-o005-segment-key="c4/calibration/rss-equation">\[
+\operatorname{RSS}_m(\theta_m)=\sum_{i\in\mathcal I_{\mathrm{kal}}}\left[y_i-N_m(t_i;\theta_m)\right]^2.
+\]</p>
+<p data-o005-segment-key="c4/calibration/bounds">Pencarian dibatasi oleh \(0.01\le r\le1\) hari\(^{-1}\) dan \(10\le K\le1000\) juta sel. Batas mencegah langkah numerik yang tidak bermakna, tetapi tidak boleh menciptakan kesan bahwa parameter diketahui. Solusi yang menempel pada batas harus dilaporkan sebagai tanda masalah.</p>
+<p data-o005-segment-key="c4/calibration/aicc-convention">Kriteria informasi Akaike terkoreksi (AICc) dihitung dengan \(k=2\) untuk model eksponensial dan \(k=3\) untuk model logistik karena varians residu yang diestimasi turut dihitung sebagai parameter. Konstanta Gaussian yang sama bagi kedua model dihilangkan. Nilai mutlak bergantung pada konvensi ini; selisih hanya membandingkan kandidat yang dihitung dengan data dan konvensi yang sama.</p>
+<p data-o005-segment-key="c4/calibration/error-metric-definitions">Akar rerata kuadrat galat (RMSE) merangkum residu kalibrasi dan memberi bobot lebih besar pada galat yang besar. Rerata galat absolut (MAE) merangkum besar galat data uji tanpa mempertahankan tandanya; bias dipakai secara terpisah untuk menunjukkan arah rata-rata.</p>
+<table id="O005-BRIDGE-C4-TABLE-COMPARISON">
+<caption data-o005-segment-key="c4/table/comparison/caption">Hasil kalibrasi, perbandingan relatif, dan kinerja data uji</caption>
+<thead><tr><th scope="col" data-o005-segment-key="c4/table/comparison/header/model">Model</th><th scope="col" data-o005-segment-key="c4/table/comparison/header/parameters">Estimasi</th><th scope="col" data-o005-segment-key="c4/table/comparison/header/rmse">RMSE kalibrasi</th><th scope="col" data-o005-segment-key="c4/table/comparison/header/aicc">AICc</th><th scope="col" data-o005-segment-key="c4/table/comparison/header/holdout-mae">MAE data uji</th><th scope="col" data-o005-segment-key="c4/table/comparison/header/holdout-bias">Bias data uji</th></tr></thead>
+<tbody>
+<tr><th scope="row" data-o005-segment-key="c4/table/comparison/row/exponential/model">Eksponensial</th><td data-o005-segment-key="c4/table/comparison/row/exponential/parameters">\(r=0.21040520\)</td><td data-o005-segment-key="c4/table/comparison/row/exponential/rmse">12.30569406</td><td data-o005-segment-key="c4/table/comparison/row/exponential/aicc">51.18111756</td><td data-o005-segment-key="c4/table/comparison/row/exponential/holdout-mae">302.08747307</td><td data-o005-segment-key="c4/table/comparison/row/exponential/holdout-bias">−302.08747307</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/comparison/row/logistic/model">Logistik</th><td data-o005-segment-key="c4/table/comparison/row/logistic/parameters">\(r=0.28263149\), \(K=175.70606226\)</td><td data-o005-segment-key="c4/table/comparison/row/logistic/rmse">2.25689728</td><td data-o005-segment-key="c4/table/comparison/row/logistic/aicc">25.45183771</td><td data-o005-segment-key="c4/table/comparison/row/logistic/holdout-mae">1.50664197</td><td data-o005-segment-key="c4/table/comparison/row/logistic/holdout-bias">1.17225281</td></tr>
+</tbody>
+</table>
+<p data-o005-segment-key="c4/calibration/comparison-limit">Selisih AICc sebesar 25.72927985 dan galat data uji yang jauh lebih kecil mendukung model logistik di antara dua kandidat ini. Kesimpulan itu tidak menilai model yang tidak dimasukkan, mekanisme kausal, atau populasi di luar domain contoh.</p>
+</section>
+
+<section id="O005-BRIDGE-C4-SEC06">
+<h2 data-o005-segment-key="c4/sensitivity/title">Sensitivitas menunjukkan kapan data menjadi informatif</h2>
+<p data-o005-segment-key="c4/sensitivity/derivatives">Dengan \(D=1+(K/N_0-1)e^{-rt}\), sensitivitas analitik model logistik adalah</p>
+<p data-o005-segment-key="c4/sensitivity/equations">\[
+\frac{\partial N}{\partial r}=\frac{K(K/N_0-1)t e^{-rt}}{D^2},\qquad
+\frac{\partial N}{\partial K}=\frac{1-e^{-rt}}{D^2}.
+\]</p>
+<p data-o005-segment-key="c4/sensitivity/scaled-matrix">Notebook membentuk matriks sensitivitas terhadap parameter logaritmik, dengan kolom \(r\,\partial N/\partial r\) dan \(K\,\partial N/\partial K\). Bilangan kondisi dua-norma \(\kappa_2(S)=\sigma_{\max}/\sigma_{\min}\) membandingkan seberapa terpisah kedua arah sensitivitas. Nilai yang lebih besar menandakan arah yang lebih sulit dibedakan, tetapi tidak ada ambang universal yang sendirian membuktikan identifiabilitas.</p>
+<p data-o005-segment-key="c4/sensitivity/condition-comparison">Pada estimasi dari jendela kalibrasi penuh, jadwal hari 0–10 memberi \(\kappa_2=32.66379816\), sedangkan jadwal hari 0–16 memberi \(\kappa_2=6.93948506\). Pengamatan mendekati daerah perlambatan pertumbuhan meningkatkan sensitivitas terhadap \(K\).</p>
+<table id="O005-BRIDGE-C4-TABLE-BOUND">
+<caption data-o005-segment-key="c4/table/bound/caption">Eksperimen batas atas pada pencocokan subset awal</caption>
+<thead><tr><th scope="col" data-o005-segment-key="c4/table/bound/header/upper-bound">Batas atas \(K\)</th><th scope="col" data-o005-segment-key="c4/table/bound/header/r-estimate">Estimasi \(r\)</th><th scope="col" data-o005-segment-key="c4/table/bound/header/k-estimate">Estimasi \(K\)</th><th scope="col" data-o005-segment-key="c4/table/bound/header/interpretation">Interpretasi</th></tr></thead>
+<tbody>
+<tr><th scope="row" data-o005-segment-key="c4/table/bound/row/1000/upper-bound">1000</th><td data-o005-segment-key="c4/table/bound/row/1000/r-estimate">0.25110007</td><td data-o005-segment-key="c4/table/bound/row/1000/k-estimate">1000</td><td data-o005-segment-key="c4/table/bound/row/1000/interpretation">batas aktif</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/bound/row/2000/upper-bound">2000</th><td data-o005-segment-key="c4/table/bound/row/2000/r-estimate">0.24853917</td><td data-o005-segment-key="c4/table/bound/row/2000/k-estimate">2000</td><td data-o005-segment-key="c4/table/bound/row/2000/interpretation">estimasi kembali mengikuti batas</td></tr>
+</tbody>
+</table>
+<p data-o005-segment-key="c4/sensitivity/bound-experiment">Menggandakan batas atas tidak menambahkan informasi, tetapi menggandakan estimasi \(K\) subset awal. Sebaliknya, estimasi jendela penuh tetap sekitar 175.706. Perbedaan ini merupakan tanda praktis yang lebih bermakna daripada pesan “optimasi berhasil”.</p>
+</section>
+
+<section id="O005-BRIDGE-C4-SEC07">
+<h2 data-o005-segment-key="c4/diagnostics/title">Residu dan data uji menguji kegunaan yang berbeda</h2>
+<p data-o005-segment-key="c4/diagnostics/residual-definition">Residu didefinisikan sebagai \(e_i=y_i-\widehat N(t_i)\). Untuk model logistik, rerata residu kalibrasi adalah −0.37700728 juta sel dan kemiringan residu terhadap waktu adalah 0.04181566 juta sel per hari. Nilai kecil tersebut tidak menjamin ketiadaan pola lain, sehingga tabel harus dibaca bersama gambar residu.</p>
+<p data-o005-segment-key="c4/diagnostics/holdout-definition">Pada empat data uji, residu logistik adalah 1.41663001, 1.09893040, −0.66877831, dan 2.84222916 juta sel. MAE merangkum besar galat tanpa tanda; bias mempertahankan tanda dan positif di sini berarti pengamatan rata-rata berada di atas prediksi.</p>
+<p data-o005-segment-key="c4/diagnostics/exponential-failure">Model eksponensial memperkirakan sekitar 779.90 juta sel pada hari ke-24, sementara pengamatan sintetisnya 172.006445 juta sel. Kegagalan ini bukan sekadar perbedaan digit: bentuk model tidak memiliki mekanisme perlambatan sehingga kesalahan meningkat tajam ketika diekstrapolasi.</p>
+<p data-o005-segment-key="c4/diagnostics/validation-limit">Data uji hanya boleh disebut independen dari keputusan kalibrasi selama hasilnya belum dipakai untuk mengubah prosedur. Jika hasil hari 18–24 memicu revisi, data itu menjadi bagian dari pengembangan dan evaluasi akhir berikutnya memerlukan data baru.</p>
+</section>
+
+<section id="O005-BRIDGE-C4-SEC08">
+<h2 data-o005-segment-key="c4/uncertainty/title">Ketidakpastian bergantung pada asumsi</h2>
+<p data-o005-segment-key="c4/uncertainty/local-covariance">Dari residu model logistik, \(\widehat\sigma=2.55908097\) juta sel. Pendekatan linear lokal memberi galat baku 0.00573816 hari\(^{-1}\) untuk \(r\), 9.07618829 juta sel untuk \(K\), dan korelasi parameter −0.90997414. Korelasi kuat mengingatkan bahwa perubahan \(r\) dan \(K\) dapat saling mengimbangi, walaupun solusi tidak lagi berada pada batas.</p>
+<p data-o005-segment-key="c4/uncertainty/bootstrap">Bootstrap parametrik membuat 400 data kalibrasi semu dari model logistik terestimasi dengan benih 20260824, mengestimasi ulang parameter, lalu membuat pengamatan masa depan baru. Interval persentil berikut bersifat kondisional pada bentuk logistik, galat normal yang saling bebas dan bervarians konstan, serta rancangan waktu yang sama.</p>
+<table id="O005-BRIDGE-C4-TABLE-UNCERTAINTY">
+<caption data-o005-segment-key="c4/table/uncertainty/caption">Interval persentil bootstrap 95% dan data uji</caption>
+<thead><tr><th scope="col" data-o005-segment-key="c4/table/uncertainty/header/quantity">Besaran</th><th scope="col" data-o005-segment-key="c4/table/uncertainty/header/lower">2.5%</th><th scope="col" data-o005-segment-key="c4/table/uncertainty/header/median">Median</th><th scope="col" data-o005-segment-key="c4/table/uncertainty/header/upper">97.5%</th><th scope="col" data-o005-segment-key="c4/table/uncertainty/header/observed">Pengamatan</th></tr></thead>
+<tbody>
+<tr><th scope="row" data-o005-segment-key="c4/table/uncertainty/row/r/quantity">\(r\) (hari\(^{-1}\))</th><td data-o005-segment-key="c4/table/uncertainty/row/r/lower">0.27231855</td><td data-o005-segment-key="c4/table/uncertainty/row/r/median">0.28260638</td><td data-o005-segment-key="c4/table/uncertainty/row/r/upper">0.29399270</td><td data-o005-segment-key="c4/table/uncertainty/row/r/observed">—</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/uncertainty/row/k/quantity">\(K\) (juta sel)</th><td data-o005-segment-key="c4/table/uncertainty/row/k/lower">160.82788727</td><td data-o005-segment-key="c4/table/uncertainty/row/k/median">175.22741952</td><td data-o005-segment-key="c4/table/uncertainty/row/k/upper">195.85394556</td><td data-o005-segment-key="c4/table/uncertainty/row/k/observed">—</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/uncertainty/row/latent-day24/quantity">Respons laten hari 24</th><td data-o005-segment-key="c4/table/uncertainty/row/latent-day24/lower">156.44924030</td><td data-o005-segment-key="c4/table/uncertainty/row/latent-day24/median">168.76012565</td><td data-o005-segment-key="c4/table/uncertainty/row/latent-day24/upper">185.63476304</td><td data-o005-segment-key="c4/table/uncertainty/row/latent-day24/observed">—</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/uncertainty/row/day18/quantity">Pengamatan hari 18</th><td data-o005-segment-key="c4/table/uncertainty/row/day18/lower">135.86059445</td><td data-o005-segment-key="c4/table/uncertainty/row/day18/median">144.69607937</td><td data-o005-segment-key="c4/table/uncertainty/row/day18/upper">153.77517362</td><td data-o005-segment-key="c4/table/uncertainty/row/day18/observed">146.532714</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/uncertainty/row/day20/quantity">Pengamatan hari 20</th><td data-o005-segment-key="c4/table/uncertainty/row/day20/lower">145.91930977</td><td data-o005-segment-key="c4/table/uncertainty/row/day20/median">156.75475436</td><td data-o005-segment-key="c4/table/uncertainty/row/day20/upper">169.00751721</td><td data-o005-segment-key="c4/table/uncertainty/row/day20/observed">158.010601</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/uncertainty/row/day22/quantity">Pengamatan hari 22</th><td data-o005-segment-key="c4/table/uncertainty/row/day22/lower">151.96786048</td><td data-o005-segment-key="c4/table/uncertainty/row/day22/median">163.96764133</td><td data-o005-segment-key="c4/table/uncertainty/row/day22/upper">178.18728726</td><td data-o005-segment-key="c4/table/uncertainty/row/day22/observed">163.840994</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/uncertainty/row/day24/quantity">Pengamatan hari 24</th><td data-o005-segment-key="c4/table/uncertainty/row/day24/lower">154.39781350</td><td data-o005-segment-key="c4/table/uncertainty/row/day24/median">169.60209338</td><td data-o005-segment-key="c4/table/uncertainty/row/day24/upper">185.61306021</td><td data-o005-segment-key="c4/table/uncertainty/row/day24/observed">172.006445</td></tr>
+</tbody>
+</table>
+<p data-o005-segment-key="c4/uncertainty/latent-versus-observation">Interval respons laten hari ke-24 mempropagasi ketidakpastian estimasi parameter tanpa menambahkan galat pengamatan baru. Interval pengamatan hari ke-24 juga memasukkan satu realisasi galat pengamatan baru; keduanya menjawab pertanyaan yang berbeda.</p>
+<p data-o005-segment-key="c4/uncertainty/limitations">Keempat pengamatan data uji berada di dalam interval prediksi titik-demi-titik 95%. Cakupan itu konsisten dengan contoh sintetis, tetapi bukan peluang 95% bahwa seluruh kurva benar, bukan interval simultan, dan tidak memasukkan ketaksesuaian bentuk model atau perubahan proses di luar hari ke-24.</p>
+</section>
+
+<section id="O005-BRIDGE-C4-SEC09">
+<h2 data-o005-segment-key="c4/failure/title">Gambar dan analisis kegagalan</h2>
+<p data-o005-segment-key="c4/figure/end-to-end/caption">Notebook menghasilkan satu gambar empat panel yang mengikat data, dua prediksi kandidat, residu, sensitivitas, dan interval prediksi pada alur komputasi yang sama.</p>
+<p id="O005-BRIDGE-C4-FIG01-DESC" data-o005-segment-key="c4/figure/end-to-end/long-description"><strong>Deskripsi panjang gambar:</strong> Panel A menampilkan sembilan lingkaran data kalibrasi hingga hari ke-16, empat persegi data uji pada hari ke-18 sampai ke-24, kurva logistik utuh yang mendatar mendekati 176 juta sel, dan kurva eksponensial putus-putus yang meningkat hingga sekitar 780 juta sel pada hari ke-24. Panel B menampilkan residu kalibrasi: residu logistik berupa lingkaran tersebar dekat garis nol, sedangkan residu eksponensial berupa tanda silang membentuk pola melengkung dan menjadi sangat negatif pada akhir jendela. Panel C menampilkan besar sensitivitas terskala terhadap \(r\) dengan lingkaran dan terhadap \(K\) dengan persegi; sensitivitas \(K\) hampir nol pada waktu awal lalu meningkat ketika pertumbuhan melambat. Panel D menampilkan pita prediksi titik-demi-titik 95% dengan batas bawah putus-putus dan batas atas titik-garis, garis median utuh dengan penanda lingkaran, dan pengamatan data uji dengan penanda persegi; semua persegi berada di dalam pita. Batas interval tetap dapat dibedakan tanpa mengandalkan arsiran atau warna.</p>
+<table id="O005-BRIDGE-C4-TABLE-FAILURE">
+<caption data-o005-segment-key="c4/table/failure/caption">Tanda kegagalan, maknanya, dan tindakan yang dapat dipertanggungjawabkan</caption>
+<thead><tr><th scope="col" data-o005-segment-key="c4/table/failure/header/symptom">Tanda</th><th scope="col" data-o005-segment-key="c4/table/failure/header/meaning">Makna yang mungkin</th><th scope="col" data-o005-segment-key="c4/table/failure/header/action">Tindakan</th></tr></thead>
+<tbody>
+<tr><th scope="row" data-o005-segment-key="c4/table/failure/row/bound/symptom">Parameter menempel pada batas.</th><td data-o005-segment-key="c4/table/failure/row/bound/meaning">Data tidak membatasi arah parameter atau batas terlalu sempit.</td><td data-o005-segment-key="c4/table/failure/row/bound/action">Ubah rancangan atau reparameterisasi; jangan laporkan batas sebagai estimasi.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/failure/row/condition/symptom">Bilangan kondisi besar.</th><td data-o005-segment-key="c4/table/failure/row/condition/meaning">Efek parameter hampir searah pada jadwal pengamatan.</td><td data-o005-segment-key="c4/table/failure/row/condition/action">Tambahkan waktu atau jenis pengukuran yang memisahkan sensitivitas.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/failure/row/residual/symptom">Residu memiliki pola waktu.</th><td data-o005-segment-key="c4/table/failure/row/residual/meaning">Bentuk dinamika, varians, atau struktur galat mungkin salah.</td><td data-o005-segment-key="c4/table/failure/row/residual/action">Periksa asumsi dan kandidat baru; jangan hanya memperkecil toleransi optimasi.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/failure/row/holdout/symptom">Galat data uji jauh melebihi galat kalibrasi.</th><td data-o005-segment-key="c4/table/failure/row/holdout/meaning">Pencocokan berlebih, pergeseran proses, atau ekstrapolasi bentuk yang salah.</td><td data-o005-segment-key="c4/table/failure/row/holdout/action">Nyatakan kegagalan; setelah revisi, gunakan data evaluasi baru.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/failure/row/domain/symptom">Prediksi diminta di luar domain.</th><td data-o005-segment-key="c4/table/failure/row/domain/meaning">Mekanisme atau distribusi galat dapat berubah.</td><td data-o005-segment-key="c4/table/failure/row/domain/action">Batasi klaim atau kumpulkan bukti pada domain baru.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/failure/row/candidates/symptom">Semua kandidat gagal.</th><td data-o005-segment-key="c4/table/failure/row/candidates/meaning">Pemilihan relatif tidak menyediakan model yang memadai.</td><td data-o005-segment-key="c4/table/failure/row/candidates/action">Perluas atau perbaiki himpunan model dan rancangan eksperimen.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="O005-BRIDGE-C4-SEC10">
+<h2 data-o005-segment-key="c4/communication/title">Komunikasikan keputusan beserta batasnya</h2>
+<table id="O005-BRIDGE-C4-TABLE-CLAIMS">
+<caption data-o005-segment-key="c4/table/claims/caption">Pemisahan klaim yang didukung dan yang belum didukung</caption>
+<thead><tr><th scope="col" data-o005-segment-key="c4/table/claims/header/status">Status</th><th scope="col" data-o005-segment-key="c4/table/claims/header/claim">Klaim</th><th scope="col" data-o005-segment-key="c4/table/claims/header/reason">Alasan</th></tr></thead>
+<tbody>
+<tr><th scope="row" data-o005-segment-key="c4/table/claims/row/supported-comparison/status">Didukung</th><td data-o005-segment-key="c4/table/claims/row/supported-comparison/claim">Model logistik lebih berguna daripada kandidat eksponensial pada contoh ini.</td><td data-o005-segment-key="c4/table/claims/row/supported-comparison/reason">AICc, residu, dan galat data uji konsisten.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/claims/row/supported-window/status">Didukung</th><td data-o005-segment-key="c4/table/claims/row/supported-window/claim">Jendela hingga hari ke-16 lebih informatif tentang \(K\) daripada jendela hingga hari ke-10.</td><td data-o005-segment-key="c4/table/claims/row/supported-window/reason">Bilangan kondisi turun dan estimasi tidak lagi mengikuti batas.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/claims/row/unsupported-components/status">Belum didukung</th><td data-o005-segment-key="c4/table/claims/row/unsupported-components/claim">Nilai \(\alpha\) dan \(\beta\) dapat dipisahkan dari populasi saja.</td><td data-o005-segment-key="c4/table/claims/row/unsupported-components/reason">Keduanya tidak teridentifikasi secara struktural.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/claims/row/unsupported-external/status">Belum didukung</th><td data-o005-segment-key="c4/table/claims/row/unsupported-external/claim">Hasil berlaku untuk organisme nyata atau kondisi lain.</td><td data-o005-segment-key="c4/table/claims/row/unsupported-external/reason">Data sepenuhnya sintetis dan tidak ada validasi eksternal.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c4/table/claims/row/unsupported-future/status">Belum didukung</th><td data-o005-segment-key="c4/table/claims/row/unsupported-future/claim">Prediksi tetap andal jauh setelah hari ke-24.</td><td data-o005-segment-key="c4/table/claims/row/unsupported-future/reason">Domain itu tidak diuji dan ketaksesuaian model dapat mendominasi.</td></tr>
+</tbody>
+</table>
+<p data-o005-segment-key="c4/communication/reporting-template">Laporan minimum harus menyebutkan pertanyaan, satuan, model kandidat, asumsi galat, pembagian data, batas parameter, algoritma, versi perangkat lunak, estimasi, diagnostik residu, metrik data uji, interval ketidakpastian, tanda kegagalan, dan domain klaim. Angka tanpa unsur tersebut tidak cukup untuk keputusan yang dapat diaudit.</p>
+<p data-o005-segment-key="c4/communication/summary">Alur lengkapnya adalah: periksa apakah parameter mungkin diidentifikasi; bekukan rancangan dan data uji; kalibrasi kandidat; periksa sensitivitas serta batas; bandingkan residu dan prediksi; kuantifikasi ketidakpastian kondisional; lalu nyatakan dengan jelas apa yang belum diketahui. Validasi bukan stempel akhir, melainkan percobaan terencana untuk menemukan cara model dapat gagal.</p>
+</section>
+
+<div class="textbox textbox--exercises" id="O005-BRIDGE-C4-EXERCISES">
+<header class="textbox__header"><h2 class="textbox__title" data-o005-segment-key="c4/exercises/title">Latihan Penguasaan</h2></header>
+<div class="textbox__content">
+<h3 id="O005-BRIDGE-C4-P01" data-o005-segment-key="c4/exercise/p01/title">Soal 1</h3>
+<p data-o005-segment-key="c4/exercise/p01/prompt">Dalam model \(dN/dt=\alpha\beta N(1-N/K)\), ambil \(\alpha=0.4\) hari\(^{-1}\) dan \(\beta=0.7\). Berikan pasangan parameter berbeda yang menghasilkan lintasan yang sama, buktikan kesetaraannya, dan jelaskan satu cara memperoleh informasi untuk memisahkan kedua parameter.</p>
+
+<h3 id="O005-BRIDGE-C4-P02" data-o005-segment-key="c4/exercise/p02/title">Soal 2</h3>
+<p data-o005-segment-key="c4/exercise/p02/prompt">Untuk \(K=180\), hitung faktor pembatas \(1-N/K\) ketika \(N=20\) dan \(N=100\). Jelaskan mengapa pengamatan yang hanya mencakup populasi kecil memberi sedikit informasi tentang \(K\).</p>
+
+<h3 id="O005-BRIDGE-C4-P03" data-o005-segment-key="c4/exercise/p03/title">Soal 3</h3>
+<p data-o005-segment-key="c4/exercise/p03/prompt">Bilangan kondisi sensitivitas adalah 32.66379816 untuk hari 0–10 dan 6.93948506 untuk hari 0–16. Tafsirkan perbandingan ini, usulkan perbaikan jadwal pengamatan, dan jelaskan mengapa angka tersebut bukan uji lulus-gagal universal.</p>
+
+<h3 id="O005-BRIDGE-C4-P04" data-o005-segment-key="c4/exercise/p04/title">Soal 4</h3>
+<p data-o005-segment-key="c4/exercise/p04/prompt">Dengan \(n=9\), RSS eksponensial 1362.87095600, RSS logistik 45.84226787, dan jumlah parameter AICc masing-masing \(k=2\) dan \(k=3\), hitung AICc tanpa konstanta Gaussian serta selisihnya. Nyatakan kesimpulan yang sah dan satu kesimpulan yang tidak sah.</p>
+
+<h3 id="O005-BRIDGE-C4-P05" data-o005-segment-key="c4/exercise/p05/title">Soal 5</h3>
+<p data-o005-segment-key="c4/exercise/p05/prompt">Residu data uji logistik adalah 1.41663001, 1.09893040, −0.66877831, dan 2.84222916 juta sel, dengan definisi residu \(y-\widehat y\). Hitung MAE, bias, dan galat absolut maksimum, lalu tafsirkan tanda bias.</p>
+
+<h3 id="O005-BRIDGE-C4-P06" data-o005-segment-key="c4/exercise/p06/title">Soal 6</h3>
+<p data-o005-segment-key="c4/exercise/p06/prompt">Bandingkan interval bootstrap untuk \(K\), interval respons laten pada hari ke-24, dan interval pengamatan mendatang pada hari ke-24. Jelaskan mengapa cakupan data uji tidak membuktikan model benar dan sebutkan tiga asumsi yang tidak dicakup oleh interval.</p>
+
+<h3 id="O005-BRIDGE-C4-P07" data-o005-segment-key="c4/exercise/p07/title">Soal 7</h3>
+<p data-o005-segment-key="c4/exercise/p07/prompt">Jalankan notebook pendamping dari kernel bersih dan cocokkan hash data, estimasi, diagnostik, serta interval kanonik. Kemudian ubah hanya <code>BATAS_K_ATAS</code> dari 1000 menjadi 2000 dan jalankan ulang. Jelaskan mengapa estimasi \(K\) subset awal berpindah ke 2000 sementara estimasi jendela utama hampir tidak berubah, dan tandai eksekusi kedua sebagai nonkanonik.</p>
+</div>
+</div>

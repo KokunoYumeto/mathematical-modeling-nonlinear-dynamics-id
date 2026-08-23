@@ -11,8 +11,8 @@
   ],
   "properties": {
     "schema": {"const": "o005-segment-v1"},
-    "segment_id": {"type": "string", "pattern": "^O005-LEGA-V101-CH[0-9]{2}-S[0-9]{4}$"},
-    "unit_id": {"type": "string", "pattern": "^O005-LEGA-V101-CH[0-9]{2}$"},
+    "segment_id": {"type": "string", "pattern": "^O005-LEGA-V101-(CH|PT|FM|BM)[0-9]{2}-S[0-9]{4}$"},
+    "unit_id": {"type": "string", "pattern": "^O005-LEGA-V101-(CH|PT|FM|BM)[0-9]{2}$"},
     "ordinal": {"type": "integer", "minimum": 1},
     "html_path": {"type": "string", "minLength": 1},
     "source_language": {"const": "en"},

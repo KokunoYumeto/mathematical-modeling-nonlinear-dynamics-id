@@ -11,20 +11,26 @@ Provenance model untuk penerjemahan, adaptasi teknis, dan QA: OpenAI Codex gpt-5
 Pernyataan ini tidak menggantikan kredit kepada Joceline
 Lega, University of Arizona, atau kontributor manusia yang tercatat.
 
-Status saat ini: **Bab 1–14 serta pengantar Bagian 2–5 telah diterjemahkan,
-dibangun, dan lolos QA.** Pengantar Bagian 1, materi awal/akhir, dan empat
-modul jembatan asli masih dikerjakan; repositori ini belum merupakan edisi
-lengkap atau terbitan final.
+Status saat ini: **edisi pembaca lengkap telah diproduksi dan lolos QA.**
+Cakupannya adalah seluruh 22 unit sumber—Prakata, pengantar Bagian 1–5, Bab
+1–14, Pernyataan Aksesibilitas, dan Riwayat Versi—serta empat modul jembatan
+orisinal. Seluruh 113 soal sumber dan 28 soal jembatan memiliki petunjuk,
+pemeriksaan, dan pembahasan atau rubrik; 26 notebook Python terbuka melengkapi
+pembaca.
 
-Versi kemajuan terverifikasi ini dipertahankan di Zenodo:
-[10.5281/zenodo.22061640](https://doi.org/10.5281/zenodo.22061640).
-Pembaruan substansial berikutnya akan diterbitkan dalam garis versi konsep yang
-sama: [10.5281/zenodo.22059939](https://doi.org/10.5281/zenodo.22059939).
-Figshare menyimpan catatan metadata CC0 tanpa salinan berkas—lisensi karya yang
-ditautkan tetap CC BY-NC-SA 4.0—di
-[10.6084/m9.figshare.33314769.v2](https://doi.org/10.6084/m9.figshare.33314769.v2),
-dan catatan tersebut termasuk dalam koleksi
-[Indonesian Mathematics — Reader PDFs](https://doi.org/10.6084/m9.figshare.c.8668413.v37).
+Versi pembaca lengkap ini dipertahankan dalam garis versi konsep Zenodo
+[10.5281/zenodo.22059939](https://doi.org/10.5281/zenodo.22059939); tautan DOI
+konsep selalu mengarah ke versi publik terbaru. Arsip setiap versi menyimpan
+identitas, checksum, dan riwayat koreksinya sendiri.
+Figshare sebelumnya memiliki catatan metadata CC0 tanpa salinan berkas—lisensi
+karya yang ditautkan tetap CC BY-NC-SA 4.0—di artikel
+[10.6084/m9.figshare.33314769.v2](https://doi.org/10.6084/m9.figshare.33314769.v2).
+Pada pemeriksaan 2026-08-23, artikel tersebut melaporkan telah dihapus dan
+akun API yang diperlukan untuk menerbitkan pembaruan berada dalam status
+nonaktif; tidak ada salinan berkas yang diunggah ke Figshare. Bukti dan prosedur
+kelanjutan dicatat di `00_control/FIGSHARE_PUBLICATION_RECEIPT_COMPLETE_20260823.json`;
+collection yang diperiksa adalah [Indonesian Mathematics — Reader PDFs](https://doi.org/10.6084/m9.figshare.c.8668413),
+yang saat ini tidak memiliki isi publik.
 
 ## Baca unit yang selesai
 
@@ -33,6 +39,8 @@ ulang, sehingga paket sumber ringkas tidak menggandakannya. Tautan berikut
 menunjuk pada sumber kanonis, notebook, backend dukungan, dan katalog proyek.
 
 - Bab 1 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH01/content.html); [notebook pencocokan kurva](source/id-ID/O005-LEGA-V101-CH01/notebooks/problem-07-open-curve-fitting.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH01.mastery.json).
+- Prakata — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-FM01/content.html).
+- Pengantar Bagian 1 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT01/content.html).
 - Bab 2 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH02/content.html); [notebook simulasi gelombang](source/id-ID/O005-LEGA-V101-CH02/notebooks/chapter-02-open-wave-simulation.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH02.mastery.json).
 - Pengantar Bagian 2 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-PT02/content.html).
 - Bab 3 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH03/content.html); [notebook bidang fase](source/id-ID/O005-LEGA-V101-CH03/notebooks/chapter-03-open-phase-plane.ipynb); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH03.mastery.json).
@@ -50,17 +58,24 @@ menunjuk pada sumber kanonis, notebook, backend dukungan, dan katalog proyek.
 - Bab 12 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH12/content.html).
 - Bab 13 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH13/content.html); [dukungan belajar](backend/mastery/O005-LEGA-V101-CH13.mastery.json).
 - Bab 14 — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-CH14/content.html); [katalog 12 proyek](backend/projects/O005-LEGA-V101-CH14.projects.json); sumber dua belas paket berada di [`projects/`](source/id-ID/O005-LEGA-V101-CH14/projects/).
+- Pernyataan Aksesibilitas — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-BM01/content.html).
+- Riwayat Versi — sumber: [`content.html`](source/id-ID/O005-LEGA-V101-BM02/content.html).
+- Modul Jembatan C1 — [alur kerja Python/Jupyter yang reprodusibel](source/id-ID/O005-BRIDGE-C1/content.html); [notebook](source/id-ID/O005-BRIDGE-C1/notebooks/bridge-c1-reproducible-workflow.ipynb); [dukungan belajar](backend/mastery/O005-BRIDGE-C1.mastery.json).
+- Modul Jembatan C2 — [bifurkasi lokal](source/id-ID/O005-BRIDGE-C2/content.html); [notebook](source/id-ID/O005-BRIDGE-C2/notebooks/bridge-c2-local-bifurcations.ipynb); [dukungan belajar](backend/mastery/O005-BRIDGE-C2.mastery.json).
+- Modul Jembatan C3 — [penggandaan periode, kekacauan, dan peta balik](source/id-ID/O005-BRIDGE-C3/content.html); [notebook](source/id-ID/O005-BRIDGE-C3/notebooks/bridge-c3-chaos-and-return-maps.ipynb); [dukungan belajar](backend/mastery/O005-BRIDGE-C3.mastery.json).
+- Modul Jembatan C4 — [kalibrasi, identifiabilitas, validasi, dan ketidakpastian](source/id-ID/O005-BRIDGE-C4/content.html); [notebook](source/id-ID/O005-BRIDGE-C4/notebooks/bridge-c4-calibration-validation-uncertainty.ipynb); [dukungan belajar](backend/mastery/O005-BRIDGE-C4.mastery.json).
 
 ## Backend modular
 
-Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Empat belas bab
-dan empat pengantar bagian yang selesai memiliki 3.400 segmen Inggris–Indonesia
-yang berpasangan, 113 ID soal tetap, sepuluh notebook bab terbuka, dua belas
-notebook proyek dalam dua belas paket mandiri, catatan unit berhash, serta jalur
+Setiap unit menggunakan ID stabil yang netral terhadap bahasa. Seluruh 22 unit
+sumber memiliki 3.448 segmen Inggris–Indonesia yang berpasangan. Empat modul
+jembatan menambahkan 657 segmen kanonik id-ID dengan ledger semantik berversi,
+sehingga keseluruhan backend memuat 4.105 segmen. Backend juga mengikat 141 ID
+soal tetap, sepuluh notebook bab, dua belas notebook proyek dalam dua belas
+paket mandiri, empat notebook jembatan, catatan unit berhash, serta jalur
 eksplisit menuju aset, notebook, proyek, dan dukungan belajar. Lapisan ini
-dimaksudkan untuk memungkinkan pemindahan unit
-yang sama ke bahasa lain tanpa menjadikan Bahasa Indonesia sebagai kunci
-struktur.
+memungkinkan unit yang sama dipindahkan ke bahasa lain tanpa menjadikan Bahasa
+Indonesia sebagai kunci struktur.
 
 ## Bangun dan periksa
 
@@ -107,7 +122,23 @@ python scripts/qa_unit.py --unit O005-LEGA-V101-CH13 --deterministic-build
 python scripts/build_ch14_project_packets.py
 python scripts/build_unit_reader.py --unit O005-LEGA-V101-CH14
 python scripts/qa_unit.py --unit O005-LEGA-V101-CH14 --execute-notebook --deterministic-build
-python scripts/build_progress_pdf.py
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-FM01
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-PT01
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-BM01
+python scripts/build_unit_reader.py --unit O005-LEGA-V101-BM02
+python scripts/qa_unit.py --unit O005-LEGA-V101-FM01 --deterministic-build
+python scripts/qa_unit.py --unit O005-LEGA-V101-PT01 --deterministic-build
+python scripts/qa_unit.py --unit O005-LEGA-V101-BM01 --deterministic-build
+python scripts/qa_unit.py --unit O005-LEGA-V101-BM02 --deterministic-build
+python scripts/build_bridge_unit.py --unit O005-BRIDGE-C1
+python scripts/build_bridge_unit.py --unit O005-BRIDGE-C2
+python scripts/build_bridge_unit.py --unit O005-BRIDGE-C3
+python scripts/build_bridge_unit.py --unit O005-BRIDGE-C4
+python scripts/qa_bridge_unit.py --unit O005-BRIDGE-C1 --execute-notebook --deterministic-build
+python scripts/qa_bridge_unit.py --unit O005-BRIDGE-C2 --execute-notebook --deterministic-build
+python scripts/qa_bridge_unit.py --unit O005-BRIDGE-C3 --execute-notebook --deterministic-build
+python scripts/qa_bridge_unit.py --unit O005-BRIDGE-C4 --execute-notebook --deterministic-build
+python scripts/build_progress_pdf.py --complete
 ```
 
 QA memeriksa kesetaraan struktur sumber–target, rumus dan tautan yang
@@ -171,3 +202,9 @@ paket Python yang ditulis secara independen menyediakan notebook tanpa keluaran
 tersimpan, pemeriksaan deterministik, rubrik, provenance, lingkungan terpaku,
 serta data sintetis atau yang dihasilkan model; paket-paket tersebut tidak
 mengklaim mereproduksi hasil artikel sumber.
+Prakata, pengantar Bagian 1, Pernyataan Aksesibilitas, dan Riwayat Versi
+menutup seluruh permukaan pembaca sumber. Modul C1–C4 menambahkan alur kerja
+reprodusibel, bifurkasi lokal, kekacauan dan peta balik, serta kalibrasi,
+validasi, identifiabilitas, dan ketidakpastian. Keempat modul itu ditulis baru,
+ditandai sebagai tambahan independen, dan tidak dipresentasikan sebagai materi
+Lega atau University of Arizona.

@@ -1,0 +1,307 @@
+{
+  "article_link_catalog": {},
+  "language": "id-ID",
+  "problems": [
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Untuk \\(0 \\le r \\le 4\\) dan \\(x \\in [0,1]\\), berlaku \\(0 \\le f_r(x) \\le \\frac{r}{4} \\le 1\\); jika \\(r>4\\), batas atas \\(\\frac{r}{4} \\le 1\\) tidak lagi tersedia.",
+        "required_evidence": [
+          "\\(x(1-x)\\) tidak negatif pada \\([0,1]\\).",
+          "Nilai maksimum \\(x(1-x)\\) adalah \\(\\frac{1}{4}\\) pada \\(x=\\frac{1}{2}\\).",
+          "Kesimpulan berlaku untuk setiap iterasi melalui induksi."
+        ],
+        "type": "structured"
+      },
+      "hint": {
+        "text": "Cari nilai minimum dan maksimum \\(x(1-x)\\) pada interval \\([0,1]\\), lalu kalikan dengan \\(r\\)."
+      },
+      "ordinal": 1,
+      "problem_id": "O005-BRIDGE-C3-P01",
+      "problem_summary": "Buktikan invariansi interval keadaan peta logistik dan identifikasi batas parameter yang dipakai.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "\\([0,1]\\) adalah interval invarian tepat di bawah kontrak parameter yang dinyatakan.",
+        "steps": [
+          "Faktorkan \\(x(1-x)\\) dan gunakan \\(0 \\le x \\le 1\\) untuk memperoleh ketaknegatifan.",
+          "Turunan \\(1-2x\\) lenyap pada \\(x=\\frac{1}{2}\\), tempat maksimum bernilai \\(\\frac{1}{4}\\).",
+          "Maka \\(0 \\le r x(1-x) \\le \\frac{r}{4} \\le 1\\) ketika \\(0 \\le r \\le 4\\).",
+          "Jika satu keadaan berada di \\([0,1]\\), keadaan berikutnya juga; induksi mempertahankan seluruh orbit.",
+          "Untuk \\(r>4\\), \\(x=\\frac{1}{2}\\) dipetakan ke \\(\\frac{r}{4}>1\\), sehingga interval tidak invarian."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "\\(x_{n+1}=r x_n(1-x_n)\\)",
+        "\\(0\\le x(1-x)\\le \\frac{1}{4}\\)"
+      ]
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Untuk \\(r=0\\) hanya \\(x^\\ast=0\\) dan rumus \\(1-\\frac{1}{r}\\) tidak terdefinisi. Titik \\(x^\\ast=0\\) stabil pada \\(0 \\le r<1\\). Pada \\(r=1\\) cabang kedua berimpit dengan \\(x^\\ast=0\\) dan pengali \\(+1\\) membuat titik itu nonhiperbolik. Untuk \\(r>0\\), titik \\(x^\\ast=1-\\frac{1}{r}\\) stabil pada \\(1<r<3\\). Pada \\(r=3\\) pengalinya \\(-1\\), titik tetap nonhiperbolik, dan rumus calon dua-siklus berimpit di \\(x^\\ast=\\frac{2}{3}\\); dua titik berbeda berperiode prima dua baru ada untuk \\(r>3\\).",
+        "required_evidence": [
+          "Kasus \\(r=0\\) dipisahkan sebelum pembagian dengan \\(r\\); hanya \\(x^\\ast=0\\) yang berlaku.",
+          "Untuk \\(r>0\\), kedua solusi persamaan \\(x^\\ast=f_r(x^\\ast)\\) diperoleh.",
+          "Pengali masing-masing adalah \\(r\\) dan \\(2-r\\).",
+          "Syarat \\(\\lvert\\mu\\rvert<1\\) diterapkan tanpa memasukkan titik batas.",
+          "Pada \\(r=3\\), akar calon dua-siklus berimpit di \\(\\frac{2}{3}\\) dan belum membentuk orbit prima dua."
+        ],
+        "type": "quantitative"
+      },
+      "hint": {
+        "text": "Faktorkan persamaan titik tetap, lalu terapkan syarat nilai mutlak pengali kurang dari satu."
+      },
+      "ordinal": 2,
+      "problem_id": "O005-BRIDGE-C3-P02",
+      "problem_summary": "Turunkan titik tetap peta logistik dan interval kestabilan lokalnya.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Kasus \\(r=0\\) harus dipisahkan dari rumus yang membagi dengan \\(r\\); pada \\(r=3\\) cabang calon dua-siklus baru berimpit dan orbit prima dua yang berbeda muncul hanya untuk \\(r>3\\).",
+        "steps": [
+          "Tulis \\(x^\\ast[r(1-x^\\ast)-1]=0\\); untuk \\(r=0\\) persamaan hanya memberi \\(x^\\ast=0\\), sedangkan untuk \\(r>0\\) solusi kedua adalah \\(x^\\ast=1-\\frac{1}{r}\\).",
+          "Evaluasi \\(f_r'(x)=r(1-2x)\\) di kedua titik.",
+          "Untuk titik nol, \\(\\lvert r\\rvert<1\\) memberi \\(0 \\le r<1\\) dalam domain fisik.",
+          "Untuk titik tak nol, \\(\\lvert 2-r\\rvert<1\\) memberi \\(1<r<3\\).",
+          "Pada \\(r=1\\) atau \\(r=3\\), pengali masing-masing \\(+1\\) atau \\(-1\\) sehingga uji hiperbolik tidak memutuskan kestabilan melalui pertidaksamaan ketat.",
+          "Substitusi \\(r=3\\) ke rumus calon dua-siklus memberi dua akar sama, \\(\\frac{2}{3}\\); dua titik berbeda berperiode prima dua memerlukan \\(r>3\\)."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "\\(x^\\ast=r x^\\ast(1-x^\\ast)\\)",
+        "\\(f_r'(x)=r(1-2x)\\)"
+      ]
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "\\(x_-=0.51304451\\), \\(x_+=0.79945549\\), \\(\\mu_2=0.16\\), dan \\(\\lambda=-0.91629073\\) per iterasi.",
+        "formula": "\\mu_2=f'(x_-)f'(x_+);\\quad \\lambda=\\frac{1}{2}\\log\\lvert\\mu_2\\rvert",
+        "tolerances": {
+          "lyapunov_absolute": 1e-08,
+          "multiplier_absolute": 1e-12,
+          "state_absolute": 1e-08
+        },
+        "type": "quantitative"
+      },
+      "hint": {
+        "text": "Gunakan rumus dua-siklus, lalu kalikan turunan pada kedua titik sebelum mengambil setengah logaritma."
+      },
+      "ordinal": 3,
+      "problem_id": "O005-BRIDGE-C3-P03",
+      "problem_summary": "Hitung orbit dua-siklus, pengali, dan eksponen Lyapunov pada \\(r=3.2\\).",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Orbit berganti titik pada setiap iterasi, tetapi \\(\\lvert\\mu_2\\rvert<1\\) membuat gangguan menyusut setelah satu putaran dua langkah.",
+        "steps": [
+          "Substitusikan \\(r=3.2\\) ke rumus \\(x_\\pm\\).",
+          "Periksa \\(f(x_-)=x_+\\) dan \\(f(x_+)=x_-\\).",
+          "Gunakan \\(\\mu_2=-r^2+2r+4\\) untuk memperoleh \\(0.16\\).",
+          "Hitung \\(\\lambda=\\frac{1}{2}\\log(0.16)=-0.9162907319\\)."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "\\(x_{\\pm}=\\frac{r+1\\pm\\sqrt{(r-3)(r+1)}}{2r}\\)",
+        "\\(\\lambda=\\frac{1}{2}\\log\\lvert\\mu_2\\rvert\\)"
+      ]
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Nilai negatif pada \\(r=3.2\\) menunjukkan kontraksi menuju dua-siklus; nilai positif sekitar \\(\\log 2\\) pada \\(r=4\\) menunjukkan pemisahan lokal rata-rata, tetapi hasil berhingga tidak mencakup semua kondisi awal atau membuktikan seluruh struktur asimtotik.",
+        "required_evidence": [
+          "Nilai \\(r=3.2\\) sekitar \\(-0.91629073\\).",
+          "Nilai \\(r=4\\) sekitar \\(0.69317558\\) dan dekat \\(\\log 2\\).",
+          "Transien, panjang orbit, kondisi awal khusus, dan presisi terbatas disebut sebagai batas."
+        ],
+        "type": "structured"
+      },
+      "hint": {
+        "text": "Pisahkan arti tanda estimasi dari kekuatan logis bukti yang hanya memakai satu orbit dan \\(N\\) berhingga."
+      },
+      "ordinal": 4,
+      "problem_id": "O005-BRIDGE-C3-P04",
+      "problem_summary": "Bandingkan eksponen Lyapunov periodik dan kacau serta batasi klaim dari estimasi berhingga.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Eksponen Lyapunov adalah diagnostik kuat ketika kontraknya jelas, bukan label otomatis dari satu grafik.",
+        "steps": [
+          "Hubungkan \\(\\lambda<0\\) dengan kontraksi rata-rata pada orbit periodik.",
+          "Hubungkan \\(\\lambda>0\\) dengan pertumbuhan gangguan kecil secara lokal.",
+          "Bandingkan estimasi pada \\(r=4\\) dengan \\(\\log 2\\) menggunakan toleransi, bukan kesamaan digit mutlak.",
+          "Nyatakan bahwa satu orbit berhingga tidak mengecualikan kondisi awal istimewa atau jendela periodik pada parameter lain."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "\\(\\lambda_N=\\frac{1}{N}\\sum \\log\\lvert f_r'(x_n)\\rvert\\)"
+      ]
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Titiknya \\((0,0,0)\\) dan \\((\\pm\\sqrt{72},\\pm\\sqrt{72},27)\\), dengan \\(\\sqrt{72}=8.48528137\\); norma residu numerik kurang dari \\(10^{-12}\\).",
+        "formula": "(0,0,0),\\ (\\pm\\sqrt{\\beta(\\rho-1)},\\pm\\sqrt{\\beta(\\rho-1)},\\rho-1)",
+        "tolerances": {
+          "residual_norm_max": 1e-12,
+          "state_absolute": 1e-08
+        },
+        "type": "quantitative"
+      },
+      "hint": {
+        "text": "Dari \\(\\dot{x}=0\\) peroleh \\(y=x\\); kemudian pisahkan kasus \\(x=0\\) dan \\(x\\ne0\\)."
+      },
+      "ordinal": 5,
+      "problem_id": "O005-BRIDGE-C3-P05",
+      "problem_summary": "Turunkan dan periksa titik kesetimbangan sistem Lorenz kanonik.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Ketiga titik membuat ruas kanan nol dalam toleransi aritmetika pecahan mengambang.",
+        "steps": [
+          "Dari \\(\\sigma(y-x)=0\\) dan \\(\\sigma\\ne0\\), tetapkan \\(y=x\\).",
+          "Persamaan kedua menjadi \\(x(\\rho-z-1)=0\\).",
+          "Kasus \\(x=0\\) memberi \\(y=z=0\\).",
+          "Kasus \\(x\\ne0\\) memberi \\(z=\\rho-1\\) dan \\(x^2=\\beta(\\rho-1)\\).",
+          "Substitusi parameter memberi \\(z=27\\) dan \\(x=y=\\pm\\sqrt{72}\\)."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "\\(\\dot{x}=\\sigma(y-x)\\)",
+        "\\(\\dot{y}=x(\\rho-z)-y\\)",
+        "\\(\\dot{z}=xy-\\beta z\\)"
+      ]
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Notebook menuntut selisih solusi utama dan solusi dipermurni kurang dari \\(10^{-6}\\) pada \\(t \\le 10\\), lalu menunjukkan pasangan berjarak awal \\(10^{-9}\\) masih dekat pada \\(t=20\\) tetapi berjarak lebih dari \\(0.1\\) pada \\(t=35\\).",
+        "required_evidence": [
+          "Metode, rtol, atol, dan max_step kedua integrasi disebutkan.",
+          "Dua kondisi awal diintegrasikan sebagai satu sistem enam dimensi dengan riwayat langkah bersama.",
+          "Pertumbuhan setelah konvergensi rentang pendek tidak disamakan dengan galat solver."
+        ],
+        "type": "structured"
+      },
+      "hint": {
+        "text": "Bandingkan solusi untuk keadaan awal yang sama terlebih dahulu; baru setelah konvergensi rentang pendek lulus, bandingkan keadaan awal yang berbeda."
+      },
+      "ordinal": 6,
+      "problem_id": "O005-BRIDGE-C3-P06",
+      "problem_summary": "Bedakan ketidakakuratan integrator dari kepekaan dinamik pada sistem Lorenz.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Urutan pemeriksaan memungkinkan kepekaan dinamik dibedakan dari kegagalan konvergensi numerik.",
+        "steps": [
+          "Integrasikan kondisi awal yang sama dengan konfigurasi utama dan konfigurasi lebih ketat.",
+          "Periksa norma selisih maksimum pada rentang pendek terhadap ambang \\(10^{-6}\\).",
+          "Integrasikan dua kondisi awal yang berbeda \\(10^{-9}\\) dalam satu sistem gabungan.",
+          "Periksa bahwa jarak pada \\(t=20\\) masih di bawah \\(10^{-4}\\) dan jarak pada \\(t=35\\) di atas \\(10^{-1}\\).",
+          "Batasi kesimpulan setelah jarak mencapai skala atraktor karena pendekatan linear telah jenuh."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Lingkungan kanonik memberi \\(\\lambda=-0.91629073\\) dan \\(\\lambda=0.69317558\\), galat pemurnian sekitar \\(1.11\\times10^{-8}\\), ambang jarak pada \\(t=25.2\\), 40 perpotongan setelah transien, galat bidang di bawah \\(10^{-8}\\), dan 39 pasangan balik.",
+        "notebook_check": "Semua sel berjalan dari kernel baru, menghasilkan empat keluaran PNG, memenuhi gerbang portabel, dan menyelesaikan verifikasi ulang deterministik.",
+        "required_evidence": [
+          "Semua perpotongan mempunyai waktu meningkat, \\(z\\approx27\\), dan \\(\\dot{z}>0\\).",
+          "Nilai \\(x\\) perpotongan mencakup kedua tanda dan kedua lobus.",
+          "Jumlah pasangan balik tepat satu kurang dari jumlah perpotongan.",
+          "Plot \\(x_{n+1}\\) terhadap \\(x_n\\) disebut proyeksi karena koordinat \\(y\\) dibuang."
+        ],
+        "tolerances": {
+          "lyapunov_absolute": 1e-08,
+          "section_absolute": 1e-08,
+          "solver_norm_max": 1e-06,
+          "time_absolute": 0.1
+        },
+        "type": "executable"
+      },
+      "hint": {
+        "text": "Bedakan sidik lingkungan kanonik—misalnya jumlah tepat—dari gerbang struktural seperti arah, galat bidang, dan keberadaan kedua lobus."
+      },
+      "notebook": {
+        "path": "source/id-ID/O005-BRIDGE-C3/notebooks/bridge-c3-chaos-and-return-maps.ipynb",
+        "provenance": "new_original"
+      },
+      "ordinal": 7,
+      "problem_id": "O005-BRIDGE-C3-P07",
+      "problem_summary": "Jalankan seluruh alur C3 dan audit penampang serta proyeksi peta balik.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Alur yang lulus mengikat gambar pada persamaan, konfigurasi solver, peristiwa berarah, dan pemeriksaan numerik yang dinyatakan.",
+        "steps": [
+          "Mulai kernel baru dan jalankan semua sel secara berurutan.",
+          "Cocokkan dua eksponen Lyapunov dan pastikan pemeriksaan analitik pada \\(r=3.2\\) lulus.",
+          "Catat galat pemurnian dan waktu lintas ambang pasangan.",
+          "Periksa orientasi, residu bidang, kedua lobus, dan sensus perpotongan.",
+          "Bentuk pasangan \\((x_n,x_{n+1})\\) dan bandingkan jumlahnya dengan sensus perpotongan.",
+          "Jelaskan bahwa peta penuh bekerja pada pasangan \\((x,y)\\), sehingga proyeksi \\(x\\) dapat kehilangan informasi."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "\\(S=\\{(x,y,z)\\mid z=27,\\ \\dot{z}>0\\}\\)",
+        "\\(P(x_n,y_n)=(x_{n+1},y_{n+1})\\)"
+      ]
+    }
+  ],
+  "provenance_policy": {
+    "external_data_or_assets": false,
+    "model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
+    "non_endorsement": true,
+    "source_author_credit_preserved": true
+  },
+  "schema": "o005-bridge-mastery-v1",
+  "schema_version": "1.0.0",
+  "source": {
+    "license": "CC BY-NC-SA 4.0",
+    "not_part_of_source_book": true,
+    "relationship": "independent_supplement",
+    "spine": "Joceline Lega, Introduction to Mathematical Modeling, v1.01",
+    "type": "new_original_addition"
+  },
+  "unit_id": "O005-BRIDGE-C3"
+}

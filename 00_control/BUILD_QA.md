@@ -1256,3 +1256,75 @@ the bounded desktop/mobile browser inspection on the same final CSS bytes.
   missing images, or console warnings. Mobile fragment navigation cleared the
   sticky navigation by about 9.2 px. External-link reachability and nonexistent
   audio/live widgets were not exercised.
+
+## Complete bridge closure and final reader gate — 2026-08-23
+
+- C1–C4 are complete: 657 stable bridge segments (152/115/117/273), 28
+  mastery records, four open notebooks, generated figures, and closed
+  authority/manifest/ledger records. Full normal and optimized static QA,
+  fresh-kernel runs, perturbed branches, PNG decoding, and staged deterministic
+  builds pass.
+- The shared reader CSS now marks every rendered table `responsive-table` with
+  `tabindex="0"` and contains the mobile overflow/overscroll/touch rules.
+  All 14 bridge tables pass the DOM check. Final bridge reader trees are C1
+  `56c7a055e8fa75630e2545b1e7d7b96c889925aea16534ab0d5ebcac4e9a14d6`, C2
+  `1ee130ed30b9e6aa23524218030b6ddd787a2771d99a696117218b5538ec6b96`, C3
+  `3f68874df2b3b164d71eee6066f039ce46bd7ce9400d63805c55e805ce68ea3b`, and
+  C4 `9b1df796f9319ab1603bf9115e2c14e3e4b379e02512f32df11cbc0c875e77f0`.
+- The complete PDF was rebuilt after the repair and passes strict parsing:
+  355 tagged A4 pages, `/Lang id`, 28 outline entries, no forms/JavaScript/
+  suspects; PDF SHA-256
+  `f62218d51c97bd86f94ac80c6fe179a2b535be5cd8f8bcf2f402764421597cf3` and
+  receipt SHA-256
+  `e979ef2ac745b45ba50a15f43ab71864fc2e21c02151b7fa13592b0716ef9619`.
+- Final visual inspection covers the cover, status/license, contents, chapter
+  boundaries, dense formula and figure pages, bridge tables/mastery, projects,
+  and closing note. No clipping, overlap, untypeset bridge formulas, or broken
+  image was found. Desktop browser QA keeps the 768 px article centered;
+  mobile C2–C4 keep a 357.507 px article centered with document width equal to
+  the viewport.
+- The next immutable release package is the complete six-file Zenodo payload;
+  no publication was attempted until the updated public-QA control and package
+  hashes are recorded. GitHub remains paused under the external suspension.
+## Complete reader release and public-byte verification — 2026-08-23
+
+- The immutable release directory
+  `release/zenodo/reader-first-complete-20260823` contains exactly six public
+  files: PDF, compact source ZIP, PDF build receipt, LICENSE, release
+  manifest, and checksums. Total bytes: 54,569,698.
+- Zenodo DOI `10.5281/zenodo.22063401` is published in concept lineage
+  `10.5281/zenodo.22059939`. All six anonymous public downloads match local
+  byte counts and SHA-256 values; the complete readback is in
+  `00_control/ZENODO_PUBLICATION_RECEIPT_COMPLETE_20260823.json`.
+- The exact release PDF is 43,463,488 bytes, 355 tagged A4 pages, and SHA-256
+  `f62218d51c97bd86f94ac80c6fe179a2b535be5cd8f8bcf2f402764421597cf3`.
+- Figshare could not be updated at this boundary because the supplied account
+  is inactive/disabled (HTTP 403). The public article is currently removed and
+  the current collection is empty; no duplicate item or incompatible-license
+  upload was attempted. See
+  `00_control/FIGSHARE_PUBLICATION_RECEIPT_COMPLETE_20260823.json`.
+## Corrected aggregate census and Zenodo release — 2026-08-23
+
+The complete reader itself remains byte-identical, but a bounded audit found
+that the earlier public aggregate source-segment count omitted the four final
+non-problem units. Parsing every packaged `backend/segments/*.jsonl` file gives
+3,448 source records and 657 bridge records (4,105 total). The release builder
+now derives and writes these counts from the selected JSONL closure.
+
+The canonical no-overwrite package is
+`release/zenodo/reader-first-complete-20260823-r5`, six files totaling
+54,570,837 bytes. The PDF remains 43,463,488 bytes with SHA-256
+`f62218d51c97bd86f94ac80c6fe179a2b535be5cd8f8bcf2f402764421597cf3`; the
+canonical compact source ZIP is 11,083,138 bytes with SHA-256
+`0350d0dc9530c877c3ebcbb84d3cfe7f73654eaeb59bfad46f4ddf61d9446d72`.
+The ZIP has 468 members, 467 manifest rows, safe paths, and a passing CRC
+test; every manifest row matches its byte count and hash.
+
+Zenodo record `22070943` / DOI `10.5281/zenodo.22070943` is published as the
+latest concept version. All six anonymous public downloads match the canonical
+local package. The sanitized receipt is
+`00_control/ZENODO_PUBLICATION_RECEIPT_CANONICAL_20260823.json` (SHA-256
+`6cb1962c5e14668c2be86284b78e182b4f8951a1f5d9baafcd937ae25906cab9`). The
+earlier records remain immutable history; no source reader content was
+silently altered, and the embedded public docs use only the stable concept
+DOI.

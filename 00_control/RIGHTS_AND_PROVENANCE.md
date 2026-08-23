@@ -308,3 +308,65 @@ not represented as empirical validation. The Indonesian arXiv and journal
 witnesses used for terminology QA supplied usage evidence only; none of their
 prose, formulas, code, data, or figures appears in C1. Production provenance is
 identified exactly as `OpenAI Codex gpt-5.6-sol, Ultra.`
+
+## Original bridge C2 component record
+
+`O005-BRIDGE-C2`, *Bifurkasi Lokal: Perubahan Kestabilan dan Munculnya
+Osilasi*, is a newly authored independent supplement rather than a source-book
+unit. Its explanatory prose, seven mastery records, Python notebook, normal-
+form computations, two generated reader figures, backend records, and reader
+presentation were created for this edition and are distributed compatibly
+under CC BY-NC-SA 4.0. The separate attribution to Joceline Lega and the
+University of Arizona does not imply their authorship, sponsorship, review, or
+endorsement of this supplement.
+
+No proprietary implementation, external dataset, copied source code, or
+third-party artwork was imported. The saddle-node, transcritical, pitchfork,
+and Hopf equations are used as standard mathematical facts; all plotted
+branches and trajectories are generated deterministically by the edition's
+open notebook. Indonesian university publications consulted for the
+bifurcation names supplied terminology evidence only; none of their prose,
+formulas, code, data, or figures was imported. Production provenance is
+identified exactly as `OpenAI Codex gpt-5.6-sol, Ultra.`
+
+## Original bridge C3 component record
+
+`O005-BRIDGE-C3`, *Penggandaan Periode, Kekacauan, dan Peta Balik*, is a newly
+authored independent supplement. Its prose, seven mastery records, logistic-
+map and Lorenz-system notebook, four generated PNG outputs presented as three
+accessible reader figures, backend records, and reader presentation were
+created for this edition and are distributed compatibly under CC BY-NC-SA
+4.0. Joceline Lega and the University of Arizona remain credited only for the
+separate source work and are not represented as authors, reviewers, sponsors,
+or endorsers of C3.
+
+No external dataset, copied program, proprietary implementation, or
+third-party figure was imported. The logistic map, Lyapunov exponent, Lorenz
+system, oriented Poincaré section, and return-map construction are standard
+mathematical objects implemented independently with NumPy/SciPy/Matplotlib.
+All displayed data and plots are computed deterministically from declared
+parameters and initial conditions. Terminology witnesses supplied no prose,
+formula, code, data, or image content. Production provenance is identified
+exactly as `OpenAI Codex gpt-5.6-sol, Ultra.`
+
+## Original bridge C4 component record
+
+`O005-BRIDGE-C4`, *Kalibrasi, Identifiabilitas, Validasi, dan Ketidakpastian
+Model*, is a newly authored independent supplement. Its prose, seven mastery
+records, synthetic population dataset generator, calibration and bootstrap
+notebook, generated four-panel reader figure, backend records, and reader
+presentation were created for this edition and are distributed compatibly
+under CC BY-NC-SA 4.0. Source-work attribution is retained separately; neither
+Joceline Lega nor the University of Arizona is claimed to have authored,
+reviewed, sponsored, or endorsed C4.
+
+No empirical or external dataset, proprietary program, copied source code, or
+third-party artwork was imported. The population observations are
+deterministic synthetic data and are explicitly not biological evidence or
+external validation. The exponential/logistic fits, residual diagnostics,
+AICc comparison, sensitivities, covariance approximation, and parametric
+bootstrap are independently implemented with the declared open scientific
+Python stack. Indonesian sources used to check `data uji`, `interval
+prediksi`, and `bootstrap parametrik` supplied terminology evidence only; no
+prose, formulas, code, data, or figures were copied. Production provenance is
+identified exactly as `OpenAI Codex gpt-5.6-sol, Ultra.`

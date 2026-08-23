@@ -1,0 +1,585 @@
+{
+  "author": "Joceline Lega",
+  "joined_html": {
+    "bytes": 3779387,
+    "sha256": "25a7acbb93869df50c902a943162907551199ab0bb1d2a38196224974c1e492b"
+  },
+  "mastery_records": {
+    "bridge_records": 28,
+    "source_records": 113,
+    "total_records": 141
+  },
+  "mode": "complete",
+  "model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
+  "ordered_unit_ids": [
+    "O005-LEGA-V101-FM01",
+    "O005-LEGA-V101-PT01",
+    "O005-LEGA-V101-CH01",
+    "O005-LEGA-V101-CH02",
+    "O005-LEGA-V101-PT02",
+    "O005-LEGA-V101-CH03",
+    "O005-LEGA-V101-CH04",
+    "O005-LEGA-V101-PT03",
+    "O005-LEGA-V101-CH05",
+    "O005-LEGA-V101-CH06",
+    "O005-LEGA-V101-CH07",
+    "O005-LEGA-V101-PT04",
+    "O005-LEGA-V101-CH08",
+    "O005-LEGA-V101-CH09",
+    "O005-LEGA-V101-CH10",
+    "O005-LEGA-V101-PT05",
+    "O005-LEGA-V101-CH11",
+    "O005-LEGA-V101-CH12",
+    "O005-LEGA-V101-CH13",
+    "O005-LEGA-V101-CH14",
+    "O005-LEGA-V101-BM01",
+    "O005-LEGA-V101-BM02",
+    "O005-BRIDGE-C1",
+    "O005-BRIDGE-C2",
+    "O005-BRIDGE-C3",
+    "O005-BRIDGE-C4"
+  ],
+  "outline": [
+    {
+      "page_index": 1,
+      "title": "Status edisi"
+    },
+    {
+      "page_index": 2,
+      "title": "Daftar isi"
+    },
+    {
+      "page_index": 3,
+      "title": "Prakata: Prakata"
+    },
+    {
+      "page_index": 5,
+      "title": "Bagian 1: Pendahuluan"
+    },
+    {
+      "page_index": 6,
+      "title": "Bab 1: Tentang Hakikat Pemodelan Matematika"
+    },
+    {
+      "page_index": 23,
+      "title": "Bab 2: Langkah Awal: Memodelkan Gelombang"
+    },
+    {
+      "page_index": 41,
+      "title": "Bagian 2: Model-Model dari Mekanika Klasik"
+    },
+    {
+      "page_index": 42,
+      "title": "Bab 3: Pendulum Nonlinear"
+    },
+    {
+      "page_index": 90,
+      "title": "Bab 4: Pemantulan Batu di Permukaan Air"
+    },
+    {
+      "page_index": 105,
+      "title": "Bagian 3: Dinamika Populasi dan Epidemiologi"
+    },
+    {
+      "page_index": 106,
+      "title": "Bab 5: Model Populasi Satu Spesies"
+    },
+    {
+      "page_index": 145,
+      "title": "Bab 6: Model Populasi Dua Spesies"
+    },
+    {
+      "page_index": 164,
+      "title": "Bab 7: Epidemiologi"
+    },
+    {
+      "page_index": 179,
+      "title": "Bagian 4: Reaksi Kimia dan Efek Spasial"
+    },
+    {
+      "page_index": 181,
+      "title": "Bab 8: Reaksi Kimia"
+    },
+    {
+      "page_index": 208,
+      "title": "Bab 9: Difusi"
+    },
+    {
+      "page_index": 227,
+      "title": "Bab 10: Pembentukan Pola"
+    },
+    {
+      "page_index": 241,
+      "title": "Bagian 5: Lampiran"
+    },
+    {
+      "page_index": 242,
+      "title": "Bab 11: Penyegaran: Aljabar Linear"
+    },
+    {
+      "page_index": 255,
+      "title": "Bab 12: Penyegaran: Kalkulus Vektor"
+    },
+    {
+      "page_index": 259,
+      "title": "Bab 13: Penyegaran: Persamaan Diferensial Biasa"
+    },
+    {
+      "page_index": 291,
+      "title": "Bab 14: Proyek Pemodelan"
+    },
+    {
+      "page_index": 299,
+      "title": "Pernyataan Aksesibilitas: Pernyataan Aksesibilitas"
+    },
+    {
+      "page_index": 301,
+      "title": "Riwayat Versi: Riwayat Versi"
+    },
+    {
+      "page_index": 302,
+      "title": "Modul Jembatan C1: Alur Kerja Python/Jupyter yang Reprodusibel"
+    },
+    {
+      "page_index": 313,
+      "title": "Modul Jembatan C2: Bifurkasi Lokal: Perubahan Kestabilan dan Munculnya Osilasi"
+    },
+    {
+      "page_index": 325,
+      "title": "Modul Jembatan C3: Penggandaan Periode, Kekacauan, dan Peta Balik"
+    },
+    {
+      "page_index": 340,
+      "title": "Modul Jembatan C4: Kalibrasi, Identifiabilitas, Validasi, dan Ketidakpastian Model"
+    }
+  ],
+  "pdf": {
+    "bytes": 43463488,
+    "language": "id",
+    "pages": 355,
+    "path": "01_Pengantar_Pemodelan_Matematika_Edisi_Bahasa_Indonesia_Lengkap.pdf",
+    "sha256": "f62218d51c97bd86f94ac80c6fe179a2b535be5cd8f8bcf2f402764421597cf3",
+    "tagged": true
+  },
+  "reader_inputs": [
+    {
+      "index": {
+        "bytes": 7535,
+        "path": "build/reader/O005-LEGA-V101-FM01/index.html",
+        "sha256": "0d623830176e98bcf5f8814f6e710af128ab4201495d03cc465c98804d4c66cc"
+      },
+      "label": "Prakata",
+      "mastery_record_count": 0,
+      "package_manifest": {
+        "bytes": 398,
+        "path": "build/reader/O005-LEGA-V101-FM01/PACKAGE_MANIFEST.tsv",
+        "sha256": "17e6d19bb5e565591f55c6d88e88b81777fce8a80e3f329904d47e28ef9f14db"
+      },
+      "title": "Prakata",
+      "unit_id": "O005-LEGA-V101-FM01"
+    },
+    {
+      "index": {
+        "bytes": 2607,
+        "path": "build/reader/O005-LEGA-V101-PT01/index.html",
+        "sha256": "bb14fc417e074f873a4dfdcc71c09791b7a238c87f29be8a9b7c4688468c118d"
+      },
+      "label": "Bagian 1",
+      "mastery_record_count": 0,
+      "package_manifest": {
+        "bytes": 397,
+        "path": "build/reader/O005-LEGA-V101-PT01/PACKAGE_MANIFEST.tsv",
+        "sha256": "b63128b817015198200f761732150c90c6f0a7f84513ac117ef1355b14b005c3"
+      },
+      "title": "Pendahuluan",
+      "unit_id": "O005-LEGA-V101-PT01"
+    },
+    {
+      "index": {
+        "bytes": 78823,
+        "path": "build/reader/O005-LEGA-V101-CH01/index.html",
+        "sha256": "983a5a5baa4188cf6473f55b5e539faf21d5f01090d185a2d50f5e33ca1f15f9"
+      },
+      "label": "Bab 1",
+      "mastery_record_count": 7,
+      "package_manifest": {
+        "bytes": 820,
+        "path": "build/reader/O005-LEGA-V101-CH01/PACKAGE_MANIFEST.tsv",
+        "sha256": "8ad8d6ae1fa621e0578937a473afeb7a9688868a68d0219368aa4c9146db5293"
+      },
+      "title": "Tentang Hakikat Pemodelan Matematika",
+      "unit_id": "O005-LEGA-V101-CH01"
+    },
+    {
+      "index": {
+        "bytes": 136406,
+        "path": "build/reader/O005-LEGA-V101-CH02/index.html",
+        "sha256": "e5f028a64848cd6e40dbac5c58116851b9167736115929638c1d9d8615bc8393"
+      },
+      "label": "Bab 2",
+      "mastery_record_count": 7,
+      "package_manifest": {
+        "bytes": 822,
+        "path": "build/reader/O005-LEGA-V101-CH02/PACKAGE_MANIFEST.tsv",
+        "sha256": "99df995fd0a519babb75b8a04e5495396c48f282ec4b700f731b8041c472ccce"
+      },
+      "title": "Langkah Awal: Memodelkan Gelombang",
+      "unit_id": "O005-LEGA-V101-CH02"
+    },
+    {
+      "index": {
+        "bytes": 2640,
+        "path": "build/reader/O005-LEGA-V101-PT02/index.html",
+        "sha256": "168d137e5d419e45ccc5834bcc9cb4921d843b03aea3f583f40c70f6bb68277f"
+      },
+      "label": "Bagian 2",
+      "mastery_record_count": 0,
+      "package_manifest": {
+        "bytes": 397,
+        "path": "build/reader/O005-LEGA-V101-PT02/PACKAGE_MANIFEST.tsv",
+        "sha256": "f1ef96675d782477f84ab055c90341fc36297e91dd65fe01a05bff44c7a7f0c8"
+      },
+      "title": "Model-Model dari Mekanika Klasik",
+      "unit_id": "O005-LEGA-V101-PT02"
+    },
+    {
+      "index": {
+        "bytes": 523703,
+        "path": "build/reader/O005-LEGA-V101-CH03/index.html",
+        "sha256": "da695b6a2338c18ecdad126556e3d852886f39979e1524a7d6fd0bd3f463e62a"
+      },
+      "label": "Bab 3",
+      "mastery_record_count": 23,
+      "package_manifest": {
+        "bytes": 1670,
+        "path": "build/reader/O005-LEGA-V101-CH03/PACKAGE_MANIFEST.tsv",
+        "sha256": "6323d620be2e99193da4bb603b619849c52331b4cc06eb6d6782c95dfcfbf964"
+      },
+      "title": "Pendulum Nonlinear",
+      "unit_id": "O005-LEGA-V101-CH03"
+    },
+    {
+      "index": {
+        "bytes": 244821,
+        "path": "build/reader/O005-LEGA-V101-CH04/index.html",
+        "sha256": "b570245f8dd495ed6e749cbc419ea6c35e47b83d84ed5670b8e998d078720a90"
+      },
+      "label": "Bab 4",
+      "mastery_record_count": 4,
+      "package_manifest": {
+        "bytes": 929,
+        "path": "build/reader/O005-LEGA-V101-CH04/PACKAGE_MANIFEST.tsv",
+        "sha256": "bc9638156478e002d7d7774d1a804db6607328ff01b6bb7cfd9bca4785e18abd"
+      },
+      "title": "Pemantulan Batu di Permukaan Air",
+      "unit_id": "O005-LEGA-V101-CH04"
+    },
+    {
+      "index": {
+        "bytes": 4474,
+        "path": "build/reader/O005-LEGA-V101-PT03/index.html",
+        "sha256": "873d311eabfed0b82a45c76994eb0bcc62ff1d0ca37ea4d02c311c9effb1287f"
+      },
+      "label": "Bagian 3",
+      "mastery_record_count": 0,
+      "package_manifest": {
+        "bytes": 397,
+        "path": "build/reader/O005-LEGA-V101-PT03/PACKAGE_MANIFEST.tsv",
+        "sha256": "6f733c053cfdbd491beb3b7b4812bbf88d5a9ff3942aa42109bb523f7632395a"
+      },
+      "title": "Dinamika Populasi dan Epidemiologi",
+      "unit_id": "O005-LEGA-V101-PT03"
+    },
+    {
+      "index": {
+        "bytes": 402618,
+        "path": "build/reader/O005-LEGA-V101-CH05/index.html",
+        "sha256": "38caf20e18b98fdf7c336a518850449607caeb060b8b5d07f693316ccca30247"
+      },
+      "label": "Bab 5",
+      "mastery_record_count": 17,
+      "package_manifest": {
+        "bytes": 1670,
+        "path": "build/reader/O005-LEGA-V101-CH05/PACKAGE_MANIFEST.tsv",
+        "sha256": "b05c46d80cc80e92a89253c5f2adba9b16d7eb6909859ff0050f79adde4881c9"
+      },
+      "title": "Model Populasi Satu Spesies",
+      "unit_id": "O005-LEGA-V101-CH05"
+    },
+    {
+      "index": {
+        "bytes": 232130,
+        "path": "build/reader/O005-LEGA-V101-CH06/index.html",
+        "sha256": "aea0bd6f6cb3d194264612751ceb23051b5f3f166fe826f404677b7a404fb756"
+      },
+      "label": "Bab 6",
+      "mastery_record_count": 6,
+      "package_manifest": {
+        "bytes": 1177,
+        "path": "build/reader/O005-LEGA-V101-CH06/PACKAGE_MANIFEST.tsv",
+        "sha256": "c17dc28dd913d083684a3a56dd1425f4b3ea24f1ddaa585272ca231b23ee42e7"
+      },
+      "title": "Model Populasi Dua Spesies",
+      "unit_id": "O005-LEGA-V101-CH06"
+    },
+    {
+      "index": {
+        "bytes": 166596,
+        "path": "build/reader/O005-LEGA-V101-CH07/index.html",
+        "sha256": "1db9973291cdd7b9884042568df7f8064a2d176d740797a7c2e3614f3f0361bd"
+      },
+      "label": "Bab 7",
+      "mastery_record_count": 5,
+      "package_manifest": {
+        "bytes": 1035,
+        "path": "build/reader/O005-LEGA-V101-CH07/PACKAGE_MANIFEST.tsv",
+        "sha256": "41de1005f961010700bbdea37b419160062ff590bc15046f4b4c74fc5d8ac11c"
+      },
+      "title": "Epidemiologi",
+      "unit_id": "O005-LEGA-V101-CH07"
+    },
+    {
+      "index": {
+        "bytes": 7942,
+        "path": "build/reader/O005-LEGA-V101-PT04/index.html",
+        "sha256": "9aaaa20c76526367e6ef81869df1b9cf9afefb9adbbaaa3cc5b2217d97c0194e"
+      },
+      "label": "Bagian 4",
+      "mastery_record_count": 0,
+      "package_manifest": {
+        "bytes": 397,
+        "path": "build/reader/O005-LEGA-V101-PT04/PACKAGE_MANIFEST.tsv",
+        "sha256": "9c6cc0ced01d17fbc4253b0d077c5d668824ea59a866eac8c0a761dbb45efd3d"
+      },
+      "title": "Reaksi Kimia dan Efek Spasial",
+      "unit_id": "O005-LEGA-V101-PT04"
+    },
+    {
+      "index": {
+        "bytes": 308739,
+        "path": "build/reader/O005-LEGA-V101-CH08/index.html",
+        "sha256": "f5a105f4f7a40b4e4c532ba7feb2178571fb80bcfe81948f397be741e9ca6f61"
+      },
+      "label": "Bab 8",
+      "mastery_record_count": 13,
+      "package_manifest": {
+        "bytes": 1058,
+        "path": "build/reader/O005-LEGA-V101-CH08/PACKAGE_MANIFEST.tsv",
+        "sha256": "5788926e888a1b42a06a2f5d6c00791f7752c60b8d8c4c84cccc035d3c345204"
+      },
+      "title": "Reaksi Kimia",
+      "unit_id": "O005-LEGA-V101-CH08"
+    },
+    {
+      "index": {
+        "bytes": 239679,
+        "path": "build/reader/O005-LEGA-V101-CH09/index.html",
+        "sha256": "7cfdf666fbf8a5fae15d8ef8377c19270e1409acd64d1a87834da72add28110b"
+      },
+      "label": "Bab 9",
+      "mastery_record_count": 7,
+      "package_manifest": {
+        "bytes": 1071,
+        "path": "build/reader/O005-LEGA-V101-CH09/PACKAGE_MANIFEST.tsv",
+        "sha256": "c854d0dcccc3dc69db714ee7405c7f230e6a43a960548b447682e8f41e7e8548"
+      },
+      "title": "Difusi",
+      "unit_id": "O005-LEGA-V101-CH09"
+    },
+    {
+      "index": {
+        "bytes": 163900,
+        "path": "build/reader/O005-LEGA-V101-CH10/index.html",
+        "sha256": "71f72ef861f1890ff6c1852ef53758ae2f75fa2a87393fca19dc9a44ae43a806"
+      },
+      "label": "Bab 10",
+      "mastery_record_count": 6,
+      "package_manifest": {
+        "bytes": 1177,
+        "path": "build/reader/O005-LEGA-V101-CH10/PACKAGE_MANIFEST.tsv",
+        "sha256": "04bc2754f1d1aa344dafc5dea5ae2eb32de494e917cf52649414d5f9be797ae7"
+      },
+      "title": "Pembentukan Pola",
+      "unit_id": "O005-LEGA-V101-CH10"
+    },
+    {
+      "index": {
+        "bytes": 2337,
+        "path": "build/reader/O005-LEGA-V101-PT05/index.html",
+        "sha256": "6ea589aab89a1694ebe465137d4e2e4e44a47e06bc098209b54312b27906721f"
+      },
+      "label": "Bagian 5",
+      "mastery_record_count": 0,
+      "package_manifest": {
+        "bytes": 397,
+        "path": "build/reader/O005-LEGA-V101-PT05/PACKAGE_MANIFEST.tsv",
+        "sha256": "d549df6839f494bc200eab99f2eb93733752f635b17a9f53973f070da80caf56"
+      },
+      "title": "Lampiran",
+      "unit_id": "O005-LEGA-V101-PT05"
+    },
+    {
+      "index": {
+        "bytes": 187817,
+        "path": "build/reader/O005-LEGA-V101-CH11/index.html",
+        "sha256": "0e1601c41d2199c4d58a33e2a92f525d06bfd040c4bc6c9c477df2dcb776faad"
+      },
+      "label": "Bab 11",
+      "mastery_record_count": 7,
+      "package_manifest": {
+        "bytes": 509,
+        "path": "build/reader/O005-LEGA-V101-CH11/PACKAGE_MANIFEST.tsv",
+        "sha256": "344629585cee4d5e9b80156790817327ffbf2a8048abae7bca68e6ca892d8d80"
+      },
+      "title": "Penyegaran: Aljabar Linear",
+      "unit_id": "O005-LEGA-V101-CH11"
+    },
+    {
+      "index": {
+        "bytes": 97116,
+        "path": "build/reader/O005-LEGA-V101-CH12/index.html",
+        "sha256": "3f70518ae670d6a3bd1e711c6fc525e64c40e2a8cafaa469c93d96d22b8d9a64"
+      },
+      "label": "Bab 12",
+      "mastery_record_count": 0,
+      "package_manifest": {
+        "bytes": 399,
+        "path": "build/reader/O005-LEGA-V101-CH12/PACKAGE_MANIFEST.tsv",
+        "sha256": "cb0acb0d6d1c7dd594c651489f5f4addfe797d7da361865d6b85bff7d9f2550c"
+      },
+      "title": "Penyegaran: Kalkulus Vektor",
+      "unit_id": "O005-LEGA-V101-CH12"
+    },
+    {
+      "index": {
+        "bytes": 512903,
+        "path": "build/reader/O005-LEGA-V101-CH13/index.html",
+        "sha256": "f2182af805a936072971598ade57144c70fa64b79c8589093f98af8c9115028d"
+      },
+      "label": "Bab 13",
+      "mastery_record_count": 11,
+      "package_manifest": {
+        "bytes": 1385,
+        "path": "build/reader/O005-LEGA-V101-CH13/PACKAGE_MANIFEST.tsv",
+        "sha256": "d6de355b529dc0ad760d908fbe7725858d177446e31f39929bdb8e05852fef5d"
+      },
+      "title": "Penyegaran: Persamaan Diferensial Biasa",
+      "unit_id": "O005-LEGA-V101-CH13"
+    },
+    {
+      "index": {
+        "bytes": 24028,
+        "path": "build/reader/O005-LEGA-V101-CH14/index.html",
+        "sha256": "67346cab9dcc6ab84b8c047d1dd4253a4c3773a1624cb9f1db4234b53fd50467"
+      },
+      "label": "Bab 14",
+      "mastery_record_count": 0,
+      "package_manifest": {
+        "bytes": 1878,
+        "path": "build/reader/O005-LEGA-V101-CH14/PACKAGE_MANIFEST.tsv",
+        "sha256": "ca50cad98eb48d09b2fed9a87ac5edea402e21e17e6bdaf948e6aa9de7834611"
+      },
+      "title": "Proyek Pemodelan",
+      "unit_id": "O005-LEGA-V101-CH14"
+    },
+    {
+      "index": {
+        "bytes": 5856,
+        "path": "build/reader/O005-LEGA-V101-BM01/index.html",
+        "sha256": "394426678e24fd30b95ac531fc365384a488a98ce05b618c7b0e3a491001c362"
+      },
+      "label": "Pernyataan Aksesibilitas",
+      "mastery_record_count": 0,
+      "package_manifest": {
+        "bytes": 398,
+        "path": "build/reader/O005-LEGA-V101-BM01/PACKAGE_MANIFEST.tsv",
+        "sha256": "7f154035a26c1e2dc2cec58dff678cb76940014ad462d7c566c6621837fada41"
+      },
+      "title": "Pernyataan Aksesibilitas",
+      "unit_id": "O005-LEGA-V101-BM01"
+    },
+    {
+      "index": {
+        "bytes": 3633,
+        "path": "build/reader/O005-LEGA-V101-BM02/index.html",
+        "sha256": "58c13ee096be0950c88c98d8cbdafdffa48b76ab1608fc28975e1430ba8d5798"
+      },
+      "label": "Riwayat Versi",
+      "mastery_record_count": 0,
+      "package_manifest": {
+        "bytes": 397,
+        "path": "build/reader/O005-LEGA-V101-BM02/PACKAGE_MANIFEST.tsv",
+        "sha256": "d3ce31a494df9e2ba8875af543cb5aaadcca9fadb4806957cba12bf7574faaaa"
+      },
+      "title": "Riwayat Versi",
+      "unit_id": "O005-LEGA-V101-BM02"
+    },
+    {
+      "index": {
+        "bytes": 53470,
+        "path": "build/reader/O005-BRIDGE-C1/index.html",
+        "sha256": "e33fff9fad718abf21db6045f61aef4d14b7226162f4a3d21117453665254f84"
+      },
+      "label": "Modul Jembatan C1",
+      "mastery_record_count": 7,
+      "package_manifest": {
+        "bytes": 920,
+        "path": "build/reader/O005-BRIDGE-C1/PACKAGE_MANIFEST.tsv",
+        "sha256": "fabfe7feb47b441cc86ddc1ced300ded53867b3942ae15c3797ab9104598431c"
+      },
+      "title": "Alur Kerja Python/Jupyter yang Reprodusibel",
+      "unit_id": "O005-BRIDGE-C1"
+    },
+    {
+      "index": {
+        "bytes": 127681,
+        "path": "build/reader/O005-BRIDGE-C2/index.html",
+        "sha256": "9faf552fccf7081acde0e93c535fd5b22cab15b04ebd7644f7bb46659147bcd0"
+      },
+      "label": "Modul Jembatan C2",
+      "mastery_record_count": 7,
+      "package_manifest": {
+        "bytes": 1176,
+        "path": "build/reader/O005-BRIDGE-C2/PACKAGE_MANIFEST.tsv",
+        "sha256": "99c0ec2db4e8f7401b05edee4bafde4edc3bf0d55c2acf119252fa39f2be0522"
+      },
+      "title": "Bifurkasi Lokal: Perubahan Kestabilan dan Munculnya Osilasi",
+      "unit_id": "O005-BRIDGE-C2"
+    },
+    {
+      "index": {
+        "bytes": 141694,
+        "path": "build/reader/O005-BRIDGE-C3/index.html",
+        "sha256": "06d31b10e43fcb72903dfa7658faee42d4ac1329e0abd070584dac4b8c7c7d5c"
+      },
+      "label": "Modul Jembatan C3",
+      "mastery_record_count": 7,
+      "package_manifest": {
+        "bytes": 1450,
+        "path": "build/reader/O005-BRIDGE-C3/PACKAGE_MANIFEST.tsv",
+        "sha256": "3c6081cefde25f01b4bd662efb3274a17d4bcf53bc75e68fbe54f2224d837ad5"
+      },
+      "title": "Penggandaan Periode, Kekacauan, dan Peta Balik",
+      "unit_id": "O005-BRIDGE-C3"
+    },
+    {
+      "index": {
+        "bytes": 110587,
+        "path": "build/reader/O005-BRIDGE-C4/index.html",
+        "sha256": "54564212d3323794b2711e04bd32d729476f09e6414b6aa32f79e8644fbb0188"
+      },
+      "label": "Modul Jembatan C4",
+      "mastery_record_count": 7,
+      "package_manifest": {
+        "bytes": 1065,
+        "path": "build/reader/O005-BRIDGE-C4/PACKAGE_MANIFEST.tsv",
+        "sha256": "6feed9affa607fa3ca0830b8c58635984ca3be628eb8ed117056b582a44942b0"
+      },
+      "title": "Kalibrasi, Identifiabilitas, Validasi, dan Ketidakpastian Model",
+      "unit_id": "O005-BRIDGE-C4"
+    }
+  ],
+  "schema": "o005-complete-pdf-build-receipt-v1",
+  "subject": "Edisi Bahasa Indonesia lengkap dan terverifikasi",
+  "title": "Pengantar Pemodelan Matematika — Edisi Bahasa Indonesia"
+}

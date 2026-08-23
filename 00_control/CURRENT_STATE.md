@@ -2,6 +2,17 @@
 
 Updated: 2026-08-23 Europe/Berlin
 
+## Current status override — 2026-08-23
+
+The complete 26-unit reader is finished, QA-verified, and preserved in
+canonical Zenodo record `22070943` / DOI `10.5281/zenodo.22070943`. The
+historical progress paragraphs below are retained as provenance; this override
+supersedes their earlier "three bridge modules remain" wording. The current
+closure is 3,448 source segments + 657 bridge segments = 4,105 total, with
+141 mastery records, 26 notebooks, and 12 projects. Figshare remains an
+external account blocker and GitHub remains suspended; neither changes the
+completed reader or its public Zenodo preservation.
+
 ## Status
 
 Lega Pressbooks v1.01 is selected and admitted. Source selection is closed.
@@ -989,3 +1000,123 @@ uncertainty. At the next substantial verified reader boundary,
 use Zenodo's new-version action on concept DOI `10.5281/zenodo.22059939`, update
 Figshare article `33314769`, and republish collection `8668413`. Do not retry
 GitHub until the user reports that account access is restored.
+
+## Complete bridge and release boundary — 2026-08-23
+
+- Original bridges C1–C4 are structurally and computationally complete. Their
+  657 stable segments comprise C1 152, C2 115, C3 117, and C4 273; each unit
+  has seven mastery records and one open notebook. All strict schemas, static
+  checks, fresh-kernel executions, perturbed branches, full PNG decoding, and
+  deterministic staged-build regressions pass.
+- The Indonesian terminology boundary contains 321 unique glossary IDs. The
+  exact arXiv:2001.05854v1 source archive and Indonesian TeX still hash to
+  `520cd160b47664dda32e57df87a6eb028348154e4d7a7494d230e8e517891d53`
+  and `03f7e68801badc84255df3323078ae00eee7ecff8a9f118cba064ce5d46ff2f2`.
+- A first complete 26-unit PDF build produced 355 tagged A4 pages, 28 outline
+  entries, Indonesian language metadata, and all 141 mastery records. Visual
+  QA rejected those bytes because several bridge mastery expressions rendered
+  as linear ASCII rather than MathML. A bounded explicit-TeX typography repair
+  and full bridge regression are in progress; rebuild the PDF afterward.
+- Zenodo new-version draft `22063401` is reserved under concept record
+  `22059939`, DOI `10.5281/zenodo.22063401`. It has no uploaded files and must
+  remain unpublished until the corrected PDF, build receipt, six-file release
+  package, and visual/privacy gates pass. GitHub remains paused.
+
+Exact next action: finish the C1–C4 mastery typography regression; rebuild and
+visually inspect the complete PDF; update README/control evidence with final
+hashes; create the immutable complete release package; upload and publish draft
+`22063401`; anonymously download and hash every public file; then update the
+existing fileless Figshare article and Indonesian collection.
+
+## Final complete reader boundary after responsive-table repair — 2026-08-23
+
+- The stale typography-blocked state above is superseded by this verified
+  boundary. C1–C4 all pass full normal/optimized static QA, fresh-kernel and
+  perturbed notebook checks, PNG decoding, deterministic staged builds, and
+  responsive browser QA. The final bridge trees are C1
+  `56c7a055e8fa75630e2545b1e7d7b96c889925aea16534ab0d5ebcac4e9a14d6`, C2
+  `1ee130ed30b9e6aa23524218030b6ddd787a2771d99a696117218b5538ec6b96`, C3
+  `3f68874df2b3b164d71eee6066f039ce46bd7ce9400d63805c55e805ce68ea3b`, and
+  C4 `9b1df796f9319ab1603bf9115e2c14e3e4b379e02512f32df11cbc0c875e77f0`.
+- The shared CSS repair makes all 14 bridge tables keyboard/touch-scrollable
+  within the viewport. C2, C3, and C4 at 390 px retain a 357.507 px centered
+  article and document scroll width 375 px; all images load and IDs are unique.
+- The rebuilt complete PDF is 43,463,488 bytes, SHA-256
+  `f62218d51c97bd86f94ac80c6fe179a2b535be5cd8f8bcf2f402764421597cf3`, 355
+  tagged A4 pages, `/Lang id`, 28 outline entries, no forms/JavaScript/
+  suspects. Its build receipt is 18,978 bytes, SHA-256
+  `e979ef2ac745b45ba50a15f43ab71864fc2e21c02151b7fa13592b0716ef9619`.
+- Selected-page visual QA, including bridge tables, formulas, figures, project
+  pages, and the closing note, passes with no clipping, overlap, raw ASCII
+  formula, or broken image. The PDF has not yet been uploaded to Zenodo.
+- Exact next action is now packaging to the new immutable directory, then
+  publishing and anonymously verifying Zenodo draft `22063401`, updating the
+  existing Figshare article/collection, and recording sanitized receipts.
+
+## Historical published complete-reader boundary — 2026-08-23 (superseded)
+
+- The immutable six-file release package is complete at
+  `release/zenodo/reader-first-complete-20260823`. It contains the 355-page
+  reader PDF, compact resumable source, build receipt, license, release
+  manifest, and checksums. Total payload is 54,569,698 bytes and remains below
+  the preservation cap. The PDF SHA-256 is
+  `f62218d51c97bd86f94ac80c6fe179a2b535be5cd8f8bcf2f402764421597cf3`.
+- Zenodo record `22063401`, DOI
+  `10.5281/zenodo.22063401`, is published as the next version of concept
+  `10.5281/zenodo.22059939`. The public record has the exact clean title,
+  Joceline Lega attribution, CC BY-NC-SA 4.0 rights, Indonesian language,
+  source and concept lineage, and the PDF as default preview. The exact model
+  identification occurs once in the description; the project label is absent
+  from title and description. The sanitized receipt is
+  `00_control/ZENODO_PUBLICATION_RECEIPT_COMPLETE_20260823.json` (SHA-256
+  `c5a65735105c7c350def98bb571f6ec0e021999e1e65f3335af2e0b1c482ec04`).
+- Anonymous streaming readback of all six public files matched every local
+  byte count and SHA-256. The six identities are recorded in that receipt;
+  no credential material was persisted.
+- Figshare was checked without creating a duplicate or uploading under a
+  substitute license. The supplied token now returns HTTP 403
+  `InactiveAccount`; the existing article page reports removed, the public
+  project has no matching content, and collection version 43 has no content.
+  The prior verified v2 receipt is preserved, and the current blocker is
+  recorded in `00_control/FIGSHARE_PUBLICATION_RECEIPT_COMPLETE_20260823.json`
+  (SHA-256
+  `13b91dcad3828ffb4110119d5ecaadaef32351d46edd15933da48897cb355f46`).
+  When the account is restored, update article `33314769` to the complete
+  Zenodo DOI, publish one metadata-only version, add it additively to
+  collection `8668413`, and anonymously verify the public item.
+- GitHub remains deliberately untouched while the external suspension is
+  active. No further authentication retry is useful until restoration is
+  reported.
+
+## Canonical corrected complete-reader boundary — 2026-08-23
+
+- A bounded audit parsed all 26 packaged `backend/segments/*.jsonl` files:
+  3,448 source records plus 657 bridge records, 4,105 total. The earlier
+  complete release controls and Zenodo description under-counted source
+  records by exactly 48 (FM01, PT01, BM01, and BM02); the reader content and
+  unit closure were already complete.
+- The hardened release builder now derives these counts from the exact JSONL
+  closure. Canonical immutable package:
+  `release/zenodo/reader-first-complete-20260823-r5`, six files,
+  54,570,837 bytes. Its manifest SHA-256 is
+  `6767a2fb8e50f0cd4ed00e23de046948878cd2ceb513f7358c646bcc8234ce51` and
+  its checksum-file SHA-256 is
+  `dfd12f1352030df83c69de7b97565809bb0bae851cab77796347c43e90ea3cc2`.
+- Canonical Zenodo record `22070943`, DOI
+  `10.5281/zenodo.22070943`, is published under concept
+  `10.5281/zenodo.22059939`; it supersedes the intermediate corrected
+  versions without changing the 355-page PDF bytes. Anonymous downloads of
+  all six final files match local sizes and SHA-256 values. Its embedded
+  public README/QA use only the stable concept DOI, preventing stale
+  self-references in later versions.
+- Sanitized receipt:
+  `00_control/ZENODO_PUBLICATION_RECEIPT_CANONICAL_20260823.json`, SHA-256
+  `6cb1962c5e14668c2be86284b78e182b4f8951a1f5d9baafcd937ae25906cab9`.
+  Current cursor SHA-256 is
+  `d0259a2b6cb7af8cae3f31b12f211ac8057bb35e40d872eba560bbca050e2dd3` and
+  recovery-pointer SHA-256 is
+  `d0a5f3ad7eba01c6bfe4371938932a0ea9d21847ba8686ed9cbe1365c47a60a5`.
+  Figshare remains blocked by the recorded HTTP 403 `InactiveAccount`; its
+  follow-up now points to canonical Zenodo DOI `22070943`. GitHub remains
+  paused. The current Figshare blocker receipt SHA-256 is
+  `264aa276dc374d1e5031799aaeba242c9288c4306895b2370e0d5d8df0aee35a`.

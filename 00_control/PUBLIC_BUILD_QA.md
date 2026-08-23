@@ -1,129 +1,106 @@
-# Bukti Build dan QA Publik — Batas Kemajuan Bab 14
+# Bukti Build dan QA Publik — Edisi Lengkap
 
-Tanggal batas: 2026-08-22
+Tanggal batas: 2026-08-23
 
-Dokumen ini merangkum bukti publik yang dapat direproduksi untuk batas
-kemajuan edisi Bahasa Indonesia *Pengantar Pemodelan Matematika*. Edisi ini
-masih dalam pengerjaan: Bab 1–14 dan pengantar Bagian 2–5 telah selesai,
-sedangkan pengantar Bagian 1, materi awal/akhir, dan empat modul jembatan asli
-belum selesai.
+Dokumen ini adalah kontrol publik yang mengikat untuk batas lengkap edisi
+Bahasa Indonesia *Pengantar Pemodelan Matematika*. Semua 22 unit turunan
+sumber dan empat modul jembatan orisinal telah selesai, dibangun, dan
+diverifikasi. Modul jembatan adalah tambahan independen; tidak diklaim sebagai
+bagian, ulasan, atau dukungan dari Joceline Lega maupun University of Arizona.
 
-## Otoritas sumber
+## Otoritas, lisensi, dan provenance
 
 - Joceline Lega, *Introduction to Mathematical Modeling*, University of
   Arizona Pressbooks v1.01 (Maret 2026), CC BY-NC-SA 4.0.
-- Bab 14: record Pressbooks 555, *Modeling Projects*, slug warisan
-  `examples-of-project-topics`.
-- Record kanonis: 38.887 byte, SHA-256
-  `cb9e10a0a6df089194f2bb90bc335d641230cce00dc47c90b6d1802dd6769013`.
-- HTML mentah: 18.737 byte, SHA-256
-  `337ce752f17b70d3677216b114792685a84acded115dfdc06213bb469dd5761a`.
-- HTML render: 18.394 byte, SHA-256
-  `3487086799c2562006c975c587dcd61f573f80e0b8f71caa6129dc242c57d0f9`.
+- Sumber resmi: https://opentextbooks.library.arizona.edu/mathematicalmodeling/
+- Edisi ini mempertahankan atribusi, pemberitahuan perubahan, NonCommercial,
+  ShareAlike, hak komponen, dan non-endorsement. Berkas sumber resmi, aset
+  pihak ketiga, dan batas lisensi tiap komponen tetap terikat di
+  `RIGHTS_AND_PROVENANCE.md` dan manifes otoritas.
+- Provenance produksi yang tampak pada reader dan artefak adalah tepat:
+  `OpenAI Codex gpt-5.6-sol, Ultra.`
+- QA istilah dibatasi pada saksi TeX Indonesia arXiv:2001.05854v1; identitas
+  arsip dan TeX serta keputusan propagasinya tercatat di
+  `TERMINOLOGY_QA_INDONESIAN_FIELD_SOURCE_20260822.md`.
 
-## Terjemahan dan backend Bab 14
+## Cakupan lengkap
 
-- Sasaran *Proyek Pemodelan*: 19.110 byte, SHA-256
-  `9a08e5a663685a52c4551a560ee68ea4f4dad9675b3aea04702dfa8416d719b4`.
-- Replay struktur: 252/252 elemen, 16/16 tautan, 12/12 proyek, 95/95 butir
-  daftar, dan nol rumus, soal, gambar, atau catatan kaki.
-- Backend: 247 segmen berpasangan, 135.384 byte, SHA-256
-  `8074b66de970f9381056a7c5c71d9bff2806337813606b7a68bf244305d7ad7f`.
-- Catatan unit: 4.492 byte, SHA-256
-  `e11be3dcf3907d84e6fffc9c9a78c7195ca32b517920e3c62a3c2f99d7d5028a`.
+- Unit: 22 unit turunan sumber + `O005-BRIDGE-C1` sampai `C4` (26 reader).
+- Segmen berpasangan: 3.448 unit sumber + 657 unit jembatan = 4.105 total;
+  semua ID stabil,
+  topology, formula, tautan, catatan kaki, aset, dan deskripsi dipertahankan.
+- Dukungan mastery: 113 record soal sumber + 28 record jembatan = 141 record;
+  setiap record memiliki petunjuk, pemeriksaan/jawaban, dan solusi kerja atau
+  rubrik yang jujur.
+- Notebook: 10 notebook bab + 12 notebook proyek + 4 notebook jembatan = 26;
+  12 paket proyek mandiri dengan data sintetis/terbuka dan lockfile.
+- Semua notebook jembatan lulus kernel bersih, cabang konfigurasi terganggu,
+  pemeriksaan `python -O`, dekode PNG, dan build deterministik bertahap.
 
-## Dua belas paket proyek terbuka
+## Build reader dan browser QA
 
-- Generator deterministik: 47.402 byte, SHA-256
-  `62eeb904b4c06800f64758454e7a8db78ab89ae4dfb2ff2220e877ca5194f2c5`.
-- Sumber paket: 72 berkas / 156.596 byte; arsip: 12 ZIP / 72.815 byte;
-  katalog: 26.966 byte, SHA-256
-  `9107863aee7cc9013b024e10d0091e227fdd3135b8913f5e103cc1157ce92e56`.
-- Setiap paket memuat tepat satu notebook, README, pemeriksaan, rubrik,
-  catatan provenance, dan `requirements.lock`. Semua arsip memakai urutan
-  leksikografis, waktu tetap 1980-01-01, mode `0644`, jalur aman, CRC valid,
-  serta byte yang sama dengan sumber longgar.
-- Kedua belas notebook berjumlah 120 sel / 48 sel kode. Semuanya tanpa
-  keluaran tersimpan dan berhasil dieksekusi dengan CPython 3.13.9,
-  NumPy 2.4.4, SciPy 1.17.1, dan Matplotlib 3.10.9.
-- Audit independen memperbaiki model kerumunan agar benar-benar memakai
-  tetangga lokal yang dihitung ulang pada domain periodik. Uji benih tetap dan
-  20 benih alternatif lulus seluruhnya; istilah yang tampil kepada pembaca
-  juga dinormalisasi ke Bahasa Indonesia.
-- Paket menggunakan data sintetis atau yang dihasilkan model. Artikel, kode,
-  dan data yang dirujuk tidak didistribusikan ulang; tidak ada klaim bahwa
-  paket mereproduksi hasil artikel.
+- PDF lengkap:
+  `output/pdf/01_Pengantar_Pemodelan_Matematika_Edisi_Bahasa_Indonesia_Lengkap.pdf`
+  — 43.463.488 byte, SHA-256
+  `f62218d51c97bd86f94ac80c6fe179a2b535be5cd8f8bcf2f402764421597cf3`, 355
+  halaman A4, tagged structure, `/Lang id`, 28 markah, tanpa form, JavaScript,
+  atau suspects. Metadata judul, penulis, subjek, dan model cocok dengan
+  receipt build.
+- Receipt build PDF: 18.978 byte, SHA-256
+  `e979ef2ac745b45ba50a15f43ab71864fc2e21c02151b7fa13592b0716ef9619`.
+  Receipt mengikat seluruh 26 input reader, 141 mastery record, outline,
+  HTML gabungan, pagination artifacts, dan identitas PDF.
+- Semua 26 unit dibangun ulang setelah perbaikan CSS tabel responsif; static,
+  optimized-static, kernel segar, konfigurasi terganggu, dan deterministic
+  double-build QA lulus. Konten, mastery, notebook, dan formula tidak diubah
+  oleh perbaikan ini.
+- Browser QA desktop (1280 px): shell 1.152 px dan artikel 768 px terpusat;
+  semua gambar termuat, ID unik, dan tidak ada page overflow.
+- Browser QA mobile (390 px): artikel 357,507 px terpusat; `scrollWidth` dokumen
+  sama dengan lebar klien untuk C2, C3, dan C4. Keempat belas tabel jembatan
+  memakai `responsive-table` dan `tabindex="0"`; tabel lebar dapat digulir
+  secara keyboard/touch tanpa melebarkan halaman. CSS salinan cocok byte dengan
+  sumber, SHA-256 `c70e6b334ace189002d73ad8add7df1cf83d520548e86cb5e2bf609b9b2210f2`.
+- Sampul, status/lisensi, daftar isi, batas setiap unit, halaman rumus/gambar,
+  mastery, proyek, dan halaman penutup telah dirender dengan Poppler dan
+  diperiksa. Tidak ditemukan clipping, overlap, formula ASCII mentah, atau
+  transisi unit rusak.
 
-## Pembaca dan determinisme
+## Package gate
 
-- Pembaca Bab 14: 17 berkas muatan / 268.890 byte, di luar manifes.
-- Manifes paket: 1.878 byte, SHA-256
-  `1be6f14f57da0ed950fd484c0c7e07291d981e4f4b76b2c8f3be49520507b597`.
-- Dua build bersih menghasilkan 18 berkas yang identik byte demi byte;
-  SHA-256 pohon QA kanonis:
-  `da7aa599e38559f33553872f7e1663de6d555ebc478b6b598dc7aa1d4bf6c347`.
-- QA browser pada 1280×900 menemukan shell 1.152 px, artikel 768 px, dan panel
-  paket 960 px yang semuanya terpusat; pada 390×844, shell, artikel, dan panel
-  menjadi kolom terpusat 357,5 px. Lebar gulir dokumen sama dengan lebar
-  klien, tidak ada elemen yang keluar halaman, semua 17 ID unik, semua fragmen
-  utuh, kedua belas tautan unduhan tampil, dan log peringatan/kesalahan kosong.
+At every substantial boundary, build the complete package into a new
+no-overwrite directory under `release/zenodo/` with a distinct matching
+version label. Mode lengkap wajib menghasilkan tepat enam berkas: PDF reader
+(primer), ZIP sumber ringkas, receipt build, LICENSE, RELEASE_MANIFEST, dan
+CHECKSUMS. ZIP wajib CRC-valid, path aman, dan seluruh payload di bawah
+500.000.000 byte. Kontrol, receipt publikasi, cache, render sementara, dan
+credential tidak boleh masuk payload.
 
-## Regresi unit yang telah selesai
+## Public preservation boundary
 
-Setelah perubahan pembaca bersama, seluruh 17 unit terdahulu dibangun ulang
-secara deterministik dan lulus; notebook Bab 1–10 juga dieksekusi ulang.
+Zenodo concept DOI `10.5281/zenodo.22059939` kini menunjuk ke versi publik
+terbaru yang telah dikoreksi; identitas record dan DOI versi tertentu dicatat
+di receipt terpisah. Setiap berkas telah dibaca kembali secara anonim dan
+dicocokkan dengan nama, byte, dan SHA-256 lokal. Figshare tetap merupakan
+rute metadata/link CC0 saja karena
+platform tidak menawarkan CC BY-NC-SA 4.0, tetapi akun yang disediakan kini
+nonaktif (HTTP 403) dan artikel lama melaporkan telah dihapus. Jangan membuat
+item duplikat atau mengunggah byte karya di bawah lisensi pengganti; lanjutkan
+artikel `33314769` dan collection `8668413` hanya setelah akun dipulihkan.
+GitHub tetap tidak disentuh selama suspensi akun.
+## Complete reader publication boundary — 2026-08-23
 
-| Unit | SHA-256 pohon QA |
-|---|---|
-| CH01 | `343ed0659f61ac2f8fad621c34a6cf7a676a24c791768837ec57fddd7baa5570` |
-| CH02 | `da563b4dabb2cf0ee67278902fd045c12364cbb49f9aacd5988cdb4ebce92e8b` |
-| CH03 | `1cc9ea306020bb19f02e8fe9e9b92fe6220110cc30afc4e86fb263ef0b635c81` |
-| CH04 | `ae0af4c114547add1850c959d091fd7c98a15fa3c4953db50a60731c301494b9` |
-| CH05 | `58b1770d618b315e731835ef53ace3eca45a2683289c394ff0daa9e2beb03711` |
-| CH06 | `59256ab07fb600a26e288f474a6f9d3b972368cc1291bd588b54a95f25a17138` |
-| CH07 | `8db3a1ea6666e686bbc306a15659cfb62bcfa17270b57e824fe84d3bd11ba615` |
-| CH08 | `8045de1e1b58ae1b2e9fe52c32b61fac8b61b6be696d73da875eb5ad0d6f16f8` |
-| CH09 | `c63676e0e174e6d681658dde23964fdc92fece55f6a3458303501603c2cb536a` |
-| CH10 | `a4816135b5f8e4d1b073a21a0f65021276486a13287cdcd4e8884e6495be2e08` |
-| CH11 | `45df98c3ec6ac845bd4311c8fd387cd80a0534f44dc2b0d4d8f7c2e6e88b48b0` |
-| CH12 | `6f7119069e063be2507c154ef4dcde92aa319521ce0c5b5efadb7d832feffafa` |
-| CH13 | `49c581e9c133255189b5f3e42b6766f1c91113ac7d2adc543fe40c20d8c2cc46` |
-| PT02 | `9a5dfb8651f6e3be8a360874dc789cdd6e515f61c2ea77e75867c7552cc2a65c` |
-| PT03 | `37bfd3d8f4a5dc76e58a5c1817add6f7c4de7c1d0a1cb063c2605f1c2797cdc1` |
-| PT04 | `b52af2494af8020e7c3b8c0c18f6f77da2df089e005cee1a65306aba2eb3891d` |
-| PT05 | `845ad33767a139e8a338a4500c21ee839ad90eeb3d5945a4b2bb6d95e6d730e7` |
-
-Jangkauan tautan eksternal dan widget audio/live tidak diuji. Bab 14 tidak
-memiliki audio atau widget live; keenam belas tautan eksternalnya dipertahankan
-sebagai sitasi dan tidak diperlukan untuk pembaca luring.
-
-## Preservasi publik
-
-Batas ini diterbitkan sebagai
-[Zenodo 10.5281/zenodo.22061640](https://doi.org/10.5281/zenodo.22061640)
-dalam garis versi konsep
-[10.5281/zenodo.22059939](https://doi.org/10.5281/zenodo.22059939).
-Kelima berkas publik diunduh kembali secara anonim; nama, jumlah byte, dan
-SHA-256 seluruhnya sama dengan artefak lokal. SHA-256 inventaris publik:
-`444ff63bc66e3c2bff051f8a439c766f315a75e452a60e0286974728708928ff`.
-PDF bertag 297 halaman merupakan berkas utama; paket sumber ringkas memiliki
-387 anggota dan lulus pemeriksaan CRC lengkap.
-
-## Pembaca PDF gabungan
-
-- Pembaca kemajuan menggabungkan 14 bab dan pengantar Bagian 2–5 dalam urutan
-  sumber menjadi 297 halaman A4. Soal, 113 catatan dukungan belajar, semua
-  bagian proyek, 44 gambar lokal, dan 5.486 simpul MathML dari pembaca HTML
-  terverifikasi dipertahankan; panel petunjuk, pemeriksaan, dan pembahasan
-  dibuka untuk cetak.
-- PDF bertag, menetapkan bahasa dokumen `id`, memuat 20 markah navigasi, tidak
-  memiliki halaman kosong, dan tidak mengandung URI `file:`, jalur pengguna,
-  kredensial, atau nama privat. Seluruh 44 rujukan gambar terselesaikan ke aset
-  lokal dan semua 18 ID unit muncul tepat sekali.
-- Seluruh 297 halaman dirender ulang dengan Poppler dan diperiksa dalam delapan
-  lembar kontak; pemeriksaan terperinci mencakup sampul, status/lisensi, daftar
-  isi, setiap batas unit, halaman bergambar, halaman padat rumus, dukungan
-  belajar, proyek, dan halaman penutup. Tidak ditemukan teks terpotong,
-  tumpang-tindih, latar gelap tak disengaja, atau transisi unit rusak.
-- Dua build bersih terakhir identik byte demi byte: 37.755.120 byte, SHA-256
-  `c96af7e139561e53d0c0652256852e31cb1b3819f83e82313d5a9acd5d7afbad`.
+- The latest Zenodo version under concept `10.5281/zenodo.22059939` supersedes
+  the earlier complete version because the public segment census was corrected;
+  the exact version DOI is in the release receipt.
+- The six-file reader-first package is reader-first and below the preservation
+  cap. The complete PDF is 355 tagged A4 pages and hashes to
+  `f62218d51c97bd86f94ac80c6fe179a2b535be5cd8f8bcf2f402764421597cf3`.
+- The package contains 3,448 source segments and 657 bridge segments (4,105
+  total). Anonymous downloads of all six files match the current package
+  byte-for-byte; the exact versioned receipt is retained in `00_control`.
+- Figshare update is externally blocked: the supplied account token returns
+  HTTP 403 `InactiveAccount`, the prior article page is removed, and current
+  project/collection pages have no content. No duplicate or substitute-license
+  upload was made. See
+  `FIGSHARE_PUBLICATION_RECEIPT_COMPLETE_20260823.json`.

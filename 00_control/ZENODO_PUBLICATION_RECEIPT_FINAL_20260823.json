@@ -1,0 +1,88 @@
+{
+  "schema": "o005-zenodo-publication-receipt-v3",
+  "record_id": 22070888,
+  "doi": "10.5281/zenodo.22070888",
+  "doi_url": "https://doi.org/10.5281/zenodo.22070888",
+  "record_url": "https://zenodo.org/records/22070888",
+  "concept_doi": "10.5281/zenodo.22059939",
+  "supersedes_record_id": 22070839,
+  "previous_corrected_record_id": 22070758,
+  "published_at": "2026-08-23T17:17:35Z",
+  "status": "published",
+  "reason_for_new_version": "The r4 compact source embeds stable concept-DOI wording in its public README/QA so later version publication cannot create a stale self-reference. The verified source census remains 3448 + 657 = 4105 and the reader PDF is byte-identical.",
+  "title": "Pengantar Pemodelan Matematika — Edisi Bahasa Indonesia",
+  "version": "v1.01-id-complete-reader-20260823-r4",
+  "license": "cc-by-nc-sa-4.0",
+  "language": "ind",
+  "coverage": {
+    "status": "complete",
+    "source_units": 22,
+    "bridge_units": 4,
+    "source_segments": 3448,
+    "bridge_segments": 657,
+    "total_segments": 4105,
+    "mastery_records": 141,
+    "notebooks": 26,
+    "projects": 12,
+    "pdf_pages": 355
+  },
+  "release_package": {
+    "path": "release/zenodo/reader-first-complete-20260823-r4",
+    "files": 6,
+    "bytes": 54570851,
+    "manifest_sha256": "4fdee7e4eb9d27436d69b4c49aa83dc7ca134be8ffe331b2f4e4c6ca3b090c4e",
+    "checksums_sha256": "db2f8c2ceef009dc1044321c80b134708cd39e8a7c368196d6a8bfa77245ccf0"
+  },
+  "files": [
+    {
+      "name": "01_Pengantar_Pemodelan_Matematika_Edisi_Bahasa_Indonesia_Lengkap.pdf",
+      "bytes": 43463488,
+      "sha256": "f62218d51c97bd86f94ac80c6fe179a2b535be5cd8f8bcf2f402764421597cf3"
+    },
+    {
+      "name": "02_O005_LEGA_v1.01_id_complete-reader-20260823-r4_compact_source.zip",
+      "bytes": 11083152,
+      "sha256": "a08d96461b32be3a14dbe904a08b94fde4289037e3cef748541e12c40ad42195"
+    },
+    {
+      "name": "03_O005_LEGA_v1.01_id_complete_pdf_build_receipt.json",
+      "bytes": 18978,
+      "sha256": "e979ef2ac745b45ba50a15f43ab71864fc2e21c02151b7fa13592b0716ef9619"
+    },
+    {
+      "name": "LICENSE.md",
+      "bytes": 1229,
+      "sha256": "df09d1b94e42fd7ef903d8ab50070e363b8c3c456b414773ca5e4a0010d74a53"
+    },
+    {
+      "name": "RELEASE_MANIFEST.json",
+      "bytes": 3449,
+      "sha256": "4fdee7e4eb9d27436d69b4c49aa83dc7ca134be8ffe331b2f4e4c6ca3b090c4e"
+    },
+    {
+      "name": "CHECKSUMS.sha256",
+      "bytes": 555,
+      "sha256": "db2f8c2ceef009dc1044321c80b134708cd39e8a7c368196d6a8bfa77245ccf0"
+    }
+  ],
+  "anonymous_readback": {
+    "verified_at": "2026-08-23T17:18:28Z",
+    "record_state": "done",
+    "submitted": true,
+    "all_six_files_present": true,
+    "all_six_sha256_and_byte_counts_match_local": true,
+    "default_preview": "01_Pengantar_Pemodelan_Matematika_Edisi_Bahasa_Indonesia_Lengkap.pdf",
+    "title_unmangled": true,
+    "title_has_project_label": false,
+    "description_has_project_label": false,
+    "description_has_corrected_segment_census": true,
+    "model_provenance_occurrences": 1,
+    "organization_contributor_occurrences": 1,
+    "related_identifiers_include_source_and_concept_lineage": true,
+    "embedded_public_docs_use_stable_concept_doi": true
+  },
+  "github": {
+    "status": "paused_external_suspension",
+    "action": "not_retried"
+  }
+}

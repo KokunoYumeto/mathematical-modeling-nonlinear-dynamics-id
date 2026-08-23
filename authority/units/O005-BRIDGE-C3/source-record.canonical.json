@@ -1,0 +1,133 @@
+{
+  "canonical_language": "id-ID",
+  "content_mode": "new_original_addition",
+  "created_date": "2026-08-23",
+  "files": [
+    {
+      "bytes": 24248,
+      "path": "source/id-ID/O005-BRIDGE-C3/content.html",
+      "sha256": "6f16b026417252c5307c03a88272fc55542e955263cd85f6f82338e33065ed53"
+    },
+    {
+      "bytes": 41322,
+      "path": "scripts/generate_bridge_c3.py",
+      "sha256": "818bae4f71fbe6a3096c84eed33a75ed1d58f185f5ef1373e69655aef12cae91"
+    },
+    {
+      "bytes": 27271,
+      "path": "source/id-ID/O005-BRIDGE-C3/notebooks/bridge-c3-chaos-and-return-maps.ipynb",
+      "sha256": "c2f150814f61f691aa3c12b6b9f8abb48ed57d3e6c9381f262096edeba09bb79"
+    },
+    {
+      "bytes": 1170,
+      "path": "source/id-ID/O005-BRIDGE-C3/notebooks/requirements.lock",
+      "sha256": "5c6816d5c2e5993961f8a21ddce68f7f1ecbb4a48eff04fb345dc8e4ce2a8c68"
+    },
+    {
+      "bytes": 15601,
+      "path": "backend/mastery/O005-BRIDGE-C3.mastery.json",
+      "sha256": "eb51c8edf1797d6bdc438d46460ace1ebfef52ce395f78e5c95730404a3e552d"
+    }
+  ],
+  "license": "CC BY-NC-SA 4.0",
+  "model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
+  "relationship_to_spine": {
+    "endorsement_claimed": false,
+    "part_of_source_book": false,
+    "relationship": "independent_supplement",
+    "spine": "Joceline Lega, Introduction to Mathematical Modeling, v1.01"
+  },
+  "schema": "o005-original-authority-v1",
+  "title": "Penggandaan Periode, Kekacauan, dan Peta Balik",
+  "toolchain": {
+    "dependencies": {
+      "beautifulsoup4": "4.14.3",
+      "jsonschema": "4.26.0"
+    },
+    "files": [
+      {
+        "bytes": 55564,
+        "path": "scripts/build_bridge_unit.py",
+        "sha256": "7bb63d0a4f54bb50217f00b87a67edaa536fbd751f0b444304643c9a7022a199"
+      },
+      {
+        "bytes": 53804,
+        "path": "scripts/build_unit_reader.py",
+        "sha256": "48851f774323d0925c96b40a80e0674816f5e53633f6d9db035740214ce461f2"
+      },
+      {
+        "bytes": 65894,
+        "path": "scripts/qa_bridge_unit.py",
+        "sha256": "c1934e1ff766f457482048c25b0c3ecd65537418aecea1771cb3124e9a4236af"
+      },
+      {
+        "bytes": 12219,
+        "path": "scripts/execute_bridge_notebook_jupyter.py",
+        "sha256": "15b5060283f3470c8188e185c951ad886519fd695cd9fb09d56864fddcc30425"
+      },
+      {
+        "bytes": 5559,
+        "path": "source/reader/reader.css",
+        "sha256": "c70e6b334ace189002d73ad8add7df1cf83d520548e86cb5e2bf609b9b2210f2"
+      },
+      {
+        "bytes": 1170,
+        "path": "source/id-ID/O005-BRIDGE-C3/notebooks/requirements.lock",
+        "sha256": "5c6816d5c2e5993961f8a21ddce68f7f1ecbb4a48eff04fb345dc8e4ce2a8c68"
+      },
+      {
+        "bytes": 12860,
+        "path": "backend/schema/o005-bridge-unit.schema.json",
+        "sha256": "415ff379b924a57a1ab5eea36550018bf2cf86c038571cc0598dbf17ff83f86f"
+      },
+      {
+        "bytes": 2283,
+        "path": "backend/schema/o005-bridge-segment.schema.json",
+        "sha256": "8b9656866ee346d740e4a6637cb8d0a35035b6b353cf1223453a776cca52dea2"
+      },
+      {
+        "bytes": 11217,
+        "path": "backend/schema/o005-bridge-mastery.schema.json",
+        "sha256": "7f1f3a5f6476743361a4000773e2d635bf1cd6cf226b132f19d54a43cd505a6b"
+      },
+      {
+        "bytes": 4576,
+        "path": "backend/schema/o005-original-authority.schema.json",
+        "sha256": "8f471a02e47d4a04ff6cd72bed1dbf81d5af53b42b717ec7cba7effa15c4f331"
+      },
+      {
+        "bytes": 7444,
+        "path": "backend/schema/o005-original-authority-manifest.schema.json",
+        "sha256": "00d0b5527fe6604200bb578e0958fac0503cfdc8e346c30c7d94dedca1717a28"
+      },
+      {
+        "bytes": 8061,
+        "path": "backend/schema/o005-segment-id-ledger.schema.json",
+        "sha256": "501c3b7ee3a3d17d27f83ef1f1927cfa46c37e11b95e76d6145ea21fb9636aeb"
+      },
+      {
+        "bytes": 27112,
+        "path": "backend/segment-ids/O005-BRIDGE-C3.segment-ids.v1.json",
+        "sha256": "7ed2238e4ad569c8ba35b7cb470a3faae2b107a84cde8debf4ace532cbd58040"
+      }
+    ],
+    "pandoc": {
+      "bytes": 231056136,
+      "sha256": "24f1593d7ba9f511bc428be3d7177d2a8ddc4bf60457c9f24a888a4790748c5d",
+      "version": "pandoc 3.9.0.2"
+    },
+    "platform": {
+      "machine": "AMD64",
+      "release": "11",
+      "system": "Windows",
+      "version": "10.0.26200"
+    },
+    "python": {
+      "executable_bytes": 104264,
+      "executable_sha256": "7679e53fa969789309e81fdad0d52b8cda5f83c9abf7cb31a3c58bf24b31e264",
+      "implementation": "CPython",
+      "version": "3.13.9"
+    }
+  },
+  "unit_id": "O005-BRIDGE-C3"
+}

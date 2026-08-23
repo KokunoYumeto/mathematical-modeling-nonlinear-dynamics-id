@@ -1,0 +1,298 @@
+{
+  "article_link_catalog": {},
+  "language": "id-ID",
+  "problems": [
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "\\(x=0\\) adalah satu-satunya cabang untuk semua \\(\\mu\\); \\(\\lambda=-\\mu^2\\) dan menjadi nol hanya pada \\(\\mu=0\\); arah medan tetap menuju nol, sehingga tidak ada perubahan cabang atau kestabilan.",
+        "required_evidence": [
+          "Persamaan \\(x(-x^2-\\mu^2)=0\\) tidak mempunyai akar riil nonnol.",
+          "Untuk \\(\\mu\\ne0\\), \\(\\lambda=-\\mu^2<0\\).",
+          "Pada \\(\\mu=0\\), \\(-x^3\\) mengarah ke nol dari kedua sisi."
+        ],
+        "type": "qualitative"
+      },
+      "hint": {
+        "text": "Faktorkan persamaan kesetimbangan dan periksa tanda medan di kedua sisi nol, terutama ketika \\(\\mu=0\\)."
+      },
+      "ordinal": 1,
+      "problem_id": "O005-BRIDGE-C2-P01",
+      "problem_summary": "Gunakan keluarga \\(-x^3-\\mu^2x\\) untuk membuktikan bahwa nonhiperbolisitas tidak cukup bagi bifurkasi.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Linearisasi nol memerlukan analisis nonlinear; ia bukan sertifikat bifurkasi.",
+        "steps": [
+          "Selesaikan \\(-x^3-\\mu^2x=-x(x^2+\\mu^2)=0\\).",
+          "Karena \\(x^2+\\mu^2\\ge0\\), satu-satunya cabang riil adalah \\(x=0\\); pada \\(\\mu=0\\) faktor itu hanya menambah kemultiplikasian akar.",
+          "Hitung \\(f_x=-3x^2-\\mu^2\\), sehingga \\(\\lambda=-\\mu^2\\) pada cabang nol.",
+          "Pada titik kritis, \\(x>0\\) memberi \\(\\dot{x}<0\\) dan \\(x<0\\) memberi \\(\\dot{x}>0\\)."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "\\(\\frac{dx}{dt}=-x^3-\\mu^2x\\)",
+        "\\(\\lambda=-\\mu^2\\)"
+      ]
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Tidak ada kesetimbangan untuk \\(\\mu<0\\); \\(x=0\\) semistabil untuk \\(\\mu=0\\); untuk \\(\\mu>0\\), \\(-\\sqrt{\\mu}\\) tidak stabil dan \\(+\\sqrt{\\mu}\\) stabil.",
+        "required_evidence": [
+          "Akar diperoleh dari \\(x^2=\\mu\\).",
+          "\\(\\lambda=-2x\\) memberi tanda berlawanan pada dua cabang.",
+          "Pada \\(\\mu=0\\), aliran dari kanan menuju nol tetapi dari kiri menjauh."
+        ],
+        "type": "structured"
+      },
+      "hint": {
+        "text": "Pisahkan tiga rezim tanda \\(\\mu\\); ketika \\(\\mu=0\\), uji arah \\(-x^2\\) dari kiri dan kanan."
+      },
+      "ordinal": 2,
+      "problem_id": "O005-BRIDGE-C2-P02",
+      "problem_summary": "Buat sensus kesetimbangan dan kestabilan saddle-node, termasuk titik semistabil.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Pada nilai kritis, pasangan stabil–tidak stabil bertemu dalam kesetimbangan semistabil.",
+        "steps": [
+          "Untuk \\(\\mu<0\\), \\(x^2=\\mu\\) tidak mempunyai solusi riil.",
+          "Untuk \\(\\mu>0\\), substitusikan \\(x=-\\sqrt{\\mu}\\) dan \\(x=+\\sqrt{\\mu}\\) ke \\(\\lambda=-2x\\).",
+          "Untuk \\(\\mu=0\\), gunakan \\(\\dot{x}=-x^2\\): kecepatan selalu negatif kecuali di nol."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "\\(\\frac{dx}{dt}=\\mu-x^2\\)",
+        "\\(x=\\pm\\sqrt{\\mu}\\)",
+        "\\(\\lambda=-2x\\)"
+      ]
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Pada \\(\\mu=-0.5\\), \\(x=0\\) stabil dan \\(x=-0.5\\) tidak stabil; pada \\(\\mu=0.5\\), \\(x=0\\) tidak stabil dan \\(x=0.5\\) stabil. Cabang \\(x=\\mu\\) untuk \\(\\mu<0\\) dikeluarkan dari domain populasi \\(x\\ge0\\).",
+        "required_evidence": [
+          "\\(f_x=\\mu-2x\\) dievaluasi pada kedua cabang.",
+          "Tanda nilai eigen bertukar ketika \\(\\mu\\) melewati nol.",
+          "Cabang matematis negatif dibedakan dari keadaan fisik populasi."
+        ],
+        "type": "structured"
+      },
+      "hint": {
+        "text": "Nilai eigen pada cabang \\(x=0\\) adalah \\(\\mu\\), sedangkan pada cabang \\(x=\\mu\\) adalah \\(-\\mu\\)."
+      },
+      "ordinal": 3,
+      "problem_id": "O005-BRIDGE-C2-P03",
+      "problem_summary": "Tunjukkan pertukaran kestabilan transkritis dan terapkan batas populasi tak negatif.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Diagram garis riil menunjukkan pertukaran penuh, sedangkan model populasi hanya memakai bagian yang dapat diterima secara fisik.",
+        "steps": [
+          "Faktorkan \\(f=x(\\mu-x)\\) untuk memperoleh \\(x=0\\) dan \\(x=\\mu\\).",
+          "Pada \\(x=0\\), \\(\\lambda=\\mu\\); pada \\(x=\\mu\\), \\(\\lambda=-\\mu\\).",
+          "Substitusikan \\(\\mu=-0.5\\) dan \\(\\mu=0.5\\) untuk memperoleh tanda yang diminta.",
+          "Terapkan \\(x\\ge0\\) setelah cabang matematis disensus."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "\\(\\frac{dx}{dt}=x(\\mu-x)\\)",
+        "\\(x=0\\)",
+        "\\(x=\\mu\\)"
+      ]
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Pada \\(\\mu=-0.36\\) hanya \\(x=0\\) dengan \\(\\lambda=-0.36\\); pada \\(\\mu=0.36\\) terdapat \\(x=-0.6\\) dan \\(x=0.6\\) dengan \\(\\lambda=-0.72\\) serta \\(x=0\\) dengan \\(\\lambda=0.36\\).",
+        "required_evidence": [
+          "Kedua cabang luar stabil dan cabang nol tidak stabil untuk \\(\\mu\\) positif.",
+          "Invariansi terhadap \\(x\\mapsto-x\\) menjelaskan pasangan cabang luar.",
+          "Gangguan yang merusak simetri dapat memecah pitchfork sempurna."
+        ],
+        "type": "quantitative"
+      },
+      "hint": {
+        "text": "Faktorkan \\(x(\\mu-x^2)\\), lalu evaluasi \\(\\mu-3x^2\\) pada setiap akar."
+      },
+      "ordinal": 4,
+      "problem_id": "O005-BRIDGE-C2-P04",
+      "problem_summary": "Hitung cabang pitchfork pada \\(\\mu=\\pm0.36\\) dan jelaskan simetrinya.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Kehilangan kestabilan keadaan simetris bertepatan dengan lahirnya dua keadaan stabil yang simetris.",
+        "steps": [
+          "Akar \\(x(\\mu-x^2)=0\\) adalah \\(x=0\\) dan, jika \\(\\mu\\ge0\\), \\(x=\\pm\\sqrt{\\mu}\\).",
+          "Untuk \\(\\mu=-0.36\\), hanya \\(x=0\\) dan \\(\\lambda=\\mu=-0.36\\).",
+          "Untuk \\(\\mu=0.36\\), akar luar adalah \\(x=\\pm0.6\\); substitusi ke \\(\\lambda=\\mu-3x^2\\) memberi \\(0.36-1.08=-0.72\\).",
+          "Pergantian \\(x\\) menjadi \\(-x\\) tidak mengubah ruas kanan selain transformasi yang sama pada \\(\\dot{x}\\)."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "\\(\\frac{dx}{dt}=\\mu x-x^3\\)",
+        "\\(x=\\pm\\sqrt{\\mu}\\)",
+        "\\(\\lambda=\\mu-3x^2\\)"
+      ]
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Untuk \\(\\mu=0.25,\\ \\beta=1,\\ \\omega=2\\): \\(r^*=0.5\\), \\(P=\\pi\\), dan turunan radial \\(\\mu-3\\beta(r^*)^2=-0.5\\), sehingga siklus stabil.",
+        "required_evidence": [
+          "Suku rotasi saling menghapus dalam \\(\\dot{r}\\).",
+          "\\(\\dot{\\theta}=\\omega\\) memberi periode \\(\\frac{2\\pi}{\\omega}\\).",
+          "Tanda negatif turunan radial menyusutkan gangguan amplitudo."
+        ],
+        "type": "quantitative"
+      },
+      "hint": {
+        "text": "Gunakan \\(\\dot{r}=\\frac{x\\dot{x}+y\\dot{y}}{r}\\) dan \\(\\dot{\\theta}=\\frac{x\\dot{y}-y\\dot{x}}{r^2}\\)."
+      },
+      "ordinal": 5,
+      "problem_id": "O005-BRIDGE-C2-P05",
+      "problem_summary": "Turunkan sifat siklus pada bentuk normal Hopf superkritis.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Bentuk normal melahirkan siklus limit kecil yang stabil ketika \\(\\mu\\) menjadi positif.",
+        "steps": [
+          "Hitung \\(r^*\\) dari \\(r(\\mu-\\beta r^2)=0\\) dan pilih akar nonnol positif.",
+          "Hitung \\(r^*=\\sqrt{\\frac{0.25}{1}}=0.5\\).",
+          "Karena \\(\\theta\\) bertambah dengan laju 2, satu putaran memerlukan \\(\\frac{2\\pi}{2}=\\pi\\).",
+          "Evaluasi \\(\\mu-3\\beta(r^*)^2=0.25-3(0.25)=-0.5\\)."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "\\(\\dot{r}=\\mu r-\\beta r^3\\)",
+        "\\(\\dot{\\theta}=\\omega\\)",
+        "\\(r^*=\\sqrt{\\frac{\\mu}{\\beta}}\\)",
+        "\\(P=\\frac{2\\pi}{\\omega}\\)"
+      ]
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Cabang membandingkan objek invarian dari sistem berbeda pada nilai parameter berbeda; lintasan waktu bergerak dalam ruang keadaan dengan parameter yang biasanya tetap.",
+        "required_evidence": [
+          "Diagram bifurkasi memakai parameter sebagai sumbu.",
+          "Potret fase atau integrasi dengan kondisi awal diperlukan untuk mengetahui gerak pada satu parameter.",
+          "Parameter yang berubah terhadap waktu merupakan model nonotonom tambahan."
+        ],
+        "type": "qualitative"
+      },
+      "hint": {
+        "text": "Tanyakan apa arti sumbu mendatar dan apakah parameter dipertahankan tetap selama simulasi."
+      },
+      "ordinal": 6,
+      "problem_id": "O005-BRIDGE-C2-P06",
+      "problem_summary": "Bedakan cabang diagram bifurkasi dari lintasan waktu.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Membaca cabang dari kiri ke kanan bukan simulasi waktu.",
+        "steps": [
+          "Pilih satu nilai \\(\\mu\\) pada diagram; titik cabang menunjukkan kesetimbangan atau amplitudo asimtotik untuk sistem itu.",
+          "Tentukan kondisi awal dan integrasikan persamaan pada \\(\\mu\\) yang dipilih untuk memperoleh lintasan waktu.",
+          "Gunakan potret fase untuk menampilkan arah aliran dan cekungan tarikan.",
+          "Jika \\(\\mu\\) dibuat bergantung pada waktu, tulis fungsi \\(\\mu(t)\\) dan analisis masalah baru secara eksplisit."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Kasus kanonik memberi \\(r^*=0.5\\), \\(P=\\pi\\), turunan radial \\(-0.5\\), dan galat radial maksimum kurang dari \\(10^{-9}\\). Pada \\(\\beta=2\\), \\(r^*=0.3535533905932738\\), sedangkan \\(P=\\pi\\) dan turunan radial \\(-0.5\\).",
+        "notebook_check": "Semua 7 sel kode berjalan dari kernel bersih, menghasilkan tepat dua gambar PNG, dan seluruh require() lulus.",
+        "required_evidence": [
+          "Integrator DOP853 memakai \\(t\\in[0,40]\\), 801 titik, \\(\\mathrm{rtol}=10^{-11}\\), dan \\(\\mathrm{atol}=10^{-13}\\).",
+          "Enam lintasan radial numerik dibandingkan dengan solusi eksak dan masing-masing mempunyai galat maksimum kurang dari \\(10^{-9}\\).",
+          "Mengubah \\(\\beta\\) memengaruhi \\(\\sqrt{\\frac{\\mu}{\\beta}}\\), tetapi tidak memengaruhi \\(\\frac{2\\pi}{\\omega}\\) atau \\(-2\\mu\\)."
+        ],
+        "tolerances": {
+          "closed_form_absolute": 1e-15,
+          "radial_solution_max_absolute": 1e-09
+        },
+        "type": "executable"
+      },
+      "hint": {
+        "text": "Pisahkan rumus yang memuat \\(\\beta\\) dari rumus yang hanya memuat \\(\\omega\\) atau \\(\\mu\\)."
+      },
+      "notebook": {
+        "path": "source/id-ID/O005-BRIDGE-C2/notebooks/bridge-c2-local-bifurcations.ipynb",
+        "provenance": "new_original"
+      },
+      "ordinal": 7,
+      "problem_id": "O005-BRIDGE-C2-P07",
+      "problem_summary": "Jalankan notebook kanonik, verifikasi solusi radial, lalu ubah \\(\\beta\\) dari satu menjadi dua.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Variasi satu parameter harus mengubah hanya besaran yang bergantung padanya dan harus tetap terlihat dalam konfigurasi keluaran.",
+        "steps": [
+          "Mulai ulang kernel dan jalankan semua sel secara berurutan.",
+          "Pastikan sensus skalar, dua gambar, ringkasan JSON, dan pengulangan dalam kernel lulus.",
+          "Cocokkan jari-jari numerik dengan solusi radial eksak pada keenam pasangan \\(\\mu\\) dan \\(r(0)\\).",
+          "Ubah hanya \\(\\beta\\) menjadi 2 pada evaluasi sifat siklus.",
+          "Hitung \\(\\sqrt{\\frac{0.25}{2}}=0.3535533905932738\\); \\(\\omega\\) dan \\(\\mu\\) tidak berubah sehingga periode dan turunan radial tetap."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": [
+        "\\(r^*=\\sqrt{\\frac{\\mu}{\\beta}}\\)",
+        "\\(P=\\frac{2\\pi}{\\omega}\\)",
+        "\\(\\left.\\frac{\\partial\\dot{r}}{\\partial r}\\right|_{r=r^*}=-2\\mu\\)"
+      ]
+    }
+  ],
+  "provenance_policy": {
+    "model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
+    "non_endorsement": true,
+    "source_author_credit_preserved": true
+  },
+  "schema": "o005-bridge-mastery-v1",
+  "schema_version": "1.0.0",
+  "source": {
+    "license": "CC BY-NC-SA 4.0",
+    "not_part_of_source_book": true,
+    "spine": "Joceline Lega, Introduction to Mathematical Modeling, v1.01",
+    "type": "new_original_addition"
+  },
+  "unit_id": "O005-BRIDGE-C2"
+}

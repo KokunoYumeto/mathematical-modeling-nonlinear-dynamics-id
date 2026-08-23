@@ -11,7 +11,7 @@
   ],
   "properties": {
     "schema": {"const": "o005-bridge-unit-v1"},
-    "unit_id": {"const": "O005-BRIDGE-C1"},
+    "unit_id": {"type": "string", "pattern": "^O005-BRIDGE-C[1234]$"},
     "course_id": {"const": "C120"},
     "resource_id": {"const": "O005"},
     "language": {"const": "id-ID"},
@@ -32,7 +32,7 @@
         "non_endorsement": {"const": true},
         "authority_manifest": {
           "type": "string",
-          "const": "authority/units/O005-BRIDGE-C1/AUTHORITY_MANIFEST.json"
+          "pattern": "^authority/units/O005-BRIDGE-C[1234]/AUTHORITY_MANIFEST\\.json$"
         },
         "authority_manifest_sha256": {"$ref": "#/$defs/sha256"}
       }
@@ -45,7 +45,7 @@
         "title": {"type": "string", "minLength": 1},
         "content_path": {
           "type": "string",
-          "const": "source/id-ID/O005-BRIDGE-C1/content.html"
+          "pattern": "^source/id-ID/O005-BRIDGE-C[1234]/content\\.html$"
         },
         "content_sha256": {"$ref": "#/$defs/sha256"},
         "concepts": {
@@ -67,14 +67,19 @@
         "count": {"type": "integer", "minimum": 1},
         "path": {
           "type": "string",
-          "const": "backend/segments/O005-BRIDGE-C1.segments.jsonl"
+          "pattern": "^backend/segments/O005-BRIDGE-C[1234]\\.segments\\.jsonl$"
         },
         "sha256": {"$ref": "#/$defs/sha256"},
         "schema": {"const": "o005-bridge-segment-v1"},
-        "id_strategy": {"const": "versioned-semantic-ledger-v1"},
+        "id_strategy": {
+          "enum": [
+            "versioned-semantic-ledger-v1",
+            "html-anchored-versioned-semantic-ledger-v1"
+          ]
+        },
         "id_ledger_path": {
           "type": "string",
-          "pattern": "^backend/segment-ids/O005-BRIDGE-C1\\.segment-ids\\.v[1-9][0-9]*\\.json$"
+          "pattern": "^backend/segment-ids/O005-BRIDGE-C[1234]\\.segment-ids\\.v[1-9][0-9]*\\.json$"
         },
         "id_ledger_sha256": {"$ref": "#/$defs/sha256"}
       }
@@ -84,25 +89,16 @@
       "minItems": 7,
       "maxItems": 7,
       "uniqueItems": true,
-      "prefixItems": [
-        {"const": "O005-BRIDGE-C1-P01"},
-        {"const": "O005-BRIDGE-C1-P02"},
-        {"const": "O005-BRIDGE-C1-P03"},
-        {"const": "O005-BRIDGE-C1-P04"},
-        {"const": "O005-BRIDGE-C1-P05"},
-        {"const": "O005-BRIDGE-C1-P06"},
-        {"const": "O005-BRIDGE-C1-P07"}
-      ],
-      "items": false
+      "items": {"type": "string", "pattern": "^O005-BRIDGE-C[1234]-P0[1-7]$"}
     },
     "mastery_path": {
       "type": "string",
-      "const": "backend/mastery/O005-BRIDGE-C1.mastery.json"
+      "pattern": "^backend/mastery/O005-BRIDGE-C[1234]\\.mastery\\.json$"
     },
     "mastery_sha256": {"$ref": "#/$defs/sha256"},
     "notebook_path": {
       "type": "string",
-      "const": "source/id-ID/O005-BRIDGE-C1/notebooks/bridge-c1-reproducible-workflow.ipynb"
+      "pattern": "^source/id-ID/O005-BRIDGE-C[1234]/notebooks/[a-z0-9-]+\\.ipynb$"
     },
     "notebook_sha256": {"$ref": "#/$defs/sha256"},
     "build": {
@@ -113,17 +109,175 @@
       ],
       "properties": {
         "script": {"const": "scripts/build_bridge_unit.py"},
-        "generator": {"const": "scripts/generate_bridge_c1.py"},
+        "generator": {"type": "string", "pattern": "^scripts/generate_bridge_c[1234]\\.py$"},
         "pandoc": {"type": "string", "pattern": "^pandoc [0-9]+(?:\\.[0-9]+)+$"},
         "requirements_lock": {
           "type": "string",
-          "const": "source/id-ID/O005-BRIDGE-C1/notebooks/requirements.lock"
+          "pattern": "^source/id-ID/O005-BRIDGE-C[1234]/notebooks/requirements\\.lock$"
         },
         "requirements_lock_sha256": {"$ref": "#/$defs/sha256"},
         "toolchain": {"$ref": "#/$defs/toolchain"}
       }
     }
   },
+  "allOf": [
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C1"}}},
+      "then": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "authority_manifest": {"const": "authority/units/O005-BRIDGE-C1/AUTHORITY_MANIFEST.json"}
+            }
+          },
+          "target": {
+            "properties": {
+              "content_path": {"const": "source/id-ID/O005-BRIDGE-C1/content.html"}
+            }
+          },
+          "segments": {
+            "properties": {
+              "path": {"const": "backend/segments/O005-BRIDGE-C1.segments.jsonl"},
+              "id_strategy": {"const": "versioned-semantic-ledger-v1"},
+              "id_ledger_path": {
+                "pattern": "^backend/segment-ids/O005-BRIDGE-C1\\.segment-ids\\.v[1-9][0-9]*\\.json$"
+              }
+            }
+          },
+          "problems": {"items": {"pattern": "^O005-BRIDGE-C1-P0[1-7]$"}},
+          "mastery_path": {"const": "backend/mastery/O005-BRIDGE-C1.mastery.json"},
+          "notebook_path": {
+            "const": "source/id-ID/O005-BRIDGE-C1/notebooks/bridge-c1-reproducible-workflow.ipynb"
+          },
+          "build": {
+            "properties": {
+              "generator": {"const": "scripts/generate_bridge_c1.py"},
+              "requirements_lock": {
+                "const": "source/id-ID/O005-BRIDGE-C1/notebooks/requirements.lock"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C2"}}},
+      "then": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "authority_manifest": {"const": "authority/units/O005-BRIDGE-C2/AUTHORITY_MANIFEST.json"}
+            }
+          },
+          "target": {
+            "properties": {
+              "content_path": {"const": "source/id-ID/O005-BRIDGE-C2/content.html"}
+            }
+          },
+          "segments": {
+            "properties": {
+              "path": {"const": "backend/segments/O005-BRIDGE-C2.segments.jsonl"},
+              "id_strategy": {"const": "html-anchored-versioned-semantic-ledger-v1"},
+              "id_ledger_path": {
+                "pattern": "^backend/segment-ids/O005-BRIDGE-C2\\.segment-ids\\.v[1-9][0-9]*\\.json$"
+              }
+            }
+          },
+          "problems": {"items": {"pattern": "^O005-BRIDGE-C2-P0[1-7]$"}},
+          "mastery_path": {"const": "backend/mastery/O005-BRIDGE-C2.mastery.json"},
+          "notebook_path": {
+            "const": "source/id-ID/O005-BRIDGE-C2/notebooks/bridge-c2-local-bifurcations.ipynb"
+          },
+          "build": {
+            "properties": {
+              "generator": {"const": "scripts/generate_bridge_c2.py"},
+              "requirements_lock": {
+                "const": "source/id-ID/O005-BRIDGE-C2/notebooks/requirements.lock"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C3"}}},
+      "then": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "authority_manifest": {"const": "authority/units/O005-BRIDGE-C3/AUTHORITY_MANIFEST.json"}
+            }
+          },
+          "target": {
+            "properties": {
+              "content_path": {"const": "source/id-ID/O005-BRIDGE-C3/content.html"}
+            }
+          },
+          "segments": {
+            "properties": {
+              "path": {"const": "backend/segments/O005-BRIDGE-C3.segments.jsonl"},
+              "id_strategy": {"const": "html-anchored-versioned-semantic-ledger-v1"},
+              "id_ledger_path": {
+                "pattern": "^backend/segment-ids/O005-BRIDGE-C3\\.segment-ids\\.v[1-9][0-9]*\\.json$"
+              }
+            }
+          },
+          "problems": {"items": {"pattern": "^O005-BRIDGE-C3-P0[1-7]$"}},
+          "mastery_path": {"const": "backend/mastery/O005-BRIDGE-C3.mastery.json"},
+          "notebook_path": {
+            "const": "source/id-ID/O005-BRIDGE-C3/notebooks/bridge-c3-chaos-and-return-maps.ipynb"
+          },
+          "build": {
+            "properties": {
+              "generator": {"const": "scripts/generate_bridge_c3.py"},
+              "requirements_lock": {
+                "const": "source/id-ID/O005-BRIDGE-C3/notebooks/requirements.lock"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C4"}}},
+      "then": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "authority_manifest": {"const": "authority/units/O005-BRIDGE-C4/AUTHORITY_MANIFEST.json"}
+            }
+          },
+          "target": {
+            "properties": {
+              "content_path": {"const": "source/id-ID/O005-BRIDGE-C4/content.html"}
+            }
+          },
+          "segments": {
+            "properties": {
+              "path": {"const": "backend/segments/O005-BRIDGE-C4.segments.jsonl"},
+              "id_strategy": {"const": "html-anchored-versioned-semantic-ledger-v1"},
+              "id_ledger_path": {
+                "pattern": "^backend/segment-ids/O005-BRIDGE-C4\\.segment-ids\\.v[1-9][0-9]*\\.json$"
+              }
+            }
+          },
+          "problems": {"items": {"pattern": "^O005-BRIDGE-C4-P0[1-7]$"}},
+          "mastery_path": {"const": "backend/mastery/O005-BRIDGE-C4.mastery.json"},
+          "notebook_path": {
+            "const": "source/id-ID/O005-BRIDGE-C4/notebooks/bridge-c4-calibration-validation-uncertainty.ipynb"
+          },
+          "build": {
+            "properties": {
+              "generator": {"const": "scripts/generate_bridge_c4.py"},
+              "requirements_lock": {
+                "const": "source/id-ID/O005-BRIDGE-C4/notebooks/requirements.lock"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
   "$defs": {
     "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "fileIdentity": {

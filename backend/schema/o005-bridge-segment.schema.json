@@ -17,13 +17,58 @@
   ],
   "properties": {
     "schema": {"const": "o005-bridge-segment-v1"},
-    "segment_id": {"type": "string", "pattern": "^O005-BRIDGE-C[1-4]-S[0-9]{4}$"},
-    "unit_id": {"type": "string", "pattern": "^O005-BRIDGE-C[1-4]$"},
+    "segment_id": {"type": "string", "pattern": "^O005-BRIDGE-C[1234]-S[0-9]{4}$"},
+    "unit_id": {"type": "string", "pattern": "^O005-BRIDGE-C[1234]$"},
     "ordinal": {"type": "integer", "minimum": 1},
     "html_path": {"type": "string", "minLength": 1},
     "canonical_language": {"const": "id-ID"},
     "canonical_text": {"type": "string", "minLength": 1},
     "canonical_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
-    "status": {"const": "original"}
-  }
+    "status": {"const": "original"},
+    "segment_key": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:[/-][a-z0-9]+)*$"
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C2"}}},
+      "then": {
+        "required": ["segment_key"],
+        "properties": {
+          "segment_id": {"pattern": "^O005-BRIDGE-C2-S[0-9]{4}$"},
+          "segment_key": {"pattern": "^c2/[a-z0-9]+(?:[/-][a-z0-9]+)*$"}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C1"}}},
+      "then": {
+        "not": {"required": ["segment_key"]},
+        "properties": {
+          "segment_id": {"pattern": "^O005-BRIDGE-C1-S[0-9]{4}$"}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C3"}}},
+      "then": {
+        "required": ["segment_key"],
+        "properties": {
+          "segment_id": {"pattern": "^O005-BRIDGE-C3-S[0-9]{4}$"},
+          "segment_key": {"pattern": "^c3/[a-z0-9]+(?:[/-][a-z0-9]+)*$"}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C4"}}},
+      "then": {
+        "required": ["segment_key"],
+        "properties": {
+          "segment_id": {"pattern": "^O005-BRIDGE-C4-S[0-9]{4}$"},
+          "segment_key": {"pattern": "^c4/[a-z0-9]+(?:[/-][a-z0-9]+)*$"}
+        }
+      }
+    }
+  ]
 }

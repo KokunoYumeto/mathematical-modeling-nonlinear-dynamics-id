@@ -3,7 +3,7 @@
   "$id": "https://example.invalid/o005-unit.schema.json",
   "title": "O005 modular unit record",
   "type": "object",
-  "required": ["schema", "unit_id", "course_id", "resource_id", "language", "source", "target", "segments", "problems", "mastery_path", "notebook_path", "build"],
+  "required": ["schema", "unit_id", "course_id", "resource_id", "language", "source", "target", "segments", "problems", "build"],
   "properties": {
     "schema": {"const": "o005-unit-v1"},
     "unit_id": {"type": "string"},
@@ -14,11 +14,17 @@
     "source": {"type": "object"},
     "target": {"type": "object"},
     "segments": {"type": "object"},
-    "problems": {"type": "array", "minItems": 7, "maxItems": 7, "uniqueItems": true},
+    "problems": {"type": "array", "minItems": 0, "uniqueItems": true, "items": {"type": "string"}},
     "mastery_path": {"type": "string"},
     "mastery_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "notebook_path": {"type": "string"},
     "notebook_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "build": {"type": "object"}
+  },
+  "dependentRequired": {
+    "mastery_path": ["mastery_sha256"],
+    "mastery_sha256": ["mastery_path"],
+    "notebook_path": ["notebook_sha256"],
+    "notebook_sha256": ["notebook_path"]
   }
 }

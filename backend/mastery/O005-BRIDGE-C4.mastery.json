@@ -1,0 +1,276 @@
+{
+  "article_link_catalog": {},
+  "language": "id-ID",
+  "problems": [
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Pasangan \\((0.8,0.35)\\) memberi hasil kali \\(0.28\\) yang sama dengan \\((0.4,0.7)\\), sehingga lintasan identik.",
+        "required_evidence": [
+          "\\(0.4(0.7)=0.8(0.35)=0.28\\ \\text{hari}^{-1}\\).",
+          "Persamaan hanya bergantung pada hasil kali, bukan kedua faktor secara terpisah.",
+          "Pemisahan memerlukan pengukuran salah satu faktor atau keluaran tambahan yang bergantung berbeda pada keduanya."
+        ],
+        "type": "structured"
+      },
+      "hint": {
+        "text": "Pilih \\(c=2\\) dan pertahankan hasil kali \\(\\alpha\\beta\\)."
+      },
+      "ordinal": 1,
+      "problem_id": "O005-BRIDGE-C4-P01",
+      "problem_summary": "Buktikan ketakidentifikasian struktural dua parameter yang hanya muncul sebagai hasil kali.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Lebih banyak pengamatan \\(N(t)\\) dengan jenis yang sama tidak memecahkan ketakidentifikasian struktural.",
+        "steps": [
+          "Ambil \\(c=2\\), sehingga \\(\\alpha^{\\prime}=2(0.4)=0.8\\) dan \\(\\beta^{\\prime}=0.7/2=0.35\\).",
+          "Hitung kedua hasil kali dan peroleh 0.28.",
+          "Karena ruas kanan persamaan identik untuk setiap \\(N\\), kondisi awal yang sama menghasilkan lintasan yang sama.",
+          "Ukur \\(\\alpha\\) atau \\(\\beta\\) secara independen, atau tambahkan keluaran yang merespons kedua parameter secara berbeda."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Pada \\(N=20\\) faktornya \\(0.8889\\); pada \\(N=100\\) faktornya \\(0.4444\\).",
+        "formula": "1-\\frac{20}{180}=\\frac{8}{9}\\quad\\text{dan}\\quad 1-\\frac{100}{180}=\\frac{4}{9}",
+        "tolerances": {
+          "absolute": 0.0001
+        },
+        "type": "quantitative"
+      },
+      "hint": {
+        "text": "Substitusikan \\(N/K\\) ke faktor \\(1-N/K\\) dan bandingkan jaraknya dari satu."
+      },
+      "ordinal": 2,
+      "problem_id": "O005-BRIDGE-C4-P02",
+      "problem_summary": "Hitung faktor pembatas logistik dan hubungkan dengan lemahnya informasi awal tentang daya dukung.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Memperpanjang jendela menuju daerah saturasi dapat memperbaiki identifiabilitas praktis \\(K\\).",
+        "steps": [
+          "Hitung \\(1-\\frac{20}{180}=\\frac{160}{180}=\\frac{8}{9}\\approx0.8889\\).",
+          "Hitung \\(1-\\frac{100}{180}=\\frac{80}{180}=\\frac{4}{9}\\approx0.4444\\).",
+          "Pada populasi kecil faktor mendekati satu, sehingga perubahan \\(K\\) hanya sedikit mengubah laju.",
+          "Pengamatan mendekati perlambatan pertumbuhan memberi pengaruh \\(K\\) yang lebih besar."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Penurunan dari 32.6638 menjadi 6.93949 menunjukkan jadwal 0–16 memisahkan efek \\(r\\) dan \\(K\\) dengan lebih baik.",
+        "required_evidence": [
+          "Nilai lebih kecil berarti dua arah sensitivitas kurang segaris.",
+          "Waktu mendekati perlambatan pertumbuhan terutama menambah informasi tentang \\(K\\).",
+          "Tidak ada ambang universal; batas parameter, residu, dan ketidakpastian tetap perlu diperiksa."
+        ],
+        "type": "qualitative"
+      },
+      "hint": {
+        "text": "Bilangan kondisi membandingkan pemisahan arah sensitivitas, bukan mutu model secara keseluruhan."
+      },
+      "ordinal": 3,
+      "problem_id": "O005-BRIDGE-C4-P03",
+      "problem_summary": "Tafsirkan perubahan bilangan kondisi sensitivitas akibat jendela pengamatan yang lebih panjang.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Jadwal 0–16 lebih informatif, bukan otomatis sempurna.",
+        "steps": [
+          "Bandingkan rasio nilai singular untuk kedua jadwal.",
+          "Kenali bahwa jadwal awal terutama melihat pertumbuhan yang hampir eksponensial.",
+          "Tambahkan pengamatan sekitar pembelokan dan pendekatan ke daya dukung.",
+          "Periksa kembali hasil dengan profil, batas, atau bootstrap sebelum menyatakan parameter tajam."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "\\(\\mathrm{AICc}\\) eksponensial 51.18111756, \\(\\mathrm{AICc}\\) logistik 25.45183771, dan selisih 25.72927985 mendukung logistik di antara dua kandidat.",
+        "formula": "\\mathrm{AICc}=n\\log(\\mathrm{RSS}/n)+2k+\\frac{2k(k+1)}{n-k-1}",
+        "tolerances": {
+          "aicc_absolute": 1e-06
+        },
+        "type": "quantitative"
+      },
+      "hint": {
+        "text": "Gunakan \\(\\mathrm{AICc}=n\\log(\\mathrm{RSS}/n)+2k+\\frac{2k(k+1)}{n-k-1}\\) untuk setiap model."
+      },
+      "ordinal": 4,
+      "problem_id": "O005-BRIDGE-C4-P04",
+      "problem_summary": "Hitung \\(\\mathrm{AICc}\\) dua kandidat dengan konvensi parameter yang dinyatakan.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "\\(\\mathrm{AICc}\\) hanya memilih di antara kandidat yang diberikan dengan data dan konvensi yang sama.",
+        "steps": [
+          "Substitusikan \\(n=9\\), \\(\\mathrm{RSS}=1362.87095600\\), dan \\(k=2\\) untuk eksponensial.",
+          "Substitusikan \\(n=9\\), \\(\\mathrm{RSS}=45.84226787\\), dan \\(k=3\\) untuk logistik.",
+          "Kurangkan nilai logistik dari nilai eksponensial.",
+          "Tafsirkan hasil sebagai perbandingan relatif, bukan bukti bahwa model logistik benar."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "\\(\\mathrm{MAE}=1.50664197\\), \\(\\mathrm{bias}=1.17225281\\), dan galat absolut maksimum \\(=2.84222916\\) juta sel.",
+        "formula": "\\mathrm{MAE}=\\frac{1}{4}\\sum_{i=1}^{4}|e_i|,\\qquad \\mathrm{bias}=\\frac{1}{4}\\sum_{i=1}^{4}e_i",
+        "tolerances": {
+          "metric_absolute": 1e-08
+        },
+        "type": "quantitative"
+      },
+      "hint": {
+        "text": "\\(\\mathrm{MAE}\\) memakai nilai absolut, bias mempertahankan tanda, dan maksimum memilih besar residu terbesar."
+      },
+      "ordinal": 5,
+      "problem_id": "O005-BRIDGE-C4-P05",
+      "problem_summary": "Hitung dan tafsirkan tiga diagnostik dari residu data uji.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Metrik besar dan arah harus dilaporkan bersama, bukan dipertukarkan.",
+        "steps": [
+          "Jumlahkan nilai absolut empat residu lalu bagi empat.",
+          "Jumlahkan residu bertanda lalu bagi empat.",
+          "Pilih nilai absolut terbesar.",
+          "Karena residu didefinisikan \\(y-\\widehat{y}\\), bias positif berarti pengamatan rata-rata berada di atas prediksi."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Interval \\(K\\) mengukur variasi estimasi parameter; interval laten mempropagasi parameter; interval pengamatan juga menambahkan galat ukur baru.",
+        "required_evidence": [
+          "Interval \\(K\\) adalah \\([160.82788727,175.22741952,195.85394556]\\) juta sel pada kuantil 2.5%, 50%, dan 97.5%.",
+          "Interval respons laten hari 24 adalah \\([156.44924030,168.76012565,185.63476304]\\) juta sel pada kuantil yang sama.",
+          "Interval pengamatan hari 24 adalah \\([154.39781350,169.60209338,185.61306021]\\) juta sel pada kuantil yang sama.",
+          "Cakupan satu pengamatan tidak membuktikan bentuk model benar.",
+          "Asumsi bersyarat mencakup model logistik, galat normal independen bervarians konstan, dan proses yang tidak berubah."
+        ],
+        "type": "structured"
+      },
+      "hint": {
+        "text": "Tanyakan apakah galat pengamatan baru ditambahkan dan apakah ketaksesuaian bentuk model diwakili."
+      },
+      "ordinal": 6,
+      "problem_id": "O005-BRIDGE-C4-P06",
+      "problem_summary": "Bedakan interval parameter, respons laten, dan pengamatan mendatang serta batas interpretasinya.",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Interval yang lebih lebar dapat mewakili lebih banyak sumber variasi, tetapi masih dapat mengabaikan ketaksesuaian model.",
+        "steps": [
+          "Kenali bahwa interval \\(K\\), yaitu \\([160.82788727,195.85394556]\\), hidup pada ruang parameter.",
+          "Hitung respons laten dari setiap parameter bootstrap tanpa menambahkan galat baru; pada hari 24 intervalnya \\([156.44924030,185.63476304]\\) juta sel.",
+          "Tambahkan satu galat pengamatan baru untuk interval prediksi pengamatan; pada hari 24 intervalnya \\([154.39781350,185.61306021]\\) juta sel.",
+          "Nyatakan bahwa semuanya kondisional dan titik-demi-titik, bukan interval simultan atau validasi eksternal."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    },
+    {
+      "article_link_ids": [],
+      "check": {
+        "final_answer": "Batas 1000 memberi \\(K_{\\mathrm{awal}}=1000\\) dan \\(r_{\\mathrm{awal}}=0.25110007\\); batas 2000 memberi \\(K_{\\mathrm{awal}}=2000\\) dan \\(r_{\\mathrm{awal}}=0.24853917\\), sedangkan estimasi utama tetap sekitar \\(r=0.28263149\\) dan \\(K=175.70606\\).",
+        "notebook_check": "Semua sel berjalan dari kernel bersih, menghasilkan tepat satu PNG, 400/400 pencocokan bootstrap berhasil, dan pemeriksaan require lulus pada kedua batas.",
+        "required_evidence": [
+          "Hash data tetap 932d0d27c2917936b0aa51d283d7b2fe2a5eba95989a6c785fa32d3d18dd2811.",
+          "Eksekusi batas 2000 ditandai nonkanonik dan mempunyai sidik numerik khusus untuk estimasi subset awal, estimasi utama, serta kuantil \\(K\\).",
+          "Struktur, keterhinggaan, pembagian data, batas aktif, bootstrap, dan cakupan tetap diperiksa; batas selain 1000 atau 2000 ditolak.",
+          "Perpindahan estimasi mengikuti batas merupakan bukti identifiabilitas praktis yang lemah pada subset awal."
+        ],
+        "tolerances": {
+          "bootstrap_quantile_k_absolute": 0.25,
+          "k_main_absolute": 0.001,
+          "r_absolute": 1e-06
+        },
+        "type": "executable"
+      },
+      "hint": {
+        "text": "Bandingkan estimasi subset awal dengan estimasi jendela 0–16 sebelum dan sesudah hanya batas atas diubah."
+      },
+      "notebook": {
+        "path": "source/id-ID/O005-BRIDGE-C4/notebooks/bridge-c4-calibration-validation-uncertainty.ipynb",
+        "provenance": "new_original"
+      },
+      "ordinal": 7,
+      "problem_id": "O005-BRIDGE-C4-P07",
+      "problem_summary": "Jalankan notebook bersih dan uji kepekaan estimasi subset awal terhadap batas atas \\(K\\).",
+      "provenance": {
+        "check": "new_original",
+        "hint": "new_original",
+        "problem_summary": "new_original",
+        "solution_or_rubric": "new_original"
+      },
+      "solution_or_rubric": {
+        "conclusion": "Keberhasilan algoritma tidak mengubah batas arbitrer menjadi informasi dari data.",
+        "steps": [
+          "Mulai kernel baru dan jalankan seluruh notebook dengan batas kanonik 1000.",
+          "Cocokkan hash, parameter utama, metrik, bilangan kondisi, 400 keberhasilan bootstrap, dan interval hari 24.",
+          "Ubah hanya BATAS_K_ATAS menjadi 2000 lalu mulai kernel baru dan jalankan semua sel.",
+          "Amati bahwa \\(K\\) subset awal kembali berada di batas, sedangkan parameter jendela penuh berubah kurang dari toleransi.",
+          "Simpan hasil kedua sebagai eksperimen nonkanonik, bukan pengganti identitas rilis."
+        ],
+        "type": "worked_solution"
+      },
+      "source_formula_occurrences": []
+    }
+  ],
+  "provenance_policy": {
+    "model_identification": "OpenAI Codex gpt-5.6-sol, Ultra.",
+    "non_endorsement": true,
+    "source_author_credit_preserved": true
+  },
+  "schema": "o005-bridge-mastery-v1",
+  "schema_version": "1.0.0",
+  "source": {
+    "license": "CC BY-NC-SA 4.0",
+    "not_part_of_source_book": true,
+    "spine": "Joceline Lega, Introduction to Mathematical Modeling, v1.01",
+    "type": "new_original_addition"
+  },
+  "unit_id": "O005-BRIDGE-C4"
+}

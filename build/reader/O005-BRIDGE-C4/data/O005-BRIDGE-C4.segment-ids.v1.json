@@ -1,0 +1,1651 @@
+{
+  "binding_algorithm": "sha256-segment-key-nul-html-path-nul-canonical-text-v1",
+  "content_path": "source/id-ID/O005-BRIDGE-C4/content.html",
+  "content_sha256": "241555f28005883e592a79a69ebefd08bdbea2d55bc72d738059700d75e591e9",
+  "entries": [
+    {
+      "segment_id": "O005-BRIDGE-C4-S0001",
+      "segment_key": "c4/objectives/title",
+      "slot_binding_sha256": "442ea2a5dc371fbebc969f2278c8a9680f2b5c591957350b9759d0eefcb117b9",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0002",
+      "segment_key": "c4/objectives/lead",
+      "slot_binding_sha256": "3464b0e302532057dc2663a2a5efec7ff70b1282eb8284640bdcc68925b6f6cd",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0003",
+      "segment_key": "c4/objectives/calibration",
+      "slot_binding_sha256": "e0bf0f377339f7f1858a90eba31eea0a9c758473cc3c096c5a5a783e13742e6f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0004",
+      "segment_key": "c4/objectives/identifiability",
+      "slot_binding_sha256": "faf4a9b46c5d61a4f1388cfe2fbe7cd59aa311bc28441b5cbac918cd60ba9a16",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0005",
+      "segment_key": "c4/objectives/sensitivity",
+      "slot_binding_sha256": "e9613dc18b96e915c48f9eccaf3b3a409b9030d4137e4d09fdc62ff6cad71d86",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0006",
+      "segment_key": "c4/objectives/diagnostics",
+      "slot_binding_sha256": "33c57a3f920b50f4f0514d623e0047c3025fbabd8dbb56ea48cdc35faa81a7b6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0007",
+      "segment_key": "c4/objectives/uncertainty",
+      "slot_binding_sha256": "59d1d4e789bf3f1b493a3494f3e4788bffed115c5f75ea17252a3d38529e7547",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0008",
+      "segment_key": "c4/objectives/communication",
+      "slot_binding_sha256": "b8bc19b784d8b70d2273dabe10f5446a73531625a94496222edecabbe5575af9",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0009",
+      "segment_key": "c4/provenance/title",
+      "slot_binding_sha256": "c29a2a463f3da1120ff6df00dc6fd48443fc7bae617f7a88d18e66595e51efdd",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0010",
+      "segment_key": "c4/provenance/relationship",
+      "slot_binding_sha256": "6efdaa0aea3ea09d75f199f6a1a2e49197a44317110df77d00f5cc1d0b0ff106",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0011",
+      "segment_key": "c4/provenance/model",
+      "slot_binding_sha256": "0cc5f4e2a324aeaa768e9d947ed61919a5b7ece859e7189be38d187ccdea195b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0012",
+      "segment_key": "c4/question/title",
+      "slot_binding_sha256": "55bd49becb4905323268199adbbb4bff5448aaa07d58275cbcd09f5f6bf7c69e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0013",
+      "segment_key": "c4/question/operational-question",
+      "slot_binding_sha256": "52885d15edb95201cc680030f5c5a631cc585714120d55df14a2b475947a872c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0014",
+      "segment_key": "c4/question/synthetic-boundary",
+      "slot_binding_sha256": "9900ad4d1ff34f84efb6ad2223a3e0dc8ee6a80bfb4265f59a01d91b62c260d1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0015",
+      "segment_key": "c4/question/scope-boundary",
+      "slot_binding_sha256": "950e46878f41dcfa94e49e2a81e1694e56ab73139945cdaf9010458d71c800e1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0016",
+      "segment_key": "c4/model-contract/title",
+      "slot_binding_sha256": "d37d5c822adb18aaebd561550835a23c832a65c2f34a1605d5161b26b0cedda8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0017",
+      "segment_key": "c4/model-contract/observation-model",
+      "slot_binding_sha256": "36819206119ea4eba3c49f66752e391e3deaab2b0f6c86a0c1f75be15e7aa208",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0018",
+      "segment_key": "c4/model-contract/candidates",
+      "slot_binding_sha256": "69ce61f2b9ac9ac52bb44f9a8d13caa2cb63f3a8f44fd6c85153adfeb3516e8e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0019",
+      "segment_key": "c4/model-contract/equations",
+      "slot_binding_sha256": "5b4f8e2e192d431e28b0ed90db6537ee48c05a5c75493e1b8d4c0e1afa4676e5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0020",
+      "segment_key": "c4/table/model-contract/caption",
+      "slot_binding_sha256": "484e094f1d77448e2921ec2036f8d93c574b76632ad23ba853a058bb27cde09c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0021",
+      "segment_key": "c4/table/model-contract/header/symbol",
+      "slot_binding_sha256": "bddf3c694a058f1b89539574e27917c16a3801354e3c079937ceddcef8cfa1fe",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0022",
+      "segment_key": "c4/table/model-contract/header/meaning",
+      "slot_binding_sha256": "de8967bfd437905ed3fcf49663c4a16ee46ef885eccaa400709abd12beaf9a4e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0023",
+      "segment_key": "c4/table/model-contract/header/unit",
+      "slot_binding_sha256": "fed63a7847239c35a283ba1849f10be1bdfb45288771400ae1bd7ac628bcf56a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0024",
+      "segment_key": "c4/table/model-contract/header/status",
+      "slot_binding_sha256": "cbd436e6b3e28f8a2e17b5a5dfa91de4ac5b66e5e9df93d505f6dd682b1356d2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0025",
+      "segment_key": "c4/table/model-contract/row/time/symbol",
+      "slot_binding_sha256": "3cea1e64933f70bb694cbb16ab5297bea09c4ea5cb0a6fffce69cfbeebcf5696",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0026",
+      "segment_key": "c4/table/model-contract/row/time/meaning",
+      "slot_binding_sha256": "acafd4c594de4a084e281639dce890621bc0ad9ec8c1a06b16345f0a5f9668d5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0027",
+      "segment_key": "c4/table/model-contract/row/time/unit",
+      "slot_binding_sha256": "f5d5740c39dc2e738565f756229def07523a6e4737a02a978247000df8711793",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0028",
+      "segment_key": "c4/table/model-contract/row/time/status",
+      "slot_binding_sha256": "c1d9f9fa97f8d69e9e100c13b0bc35eafdc602380115c1c7c945c64ff820c91c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0029",
+      "segment_key": "c4/table/model-contract/row/population/symbol",
+      "slot_binding_sha256": "cdd31177d14c9918d61e4767a49be2d26ef4eabb105ded2914641edfb9387285",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0030",
+      "segment_key": "c4/table/model-contract/row/population/meaning",
+      "slot_binding_sha256": "21eb41f23c306b04a79d95370f4a4cac2da34480e951689159b25034f0693d83",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0031",
+      "segment_key": "c4/table/model-contract/row/population/unit",
+      "slot_binding_sha256": "2f592e841ca41e9d52556549bb95e4560a6909162e9e65e1d5cd73e3445e801b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0032",
+      "segment_key": "c4/table/model-contract/row/population/status",
+      "slot_binding_sha256": "26adee874d4a4f01971440c3ed890a720f794cd4b9f108e775fcf423fb27692e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0033",
+      "segment_key": "c4/table/model-contract/row/initial/symbol",
+      "slot_binding_sha256": "d5276e3ed47aa5213e229cebfbad4e585461ca479254dc2a66e4b60d8486067a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0034",
+      "segment_key": "c4/table/model-contract/row/initial/meaning",
+      "slot_binding_sha256": "fc2d554bf75a07bda3a0fb07d9474b0488e362f3ca07273a3ac7d5bde65fa937",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0035",
+      "segment_key": "c4/table/model-contract/row/initial/unit",
+      "slot_binding_sha256": "c21afd37bbcdf51a2409291be44be5ade60ab2bccfc1396517a9a3926087d5e6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0036",
+      "segment_key": "c4/table/model-contract/row/initial/status",
+      "slot_binding_sha256": "5db22ea65b2a07672f8de6f7e435937b29bf52030b001f1fb900a7d46f8aabc8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0037",
+      "segment_key": "c4/table/model-contract/row/rate/symbol",
+      "slot_binding_sha256": "b3a515ec36ff503bd1a8a370bffe40f9b86a6de46ddb1f8524f4c7469eb1fc75",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0038",
+      "segment_key": "c4/table/model-contract/row/rate/meaning",
+      "slot_binding_sha256": "5985b2de604e0787674dc634e113a21e0463ea543000d8ecfa981292e36b7f13",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0039",
+      "segment_key": "c4/table/model-contract/row/rate/unit",
+      "slot_binding_sha256": "1c5d040eff5a3a90af52e571eaca470beb824d43efd31cd2954ba5212393faf0",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0040",
+      "segment_key": "c4/table/model-contract/row/rate/status",
+      "slot_binding_sha256": "47f1c56976238e42294f295ee33650c403463b3a1ed8e4616b0f1a5e371ae03e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0041",
+      "segment_key": "c4/table/model-contract/row/capacity/symbol",
+      "slot_binding_sha256": "8ffccfd81beb3bdefa9531b75788ede4f03c7460b033ebe57e7110143032ca28",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0042",
+      "segment_key": "c4/table/model-contract/row/capacity/meaning",
+      "slot_binding_sha256": "d6f9d03e527033be57af9f9c3cecb481ebee6e990d22a72a8b1456b8df8fbdd4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0043",
+      "segment_key": "c4/table/model-contract/row/capacity/unit",
+      "slot_binding_sha256": "5546c108b6c0ad87e8e0c2dad47298b5ef0a4d142c314d91d35b498937a83059",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0044",
+      "segment_key": "c4/table/model-contract/row/capacity/status",
+      "slot_binding_sha256": "9684905f40b894c62bcf7efa86a21624fb5a1f32ad0d45e728db60bb0b0d30e3",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0045",
+      "segment_key": "c4/table/model-contract/row/noise/symbol",
+      "slot_binding_sha256": "af1848e0334dfb8b0899ba3db137b232af9e21dfe86f55f2ebd0c03458c4dd71",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0046",
+      "segment_key": "c4/table/model-contract/row/noise/meaning",
+      "slot_binding_sha256": "0de8401c274ef2fee5308d076f768ac87efa1a2c8eced1e967651b05a46fbc49",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0047",
+      "segment_key": "c4/table/model-contract/row/noise/unit",
+      "slot_binding_sha256": "281582bee9353cc92b1d8f374d9bbe3bae213f924561f9614dafabc763e10aaa",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0048",
+      "segment_key": "c4/table/model-contract/row/noise/status",
+      "slot_binding_sha256": "161fd672c6c2b8512c8829349e1b7febbcba9fb6141f126c63e85421b93f8bbd",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0049",
+      "segment_key": "c4/identifiability/title",
+      "slot_binding_sha256": "7ce57532f2b1fccf45c70109a7dd738c8ee73b538598a5379c635101f9c1fd61",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0050",
+      "segment_key": "c4/identifiability/structural-invariance",
+      "slot_binding_sha256": "a3e0a071bec719f5435fc0911564dec4e6fe66e22d936f13572feab3d3419b10",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0051",
+      "segment_key": "c4/identifiability/reduced-proof",
+      "slot_binding_sha256": "ec71203a0aed4336cd85d629aefd0a999aa924022063467fec1e437db7a30c69",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0052",
+      "segment_key": "c4/identifiability/practical-approximation",
+      "slot_binding_sha256": "d1de25111efa516856ce7d7f8cad40251d1f3d2845a967d81ad18d750caa8ef8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0053",
+      "segment_key": "c4/table/identifiability/caption",
+      "slot_binding_sha256": "5fff4986e11aba7c7bd0b84936a46b14434bb656a34588da6267fd888a858e64",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0054",
+      "segment_key": "c4/table/identifiability/header/level",
+      "slot_binding_sha256": "2c61c8a476f182ceaa514bc36970a327ea20f60c0415ed115cab67c51df2ed01",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0055",
+      "segment_key": "c4/table/identifiability/header/evidence",
+      "slot_binding_sha256": "975a7229db6044e139b800251921c1d9c3a904d96a0f45c954c5aa1d62607b39",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0056",
+      "segment_key": "c4/table/identifiability/header/conclusion",
+      "slot_binding_sha256": "e53fb6118dd219444b8f3e1c4028b064487bb3b52be78e13fd6051e07ebabf22",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0057",
+      "segment_key": "c4/table/identifiability/row/raw/level",
+      "slot_binding_sha256": "d36e4f9609d1928539caefab46672872ea44ab4e46ea9e9bb76acb10d0b1a0a5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0058",
+      "segment_key": "c4/table/identifiability/row/raw/evidence",
+      "slot_binding_sha256": "4dd8ed8bf769ca06b27ecd168a3652c40300aec867a6d3b55b22a3ca878f1d45",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0059",
+      "segment_key": "c4/table/identifiability/row/raw/conclusion",
+      "slot_binding_sha256": "f144285ac0d47843dad0862a690af397a48c505e0519185310f34f4df5af63e0",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0060",
+      "segment_key": "c4/table/identifiability/row/reduced/level",
+      "slot_binding_sha256": "bf65faad12e54ac0c2df13811912075b51384cd0037d97f23a4d0a6fcaa57c02",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0061",
+      "segment_key": "c4/table/identifiability/row/reduced/evidence",
+      "slot_binding_sha256": "906211b2f2058d1a60af74455097e2c556b3aa3e53e8b82bf71a05b744f15600",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0062",
+      "segment_key": "c4/table/identifiability/row/reduced/conclusion",
+      "slot_binding_sha256": "f55010332b8eb0ed0842c8d4a4adc8f018acc276bbbeea60c642e22f7e2cbe88",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0063",
+      "segment_key": "c4/table/identifiability/row/early/level",
+      "slot_binding_sha256": "6a4838fb9b2719b7eb84f67da1404c2f6aa94195b37c577a6920847be5dbb3a6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0064",
+      "segment_key": "c4/table/identifiability/row/early/evidence",
+      "slot_binding_sha256": "a434bf682db12469e68e958a2a8e4f93220018be20c20886f326ced579fa46f9",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0065",
+      "segment_key": "c4/table/identifiability/row/early/conclusion",
+      "slot_binding_sha256": "ca17370d456f8d711c436d479247ebd5cfd559fab9b016d8f9776e4184d01088",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0066",
+      "segment_key": "c4/table/identifiability/row/extended/level",
+      "slot_binding_sha256": "2c955d7f05edef732339906bd61e3464fab7b771f4fca5523cc06370019230e4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0067",
+      "segment_key": "c4/table/identifiability/row/extended/evidence",
+      "slot_binding_sha256": "811cff432b01b48aa9bd9bb8269309c117e8d699b06069a8ab0ac4e2591226bd",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0068",
+      "segment_key": "c4/table/identifiability/row/extended/conclusion",
+      "slot_binding_sha256": "2fdd3bb299000452e73d6bc08e9ad0ad799942d6f58944320d60eac99f72dfe1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0069",
+      "segment_key": "c4/data/title",
+      "slot_binding_sha256": "c6b724e39f42717b91efef34b10019d0f92ff19f7d683f9de17f4fc9265e8d7e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0070",
+      "segment_key": "c4/data/generation",
+      "slot_binding_sha256": "6e36e5b7cdbf063c9eef9f3037612a7ad10406313ac10398286a9562dea3a55d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0071",
+      "segment_key": "c4/data/serialization",
+      "slot_binding_sha256": "bd3a4cd251720b008dd89dfc6cb0f8027ae0ffee3e4fdc00b9765ec11cb50e71",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0072",
+      "segment_key": "c4/data/split",
+      "slot_binding_sha256": "94c4d7eca9bd4f51ec989aa7a9ae702c2ef7dcdb8880e4c79415588a23a838d2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0073",
+      "segment_key": "c4/table/data/caption",
+      "slot_binding_sha256": "c7da24f92c465b15e262f8fb966128ea2b0fed0216253f7154d93db2cddc328c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0074",
+      "segment_key": "c4/table/data/header/time",
+      "slot_binding_sha256": "8187bfaf4ef7943961d55422aa3b15209cba935d49f393a213aa631cbf90431d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0075",
+      "segment_key": "c4/table/data/header/population",
+      "slot_binding_sha256": "9cf975926aa404d1153de4e911f94e7f02091de62a690fe4f741d6ba5ae08c2c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0076",
+      "segment_key": "c4/table/data/header/partition",
+      "slot_binding_sha256": "0898a2a2a8462be618877f566e1cf01008c0b17be346c76b710ec6aefaf42369",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0077",
+      "segment_key": "c4/table/data/row/day00/time",
+      "slot_binding_sha256": "6273adbf7d8938d7e99c4dba466409baa3c5fd8e6da1606bbd4c4cd1dbc97879",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0078",
+      "segment_key": "c4/table/data/row/day00/population",
+      "slot_binding_sha256": "fb85be5784b4cefba4b398928138b6b3777ef0c79bee05daba2b2554b92f4294",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0079",
+      "segment_key": "c4/table/data/row/day00/partition",
+      "slot_binding_sha256": "9b6466ce5701c96037f60d434abf5561e4f971f7368d783abda55d1152fe8c17",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0080",
+      "segment_key": "c4/table/data/row/day02/time",
+      "slot_binding_sha256": "fc18de5ee6f451f00375acf531a48aae3e9f816aa1075b177bd13a0dffa27898",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0081",
+      "segment_key": "c4/table/data/row/day02/population",
+      "slot_binding_sha256": "991eadf90780d1b083156dd11ace1152010b4baefc6145ff8a44db96142caa0d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0082",
+      "segment_key": "c4/table/data/row/day02/partition",
+      "slot_binding_sha256": "0a8741b11ab49a223e3b405082805d7a8121b4f62b264a738907074c441d18b7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0083",
+      "segment_key": "c4/table/data/row/day04/time",
+      "slot_binding_sha256": "25e3704f0159bf18f4cacb7c4c94cb64a8769d6c21ce67b5bca4c67606e0541d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0084",
+      "segment_key": "c4/table/data/row/day04/population",
+      "slot_binding_sha256": "241464a0e3616756b111cf42419ccfb0ac7ee89c7be081aedad901ebf34af74c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0085",
+      "segment_key": "c4/table/data/row/day04/partition",
+      "slot_binding_sha256": "af16cbbafbc581030327833fc36b715d7e019e06f5308a086af1630b2a8295e5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0086",
+      "segment_key": "c4/table/data/row/day06/time",
+      "slot_binding_sha256": "9f369804b7ed55bab8c5909936ac3afd52be98e2389dc2ae4663234414536be8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0087",
+      "segment_key": "c4/table/data/row/day06/population",
+      "slot_binding_sha256": "2c7a6a0a1367b56ca7bd4a2ecfd89e36ce6ac4ffa12b62700d662a14e101316d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0088",
+      "segment_key": "c4/table/data/row/day06/partition",
+      "slot_binding_sha256": "ea635b1125a70514b010738978c981dbd42360dd37435d5cbad8b45fe4a163cc",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0089",
+      "segment_key": "c4/table/data/row/day08/time",
+      "slot_binding_sha256": "f6eab835542ba4d3b32451cd62ddf85f50e8d7b385d46308a82d8762299bf3c1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0090",
+      "segment_key": "c4/table/data/row/day08/population",
+      "slot_binding_sha256": "4ab636a3746f01850b42fefe7c3abd9844ec237d1282870d2b04f49d8f44cf65",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0091",
+      "segment_key": "c4/table/data/row/day08/partition",
+      "slot_binding_sha256": "da04e33fc4fd44e084d2d1230663b8114323d6f2a0866a7e4f7fc6c42e3b68f7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0092",
+      "segment_key": "c4/table/data/row/day10/time",
+      "slot_binding_sha256": "86455caf38628f416c15ab90be8e772f26e15edc37eabba37096c38da7fdbb1d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0093",
+      "segment_key": "c4/table/data/row/day10/population",
+      "slot_binding_sha256": "199409c51eaf1b7c76675fb90cb4cde3f7a11e34b9bcb1f9062f0447249eafed",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0094",
+      "segment_key": "c4/table/data/row/day10/partition",
+      "slot_binding_sha256": "5bfce53be9eaadea9afbb977a5fc3bf6e0e586f6dfae66055992827b10b8ddd7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0095",
+      "segment_key": "c4/table/data/row/day12/time",
+      "slot_binding_sha256": "458129fa832e185c7f40d244b342f841868e26767891dbfc08f3ad6dc28ec13a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0096",
+      "segment_key": "c4/table/data/row/day12/population",
+      "slot_binding_sha256": "f54cf5e44e3cd20f89c9193d8fd50ceb69e8bff2616473d9508c3db90372273c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0097",
+      "segment_key": "c4/table/data/row/day12/partition",
+      "slot_binding_sha256": "ca40f1effe41e90950f17b797ac94e22138cb8afafdeb7944c3cddaaa45aceaa",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0098",
+      "segment_key": "c4/table/data/row/day14/time",
+      "slot_binding_sha256": "5e1ef95f07a1f89947c06ea258d8f69a119b21701da45833a804fd2c8335d643",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0099",
+      "segment_key": "c4/table/data/row/day14/population",
+      "slot_binding_sha256": "da95233e12d0f35ba5d246503833c1b06c1f4645c5c934e62abf325d11ee9ef2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0100",
+      "segment_key": "c4/table/data/row/day14/partition",
+      "slot_binding_sha256": "6cdff2a8a55c23371e096346a1ed50a70712680bdb84f436aafccfd2a0b2a699",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0101",
+      "segment_key": "c4/table/data/row/day16/time",
+      "slot_binding_sha256": "d2f7c1d41bccca1570d33bff4a83f60f159a8ae5e47d57dc729c3d1ec49111c9",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0102",
+      "segment_key": "c4/table/data/row/day16/population",
+      "slot_binding_sha256": "0fe144cc51ab026ea91679c8437ea4fe4bbb3e41796c20eb4e55ada5b09c4b2b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0103",
+      "segment_key": "c4/table/data/row/day16/partition",
+      "slot_binding_sha256": "52a1c2e79f514d311e871773b41b82c5eb550c505a3b6c261e56f8521f65cbd5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0104",
+      "segment_key": "c4/table/data/row/day18/time",
+      "slot_binding_sha256": "5c94fb3a975f2197420c3ceacbfa895b3967fec1e89499e4de272001fb6b50f6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0105",
+      "segment_key": "c4/table/data/row/day18/population",
+      "slot_binding_sha256": "cc5ac8cfa458d17366f1290095e9cef804b1707dfcaf7982dd39409ee2a79249",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0106",
+      "segment_key": "c4/table/data/row/day18/partition",
+      "slot_binding_sha256": "96ae8664a3190e86f51936a93674c4443f3f4eb41aaf39e12d3c67cf8a810ecd",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0107",
+      "segment_key": "c4/table/data/row/day20/time",
+      "slot_binding_sha256": "233dd067332836466385b2bebaef870f816146a8cbbf666f8997e42f972df3be",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0108",
+      "segment_key": "c4/table/data/row/day20/population",
+      "slot_binding_sha256": "ef33875422ea84fc7eadad60608455669c9a286bcde113346a1a91499d027111",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0109",
+      "segment_key": "c4/table/data/row/day20/partition",
+      "slot_binding_sha256": "efe5ecb2d332e90bb05eee008a6bb47966af2faf5afcc2ba5779971670624033",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0110",
+      "segment_key": "c4/table/data/row/day22/time",
+      "slot_binding_sha256": "6da1ccc5d136d92fbd25fe216e72f708c0c8b711492bd2427edf8f7c6b7e3063",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0111",
+      "segment_key": "c4/table/data/row/day22/population",
+      "slot_binding_sha256": "a63ba9cd75da909ef5be20ae348dc37f9186e6a2bd462e3c048cdcd1877d5f5e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0112",
+      "segment_key": "c4/table/data/row/day22/partition",
+      "slot_binding_sha256": "a4d5ae4bedec34acee02da34ba554a990e53a8c1a8fa5768da17200bdc563f11",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0113",
+      "segment_key": "c4/table/data/row/day24/time",
+      "slot_binding_sha256": "b8a60cd86653e0d76273d202d66f4e86a7d8769d154fd4065a39f0dbdba0e309",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0114",
+      "segment_key": "c4/table/data/row/day24/population",
+      "slot_binding_sha256": "36ec11caa02d70733cbd2999e31309e8a17c64005e17d1d812a35e592754657a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0115",
+      "segment_key": "c4/table/data/row/day24/partition",
+      "slot_binding_sha256": "aa08a7dcaa59c892d8794cb495582660dbcd8eff80c182575ad966cb4121aba0",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0116",
+      "segment_key": "c4/calibration/title",
+      "slot_binding_sha256": "1638e7a1a23f6f7d00f5feb7c039af4cfa5ead2457b5f9af228a1004e148bc70",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0117",
+      "segment_key": "c4/calibration/objective",
+      "slot_binding_sha256": "133b68197a0e292d36383c8393ec9fb3179669059441363c2ba0f69ad4008c79",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0118",
+      "segment_key": "c4/calibration/rss-equation",
+      "slot_binding_sha256": "b21fc0a9bc183c26bdfbd15edd4c4e28b7fdb95745d80835f0ccc235055c40da",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0119",
+      "segment_key": "c4/calibration/bounds",
+      "slot_binding_sha256": "11f74130e44a5447cbf441e8dbf0afb55201e3e28f759b6615aa68daf0a0ac99",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0120",
+      "segment_key": "c4/calibration/aicc-convention",
+      "slot_binding_sha256": "79d25e23dc4eb46da21afe5aec56cbf757a78332cc26c2c7abf0a22c20943f03",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0121",
+      "segment_key": "c4/calibration/error-metric-definitions",
+      "slot_binding_sha256": "795965c882189ee3c16048ffddd6bc5eeab376ca2ae1cddd72f78f01f16f2a45",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0122",
+      "segment_key": "c4/table/comparison/caption",
+      "slot_binding_sha256": "3abfa5a25ddda072768544856d95b9620f44eafa6eb7d5e79eb7afc433f33a42",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0123",
+      "segment_key": "c4/table/comparison/header/model",
+      "slot_binding_sha256": "4e47615695dcdcbd00a6cb8a93effdcf5a71aea06f28a34bfd10ee4f714b5367",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0124",
+      "segment_key": "c4/table/comparison/header/parameters",
+      "slot_binding_sha256": "2f09acbe8070e9e14a260d0071803ee81b82322eb9b1913cfd02bb05f41e74bd",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0125",
+      "segment_key": "c4/table/comparison/header/rmse",
+      "slot_binding_sha256": "bb7542fb85be4ee5742b6746267e54575edc4756ee3c47ed294b321b6489dfc9",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0126",
+      "segment_key": "c4/table/comparison/header/aicc",
+      "slot_binding_sha256": "8cd461cb36775ce214f93ff004852f6da23ae04d5ef76c9e4e724ff274e00325",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0127",
+      "segment_key": "c4/table/comparison/header/holdout-mae",
+      "slot_binding_sha256": "0afe77b54bad26d8b3660655376b1ba08662b603c4a8f0e893841aa363f09db9",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0128",
+      "segment_key": "c4/table/comparison/header/holdout-bias",
+      "slot_binding_sha256": "0c8c60349f3d53f2bfd4a4343e34a437f4c6a1c522e77241c56d86bbf6306bd8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0129",
+      "segment_key": "c4/table/comparison/row/exponential/model",
+      "slot_binding_sha256": "97e68dc40a93132db544ba5d062894f6842cd3ebe878df6ad4801dd08fdc61d4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0130",
+      "segment_key": "c4/table/comparison/row/exponential/parameters",
+      "slot_binding_sha256": "3fd9e3cc7b796447a42bfd590a456a8d626fc106749e61904bad7a1b851c5af8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0131",
+      "segment_key": "c4/table/comparison/row/exponential/rmse",
+      "slot_binding_sha256": "f986f0e4823524d9f2be42ddf29994a9fe1b1646677c25433023255e858a740c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0132",
+      "segment_key": "c4/table/comparison/row/exponential/aicc",
+      "slot_binding_sha256": "0d928865f7ee7265bd276905ad2a4ac44f3db893222b427eef168b4f62e1fe80",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0133",
+      "segment_key": "c4/table/comparison/row/exponential/holdout-mae",
+      "slot_binding_sha256": "b4bb4cf775e0f07da329a3fd60ae689caf6dab175c3ed98962a596e9a20d0939",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0134",
+      "segment_key": "c4/table/comparison/row/exponential/holdout-bias",
+      "slot_binding_sha256": "850de590ef929ee82757faf7973305ab0bb308abe2df2becc38c9111f32c44cc",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0135",
+      "segment_key": "c4/table/comparison/row/logistic/model",
+      "slot_binding_sha256": "ddca6ab717b74cf74ef6bb4d3683cad6e60c16983d5f19ac8508512d5fe4a291",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0136",
+      "segment_key": "c4/table/comparison/row/logistic/parameters",
+      "slot_binding_sha256": "39b81ba74f583e19b2e2e75e6fecbefe05bec11d9f9a5501aca910c2d4da3269",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0137",
+      "segment_key": "c4/table/comparison/row/logistic/rmse",
+      "slot_binding_sha256": "adc8bd36d9b3b7ebbb870cd2ab9d1117bd1ce5ed77d0a10fb4b5633429c98a90",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0138",
+      "segment_key": "c4/table/comparison/row/logistic/aicc",
+      "slot_binding_sha256": "5756a0cf6091c1fa7e4cf3d87850f6a5a7c95d0726b692fa69854fd2c714803b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0139",
+      "segment_key": "c4/table/comparison/row/logistic/holdout-mae",
+      "slot_binding_sha256": "ae615ab60cf689c9d15fbf037929ab9f2fb6ac241c32f8f66843608a5ccd1d17",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0140",
+      "segment_key": "c4/table/comparison/row/logistic/holdout-bias",
+      "slot_binding_sha256": "0dcb12f2ba604aa796eb5c1f185245db5995d12d69999f118b0df4dc716aa577",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0141",
+      "segment_key": "c4/calibration/comparison-limit",
+      "slot_binding_sha256": "16fe19c478a82ad18584318e3c24847ee33d2831584ca2df6d6a9a794ba9d6d4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0142",
+      "segment_key": "c4/sensitivity/title",
+      "slot_binding_sha256": "a7d14d34ae1c2343f1c387664847bf46815c2e92f02674437334d1597c584138",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0143",
+      "segment_key": "c4/sensitivity/derivatives",
+      "slot_binding_sha256": "51f8a3096e1cb6b70600c216fcb5b1e95b98837e9159ebb4ab577e3c7b45d428",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0144",
+      "segment_key": "c4/sensitivity/equations",
+      "slot_binding_sha256": "0ca125fe183da083a5014edaaf30a4698587180ab9e65a580794006b2a911750",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0145",
+      "segment_key": "c4/sensitivity/scaled-matrix",
+      "slot_binding_sha256": "ad83c15e8c7d85f9109e271c82b07ec751d6db238d70326b8d65479b8cdded65",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0146",
+      "segment_key": "c4/sensitivity/condition-comparison",
+      "slot_binding_sha256": "d2c246ec7695079896c81f1ffa3513ef246fd89d219b6bb9a8012a3b994a4a60",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0147",
+      "segment_key": "c4/table/bound/caption",
+      "slot_binding_sha256": "fc23333f2f86ceeadb3eafa790b43269ed55a60282a6a35780af8a8e12d94446",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0148",
+      "segment_key": "c4/table/bound/header/upper-bound",
+      "slot_binding_sha256": "d0c9070e9e672dcd83a97156673de8c257e9638719be4993bac8e3c0a0e83316",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0149",
+      "segment_key": "c4/table/bound/header/r-estimate",
+      "slot_binding_sha256": "13e790abbf254eeac86923fb056737d03cc16f15104258e9da085a9b0f760f77",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0150",
+      "segment_key": "c4/table/bound/header/k-estimate",
+      "slot_binding_sha256": "c1a8904b1234fac25808172a1f110d84c6e12abf0453f44e93acabfb358e8a6c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0151",
+      "segment_key": "c4/table/bound/header/interpretation",
+      "slot_binding_sha256": "adad4da7a46470cf60e579b21235f6b10d791d9907bdf869258c2a1d766bedfe",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0152",
+      "segment_key": "c4/table/bound/row/1000/upper-bound",
+      "slot_binding_sha256": "8b8848deeef78774ca5f606b8ef0c959edaf8ec26f081be65bb971cfd97f359d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0153",
+      "segment_key": "c4/table/bound/row/1000/r-estimate",
+      "slot_binding_sha256": "44c7555a7a15ff1dbb64b1e34bdf2db28f5025d471097999cf105c7a04137aec",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0154",
+      "segment_key": "c4/table/bound/row/1000/k-estimate",
+      "slot_binding_sha256": "796940aa2b092d0a776504f8219f9f70217c8057faf2e40db164109661e02798",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0155",
+      "segment_key": "c4/table/bound/row/1000/interpretation",
+      "slot_binding_sha256": "0aaa47b82b72fbf7383d4595238254e7f8c46d5759fa349f9bd13c0436b7192c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0156",
+      "segment_key": "c4/table/bound/row/2000/upper-bound",
+      "slot_binding_sha256": "4a1ac1a972075d0b9ad891d65d924652896105fdf24e44cd2e8f95f2fc2c61c2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0157",
+      "segment_key": "c4/table/bound/row/2000/r-estimate",
+      "slot_binding_sha256": "8608e0cbf6e53b9b4a2a4d4866441fa987bcf51bdb45ecf1ab582b25aa5712a7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0158",
+      "segment_key": "c4/table/bound/row/2000/k-estimate",
+      "slot_binding_sha256": "d6911456e66b89863f5d729594bccbc6133097a0aa2ab2d2a1daacf835e95ce2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0159",
+      "segment_key": "c4/table/bound/row/2000/interpretation",
+      "slot_binding_sha256": "33e2df25099d66e6a1f900769cf473d7d2e7cde2b758a92d62ba442148f1b984",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0160",
+      "segment_key": "c4/sensitivity/bound-experiment",
+      "slot_binding_sha256": "6026477b134d5ef816ab398cb02830343cd2c3fe19cf0086bdbe573470ac10af",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0161",
+      "segment_key": "c4/diagnostics/title",
+      "slot_binding_sha256": "03c6dca947586ac40ec2e6f9ffbf1e706163c6181fc6e9fc0b8c585086193cfc",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0162",
+      "segment_key": "c4/diagnostics/residual-definition",
+      "slot_binding_sha256": "c8aa4a9c8cc4b9aad96d7cdc1a71ae04eef2790261c616fdd600ad175775de3e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0163",
+      "segment_key": "c4/diagnostics/holdout-definition",
+      "slot_binding_sha256": "5bb6d579ff01292aae1806f291f8bb4c3b027c47f868634eb09dbd22a76313b8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0164",
+      "segment_key": "c4/diagnostics/exponential-failure",
+      "slot_binding_sha256": "435ff0c88ebbed5e3fab2f4f028cb3d43b3055e1f6d43d6880694bae4dab14a4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0165",
+      "segment_key": "c4/diagnostics/validation-limit",
+      "slot_binding_sha256": "dcd0a3ebbaf503b313470c0e79a20c4bce7a0ea20b32d3dc3cb831da672f40e7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0166",
+      "segment_key": "c4/uncertainty/title",
+      "slot_binding_sha256": "58ce04630627363d9e099da0efd146269e95675494418c4f10de1b63a7edeb09",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0167",
+      "segment_key": "c4/uncertainty/local-covariance",
+      "slot_binding_sha256": "e013107bdd28a673eea7a4b0fe41f9535ee7a61affbf3d38588226f846f40c91",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0168",
+      "segment_key": "c4/uncertainty/bootstrap",
+      "slot_binding_sha256": "aff5eaaec804ec5b18c1f137e9ce7fec90d27bffb937842ea9ffd1ec73b8f7f1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0169",
+      "segment_key": "c4/table/uncertainty/caption",
+      "slot_binding_sha256": "5f55f572f518b39b88bd7ce06a982de0a810fb9f19f2545b78a5c030f2cb07f6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0170",
+      "segment_key": "c4/table/uncertainty/header/quantity",
+      "slot_binding_sha256": "3a837918c1d2c3ca61bdd94e2255f5d22013f803ec82f66ac25d586e10a2082e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0171",
+      "segment_key": "c4/table/uncertainty/header/lower",
+      "slot_binding_sha256": "df154ae3b636378474deec5ec44186341bb84130ae31358adcb73ea394bf3184",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0172",
+      "segment_key": "c4/table/uncertainty/header/median",
+      "slot_binding_sha256": "5c09a009a7728bbfc5ea6a49e71a505dc7600c4182a66fea8cbd081b087c3349",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0173",
+      "segment_key": "c4/table/uncertainty/header/upper",
+      "slot_binding_sha256": "c102b323a306d35842a7a9b0fba27798881b34db0fa95db3e6ab278ec1c3b719",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0174",
+      "segment_key": "c4/table/uncertainty/header/observed",
+      "slot_binding_sha256": "db39d46616c4a5d2b4c7e088df2e739fa6cbf87e0cfbb30eda999fccc8fb7158",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0175",
+      "segment_key": "c4/table/uncertainty/row/r/quantity",
+      "slot_binding_sha256": "79ef767334f7b4557cf476d54cda9b0ed5cbf959f0af2ba2835bafbd654fc80c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0176",
+      "segment_key": "c4/table/uncertainty/row/r/lower",
+      "slot_binding_sha256": "9ae7e9f5f02781533696df13f191eaae6b950abe9b19a9c60064e26f48e57f2b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0177",
+      "segment_key": "c4/table/uncertainty/row/r/median",
+      "slot_binding_sha256": "3c44f47235d93c96aab28232a8fb7c2d72cbd4eebc0553c40eb43ebae67f4fe0",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0178",
+      "segment_key": "c4/table/uncertainty/row/r/upper",
+      "slot_binding_sha256": "2bbf44027e4e47f92d38cbe035623aa5702cae6316dc173ad23315b3e1ab5d2b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0179",
+      "segment_key": "c4/table/uncertainty/row/r/observed",
+      "slot_binding_sha256": "86123881fcafeeda131f93a7b79cb551c4fdabe67b6c6ff1c128b62491c52475",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0180",
+      "segment_key": "c4/table/uncertainty/row/k/quantity",
+      "slot_binding_sha256": "25361a02c813b9e1e3ea717844e64d569d02843593b96525a8ea52d21861039c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0181",
+      "segment_key": "c4/table/uncertainty/row/k/lower",
+      "slot_binding_sha256": "8864589f7773857c8f281bd1b7f36c9c798178a71e3214c2efdc2272e185269a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0182",
+      "segment_key": "c4/table/uncertainty/row/k/median",
+      "slot_binding_sha256": "7f5625204f85ab8aa2f04e2dcfb7e8c5bdcf77d1de09bc7d8486c023e424906c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0183",
+      "segment_key": "c4/table/uncertainty/row/k/upper",
+      "slot_binding_sha256": "0c9a006ec2011ec9ae05cba665d9591eac5d68acd14680f9b903bfc7ccbaa5e0",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0184",
+      "segment_key": "c4/table/uncertainty/row/k/observed",
+      "slot_binding_sha256": "c742a7f37efb3914c4881fca83e62aeaec0d5329856dd468aa5b9bd1184d8c29",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0185",
+      "segment_key": "c4/table/uncertainty/row/latent-day24/quantity",
+      "slot_binding_sha256": "83d486a5d2e2c688dbf7e95815418f788ecedfd96f800f776f23259e3501da30",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0186",
+      "segment_key": "c4/table/uncertainty/row/latent-day24/lower",
+      "slot_binding_sha256": "e697e4dc4162a22d41fe43845af769694332fd55c185e69e6ba2c69059d98aac",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0187",
+      "segment_key": "c4/table/uncertainty/row/latent-day24/median",
+      "slot_binding_sha256": "7a2082510ba320da97c9ba73fe3f10502c4c87cdd141b8c601d41832afe88661",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0188",
+      "segment_key": "c4/table/uncertainty/row/latent-day24/upper",
+      "slot_binding_sha256": "e2335124d577ccb406001071f0c77ff1c8eda7a22a1d3cfffffae6cd4d975bfc",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0189",
+      "segment_key": "c4/table/uncertainty/row/latent-day24/observed",
+      "slot_binding_sha256": "27f1265df2f5db95852235b8a2c70820dc7199fb0152293107d70d6092e63989",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0190",
+      "segment_key": "c4/table/uncertainty/row/day18/quantity",
+      "slot_binding_sha256": "6d442231b309efb140655a183054dceb58f41fa98f4ca0d0972446a35f00e8e0",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0191",
+      "segment_key": "c4/table/uncertainty/row/day18/lower",
+      "slot_binding_sha256": "0a0cbddae837ac295330f23da2b660fc58d9b09dedb12d9f00a49b85670cc5a2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0192",
+      "segment_key": "c4/table/uncertainty/row/day18/median",
+      "slot_binding_sha256": "d900957084ab82f70b5f22b382ee559c8d9ecb2491a7fc31418ee04037575c1f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0193",
+      "segment_key": "c4/table/uncertainty/row/day18/upper",
+      "slot_binding_sha256": "5dfbc1b733af1efa1d427664adc7befe4bb75f46adc3094634bc00ca4df56422",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0194",
+      "segment_key": "c4/table/uncertainty/row/day18/observed",
+      "slot_binding_sha256": "2473d7d9ec8f089f1530cee41794b58327807a7709638166ecbcecfc7bc5c00c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0195",
+      "segment_key": "c4/table/uncertainty/row/day20/quantity",
+      "slot_binding_sha256": "4618f96873584ac559ae453cd0df1fffb1bf111b465eb5515b8ea5a36503b202",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0196",
+      "segment_key": "c4/table/uncertainty/row/day20/lower",
+      "slot_binding_sha256": "cf755a9b5ec09646d00823c1b9be1ee0f92dc6842b5021be5817c16383f7a3e2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0197",
+      "segment_key": "c4/table/uncertainty/row/day20/median",
+      "slot_binding_sha256": "18a1b246c9b4aa6c72f7bbed4f6f651ab23b075585ed43a6cefa3bbb2ce83668",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0198",
+      "segment_key": "c4/table/uncertainty/row/day20/upper",
+      "slot_binding_sha256": "63b3b04b671806663599354f164ac5d5b7370f1b62c0d695829f30db200b1f72",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0199",
+      "segment_key": "c4/table/uncertainty/row/day20/observed",
+      "slot_binding_sha256": "9284f9305000078e4884c8d1768c19c06fcc1ac17a0cb7229db0ec9cb31ff124",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0200",
+      "segment_key": "c4/table/uncertainty/row/day22/quantity",
+      "slot_binding_sha256": "6b3d4474cbb2b47368ea96054792b463d229a349c3e9657e5cc2ae4cdd49c1fb",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0201",
+      "segment_key": "c4/table/uncertainty/row/day22/lower",
+      "slot_binding_sha256": "deb5610d4faca915af5bfdf39fa1572b0c3567c456514598795fd5792f8fde61",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0202",
+      "segment_key": "c4/table/uncertainty/row/day22/median",
+      "slot_binding_sha256": "d6e6d57f7de24747aaa4c47a6697720ecd051e07ceaffc73d99dd4ed2b519f84",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0203",
+      "segment_key": "c4/table/uncertainty/row/day22/upper",
+      "slot_binding_sha256": "ae6988c08e5a98dd20e7cd8562a617cf773e098658535a13f0a92d55a189c6f0",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0204",
+      "segment_key": "c4/table/uncertainty/row/day22/observed",
+      "slot_binding_sha256": "c1e7892af82e0a73cc921e317cddf4af164da4643745ade6c0b5a699bc1804d9",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0205",
+      "segment_key": "c4/table/uncertainty/row/day24/quantity",
+      "slot_binding_sha256": "ee1eb365a9a5d434a952adb67d9fc20e578fe5510db5f8526f40b866888c8141",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0206",
+      "segment_key": "c4/table/uncertainty/row/day24/lower",
+      "slot_binding_sha256": "20e5584b4d9f115b294ca885f5a875c6d83b6a62ed0194e54af2ef57505487c9",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0207",
+      "segment_key": "c4/table/uncertainty/row/day24/median",
+      "slot_binding_sha256": "4749cbb69f0ee54e47293dc20f48c6190e06986e114a5f2a71859b5aa0d68d90",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0208",
+      "segment_key": "c4/table/uncertainty/row/day24/upper",
+      "slot_binding_sha256": "44d08bdaa733064528d2c9f64dbe17d1dc7bb5a61d80b0ad212ec4d6ff7d980f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0209",
+      "segment_key": "c4/table/uncertainty/row/day24/observed",
+      "slot_binding_sha256": "d6de1ba75ce1c3183c02e672bb231ddd2e6a740fcad67afa4e578c8b989d9273",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0210",
+      "segment_key": "c4/uncertainty/latent-versus-observation",
+      "slot_binding_sha256": "0311aa1b5cdf977580cb9e0de234ef37f872000f19684b831862bd620f27b31f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0211",
+      "segment_key": "c4/uncertainty/limitations",
+      "slot_binding_sha256": "598146a7eb3f1915369bceadb1a858d5f736e50b8035825a18d95b977b71799c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0212",
+      "segment_key": "c4/failure/title",
+      "slot_binding_sha256": "fba2f8592f2f445c065b47378902a545c6a27c4f40d927e2569b8beb6d3ac487",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0213",
+      "segment_key": "c4/figure/end-to-end/caption",
+      "slot_binding_sha256": "2ad680d635d213970a678f9ca2cc8fe3e6e81e4fe9c180310680dd40acb09465",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0214",
+      "segment_key": "c4/figure/end-to-end/long-description",
+      "slot_binding_sha256": "c3bdf050b876c0f9e496099d3e65234f31c0391d5ae424604370691462ea1795",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0215",
+      "segment_key": "c4/table/failure/caption",
+      "slot_binding_sha256": "bd601b634e02ae43d69948bd1846d066201dadec389608709f2db33b4e1d564d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0216",
+      "segment_key": "c4/table/failure/header/symptom",
+      "slot_binding_sha256": "c741ae34960c4a56184f7e3bc274950fc35d383ff42b3dbf2b7b233c7c4bad82",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0217",
+      "segment_key": "c4/table/failure/header/meaning",
+      "slot_binding_sha256": "4acc57ea59282abef7b40ceb2f7d3bbdd9c56848346d7d23f0106cded5ab944f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0218",
+      "segment_key": "c4/table/failure/header/action",
+      "slot_binding_sha256": "a8bce78b297979caa3114a8248e8022d56dd995ef5a69a8fa05eff578f9c3653",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0219",
+      "segment_key": "c4/table/failure/row/bound/symptom",
+      "slot_binding_sha256": "164445ef91ce6979437d3289287131b255d92695cae33aea617708387d8d1364",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0220",
+      "segment_key": "c4/table/failure/row/bound/meaning",
+      "slot_binding_sha256": "5c867d0cc8e106f2702162952ef22cb0b19494508d9dfea9f7c6361e45c24590",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0221",
+      "segment_key": "c4/table/failure/row/bound/action",
+      "slot_binding_sha256": "d314423b9b6c749286537042ff260983ad8036e381feebad319564fce0edaec1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0222",
+      "segment_key": "c4/table/failure/row/condition/symptom",
+      "slot_binding_sha256": "598ca485f63eb0130cf3f7e523925d085c8e523e08daacd1144ec6ed3712cd35",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0223",
+      "segment_key": "c4/table/failure/row/condition/meaning",
+      "slot_binding_sha256": "a2172d40a24e3859bcd2e956860d62e5c5df242c71568712fefc24cf85dea8ac",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0224",
+      "segment_key": "c4/table/failure/row/condition/action",
+      "slot_binding_sha256": "835e0d105901fc721cbad1aa9ef1d66ee8230792347bdd80079b81e7b16986ce",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0225",
+      "segment_key": "c4/table/failure/row/residual/symptom",
+      "slot_binding_sha256": "d8703ee489fca1da90ec2b7e5dd09a410177f02712515a71b86b1bea24ebb13b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0226",
+      "segment_key": "c4/table/failure/row/residual/meaning",
+      "slot_binding_sha256": "c05441712e64a3c71826b7910ce81a990c08e0cfd92833c88eca61cb326201a3",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0227",
+      "segment_key": "c4/table/failure/row/residual/action",
+      "slot_binding_sha256": "6be829ef41700a800e284108a5378b9f686b696f3af61c0a0f78a031afda5842",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0228",
+      "segment_key": "c4/table/failure/row/holdout/symptom",
+      "slot_binding_sha256": "f5b86d69f06f06aa5c49677e01f137a5d3fa7c2573722684371884d874b58a41",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0229",
+      "segment_key": "c4/table/failure/row/holdout/meaning",
+      "slot_binding_sha256": "678158736471da3ecaebef52edf43545a4462b97b1a55bb9a673983ef3d6c4ba",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0230",
+      "segment_key": "c4/table/failure/row/holdout/action",
+      "slot_binding_sha256": "90fcd3013eea8377c8f412ec979fede66f334a099b9c718872c42aeced20195a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0231",
+      "segment_key": "c4/table/failure/row/domain/symptom",
+      "slot_binding_sha256": "b82ddb2db293499bbf9fac460f94510593a283fb733a29a21155aa9c379a252a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0232",
+      "segment_key": "c4/table/failure/row/domain/meaning",
+      "slot_binding_sha256": "1c2a9b0d462c2ce9dfaf184e6d631e0311297d3fb4da4e2da8a77fcfea610b7a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0233",
+      "segment_key": "c4/table/failure/row/domain/action",
+      "slot_binding_sha256": "0e34fd33176e149abfc56b4f6446fb65c62ed816785bf0c2855e9346e544b79d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0234",
+      "segment_key": "c4/table/failure/row/candidates/symptom",
+      "slot_binding_sha256": "a5f4eadb26520e30d5f1d13dca6f21ea5c24b247edf27ce9a5cd63e30f64baae",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0235",
+      "segment_key": "c4/table/failure/row/candidates/meaning",
+      "slot_binding_sha256": "d9af408ace5bfb6ed179b3188dc1f370ca7c405bcb330be7ca1f9a25eb18b76d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0236",
+      "segment_key": "c4/table/failure/row/candidates/action",
+      "slot_binding_sha256": "50be431eddb52ebe40a0c6eeb5d98da3b4575315f790db10806e502ed4ed7a3f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0237",
+      "segment_key": "c4/communication/title",
+      "slot_binding_sha256": "e5d1b72fd2dc6a754e09696413017929c6081d6cae0a53aa8e3df3b110e40b68",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0238",
+      "segment_key": "c4/table/claims/caption",
+      "slot_binding_sha256": "1b0b18b321769fcafb199a7de509eb0bc129cd37ebb3a42ad776f5d4fa9c77ee",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0239",
+      "segment_key": "c4/table/claims/header/status",
+      "slot_binding_sha256": "7616365d616a23c8d2fe7eadb5bb7bd9016781bfe7783d1e970b0508acaea59f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0240",
+      "segment_key": "c4/table/claims/header/claim",
+      "slot_binding_sha256": "c846dcb53e89b9fe4125197e6b541499c42a08654f20e640cbb097dea245047b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0241",
+      "segment_key": "c4/table/claims/header/reason",
+      "slot_binding_sha256": "18321635a1fbb9d94fb684ae04dfcd8b23555d6590ba573e5dc3b1c21aaa06a8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0242",
+      "segment_key": "c4/table/claims/row/supported-comparison/status",
+      "slot_binding_sha256": "9fa20041b857ead8daf21d602f9d0b00fb9bbb0bdf95f29989e8e9d8926affdc",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0243",
+      "segment_key": "c4/table/claims/row/supported-comparison/claim",
+      "slot_binding_sha256": "3020d9de8e1ac6cf49d2be804dcbb7cf937c0f1ea3243f7dc78be3a88497f545",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0244",
+      "segment_key": "c4/table/claims/row/supported-comparison/reason",
+      "slot_binding_sha256": "dd5d69784fe976b4b16953d09fa227586769b354e1ca2be706e7540c854130af",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0245",
+      "segment_key": "c4/table/claims/row/supported-window/status",
+      "slot_binding_sha256": "5e2b3b9e75345c8e3360ae498a0a22bfd2078857fbc8b73a7aeaf6636ace141e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0246",
+      "segment_key": "c4/table/claims/row/supported-window/claim",
+      "slot_binding_sha256": "048e0ae932d2f798427ae9fe88bb907e813ed3834daed442eba766d739740c83",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0247",
+      "segment_key": "c4/table/claims/row/supported-window/reason",
+      "slot_binding_sha256": "abe9f2cc12585ddb2e75721f82763948e95bfb268bdb1981b9bc01732c6cf1d7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0248",
+      "segment_key": "c4/table/claims/row/unsupported-components/status",
+      "slot_binding_sha256": "8d6edf645500cd84a1077b21101cbe270a93eb12f5f5e716d6d885739389418e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0249",
+      "segment_key": "c4/table/claims/row/unsupported-components/claim",
+      "slot_binding_sha256": "ce0402620edf60b53513ed0f74de0d5eb407dbd5fa6e428f42bde9ceb10253f9",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0250",
+      "segment_key": "c4/table/claims/row/unsupported-components/reason",
+      "slot_binding_sha256": "fd70f51e78b06b28539143e85750504c2e3e9b42db8a36f9aa2beaae5ae621bf",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0251",
+      "segment_key": "c4/table/claims/row/unsupported-external/status",
+      "slot_binding_sha256": "9daf4bef7d736e7104cbc18aa9e66ee64204c60910db37fe41bb05e292117b7e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0252",
+      "segment_key": "c4/table/claims/row/unsupported-external/claim",
+      "slot_binding_sha256": "53a88d3478a49a2657740f45caded1dbe1fa1601118f3e3d8cca03f8b154e172",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0253",
+      "segment_key": "c4/table/claims/row/unsupported-external/reason",
+      "slot_binding_sha256": "316446cef83a1493434bc170b5e9a27657b9c70c6441b926bf4b027d060f6981",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0254",
+      "segment_key": "c4/table/claims/row/unsupported-future/status",
+      "slot_binding_sha256": "0b36264b96eefcff7be12d0002598b0eaac6038bc0d68615fa8e5b44e3a34d5b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0255",
+      "segment_key": "c4/table/claims/row/unsupported-future/claim",
+      "slot_binding_sha256": "c5df9d437c631533f97a6f269cfa48a0e4d7b9709a063836bbf73e67c8ce0fbc",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0256",
+      "segment_key": "c4/table/claims/row/unsupported-future/reason",
+      "slot_binding_sha256": "8b575d5aa603d90807fcebc996809eaa263e4d7111ce900068410f3bf307499e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0257",
+      "segment_key": "c4/communication/reporting-template",
+      "slot_binding_sha256": "40b276c0fade67c1b4f6c2ec0ef208d8864daa9e1a974a0351a87764aabbb821",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0258",
+      "segment_key": "c4/communication/summary",
+      "slot_binding_sha256": "05fa9816be2b4b563ef4b03142cebfbaf20396f61669900837b7b73d5a0d8c0b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0259",
+      "segment_key": "c4/exercises/title",
+      "slot_binding_sha256": "c813c08ecc2b97f45deca38b2e6127a1f4ef06732511ec9707b06a1f51f4fcd4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0260",
+      "segment_key": "c4/exercise/p01/title",
+      "slot_binding_sha256": "10c3f981479f52e680d23d918a137870f217a39a110f6901d834b2f466d81725",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0261",
+      "segment_key": "c4/exercise/p01/prompt",
+      "slot_binding_sha256": "4e6f46ee409fe64215e9326656668171510cc8cd8ef6cfc4f912d50043d2bde1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0262",
+      "segment_key": "c4/exercise/p02/title",
+      "slot_binding_sha256": "0c3c37a711318452f83bf5fcdabb71ece9e15f2331e7f311ebfac59f5b3d07d0",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0263",
+      "segment_key": "c4/exercise/p02/prompt",
+      "slot_binding_sha256": "3f110584882a3a919165508d9a58a48cd5ff85610714f1843874534bf5441579",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0264",
+      "segment_key": "c4/exercise/p03/title",
+      "slot_binding_sha256": "40ded0a7bb764590b43d29d4f3625c9e39f70d80adf0b153637bdadcdf643c9e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0265",
+      "segment_key": "c4/exercise/p03/prompt",
+      "slot_binding_sha256": "82b69d396232a2898141ccc3edc03ef89912a9ee40632365a2f70532f0e3d9bf",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0266",
+      "segment_key": "c4/exercise/p04/title",
+      "slot_binding_sha256": "b00382911747a12778d2130e92278749278273a582ffcbfa70761d5a88d6e604",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0267",
+      "segment_key": "c4/exercise/p04/prompt",
+      "slot_binding_sha256": "6860742449979c213e421a0761ba56029e4bba850c6df66e86789362d649c152",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0268",
+      "segment_key": "c4/exercise/p05/title",
+      "slot_binding_sha256": "b8ffd64e2418065872e50fd3d982d1c30fc17f5f0922a1f9ecfd9afe5cecf6ad",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0269",
+      "segment_key": "c4/exercise/p05/prompt",
+      "slot_binding_sha256": "55beb0fbe10afbd8793bfdc604f11f1552b2416387d0aabdf67eb10d40d28f8c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0270",
+      "segment_key": "c4/exercise/p06/title",
+      "slot_binding_sha256": "90f47cb8af012df8c02d471c5b3a18fdc1327f6c22de51a715453b17395e4f68",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0271",
+      "segment_key": "c4/exercise/p06/prompt",
+      "slot_binding_sha256": "8a0cab3cc661bb274c0ddaed19a553cd4f8f28d0bc13f26376800f56d0bf9129",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0272",
+      "segment_key": "c4/exercise/p07/title",
+      "slot_binding_sha256": "5cbbf6a8855bbdb55b10bcdeb27fcc024958e0132bdf45366745f674fdf7cd06",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C4-S0273",
+      "segment_key": "c4/exercise/p07/prompt",
+      "slot_binding_sha256": "17517e06c2c401cdcc4bca8ef0b91d7ec777b8593a222d4c3b6bb8e9ef7fec06",
+      "state": "active"
+    }
+  ],
+  "ledger_version": 1,
+  "next_serial": 274,
+  "previous": null,
+  "schema": "o005-segment-id-ledger-v2",
+  "strategy": "html-anchored-versioned-semantic-key-v1",
+  "unit_id": "O005-BRIDGE-C4"
+}

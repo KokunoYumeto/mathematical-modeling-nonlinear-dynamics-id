@@ -274,3 +274,49 @@ O005-TERM-0272,training data,data latih,admitted,Established Indonesian pairing 
 O005-TERM-0273,algorithm,algoritma,admitted,Use the form attested in the Indonesian arXiv TeX and Badan Bahasa technical terminology; normalize the variant algoritme in this edition.
 O005-TERM-0274,data provenance,asal-usul data,admitted,Use the natural reader-facing explanation; retain provenance only in locale-neutral machine keys or when defining the English technical label.
 O005-TERM-0275,parameter estimation,estimasi parameter,admitted,Use for numerical estimation procedures; avoid pencocokan parameter when the operation is explicitly estimation by least squares.
+O005-TERM-0276,bifurcation,bifurkasi,admitted,Established Indonesian mathematical term.
+O005-TERM-0277,local bifurcation,bifurkasi lokal,admitted,Use for a qualitative change analyzed near a critical equilibrium or orbit.
+O005-TERM-0278,equilibrium branch,cabang kesetimbangan,admitted,Use for a parameterized branch of equilibria; retain the equilibrium and fixed-point distinction recorded in O005-TERM-0259.
+O005-TERM-0279,exchange of stability,pertukaran kestabilan,admitted,Use when intersecting solution branches swap their stable and unstable character.
+O005-TERM-0280,normal form,bentuk normal,admitted,Standard mathematical term for the reduced local equation near a bifurcation.
+O005-TERM-0281,supercritical,superkritis,admitted,Preferred Indonesian form in bifurcation context.
+O005-TERM-0282,subcritical,subkritis,admitted,Preferred Indonesian form in bifurcation context.
+O005-TERM-0283,Hopf bifurcation,bifurkasi Hopf,admitted,Indonesian mathematical publications retain the proper name Hopf.
+O005-TERM-0284,transcritical bifurcation,bifurkasi transkritis,admitted,Use the established Indonesian adjective transkritis in reader prose; source titles also attest transkritikal as a variant.
+O005-TERM-0285,pitchfork bifurcation,bifurkasi pitchfork,admitted,Indonesian university mathematical writing retains pitchfork as the established type name; do not promote the explanatory shape phrase garpu tala to the head term.
+O005-TERM-0286,saddle-node bifurcation,bifurkasi saddle-node,admitted,Indonesian university mathematical writing retains saddle-node as the established type name; do not use the unsupported literal coinage pelana-simpul as the head term.
+O005-TERM-0287,transversality,transversalitas,admitted,Use for the nonzero-crossing condition at a local bifurcation.
+O005-TERM-0288,nonhyperbolicity,nonhiperbolisitas,admitted,Use for the property of a nonhyperbolic equilibrium; keep the adjective nonhiperbolik.
+O005-TERM-0289,semistable,semistabil,admitted,Use when an equilibrium attracts from one side and repels from the other.
+O005-TERM-0290,Poincare section,penampang Poincaré,admitted,Use the accented proper name in reader prose and state the crossing orientation explicitly.
+O005-TERM-0291,Poincare map,peta Poincaré,admitted,Use for the full map from one oriented section crossing to the next; keep distinct from a one-coordinate return-map projection.
+O005-TERM-0292,multiplier,pengali,admitted,Use for the derivative of an iterated map or the product around a periodic orbit; do not confuse it with a Lagrange multiplier.
+O005-TERM-0293,prime period,periode prima,admitted,The smallest positive iterate count that returns a point to itself.
+O005-TERM-0294,transient,transien,admitted,Use for the initial iterations or integration interval discarded before asymptotic analysis.
+O005-TERM-0295,invariant interval,interval invarian,admitted,An interval mapped into itself by the dynamical rule.
+O005-TERM-0296,sensitive dependence on initial conditions,kepekaan terhadap kondisi awal,admitted,Use for dynamical separation of nearby initial states after numerical convergence has been checked.
+O005-TERM-0297,periodic orbit,orbit periodik,admitted,Use for an orbit with a finite prime period.
+O005-TERM-0298,projected return map,proyeksi peta balik,admitted,Use when a lower-dimensional coordinate plot discards information from the full Poincare map.
+O005-TERM-0299,chaotic attractor,atraktor kacau,admitted,Use only when the attracting and chaotic qualifications are both justified; do not infer it from visual complexity alone.
+O005-TERM-0300,Lorenz system,sistem Lorenz,admitted,Retain the proper name Lorenz.
+O005-TERM-0301,discrete-time system,sistem waktu diskret,admitted,Use for an iterated map indexed by integer time steps.
+O005-TERM-0302,calibration,kalibrasi,admitted,Use for estimating model parameters from the declared calibration data; do not imply validation.
+O005-TERM-0303,structural identifiability,identifiabilitas struktural,admitted,Use for uniqueness in the idealized noise-free model and observation structure.
+O005-TERM-0304,practical identifiability,identifiabilitas praktis,admitted,Use for estimability under the actual finite noisy data and observation design.
+O005-TERM-0305,scaled sensitivity,sensitivitas terskala,admitted,Use when parameter scaling has been included explicitly; keep distinct from an unscaled derivative.
+O005-TERM-0306,condition number,bilangan kondisi,admitted,Use with the norm or matrix stated; it is a diagnostic and not a universal identifiability threshold.
+O005-TERM-0307,residual,residu,admitted,Define the sign convention explicitly; C4 uses observation minus fitted prediction.
+O005-TERM-0308,corrected Akaike information criterion,kriteria informasi Akaike terkoreksi (AICc),admitted,Introduce the expansion once where space permits and retain AICc for tables and calculations.
+O005-TERM-0309,parametric bootstrap,bootstrap parametrik,admitted,Use when pseudo-data are generated from the fitted parametric model and observation-error assumption.
+O005-TERM-0310,latent response,respons laten,admitted,The model response before a new observation error is added.
+O005-TERM-0311,prediction interval,interval prediksi,admitted,State whether the interval is for a latent response or a future observation.
+O005-TERM-0312,parameter uncertainty,ketidakpastian parameter,admitted,Keep distinct from observation error and model discrepancy.
+O005-TERM-0313,model discrepancy,ketaksesuaian model,admitted,Use for mismatch caused by model form rather than numerical error or observation noise.
+O005-TERM-0314,external validation,validasi eksternal,admitted,Evaluation against genuinely external evidence not used to develop or revise the model.
+O005-TERM-0315,bias,bias,admitted,Retain the established technical term and state the residual sign convention before interpreting its sign.
+O005-TERM-0316,root mean square error,akar rerata kuadrat galat (RMSE),admitted,Expand once in explanatory prose; retain RMSE in compact tables and formulas.
+O005-TERM-0317,mean absolute error,rerata galat absolut (MAE),admitted,Expand once in explanatory prose; retain MAE in compact tables and formulas.
+O005-TERM-0318,calibration window,jendela kalibrasi,admitted,Use for the predetermined time range used to estimate parameters.
+O005-TERM-0319,observation model,model pengamatan,admitted,Use for the probabilistic relation between a latent model response and measured data.
+O005-TERM-0320,candidate model,model kandidat,admitted,One model in the explicitly bounded comparison set; selection among candidates is not universal truth.
+O005-TERM-0321,pointwise prediction interval,interval prediksi titik-demi-titik,admitted,Keep distinct from a simultaneous band for an entire trajectory.

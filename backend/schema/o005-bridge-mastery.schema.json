@@ -11,7 +11,7 @@
   "properties": {
     "schema": {"const": "o005-bridge-mastery-v1"},
     "schema_version": {"const": "1.0.0"},
-    "unit_id": {"const": "O005-BRIDGE-C1"},
+    "unit_id": {"type": "string", "pattern": "^O005-BRIDGE-C[1234]$"},
     "language": {"const": "id-ID"},
     "source": {
       "type": "object",
@@ -21,7 +21,8 @@
         "type": {"const": "new_original_addition"},
         "spine": {"const": "Joceline Lega, Introduction to Mathematical Modeling, v1.01"},
         "not_part_of_source_book": {"const": true},
-        "license": {"const": "CC BY-NC-SA 4.0"}
+        "license": {"const": "CC BY-NC-SA 4.0"},
+        "relationship": {"const": "independent_supplement"}
       }
     },
     "provenance_policy": {
@@ -31,7 +32,8 @@
       "properties": {
         "model_identification": {"const": "OpenAI Codex gpt-5.6-sol, Ultra."},
         "source_author_credit_preserved": {"const": true},
-        "non_endorsement": {"const": true}
+        "non_endorsement": {"const": true},
+        "external_data_or_assets": {"const": false}
       }
     },
     "article_link_catalog": {"type": "object", "maxProperties": 0},
@@ -40,20 +42,152 @@
       "minItems": 7,
       "maxItems": 7,
       "uniqueItems": true,
-      "prefixItems": [
-        {"allOf": [{"$ref": "#/$defs/problem"}, {"properties": {"problem_id": {"const": "O005-BRIDGE-C1-P01"}, "ordinal": {"const": 1}}, "not": {"required": ["notebook"]}}]},
-        {"allOf": [{"$ref": "#/$defs/problem"}, {"properties": {"problem_id": {"const": "O005-BRIDGE-C1-P02"}, "ordinal": {"const": 2}}, "not": {"required": ["notebook"]}}]},
-        {"allOf": [{"$ref": "#/$defs/problem"}, {"properties": {"problem_id": {"const": "O005-BRIDGE-C1-P03"}, "ordinal": {"const": 3}}, "not": {"required": ["notebook"]}}]},
-        {"allOf": [{"$ref": "#/$defs/problem"}, {"properties": {"problem_id": {"const": "O005-BRIDGE-C1-P04"}, "ordinal": {"const": 4}}, "not": {"required": ["notebook"]}}]},
-        {"allOf": [{"$ref": "#/$defs/problem"}, {"properties": {"problem_id": {"const": "O005-BRIDGE-C1-P05"}, "ordinal": {"const": 5}}, "not": {"required": ["notebook"]}}]},
-        {"allOf": [{"$ref": "#/$defs/problem"}, {"properties": {"problem_id": {"const": "O005-BRIDGE-C1-P06"}, "ordinal": {"const": 6}}, "not": {"required": ["notebook"]}}]},
-        {"allOf": [{"$ref": "#/$defs/problem"}, {"properties": {"problem_id": {"const": "O005-BRIDGE-C1-P07"}, "ordinal": {"const": 7}}, "required": ["notebook"]}]}
-      ],
-      "items": false
+      "items": {"$ref": "#/$defs/problem"}
     }
   },
+  "allOf": [
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C1"}}},
+      "then": {
+        "properties": {
+          "source": {"not": {"required": ["relationship"]}},
+          "provenance_policy": {"not": {"required": ["external_data_or_assets"]}},
+          "problems": {
+            "items": {
+              "properties": {
+                "problem_id": {"pattern": "^O005-BRIDGE-C1-P0[1-7]$"},
+                "notebook": {
+                  "properties": {
+                    "path": {
+                      "const": "source/id-ID/O005-BRIDGE-C1/notebooks/bridge-c1-reproducible-workflow.ipynb"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C2"}}},
+      "then": {
+        "properties": {
+          "source": {"not": {"required": ["relationship"]}},
+          "provenance_policy": {"not": {"required": ["external_data_or_assets"]}},
+          "problems": {
+            "items": {
+              "properties": {
+                "problem_id": {"pattern": "^O005-BRIDGE-C2-P0[1-7]$"},
+                "notebook": {
+                  "properties": {
+                    "path": {
+                      "const": "source/id-ID/O005-BRIDGE-C2/notebooks/bridge-c2-local-bifurcations.ipynb"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C3"}}},
+      "then": {
+        "properties": {
+          "source": {"required": ["relationship"]},
+          "provenance_policy": {"required": ["external_data_or_assets"]},
+          "problems": {
+            "items": {
+              "properties": {
+                "problem_id": {"pattern": "^O005-BRIDGE-C3-P0[1-7]$"},
+                "notebook": {
+                  "properties": {
+                    "path": {
+                      "const": "source/id-ID/O005-BRIDGE-C3/notebooks/bridge-c3-chaos-and-return-maps.ipynb"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C4"}}},
+      "then": {
+        "properties": {
+          "source": {"not": {"required": ["relationship"]}},
+          "provenance_policy": {"not": {"required": ["external_data_or_assets"]}},
+          "problems": {
+            "items": {
+              "properties": {
+                "problem_id": {"pattern": "^O005-BRIDGE-C4-P0[1-7]$"},
+                "notebook": {
+                  "properties": {
+                    "path": {
+                      "const": "source/id-ID/O005-BRIDGE-C4/notebooks/bridge-c4-calibration-validation-uncertainty.ipynb"
+                    }
+                  }
+                },
+                "check": {
+                  "properties": {
+                    "tolerances": {
+                      "propertyNames": {"$ref": "#/$defs/c4ToleranceName"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "unit_id": {
+            "enum": ["O005-BRIDGE-C1", "O005-BRIDGE-C2", "O005-BRIDGE-C3"]
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "problems": {
+            "items": {
+              "properties": {
+                "check": {
+                  "properties": {
+                    "tolerances": {
+                      "propertyNames": {"$ref": "#/$defs/legacyToleranceName"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
   "$defs": {
     "nonemptyString": {"type": "string", "minLength": 1},
+    "legacyToleranceName": {
+      "enum": [
+        "absolute_c", "k_absolute", "temperature_absolute_c", "metric_absolute_c",
+        "closed_form_absolute", "radial_solution_max_absolute", "lyapunov_absolute",
+        "multiplier_absolute", "residual_norm_max", "section_absolute",
+        "solver_norm_max", "state_absolute", "time_absolute"
+      ]
+    },
+    "c4ToleranceName": {
+      "enum": [
+        "absolute", "aicc_absolute", "bootstrap_quantile_k_absolute",
+        "k_main_absolute", "metric_absolute", "r_absolute"
+      ]
+    },
     "provenance": {
       "type": "object",
       "additionalProperties": false,
@@ -76,10 +210,25 @@
       "additionalProperties": false,
       "minProperties": 1,
       "properties": {
+        "absolute": {"type": "number", "exclusiveMinimum": 0},
         "absolute_c": {"type": "number", "exclusiveMinimum": 0},
+        "aicc_absolute": {"type": "number", "exclusiveMinimum": 0},
+        "bootstrap_quantile_k_absolute": {"type": "number", "exclusiveMinimum": 0},
         "k_absolute": {"type": "number", "exclusiveMinimum": 0},
+        "k_main_absolute": {"type": "number", "exclusiveMinimum": 0},
         "temperature_absolute_c": {"type": "number", "exclusiveMinimum": 0},
-        "metric_absolute_c": {"type": "number", "exclusiveMinimum": 0}
+        "metric_absolute": {"type": "number", "exclusiveMinimum": 0},
+        "metric_absolute_c": {"type": "number", "exclusiveMinimum": 0},
+        "closed_form_absolute": {"type": "number", "exclusiveMinimum": 0},
+        "radial_solution_max_absolute": {"type": "number", "exclusiveMinimum": 0},
+        "r_absolute": {"type": "number", "exclusiveMinimum": 0},
+        "lyapunov_absolute": {"type": "number", "exclusiveMinimum": 0},
+        "multiplier_absolute": {"type": "number", "exclusiveMinimum": 0},
+        "residual_norm_max": {"type": "number", "exclusiveMinimum": 0},
+        "section_absolute": {"type": "number", "exclusiveMinimum": 0},
+        "solver_norm_max": {"type": "number", "exclusiveMinimum": 0},
+        "state_absolute": {"type": "number", "exclusiveMinimum": 0},
+        "time_absolute": {"type": "number", "exclusiveMinimum": 0}
       }
     },
     "check": {
@@ -135,7 +284,10 @@
       "additionalProperties": false,
       "required": ["path", "provenance"],
       "properties": {
-        "path": {"const": "source/id-ID/O005-BRIDGE-C1/notebooks/bridge-c1-reproducible-workflow.ipynb"},
+        "path": {
+          "type": "string",
+          "pattern": "^source/id-ID/O005-BRIDGE-C[1234]/notebooks/[a-z0-9-]+\\.ipynb$"
+        },
         "provenance": {"const": "new_original"}
       }
     },
@@ -147,7 +299,7 @@
         "source_formula_occurrences", "provenance", "hint", "check", "solution_or_rubric"
       ],
       "properties": {
-        "problem_id": {"type": "string", "pattern": "^O005-BRIDGE-C1-P0[1-7]$"},
+        "problem_id": {"type": "string", "pattern": "^O005-BRIDGE-C[1234]-P0[1-7]$"},
         "ordinal": {"type": "integer", "minimum": 1, "maximum": 7},
         "problem_summary": {"$ref": "#/$defs/nonemptyString"},
         "article_link_ids": {"type": "array", "maxItems": 0},

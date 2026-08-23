@@ -1,0 +1,158 @@
+<div class="textbox textbox--learning-objectives" id="O005-BRIDGE-C2-OBJ">
+<header class="textbox__header">
+<h2 class="textbox__title" data-o005-segment-key="c2/objectives-heading">Tujuan Pembelajaran</h2>
+</header>
+<div class="textbox__content">
+<p data-o005-segment-key="c2/objectives-introduction">Setelah menyelesaikan modul ini, Anda akan mampu:</p>
+<ul data-o005-segment-key="c2/objectives-list">
+<li data-o005-segment-key="c2/objective-equilibria-stability">menentukan cabang kesetimbangan dan kestabilan lokal dalam keluarga sistem yang bergantung pada parameter;</li>
+<li data-o005-segment-key="c2/objective-nonhyperbolicity">menjelaskan mengapa nonhiperbolisitas diperlukan, tetapi tidak cukup, untuk menyimpulkan terjadinya bifurkasi;</li>
+<li data-o005-segment-key="c2/objective-scalar-normal-forms">mengenali bentuk normal bifurkasi saddle-node, transkritis, dan pitchfork beserta batas penafsirannya;</li>
+<li data-o005-segment-key="c2/objective-hopf">menurunkan jari-jari, periode, dan kestabilan siklus limit pada bentuk normal Hopf superkritis; dan</li>
+<li data-o005-segment-key="c2/objective-read-diagrams">membaca diagram bifurkasi serta membedakannya dari deret waktu dan potret fase.</li>
+</ul>
+</div>
+</div>
+
+<section id="O005-BRIDGE-C2-SEC01">
+<h2 data-o005-segment-key="c2/parameter-dependent-qualitative-change-heading">Parameter dapat mengubah jenis perilaku</h2>
+<p data-o005-segment-key="c2/parameter-family-definition">Pertimbangkan keluarga persamaan diferensial otonom satu dimensi</p>
+<p data-o005-segment-key="c2/scalar-family-equation">\[\frac{dx}{dt}=f(x;\mu),\]</p>
+<p data-o005-segment-key="c2/scalar-family-terms">dengan \(x\) sebagai variabel keadaan dan \(\mu\) sebagai parameter kendali. Untuk setiap nilai \(\mu\), persamaan tersebut mendefinisikan sebuah sistem yang berbeda. Nilai \(x_*(\mu)\) merupakan kesetimbangan apabila \(f(x_*;\mu)=0\). Diagram bifurkasi menempatkan \(\mu\) pada sumbu mendatar dan nilai kesetimbangan atau ukuran atraktor pada sumbu tegak, sehingga perubahan perilaku dapat diikuti dari satu sistem ke sistem berikutnya.</p>
+<p data-o005-segment-key="c2/bifurcation-definition">Bifurkasi lokal terjadi ketika perubahan kecil pada parameter di sekitar nilai kritis mengubah susunan lokal objek invarian atau kestabilannya. Cabang kesetimbangan dapat muncul, lenyap, berpotongan, atau kehilangan kestabilan; pada sistem berdimensi dua atau lebih, osilasi kecil dapat muncul sebagai siklus limit. Istilah <em>lokal</em> penting: bentuk normal menjelaskan dinamika di dekat keadaan dan parameter kritis, bukan seluruh ruang fase untuk semua nilai parameter.</p>
+<aside class="textbox textbox--key-takeaway" aria-labelledby="O005-BRIDGE-C2-PRINCIPLE">
+<header class="textbox__header"><h3 class="textbox__title" id="O005-BRIDGE-C2-PRINCIPLE" data-o005-segment-key="c2/core-principle-heading">Prinsip inti</h3></header>
+<div class="textbox__content"><p data-o005-segment-key="c2/core-principle-text">Jangan mencari bifurkasi hanya dengan melihat bahwa suatu kurva tampak berbelok. Tentukan kesetimbangan, hitung linearisasi, periksa syarat degenerasi dan transversalitas, lalu hubungkan kesimpulan lokal dengan domain fisik model.</p></div>
+</aside>
+</section>
+
+<section id="O005-BRIDGE-C2-SEC02">
+<h2 data-o005-segment-key="c2/linear-stability-heading">Kestabilan linear dan titik nonhiperbolik</h2>
+<p data-o005-segment-key="c2/linearization-eigenvalue">Di sekitar kesetimbangan \(x_*\), tulis \(x=x_*+\xi\). Suku linear memenuhi</p>
+<p data-o005-segment-key="c2/linearization-equation">\[\frac{d\xi}{dt}=\lambda\xi+\text{suku berorde lebih tinggi},\qquad \lambda=f_x(x_*;\mu).\]</p>
+<p data-o005-segment-key="c2/stability-sign-test">Jika \(\lambda&lt;0\), gangguan kecil menyusut dan kesetimbangan stabil asimtotik secara lokal. Jika \(\lambda&gt;0\), gangguan membesar dan kesetimbangan tidak stabil. Uji tanda ini tidak memberi keputusan ketika \(\lambda=0\). Kesetimbangan dengan linearisasi bernilai nol disebut nonhiperbolik; pada titik itulah suku nonlinear harus diperiksa.</p>
+<p data-o005-segment-key="c2/nonhyperbolicity-not-sufficient">Nonhiperbolisitas membuka kemungkinan bifurkasi, tetapi tidak membuktikannya. Sebagai contoh, keluarga</p>
+<p data-o005-segment-key="c2/nonbifurcating-counterexample-equation">\[\frac{dx}{dt}=-x^3-\mu^2x\]</p>
+<p data-o005-segment-key="c2/nonbifurcating-counterexample-analysis">memiliki kesetimbangan \(x_*=0\) untuk setiap \(\mu\). Nilai eigennya \(\lambda=-\mu^2\), sehingga \(\lambda=0\) pada \(\mu=0\). Meskipun demikian, \(x=0\) tetap stabil asimtotik: untuk \(x&gt;0\) medan vektor mengarah ke kiri, sedangkan untuk \(x&lt;0\) medan vektor mengarah ke kanan. Tidak ada cabang baru dan tidak terjadi pertukaran kestabilan. Contoh ini menunjukkan mengapa pemeriksaan \(\lambda=0\) harus diikuti analisis suku nonlinear dan ketergantungan parameter.</p>
+<p data-o005-segment-key="c2/genericity-caveat">Bentuk normal di bawah ini mewakili kasus generik setelah translasi dan penskalaan lokal. Model nyata dapat memiliki simetri, hukum kekekalan, batas domain, atau parameter yang saling bergantung. Struktur tambahan tersebut dapat memaksa bifurkasi tertentu atau justru menghilangkannya.</p>
+</section>
+
+<section id="O005-BRIDGE-C2-SEC03">
+<h2 data-o005-segment-key="c2/saddle-node-heading">Bifurkasi saddle-node: dua kesetimbangan lahir bersama</h2>
+<p data-o005-segment-key="c2/saddle-node-normal-form-introduction">Bentuk normal bifurkasi saddle-node adalah</p>
+<p data-o005-segment-key="c2/saddle-node-normal-form-equation">\[\frac{dx}{dt}=\mu-x^2.\]</p>
+<p data-o005-segment-key="c2/saddle-node-equilibrium-census">Persamaan kesetimbangannya \(\mu-x^2=0\). Untuk \(\mu&lt;0\) tidak ada kesetimbangan riil di lingkungan bentuk normal. Pada \(\mu=0\) terdapat kesetimbangan ganda \(x=0\). Untuk \(\mu&gt;0\) terdapat dua cabang, \(x_-=-\sqrt{\mu}\) dan \(x_+=\sqrt{\mu}\).</p>
+<p data-o005-segment-key="c2/saddle-node-stability">Karena \(\lambda=f_x=-2x_*\), cabang negatif mempunyai \(\lambda=2\sqrt{\mu}&gt;0\) dan tidak stabil, sedangkan cabang positif mempunyai \(\lambda=-2\sqrt{\mu}&lt;0\) dan stabil. Pada titik kritis, \(dx/dt=-x^2\): keadaan dari sisi kanan bergerak menuju nol, tetapi keadaan dari sisi kiri bergerak menjauhinya. Karena itu, kesetimbangan ganda tersebut semistabil, bukan stabil dua sisi.</p>
+<p data-o005-segment-key="c2/saddle-node-canonical-case">Pada kasus kanonik \(\mu=-0.25\), tidak ada kesetimbangan. Pada \(\mu=0.25\), kesetimbangannya \(x=-0.5\) dengan \(\lambda=1\) dan \(x=0.5\) dengan \(\lambda=-1\). Akar kuadrat menyebabkan cabang memiliki garis singgung vertikal ketika dilihat sebagai \(x_*(\mu)\) pada titik kelahirannya.</p>
+</section>
+
+<section id="O005-BRIDGE-C2-SEC04">
+<h2 data-o005-segment-key="c2/transcritical-heading">Bifurkasi transkritis: dua cabang bertukar kestabilan</h2>
+<p data-o005-segment-key="c2/transcritical-normal-form-introduction">Bentuk normal transkritis adalah</p>
+<p data-o005-segment-key="c2/transcritical-normal-form-equation">\[\frac{dx}{dt}=\mu x-x^2=x(\mu-x).\]</p>
+<p data-o005-segment-key="c2/transcritical-branches">Dua kesetimbangan \(x_0=0\) dan \(x_1=\mu\) ada untuk semua nilai parameter dan berpotongan pada \((\mu,x)=(0,0)\). Pada cabang \(x_0\), nilai eigennya \(\lambda_0=\mu\). Pada cabang \(x_1\), nilainya \(\lambda_1=-\mu\). Jadi, untuk \(\mu&lt;0\), \(x_0\) stabil dan \(x_1\) tidak stabil; untuk \(\mu&gt;0\), label kestabilan itu bertukar.</p>
+<p data-o005-segment-key="c2/transcritical-canonical-case">Untuk \(\mu=-0.5\), cabang nol mempunyai \(\lambda=-0.5\), sedangkan cabang \(x=\mu=-0.5\) mempunyai \(\lambda=0.5\). Untuk \(\mu=0.5\), tanda keduanya terbalik. Persilangan gambar semata belum cukup: pertukaran tanda pada linearisasilah yang menyatakan pertukaran kestabilan.</p>
+<p data-o005-segment-key="c2/transcritical-physical-domain-caveat">Dalam model populasi, sering kali hanya \(x\ge0\) yang bermakna. Cabang \(x=\mu\) berada di luar domain fisik ketika \(\mu&lt;0\). Diagram pada seluruh garis riil tetap berguna sebagai analisis bentuk normal, tetapi laporan model harus membedakan cabang matematis dari keadaan yang dapat diwujudkan. Batas domain juga membuat gagasan kestabilan satu sisi relevan pada \(x=0\).</p>
+</section>
+
+<section id="O005-BRIDGE-C2-SEC05">
+<h2 data-o005-segment-key="c2/pitchfork-heading">Bifurkasi pitchfork: simetri dan pemecahan simetri</h2>
+<p data-o005-segment-key="c2/pitchfork-supercritical-introduction">Bentuk normal bifurkasi pitchfork superkritis adalah</p>
+<p data-o005-segment-key="c2/pitchfork-supercritical-equation">\[\frac{dx}{dt}=\mu x-x^3=x(\mu-x^2).\]</p>
+<p data-o005-segment-key="c2/pitchfork-supercritical-branches">Cabang \(x=0\) ada untuk semua \(\mu\). Dua cabang simetris \(x=\pm\sqrt{\mu}\) muncul ketika \(\mu\ge0\). Pada cabang nol, \(\lambda=\mu\), sehingga cabang itu stabil untuk \(\mu&lt;0\) dan tidak stabil untuk \(\mu&gt;0\). Pada kedua cabang luar, \(\lambda=\mu-3x_*^2=-2\mu&lt;0\), sehingga keduanya stabil untuk \(\mu&gt;0\).</p>
+<p data-o005-segment-key="c2/pitchfork-symmetry">Persamaan tetap sama jika \(x\) diganti dengan \(-x\); simetri inilah yang menghasilkan dua cabang luar yang berpasangan. Dalam aplikasi, \(x\) dapat menyatakan selisih antara dua keadaan yang setara. Di bawah nilai kritis, keadaan simetris stabil. Di atasnya, keadaan simetris kehilangan kestabilan dan sistem memilih salah satu dari dua keadaan yang memecahkan simetri.</p>
+<p data-o005-segment-key="c2/pitchfork-subcritical">Bentuk subkritis lokal \(dx/dt=\mu x+x^3\) mempunyai cabang luar \(x=\pm\sqrt{-\mu}\) untuk \(\mu&lt;0\), dan cabang tersebut tidak stabil. Suku kubik positif juga membuat solusi besar meninggalkan lingkungan lokal; bentuk normal ini tidak boleh dipakai untuk menyimpulkan perilaku global. Suku orde lebih tinggi dapat membatasi amplitudo dan menghasilkan histeresis.</p>
+<p data-o005-segment-key="c2/pitchfork-imperfection">Gangguan kecil yang merusak simetri, misalnya penambahan konstanta \(\varepsilon\ne0\), biasanya memecah diagram pitchfork sempurna menjadi cabang yang tidak simetris. Karena itu, sebelum menamai pola sebagai bifurkasi pitchfork, cari alasan mekanistik atau struktural bagi simetri tersebut.</p>
+</section>
+
+<section id="O005-BRIDGE-C2-SEC06">
+<h2 data-o005-segment-key="c2/hopf-heading">Bifurkasi Hopf: osilasi lahir dari kesetimbangan</h2>
+<p data-o005-segment-key="c2/hopf-cartesian-introduction">Bifurkasi Hopf memerlukan sedikitnya dua dimensi. Bentuk normal superkritis berikut menggunakan \(r^2=x^2+y^2\), dengan \(\beta&gt;0\) dan \(\omega&gt;0\):</p>
+<p data-o005-segment-key="c2/hopf-cartesian-equations">\[\dot{x}=\mu x-\omega y-\beta r^2x,\qquad \dot{y}=\omega x+\mu y-\beta r^2y.\]</p>
+<p data-o005-segment-key="c2/hopf-polar-equations">Dalam koordinat polar, persamaan tersebut menjadi</p>
+<p data-o005-segment-key="c2/hopf-polar-system">\[\dot r=\mu r-\beta r^3,\qquad \dot\theta=\omega.\]</p>
+<p data-o005-segment-key="c2/hopf-origin-stability">Linearisasi pada titik asal mempunyai nilai eigen \(\mu\pm i\omega\). Untuk \(\mu&lt;0\), bagian riilnya negatif dan lintasan berpilin menuju asal. Untuk \(\mu&gt;0\), asal tidak stabil. Nilai eigen melintasi sumbu imajiner dengan laju tak nol karena \(d\operatorname{Re}\lambda/d\mu=1\).</p>
+<p data-o005-segment-key="c2/hopf-cycle-properties">Jika \(\mu&gt;0\), persamaan radial mempunyai kesetimbangan nonnol</p>
+<p data-o005-segment-key="c2/hopf-cycle-formulas">\[r_*=\sqrt{\frac{\mu}{\beta}},\qquad P=\frac{2\pi}{\omega}.\]</p>
+<p data-o005-segment-key="c2/hopf-radial-stability">Turunan medan radial pada \(r_*\) adalah \(\mu-3\beta r_*^2=-2\mu&lt;0\), sehingga siklus limit stabil. Untuk \(\omega=2\), \(\beta=1\), dan \(\mu=0.25\), jari-jarinya \(0.5\), periodenya \(\pi\), dan turunan radialnya \(-0.5\). Jika hanya \(\beta\) diubah menjadi \(2\), jari-jari menjadi \(0.3535533905932738\), sedangkan periode dan turunan radial tetap \(\pi\) dan \(-0.5\).</p>
+<p data-o005-segment-key="c2/hopf-locality-caveat">Pasangan nilai eigen imajiner murni pada titik kritis saja belum menjamin Hopf. Diperlukan syarat transversalitas dan koefisien nonlinear pertama yang tidak nol. Tanda koefisien itu membedakan kasus superkritis, yang melahirkan siklus kecil stabil, dari kasus subkritis, yang secara lokal melibatkan siklus tidak stabil.</p>
+</section>
+
+<section id="O005-BRIDGE-C2-SEC07">
+<h2 data-o005-segment-key="c2/diagram-reading-heading">Membaca tiga jenis gambar tanpa mencampurkannya</h2>
+<p data-o005-segment-key="c2/diagram-reading-introduction">Satu model dapat menghasilkan diagram bifurkasi, potret fase, dan deret waktu. Ketiganya menjawab pertanyaan yang berbeda.</p>
+<table data-o005-segment-key="c2/diagram-types-table">
+<caption data-o005-segment-key="c2/diagram-types-caption">Perbedaan fungsi diagram dalam analisis bifurkasi</caption>
+<thead><tr><th scope="col" data-o005-segment-key="c2/diagram-table-kind-header">Gambar</th><th scope="col" data-o005-segment-key="c2/diagram-table-axes-header">Sumbu</th><th scope="col" data-o005-segment-key="c2/diagram-table-question-header">Pertanyaan yang dijawab</th></tr></thead>
+<tbody>
+<tr><th scope="row" data-o005-segment-key="c2/diagram-table-bifurcation-kind">Diagram bifurkasi</th><td data-o005-segment-key="c2/diagram-table-bifurcation-axes">parameter dan keadaan/amplitudo asimtotik</td><td data-o005-segment-key="c2/diagram-table-bifurcation-question">Objek invarian apa yang ada dan bagaimana kestabilannya berubah?</td></tr>
+<tr><th scope="row" data-o005-segment-key="c2/diagram-table-phase-kind">Potret fase</th><td data-o005-segment-key="c2/diagram-table-phase-axes">dua variabel keadaan</td><td data-o005-segment-key="c2/diagram-table-phase-question">Ke mana lintasan bergerak untuk satu nilai parameter?</td></tr>
+<tr><th scope="row" data-o005-segment-key="c2/diagram-table-time-kind">Deret waktu</th><td data-o005-segment-key="c2/diagram-table-time-axes">waktu dan satu variabel keadaan</td><td data-o005-segment-key="c2/diagram-table-time-question">Bagaimana satu komponen berubah sepanjang suatu lintasan?</td></tr>
+</tbody>
+</table>
+<p data-o005-segment-key="c2/stability-style-convention">Dalam notebook pendamping, garis utuh dengan penanda lingkaran menyatakan cabang stabil, sedangkan garis putus-putus dengan penanda silang menyatakan cabang tidak stabil. Titik kritis diberi penanda wajik. Warna hanya membantu pengelompokan; jenis garis dan bentuk penanda tetap membawa informasi ketika warna tidak dapat dibedakan.</p>
+<p data-o005-segment-key="c2/diagram-branch-not-trajectory">Cabang pada diagram bifurkasi bukan lintasan waktu. Mengikuti kurva dari kiri ke kanan berarti membandingkan sistem pada parameter berbeda, bukan menyimulasikan satu keadaan yang bergerak karena waktu. Jika parameter benar-benar berubah terhadap waktu, muncul persoalan dinamis tambahan seperti keterlambatan bifurkasi yang tidak dicakup oleh diagram statis ini.</p>
+</section>
+
+<section id="O005-BRIDGE-C2-SEC08">
+<h2 data-o005-segment-key="c2/notebook-heading">Eksperimen komputasional yang dapat diperiksa</h2>
+<p data-o005-segment-key="c2/notebook-scope">Notebook pendamping menyensus kesetimbangan dan nilai eigen untuk kasus kanonik, menggambar empat diagram bentuk normal, lalu mengintegrasikan bentuk normal Hopf dengan <code>DOP853</code> pada \(0\le t\le40\) menggunakan 801 titik keluaran, <code>rtol=1e-11</code>, dan <code>atol=1e-13</code>. Jari-jari numerik dibandingkan dengan solusi eksak persamaan radial; galat maksimum wajib kurang dari \(10^{-9}\).</p>
+<p data-o005-segment-key="c2/first-plot-long-description"><strong>Deskripsi panjang gambar pertama:</strong> empat panel menyajikan bentuk normal saddle-node, transkritis, pitchfork superkritis, dan amplitudo Hopf. Panel saddle-node kosong untuk parameter negatif lalu bercabang menjadi satu cabang tidak stabil di bawah dan satu cabang stabil di atas. Panel transkritis memperlihatkan dua garis yang berpotongan dan bertukar jenis garis pada nol. Panel pitchfork memperlihatkan cabang nol stabil untuk parameter negatif, lalu menjadi tidak stabil ketika dua cabang stabil simetris muncul. Panel Hopf memperlihatkan keadaan asal yang kehilangan kestabilan pada nol dan selubung amplitudo atas–bawah \(\pm r_*\) yang tumbuh seperti akar kuadrat untuk parameter positif; kedua selubung itu menggambarkan satu siklus, bukan dua jari-jari yang berbeda.</p>
+<p data-o005-segment-key="c2/second-plot-long-description"><strong>Deskripsi panjang gambar kedua:</strong> empat panel membandingkan dinamika Hopf pada \(\mu=-0.25\) dan \(\mu=0.25\). Dua panel potret fase memperlihatkan beberapa lintasan berputar berlawanan arah jarum jam. Untuk parameter negatif, semua lintasan menyusut menuju asal; grafik jari-jari di sampingnya turun menuju nol. Untuk parameter positif, lintasan dari dalam dan luar mendekati lingkaran berjari-jari \(0.5\); grafik jari-jari di sampingnya mendekati garis horizontal \(r=0.5\). Garis numerik dan penanda solusi eksak bertumpuk dalam ketelitian gambar.</p>
+<p data-o005-segment-key="c2/notebook-output-clean">Sumber notebook disimpan tanpa keluaran. Lingkungannya dipatok dalam <code>requirements.lock</code>, tidak memakai jaringan setelah lingkungan terpasang, dan menggunakan pemeriksaan <code>require()</code> yang tetap aktif ketika Python dijalankan dengan optimisasi. Dua eksekusi dalam kernel yang sama harus menghasilkan ringkasan numerik identik; gerbang QA eksternal tetap perlu memulai kernel baru.</p>
+</section>
+
+<section id="O005-BRIDGE-C2-SEC09">
+<h2 data-o005-segment-key="c2/analysis-workflow-heading">Alur analisis dan perangkap penafsiran</h2>
+<ol data-o005-segment-key="c2/analysis-workflow-list">
+<li data-o005-segment-key="c2/workflow-state-domain">Nyatakan variabel, parameter, satuan, dan domain keadaan yang bermakna.</li>
+<li data-o005-segment-key="c2/workflow-find-equilibria">Selesaikan persamaan kesetimbangan untuk seluruh cabang yang relevan, termasuk akar ganda.</li>
+<li data-o005-segment-key="c2/workflow-linearize">Hitung nilai eigen linearisasi sepanjang setiap cabang dan tandai titik nonhiperbolik.</li>
+<li data-o005-segment-key="c2/workflow-check-degeneracy">Periksa suku nonlinear, simetri, transversalitas, dan syarat nondegenerasi yang sesuai.</li>
+<li data-o005-segment-key="c2/workflow-combine-evidence">Gabungkan aljabar, diagram, dan simulasi; jangan menjadikan salah satunya pengganti dua lainnya.</li>
+<li data-o005-segment-key="c2/workflow-limit-claims">Batasi klaim pada lingkungan parameter dan keadaan tempat pendekatan lokal berlaku.</li>
+</ol>
+<table data-o005-segment-key="c2/common-errors-table">
+<caption data-o005-segment-key="c2/common-errors-caption">Kesalahan umum dan koreksinya</caption>
+<thead><tr><th scope="col" data-o005-segment-key="c2/common-errors-claim-header">Klaim keliru</th><th scope="col" data-o005-segment-key="c2/common-errors-correction-header">Koreksi</th></tr></thead>
+<tbody>
+<tr><th scope="row" data-o005-segment-key="c2/common-errors-zero-eigenvalue">“Nilai eigen nol berarti pasti terjadi bifurkasi.”</th><td data-o005-segment-key="c2/common-errors-zero-eigenvalue-correction">Nilai nol hanya membuat uji linear tidak konklusif; keluarga \(-x^3-\mu^2x\) memberi contoh tandingan.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c2/common-errors-crossing-branches">“Dua cabang berpotongan, jadi keduanya bertukar kestabilan.”</th><td data-o005-segment-key="c2/common-errors-crossing-branches-correction">Hitung tanda nilai eigen pada masing-masing sisi titik kritis.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c2/common-errors-physical-domain">“Semua cabang pada gambar merupakan keadaan fisik.”</th><td data-o005-segment-key="c2/common-errors-physical-domain-correction">Terapkan batas seperti populasi tak negatif setelah menyelesaikan cabang matematis.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c2/common-errors-global-normal-form">“Bentuk normal berlaku untuk amplitudo dan parameter berapa pun.”</th><td data-o005-segment-key="c2/common-errors-global-normal-form-correction">Bentuk normal merupakan uraian lokal; perilaku jauh dari titik kritis memerlukan model lengkap.</td></tr>
+<tr><th scope="row" data-o005-segment-key="c2/common-errors-plot-proof">“Gambar numerik membuktikan jenis bifurkasi.”</th><td data-o005-segment-key="c2/common-errors-plot-proof-correction">Gambar adalah bukti pendukung; cabang, linearisasi, dan syarat nondegenerasi tetap harus diperiksa.</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="O005-BRIDGE-C2-SEC10">
+<h2 data-o005-segment-key="c2/summary-heading">Ringkasan</h2>
+<p data-o005-segment-key="c2/summary-text">Bifurkasi menghubungkan perubahan parameter dengan perubahan kualitatif dinamika. Saddle-node menciptakan pasangan kesetimbangan stabil dan tidak stabil; transkritis menukar kestabilan dua cabang; pitchfork superkritis memecah keadaan simetris menjadi dua keadaan stabil; dan Hopf superkritis melahirkan osilasi stabil dari kesetimbangan. Dalam setiap kasus, diagram baru bermakna setelah cabang, nilai eigen, syarat nonlinear, domain fisik, dan batas lokalnya dinyatakan.</p>
+<p data-o005-segment-key="c2/provenance-note">Modul ini merupakan tambahan independen berbahasa Indonesia dan bukan bagian dari buku sumber. Produksi dan QA: OpenAI Codex gpt-5.6-sol, Ultra. Kredit Joceline Lega dan University of Arizona untuk <i>Introduction to Mathematical Modeling</i> tetap terpisah; tidak ada dukungan mereka terhadap tambahan ini yang dinyatakan atau disiratkan. Distribusi mengikuti CC BY-NC-SA 4.0.</p>
+</section>
+
+<div class="textbox textbox--exercises" id="O005-BRIDGE-C2-EXERCISES">
+<header class="textbox__header"><h2 class="textbox__title" data-o005-segment-key="c2/mastery-exercises-heading">Latihan Penguasaan</h2></header>
+<div class="textbox__content">
+<h3 id="O005-BRIDGE-C2-P01" data-o005-segment-key="c2/problem-nonhyperbolicity-counterexample-heading">Soal 1</h3>
+<p data-o005-segment-key="c2/problem-nonhyperbolicity-counterexample-prompt">Untuk \(dx/dt=-x^3-\mu^2x\), tunjukkan bahwa \(x=0\) nonhiperbolik pada \(\mu=0\), tetapi tidak terjadi bifurkasi ketika \(\mu\) melewati nol. Gunakan persamaan kesetimbangan, nilai eigen, dan arah medan vektor.</p>
+
+<h3 id="O005-BRIDGE-C2-P02" data-o005-segment-key="c2/problem-saddle-node-census-heading">Soal 2</h3>
+<p data-o005-segment-key="c2/problem-saddle-node-census-prompt">Buat sensus lengkap kesetimbangan dan kestabilan \(dx/dt=\mu-x^2\) untuk \(\mu&lt;0\), \(\mu=0\), dan \(\mu&gt;0\). Jelaskan secara satu sisi mengapa kesetimbangan pada \(\mu=0\) semistabil.</p>
+
+<h3 id="O005-BRIDGE-C2-P03" data-o005-segment-key="c2/problem-transcritical-domain-heading">Soal 3</h3>
+<p data-o005-segment-key="c2/problem-transcritical-domain-prompt">Untuk \(dx/dt=x(\mu-x)\), tentukan kestabilan kedua cabang pada \(\mu=-0.5\) dan \(\mu=0.5\). Kemudian jelaskan bagian diagram mana yang dikeluarkan apabila \(x\) menyatakan populasi dan harus memenuhi \(x\ge0\).</p>
+
+<h3 id="O005-BRIDGE-C2-P04" data-o005-segment-key="c2/problem-pitchfork-symmetry-heading">Soal 4</h3>
+<p data-o005-segment-key="c2/problem-pitchfork-symmetry-prompt">Untuk \(dx/dt=\mu x-x^3\), hitung semua kesetimbangan dan nilai eigennya pada \(\mu=-0.36\) dan \(\mu=0.36\). Tunjukkan bahwa cabang luar pada parameter positif adalah \(x=\pm0.6\) dengan \(\lambda=-0.72\), lalu jelaskan peran simetri \(x\mapsto-x\).</p>
+
+<h3 id="O005-BRIDGE-C2-P05" data-o005-segment-key="c2/problem-hopf-derivation-heading">Soal 5</h3>
+<p data-o005-segment-key="c2/problem-hopf-derivation-prompt">Turunkan persamaan radial dan sudut dari bentuk normal Hopf. Untuk \(\mu=0.25\), \(\beta=1\), dan \(\omega=2\), hitung jari-jari siklus, periode, dan turunan medan radial pada siklus; gunakan hasil terakhir untuk menentukan kestabilannya.</p>
+
+<h3 id="O005-BRIDGE-C2-P06" data-o005-segment-key="c2/problem-diagram-interpretation-heading">Soal 6</h3>
+<p data-o005-segment-key="c2/problem-diagram-interpretation-prompt">Seorang pembaca menyatakan bahwa bergerak sepanjang cabang pada diagram bifurkasi sama dengan mengikuti lintasan waktu. Koreksi pernyataan itu dan jelaskan informasi tambahan yang diperlukan untuk mengetahui gerak sebuah keadaan pada satu nilai parameter.</p>
+
+<h3 id="O005-BRIDGE-C2-P07" data-o005-segment-key="c2/problem-notebook-execution-heading">Soal 7</h3>
+<p data-o005-segment-key="c2/problem-notebook-execution-prompt">Jalankan notebook pendamping dari kernel bersih dan verifikasi seluruh kasus kanonik serta batas galat solusi radial. Kemudian ubah hanya \(\beta\) dari \(1\) menjadi \(2\) pada kasus \(\mu=0.25\), jalankan ulang, dan jelaskan mengapa jari-jari berubah menjadi \(0.3535533905932738\), sedangkan periode \(\pi\) dan turunan radial \(-0.5\) tidak berubah.</p>
+</div>
+</div>

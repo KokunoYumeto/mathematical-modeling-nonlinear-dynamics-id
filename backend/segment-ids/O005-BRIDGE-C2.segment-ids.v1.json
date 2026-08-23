@@ -1,0 +1,703 @@
+{
+  "binding_algorithm": "sha256-segment-key-nul-html-path-nul-canonical-text-v1",
+  "content_path": "source/id-ID/O005-BRIDGE-C2/content.html",
+  "content_sha256": "08c3ab749364e6d33028ad6369b18c78361f30b021a36e75ade73325582a8b5a",
+  "entries": [
+    {
+      "segment_id": "O005-BRIDGE-C2-S0001",
+      "segment_key": "c2/objectives-heading",
+      "slot_binding_sha256": "d25a13d9545adea20994d85d20ecef00f6105c559a861baf40e0f6da484fcebd",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0002",
+      "segment_key": "c2/objectives-introduction",
+      "slot_binding_sha256": "934a175d5e7c04f72482153b91fd00aa400553a7b63201ce24d4dd017de81a3d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0003",
+      "segment_key": "c2/objectives-list",
+      "slot_binding_sha256": "d7a182c0d5e2e316b5b0f1570dab13e8644d96c00bd3a59234bd643fa62a8f45",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0004",
+      "segment_key": "c2/objective-equilibria-stability",
+      "slot_binding_sha256": "59a460f7d9e4606e4a917c278cf1b4b6e6d9b806d6ee47f3950fd834215c8f91",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0005",
+      "segment_key": "c2/objective-nonhyperbolicity",
+      "slot_binding_sha256": "9d3a6c831e49bc9f7db2ba2c18ff10cba5975623f5c26e46c55a41ea2069aee4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0006",
+      "segment_key": "c2/objective-scalar-normal-forms",
+      "slot_binding_sha256": "5251d7a154882c4946bbc0dde4f785622b9c0230abb1bc07e3d5c1edc2492f9c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0007",
+      "segment_key": "c2/objective-hopf",
+      "slot_binding_sha256": "11e07c71d0fb6d5342a415f882a41805a4e0d671256787d6a4d6fb022798df3a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0008",
+      "segment_key": "c2/objective-read-diagrams",
+      "slot_binding_sha256": "e1858f0b888ccf7ff6c9cd2ef39548b24dc7e4ae1b55c3d00a020aa461652253",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0009",
+      "segment_key": "c2/parameter-dependent-qualitative-change-heading",
+      "slot_binding_sha256": "4366f02bb044ac7abfec7a9e6145f70a17f730943f8256baf2652bd9c5befbac",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0010",
+      "segment_key": "c2/parameter-family-definition",
+      "slot_binding_sha256": "2ef436a7d595bf060598a90cb14497e9b81b38d22ddcd5c8c55dfcc94f9a00c4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0011",
+      "segment_key": "c2/scalar-family-equation",
+      "slot_binding_sha256": "3bfa3f75fd881b98788e34a922b6a0a3cd57a49213f6f6c34863642567344424",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0012",
+      "segment_key": "c2/scalar-family-terms",
+      "slot_binding_sha256": "b718588fb2aa26ebf43f0dc66b13627e5acf7cc6e5e71056673e62a17da208ec",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0013",
+      "segment_key": "c2/bifurcation-definition",
+      "slot_binding_sha256": "febb1545a5e4794e1b40a78558fd5b01e7d08b260b46ed31421e65d223a4a677",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0014",
+      "segment_key": "c2/core-principle-heading",
+      "slot_binding_sha256": "1d60655fb66cb32700122a61f23ad5fb0bb5898802b35a52597e73e748aab08d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0015",
+      "segment_key": "c2/core-principle-text",
+      "slot_binding_sha256": "bb87ac055ee33bdd217ed61a2f2c09c3ca7bad3b34586aada6327793090bcce3",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0016",
+      "segment_key": "c2/linear-stability-heading",
+      "slot_binding_sha256": "e286e5634d5b997c655fd99027a31477be59adca231c0ee198ebdcd04e205064",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0017",
+      "segment_key": "c2/linearization-eigenvalue",
+      "slot_binding_sha256": "90454fef792e0aee19dc70fd41918c7c69aa1ed6ada6ace5242ebf1c6c980f30",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0018",
+      "segment_key": "c2/linearization-equation",
+      "slot_binding_sha256": "1fcf805b3865df65189f9c07b4b24d7bda8f51361263444506b4fd65ab78867d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0019",
+      "segment_key": "c2/stability-sign-test",
+      "slot_binding_sha256": "b870057421d079d93ff10942fff767ec153fefa43102a608a338ed07b684a864",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0020",
+      "segment_key": "c2/nonhyperbolicity-not-sufficient",
+      "slot_binding_sha256": "961d83bada66279673e72f182ff61078e8b88de81df92e3416f4cb22da767707",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0021",
+      "segment_key": "c2/nonbifurcating-counterexample-equation",
+      "slot_binding_sha256": "4b5b8de3cdce74edf04293a311a9345cf068f63c3ff8836ae66cf5e649cfc9fe",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0022",
+      "segment_key": "c2/nonbifurcating-counterexample-analysis",
+      "slot_binding_sha256": "06e189cb7ce69c98fd9d2d1b0cc8cdeae4e1e4d7d16fad1ce6c7511d3853d0f1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0023",
+      "segment_key": "c2/genericity-caveat",
+      "slot_binding_sha256": "381e811e71f8ec8703a9a30716ad5423ef967270a69b1c6850f832c0713601c4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0024",
+      "segment_key": "c2/saddle-node-heading",
+      "slot_binding_sha256": "18de3376158bcd8d3a4bee59091695aec2ad85a348777bf53e3f3324741ad63a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0025",
+      "segment_key": "c2/saddle-node-normal-form-introduction",
+      "slot_binding_sha256": "757c461bf0f5edb8055362237569d07f75c76e9be375d9dc8e0ac0592815ed43",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0026",
+      "segment_key": "c2/saddle-node-normal-form-equation",
+      "slot_binding_sha256": "e98120c6d72084c1289120dcb49cb6d03188bb182f8479db6ab2965fe4a164c1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0027",
+      "segment_key": "c2/saddle-node-equilibrium-census",
+      "slot_binding_sha256": "2d0223598549fa193a0c58aa561be263de1307cc503b890ec93161f5b4534d7b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0028",
+      "segment_key": "c2/saddle-node-stability",
+      "slot_binding_sha256": "767b74385f791b600572f59c4a6204df8e6e88dcc4e6aa400278fab528ffb7e6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0029",
+      "segment_key": "c2/saddle-node-canonical-case",
+      "slot_binding_sha256": "768ebbe74851cf0877c23cff13b4a96fc183afbcdbfcac72468efafe4ab81c04",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0030",
+      "segment_key": "c2/transcritical-heading",
+      "slot_binding_sha256": "11524bae5c869e823f6b63451e9c4db1db8a9f1fd0375a45d5df3257a59494ce",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0031",
+      "segment_key": "c2/transcritical-normal-form-introduction",
+      "slot_binding_sha256": "efe49789098cfea4b94352c606d3f8007975f656a7f869dee18ea75456bc29b2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0032",
+      "segment_key": "c2/transcritical-normal-form-equation",
+      "slot_binding_sha256": "bf54377b755d728cde447ae5927ce7752c8dd3d935437b8a2b730a7812968797",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0033",
+      "segment_key": "c2/transcritical-branches",
+      "slot_binding_sha256": "07113080885da29f07953b8045a9474e82dbf0dff64c490762214c78ce23d6ee",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0034",
+      "segment_key": "c2/transcritical-canonical-case",
+      "slot_binding_sha256": "3ca4ef73b1210f6cbfbdc692ecd556201cfe36d58b49a59a84236780c21ab467",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0035",
+      "segment_key": "c2/transcritical-physical-domain-caveat",
+      "slot_binding_sha256": "4cf875ed03404d2eb3a62c741883e3f9aea32adb2197737829baef0cef169410",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0036",
+      "segment_key": "c2/pitchfork-heading",
+      "slot_binding_sha256": "55135539bfcdb69c1d2a3d2137c85c055c972645ff43f06ed4da8dadb07213e7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0037",
+      "segment_key": "c2/pitchfork-supercritical-introduction",
+      "slot_binding_sha256": "5ba2fd27201a2d7ee2198615bb0d0860975441a3c1b32ff9a32f80eb5637f07d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0038",
+      "segment_key": "c2/pitchfork-supercritical-equation",
+      "slot_binding_sha256": "29242539e35f1e806d208766f7b4bb4507f95d659ab273845d3809ef54cf3395",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0039",
+      "segment_key": "c2/pitchfork-supercritical-branches",
+      "slot_binding_sha256": "3f6360a5efa42c02151a43689fc57b8c76c831e3b060ecd203e6ffa60274790b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0040",
+      "segment_key": "c2/pitchfork-symmetry",
+      "slot_binding_sha256": "5ec8210194ce7114d7c2d369912fc4ef577e1e8551cfbc9839b0bf87e48b85e7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0041",
+      "segment_key": "c2/pitchfork-subcritical",
+      "slot_binding_sha256": "f64da6d56e7e9e7d8ecf6a551d420051a5ddaf37e2d040d7cde868eb4fa8cf29",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0042",
+      "segment_key": "c2/pitchfork-imperfection",
+      "slot_binding_sha256": "71c2696fdc08724ea97e9f8a0dbff12e912d88f33b54d0b7e7b3575a237aed84",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0043",
+      "segment_key": "c2/hopf-heading",
+      "slot_binding_sha256": "4d233388bb282d6795338afcaebd34d9d4c8a2f10e41cebe8147d2d90db60922",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0044",
+      "segment_key": "c2/hopf-cartesian-introduction",
+      "slot_binding_sha256": "3192517320ab3e0bdd7ce13904202351098bcf3d3bf053268d46a17578d0c6a5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0045",
+      "segment_key": "c2/hopf-cartesian-equations",
+      "slot_binding_sha256": "434d325dc96ac505ed1c9110ea971f2a2fee11b7dd6f7ec4ad94b19b29267a25",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0046",
+      "segment_key": "c2/hopf-polar-equations",
+      "slot_binding_sha256": "c4638229deff8d3aa40e1eaece0d2c8bbd2412035937a7c323c838d6b8a40f02",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0047",
+      "segment_key": "c2/hopf-polar-system",
+      "slot_binding_sha256": "80ed6165699b2397a736d41ec00508622ba38487cce1e258d5df90ff52730fa2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0048",
+      "segment_key": "c2/hopf-origin-stability",
+      "slot_binding_sha256": "3a26b6a4349a922074a5198c976c7154d63254d3d0226f264811f17a2f50bea2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0049",
+      "segment_key": "c2/hopf-cycle-properties",
+      "slot_binding_sha256": "35e8c2546724e3cf2d3cd92427ec5848618bda08a0c30cca837c62da03c837ce",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0050",
+      "segment_key": "c2/hopf-cycle-formulas",
+      "slot_binding_sha256": "a4c58a8ff8323d636f663f25bfa293f350bfeb102609c6a13e487512ce327227",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0051",
+      "segment_key": "c2/hopf-radial-stability",
+      "slot_binding_sha256": "5691d9c96157f9a97b3ad5c0ffd14b20682e98670307c0dc9711e6c95af4e48c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0052",
+      "segment_key": "c2/hopf-locality-caveat",
+      "slot_binding_sha256": "f010fd75aa7cc0a50d8c82e4b586ed72420749d744ae06eef0c7eabb25fe52a7",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0053",
+      "segment_key": "c2/diagram-reading-heading",
+      "slot_binding_sha256": "2abd9f2c4e2a3a86b3c683cdb8755320ba1033fc42e08c4b51b0b26f6b9bfac2",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0054",
+      "segment_key": "c2/diagram-reading-introduction",
+      "slot_binding_sha256": "1a6012718db27eac19c6a4c2e7d5e238df62124567da3dd7bf01aede2fa03e8d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0055",
+      "segment_key": "c2/diagram-types-table",
+      "slot_binding_sha256": "1d340e9b9d54e284d5f61ac874b3cfa1b5a5c8fff011ba71c36c6a5c1c34d9b1",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0056",
+      "segment_key": "c2/diagram-types-caption",
+      "slot_binding_sha256": "f14fe08b9dceaea420b419569f2d25fcc87fe918d369a3a6422c08c3d22222e0",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0057",
+      "segment_key": "c2/diagram-table-kind-header",
+      "slot_binding_sha256": "401cea1f10a5e9945f65ed9e231fe4b740d4d4b5bb4e22a740f3c033a77d886c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0058",
+      "segment_key": "c2/diagram-table-axes-header",
+      "slot_binding_sha256": "8e3819c497b28c853f1a71d151b3850206657094ac1f6b418dccb1ba48d0fb40",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0059",
+      "segment_key": "c2/diagram-table-question-header",
+      "slot_binding_sha256": "891b3455723210bcfa1fd9903db3546c08239cf722a8900d779f248a8378b11a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0060",
+      "segment_key": "c2/diagram-table-bifurcation-kind",
+      "slot_binding_sha256": "b050e82b198eb4d3a6cf84668cc4cd2142afe7347da2c33e27a8172b3ad2ae8b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0061",
+      "segment_key": "c2/diagram-table-bifurcation-axes",
+      "slot_binding_sha256": "de3e4e9e28ad6cb7df3f5b99a9a6b0e07c66514080c18fd19399d4e8c5b0cd7d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0062",
+      "segment_key": "c2/diagram-table-bifurcation-question",
+      "slot_binding_sha256": "f68beab962c58b49e4bc2d45fce4f35a45718954633fcc20c8f905cdfabef13f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0063",
+      "segment_key": "c2/diagram-table-phase-kind",
+      "slot_binding_sha256": "ff615b387f910e4da7d467ad500bb57d13e64a89e1a8d0ea06530cfa66409ea8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0064",
+      "segment_key": "c2/diagram-table-phase-axes",
+      "slot_binding_sha256": "8e931ed62c12dea4e22e1ee73889b2f65ac8ce667669f68a4103da727e86fd7f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0065",
+      "segment_key": "c2/diagram-table-phase-question",
+      "slot_binding_sha256": "c0da56ae01c6bea5a93e3cc7c75db00ef90207bc419aa9585211b7e07d2600da",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0066",
+      "segment_key": "c2/diagram-table-time-kind",
+      "slot_binding_sha256": "138b2c3c3e0d78cbad28fbec6967a5665ba04221b095026a475781833a800b01",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0067",
+      "segment_key": "c2/diagram-table-time-axes",
+      "slot_binding_sha256": "0afc04dc21545a915f066fabe99715cda8d4d83c79d4fbb8865e04f863cd6694",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0068",
+      "segment_key": "c2/diagram-table-time-question",
+      "slot_binding_sha256": "7df3e9a1821f2b0e0d50fed2ebbccad013d5b0981deb3c70845e716474a65f40",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0069",
+      "segment_key": "c2/stability-style-convention",
+      "slot_binding_sha256": "abe64352e50a4915327586df5c24b704505974db92c39e1b42ae6df5fdef7715",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0070",
+      "segment_key": "c2/diagram-branch-not-trajectory",
+      "slot_binding_sha256": "0db40a0e26109b6b19c4a95d1736cccb25f7db9b638ffa041f80b258394c911c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0071",
+      "segment_key": "c2/notebook-heading",
+      "slot_binding_sha256": "beb5b82ef4a858b9994dad3d28538f9e33704874b40870d3fb0952919a79e685",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0072",
+      "segment_key": "c2/notebook-scope",
+      "slot_binding_sha256": "087b3ad56c31a7eee0b7c42f4aabfa6195534e2042282c911bad251e26fe7956",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0073",
+      "segment_key": "c2/first-plot-long-description",
+      "slot_binding_sha256": "63bd548aa6bebb1dc73827815ecfff06410deb8ef26cb76a28a2e4adf7177c06",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0074",
+      "segment_key": "c2/second-plot-long-description",
+      "slot_binding_sha256": "78dd32c1906a79ae03ea5eeb50179c9a190419c54ff0126a1dc4b1b02041a5eb",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0075",
+      "segment_key": "c2/notebook-output-clean",
+      "slot_binding_sha256": "11e0800cea07bda2e9d2899c5cc8c9d0ca27856544a03e183d295435136751ec",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0076",
+      "segment_key": "c2/analysis-workflow-heading",
+      "slot_binding_sha256": "a3f534521c97604c9c9c6ef0f06bae2e8bc030a748e6b625166c14d52c2cf2ad",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0077",
+      "segment_key": "c2/analysis-workflow-list",
+      "slot_binding_sha256": "77ae7d7bc445d0e6b0fb3153e5ce181f2b060b2efbf37ac405b2280979705a6c",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0078",
+      "segment_key": "c2/workflow-state-domain",
+      "slot_binding_sha256": "1c0eeb0a2ba8b01f937dd6293639f543bb057f2a509a2ace368ea80e36be8057",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0079",
+      "segment_key": "c2/workflow-find-equilibria",
+      "slot_binding_sha256": "48ecae2086c651eaabe159bfa12473b408d2ffa8a66f7566fe77ab63d1028095",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0080",
+      "segment_key": "c2/workflow-linearize",
+      "slot_binding_sha256": "8e9f457005607e312b44ebefff6b7ef630a986e1cb7715f3cbffa1db7da665b5",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0081",
+      "segment_key": "c2/workflow-check-degeneracy",
+      "slot_binding_sha256": "a3936df2f732f04578290f791cf0853ded1dadd85064979b5889d4d435d2dfeb",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0082",
+      "segment_key": "c2/workflow-combine-evidence",
+      "slot_binding_sha256": "cf465aa6bbe85128495f588b7fe72fad57fb99992750211bc2c777b3997e75dd",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0083",
+      "segment_key": "c2/workflow-limit-claims",
+      "slot_binding_sha256": "3af13fd52ff60ba5a3c00d5d982c367bb54ec0325f437d33e48d347dbd5f9594",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0084",
+      "segment_key": "c2/common-errors-table",
+      "slot_binding_sha256": "0bdafcdb6e7cb671fc104efaeb5e7b48acd1d66833158668933bb98625ec24b8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0085",
+      "segment_key": "c2/common-errors-caption",
+      "slot_binding_sha256": "51f914f1759e8f5888ff0a26e7a7c67fdb0c8672c51cb8704af26126135db1ed",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0086",
+      "segment_key": "c2/common-errors-claim-header",
+      "slot_binding_sha256": "d6fa35e3e786709e3f3ba57b606a0f45bffe30405909cef855028c0b25e62f1b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0087",
+      "segment_key": "c2/common-errors-correction-header",
+      "slot_binding_sha256": "8875b6bfb4c6f3561edb0128083290e43daa6f38ef348a60fcca22682f441917",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0088",
+      "segment_key": "c2/common-errors-zero-eigenvalue",
+      "slot_binding_sha256": "901294b3c08b1b24e9c9b7223dac03d781d0058a04254ef256cafc09f653f7a9",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0089",
+      "segment_key": "c2/common-errors-zero-eigenvalue-correction",
+      "slot_binding_sha256": "5ebaebf056a96e8a540dfbceb070a0c15bbc234e02e05c29d95bf72c86de93f8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0090",
+      "segment_key": "c2/common-errors-crossing-branches",
+      "slot_binding_sha256": "6a233e88d7795c6a33afac0da8bcde197953c44528a6bd0927cd7b2584c26999",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0091",
+      "segment_key": "c2/common-errors-crossing-branches-correction",
+      "slot_binding_sha256": "430de8f501a648a3dadf0584bcfe206c4e57361188c900f36baf9928e013fb0a",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0092",
+      "segment_key": "c2/common-errors-physical-domain",
+      "slot_binding_sha256": "61bf2b7fd3de63dd3ed79a05bc47de02e6d2d88c9e86fdf01685302c3082832d",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0093",
+      "segment_key": "c2/common-errors-physical-domain-correction",
+      "slot_binding_sha256": "6aab672bb179917ce1674b6c1cd78bd0b03ef4936f1790f41d14678bcaf5b7eb",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0094",
+      "segment_key": "c2/common-errors-global-normal-form",
+      "slot_binding_sha256": "52fec95995c3e7ae2e9d872a856731584c026408fb737d6b743cb97bfd78e6d4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0095",
+      "segment_key": "c2/common-errors-global-normal-form-correction",
+      "slot_binding_sha256": "750741febe26bc45bef0d655307deb8964ccc4b60bfa184e90603645c829be14",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0096",
+      "segment_key": "c2/common-errors-plot-proof",
+      "slot_binding_sha256": "02e493cc0b990d763e9514a03a2f8314284b499eb373a9562795d064fbc6d990",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0097",
+      "segment_key": "c2/common-errors-plot-proof-correction",
+      "slot_binding_sha256": "5d5fe377b3e24e84c5ff0ef47c3282e3c00b80474e9f38015b5722d9d72e0e28",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0098",
+      "segment_key": "c2/summary-heading",
+      "slot_binding_sha256": "e4f517b22fdb0b07aa95c0ef3f7ff3a157b2630a6c3d9ae6cef51dfe705a8865",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0099",
+      "segment_key": "c2/summary-text",
+      "slot_binding_sha256": "c4f87588412a313f691bc34c4ce9a7a65b6e2d9a462e7d04bcfeb578ebb6fdd4",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0100",
+      "segment_key": "c2/provenance-note",
+      "slot_binding_sha256": "b480679dd6c920977ec4907b1178d9d477a0b7cdda9ae6702aa462b90718d03e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0101",
+      "segment_key": "c2/mastery-exercises-heading",
+      "slot_binding_sha256": "285b23161cd6cc42853f7d34661db138c9041f755e6e83efe70daa644e11302b",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0102",
+      "segment_key": "c2/problem-nonhyperbolicity-counterexample-heading",
+      "slot_binding_sha256": "04f1311b7b4a30c4c51e9348a844efabe2a9153a33ded3d6a5b6aec37755f628",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0103",
+      "segment_key": "c2/problem-nonhyperbolicity-counterexample-prompt",
+      "slot_binding_sha256": "d31846a0e2bdba8fdbd786c8810f4fc7a82b61f428d311e8843e4e8315f13ba6",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0104",
+      "segment_key": "c2/problem-saddle-node-census-heading",
+      "slot_binding_sha256": "6fa80ba43de7297bd76ea8eeace173d797c2aa99ad621ecf93fd89e641c15396",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0105",
+      "segment_key": "c2/problem-saddle-node-census-prompt",
+      "slot_binding_sha256": "a6d9255e895b66e07021368bffb6b2a887816dfc6665f4797f98d243b321bcec",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0106",
+      "segment_key": "c2/problem-transcritical-domain-heading",
+      "slot_binding_sha256": "3d240b962d1d99d3474aafb88333f470017c8d457975772a1a8453587948ca6f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0107",
+      "segment_key": "c2/problem-transcritical-domain-prompt",
+      "slot_binding_sha256": "7da60a752c819a6d1d67e805fe5007d6b70e505737e9dd50d86efb175f6a6080",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0108",
+      "segment_key": "c2/problem-pitchfork-symmetry-heading",
+      "slot_binding_sha256": "e3e9fd359fcefdbc876d0960b9ab2625da2d185bca312fe523e6c4882fc96f40",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0109",
+      "segment_key": "c2/problem-pitchfork-symmetry-prompt",
+      "slot_binding_sha256": "8ea42e6f5ad268c94b87ee5b489d3ed89ceb812485aafc106f67e7854f4e45fe",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0110",
+      "segment_key": "c2/problem-hopf-derivation-heading",
+      "slot_binding_sha256": "87aeed6d6ed2c058c894cc4bab9a2199d1792a6643e5bec28033181b297120f8",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0111",
+      "segment_key": "c2/problem-hopf-derivation-prompt",
+      "slot_binding_sha256": "7fc75afd526cf95553f7a0af50e642ce89075362fb1f341dba60ae3c32784b1e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0112",
+      "segment_key": "c2/problem-diagram-interpretation-heading",
+      "slot_binding_sha256": "c6e68748f3159fa15914c53da4d7787a918679a804c88cb7ff333673c2ee552f",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0113",
+      "segment_key": "c2/problem-diagram-interpretation-prompt",
+      "slot_binding_sha256": "789a5f82e17a944a4a569dc47c22d211801507979110eeedba450b3662ed8a2e",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0114",
+      "segment_key": "c2/problem-notebook-execution-heading",
+      "slot_binding_sha256": "4feff7930466b0a7bd7e0337d21f2e233d07f088abf66db19784c1e6f2ea9b31",
+      "state": "active"
+    },
+    {
+      "segment_id": "O005-BRIDGE-C2-S0115",
+      "segment_key": "c2/problem-notebook-execution-prompt",
+      "slot_binding_sha256": "e2659957e75143b5ca8e56744bead39988af4a7e83350773f28b04f6eb3d7385",
+      "state": "active"
+    }
+  ],
+  "ledger_version": 1,
+  "next_serial": 116,
+  "previous": null,
+  "schema": "o005-segment-id-ledger-v2",
+  "strategy": "html-anchored-versioned-semantic-key-v1",
+  "unit_id": "O005-BRIDGE-C2"
+}

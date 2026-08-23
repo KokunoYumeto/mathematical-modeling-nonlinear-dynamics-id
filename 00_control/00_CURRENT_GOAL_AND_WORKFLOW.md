@@ -1,98 +1,128 @@
 # O005/C120 — Durable Goal and Workflow
 
-Status: active production. This file and the other files in `00_control` are the
-authoritative recovery surface for this lane. Chat history and compaction
-summaries are not required to resume.
+Status: complete reader built and corrected release published; the only
+remaining external follow-up is the existing Figshare metadata mirror while
+its supplied account is inactive. This file plus the other exact files in
+`00_control` is the recovery surface; conversation and compaction are not
+state.
 
-## Goal
+## Objective and fixed scope
 
-Produce the complete natural Bahasa Indonesia reader of Joceline Lega's
+Deliver the complete natural Bahasa Indonesia edition of Joceline Lega,
 *Introduction to Mathematical Modeling*, University of Arizona Pressbooks
-v1.01 (March 2026), together with an accessible deterministic reader, a
-locale-neutral machine backend, lawful provenance, open Python replacements,
-and complete mastery support. Translation is the dominant activity. QA proves
-bounded outputs but must not become a substitute for production.
+v1.01 (March 2026), with an accessible offline HTML reader, tagged PDF, stable
+locale-neutral backend, lawful provenance, open Python replacements, and
+mastery support. The source-derived closure is exactly 22 records (front/back
+matter, five part introductions, and Chapters 1–14). Four independently authored
+bridges complete the declared curriculum: C1 reproducibility; C2 local
+bifurcations; C3 period doubling/chaos/Lorenz/Poincare/return maps; C4
+calibration, identifiability, validation, model comparison, and uncertainty.
 
-Preserve the exact official PDF and EPUB, the public Pressbooks REST
-`content.raw` closure, stable record IDs and hierarchy, TeX, shortcodes,
-footnotes, links, figures and long descriptions, assets, rights, and source
-hashes. Apply CC BY-NC-SA 4.0 attribution, NonCommercial, ShareAlike, change
-notice, and non-endorsement. Maintain component-level rights. Redraw Figure
-4.1, replace Figure 10.1, and create a new cover, CSS, fonts, and accessibility
-statement; never represent the Pressbooks theme as part of the independently
-reproducible source closure.
+Preserve source hierarchy, identifiers, topology, TeX and formulas, links,
+footnotes, exercises, figures, long descriptions, accessibility surfaces,
+component rights, and exact source witnesses. The edition contains 3,448
+source segments plus 657 bridge segments (4,105 total), 113 source mastery
+records plus 28 bridge records, 26 notebooks, and 12 self-contained project
+packets. Apply
+CC BY-NC-SA 4.0 attribution, NonCommercial, ShareAlike, change notice, and
+non-endorsement. Keep source-derived and newly authored components distinct;
+do not import MATLAB, PPLANE, Excel, Maple, Mathematica, proprietary code, or
+unlicensed data. Preserve the official PDF/EPUB and Pressbooks closure recorded
+in `RIGHTS_AND_PROVENANCE.md`; retain the independent Figure 4.1 redraw,
+Figure 10.1 replacement, cover, CSS, and accessibility statement.
 
-Chapter boundaries `O005-LEGA-V101-CH01` through `CH14` and the visible Part
-2–5 introductions are translated, built, independently rereviewed where
-applicable, and deterministically verified. Their complete topology,
-identifiers, protected mathematics, links, figures, all 113 stable problem IDs
-and mastery records, ten open chapter notebooks, twelve open project notebooks
-and packets, and 3,400 paired segments are bound in the current state, cursor,
- and QA log. The Chapter 14 reader-first progress release is published and
- anonymously byte-verified as Zenodo DOI `10.5281/zenodo.22061640`, within concept DOI
-`10.5281/zenodo.22059939`; future substantial boundaries must use the same
-version lineage. Because Figshare does not offer the work's exact
-CC BY-NC-SA 4.0 license, its public companion is a fileless CC0 metadata/link
- item, DOI `10.6084/m9.figshare.33314769.v2`, in project `280296` and verified
- collection version `10.6084/m9.figshare.c.8668413.v37`; CC0 applies only to the
-metadata. Later substantial boundaries update this same Figshare item rather
-than creating a competing work record. The complete 22-record source-derived
-reader closure is now translated: the fourteen chapters, all five visible part
-introductions, the Preface, the Accessibility Statement, and the Version
-History. Original bridge `O005-BRIDGE-C1`, the reproducible Python/Jupyter
-workflow, is complete and verified. The immediate production unit is
-`O005-BRIDGE-C2`, followed in order by bridges C3 and C4.
-GitHub publication remains paused until the user reports that the suspended
-account has been restored; preserve the unchanged local commit chain.
+## Completed evidence boundary
 
-Continue in exact frozen TOC order through all front/back matter and
-fourteen chapters: 54,932 source words, 113 exercises, twelve projects, eleven
-lawful source final answers, textboxes, formulas, citations, assets, and
-descriptions. Add four original bridge modules: reproducible Python/Jupyter;
-saddle-node/transcritical/pitchfork/Hopf bifurcations; period doubling,
-Lyapunov exponents, Lorenz dynamics, Poincare sections and return maps; and
-calibration, identifiability, sensitivity, residual/holdout diagnostics, model
-comparison, uncertainty, and failure analysis. Deliver twenty-six notebooks,
-twelve self-contained open/synthetic-data project packets, and complete
-113-item hint/check/solution closure. Import no proprietary MATLAB, PPLANE,
-Excel, Maple, or Mathematica code.
+All translation and bridge production is complete. The exact Indonesian
+field-terminology QA used arXiv:2001.05854v1 downloadable TeX and is recorded
+in `TERMINOLOGY_QA_INDONESIAN_FIELD_SOURCE_20260822.md`; justified changes were
+propagated and the glossary is stable. All 26 readers were rebuilt after the
+responsive-table repair; normal/optimized static QA, fresh-kernel notebook
+QA, perturbed branches, PNG decoding, deterministic staged builds, and browser
+checks pass. Desktop articles are centered at 768 px; mobile bridge articles
+are centered at 357.507 px in a 390 px viewport, with table scrolling contained
+inside the page. No source content, mastery, notebook, or formula changed in
+the CSS repair.
 
-## Backend contract
+The final PDF is 355 tagged A4 pages, `/Lang id`, 28 outline entries, and no
+forms, JavaScript, or suspects. Its exact local identity is recorded in
+`00_control/PUBLIC_BUILD_QA.md` and the PDF build receipt. The first complete
+PDF candidate was rejected for untypeset bridge formulas; the explicit-TeX
+repair is now complete and the current candidate has passed structural and
+visual inspection. Do not upload an earlier PDF.
 
-Every resource, edition, unit, segment, concept, term, problem, hint, answer,
-solution, project, asset, code file, dataset, right, correction, QA event, and
-artifact receives a stable locale-neutral ID. Preserve ordered hierarchy,
-prerequisite and concept edges, source/target hashes, segment mappings,
-multilingual hooks, and deterministic schema-versioned JSON/CSV exports. IDs
-must remain invariant across later languages.
+## Exact finite continuation
 
-## Boundary workflow
+1. Re-read only this file, `CURRENT_STATE.md`, `TRANSLATION_CURSOR.json`,
+   `RECOVERY_POINTER.json`, `DECISION_LOG.md`, `TERMINOLOGY.csv`,
+   `RIGHTS_AND_PROVENANCE.md`, `BUILD_QA.md`, and `PUBLIC_BUILD_QA.md`.
+2. Verify the current PDF and receipt hashes, strict PDF metadata/tagging,
+   selected-page renders, and the final C2/C3/C4 desktop/mobile browser facts.
+   If any identity changed, update all controls before packaging.
+3. Run exactly one new no-overwrite package build at a substantial correction
+   boundary. The current canonical package is
+   `release/zenodo/reader-first-complete-20260823-r5`, version
+   `v1.01-id-complete-reader-20260823-r5`, built with the hardened segment
+   census in `scripts/build_reader_first_release.py`.
+4. Verify the package contains exactly six reader-first files in this order:
+   PDF, compact source ZIP, PDF receipt, LICENSE, release manifest, checksums.
+   Check ZIP path safety/CRC, every local hash, manifest/checksum agreement,
+   exact CC BY-NC-SA 4.0 text, privacy scans, and total payload below
+   500,000,000 bytes. Never include credentials, caches, renders, raw dumps,
+   or private coordination files.
+5. At the authorized release boundary, use the runtime-only Zenodo credential at
+   `C:\Users\Floris\Documents\Obsidian notes\New zenodo token.md` to upload
+   those six files to a new-version draft under concept DOI
+   `10.5281/zenodo.22059939`. The current corrected publication is record
+   `22070943`; set the exact clean title,
+   creator/source attribution, CC BY-NC-SA 4.0 rights, complete scope, and
+   organizational contributor metadata. Put the PDF first/default preview;
+   publish immediately under the standing user authorization.
+6. Anonymously read back the public Zenodo record and stream-download every
+   file. Compare filename, byte count, and SHA-256 to the local package and
+   write a sanitized versioned receipt. The current corrected receipt is
+   `00_control/ZENODO_PUBLICATION_RECEIPT_CANONICAL_20260823.json`.
+7. The canonical Zenodo portion is complete and byte-verified at record
+   `22070943`. Figshare was then checked
+   through the authenticated API using the runtime-only credential
+   `C:\Users\Floris\Documents\TOKENS\Figshare Token.md`, but the account
+   returned HTTP 403 `InactiveAccount`; the prior article now reports removed
+   and the current project/collection contain no content. Do not create a
+   duplicate or upload under a substitute license. Keep the exact blocker in
+   `00_control/FIGSHARE_PUBLICATION_RECEIPT_COMPLETE_20260823.json`; after the
+   account is restored, update article `33314769` to corrected Zenodo
+   `22070943`, publish
+   one metadata-only version, republish collection `8668413`, and anonymously
+   verify DOI, zero files, text, and membership.
+8. Keep `CURRENT_STATE.md`, `TRANSLATION_CURSOR.json`, `RECOVERY_POINTER.json`,
+   `DECISION_LOG.md`, `BUILD_QA.md`, and this goal synchronized with the latest
+   public DOI, exact package/public hashes, corrected segment census, timestamps,
+   and unresolved caveats. Do not mark the Figshare follow-up complete until its
+   account is restored and anonymous public verification succeeds.
 
-1. Read `RECOVERY_POINTER.json`, `CURRENT_STATE.md`, `TRANSLATION_CURSOR.json`,
-   `DECISION_LOG.md`, `TERMINOLOGY.csv`, `RIGHTS_AND_PROVENANCE.md`, and the
-   current unit manifest.
-2. Verify only the exact authority files named by the cursor. Never run a broad
-   workspace scan.
-3. Translate the next complete source-order unit naturally into id-ID while
-   preserving protected mathematics, IDs, links, assets, and topology.
-4. Add only the open computation and mastery material required by the declared
-   unit boundary, with distinct provenance.
-5. Build deterministically and run structure, math, link, asset, language,
-   accessibility, notebook, numerical, privacy, rights, and clean-rebuild QA.
-6. Record hashes, tool versions, caveats, corrections, cursor, and next action.
-7. Commit and push only the narrow verified lane files at a significant
-   boundary under standing authorization; never stage unrelated paths.
+## Invariants and terminal condition
 
-## Invariants
+Work only in this lane; use bounded exact paths and no broad workspace scans or
+GitHub attempts while the account is suspended. Do not contact upstream during
+production. At most one separately authorized concise upstream issue may be
+sent after the entire corpus, signed `Codex, on instructions of the user.`
+Never create a competing Zenodo/Figshare concept or upload work bytes to
+Figshare under a false license. The complete-reader production terminal
+condition is successful anonymous readback of the Zenodo release plus durable
+receipts and controls. The lane's remaining external follow-up is the single
+existing Figshare metadata mirror, currently blocked by the account state
+above; do not retry until that state changes.
 
-- One existing task and one O005 lane; do not create another task or touch a
-  sibling lane.
-- No upstream contact during production. After the complete corpus, at most
-  one separately authorized, concise, deduplicated, high-confidence issue may
-  be sent, signed exactly `Codex, on instructions of the user.`
-- Public DOI/reader publication occurs at each substantial verified corpus
-  boundary as a new version of the single Zenodo concept lineage. Update the
-  single Figshare metadata/link item and republish the Indonesian collection at
-  the same boundaries; never upload work bytes there under a substitute
-  license. Ordinary verified production is committed locally and pushed when
-  GitHub is available.
+## Current publication checkpoint — 2026-08-23 (corrected)
+
+Zenodo is complete and public at `10.5281/zenodo.22070943`, the canonical version
+under concept `10.5281/zenodo.22059939`; all six files match their local
+SHA-256 and byte counts. The final package declares 3,448 source
+segments, 657 bridge segments, and 4,105 total, verified directly from the
+packaged JSONL closure. Record `22063401` remains an immutable historical
+version whose public census was stale by 48 front/back-matter records.
+Figshare is not currently actionable: the supplied account is inactive/disabled
+and the old public item is removed. The exact evidence and next one-shot update
+procedure are in the canonical Zenodo receipt and Figshare blocker receipt.
+GitHub remains paused under the reported suspension. Resume from those
+receipts, not from conversation memory.

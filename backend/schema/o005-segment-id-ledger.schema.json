@@ -10,12 +10,25 @@
   ],
   "properties": {
     "schema": {"const": "o005-segment-id-ledger-v2"},
-    "unit_id": {"const": "O005-BRIDGE-C1"},
+    "unit_id": {"type": "string", "pattern": "^O005-BRIDGE-C[1234]$"},
     "ledger_version": {"type": "integer", "minimum": 1},
-    "content_path": {"const": "source/id-ID/O005-BRIDGE-C1/content.html"},
+    "content_path": {
+      "type": "string",
+      "pattern": "^source/id-ID/O005-BRIDGE-C[1234]/content\\.html$"
+    },
     "content_sha256": {"$ref": "#/$defs/sha256"},
-    "strategy": {"const": "explicit-versioned-semantic-key-v1"},
-    "binding_algorithm": {"const": "sha256-html-path-nul-canonical-text-v1"},
+    "strategy": {
+      "enum": [
+        "explicit-versioned-semantic-key-v1",
+        "html-anchored-versioned-semantic-key-v1"
+      ]
+    },
+    "binding_algorithm": {
+      "enum": [
+        "sha256-html-path-nul-canonical-text-v1",
+        "sha256-segment-key-nul-html-path-nul-canonical-text-v1"
+      ]
+    },
     "next_serial": {"type": "integer", "minimum": 1},
     "previous": {
       "oneOf": [
@@ -35,6 +48,152 @@
       }
     }
   },
+  "allOf": [
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C1"}}},
+      "then": {
+        "properties": {
+          "content_path": {"const": "source/id-ID/O005-BRIDGE-C1/content.html"},
+          "strategy": {"const": "explicit-versioned-semantic-key-v1"},
+          "binding_algorithm": {"const": "sha256-html-path-nul-canonical-text-v1"},
+          "previous": {
+            "oneOf": [
+              {"type": "null"},
+              {
+                "allOf": [
+                  {"$ref": "#/$defs/fileIdentity"},
+                  {
+                    "properties": {
+                      "path": {
+                        "pattern": "^backend/segment-ids/O005-BRIDGE-C1\\.segment-ids\\.v[1-9][0-9]*\\.json$"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "entries": {
+            "items": {
+              "properties": {
+                "segment_key": {"pattern": "^c1/[a-z0-9]+(?:[/-][a-z0-9]+)*$"},
+                "segment_id": {"pattern": "^O005-BRIDGE-C1-S[0-9]{4}$"},
+                "replaced_by": {"pattern": "^O005-BRIDGE-C1-S[0-9]{4}$"}
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C2"}}},
+      "then": {
+        "properties": {
+          "content_path": {"const": "source/id-ID/O005-BRIDGE-C2/content.html"},
+          "strategy": {"const": "html-anchored-versioned-semantic-key-v1"},
+          "binding_algorithm": {"const": "sha256-segment-key-nul-html-path-nul-canonical-text-v1"},
+          "previous": {
+            "oneOf": [
+              {"type": "null"},
+              {
+                "allOf": [
+                  {"$ref": "#/$defs/fileIdentity"},
+                  {
+                    "properties": {
+                      "path": {
+                        "pattern": "^backend/segment-ids/O005-BRIDGE-C2\\.segment-ids\\.v[1-9][0-9]*\\.json$"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "entries": {
+            "items": {
+              "properties": {
+                "segment_key": {"pattern": "^c2/[a-z0-9]+(?:[/-][a-z0-9]+)*$"},
+                "segment_id": {"pattern": "^O005-BRIDGE-C2-S[0-9]{4}$"},
+                "replaced_by": {"pattern": "^O005-BRIDGE-C2-S[0-9]{4}$"}
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C3"}}},
+      "then": {
+        "properties": {
+          "content_path": {"const": "source/id-ID/O005-BRIDGE-C3/content.html"},
+          "strategy": {"const": "html-anchored-versioned-semantic-key-v1"},
+          "binding_algorithm": {"const": "sha256-segment-key-nul-html-path-nul-canonical-text-v1"},
+          "previous": {
+            "oneOf": [
+              {"type": "null"},
+              {
+                "allOf": [
+                  {"$ref": "#/$defs/fileIdentity"},
+                  {
+                    "properties": {
+                      "path": {
+                        "pattern": "^backend/segment-ids/O005-BRIDGE-C3\\.segment-ids\\.v[1-9][0-9]*\\.json$"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "entries": {
+            "items": {
+              "properties": {
+                "segment_key": {"pattern": "^c3/[a-z0-9]+(?:[/-][a-z0-9]+)*$"},
+                "segment_id": {"pattern": "^O005-BRIDGE-C3-S[0-9]{4}$"},
+                "replaced_by": {"pattern": "^O005-BRIDGE-C3-S[0-9]{4}$"}
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C4"}}},
+      "then": {
+        "properties": {
+          "content_path": {"const": "source/id-ID/O005-BRIDGE-C4/content.html"},
+          "strategy": {"const": "html-anchored-versioned-semantic-key-v1"},
+          "binding_algorithm": {"const": "sha256-segment-key-nul-html-path-nul-canonical-text-v1"},
+          "previous": {
+            "oneOf": [
+              {"type": "null"},
+              {
+                "allOf": [
+                  {"$ref": "#/$defs/fileIdentity"},
+                  {
+                    "properties": {
+                      "path": {
+                        "pattern": "^backend/segment-ids/O005-BRIDGE-C4\\.segment-ids\\.v[1-9][0-9]*\\.json$"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "entries": {
+            "items": {
+              "properties": {
+                "segment_key": {"pattern": "^c4/[a-z0-9]+(?:[/-][a-z0-9]+)*$"},
+                "segment_id": {"pattern": "^O005-BRIDGE-C4-S[0-9]{4}$"},
+                "replaced_by": {"pattern": "^O005-BRIDGE-C4-S[0-9]{4}$"}
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
   "$defs": {
     "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "fileIdentity": {
@@ -43,7 +202,7 @@
       "properties": {
         "path": {
           "type": "string",
-          "pattern": "^backend/segment-ids/O005-BRIDGE-C1\\.segment-ids\\.v[1-9][0-9]*\\.json$"
+          "pattern": "^backend/segment-ids/O005-BRIDGE-C[1234]\\.segment-ids\\.v[1-9][0-9]*\\.json$"
         },
         "bytes": {"type": "integer", "minimum": 1},
         "sha256": {"$ref": "#/$defs/sha256"}
@@ -58,7 +217,7 @@
           "type": "string",
           "pattern": "^[a-z0-9]+(?:[/-][a-z0-9]+)*$"
         },
-        "segment_id": {"type": "string", "pattern": "^O005-BRIDGE-C1-S[0-9]{4}$"},
+        "segment_id": {"type": "string", "pattern": "^O005-BRIDGE-C[1234]-S[0-9]{4}$"},
         "state": {"const": "active"},
         "slot_binding_sha256": {"$ref": "#/$defs/sha256"}
       }
@@ -72,10 +231,10 @@
           "type": "string",
           "pattern": "^[a-z0-9]+(?:[/-][a-z0-9]+)*$"
         },
-        "segment_id": {"type": "string", "pattern": "^O005-BRIDGE-C1-S[0-9]{4}$"},
+        "segment_id": {"type": "string", "pattern": "^O005-BRIDGE-C[1234]-S[0-9]{4}$"},
         "state": {"const": "retired"},
         "retired_reason": {"type": "string", "minLength": 1},
-        "replaced_by": {"type": "string", "pattern": "^O005-BRIDGE-C1-S[0-9]{4}$"}
+        "replaced_by": {"type": "string", "pattern": "^O005-BRIDGE-C[1234]-S[0-9]{4}$"}
       }
     }
   }

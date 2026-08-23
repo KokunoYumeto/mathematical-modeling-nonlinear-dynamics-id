@@ -418,27 +418,31 @@ def mastery_payload() -> dict:
             "ordinal": 3,
             "problem_summary": "Periksa satuan dan tanda parameter laju dalam hukum pendinginan Newton.",
             "article_link_ids": [],
-            "source_formula_occurrences": ["k", "kt", "dT/dt=-k(T-T_inf)"],
+            "source_formula_occurrences": [
+                "\\(k\\)",
+                "\\(kt\\)",
+                "\\(\\frac{dT}{dt}=-k(T-T_\\infty)\\)",
+            ],
             "provenance": provenance(),
             "hint": {"text": "Eksponen harus tak berdimensi dan kedua ruas persamaan diferensial harus memiliki satuan suhu per waktu."},
             "check": {
                 "type": "quantitative",
-                "final_answer": "Jika waktu dalam menit, maka [k] = menit^{-1}; kt tak berdimensi; k>0 membuat selisih suhu menyusut menuju nol.",
+                "final_answer": "Jika waktu dalam menit, maka \\([k]=\\mathrm{menit}^{-1}\\); \\(kt\\) tak berdimensi; \\(k>0\\) membuat selisih suhu menyusut menuju nol.",
                 "required_evidence": [
-                    "[dT/dt] = suhu/waktu.",
-                    "[k(T-T_inf)] = waktu^{-1} kali suhu.",
-                    "Untuk T>T_inf dan k>0, turunan suhu negatif.",
+                    "\\(\\left[\\frac{dT}{dt}\\right]=\\frac{\\mathrm{suhu}}{\\mathrm{waktu}}\\).",
+                    "\\([k(T-T_\\infty)]=\\mathrm{waktu}^{-1}\\times\\mathrm{suhu}\\).",
+                    "Untuk \\(T>T_\\infty\\) dan \\(k>0\\), turunan suhu negatif.",
                 ],
             },
             "solution_or_rubric": {
                 "type": "worked_solution",
                 "steps": [
-                    "Karena T dan T_inf bersatuan °C, selisihnya juga bersatuan °C.",
-                    "Agar ruas kanan bersatuan °C/menit, k harus bersatuan menit^{-1}.",
-                    "Maka kt tidak memiliki satuan dan sah berada di dalam fungsi eksponensial.",
-                    "Untuk T>T_inf, k>0 memberi dT/dt<0; untuk T<T_inf, dT/dt>0.",
+                    "Karena \\(T\\) dan \\(T_\\infty\\) bersatuan °C, selisihnya juga bersatuan °C.",
+                    "Agar ruas kanan bersatuan °C/menit, \\(k\\) harus bersatuan \\(\\mathrm{menit}^{-1}\\).",
+                    "Maka \\(kt\\) tidak memiliki satuan dan sah berada di dalam fungsi eksponensial.",
+                    "Untuk \\(T>T_\\infty\\), \\(k>0\\) memberi \\(\\frac{dT}{dt}<0\\); untuk \\(T<T_\\infty\\), \\(\\frac{dT}{dt}>0\\).",
                 ],
-                "conclusion": "Solusi mendekati T_inf ketika t bertambah.",
+                "conclusion": "Solusi mendekati \\(T_\\infty\\) ketika \\(t\\) bertambah.",
             },
         },
         {
@@ -472,11 +476,13 @@ def mastery_payload() -> dict:
         {
             "problem_id": f"{UNIT_ID}-P05",
             "ordinal": 5,
-            "problem_summary": "Hitung prediksi suhu model pada t=10 menit untuk parameter yang diberikan.",
+            "problem_summary": "Hitung prediksi suhu model pada \\(t=10\\) menit untuk parameter yang diberikan.",
             "article_link_ids": [],
-            "source_formula_occurrences": ["T(t)=T_inf+(T0-T_inf)e^{-kt}"],
+            "source_formula_occurrences": [
+                "\\(T(t)=T_\\infty+(T_0-T_\\infty)e^{-kt}\\)"
+            ],
             "provenance": provenance(),
-            "hint": {"text": "Substitusikan selisih awal 92-22=70 dan hitung e^{-0.7}."},
+            "hint": {"text": "Substitusikan selisih awal \\(92-22=70\\) dan hitung \\(e^{-0.7}\\)."},
             "check": {
                 "type": "quantitative",
                 "final_answer": "56.76 °C",
@@ -486,12 +492,12 @@ def mastery_payload() -> dict:
             "solution_or_rubric": {
                 "type": "worked_solution",
                 "steps": [
-                    "Hitung kt=0.07(10)=0.7.",
-                    "Hitung e^{-0.7}≈0.496585.",
+                    "Hitung \\(kt=0.07(10)=0.7\\).",
+                    "Hitung \\(e^{-0.7}\\approx0.496585\\).",
                     "Kalikan dengan 70 untuk memperoleh sekitar 34.7610.",
                     "Tambahkan suhu lingkungan 22 °C.",
                 ],
-                "conclusion": "T(10)≈56.76 °C.",
+                "conclusion": "\\(T(10)\\approx56.76\\) °C.",
             },
         },
         {
@@ -533,7 +539,7 @@ def mastery_payload() -> dict:
             "hint": {"text": "Bedakan kontrak yang tetap—model, waktu, parameter simulasi, dan aturan serialisasi—dari realisasi galat acak yang berubah."},
             "check": {
                 "type": "executable",
-                "final_answer": "Benih 20260822 menghasilkan hash 1000bc1092f173258d2be37e4f8906ea0933708582d09768ce96eed739be337e, k_hat=0.07287235, T_inf_hat=22.63964536 °C, RMSE=0.31976406 °C, dan MAE data uji=0.17952331 °C.",
+                "final_answer": "Benih 20260822 menghasilkan hash 1000bc1092f173258d2be37e4f8906ea0933708582d09768ce96eed739be337e, \\(\\hat{k}=0.07287235\\), \\(\\hat{T}_\\infty=22.63964536\\) °C, \\(\\mathrm{RMSE}=0.31976406\\) °C, dan \\(\\mathrm{MAE}_{\\text{data uji}}=0.17952331\\) °C.",
                 "notebook_check": "Semua sel kode berjalan dari keadaan bersih dan semua pemeriksaan eksplisit lulus.",
                 "required_evidence": [
                     "Benih baru mengubah realisasi galat, hash data, estimasi, dan metrik numerik.",

@@ -9,9 +9,9 @@
       "sha256": "c8593b80996e6f7bd368a4a2e198472198163fc17ee408b98ccbd7e58c99e4eb"
     },
     {
-      "bytes": 28172,
+      "bytes": 28663,
       "path": "scripts/generate_bridge_c1.py",
-      "sha256": "a7ad2aab163040a8ac6ace5a58f0fecb695faf3d64fe0aa53199c673d5a0c41a"
+      "sha256": "0710f58e3f5f7eee2762decbc52af748b3f46a8233a228d2f3be750b095de67c"
     },
     {
       "bytes": 14436,
@@ -24,9 +24,9 @@
       "sha256": "5c6816d5c2e5993961f8a21ddce68f7f1ecbb4a48eff04fb345dc8e4ce2a8c68"
     },
     {
-      "bytes": 12528,
+      "bytes": 12926,
       "path": "backend/mastery/O005-BRIDGE-C1.mastery.json",
-      "sha256": "8757a13a2c799fe2f13aa697fb4596d4ab623c06688733cb16df39fc151fb27a"
+      "sha256": "642c8c12c47f6a067de078ec73f1663b9ded793c3fc81b1bb0c251bb88cfe5bb"
     }
   ],
   "license": "CC BY-NC-SA 4.0",
@@ -46,29 +46,29 @@
     },
     "files": [
       {
-        "bytes": 27733,
+        "bytes": 55564,
         "path": "scripts/build_bridge_unit.py",
-        "sha256": "987715fd3245eb1257ce44053f4390eea4e00196af54b7c74c27f4f1e1834d80"
+        "sha256": "7bb63d0a4f54bb50217f00b87a67edaa536fbd751f0b444304643c9a7022a199"
       },
       {
-        "bytes": 53405,
+        "bytes": 53804,
         "path": "scripts/build_unit_reader.py",
-        "sha256": "81ce24f93862a4dcc3d8d98f2f7e6fee7318c07361a5edc59bbe14c582729b93"
+        "sha256": "48851f774323d0925c96b40a80e0674816f5e53633f6d9db035740214ce461f2"
       },
       {
-        "bytes": 32560,
+        "bytes": 65894,
         "path": "scripts/qa_bridge_unit.py",
-        "sha256": "518f66ad52d39bfc248b624e8f6947f0a6a7db28e054938e827fe53084e99ec1"
+        "sha256": "c1934e1ff766f457482048c25b0c3ecd65537418aecea1771cb3124e9a4236af"
       },
       {
-        "bytes": 7271,
+        "bytes": 12219,
         "path": "scripts/execute_bridge_notebook_jupyter.py",
-        "sha256": "9043272155db73a259113c02b900c3a61fb9da9f692f7a2d967ac61d9d165d94"
+        "sha256": "15b5060283f3470c8188e185c951ad886519fd695cd9fb09d56864fddcc30425"
       },
       {
-        "bytes": 5205,
+        "bytes": 5559,
         "path": "source/reader/reader.css",
-        "sha256": "3936eb3901ba21b97be260071090ef01dbeef859b5d3b4da2b72ca7e99bad477"
+        "sha256": "c70e6b334ace189002d73ad8add7df1cf83d520548e86cb5e2bf609b9b2210f2"
       },
       {
         "bytes": 1170,
@@ -76,34 +76,34 @@
         "sha256": "5c6816d5c2e5993961f8a21ddce68f7f1ecbb4a48eff04fb345dc8e4ce2a8c68"
       },
       {
-        "bytes": 7023,
+        "bytes": 12860,
         "path": "backend/schema/o005-bridge-unit.schema.json",
-        "sha256": "f27894b00f149f683bdbb37b3698309e4b2ca5ebe5af4057b8226c065e7e62f7"
+        "sha256": "415ff379b924a57a1ab5eea36550018bf2cf86c038571cc0598dbf17ff83f86f"
       },
       {
-        "bytes": 956,
+        "bytes": 2283,
         "path": "backend/schema/o005-bridge-segment.schema.json",
-        "sha256": "824a1e305d209d711f3891f66c5f178b58ebc47bb66f8b8cba7a22bd80921fe2"
+        "sha256": "8b9656866ee346d740e4a6637cb8d0a35035b6b353cf1223453a776cca52dea2"
       },
       {
-        "bytes": 6851,
+        "bytes": 11217,
         "path": "backend/schema/o005-bridge-mastery.schema.json",
-        "sha256": "3a8a71220da26265f44d1092285975de542d0005738094c2962cdfb143ff91ec"
+        "sha256": "7f1f3a5f6476743361a4000773e2d635bf1cd6cf226b132f19d54a43cd505a6b"
       },
       {
-        "bytes": 3897,
+        "bytes": 4576,
         "path": "backend/schema/o005-original-authority.schema.json",
-        "sha256": "9686d32609fbbc31571daa11e7232b85b1689efd069604dd7511b5c94c3e54e0"
+        "sha256": "8f471a02e47d4a04ff6cd72bed1dbf81d5af53b42b717ec7cba7effa15c4f331"
       },
       {
-        "bytes": 3310,
+        "bytes": 7444,
         "path": "backend/schema/o005-original-authority-manifest.schema.json",
-        "sha256": "e87744e824f8276cb8705311f09b64ee7b0b08fbf5c06a55a4ff5aef6b63196a"
+        "sha256": "00d0b5527fe6604200bb578e0958fac0503cfdc8e346c30c7d94dedca1717a28"
       },
       {
-        "bytes": 2832,
+        "bytes": 8061,
         "path": "backend/schema/o005-segment-id-ledger.schema.json",
-        "sha256": "c2ebf51b7f543fe55c6fa9f23255d7d4b551c50cf1c333bab07beedbf6c3443e"
+        "sha256": "501c3b7ee3a3d17d27f83ef1f1927cfa46c37e11b95e76d6145ea21fb9636aeb"
       },
       {
         "bytes": 37629,

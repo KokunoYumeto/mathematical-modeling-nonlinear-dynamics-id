@@ -11,11 +11,11 @@
   ],
   "properties": {
     "schema": {"const": "o005-original-authority-v1"},
-    "unit_id": {"const": "O005-BRIDGE-C1"},
+    "unit_id": {"type": "string", "pattern": "^O005-BRIDGE-C[1234]$"},
     "canonical_language": {"const": "id-ID"},
     "content_mode": {"const": "new_original_addition"},
     "title": {"type": "string", "minLength": 1},
-    "created_date": {"const": "2026-08-22"},
+    "created_date": {"enum": ["2026-08-22", "2026-08-23"]},
     "license": {"const": "CC BY-NC-SA 4.0"},
     "model_identification": {"const": "OpenAI Codex gpt-5.6-sol, Ultra."},
     "relationship_to_spine": {
@@ -35,6 +35,24 @@
     },
     "toolchain": {"$ref": "#/$defs/toolchain"}
   },
+  "allOf": [
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C1"}}},
+      "then": {"properties": {"created_date": {"const": "2026-08-22"}}}
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C2"}}},
+      "then": {"properties": {"created_date": {"const": "2026-08-23"}}}
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C3"}}},
+      "then": {"properties": {"created_date": {"const": "2026-08-23"}}}
+    },
+    {
+      "if": {"properties": {"unit_id": {"const": "O005-BRIDGE-C4"}}},
+      "then": {"properties": {"created_date": {"const": "2026-08-23"}}}
+    }
+  ],
   "$defs": {
     "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
     "fileIdentity": {
