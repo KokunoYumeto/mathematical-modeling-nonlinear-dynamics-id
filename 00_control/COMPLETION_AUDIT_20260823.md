@@ -152,5 +152,7 @@ with no clipping, overlap, or broken glyphs.
 An anonymous API readback of Zenodo record `22070943` streamed all six files;
 every local/public byte and SHA-256 matched. The metadata remains `ind`,
 `cc-by-nc-sa-4.0`, submitted/done, clean of TTP in title/description, with one
-TTP organization contributor. The working tree remains clean at local control
-head `5e5714e68ad2e68c548e9bea2c8778564a6568f0`.
+TTP organization contributor. The working tree was clean at local control head
+`5e5714e68ad2e68c548e9bea2c8778564a6568f0` when the audit ran; this audit was
+then sealed in control commit `fd17c9caa58fa627c30df321d40f8237534f2f6b`, whose
+working tree is also clean.

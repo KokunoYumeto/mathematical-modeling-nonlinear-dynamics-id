@@ -1135,4 +1135,6 @@ The fresh continuation audit reconfirmed the canonical package and anonymous
 Zenodo readback without mutation: 467/467 source-manifest rows match, all
 4,105 packaged segment IDs are unique, and representative PDF renders remain
 visually clean. Local control head is
-`5e5714e68ad2e68c548e9bea2c8778564a6568f0`.
+`5e5714e68ad2e68c548e9bea2c8778564a6568f0` at audit time; the audit was then
+sealed in current control head `fd17c9caa58fa627c30df321d40f8237534f2f6b`, and
+the working tree is clean.
